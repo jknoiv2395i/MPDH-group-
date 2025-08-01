@@ -36,6 +36,13 @@ All colors MUST be HSL.
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
 
+    /* Hero Section Design System */
+    --hero-background: 0 0% 8%;
+    --hero-foreground: 0 0% 98%;
+    --hero-muted: 0 0% 65%;
+    --hero-button-bg: 0 0% 98%;
+    --hero-button-fg: 0 0% 8%;
+
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;

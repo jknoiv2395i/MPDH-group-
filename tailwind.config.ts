@@ -61,6 +61,15 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				hero: {
+					background: 'hsl(var(--hero-background))',
+					foreground: 'hsl(var(--hero-foreground))',
+					muted: 'hsl(var(--hero-muted))',
+					button: {
+						bg: 'hsl(var(--hero-button-bg))',
+						fg: 'hsl(var(--hero-button-fg))'
+					}
 				}
 			},
 			borderRadius: {
