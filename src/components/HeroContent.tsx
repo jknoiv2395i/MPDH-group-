@@ -1,4 +1,8 @@
 const HeroContent = () => {
+  return (
+    <div className="text-center">
+      <div className="space-y-6">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
           Your gateway to prestige properties
         </h1>
         <p className="text-base sm:text-lg md:text-xl max-w-2xl mx-auto leading-relaxed text-slate-50 px-4 sm:px-8 md:px-16 lg:px-[150px] mb-6 sm:mb-8">
@@ -40,6 +44,8 @@ const HeroContent = () => {
           </button>
         </div>
       </div>
-    </div>;
+    </div>
+  );
 };
+
 export default HeroContent;
