@@ -6,7 +6,7 @@ const HeroContent = () => {
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat'
   }}>
-      <div className="text-center max-w-4xl relative z-10 -mt-20">
+      <div className="text-center max-w-4xl relative z-10 -mt-32">
         <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-instrument font-normal text-hero-foreground leading-tight mb-6">
           Your gateway to prestige properties
         </h1>
