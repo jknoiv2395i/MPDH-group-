@@ -10,9 +10,34 @@ const HeroContent = () => {
         <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-instrument font-normal text-hero-foreground leading-tight mb-6">
           Your gateway to prestige properties
         </h1>
-        <p className="text-lg md:text-xl max-w-2xl mx-auto leading-relaxed text-slate-50 px-[150px]">
+        <p className="text-lg md:text-xl max-w-2xl mx-auto leading-relaxed text-slate-50 px-[150px] mb-8">
           Bring your architectural projects to life with a template that puts your work front and center.
         </p>
+
+        {/* CTA Button */}
+        <div className="flex justify-center">
+          <button className="group flex items-center gap-3 px-7 py-3 bg-white rounded-full hover:bg-gray-50 transition-all duration-200 shadow-lg hover:shadow-xl">
+            <span className="text-[#131313] font-medium text-lg">Get started</span>
+            <div className="flex items-center justify-center w-11 h-11 bg-[#131313] rounded-full group-hover:scale-105 transition-transform duration-200">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 19 19"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="text-white"
+              >
+                <path
+                  d="M6.4896 5.29883H13.7008V12.51M13.2 5.79961L5.88867 13.111"
+                  stroke="currentColor"
+                  strokeWidth="1.7"
+                  strokeMiterlimit="10"
+                  strokeLinecap="square"
+                />
+              </svg>
+            </div>
+          </button>
+        </div>
       </div>
     </div>;
 };
