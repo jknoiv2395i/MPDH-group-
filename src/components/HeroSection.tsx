@@ -56,8 +56,8 @@ const HeroSection = () => {
       
       {/* Building Image */}
       <div className="absolute bottom-0 right-0 w-full max-w-2xl lg:max-w-3xl xl:max-w-4xl">
-        <img 
-          src="https://cdn.builder.io/api/v1/image/assets%2F701ea542ab5b4bb3a64f146c221a3d1d%2F7fdd8ee9692941bea53dcf9966efd561?format=webp&width=800"
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets%2F701ea542ab5b4bb3a64f146c221a3d1d%2F03e2533b08b34299b759b1e8ea553acb?format=webp&width=800"
           alt="Modern building architecture"
           className="w-full h-auto object-cover opacity-80"
           style={{
