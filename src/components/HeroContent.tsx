@@ -20,7 +20,7 @@ const HeroContent = () => {
             <span 
               className="text-[#131313] font-medium break-words" 
               style={{
-                fontSize: '18.10px',
+                fontSize: '28px',
                 fontFamily: 'Inter',
                 lineHeight: '27.21px',
                 letterSpacing: '0.36px'
