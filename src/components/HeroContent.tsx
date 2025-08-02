@@ -1,36 +1,25 @@
 const HeroContent = () => {
-  return <div className="flex-1 flex items-center justify-center px-6 md:px-12 lg:px-16 relative" style={{
-    height: '1272.14px',
-    backgroundImage: 'url(/lovable-uploads/e89c8bb8-8f8b-4405-ba69-169e2ae9c695.png)',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    backgroundRepeat: 'no-repeat',
-    backgroundColor: 'rgba(255, 255, 255, 1)',
-    color: 'rgba(255, 255, 255, 1)'
-  }}>
-      <div className="text-center max-w-4xl relative z-10 -mt-48">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-instrument font-normal text-hero-foreground leading-tight mb-6">
           Your gateway to prestige properties
         </h1>
-        <p className="text-lg md:text-xl max-w-2xl mx-auto leading-relaxed text-slate-50 px-[150px] mb-8">
+        <p className="text-base sm:text-lg md:text-xl max-w-2xl mx-auto leading-relaxed text-slate-50 px-4 sm:px-8 md:px-16 lg:px-[150px] mb-6 sm:mb-8">
           Bring your architectural projects to life with a template that puts your work front and center.
         </p>
 
         {/* CTA Button */}
         <div className="flex justify-center">
-          <button className="group flex items-center gap-3 px-7 py-3 bg-white rounded-full hover:bg-gray-50 transition-all duration-200 shadow-lg hover:shadow-xl">
+          <button className="group flex items-center gap-2 px-5 py-2 bg-white rounded-full hover:bg-gray-50 transition-all duration-200 shadow-lg hover:shadow-xl">
             <span 
               className="text-[#131313] font-medium break-words" 
               style={{
-                fontSize: '18.10px',
+                fontSize: '16px',
                 fontFamily: 'Inter',
-                lineHeight: '27.21px',
+                lineHeight: '24px',
                 letterSpacing: '0.36px'
               }}
             >
               Get started
             </span>
-            <div className="flex items-center justify-center w-11 h-11 bg-[#131313] rounded-full group-hover:scale-105 transition-transform duration-200">
+            <div className="flex items-center justify-center w-8 h-8 bg-[#131313] rounded-full group-hover:scale-105 transition-transform duration-200">
               <svg
                 width="18"
                 height="18"
