@@ -17,7 +17,17 @@ const HeroContent = () => {
         {/* CTA Button */}
         <div className="flex justify-center">
           <button className="group flex items-center gap-3 px-7 py-3 bg-white rounded-full hover:bg-gray-50 transition-all duration-200 shadow-lg hover:shadow-xl">
-            <span className="text-[#131313] font-medium text-lg">Get started</span>
+            <span 
+              className="text-[#131313] font-medium break-words" 
+              style={{
+                fontSize: '18.10px',
+                fontFamily: 'Inter',
+                lineHeight: '27.21px',
+                letterSpacing: '0.36px'
+              }}
+            >
+              Get started
+            </span>
             <div className="flex items-center justify-center w-11 h-11 bg-[#131313] rounded-full group-hover:scale-105 transition-transform duration-200">
               <svg
                 width="18"
