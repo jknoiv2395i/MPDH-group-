@@ -1,10 +1,12 @@
 const HeroContent = () => {
-  return <div className="flex-1 flex items-center justify-center px-4 sm:px-6 md:px-12 lg:px-16 relative min-h-screen sm:min-h-[800px] lg:min-h-[1272px]" style={{
-    backgroundImage: 'url(/lovable-uploads/e89c8bb8-8f8b-4405-ba69-169e2ae9c695.png)',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    backgroundRepeat: 'no-repeat'
-  }}>
+  return <div 
+    className="flex-1 flex items-center justify-center px-4 sm:px-6 md:px-12 lg:px-16 relative min-h-screen sm:min-h-[800px] lg:min-h-[1272px] bg-cover bg-center bg-no-repeat sm:bg-cover md:bg-cover"
+    style={{
+      backgroundImage: 'url(/lovable-uploads/e89c8bb8-8f8b-4405-ba69-169e2ae9c695.png)',
+      backgroundPosition: 'center top',
+      backgroundSize: 'cover'
+    }}
+  >
       <div className="text-center max-w-4xl relative z-10 -mt-12 sm:-mt-24 lg:-mt-48">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-instrument font-normal text-hero-foreground leading-tight mb-4 sm:mb-6">
           Your gateway to prestige properties
