@@ -216,7 +216,7 @@ export const Header: React.FC<HeaderProps> = ({
         className
       )}
     >
-      <div className="mx-auto max-w-[1760px] px-5 py-4">
+      <div className="mx-auto max-w-[1760px] px-5 py-4" style={{ color: '#1e9ce8' }}>
         <div className="flex items-center justify-between">
           {logo}
           <Navigation isDarkTheme={isDarkTheme} items={menuItems} />
