@@ -210,6 +210,7 @@ export const Header: React.FC<HeaderProps> = ({
     <header
       className={clsx(
         'relative z-40 w-full',
+        'bg-[#1E9CE8]',
         isSticky && 'sticky top-0',
         isStickyOverlay && 'bg-white/80 backdrop-blur-md dark:bg-[#0B0C0F]/80',
         withBorder && 'border-b border-gray-200 dark:border-[#16181D]',
