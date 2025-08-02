@@ -1,51 +1,15 @@
-import { Header, Button } from "@/components/ui/21st-navbar";
+import { NavBar } from "@/components/ui/tubelight-navbar";
+import { Home, Building, Briefcase, User, Phone } from "lucide-react";
 
-const menuItems = [
-  {
-    text: "Home",
-    to: "/"
-  },
-  {
-    text: "Properties",
-    items: [
-      {
-        text: "Luxury Homes",
-        description: "Premium residential properties",
-        to: "/properties/luxury"
-      },
-      {
-        text: "Commercial",
-        description: "Office and retail spaces",
-        to: "/properties/commercial"
-      }
-    ]
-  },
-  {
-    text: "Services",
-    to: "/services"
-  },
-  {
-    text: "About",
-    to: "/about"
-  },
-  {
-    text: "Contact",
-    to: "/contact"
-  }
+const navItems = [
+  { name: 'Home', url: '/', icon: Home },
+  { name: 'Properties', url: '/properties', icon: Building },
+  { name: 'Services', url: '/services', icon: Briefcase },
+  { name: 'About', url: '/about', icon: User },
+  { name: 'Contact', url: '/contact', icon: Phone }
 ];
 
 const HeroHeader = () => {
-  return (
-    <Header
-      theme="dark"
-      logo={<span className="text-xl font-bold text-white">MPHD</span>}
-      menuItems={menuItems}
-      rightContent={
-        <Button variant="outline" className="text-white border-white hover:bg-white hover:text-black">
-          Get Started
-        </Button>
-      }
-    />
-  );
+  return <NavBar items={navItems} />;
 };
 export default HeroHeader;
