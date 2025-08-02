@@ -4,7 +4,9 @@ const HeroContent = () => {
     backgroundImage: 'url(/lovable-uploads/e89c8bb8-8f8b-4405-ba69-169e2ae9c695.png)',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    backgroundRepeat: 'no-repeat'
+    backgroundRepeat: 'no-repeat',
+    backgroundColor: 'rgba(255, 255, 255, 1)',
+    color: 'rgba(255, 255, 255, 1)'
   }}>
       <div className="text-center max-w-4xl relative z-10 -mt-48">
         <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-instrument font-normal text-hero-foreground leading-tight mb-6">
