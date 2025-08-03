@@ -1,11 +1,22 @@
 import HeroHeader from "./HeroHeader";
 const HeroSection = () => {
   return <section className="relative min-h-screen overflow-hidden bg-[#1e9ce8]">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <div className="relative w-full h-full">
+          <img
+            src="https://api.builder.io/api/v1/image/assets/TEMP/fe4fc4a1a6bfccd699aa5c93bed1e16b23886754?width=1632"
+            alt="Modern architectural building"
+            className="absolute bottom-0 right-0 w-auto h-3/5 md:h-3/4 lg:h-4/5 object-contain object-bottom-right"
+          />
+        </div>
+      </div>
+
       {/* Navigation */}
       <div className="relative z-20">
         <HeroHeader />
       </div>
-      
+
 
 
       {/* Hero Content */}
