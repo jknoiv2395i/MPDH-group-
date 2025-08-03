@@ -25,7 +25,7 @@ export function Marquee({
       style={{ margin: "96px auto 0" }}
       {...props}
     >
-      <div className="relative flex max-w-[1427px] overflow-hidden py-5" style={{ marginLeft: "35px" }}>
+      <div className="relative flex max-w-[1427px] overflow-hidden py-5 mx-auto">
         <div 
           className={cn(
             "flex w-max animate-marquee",
