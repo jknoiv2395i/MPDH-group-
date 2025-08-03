@@ -10,6 +10,24 @@ const HeroSection = () => {
         <HeroHeader />
       </div>
       
+      {/* Background Section with Blur Effect */}
+      <div className="absolute inset-0 z-0">
+        <div className="relative w-full h-full overflow-hidden">
+          {/* Background Image with Blur */}
+          <div
+            className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage: 'url(https://api.builder.io/api/v1/image/assets/TEMP/ac9a7f22326532ff98ea54f1c59e376b77091106?width=3810)',
+              filter: 'blur(0px)',
+              transform: 'scale(1.1)',
+            }}
+          />
+
+          {/* Additional overlay for better text contrast */}
+          <div className="absolute inset-0 bg-black/30" />
+        </div>
+      </div>
+
       {/* Hero Content */}
       <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-8 mb-16" style={{ padding: '200px 32px' }}>
         {/* Main Heading */}
@@ -19,12 +37,12 @@ const HeroSection = () => {
             <br />
             prestige properties
           </h1>
-          
+
           {/* Subtitle */}
           <p className="text-xl text-white/90 mb-12 mx-auto" style={{ maxWidth: '467px', lineHeight: '28px' }}>
             Bring your architectural projects to life with a template that puts your work front and center.
           </p>
-          
+
           {/* CTA Button */}
           <div className="flex justify-center">
             <button className="group flex items-center gap-3 px-6 py-3 bg-white rounded-full hover:bg-gray-50 transition-all duration-200 shadow-lg hover:shadow-xl">
