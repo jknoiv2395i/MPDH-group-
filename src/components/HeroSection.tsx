@@ -21,10 +21,12 @@ const HeroSection = () => {
 
       {/* Hero Content */}
       <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-8 mb-16" style={{
-      padding: '240px 32px 200px 32px'
+      padding: '200px 32px'
     }}>
         {/* Main Heading */}
-        <div className="text-center max-w-4xl mx-auto mb-8">
+        <div className="text-center max-w-4xl mx-auto mb-8" style={{
+          margin: '-3px auto 6px'
+        }}>
           <h1 className="text-white mb-6" style={{
           font: '72px/72px Instrument Sans, sans-serif'
         }}>
