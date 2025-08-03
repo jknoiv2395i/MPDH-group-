@@ -28,7 +28,8 @@ const HeroSection = () => {
 
       {/* Hero Content */}
       <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-8 mb-16" style={{
-      padding: '200px 32px'
+      padding: '200px 32px',
+      color: 'rgba(30, 156, 232, 1)'
     }}>
         {/* Main Heading */}
         <div className="text-center max-w-4xl mx-auto mb-8">
