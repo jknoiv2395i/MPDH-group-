@@ -17,14 +17,15 @@ export function Marquee({
   ...props
 }: MarqueeProps) {
   return (
-    <div 
+    <div
       className={cn(
-        "w-full overflow-hidden sm:mt-24 mt-10 z-10",
+        "w-full overflow-hidden z-10",
         className
-      )} 
+      )}
+      style={{ margin: "96px auto 0" }}
       {...props}
     >
-      <div className="relative flex max-w-[1453px] overflow-hidden py-5 ml-9">
+      <div className="relative flex max-w-[1427px] overflow-hidden py-5 mx-auto">
         <div 
           className={cn(
             "flex w-max animate-marquee",
