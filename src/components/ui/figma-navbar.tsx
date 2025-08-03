@@ -66,7 +66,7 @@ export function FigmaNavBar({ className }: NavBarProps) {
         </nav>
 
         {/* Contact Us Button */}
-        <div className="flex items-center">
+        <div className="hidden md:flex items-center">
           <a
             href="/contact"
             className="px-6 py-2 bg-white text-[black] rounded-full text-sm lg:text-base font-medium hover:bg-gray-50 transition-colors duration-200 sm:ml-auto"
