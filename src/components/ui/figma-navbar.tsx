@@ -27,7 +27,7 @@ export function FigmaNavBar({ className }: NavBarProps) {
 
   return (
     <header className={cn(
-      "fixed top-0 left-0 right-0 z-50 bg-[#1E9CE8] text-white",
+      "fixed top-0 left-0 right-0 z-50 bg-[#1E9CE8] text-white transform-none",
       className
     )}>
       <div className="flex items-center justify-between h-16 px-4 md:px-8 lg:px-16 xl:px-24">
