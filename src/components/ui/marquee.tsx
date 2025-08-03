@@ -22,7 +22,7 @@ export function Marquee({
         "w-full overflow-hidden z-10",
         className
       )}
-      style={{ margin: "96px 0 0 31px" }}
+      style={{ margin: "96px auto 0" }}
       {...props}
     >
       <div className="relative flex max-w-[1427px] overflow-hidden py-5" style={{ marginLeft: "35px" }}>
