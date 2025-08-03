@@ -2,7 +2,7 @@ const VisionSection = () => {
   return <section className="bg-white py-16 px-4 md:py-24 lg:py-32">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col items-center text-center text-2xl">
-          <h2 className="font-instrument text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[54px] font-normal leading-tight text-black mb-4 sm:mb-6 max-w-4xl tracking-[-0.5px] sm:tracking-[-1.6px] text-center">
+          <h2 className="font-instrument sm:text-3xl md:text-4xl lg:text-5xl xl:text-[54px] font-normal leading-tight text-black mb-4 sm:mb-6 max-w-4xl tracking-[-0.5px] sm:tracking-[-1.6px] text-center text-xl">
             Experience innovative spaces
             <br />
             where real estate meets your vision
@@ -10,7 +10,7 @@ const VisionSection = () => {
             and turns it into reality.
           </h2>
           
-          <p className="text-[#5D5D5D] text-base md:text-lg font-normal leading-relaxed max-w-[634px] tracking-[0.2px] sm:tracking-[0.36px]">
+          <p className="text-[#5D5D5D] md:text-lg font-normal leading-relaxed max-w-[634px] tracking-[0.2px] sm:tracking-[0.36px] text-xs">
             We craft inspiring spaces that blend cutting-edge design with enduring
             functionality, turning your vision into reality.
           </p>
