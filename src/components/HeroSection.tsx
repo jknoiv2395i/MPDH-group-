@@ -6,6 +6,18 @@ const HeroSection = () => {
         <HeroHeader />
       </div>
       
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <div className="relative w-full h-full overflow-hidden">
+          <div
+            className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat opacity-60"
+            style={{
+              backgroundImage: 'url(/lovable-uploads/38a847a7-d213-4ac6-84f6-c04310d775ad.png)',
+            }}
+          />
+        </div>
+      </div>
+      
 
       {/* Hero Content */}
       <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-8 mb-16" style={{
