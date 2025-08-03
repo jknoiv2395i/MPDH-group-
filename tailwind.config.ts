@@ -124,13 +124,17 @@ export default {
 						opacity: "1",
 						transform: "rotateX(0) scale(1)" 
 					}
+				},
+				marquee: {
+					to: { transform: 'translateX(-50%)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				"navbar-slide-down": "navbar-slide-down 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
-				"navbar-dropdown": "navbar-dropdown 0.2s cubic-bezier(0.4, 0, 0.2, 1)"
+				"navbar-dropdown": "navbar-dropdown 0.2s cubic-bezier(0.4, 0, 0.2, 1)",
+				marquee: 'marquee var(--duration, 30s) linear infinite'
 			},
 			backdropBlur: {
 				navbar: "10px"
