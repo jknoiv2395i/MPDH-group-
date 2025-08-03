@@ -36,7 +36,7 @@ export function FigmaNavBar({ className }: NavBarProps) {
           <img
             src="https://cdn.builder.io/api/v1/image/assets%2Feccf9e96f3f54e0db99db209e78762b2%2Fc52ba548c4974d7fbb9f4138923b5787"
             alt="MPHD GROUP Real Estate Logo"
-            className="h-16 md:h-20 lg:h-24 w-auto mr-auto"
+            className="h-16 md:h-20 lg:h-[100px] w-auto mr-auto"
           />
         </div>
 
