@@ -62,7 +62,7 @@ const HeroSection = () => {
       }} />
       
       {/* Marquee Component */}
-      <div className="absolute bottom-0 left-0 w-full z-10">
+      <div className="absolute bottom-0 left-0 w-full z-10 flex flex-col">
         <MarqueeDemo />
       </div>
     </section>;
