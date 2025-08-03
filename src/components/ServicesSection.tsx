@@ -24,7 +24,7 @@ const ServicesSection = () => {
   }}>
       <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
         <div className="mb-12 lg:mb-16">
-          <h2 className="font-instrument lg:text-5xl font-normal text-black mb-8 lg:mb-12 tracking-tight xl:text-2xl text-xl text-center">
+          <h2 className="font-instrument lg:text-5xl font-normal text-black mb-8 lg:mb-12 tracking-tight xl:text-2xl text-xl text-left">
             OUR SERVICES
           </h2>
         </div>
