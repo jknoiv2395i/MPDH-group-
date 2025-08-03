@@ -50,10 +50,9 @@ const HeroSection = () => {
       
       {/* Bottom Gradient Overlay */}
       <div className="absolute bottom-0 left-0 w-full z-5" style={{
-      height: '240px'
-    }} style={{
-      background: 'linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%)'
-    }} />
+        height: '240px',
+        background: 'linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%)'
+      }} />
     </section>;
 };
 export default HeroSection;
