@@ -22,7 +22,7 @@ const HeroSection = () => {
           />
 
           {/* Additional overlay for better text contrast */}
-          <div className="absolute inset-0 bg-[#1E9CE8]/30" />
+          
         </div>
       </div>
 
