@@ -10,15 +10,6 @@ const navItems = [
 ];
 
 const HeroHeader = () => {
-  return (
-    <NavBar 
-      items={navItems} 
-      logo={{
-        src: "/lovable-uploads/9e6feb2d-d79a-4d3f-bdcc-55a2747446a7.png",
-        alt: "MPHD Group",
-        href: "/"
-      }}
-    />
-  );
+  return <NavBar items={navItems} />;
 };
 export default HeroHeader;
