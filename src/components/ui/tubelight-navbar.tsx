@@ -14,9 +14,14 @@ interface NavItem {
 interface NavBarProps {
   items: NavItem[]
   className?: string
+  logo?: {
+    src: string
+    alt: string
+    href?: string
+  }
 }
 
-export function NavBar({ items, className }: NavBarProps) {
+export function NavBar({ items, className, logo }: NavBarProps) {
   const [activeTab, setActiveTab] = useState(items[0].name)
   const [isMobile, setIsMobile] = useState(false)
 
@@ -31,13 +36,26 @@ export function NavBar({ items, className }: NavBarProps) {
   }, [])
 
   return (
-    <div
-      className={cn(
-        "fixed bottom-0 sm:top-0 left-1/2 -translate-x-1/2 z-50 mb-6 sm:pt-6",
-        className,
-      )}
-    >
-      <div className="flex items-center gap-3 bg-background/5 border border-border backdrop-blur-lg py-1 px-1 rounded-full shadow-lg">
+    <div className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 pt-4 sm:pt-6">
+      <div className="flex items-center justify-between max-w-7xl mx-auto">
+        {/* Logo */}
+        {logo && (
+          <a href={logo.href || "/"} className="flex-shrink-0">
+            <img 
+              src={logo.src} 
+              alt={logo.alt} 
+              className="h-8 sm:h-10 w-auto"
+            />
+          </a>
+        )}
+        
+        {/* Navigation */}
+        <div
+          className={cn(
+            "flex items-center gap-3 bg-background/5 border border-border backdrop-blur-lg py-1 px-1 rounded-full shadow-lg",
+            className,
+          )}
+        >
         {items.map((item) => {
           const Icon = item.icon
           const isActive = activeTab === item.name
@@ -78,6 +96,7 @@ export function NavBar({ items, className }: NavBarProps) {
             </a>
           )
         })}
+        </div>
       </div>
     </div>
   )
