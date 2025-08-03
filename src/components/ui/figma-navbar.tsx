@@ -23,6 +23,7 @@ const navItems: NavItem[] = [
 
 export function FigmaNavBar({ className }: NavBarProps) {
   const [hoveredItem, setHoveredItem] = useState<string | null>(null)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   return (
     <header className={cn(
