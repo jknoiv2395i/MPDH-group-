@@ -69,7 +69,7 @@ export function FigmaNavBar({ className }: NavBarProps) {
         <div className="flex items-center">
           <a
             href="/contact"
-            className="px-6 py-2 bg-white text-[#1E9CE8] rounded-full text-sm lg:text-base font-medium hover:bg-gray-50 transition-colors duration-200"
+            className="px-6 py-2 bg-white text-[131313] rounded-full text-sm lg:text-base font-medium hover:bg-gray-50 transition-colors duration-200"
           >
             Contact us
           </a>
