@@ -19,25 +19,35 @@ const HeroSection = () => {
       </div>
       
 
-      {/* Hero Content */}
-      <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-8 mb-16" style={{
-      padding: '200px 32px 200px 32px'
-    }}>
-        {/* Main Heading */}
-        <div className="text-center max-w-4xl mx-auto mb-4">
-          <h1 className="text-white mb-6" style={{
-          font: '72px/72px Instrument Sans, sans-serif'
-        }}>
+{/* Hero Content */}
+<div
+  className="relative z-10 flex-1 flex flex-col items-center justify-center px-4 sm:px-8 mb-16"
+  style={{
+    padding: '200px 32px 200px 32px',
+  }}
+>
+  {/* Main Heading */}
+  <div className="text-center max-w-4xl mx-auto mb-4">
+    <h1
+      className="text-white mb-6"
+      style={{
+        font: '72px/72px Instrument Sans, sans-serif',
+      }}
+    >
+      Your gateway to
+      <br />
+      proactive properties
+    </h1>
+  </div>
+</div>
+
             Your gateway to
             <br />
             prestige properties
           </h1>
 
           {/* Subtitle */}
-          <p className="text-xl text-white/90 mb-12 mx-auto" style={{
-          maxWidth: '467px',
-          lineHeight: '28px'
-        }}>
+          <p className="text-base sm:text-lg md:text-xl text-white/90 mb-8 sm:mb-12 mx-auto max-w-sm sm:max-w-md md:max-w-lg leading-relaxed px-4 sm:px-0">
             Bring your architectural projects to life with a template that puts your work front and center.
           </p>
 

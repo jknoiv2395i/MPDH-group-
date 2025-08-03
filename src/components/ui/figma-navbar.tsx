@@ -34,7 +34,7 @@ export function FigmaNavBar({ className }: NavBarProps) {
         {/* Logo */}
         <div className="flex items-center">
           <img
-            src="https://cdn.builder.io/api/v1/image/assets%2Feccf9e96f3f54e0db99db209e78762b2%2F2877f2392d9441b0a3af032bc272b189?format=webp&width=800"
+            src="https://cdn.builder.io/api/v1/image/assets%2Feccf9e96f3f54e0db99db209e78762b2%2Fc52ba548c4974d7fbb9f4138923b5787"
             alt="MPHD GROUP Real Estate Logo"
             className="h-16 md:h-20 lg:h-24 w-auto mr-auto"
           />
@@ -69,7 +69,7 @@ export function FigmaNavBar({ className }: NavBarProps) {
         <div className="flex items-center">
           <a
             href="/contact"
-            className="px-6 py-2 bg-white text-[black] rounded-full text-sm lg:text-base font-medium hover:bg-gray-50 transition-colors duration-200"
+            className="px-6 py-2 bg-white text-[black] rounded-full text-sm lg:text-base font-medium hover:bg-gray-50 transition-colors duration-200 sm:ml-auto"
           >
             Contact us
           </a>
