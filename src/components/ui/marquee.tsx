@@ -19,7 +19,7 @@ export function Marquee({
   return (
     <div
       className={cn(
-        "w-full overflow-hidden z-10 pl-2",
+        "w-full overflow-hidden z-10",
         className
       )}
       style={{ margin: "96px 0 0 31px" }}
