@@ -1,13 +1,23 @@
 const HeroContent = () => {
-  return <div className="flex-1 flex items-center justify-center px-6 md:px-12 lg:px-16 relative" style={{
-    height: '1272.14px',
-    backgroundImage: 'url(/lovable-uploads/e89c8bb8-8f8b-4405-ba69-169e2ae9c695.png)',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    backgroundRepeat: 'no-repeat'
-  }}>
+  return (
+    <div
+      className="flex-1 flex items-center justify-center px-6 md:px-12 lg:px-16 relative"
+      style={{
+        height: '1272.14px',
+        backgroundImage: 'url(/lovable-uploads/e89c8bb8-8f8b-4405-ba69-169e2ae9c695.png)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}
+    >
       <div className="text-center max-w-4xl relative z-10 -mt-48">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-instrument font-normal text-hero-foreground leading-tight mb-6">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-7xl font-bold font-instrument text-white text-hero-foreground leading-tight mb-6">
+          Your amazing headline goes here!
+        </h1>
+      </div>
+    </div>
+  );
+};
           Your gateway to prestige properties
         </h1>
         <p className="text-lg md:text-xl max-w-2xl mx-auto leading-relaxed text-slate-50 px-[150px] mb-8">
@@ -49,6 +59,8 @@ const HeroContent = () => {
           </button>
         </div>
       </div>
-    </div>;
+    </div>
+  );
 };
+
 export default HeroContent;
