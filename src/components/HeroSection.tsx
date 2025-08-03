@@ -11,17 +11,17 @@ const HeroSection = () => {
       </div>
       
       {/* Hero Content */}
-      <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 py-20">
+      <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-8 mb-16" style={{ padding: '200px 32px' }}>
         {/* Main Heading */}
         <div className="text-center max-w-4xl mx-auto mb-8">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
+          <h1 className="text-white mb-6" style={{ font: '72px/72px Instrument Sans, sans-serif' }}>
             Your gateway to
             <br />
             prestige properties
           </h1>
           
           {/* Subtitle */}
-          <p className="text-lg sm:text-xl text-white/90 mb-12 max-w-2xl mx-auto">
+          <p className="text-xl text-white/90 mb-12 mx-auto" style={{ maxWidth: '467px', lineHeight: '28px' }}>
             Bring your architectural projects to life with a template that puts your work front and center.
           </p>
           
@@ -54,22 +54,12 @@ const HeroSection = () => {
         </div>
       </div>
       
-      {/* Building Image */}
-      <div className="absolute bottom-0 right-0 w-full max-w-2xl lg:max-w-3xl xl:max-w-4xl">
-        <img
-          src="https://cdn.builder.io/api/v1/image/assets%2F701ea542ab5b4bb3a64f146c221a3d1d%2F03e2533b08b34299b759b1e8ea553acb?format=webp&width=800"
-          alt="Modern building architecture"
-          className="w-full h-auto object-cover opacity-80"
-          style={{
-            maskImage: 'linear-gradient(to top, transparent 0%, black 20%)',
-            WebkitMaskImage: 'linear-gradient(to top, transparent 0%, black 20%)'
-          }}
-        />
-      </div>
+
       
       {/* Bottom Gradient Overlay */}
       <div 
-        className="absolute bottom-0 left-0 w-full h-80 z-5"
+        className="absolute bottom-0 left-0 w-full z-5"
+        style={{ height: '240px' }}
         style={{
           background: 'linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%)'
         }}
