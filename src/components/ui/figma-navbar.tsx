@@ -87,28 +87,32 @@ export function FigmaNavBar({ className }: NavBarProps) {
       </div>
 
       {/* Mobile Navigation Menu */}
-      <div className="md:hidden bg-[#131313] border-t border-white/10">
-        <nav className="px-4 py-4 space-y-3">
-          {navItems.map((item) => (
+      {isMobileMenuOpen && (
+        <div className="md:hidden bg-[#131313] border-t border-white/10">
+          <nav className="px-4 py-4 space-y-3">
+            {navItems.map((item) => (
+              <a
+                key={item.name}
+                href={item.url}
+                className="flex items-center justify-between text-white/80 hover:text-white transition-colors duration-200 py-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {item.name}
+                {item.hasDropdown && (
+                  <ChevronDown className="h-4 w-4" />
+                )}
+              </a>
+            ))}
             <a
-              key={item.name}
-              href={item.url}
-              className="flex items-center justify-between text-white/80 hover:text-white transition-colors duration-200 py-2"
+              href="/contact"
+              className="block text-white/80 hover:text-white transition-colors duration-200 py-2 border-t border-white/10 mt-3 pt-3"
+              onClick={() => setIsMobileMenuOpen(false)}
             >
-              {item.name}
-              {item.hasDropdown && (
-                <ChevronDown className="h-4 w-4" />
-              )}
+              Contact us
             </a>
-          ))}
-          <a
-            href="/contact"
-            className="block text-white/80 hover:text-white transition-colors duration-200 py-2 border-t border-white/10 mt-3 pt-3"
-          >
-            Contact us
-          </a>
-        </nav>
-      </div>
+          </nav>
+        </div>
+      )}
     </header>
   )
 }
