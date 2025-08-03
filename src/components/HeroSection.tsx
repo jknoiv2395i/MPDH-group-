@@ -24,7 +24,7 @@ const HeroSection = () => {
       padding: '200px 32px 200px 32px'
     }}>
         {/* Main Heading */}
-        <div className="text-center max-w-4xl mx-auto mb-6">
+        <div className="text-center max-w-4xl mx-auto mb-4">
           <h1 className="text-white mb-6" style={{
           font: '72px/72px Instrument Sans, sans-serif'
         }}>
