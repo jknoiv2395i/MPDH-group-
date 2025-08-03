@@ -32,12 +32,12 @@ const HeroSection = () => {
           
           {/* CTA Button */}
           <div className="flex justify-center">
-            <button className="group flex items-center gap-3 px-6 py-3 bg-white rounded-full hover:bg-gray-50 transition-all duration-200 shadow-lg hover:shadow-xl">
-              <span className="text-gray-900 font-medium text-lg">
+            <button className="group flex items-center gap-2 px-4 py-2 bg-white rounded-full hover:bg-gray-50 transition-all duration-200 shadow-lg hover:shadow-xl">
+              <span className="text-gray-900 font-medium text-base">
                 Get started
               </span>
-              <div className="flex items-center justify-center w-8 h-8 bg-gray-900 rounded-full group-hover:scale-105 transition-transform duration-200">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white">
+              <div className="flex items-center justify-center w-6 h-6 bg-gray-900 rounded-full group-hover:scale-105 transition-transform duration-200">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white">
                   <path d="M3 8H13M13 8L8 3M13 8L8 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </div>
