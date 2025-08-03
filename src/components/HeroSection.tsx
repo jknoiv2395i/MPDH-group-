@@ -1,8 +1,6 @@
 import HeroHeader from "./HeroHeader";
 const HeroSection = () => {
-  return <section style={{
-    background: 'linear-gradient(180deg, #1a1a1a 0%, #0a0a0a 100%)'
-  }} className="relative min-h-screen overflow-hidden bg-[#1e9ce8]">
+  return <section className="relative min-h-screen overflow-hidden bg-[#1E9CE8]">
       {/* Navigation */}
       <div className="relative z-20">
         <HeroHeader />
