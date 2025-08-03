@@ -30,13 +30,13 @@ export function FigmaNavBar({ className }: NavBarProps) {
       "relative top-0 left-0 right-0 z-50 bg-[#1E9CE8] text-white",
       className
     )}>
-      <div className="flex items-center justify-between h-16 px-4 md:px-8 lg:px-16 xl:px-24">
+      <div className="flex items-center justify-between h-16 pt-3 px-4 md:px-8 lg:px-16 xl:px-24">
         {/* Logo */}
         <div className="flex items-center">
           <img
-            src="https://cdn.builder.io/api/v1/image/assets%2Feccf9e96f3f54e0db99db209e78762b2%2Fc52ba548c4974d7fbb9f4138923b5787"
+            src="https://cdn.builder.io/api/v1/image/assets%2Fea71525dd8ea470bb0c07f096721fbd7%2Fe2fe31a91f7045c5bd3420234e7b7a67"
             alt="MPHD GROUP Real Estate Logo"
-            className="h-16 md:h-20 lg:h-24 w-auto mr-auto"
+            className="h-32 w-auto mr-auto"
           />
         </div>
 
