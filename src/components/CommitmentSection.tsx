@@ -1,58 +1,188 @@
+import { motion, useMotionValue, useSpring, useInView } from "framer-motion";
+import { useEffect, useRef } from "react";
+
+const Counter = ({ value, suffix = "", prefix = "", duration = 2 }) => {
+  const ref = useRef(null);
+  const motionValue = useMotionValue(0);
+  const springValue = useSpring(motionValue, { duration: duration * 1000 });
+  const isInView = useInView(ref, { once: true, margin: "-50px" });
+
+  useEffect(() => {
+    if (isInView) {
+      motionValue.set(value);
+    }
+  }, [motionValue, isInView, value]);
+
+  useEffect(() => {
+    springValue.on("change", (latest) => {
+      if (ref.current) {
+        let displayValue;
+        if (prefix === "$" && value >= 1000000) {
+          displayValue = (latest / 1000000).toFixed(1) + "M";
+        } else if (suffix === "+") {
+          displayValue = Math.floor(latest) + "+";
+        } else {
+          displayValue = Math.floor(latest);
+        }
+        ref.current.textContent = prefix + displayValue;
+      }
+    });
+  }, [springValue, prefix, suffix, value]);
+
+  return <span ref={ref}>{prefix}0{suffix}</span>;
+};
+
 const CommitmentSection = () => {
+  const fadeInFromLeft = {
+    initial: { opacity: 0, x: -50 },
+    whileInView: { opacity: 1, x: 0 },
+    transition: { duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }
+  };
+
+  const fadeInFromRight = {
+    initial: { opacity: 0, x: 50 },
+    whileInView: { opacity: 1, x: 0 },
+    transition: { duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }
+  };
+
+  const staggerChildren = {
+    initial: "hidden",
+    whileInView: "visible",
+    variants: {
+      hidden: {},
+      visible: {
+        transition: {
+          staggerChildren: 0.2
+        }
+      }
+    }
+  };
+
+  const textReveal = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" }
+    }
+  };
+
+  const statReveal = {
+    hidden: { opacity: 0, scale: 0.8, y: 20 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" }
+    }
+  };
+
+  const statsContainer = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.15
+      }
+    }
+  };
+
   return (
     <section className="bg-white pt-16 lg:pt-16 pb-16 lg:pb-32" style={{ paddingTop: '59px' }}>
       <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-24 items-center">
           {/* Left Content */}
-          <div className="space-y-8">
+          <motion.div
+            className="space-y-8"
+            {...staggerChildren}
+            viewport={{ once: true, margin: "-100px" }}
+          >
             {/* Main Heading */}
-            <h2 className="font-instrument text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-normal text-black leading-tight tracking-tight">
+            <motion.h2
+              className="font-instrument text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-normal text-black leading-tight tracking-tight"
+              variants={textReveal}
+            >
               With a commitment to excellence and customer satisfaction.
-            </h2>
-            
+            </motion.h2>
+
             {/* Description */}
-            <p className="text-[#5D5D5D] text-lg leading-relaxed">
+            <motion.p
+              className="text-[#5D5D5D] text-lg leading-relaxed"
+              variants={textReveal}
+            >
               With a commitment to innovation, sustainability, and precision, we bring your ideas to life while enhancing functionality and aesthetics. Our team of dedicated architects and designers is here to turn your unique vision into a tangible masterpiece.
-            </p>
-            
+            </motion.p>
+
             {/* CTA Button */}
-            <button className="bg-[#131313] text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-gray-800 transition-colors">
+            <motion.button
+              className="bg-[#131313] text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-gray-800 transition-colors"
+              variants={textReveal}
+            >
               Learn more
-            </button>
-            
+            </motion.button>
+
             {/* Stats Grid */}
-            <div className="grid grid-cols-3 gap-8 pt-8">
-              <div className="space-y-2">
-                <h3 className="font-instrument text-3xl lg:text-4xl xl:text-5xl font-normal text-black tracking-tight">
-                  50+
-                </h3>
-                <p className="text-[#5D5D5D] text-lg">
+            <motion.div
+              className="grid grid-cols-3 gap-8 pt-8"
+              variants={statsContainer}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-50px" }}
+            >
+              <motion.div className="space-y-2" variants={statReveal}>
+                <motion.h3
+                  className="font-instrument text-3xl lg:text-4xl xl:text-5xl font-normal text-black tracking-tight"
+                  variants={textReveal}
+                >
+                  <Counter value={50} suffix="+" duration={2} />
+                </motion.h3>
+                <motion.p
+                  className="text-[#5D5D5D] text-lg"
+                  variants={textReveal}
+                >
                   Project complete
-                </p>
-              </div>
-              
-              <div className="space-y-2 text-center">
-                <h3 className="font-instrument text-3xl lg:text-4xl xl:text-5xl font-normal text-black tracking-tight">
-                  100+
-                </h3>
-                <p className="text-[#5D5D5D] text-lg">
+                </motion.p>
+              </motion.div>
+
+              <motion.div className="space-y-2 text-center" variants={statReveal}>
+                <motion.h3
+                  className="font-instrument text-3xl lg:text-4xl xl:text-5xl font-normal text-black tracking-tight"
+                  variants={textReveal}
+                >
+                  <Counter value={100} suffix="+" duration={2.2} />
+                </motion.h3>
+                <motion.p
+                  className="text-[#5D5D5D] text-lg"
+                  variants={textReveal}
+                >
                   Expert teams
-                </p>
-              </div>
-              
-              <div className="space-y-2 text-right">
-                <h3 className="font-instrument text-3xl lg:text-4xl xl:text-5xl font-normal text-black tracking-tight">
-                  $3.5M
-                </h3>
-                <p className="text-[#5D5D5D] text-lg">
+                </motion.p>
+              </motion.div>
+
+              <motion.div className="space-y-2 text-right" variants={statReveal}>
+                <motion.h3
+                  className="font-instrument text-3xl lg:text-4xl xl:text-5xl font-normal text-black tracking-tight"
+                  variants={textReveal}
+                >
+                  <Counter value={3500000} prefix="$" duration={2.5} />
+                </motion.h3>
+                <motion.p
+                  className="text-[#5D5D5D] text-lg"
+                  variants={textReveal}
+                >
                   Project value
-                </p>
-              </div>
-            </div>
-          </div>
-          
+                </motion.p>
+              </motion.div>
+            </motion.div>
+          </motion.div>
+
           {/* Right Image */}
-          <div className="relative">
+          <motion.div
+            className="relative"
+            initial="initial"
+            whileInView="whileInView"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={fadeInFromRight}
+          >
             <div className="rounded-2xl lg:rounded-3xl overflow-hidden aspect-[4/5] lg:aspect-[630/694]">
               <img
                 src="https://api.builder.io/api/v1/image/assets/TEMP/ccd05e016a805ef47d6ee702ec0a9ff978d5cc66?width=1261"
@@ -60,7 +190,7 @@ const CommitmentSection = () => {
                 className="w-full h-full object-cover"
               />
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
