@@ -15,13 +15,13 @@ const VisionSection = () => {
         <div className="flex flex-col items-center text-center text-2xl">
           <h2 className={`
             font-instrument text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[54px] font-normal leading-tight text-black mb-4 sm:mb-6 max-w-4xl tracking-[-0.5px] sm:tracking-[-1.6px] text-center
-            transition-all duration-1000 ease-out
+            transition-all duration-1200 ease-out
             ${isVisible
-              ? 'opacity-100 translate-y-0 scale-100'
-              : 'opacity-0 translate-y-8 scale-95'
+              ? 'opacity-100 translate-y-0'
+              : 'opacity-0 translate-y-12'
             }
           `}
-          style={{ transitionDelay: '0ms' }}>
+          style={{ transitionDelay: '200ms' }}>
             Experience innovative spaces
             <br />
             where real estate meets your vision
