@@ -30,7 +30,7 @@ const ServicesSection = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-12 lg:mb-16">
-          {services.map((service, index) => <div key={index} className="border border-[#C3D5F1] rounded-2xl p-6 lg:p-8 h-full flex flex-col">
+          {services.map((service, index) => <div key={index} className="border border-[#C3D5F1] rounded-2xl p-6 lg:p-8 h-full flex flex-col cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#3b82f6] active:bg-[#3b82f6] group">
               <div className="w-16 h-16 bg-[#071839] rounded-full flex items-center justify-center mb-6 lg:mb-8">
                 {service.icon}
               </div>
