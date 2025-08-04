@@ -4,53 +4,14 @@ const ConsultationSection = () => {
       {/* Background Image */}
       <div className="absolute inset-0 w-full h-full">
         <img
-          src="https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2Fc9e83563a23e4b40849a2b32ddd258c5?format=webp&width=800"
+          src="https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2F9368547c86574032adfc723736c103f0?format=webp&width=800"
           alt="Modern architectural building"
           className="w-full h-full object-cover"
         />
       </div>
 
       {/* Content Container */}
-      <div className="relative z-10 flex items-center px-4 py-8 md:px-8 lg:px-16 xl:px-24 h-full">
-        <div className="max-w-2xl">
-          {/* Main Heading */}
-          <h2 className="text-white text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-normal leading-tight tracking-tight mb-6 md:mb-8">
-            Schedule a free
-            <br />
-            consultation
-          </h2>
-
-          {/* Description */}
-          <p className="text-white text-lg md:text-xl leading-relaxed mb-8 md:mb-10 max-w-md">
-            We craft inspiring spaces that blend cutting-edge
-            design with enduring functionality, turning your
-            vision into reality.
-          </p>
-
-          {/* CTA Button */}
-          <div className="inline-flex items-center bg-white rounded-full px-6 py-3 hover:bg-gray-50 transition-colors duration-300 group cursor-pointer">
-            <span className="text-black text-lg font-medium mr-3">Get started</span>
-            <div className="bg-black rounded-full p-3 group-hover:scale-110 transition-transform duration-300">
-              <svg
-                width="18"
-                height="18"
-                viewBox="0 0 19 19"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="text-white"
-              >
-                <path
-                  d="M6.50034 5.42969H13.7115V12.6408M13.2108 5.93047L5.89941 13.2418"
-                  stroke="white"
-                  strokeWidth="1.69969"
-                  strokeMiterlimit="10"
-                  strokeLinecap="square"
-                />
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div className="relative z-10 flex items-center px-4 py-8 md:px-8 lg:px-16 xl:px-24 h-full" />
     </section>
   );
 };
