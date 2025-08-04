@@ -1,18 +1,18 @@
 const ConsultationSection = () => {
   return (
-    <section className="relative w-full h-[900px] overflow-hidden">
+    <section className="relative w-full h-[900px] overflow-hidden bg-gradient-to-r from-blue-400 to-blue-600">
       {/* Background Image */}
       <div className="absolute inset-0 w-full h-full">
         <img
-          src="https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2F6744268b86c14ae3b0bacee18652972b?format=webp&width=800"
+          src="https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2Fc9e83563a23e4b40849a2b32ddd258c5?format=webp&width=800"
           alt="Modern architectural building"
           className="w-full h-full object-cover"
         />
       </div>
 
       {/* Content Container */}
-      <div className="relative z-10 px-4 py-8 md:px-8 lg:px-16 xl:px-24">
-        <div className="max-w-2xl pt-16 md:pt-20 lg:pt-24">
+      <div className="relative z-10 flex items-center px-4 py-8 md:px-8 lg:px-16 xl:px-24 h-full">
+        <div className="max-w-2xl">
           {/* Main Heading */}
           <h2 className="text-white text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-normal leading-tight tracking-tight mb-6 md:mb-8">
             Schedule a free
@@ -28,7 +28,7 @@ const ConsultationSection = () => {
           </p>
 
           {/* CTA Button */}
-          <div className="inline-flex items-center bg-white rounded-full px-6 py-3 hover:bg-gray-50 transition-colors duration-300 group">
+          <div className="inline-flex items-center bg-white rounded-full px-6 py-3 hover:bg-gray-50 transition-colors duration-300 group cursor-pointer">
             <span className="text-black text-lg font-medium mr-3">Get started</span>
             <div className="bg-black rounded-full p-3 group-hover:scale-110 transition-transform duration-300">
               <svg
@@ -40,7 +40,7 @@ const ConsultationSection = () => {
                 className="text-white"
               >
                 <path
-                  d="M6.42027 5.45898H13.6314V12.6701M13.1307 5.95977L5.81934 13.2711"
+                  d="M6.50034 5.42969H13.7115V12.6408M13.2108 5.93047L5.89941 13.2418"
                   stroke="white"
                   strokeWidth="1.69969"
                   strokeMiterlimit="10"
