@@ -3,17 +3,10 @@ const ConsultationSection = () => {
     <section className="relative w-full h-[900px] overflow-hidden bg-gradient-to-r from-blue-400 to-blue-600">
       {/* Background Image */}
       <div className="absolute inset-0 w-full h-full">
-        {/* Mobile Background */}
-        <img
-          src="https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2F86098bec2c084754a74921b12ac7b270?format=webp&width=800"
-          alt="Modern architectural building"
-          className="w-full h-full object-cover md:hidden"
-        />
-        {/* Desktop Background */}
         <img
           src="https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2F9368547c86574032adfc723736c103f0?format=webp&width=800"
           alt="Modern architectural building"
-          className="w-full h-full object-cover hidden md:block"
+          className="w-full h-full object-cover"
         />
       </div>
 
