@@ -96,12 +96,9 @@ const companyLogos = [
 
 export function MarqueeDemo() {
   return (
-    <div className="bg-white py-8 md:py-12 border-y border-gray-100">
+    <div className="bg-white pt-0.5 border-y border-gray-100">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-8">
-          <p className="text-sm font-medium text-gray-500 uppercase tracking-wider">
-            Trusted by Leading Companies
-          </p>
+        <div className="mb-8">
         </div>
         <Marquee pauseOnHover={true} speed={30}>
           {companyLogos.map((logo, index) => (
