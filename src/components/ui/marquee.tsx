@@ -96,45 +96,47 @@ const companyLogos = [
 
 export function MarqueeDemo() {
   return (
-    <div
-      className={cn(
-        "flex w-max animate-marquee",
-        "hover:[animation-play-state:paused]"
-      )}
-      style={{ "--duration": "30s" } as React.CSSProperties}
-    >
-      {companyLogos.map((logo, index) => (
-        <div
-          key={index}
-          className="relative h-full w-fit mx-6 md:mx-10 flex items-center justify-center group"
-        >
-          <img
-            src={logo.src}
-            alt={`${logo.name} logo`}
-            className={cn(
-              "object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500 opacity-70 group-hover:opacity-100 group-hover:scale-110",
-              logo.className
-            )}
-            loading="lazy"
-          />
-        </div>
-      ))}
-      {companyLogos.map((logo, index) => (
-        <div
-          key={`duplicate-${index}`}
-          className="relative h-full w-fit mx-6 md:mx-10 flex items-center justify-center group"
-        >
-          <img
-            src={logo.src}
-            alt={`${logo.name} logo`}
-            className={cn(
-              "object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500 opacity-70 group-hover:opacity-100 group-hover:scale-110",
-              logo.className
-            )}
-            loading="lazy"
-          />
-        </div>
-      ))}
+    <div className="w-full overflow-hidden bg-white py-4">
+      <div
+        className={cn(
+          "flex w-max animate-marquee",
+          "hover:[animation-play-state:paused]"
+        )}
+        style={{ "--duration": "30s" } as React.CSSProperties}
+      >
+        {companyLogos.map((logo, index) => (
+          <div
+            key={index}
+            className="relative h-full w-fit mx-6 md:mx-10 flex items-center justify-center group"
+          >
+            <img
+              src={logo.src}
+              alt={`${logo.name} logo`}
+              className={cn(
+                "object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500 opacity-70 group-hover:opacity-100 group-hover:scale-110",
+                logo.className
+              )}
+              loading="lazy"
+            />
+          </div>
+        ))}
+        {companyLogos.map((logo, index) => (
+          <div
+            key={`duplicate-${index}`}
+            className="relative h-full w-fit mx-6 md:mx-10 flex items-center justify-center group"
+          >
+            <img
+              src={logo.src}
+              alt={`${logo.name} logo`}
+              className={cn(
+                "object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500 opacity-70 group-hover:opacity-100 group-hover:scale-110",
+                logo.className
+              )}
+              loading="lazy"
+            />
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
