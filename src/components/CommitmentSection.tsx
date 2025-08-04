@@ -133,7 +133,7 @@ const CommitmentSection = () => {
                   className="font-instrument text-3xl lg:text-4xl xl:text-5xl font-normal text-black tracking-tight"
                   variants={textReveal}
                 >
-                  50+
+                  <Counter value={50} suffix="+" duration={2} />
                 </motion.h3>
                 <motion.p
                   className="text-[#5D5D5D] text-lg"
@@ -148,7 +148,7 @@ const CommitmentSection = () => {
                   className="font-instrument text-3xl lg:text-4xl xl:text-5xl font-normal text-black tracking-tight"
                   variants={textReveal}
                 >
-                  100+
+                  <Counter value={100} suffix="+" duration={2.2} />
                 </motion.h3>
                 <motion.p
                   className="text-[#5D5D5D] text-lg"
@@ -163,7 +163,7 @@ const CommitmentSection = () => {
                   className="font-instrument text-3xl lg:text-4xl xl:text-5xl font-normal text-black tracking-tight"
                   variants={textReveal}
                 >
-                  $3.5M
+                  <Counter value={3500000} prefix="$" duration={2.5} />
                 </motion.h3>
                 <motion.p
                   className="text-[#5D5D5D] text-lg"
