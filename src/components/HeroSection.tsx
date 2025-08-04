@@ -1,11 +1,50 @@
+import { motion } from "framer-motion";
 import HeroHeader from "./HeroHeader";
+
 const HeroSection = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+        delayChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const headlineVariants = {
+    hidden: { opacity: 0, y: 50, scale: 0.95 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 1.2,
+        ease: [0.25, 0.25, 0.25, 1],
+        delay: 0.1,
+      },
+    },
+  };
+
   return <section className="relative min-h-screen overflow-hidden bg-[#1E9CE8]">
       {/* Navigation */}
       <div className="relative z-20">
         <HeroHeader />
       </div>
-      
+
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <div className="relative w-full h-full overflow-hidden">
@@ -17,27 +56,41 @@ const HeroSection = () => {
           />
         </div>
       </div>
-      
+
 
       {/* Hero Content */}
       <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-4 sm:px-8 mb-16" style={{
       padding: '120px 16px 200px 16px'
     }}>
         {/* Main Heading */}
-        <div className="text-center max-w-4xl mx-auto mb-8">
-          <h1 className="text-white mb-6 font-instrument text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight font-normal">
+        <motion.div
+          className="text-center max-w-4xl mx-auto mb-8"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <motion.h1
+            variants={headlineVariants}
+            className="text-white mb-6 font-instrument text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight font-normal"
+          >
             Your gateway to
             <br />
             prestige properties
-          </h1>
+          </motion.h1>
 
           {/* Subtitle */}
-          <p className="text-base sm:text-lg md:text-xl text-white/90 mb-8 sm:mb-12 mx-auto max-w-sm sm:max-w-md md:max-w-lg leading-relaxed px-4 sm:px-0">
+          <motion.p
+            variants={itemVariants}
+            className="text-base sm:text-lg md:text-xl text-white/90 mb-8 sm:mb-12 mx-auto max-w-sm sm:max-w-md md:max-w-lg leading-relaxed px-4 sm:px-0"
+          >
             Bring your architectural projects to life with a template that puts your work front and center.
-          </p>
+          </motion.p>
 
           {/* CTA Button */}
-          <div className="flex justify-center">
+          <motion.div
+            variants={itemVariants}
+            className="flex justify-center"
+          >
             <button className="group flex items-center gap-2 px-4 py-2 bg-white rounded-full hover:bg-gray-50 transition-all duration-200 shadow-lg hover:shadow-xl">
               <span className="text-gray-900 font-medium text-base">
                 Get started
@@ -48,8 +101,8 @@ const HeroSection = () => {
                 </svg>
               </div>
             </button>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
       
 
