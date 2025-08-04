@@ -96,25 +96,32 @@ const companyLogos = [
 
 export function MarqueeDemo() {
   return (
-    <div className="bg-white py-8 md:py-12">
-      <Marquee pauseOnHover speed={25}>
-        {companyLogos.map((logo, index) => (
-          <div
-            key={index}
-            className="relative h-full w-fit mx-8 md:mx-12 flex items-center justify-center"
-          >
-            <img
-              src={logo.src}
-              alt={`${logo.name} logo`}
-              className={cn(
-                "object-contain filter grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100",
-                logo.className
-              )}
-              loading="lazy"
-            />
-          </div>
-        ))}
-      </Marquee>
+    <div className="bg-white py-8 md:py-12 border-y border-gray-100">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-8">
+          <p className="text-sm font-medium text-gray-500 uppercase tracking-wider">
+            Trusted by Leading Companies
+          </p>
+        </div>
+        <Marquee pauseOnHover={true} speed={30}>
+          {companyLogos.map((logo, index) => (
+            <div
+              key={index}
+              className="relative h-full w-fit mx-6 md:mx-10 flex items-center justify-center group"
+            >
+              <img
+                src={logo.src}
+                alt={`${logo.name} logo`}
+                className={cn(
+                  "object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500 opacity-70 group-hover:opacity-100 group-hover:scale-110",
+                  logo.className
+                )}
+                loading="lazy"
+              />
+            </div>
+          ))}
+        </Marquee>
+      </div>
     </div>
   )
 }
