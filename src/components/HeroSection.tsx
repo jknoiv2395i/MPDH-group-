@@ -1,4 +1,5 @@
 import HeroHeader from "./HeroHeader";
+import { MarqueeDemo } from "./ui/marquee";
 const HeroSection = () => {
   return <section className="relative min-h-screen overflow-hidden bg-[#1E9CE8]">
       {/* Navigation */}
