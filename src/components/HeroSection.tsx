@@ -60,6 +60,10 @@ const HeroSection = () => {
         background: 'linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%)'
       }} />
       
+{/* Marquee Component */}
+<div className="absolute bottom-0 left-0 w-full z-10 flex flex-col">
+  <MarqueeDemo />
+</div>
 
     </section>;
 };
