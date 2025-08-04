@@ -61,15 +61,13 @@ const CommitmentSection = () => {
           {/* Left Content */}
           <motion.div
             className="space-y-8"
-            variants={staggerChildren}
-            initial="initial"
-            whileInView="whileInView"
+            {...staggerChildren}
             viewport={{ once: true, margin: "-100px" }}
           >
             {/* Main Heading */}
             <motion.h2
               className="font-instrument text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-normal text-black leading-tight tracking-tight"
-              variants={fadeInFromLeft}
+              variants={textReveal}
             >
               With a commitment to excellence and customer satisfaction.
             </motion.h2>
@@ -77,7 +75,7 @@ const CommitmentSection = () => {
             {/* Description */}
             <motion.p
               className="text-[#5D5D5D] text-lg leading-relaxed"
-              variants={fadeInFromLeft}
+              variants={textReveal}
             >
               With a commitment to innovation, sustainability, and precision, we bring your ideas to life while enhancing functionality and aesthetics. Our team of dedicated architects and designers is here to turn your unique vision into a tangible masterpiece.
             </motion.p>
@@ -85,7 +83,7 @@ const CommitmentSection = () => {
             {/* CTA Button */}
             <motion.button
               className="bg-[#131313] text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-gray-800 transition-colors"
-              variants={fadeInFromLeft}
+              variants={textReveal}
             >
               Learn more
             </motion.button>
@@ -93,34 +91,55 @@ const CommitmentSection = () => {
             {/* Stats Grid */}
             <motion.div
               className="grid grid-cols-3 gap-8 pt-8"
-              variants={fadeInFromLeft}
+              variants={statsContainer}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-50px" }}
             >
-              <div className="space-y-2">
-                <h3 className="font-instrument text-3xl lg:text-4xl xl:text-5xl font-normal text-black tracking-tight">
+              <motion.div className="space-y-2" variants={statReveal}>
+                <motion.h3
+                  className="font-instrument text-3xl lg:text-4xl xl:text-5xl font-normal text-black tracking-tight"
+                  variants={textReveal}
+                >
                   50+
-                </h3>
-                <p className="text-[#5D5D5D] text-lg">
+                </motion.h3>
+                <motion.p
+                  className="text-[#5D5D5D] text-lg"
+                  variants={textReveal}
+                >
                   Project complete
-                </p>
-              </div>
+                </motion.p>
+              </motion.div>
 
-              <div className="space-y-2 text-center">
-                <h3 className="font-instrument text-3xl lg:text-4xl xl:text-5xl font-normal text-black tracking-tight">
+              <motion.div className="space-y-2 text-center" variants={statReveal}>
+                <motion.h3
+                  className="font-instrument text-3xl lg:text-4xl xl:text-5xl font-normal text-black tracking-tight"
+                  variants={textReveal}
+                >
                   100+
-                </h3>
-                <p className="text-[#5D5D5D] text-lg">
+                </motion.h3>
+                <motion.p
+                  className="text-[#5D5D5D] text-lg"
+                  variants={textReveal}
+                >
                   Expert teams
-                </p>
-              </div>
+                </motion.p>
+              </motion.div>
 
-              <div className="space-y-2 text-right">
-                <h3 className="font-instrument text-3xl lg:text-4xl xl:text-5xl font-normal text-black tracking-tight">
+              <motion.div className="space-y-2 text-right" variants={statReveal}>
+                <motion.h3
+                  className="font-instrument text-3xl lg:text-4xl xl:text-5xl font-normal text-black tracking-tight"
+                  variants={textReveal}
+                >
                   $3.5M
-                </h3>
-                <p className="text-[#5D5D5D] text-lg">
+                </motion.h3>
+                <motion.p
+                  className="text-[#5D5D5D] text-lg"
+                  variants={textReveal}
+                >
                   Project value
-                </p>
-              </div>
+                </motion.p>
+              </motion.div>
             </motion.div>
           </motion.div>
 
