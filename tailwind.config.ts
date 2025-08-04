@@ -127,10 +127,6 @@ export default {
 				},
 				marquee: {
 					to: { transform: 'translateX(-50%)' }
-				},
-				"marquee-reverse": {
-					from: { transform: "translateX(-50%)" },
-					to: { transform: "translateX(0%)" }
 				}
 			},
 			animation: {
@@ -138,8 +134,7 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				"navbar-slide-down": "navbar-slide-down 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
 				"navbar-dropdown": "navbar-dropdown 0.2s cubic-bezier(0.4, 0, 0.2, 1)",
-				marquee: 'marquee var(--duration, 30s) linear infinite',
-				"marquee-reverse": "marquee-reverse var(--duration, 30s) linear infinite"
+				marquee: 'marquee var(--duration, 30s) linear infinite'
 			},
 			backdropBlur: {
 				navbar: "10px"
