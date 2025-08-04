@@ -175,7 +175,7 @@ All colors MUST be HSL.
   .logo-item:nth-child(10) { animation-delay: 3.0s; }
 }
 
-@keyframes logoSectionFadeIn {
+@keyframes logoSectionSlideUp {
   to {
     opacity: 1;
     transform: translateY(0);
