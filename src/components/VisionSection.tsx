@@ -6,7 +6,7 @@ const VisionSection = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, 300);
+    }, 100);
     return () => clearTimeout(timer);
   }, []);
 
