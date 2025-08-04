@@ -31,13 +31,13 @@ const VisionSection = () => {
 
           <p className={`
             text-[#5D5D5D] text-base md:text-lg font-normal leading-relaxed max-w-[634px] tracking-[0.2px] sm:tracking-[0.36px]
-            transition-all duration-1000 ease-out
+            transition-all duration-1200 ease-out
             ${isVisible
               ? 'opacity-100 translate-y-0'
-              : 'opacity-0 translate-y-6'
+              : 'opacity-0 translate-y-8'
             }
           `}
-          style={{ transitionDelay: '400ms' }}>
+          style={{ transitionDelay: '600ms' }}>
             We craft inspiring spaces that blend cutting-edge design with enduring
             functionality, turning your vision into reality.
           </p>
