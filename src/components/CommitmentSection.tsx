@@ -14,9 +14,42 @@ const CommitmentSection = () => {
   };
 
   const staggerChildren = {
-    whileInView: {
+    initial: "hidden",
+    whileInView: "visible",
+    variants: {
+      hidden: {},
+      visible: {
+        transition: {
+          staggerChildren: 0.2
+        }
+      }
+    }
+  };
+
+  const textReveal = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" }
+    }
+  };
+
+  const statReveal = {
+    hidden: { opacity: 0, scale: 0.8, y: 20 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" }
+    }
+  };
+
+  const statsContainer = {
+    hidden: {},
+    visible: {
       transition: {
-        staggerChildren: 0.1
+        staggerChildren: 0.15
       }
     }
   };
