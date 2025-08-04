@@ -1,5 +1,4 @@
 import HeroHeader from "./HeroHeader";
-import { MarqueeDemo } from "./ui/marquee";
 const HeroSection = () => {
   return <section className="relative min-h-screen overflow-hidden bg-[#1E9CE8]">
       {/* Navigation */}
@@ -61,10 +60,7 @@ const HeroSection = () => {
         background: 'linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%)'
       }} />
       
-      {/* Marquee Component */}
-      <div className="absolute bottom-0 left-0 w-full z-10">
-        <MarqueeDemo />
-      </div>
+
     </section>;
 };
 export default HeroSection;
