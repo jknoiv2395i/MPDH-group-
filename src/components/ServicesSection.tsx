@@ -1,5 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
+import FeatureBlogsSection from "./FeatureBlogsSection";
 
 const ServicesSection = () => {
   const services = [{
