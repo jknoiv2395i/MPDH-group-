@@ -114,12 +114,20 @@ const FeatureBlogsSection = () => {
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </div>
-            <h3 className="font-instrument text-xl lg:text-[27px] font-normal text-[#131313] leading-[1.33] tracking-[-0.27px] mb-4 line-clamp-3">
+            <motion.h3
+              className="font-instrument text-xl lg:text-[27px] font-normal text-[#131313] leading-[1.33] tracking-[-0.27px] mb-4 line-clamp-3"
+              variants={textAnimationVariants}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.5 }}
+            >
               {blogs[1].title}
-            </h3>
-            <p className="text-[#5D5D5D] font-inter text-lg tracking-[0.36px] leading-[1.5]">
+            </motion.h3>
+            <motion.p
+              className="text-[#5D5D5D] font-inter text-lg tracking-[0.36px] leading-[1.5]"
+              variants={textAnimationVariants}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.5 }}
+            >
               {blogs[1].date}
-            </p>
+            </motion.p>
           </motion.div>
 
           {/* Third Blog - Regular Size */}
