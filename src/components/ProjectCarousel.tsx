@@ -56,11 +56,19 @@ const ProjectCarousel = () => {
     }),
     visible: {
       x: 0,
-      opacity: 1
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        ease: "easeInOut"
+      }
     },
     exit: (direction: number) => ({
       x: direction < 0 ? 1000 : -1000,
-      opacity: 0
+      opacity: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeInOut"
+      }
     })
   };
 
