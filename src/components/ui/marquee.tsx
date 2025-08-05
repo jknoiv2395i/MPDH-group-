@@ -113,7 +113,7 @@ export function MarqueeDemo() {
               src={logo.src}
               alt={`${logo.name} logo`}
               className={cn(
-                "object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500 opacity-70 group-hover:opacity-100 group-hover:scale-110",
+                "object-contain transition-all duration-500 opacity-90 group-hover:opacity-100 group-hover:scale-110",
                 logo.className
               )}
               loading="lazy"
@@ -129,7 +129,7 @@ export function MarqueeDemo() {
               src={logo.src}
               alt={`${logo.name} logo`}
               className={cn(
-                "object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500 opacity-70 group-hover:opacity-100 group-hover:scale-110",
+                "object-contain transition-all duration-500 opacity-90 group-hover:opacity-100 group-hover:scale-110",
                 logo.className
               )}
               loading="lazy"
