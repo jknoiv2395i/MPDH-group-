@@ -125,8 +125,8 @@ const Testimonials = () => {
           <div className="flex justify-center">
           </div>
 
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tighter mt-5">
-            What our users say
+          <h2 className="tracking-tighter mt-5" style={{font: "48px/48px Instrument Sans, sans-serif"}}>
+            <p>WHAT OUR CLIENT SAY </p>
           </h2>
           <p className="text-center mt-5 opacity-75">
             See what our customers have to say about us.
