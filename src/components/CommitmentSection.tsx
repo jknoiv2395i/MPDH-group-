@@ -1,5 +1,6 @@
 import { motion, useMotionValue, useSpring, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
+import ProjectCarousel from "./ProjectCarousel";
 
 const Counter = ({ value, suffix = "", prefix = "", duration = 2 }) => {
   const ref = useRef(null);
