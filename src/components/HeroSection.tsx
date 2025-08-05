@@ -88,7 +88,7 @@ const HeroSection = () => {
           {/* Subtitle */}
           <motion.p
             variants={itemVariants}
-            className="text-sm sm:text-lg md:text-xl text-white/90 mb-8 sm:mb-12 mx-auto max-w-xs sm:max-w-md md:max-w-lg leading-relaxed px-2 sm:px-0"
+            className="text-base sm:text-lg md:text-xl text-white/90 mb-8 sm:mb-12 mx-auto max-w-sm sm:max-w-md md:max-w-lg leading-relaxed px-4 sm:px-0"
           >
             Bring your architectural projects to life with a template that puts your work front and center.
           </motion.p>
