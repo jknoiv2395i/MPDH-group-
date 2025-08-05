@@ -39,7 +39,7 @@ const HeroSection = () => {
     },
   };
 
-  return <section className="relative min-h-screen overflow-hidden bg-[#1E9CE8]">
+  return <section className="relative min-h-screen overflow-hidden bg-[#1E9CE8] w-full max-w-full">
       {/* Navigation */}
       <div className="relative z-20">
         <HeroHeader />
