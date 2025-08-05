@@ -34,73 +34,51 @@ const Counter = ({ value, suffix = "", prefix = "", duration = 2 }) => {
 };
 
 const CommitmentSection = () => {
-  const fadeInFromLeft = {
-    initial: { opacity: 0, x: -50 },
-    whileInView: { opacity: 1, x: 0 },
-    transition: { duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }
-  };
-
   const fadeInFromRight = {
     initial: { opacity: 0, x: 50 },
     whileInView: { opacity: 1, x: 0 },
-    transition: { duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }
+    transition: { duration: 0.8 }
   };
 
   const staggerChildren = {
     initial: "hidden",
     whileInView: "visible",
+    transition: { staggerChildren: 0.2 },
     variants: {
       hidden: {},
-      visible: {
-        transition: {
-          staggerChildren: 0.2
-        }
-      }
+      visible: {}
     }
   };
 
   const textReveal = {
     hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut" }
-    }
+    visible: { opacity: 1, y: 0 }
   };
 
   const statReveal = {
     hidden: { opacity: 0, scale: 0.8, y: 20 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut" }
-    }
+    visible: { opacity: 1, scale: 1, y: 0 }
   };
 
   const statsContainer = {
     hidden: {},
-    visible: {
-      transition: {
-        staggerChildren: 0.15
-      }
-    }
+    visible: {}
   };
 
   return (
     <>
-      <section className="bg-white pt-16 lg:pt-16 pb-16 lg:pb-32" style={{ paddingTop: '59px' }}>
-        <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-24 items-center">
+      <section className="bg-white pt-8 sm:pt-12 lg:pt-16 pb-12 sm:pb-16 lg:pb-32" style={{ paddingTop: '59px' }}>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-16 xl:gap-24 items-center">
             {/* Left Content */}
             <motion.div
-              className="space-y-8"
+              className="space-y-6 sm:space-y-8"
               {...staggerChildren}
-              viewport={{ once: true, margin: "-100px" }}
+              viewport={{ once: true, margin: "-50px" }}
             >
               {/* Main Heading */}
               <motion.h2
-                className="font-instrument text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-normal text-black leading-tight tracking-tight"
+                className="font-instrument text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-normal text-black leading-tight tracking-tight"
                 variants={textReveal}
               >
                 With a commitment to excellence and customer satisfaction.
@@ -108,7 +86,7 @@ const CommitmentSection = () => {
 
               {/* Description */}
               <motion.p
-                className="text-[#5D5D5D] text-lg leading-relaxed"
+                className="text-[#5D5D5D] text-base sm:text-lg leading-relaxed"
                 variants={textReveal}
               >
                 With a commitment to innovation, sustainability, and precision, we bring your ideas to life while enhancing functionality and aesthetics. Our team of dedicated architects and designers is here to turn your unique vision into a tangible masterpiece.
@@ -116,7 +94,7 @@ const CommitmentSection = () => {
 
               {/* CTA Button */}
               <motion.button
-                className="bg-[#131313] text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-gray-800 transition-colors"
+                className="bg-[#131313] text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full text-base sm:text-lg font-medium hover:bg-gray-800 transition-colors w-full sm:w-auto"
                 variants={textReveal}
               >
                 Learn more
@@ -124,51 +102,51 @@ const CommitmentSection = () => {
 
               {/* Stats Grid */}
               <motion.div
-                className="grid grid-cols-3 gap-8 pt-8"
+                className="grid grid-cols-3 gap-3 sm:gap-4 lg:gap-8 pt-6 sm:pt-8"
                 variants={statsContainer}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, margin: "-50px" }}
               >
-                <motion.div className="space-y-2" variants={statReveal}>
+                <motion.div className="space-y-1 sm:space-y-2" variants={statReveal}>
                   <motion.h3
-                    className="font-instrument text-3xl lg:text-4xl xl:text-5xl font-normal text-black tracking-tight"
+                    className="font-instrument text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-normal text-black tracking-tight"
                     variants={textReveal}
                   >
                     <Counter value={50} suffix="+" duration={2} />
                   </motion.h3>
                   <motion.p
-                    className="text-[#5D5D5D] text-lg"
+                    className="text-[#5D5D5D] text-sm sm:text-base lg:text-lg"
                     variants={textReveal}
                   >
                     Project complete
                   </motion.p>
                 </motion.div>
 
-                <motion.div className="space-y-2 text-center" variants={statReveal}>
+                <motion.div className="space-y-1 sm:space-y-2 text-center" variants={statReveal}>
                   <motion.h3
-                    className="font-instrument text-3xl lg:text-4xl xl:text-5xl font-normal text-black tracking-tight"
+                    className="font-instrument text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-normal text-black tracking-tight"
                     variants={textReveal}
                   >
                     <Counter value={100} suffix="+" duration={2.2} />
                   </motion.h3>
                   <motion.p
-                    className="text-[#5D5D5D] text-lg"
+                    className="text-[#5D5D5D] text-sm sm:text-base lg:text-lg"
                     variants={textReveal}
                   >
                     Expert teams
                   </motion.p>
                 </motion.div>
 
-                <motion.div className="space-y-2 text-right" variants={statReveal}>
+                <motion.div className="space-y-1 sm:space-y-2 text-right" variants={statReveal}>
                   <motion.h3
-                    className="font-instrument text-3xl lg:text-4xl xl:text-5xl font-normal text-black tracking-tight"
+                    className="font-instrument text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-normal text-black tracking-tight"
                     variants={textReveal}
                   >
                     <Counter value={3500000} prefix="$" duration={2.5} />
                   </motion.h3>
                   <motion.p
-                    className="text-[#5D5D5D] text-lg"
+                    className="text-[#5D5D5D] text-sm sm:text-base lg:text-lg"
                     variants={textReveal}
                   >
                     Project value
@@ -179,13 +157,13 @@ const CommitmentSection = () => {
 
             {/* Right Image */}
             <motion.div
-              className="relative"
+              className="relative order-first lg:order-last"
               initial="initial"
               whileInView="whileInView"
-              viewport={{ once: true, margin: "-100px" }}
+              viewport={{ once: true, margin: "-50px" }}
               variants={fadeInFromRight}
             >
-              <div className="rounded-2xl lg:rounded-3xl overflow-hidden aspect-[4/5] lg:aspect-[630/694]">
+              <div className="rounded-xl sm:rounded-2xl lg:rounded-3xl overflow-hidden aspect-[4/3] sm:aspect-[4/4] lg:aspect-[630/694]">
                 <img
                   src="https://api.builder.io/api/v1/image/assets/TEMP/ccd05e016a805ef47d6ee702ec0a9ff978d5cc66?width=1261"
                   alt="Modern architectural building with curved glass facade"
