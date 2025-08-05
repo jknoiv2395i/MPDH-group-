@@ -126,12 +126,9 @@ const Testimonials = () => {
           <div className="flex justify-center">
           </div>
 
-          <AnimatedText
-            text="WHAT OUR CLIENT SAY"
-            textClassName="tracking-tighter"
-            className="mt-5"
-            style={{font: "48px/48px Instrument Sans, sans-serif"}}
-          />
+          <h2 className="tracking-tighter mt-5" style={{font: "48px/48px Instrument Sans, sans-serif"}}>
+            <p>WHAT OUR CLIENT SAY </p>
+          </h2>
           <p className="text-center mt-5 opacity-75">
             See what our customers have to say about us.
           </p>
