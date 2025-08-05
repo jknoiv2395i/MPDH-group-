@@ -39,7 +39,7 @@ const HeroSection = () => {
     },
   };
 
-  return <section className="relative min-h-screen overflow-hidden bg-[#1E9CE8]">
+  return <section className="relative min-h-screen overflow-hidden bg-[#1E9CE8] w-full max-w-full">
       {/* Navigation */}
       <div className="relative z-20">
         <HeroHeader />
@@ -66,7 +66,7 @@ const HeroSection = () => {
 
 
       {/* Hero Content */}
-      <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-4 sm:px-8 mb-16" style={{
+      <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-4 sm:px-8 mb-16 w-full" style={{
       padding: '120px 16px 200px 16px'
     }}>
         {/* Main Heading */}
@@ -78,7 +78,7 @@ const HeroSection = () => {
         >
           <motion.h1
             variants={headlineVariants}
-            className="text-white mb-6 font-instrument text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight font-normal"
+            className="text-white mb-6 font-instrument text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight font-normal"
           >
             Your gateway to
             <br />
@@ -88,7 +88,7 @@ const HeroSection = () => {
           {/* Subtitle */}
           <motion.p
             variants={itemVariants}
-            className="text-base sm:text-lg md:text-xl text-white/90 mb-8 sm:mb-12 mx-auto max-w-sm sm:max-w-md md:max-w-lg leading-relaxed px-4 sm:px-0"
+            className="text-sm sm:text-lg md:text-xl text-white/90 mb-8 sm:mb-12 mx-auto max-w-xs sm:max-w-md md:max-w-lg leading-relaxed px-2 sm:px-0"
           >
             Bring your architectural projects to life with a template that puts your work front and center.
           </motion.p>
