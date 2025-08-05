@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "motion/react";
+import { AnimatedText } from "./animated-underline-text-one";
 
 const testimonials = [
   {
@@ -123,12 +124,14 @@ const Testimonials = () => {
           className="flex flex-col items-center justify-center max-w-[540px] mx-auto"
         >
           <div className="flex justify-center">
-            <div className="border py-1 px-4 rounded-lg">Testimonials</div>
           </div>
 
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tighter mt-5">
-            What our users say
-          </h2>
+          <AnimatedText
+            text="WHAT OUR CLIENT SAY"
+            textClassName="tracking-tighter"
+            className="mt-5"
+            style={{font: "48px/48px Instrument Sans, sans-serif"}}
+          />
           <p className="text-center mt-5 opacity-75">
             See what our customers have to say about us.
           </p>
