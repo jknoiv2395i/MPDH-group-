@@ -78,7 +78,7 @@ const HeroSection = () => {
         >
           <motion.h1
             variants={headlineVariants}
-            className="text-white mb-6 font-instrument text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight font-normal"
+            className="text-white mb-6 font-instrument text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight font-normal"
           >
             Your gateway to
             <br />
