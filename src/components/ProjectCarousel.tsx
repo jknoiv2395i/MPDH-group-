@@ -120,14 +120,27 @@ const ProjectCarousel = () => {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="space-y-4">
-                  <h3 className="font-instrument text-2xl font-normal text-[#131313] leading-tight tracking-tight">
+                <motion.div
+                  className="space-y-4"
+                  variants={containerVariants}
+                  initial="hidden"
+                  animate="visible"
+                >
+                  <motion.h3
+                    className="font-instrument text-2xl font-normal text-[#131313] leading-tight tracking-tight"
+                    variants={textVariants}
+                    custom={0}
+                  >
                     {projects[currentIndex].title}
-                  </h3>
-                  <p className="font-inter text-lg text-[#5D5D5D] leading-relaxed">
+                  </motion.h3>
+                  <motion.p
+                    className="font-inter text-lg text-[#5D5D5D] leading-relaxed"
+                    variants={textVariants}
+                    custom={1}
+                  >
                     {projects[currentIndex].description}
-                  </p>
-                </div>
+                  </motion.p>
+                </motion.div>
               </motion.div>
             </AnimatePresence>
             
