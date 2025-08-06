@@ -117,13 +117,14 @@ const ServicesSection = () => {
               assist you every step of the way.
             </motion.p>
 
-            <motion.button
-              className="bg-[#131313] text-white px-8 py-4 rounded-full text-base lg:text-lg font-medium hover:bg-gray-800 transition-colors self-start lg:self-auto"
+            <motion.a
+              href="https://c81dcd8934204bc39d562f1debf9ab43-8e591c7522cc4e05a161006e3.fly.dev/services"
+              className="bg-[#131313] text-white px-8 py-4 rounded-full text-base lg:text-lg font-medium hover:bg-gray-800 transition-colors self-start lg:self-auto cursor-pointer"
               variants={textAnimationVariants}
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
             >
               View all
-            </motion.button>
+            </motion.a>
           </motion.div>
         </div>
       </section>
