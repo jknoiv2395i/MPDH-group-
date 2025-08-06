@@ -107,6 +107,15 @@ const Footer = () => {
           </div>
         </div>
       </div>
+
+      {/* Map Image Section */}
+      <div className="w-full mt-0">
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets%2F371acd9a25a7494cb5e15d62a5f4d89c%2F5dc7be8501414bcfaa26112ad7dbdbfd?format=webp&width=800"
+          alt="Location map"
+          className="w-full h-auto object-cover"
+        />
+      </div>
     </footer>
   );
 };
