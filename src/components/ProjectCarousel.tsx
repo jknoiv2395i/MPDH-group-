@@ -122,7 +122,11 @@ const ProjectCarousel = () => {
       <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
         {/* Mobile Carousel */}
         <div className="lg:hidden">
-          <div className="relative">
+          <div
+            className="relative"
+            onMouseEnter={() => setIsAutoPlay(false)}
+            onMouseLeave={() => setIsAutoPlay(true)}
+          >
             <AnimatePresence mode="wait" custom={currentIndex}>
               <motion.div
                 key={currentIndex}
