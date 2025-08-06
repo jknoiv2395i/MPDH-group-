@@ -91,6 +91,11 @@ const companyLogos = [
     name: "Blinkit",
     src: "https://api.builder.io/api/v1/image/assets/TEMP/0e2dcf416d46d4dadd698d86c74231111f5e56bf?width=400",
     className: "h-9 md:h-11 w-auto"
+  },
+  {
+    name: "Rail Vikas Nigam Limited",
+    src: "https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2F4bfd1596c4fa42a6a2d9bc400f7bdead?format=webp&width=800",
+    className: "h-10 md:h-12 w-auto"
   }
 ];
 
@@ -99,7 +104,7 @@ export function MarqueeDemo() {
     <div className="w-full overflow-hidden bg-white py-4 logo-section">
       <div
         className={cn(
-          "flex w-max logo-marquee",
+          "flex w-max animate-marquee",
           "hover:[animation-play-state:paused]"
         )}
         style={{ "--duration": "30s" } as React.CSSProperties}
