@@ -72,6 +72,31 @@ const ProjectCarousel = () => {
     })
   };
 
+  const textVariants = {
+    hidden: {
+      opacity: 0,
+      y: 30
+    },
+    visible: (i: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+        delay: i * 0.2
+      }
+    })
+  };
+
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
   return (
     <section className="bg-white py-16 lg:py-24">
       <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
