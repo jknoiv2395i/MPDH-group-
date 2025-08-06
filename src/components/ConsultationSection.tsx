@@ -36,7 +36,7 @@ const ConsultationSection = () => {
           </p>
 
           {/* CTA Button */}
-          <div className="inline-flex items-center bg-white rounded-full px-6 py-3 hover:bg-gray-50 transition-colors duration-300 group cursor-pointer sm:-mr-px">
+          <a href="/services" className="inline-flex items-center bg-white rounded-full px-6 py-3 hover:bg-gray-50 transition-colors duration-300 group cursor-pointer sm:-mr-px">
             <span className="text-black text-lg font-medium mr-3">Get started</span>
             <div className="bg-black rounded-full p-3 group-hover:scale-110 transition-transform duration-300">
               <svg
@@ -56,7 +56,7 @@ const ConsultationSection = () => {
                 />
               </svg>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </section>
