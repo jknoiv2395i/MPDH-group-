@@ -74,7 +74,10 @@ const Services = () => {
         
         {/* Form Container */}
         <div className="relative z-10 flex items-center min-h-screen p-4 md:p-8">
-          <div className="w-full max-w-2xl bg-white rounded-2xl p-6 md:p-8 lg:p-12 shadow-lg ml-4 md:ml-16 lg:ml-72">
+          <div
+            className="w-full max-w-2xl bg-white rounded-2xl p-6 md:p-8 lg:p-12 shadow-lg"
+            style={{ margin: "108px 0 0 288px" }}
+          >
             {/* Header */}
             <div className="mb-8">
               <h1 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-normal text-black mb-4 tracking-tight">
