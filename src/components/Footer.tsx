@@ -111,7 +111,7 @@ const Footer = () => {
       {/* Map Image Section */}
       <div className="w-full mt-0">
         <img
-          src="https://cdn.builder.io/api/v1/image/assets%2F371acd9a25a7494cb5e15d62a5f4d89c%2F5dc7be8501414bcfaa26112ad7dbdbfd?format=webp&width=800"
+          src="https://cdn.builder.io/api/v1/image/assets%2F371acd9a25a7494cb5e15d62a5f4d89c%2Fd52d9448f2d5461f9a0215f26865e76a"
           alt="Location map"
           className="w-full h-auto object-cover"
         />
