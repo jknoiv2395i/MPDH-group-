@@ -36,17 +36,37 @@ const projects: Project[] = [
 
 const ProjectCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAutoPlay, setIsAutoPlay] = useState(true);
 
   const goToPrevious = () => {
-    setCurrentIndex((prevIndex) => 
+    setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? projects.length - 1 : prevIndex - 1
     );
   };
 
   const goToNext = () => {
-    setCurrentIndex((prevIndex) => 
+    setCurrentIndex((prevIndex) =>
       prevIndex === projects.length - 1 ? 0 : prevIndex + 1
     );
+  };
+
+  // Auto marquee effect
+  useEffect(() => {
+    if (!isAutoPlay) return;
+
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === projects.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 4000); // Change slide every 4 seconds
+
+    return () => clearInterval(interval);
+  }, [isAutoPlay]);
+
+  // Pause auto-play on user interaction
+  const handleUserInteraction = () => {
+    setIsAutoPlay(false);
+    setTimeout(() => setIsAutoPlay(true), 10000); // Resume after 10 seconds
   };
 
   const slideVariants = {
