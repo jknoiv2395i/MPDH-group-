@@ -32,14 +32,14 @@ export function FigmaNavBar({ className }: NavBarProps) {
         {/* Logo */}
         <div className="flex items-center">
           <img
-            src="https://cdn.builder.io/api/v1/image/assets%2Feccf9e96f3f54e0db99db209e78762b2%2Fc52ba548c4974d7fbb9f4138923b5787"
+            src="https://cdn.builder.io/api/v1/image/assets%2F921ba7c35aeb45608b276bd350a50610%2Fd7c2fd863b5a4d1fb85ad73e9fc07bd1"
             alt="MPHD GROUP Real Estate Logo"
-            className="h-16 md:h-20 lg:h-24 w-auto mr-auto"
+            className="h-12 w-auto mr-auto"
           />
         </div>
 
         {/* Navigation Links - Hidden on mobile */}
-        <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
+        <nav className="hidden md:flex items-center space-x-6 lg:space-x-8 mx-auto">
           {navItems.map((item) => (
             <div
               key={item.name}
@@ -67,7 +67,7 @@ export function FigmaNavBar({ className }: NavBarProps) {
         <div className="hidden md:flex items-center">
           <a
             href="https://c81dcd8934204bc39d562f1debf9ab43-8e591c7522cc4e05a161006e3.fly.dev/services"
-            className="px-6 py-2 bg-white text-[black] rounded-full text-sm lg:text-base font-medium hover:bg-gray-50 transition-colors duration-200 sm:ml-auto cursor-pointer"
+            className="px-6 py-2 bg-white text-[black] rounded-full text-sm lg:text-base font-medium hover:bg-gray-50 transition-colors duration-200 cursor-pointer"
           >
             Contact us
           </a>

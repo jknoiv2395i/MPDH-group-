@@ -1,0 +1,218 @@
+import { FigmaNavBar } from "@/components/ui/figma-navbar";
+import Footer from "@/components/Footer";
+
+const Projects = () => {
+  const projects = [
+    {
+      id: 1,
+      title: "Urban retreat in Golden Gate Park",
+      description: "A spacious conference room with natural light for meetings and presentations.",
+      smallImage: "https://api.builder.io/api/v1/image/assets/TEMP/599744a41a2bc00f4f91d76d5327e96e777c4402?width=1045",
+      largeImage: "https://api.builder.io/api/v1/image/assets/TEMP/7b4449d0e0f41ec09bdd71dddcc358108ad842ec?width=1567"
+    },
+    {
+      id: 2,
+      title: "Sustainable Offices",
+      description: "A contemporary, light-filled Offices Ecological technologies and recyclable materials",
+      smallImage: "https://api.builder.io/api/v1/image/assets/TEMP/24a9b85b2406047d975071ed27f01a46a0053b4a?width=1045",
+      largeImage: "https://api.builder.io/api/v1/image/assets/TEMP/892eb15946977662c3278d7ffc5d632ff27541ec?width=1567"
+    },
+    {
+      id: 3,
+      title: "Shopping Center",
+      description: "A contemporary, light-filled shopping center offering an unforgettable visitor experience.",
+      smallImage: "https://api.builder.io/api/v1/image/assets/TEMP/e5ff1d1ff5b5deabe1b8ef99cb9434b7be9a8f0a?width=1045",
+      largeImage: "https://api.builder.io/api/v1/image/assets/TEMP/6d4068d59c99ccd200522985f56a5d90a9563bfb?width=1567"
+    },
+    {
+      id: 4,
+      title: "Grand conference hall",
+      description: "A spacious conference room with natural light for meetings and presentations.",
+      smallImage: "https://api.builder.io/api/v1/image/assets/TEMP/ede888dc30712fed474ec26d2e0697ed743f5fb6?width=1045",
+      largeImage: "https://api.builder.io/api/v1/image/assets/TEMP/d38ee17c3b340cd1fef74f0834a42878a214a72d?width=1567"
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-white">
+      <FigmaNavBar />
+
+      {/* Hero Section */}
+      <section className="relative h-screen flex items-center justify-center">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/85ba31e9405bf31242094298c176c337fe1a8e33?width=3810')"
+          }}
+        />
+        <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
+          <h1 className="font-instrument text-6xl md:text-7xl lg:text-8xl font-normal mb-8 tracking-tight">
+            MPHD projects
+          </h1>
+          <p className="font-inter text-lg leading-relaxed max-w-3xl mx-auto">
+            Bring your architectural projects to life with a template that puts your work front and
+            center. Simple, elegant, and made for creators like you.
+          </p>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left side - Image */}
+            <div className="relative">
+              <img
+                src="https://api.builder.io/api/v1/image/assets/TEMP/2bf588901604ca88af12a976de7d28ba79f2e66b?width=828"
+                alt="Achievements"
+                className="w-full h-80 object-cover rounded-2xl"
+              />
+            </div>
+
+            {/* Right side - Content */}
+            <div className="space-y-8">
+              <h2 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-normal text-black tracking-tight leading-tight">
+                Here are some of our success stories that showcase how we help buyers, sellers, and
+                investors achieve their real estate goals.
+              </h2>
+              
+              {/* Stats */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8">
+                <div className="text-center md:text-left">
+                  <div className="font-instrument text-4xl md:text-5xl lg:text-6xl font-normal text-black tracking-tight">
+                    50+
+                  </div>
+                  <div className="font-inter text-lg text-gray-600 mt-2">
+                    Project complete
+                  </div>
+                </div>
+                <div className="text-center">
+                  <div className="font-instrument text-4xl md:text-5xl lg:text-6xl font-normal text-black tracking-tight">
+                    100+
+                  </div>
+                  <div className="font-inter text-lg text-gray-600 mt-2">
+                    Expert teams
+                  </div>
+                </div>
+                <div className="text-center md:text-right">
+                  <div className="font-instrument text-4xl md:text-5xl lg:text-6xl font-normal text-black tracking-tight">
+                    $3.5M
+                  </div>
+                  <div className="font-inter text-lg text-gray-600 mt-2">
+                    Project value
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Projects Showcase */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="space-y-24">
+            {projects.map((project, index) => (
+              <div key={project.id} className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+                {index % 2 === 0 ? (
+                  <>
+                    {/* Left side - Small image for even projects */}
+                    <div className="order-2 lg:order-1">
+                      <img
+                        src={project.smallImage}
+                        alt={project.title}
+                        className="w-full h-96 object-cover rounded-2xl"
+                      />
+                    </div>
+                    {/* Right side - Large image and content */}
+                    <div className="order-1 lg:order-2 space-y-6">
+                      <div className="flex items-center justify-between">
+                        <h3 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-normal text-black tracking-tight max-w-lg">
+                          {project.title}
+                        </h3>
+                        <button className="bg-black text-white px-6 py-3 rounded-full font-inter text-lg font-medium hover:bg-gray-800 transition-colors">
+                          View project
+                        </button>
+                      </div>
+                      <p className="font-inter text-lg text-gray-600 leading-relaxed">
+                        {project.description}
+                      </p>
+                      <img
+                        src={project.largeImage}
+                        alt={`${project.title} main view`}
+                        className="w-full h-80 lg:h-96 object-cover rounded-2xl mt-6"
+                      />
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    {/* Left side - Large image and content for odd projects */}
+                    <div className="space-y-6">
+                      <div className="flex items-center justify-between">
+                        <h3 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-normal text-black tracking-tight max-w-lg">
+                          {project.title}
+                        </h3>
+                        <button className="bg-black text-white px-6 py-3 rounded-full font-inter text-lg font-medium hover:bg-gray-800 transition-colors">
+                          View project
+                        </button>
+                      </div>
+                      <p className="font-inter text-lg text-gray-600 leading-relaxed">
+                        {project.description}
+                      </p>
+                      <img
+                        src={project.largeImage}
+                        alt={`${project.title} main view`}
+                        className="w-full h-80 lg:h-96 object-cover rounded-2xl mt-6"
+                      />
+                    </div>
+                    {/* Right side - Small image */}
+                    <div>
+                      <img
+                        src={project.smallImage}
+                        alt={project.title}
+                        className="w-full h-96 object-cover rounded-2xl"
+                      />
+                    </div>
+                  </>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action Section */}
+      <section className="relative py-32">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/e43dc123aea7bc6d9ccb45fb5c6678fed11a62af?width=3810')"
+          }}
+        />
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
+          <div className="max-w-2xl">
+            <h2 className="font-inter text-6xl md:text-7xl lg:text-8xl font-normal mb-8 tracking-tight leading-tight">
+              Schedule a free consultation
+            </h2>
+            <p className="font-inter text-lg leading-relaxed mb-8 max-w-lg">
+              We craft inspiring spaces that blend cutting-edge design with enduring functionality, turning your
+              vision into reality.
+            </p>
+            <button className="inline-flex items-center bg-white text-black px-8 py-4 rounded-full font-inter text-lg font-medium hover:bg-gray-100 transition-colors group">
+              Get started
+              <div className="ml-4 w-11 h-11 bg-black rounded-full flex items-center justify-center">
+                <svg width="18" height="18" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.79917 5.90234H13.0103V13.1135M12.5096 6.40313L5.19824 13.7145" stroke="white" strokeWidth="1.69969" strokeMiterlimit="10" strokeLinecap="square"/>
+                </svg>
+              </div>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default Projects;
