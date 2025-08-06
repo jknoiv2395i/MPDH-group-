@@ -8,9 +8,9 @@ const Footer = () => {
             <div className="lg:col-span-2">
               <div className="mb-8">
                 <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2Feccf9e96f3f54e0db99db209e78762b2%2Fc52ba548c4974d7fbb9f4138923b5787"
+                  src="https://cdn.builder.io/api/v1/image/assets%2F921ba7c35aeb45608b276bd350a50610%2Fd7c2fd863b5a4d1fb85ad73e9fc07bd1"
                   alt="MPHD GROUP Real Estate Logo"
-                  className="h-8 w-auto mb-8"
+                  className="h-16 w-auto mb-8"
                 />
               </div>
               <p className="font-inter text-lg text-gray-300 leading-relaxed max-w-md">

@@ -32,9 +32,9 @@ export function FigmaNavBar({ className }: NavBarProps) {
         {/* Logo */}
         <div className="flex items-center">
           <img
-            src="https://cdn.builder.io/api/v1/image/assets%2Feccf9e96f3f54e0db99db209e78762b2%2Fc52ba548c4974d7fbb9f4138923b5787"
+            src="https://cdn.builder.io/api/v1/image/assets%2F921ba7c35aeb45608b276bd350a50610%2Fd7c2fd863b5a4d1fb85ad73e9fc07bd1"
             alt="MPHD GROUP Real Estate Logo"
-            className="h-16 md:h-20 lg:h-24 w-auto mr-auto"
+            className="h-12 w-auto mr-auto"
           />
         </div>
 
