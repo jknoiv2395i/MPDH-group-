@@ -60,34 +60,14 @@ const ConsultationSection = () => {
       <div className="relative z-10 flex items-center px-4 py-8 md:px-8 lg:px-16 xl:px-24 h-full">
         <motion.div
           className="max-w-2xl"
+          variants={containerVariants}
           initial="hidden"
           animate="visible"
-          variants={{
-            hidden: {},
-            visible: {
-              transition: {
-                staggerChildren: 0.3
-              }
-            }
-          }}
         >
           {/* Main Heading */}
           <motion.h2
             className="text-white text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-normal leading-tight tracking-tight mb-6 md:mb-8"
-            variants={{
-              hidden: {
-                opacity: 0,
-                y: 50
-              },
-              visible: {
-                opacity: 1,
-                y: 0,
-                transition: {
-                  duration: 0.8,
-                  ease: "easeOut"
-                }
-              }
-            }}
+            variants={headlineVariants}
           >
             Schedule a free
             <br />
@@ -97,20 +77,7 @@ const ConsultationSection = () => {
           {/* Description */}
           <motion.p
             className="text-white text-lg md:text-xl leading-relaxed mb-8 md:mb-10 max-w-md"
-            variants={{
-              hidden: {
-                opacity: 0,
-                y: 30
-              },
-              visible: {
-                opacity: 1,
-                y: 0,
-                transition: {
-                  duration: 0.6,
-                  ease: "easeOut"
-                }
-              }
-            }}
+            variants={itemVariants}
           >
             We craft inspiring spaces that blend cutting-edge
             design with enduring functionality, turning your
@@ -120,20 +87,7 @@ const ConsultationSection = () => {
           {/* CTA Button */}
           <motion.div
             className="inline-flex items-center bg-white rounded-full px-6 py-3 hover:bg-gray-50 transition-colors duration-300 group cursor-pointer sm:-mr-px"
-            variants={{
-              hidden: {
-                opacity: 0,
-                y: 20
-              },
-              visible: {
-                opacity: 1,
-                y: 0,
-                transition: {
-                  duration: 0.5,
-                  ease: "easeOut"
-                }
-              }
-            }}
+            variants={itemVariants}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
