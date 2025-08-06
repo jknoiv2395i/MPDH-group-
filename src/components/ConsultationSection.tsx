@@ -11,9 +11,10 @@ const ConsultationSection = () => {
         />
         {/* Desktop Background */}
         <img
-          src="https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2F9368547c86574032adfc723736c103f0?format=webp&width=800"
+          src="https://api.builder.io/api/v1/image/assets/TEMP/2446e43dea8b2f7a27612162fcb5ebf0e85240f5?width=3810"
           alt="Modern architectural building"
           className="w-full h-full object-cover hidden md:block"
+          style={{ filter: 'blur(0px)' }}
         />
       </div>
 
