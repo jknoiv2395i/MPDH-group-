@@ -5,7 +5,7 @@ const ConsultationSection = () => {
       <div className="absolute inset-0 w-full h-full">
         {/* Mobile Background */}
         <img
-          src="https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2F86098bec2c084754a74921b12ac7b270?format=webp&width=800"
+          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&auto=format&fit=crop&q=60"
           alt="Modern architectural building"
           className="w-full h-full object-cover md:hidden"
         />
