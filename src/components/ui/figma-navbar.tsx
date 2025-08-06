@@ -39,7 +39,7 @@ export function FigmaNavBar({ className }: NavBarProps) {
         </div>
 
         {/* Navigation Links - Hidden on mobile */}
-        <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
+        <nav className="hidden md:flex items-center space-x-6 lg:space-x-8 mx-auto">
           {navItems.map((item) => (
             <div
               key={item.name}
@@ -67,7 +67,7 @@ export function FigmaNavBar({ className }: NavBarProps) {
         <div className="hidden md:flex items-center">
           <a
             href="https://c81dcd8934204bc39d562f1debf9ab43-8e591c7522cc4e05a161006e3.fly.dev/services"
-            className="px-6 py-2 bg-white text-[black] rounded-full text-sm lg:text-base font-medium hover:bg-gray-50 transition-colors duration-200 sm:ml-auto cursor-pointer"
+            className="px-6 py-2 bg-white text-[black] rounded-full text-sm lg:text-base font-medium hover:bg-gray-50 transition-colors duration-200 cursor-pointer"
           >
             Contact us
           </a>
