@@ -171,14 +171,20 @@ const ProjectCarousel = () => {
             {/* Navigation Buttons */}
             <div className="flex justify-center items-center gap-4 mt-8">
               <button
-                onClick={goToPrevious}
+                onClick={() => {
+                  goToPrevious();
+                  handleUserInteraction();
+                }}
                 className="flex items-center justify-center w-14 h-14 rounded-full bg-[#071839] text-white hover:bg-[#0a1f47] transition-colors"
                 aria-label="Previous project"
               >
                 <ChevronLeft className="w-6 h-6" />
               </button>
               <button
-                onClick={goToNext}
+                onClick={() => {
+                  goToNext();
+                  handleUserInteraction();
+                }}
                 className="flex items-center justify-center w-14 h-14 rounded-full bg-[#071839] text-white hover:bg-[#0a1f47] transition-colors"
                 aria-label="Next project"
               >
