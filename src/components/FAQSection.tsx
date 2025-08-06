@@ -11,32 +11,37 @@ const FAQSection = () => {
     {
       id: "item-1",
       question: "Who are the best property consultants in Nagpur?",
-      answer: "MPHD Group is one of the most trusted property consultants in Nagpur, offering end-to-end solutions for property buying, selling, rentals, and legal services."
-    },
-    {
-      id: "item-2",
-      question: "What services does MPHD Group offer as a real estate agency in Nagpur?",
-      answer: "As a full-service real estate agency in Nagpur, MPHD Group provides property brokerage, land acquisition, casting yard setup, documentation, approvals, and rental assistance. We handle everything from property search to final documentation, ensuring a smooth transaction process."
-    },
-    {
-      id: "item-3",
-      question: "How can I rent a flat or commercial space through MPHD Group's rental services in Nagpur?",
-      answer: "Our rental services team will help you find the perfect flat or commercial space based on your requirements and budget. We maintain an extensive database of verified properties and provide complete assistance with lease agreements, documentation, and property handover processes."
-    },
-    {
-      id: "item-4",
-      question: "Does MPHD Group provide legal help for property in India?",
-      answer: "Yes, MPHD Group provides comprehensive legal assistance for property transactions in India. Our legal team helps with title verification, documentation review, registration processes, and ensures all legal compliance requirements are met for safe property transactions."
-    },
-    {
-      id: "item-5",
-      question: "Can MPHD Group help with land acquisition for infrastructure or industrial projects?",
-      answer: "Absolutely! MPHD Group specializes in land acquisition services for infrastructure and industrial projects. We assist with site identification, due diligence, negotiation, approvals, and complete documentation to help you secure the right land for your project requirements."
+<{
+  id: "item-1",
+  question: "What is MPHD Group and what does it do?",
+  answer: "MPHD Group is one of the most trusted property consultants in Nagpur, offering end-to-end solutions for property buying, selling, rentals, and legal services."
+},
+{
+  id: "item-2",
+  question: "What services does MPHD Group offer as a real estate agency in Nagpur?",
+  answer: "As a full-service real estate agency in Nagpur, MPHD Group provides property brokerage, land acquisition, casting yard setup, documentation, approvals, and rental assistance. We handle everything from property search to final documentation, ensuring a smooth transaction process."
+},
+{
+  id: "item-3",
+  question: "How can I rent a flat or commercial space through MPHD Group's rental services in Nagpur?",
+  answer: "Our rental services team will help you find the perfect flat or commercial space based on your requirements and budget. We maintain an extensive database of verified properties and provide complete assistance with lease agreements, documentation, and property handover processes."
+},
+{
+  id: "item-4",
+  question: "Does MPHD Group provide legal help for property in India?",
+  answer: "Yes, MPHD Group provides comprehensive legal assistance for property transactions in India. Our legal team helps with title verification, documentation review, registration processes, and ensures all legal compliance requirements are met for safe property transactions."
+},
+{
+  id: "item-5",
+  question: "Can MPHD Group help with land acquisition for infrastructure or industrial projects?",
+  answer: "Absolutely! MPHD Group specializes in land acquisition services for infrastructure and industrial projects. We assist with site identification, due diligence, negotiation, approvals, and complete documentation to help you secure the right land for your project requirements."
+}
+
     }
   ];
 
   return (
-    <section className="bg-white py-16 px-4 md:py-20 lg:py-32">
+    <section className="bg-white py-[68px] px-4 pb-10">
       <div className="container mx-auto max-w-7xl">
         <motion.div
           className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start"
