@@ -58,7 +58,7 @@ const Services = () => {
 
   return (
     <div className="min-h-screen bg-white relative">
-      <div className="absolute top-0 left-0 right-0 z-50 h-24 bg-transparent" />
+      <FigmaNavBar />
 
       {/* Contact Form Section */}
       <section className="relative min-h-screen">
