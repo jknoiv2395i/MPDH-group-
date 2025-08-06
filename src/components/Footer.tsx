@@ -17,7 +17,7 @@ const Footer = () => {
           </div>
 
           {/* Right Side - Navigation Links */}
-          <div className="lg:col-span-8">
+          <div className="col-span-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12 xl:gap-16">
               {/* Column 1 - Home */}
               <div className="space-y-6">
