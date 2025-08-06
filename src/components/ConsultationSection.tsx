@@ -1,11 +1,11 @@
 const ConsultationSection = () => {
   return (
-    <section className="relative w-full h-[900px] overflow-hidden bg-gradient-to-r from-blue-400 to-blue-600">
+    <section className="relative w-full h-[900px] overflow-hidden bg-gradient-to-b from-purple-500 to-pink-500 md:bg-gradient-to-r md:from-blue-400 md:to-blue-600">
       {/* Background Image */}
       <div className="absolute inset-0 w-full h-full">
         {/* Mobile Background */}
         <img
-          src="https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2F86098bec2c084754a74921b12ac7b270?format=webp&width=800"
+          src="https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2Fb54ed815d5aa4f1d9a8a4d20b4f37a98?format=webp&width=800"
           alt="Modern architectural building"
           className="w-full h-full object-cover md:hidden"
         />
