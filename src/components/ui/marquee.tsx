@@ -104,7 +104,7 @@ export function MarqueeDemo() {
     <div className="w-full overflow-hidden bg-white py-4 logo-section">
       <div
         className={cn(
-          "flex w-max logo-marquee",
+          "flex w-max animate-marquee",
           "hover:[animation-play-state:paused]"
         )}
         style={{ "--duration": "30s" } as React.CSSProperties}
