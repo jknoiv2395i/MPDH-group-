@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { ChevronDown, ChevronRight } from "lucide-react";
+import { FigmaNavBar } from "@/components/ui/figma-navbar";
 
 const Services = () => {
   const [formData, setFormData] = useState({
@@ -57,59 +58,26 @@ const Services = () => {
 
   return (
     <div className="min-h-screen bg-white relative">
-      {/* Top Navigation Banner */}
-      <div className="absolute top-0 left-0 right-0 z-50 h-24 bg-transparent">
-        <div className="flex items-center justify-between h-full px-4 md:px-16">
-          {/* Logo */}
-          <div className="flex items-center">
-            <svg className="h-8 w-auto" viewBox="0 0 108 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M26.9507 25.5854H36.0116L13.5659 3.13965H4.50488L26.9507 25.5854Z" fill="white"/>
-              <path d="M18.2285 3.13965L39.8659 24.7769V3.13965H34.0104V9.97096L27.179 3.13965H18.2285Z" fill="white"/>
-              <path d="M0.71582 3.89258V25.5869H6.57125V18.7556L13.4025 25.5869H22.4102L0.71582 3.89258Z" fill="white"/>
-              <path d="M56.1309 22.295H54.0381L60.091 5.81055H62.1516L68.2044 22.295H66.1117L61.1856 8.41844H61.0569L56.1309 22.295ZM56.9035 15.8558H65.339V17.6266H56.9035V15.8558ZM71.9608 5.81055V22.295H70.0613V5.81055H71.9608ZM80.3635 9.93166V11.5415H73.9564V9.93166H80.3635ZM75.8238 6.9696H77.7233V18.7534C77.7233 19.2901 77.8012 19.6925 77.9568 19.9608C78.1178 20.2237 78.3217 20.4008 78.5685 20.492C78.8207 20.5778 79.0864 20.6208 79.3654 20.6208C79.5747 20.6208 79.7464 20.6101 79.8806 20.5886C80.0147 20.5617 80.122 20.5403 80.2024 20.5242L80.5889 22.2307C80.46 22.2789 80.2803 22.3272 80.0496 22.3755C79.8188 22.4292 79.5264 22.456 79.1723 22.456C78.6356 22.456 78.1098 22.3406 77.5946 22.1098C77.0848 21.8791 76.6608 21.5277 76.3229 21.0554C75.9902 20.5833 75.8238 19.9876 75.8238 19.2685V6.9696ZM90.5591 17.2402V9.93166H92.4586V22.295H90.5591V20.2023H90.4303C90.1405 20.8301 89.6898 21.364 89.0781 21.8041C88.4663 22.2387 87.6936 22.456 86.7599 22.456C85.9872 22.456 85.3003 22.287 84.6993 21.9489C84.0983 21.6055 83.6262 21.0903 83.2827 20.4035C82.9393 19.7113 82.7676 18.8393 82.7676 17.7875V9.93166H84.6671V17.6588C84.6671 18.5602 84.9194 19.2793 85.4237 19.8159C85.9336 20.3525 86.5829 20.6208 87.3716 20.6208C87.8439 20.6208 88.3241 20.5001 88.8124 20.2586C89.3061 20.0172 89.7193 19.6469 90.052 19.1478C90.39 18.6488 90.5591 18.0129 90.5591 17.2402ZM95.1304 22.295V20.8462L102.149 11.8312V11.7025H95.3558V9.93166H104.596V11.4449L97.7704 20.3955V20.5242H104.821V22.295H95.1304Z" fill="white"/>
-            </svg>
-          </div>
-
-          {/* Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <a href="/" className="text-white/80 hover:text-white font-medium text-lg px-7 py-3 rounded-full transition-colors">
-              Home V.1
-            </a>
-            <a href="/contact" className="text-white font-semibold text-lg px-7 py-3 rounded-full bg-white/10 backdrop-blur-sm">
-              Contact V.1
-            </a>
-            <a href="/projects" className="text-white/80 hover:text-white font-medium text-lg px-7 py-3 rounded-full transition-colors">
-              Projects V.1
-            </a>
-            <div className="flex items-center text-white/80 hover:text-white font-medium text-lg px-7 py-3 rounded-full transition-colors cursor-pointer">
-              Pages
-              <ChevronDown className="ml-2 h-5 w-5" />
-            </div>
-          </nav>
-
-          {/* Cart and Contact */}
-          <div className="hidden md:flex items-center space-x-6">
-            <span className="text-white/80 text-lg">Cart (0)</span>
-            <Button className="bg-white text-gray-900 hover:bg-gray-100 rounded-full px-7 py-3 text-lg font-medium">
-              Contact us
-            </Button>
-          </div>
-        </div>
-      </div>
+      <FigmaNavBar />
 
       {/* Contact Form Section */}
       <section className="relative min-h-screen">
         {/* Background Image */}
         <div
-          className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/e8013bbbc820f05a3f48efd4964535ee8fadc977?width=3810')"
+            backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/e8013bbbc820f05a3f48efd4964535ee8fadc977?width=3810')",
+            width: '1905px',
+            height: '1137.88px'
           }}
         />
         
         {/* Form Container */}
         <div className="relative z-10 flex items-center min-h-screen p-4 md:p-8">
-          <div className="w-full max-w-2xl bg-white rounded-2xl p-6 md:p-8 lg:p-12 shadow-lg ml-4 md:ml-16 lg:ml-72">
+          <div
+            className="w-full max-w-2xl bg-white rounded-2xl p-6 md:p-8 lg:p-12 shadow-lg"
+            style={{ margin: "108px 0 0 288px" }}
+          >
             {/* Header */}
             <div className="mb-8">
               <h1 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-normal text-black mb-4 tracking-tight">
