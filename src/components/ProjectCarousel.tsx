@@ -168,28 +168,36 @@ const ProjectCarousel = () => {
               </motion.div>
             </AnimatePresence>
             
-            {/* Navigation Buttons */}
-            <div className="flex justify-center items-center gap-4 mt-8">
-              <button
-                onClick={() => {
-                  goToPrevious();
-                  handleUserInteraction();
-                }}
-                className="flex items-center justify-center w-14 h-14 rounded-full bg-[#071839] text-white hover:bg-[#0a1f47] transition-colors"
-                aria-label="Previous project"
-              >
-                <ChevronLeft className="w-6 h-6" />
-              </button>
-              <button
-                onClick={() => {
-                  goToNext();
-                  handleUserInteraction();
-                }}
-                className="flex items-center justify-center w-14 h-14 rounded-full bg-[#071839] text-white hover:bg-[#0a1f47] transition-colors"
-                aria-label="Next project"
-              >
-                <ChevronRight className="w-6 h-6" />
-              </button>
+            {/* Auto-play indicator and Navigation Buttons */}
+            <div className="flex flex-col items-center gap-4 mt-8">
+              <div className="flex items-center gap-2">
+                <div className={`w-2 h-2 rounded-full transition-colors ${isAutoPlay ? 'bg-[#071839]' : 'bg-gray-300'}`} />
+                <span className="text-sm text-[#5D5D5D] font-inter">
+                  {isAutoPlay ? 'Auto-play on' : 'Auto-play paused'}
+                </span>
+              </div>
+              <div className="flex justify-center items-center gap-4">
+                <button
+                  onClick={() => {
+                    goToPrevious();
+                    handleUserInteraction();
+                  }}
+                  className="flex items-center justify-center w-14 h-14 rounded-full bg-[#071839] text-white hover:bg-[#0a1f47] transition-colors"
+                  aria-label="Previous project"
+                >
+                  <ChevronLeft className="w-6 h-6" />
+                </button>
+                <button
+                  onClick={() => {
+                    goToNext();
+                    handleUserInteraction();
+                  }}
+                  className="flex items-center justify-center w-14 h-14 rounded-full bg-[#071839] text-white hover:bg-[#0a1f47] transition-colors"
+                  aria-label="Next project"
+                >
+                  <ChevronRight className="w-6 h-6" />
+                </button>
+              </div>
             </div>
           </div>
         </div>
