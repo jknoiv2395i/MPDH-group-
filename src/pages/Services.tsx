@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { ChevronDown, ChevronRight } from "lucide-react";
+import { FigmaNavBar } from "@/components/ui/figma-navbar";
 
 const Services = () => {
   const [formData, setFormData] = useState({
