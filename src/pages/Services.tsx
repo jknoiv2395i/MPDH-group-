@@ -100,10 +100,10 @@ const Services = () => {
       {/* Contact Form Section */}
       <section className="relative min-h-screen">
         {/* Background Image */}
-        <div 
+        <div
           className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/ad6f5c382933fcd835ed74fe93430c99c514ad42?width=3810')"
+            backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/e8013bbbc820f05a3f48efd4964535ee8fadc977?width=3810')"
           }}
         />
         
