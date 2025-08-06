@@ -18,10 +18,6 @@ const HeroSection = () => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: {
-        duration: 0.8,
-        ease: "easeOut",
-      },
     },
   };
 
@@ -31,11 +27,6 @@ const HeroSection = () => {
       opacity: 1,
       y: 0,
       scale: 1,
-      transition: {
-        duration: 1.2,
-        ease: [0.25, 0.25, 0.25, 1],
-        delay: 0.1,
-      },
     },
   };
 
@@ -53,7 +44,6 @@ const HeroSection = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{
               duration: 2,
-              ease: "easeOut",
               delay: 0.5
             }}
             className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
@@ -98,7 +88,7 @@ const HeroSection = () => {
             variants={itemVariants}
             className="flex justify-center"
           >
-            <button className="group flex items-center gap-2 px-4 py-2 bg-white rounded-full hover:bg-gray-50 transition-all duration-200 shadow-lg hover:shadow-xl">
+            <a href="/services" className="group flex items-center gap-2 px-4 py-2 bg-white rounded-full hover:bg-gray-50 transition-all duration-200 shadow-lg hover:shadow-xl cursor-pointer">
               <span className="text-gray-900 font-medium text-base">
                 Get started
               </span>
@@ -107,7 +97,7 @@ const HeroSection = () => {
                   <path d="M3 8H13M13 8L8 3M13 8L8 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </div>
-            </button>
+            </a>
           </motion.div>
         </motion.div>
       </div>
