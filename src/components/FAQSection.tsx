@@ -4,55 +4,139 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { motion } from "framer-motion";
 
 const FAQSection = () => {
   const faqData = [
     {
       id: "item-1",
       question: "Who are the best property consultants in Nagpur?",
-      answer: "Starting your home buying journey begins with getting pre-approved for a mortgage. This gives you a clear understanding of your budget and shows sellers you're a serious buyer. We'll help you connect with trusted lenders and guide you through the entire process from initial consultation to closing."
-    },
-    {
-      id: "item-2", 
-      question: "What services does MPHD Group offer as a real estate agency in Nagpur?",
-      answer: "Beginning a project with us is simple. Start by scheduling a free consultation where we'll discuss your vision, requirements, and budget. Our team will then create a detailed proposal outlining the scope, timeline, and investment needed to bring your architectural dreams to life."
-    },
-    {
-      id: "item-3",
-      question: "How can I rent a flat or commercial space through MPHD Group's rental services in Nagpur?",
-      answer: "We offer comprehensive architectural and design services including residential design, commercial architecture, interior design, sustainable building solutions, project management, and consultation services. Our team handles everything from initial concept to final construction oversight."
-    },
-    {
-      id: "item-4",
-      question: "Does MPHD Group provide legal help for property in India?",
-      answer: "Project timelines vary based on complexity and scope. Typically, residential projects take 6-12 months from design to completion, while commercial projects may take 12-24 months. We'll provide a detailed timeline during our initial consultation based on your specific requirements."
-    },
-    {
-      id: "item-5",
-      question: "Can MPHD Group help with land acquisition for infrastructure or industrial projects?",
-      answer: "Absolutely! Sustainability is at the core of our design philosophy. We specialize in eco-friendly materials, energy-efficient systems, and sustainable building practices. Our team can help you achieve green building certifications and create environmentally responsible spaces that reduce your carbon footprint."
+<{
+  id: "item-1",
+  question: "What is MPHD Group and what does it do?",
+  answer: "MPHD Group is one of the most trusted property consultants in Nagpur, offering end-to-end solutions for property buying, selling, rentals, and legal services."
+},
+{
+  id: "item-2",
+  question: "What services does MPHD Group offer as a real estate agency in Nagpur?",
+  answer: "As a full-service real estate agency in Nagpur, MPHD Group provides property brokerage, land acquisition, casting yard setup, documentation, approvals, and rental assistance. We handle everything from property search to final documentation, ensuring a smooth transaction process."
+},
+{
+  id: "item-3",
+  question: "How can I rent a flat or commercial space through MPHD Group's rental services in Nagpur?",
+  answer: "Our rental services team will help you find the perfect flat or commercial space based on your requirements and budget. We maintain an extensive database of verified properties and provide complete assistance with lease agreements, documentation, and property handover processes."
+},
+{
+  id: "item-4",
+  question: "Does MPHD Group provide legal help for property in India?",
+  answer: "Yes, MPHD Group provides comprehensive legal assistance for property transactions in India. Our legal team helps with title verification, documentation review, registration processes, and ensures all legal compliance requirements are met for safe property transactions."
+},
+{
+  id: "item-5",
+  question: "Can MPHD Group help with land acquisition for infrastructure or industrial projects?",
+  answer: "Absolutely! MPHD Group specializes in land acquisition services for infrastructure and industrial projects. We assist with site identification, due diligence, negotiation, approvals, and complete documentation to help you secure the right land for your project requirements."
+}
+
     }
   ];
 
   return (
     <section className="bg-white py-[68px] px-4 pb-10">
       <div className="container mx-auto max-w-7xl">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+        <motion.div
+          className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start"
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: {},
+            visible: {
+              transition: {
+                staggerChildren: 0.3
+              }
+            }
+          }}
+        >
           {/* Left Column - Header */}
-          <div className="space-y-6">
-            <h2 className="font-instrument text-4xl md:text-5xl lg:text-6xl font-normal leading-tight tracking-tight text-black">
+          <motion.div
+            className="space-y-6"
+            variants={{
+              hidden: {
+                opacity: 0,
+                x: -50
+              },
+              visible: {
+                opacity: 1,
+                x: 0,
+                transition: {
+                  duration: 0.8,
+                  ease: "easeOut",
+                  staggerChildren: 0.2
+                }
+              }
+            }}
+          >
+            <motion.h2
+              className="font-instrument text-4xl md:text-5xl lg:text-6xl font-normal leading-tight tracking-tight text-black"
+              variants={{
+                hidden: {
+                  opacity: 0,
+                  y: 30
+                },
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  transition: {
+                    duration: 0.6,
+                    ease: "easeOut"
+                  }
+                }
+              }}
+            >
               Frequently asked
               <br />
               questions
-            </h2>
-            <p className="text-gray-600 text-lg leading-relaxed max-w-md">
+            </motion.h2>
+            <motion.p
+              className="text-gray-600 text-lg leading-relaxed max-w-md"
+              variants={{
+                hidden: {
+                  opacity: 0,
+                  y: 20
+                },
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  transition: {
+                    duration: 0.5,
+                    ease: "easeOut"
+                  }
+                }
+              }}
+            >
               To help you make informed decisions, we've compiled answers to
               some of the most commonly asked questions.
-            </p>
-          </div>
+            </motion.p>
+          </motion.div>
 
           {/* Right Column - FAQ Accordion */}
-          <div className="space-y-0">
+          <motion.div
+            className="space-y-0"
+            variants={{
+              hidden: {
+                opacity: 0,
+                x: 50
+              },
+              visible: {
+                opacity: 1,
+                x: 0,
+                transition: {
+                  duration: 0.8,
+                  ease: "easeOut",
+                  delay: 0.2
+                }
+              }
+            }}
+          >
             <Accordion type="single" collapsible className="w-full">
               {faqData.map((faq) => (
                 <AccordionItem 
@@ -91,8 +175,8 @@ const FAQSection = () => {
                 </AccordionItem>
               ))}
             </Accordion>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

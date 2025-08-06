@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -36,17 +36,37 @@ const projects: Project[] = [
 
 const ProjectCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAutoPlay, setIsAutoPlay] = useState(true);
 
   const goToPrevious = () => {
-    setCurrentIndex((prevIndex) => 
+    setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? projects.length - 1 : prevIndex - 1
     );
   };
 
   const goToNext = () => {
-    setCurrentIndex((prevIndex) => 
+    setCurrentIndex((prevIndex) =>
       prevIndex === projects.length - 1 ? 0 : prevIndex + 1
     );
+  };
+
+  // Auto marquee effect
+  useEffect(() => {
+    if (!isAutoPlay) return;
+
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === projects.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 4000); // Change slide every 4 seconds
+
+    return () => clearInterval(interval);
+  }, [isAutoPlay]);
+
+  // Pause auto-play on user interaction
+  const handleUserInteraction = () => {
+    setIsAutoPlay(false);
+    setTimeout(() => setIsAutoPlay(true), 10000); // Resume after 10 seconds
   };
 
   const slideVariants = {
@@ -72,12 +92,41 @@ const ProjectCarousel = () => {
     })
   };
 
+  const textVariants = {
+    hidden: {
+      opacity: 0,
+      y: 30
+    },
+    visible: (i: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+        delay: i * 0.2
+      }
+    })
+  };
+
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
   return (
     <section className="bg-white py-16 lg:py-24">
       <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
         {/* Mobile Carousel */}
         <div className="lg:hidden">
-          <div className="relative">
+          <div
+            className="relative"
+            onMouseEnter={() => setIsAutoPlay(false)}
+            onMouseLeave={() => setIsAutoPlay(true)}
+          >
             <AnimatePresence mode="wait" custom={currentIndex}>
               <motion.div
                 key={currentIndex}
@@ -95,39 +144,70 @@ const ProjectCarousel = () => {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="space-y-4">
-                  <h3 className="font-instrument text-2xl font-normal text-[#131313] leading-tight tracking-tight">
+                <motion.div
+                  className="space-y-4"
+                  variants={containerVariants}
+                  initial="hidden"
+                  animate="visible"
+                >
+                  <motion.h3
+                    className="font-instrument text-2xl font-normal text-[#131313] leading-tight tracking-tight"
+                    variants={textVariants}
+                    custom={0}
+                  >
                     {projects[currentIndex].title}
-                  </h3>
-                  <p className="font-inter text-lg text-[#5D5D5D] leading-relaxed">
+                  </motion.h3>
+                  <motion.p
+                    className="font-inter text-lg text-[#5D5D5D] leading-relaxed"
+                    variants={textVariants}
+                    custom={1}
+                  >
                     {projects[currentIndex].description}
-                  </p>
-                </div>
+                  </motion.p>
+                </motion.div>
               </motion.div>
             </AnimatePresence>
             
-            {/* Navigation Buttons */}
-            <div className="flex justify-center items-center gap-4 mt-8">
-              <button
-                onClick={goToPrevious}
-                className="flex items-center justify-center w-14 h-14 rounded-full bg-[#071839] text-white hover:bg-[#0a1f47] transition-colors"
-                aria-label="Previous project"
-              >
-                <ChevronLeft className="w-6 h-6" />
-              </button>
-              <button
-                onClick={goToNext}
-                className="flex items-center justify-center w-14 h-14 rounded-full bg-[#071839] text-white hover:bg-[#0a1f47] transition-colors"
-                aria-label="Next project"
-              >
-                <ChevronRight className="w-6 h-6" />
-              </button>
+            {/* Auto-play indicator and Navigation Buttons */}
+            <div className="flex flex-col items-center gap-4 mt-8">
+              <div className="flex items-center gap-2">
+                <div className={`w-2 h-2 rounded-full transition-colors ${isAutoPlay ? 'bg-[#071839]' : 'bg-gray-300'}`} />
+                <span className="text-sm text-[#5D5D5D] font-inter">
+                  {isAutoPlay ? 'Auto-play on' : 'Auto-play paused'}
+                </span>
+              </div>
+              <div className="flex justify-center items-center gap-4">
+                <button
+                  onClick={() => {
+                    goToPrevious();
+                    handleUserInteraction();
+                  }}
+                  className="flex items-center justify-center w-14 h-14 rounded-full bg-[#071839] text-white hover:bg-[#0a1f47] transition-colors"
+                  aria-label="Previous project"
+                >
+                  <ChevronLeft className="w-6 h-6" />
+                </button>
+                <button
+                  onClick={() => {
+                    goToNext();
+                    handleUserInteraction();
+                  }}
+                  className="flex items-center justify-center w-14 h-14 rounded-full bg-[#071839] text-white hover:bg-[#0a1f47] transition-colors"
+                  aria-label="Next project"
+                >
+                  <ChevronRight className="w-6 h-6" />
+                </button>
+              </div>
             </div>
           </div>
         </div>
 
         {/* Desktop Grid Layout */}
-        <div className="hidden lg:block relative">
+        <div
+          className="hidden lg:block relative"
+          onMouseEnter={() => setIsAutoPlay(false)}
+          onMouseLeave={() => setIsAutoPlay(true)}
+        >
           <div className="grid grid-cols-12 gap-8 items-start">
             {/* Project 1 - Large left */}
             <div className="col-span-5 space-y-6">
@@ -138,14 +218,27 @@ const ProjectCarousel = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="space-y-4">
-                <h3 className="font-instrument text-3xl font-normal text-[#131313] leading-tight tracking-tight">
+              <motion.div
+                className="space-y-4"
+                variants={containerVariants}
+                initial="hidden"
+                animate="visible"
+              >
+                <motion.h3
+                  className="font-instrument text-3xl font-normal text-[#131313] leading-tight tracking-tight"
+                  variants={textVariants}
+                  custom={0}
+                >
                   {projects[0].title}
-                </h3>
-                <p className="font-inter text-lg text-[#5D5D5D] leading-relaxed">
+                </motion.h3>
+                <motion.p
+                  className="font-inter text-lg text-[#5D5D5D] leading-relaxed"
+                  variants={textVariants}
+                  custom={1}
+                >
                   {projects[0].description}
-                </p>
-              </div>
+                </motion.p>
+              </motion.div>
             </div>
 
             {/* Project 2 - Center */}
@@ -157,14 +250,27 @@ const ProjectCarousel = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="space-y-4">
-                <h3 className="font-instrument text-3xl font-normal text-[#131313] leading-tight tracking-tight">
+              <motion.div
+                className="space-y-4"
+                variants={containerVariants}
+                initial="hidden"
+                animate="visible"
+              >
+                <motion.h3
+                  className="font-instrument text-3xl font-normal text-[#131313] leading-tight tracking-tight"
+                  variants={textVariants}
+                  custom={0}
+                >
                   {projects[1].title}
-                </h3>
-                <p className="font-inter text-lg text-[#5D5D5D] leading-relaxed">
+                </motion.h3>
+                <motion.p
+                  className="font-inter text-lg text-[#5D5D5D] leading-relaxed"
+                  variants={textVariants}
+                  custom={1}
+                >
                   {projects[1].description}
-                </p>
-              </div>
+                </motion.p>
+              </motion.div>
             </div>
 
             {/* Project 3 - Right */}
@@ -176,28 +282,47 @@ const ProjectCarousel = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="space-y-4">
-                <h3 className="font-instrument text-3xl font-normal text-[#131313] leading-tight tracking-tight">
+              <motion.div
+                className="space-y-4"
+                variants={containerVariants}
+                initial="hidden"
+                animate="visible"
+              >
+                <motion.h3
+                  className="font-instrument text-3xl font-normal text-[#131313] leading-tight tracking-tight"
+                  variants={textVariants}
+                  custom={0}
+                >
                   {projects[2].title}
-                </h3>
-                <p className="font-inter text-lg text-[#5D5D5D] leading-relaxed">
+                </motion.h3>
+                <motion.p
+                  className="font-inter text-lg text-[#5D5D5D] leading-relaxed"
+                  variants={textVariants}
+                  custom={1}
+                >
                   {projects[2].description}
-                </p>
-              </div>
+                </motion.p>
+              </motion.div>
             </div>
           </div>
 
           {/* Navigation Buttons - Desktop */}
           <div className="flex justify-center items-center gap-4 mt-12">
             <button
-              onClick={goToPrevious}
+              onClick={() => {
+                goToPrevious();
+                handleUserInteraction();
+              }}
               className="flex items-center justify-center w-14 h-14 rounded-full bg-[#071839] text-white hover:bg-[#0a1f47] transition-colors"
               aria-label="Previous project"
             >
               <ChevronLeft className="w-6 h-6" />
             </button>
             <button
-              onClick={goToNext}
+              onClick={() => {
+                goToNext();
+                handleUserInteraction();
+              }}
               className="flex items-center justify-center w-14 h-14 rounded-full bg-[#071839] text-white hover:bg-[#0a1f47] transition-colors"
               aria-label="Next project"
             >
