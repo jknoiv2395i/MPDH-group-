@@ -1,16 +1,16 @@
 const Footer = () => {
   return (
-    <footer className="relative bg-[#131313] text-white py-20 px-4 md:px-16">
+    <footer className="relative bg-[#131313] text-white py-20 px-4 md:px-16 sm:-mt-0.5 sm:pt-[51px]">
       <div className="max-w-7xl mx-auto">
         {/* Main Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
           {/* Left Side - Logo and Description */}
-          <div className="lg:col-span-4 space-y-6">
+          <div className="lg:col-span-4 space-y-6 sm:-mt-0.5">
             {/* Logo Image */}
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/c4a49f74aa84002491c4469eb277094cb9e291d3?width=500"
               alt="MPHD GROUP Logo"
-              className="w-[250px] h-[250px] object-contain -mt-10"
+              className="w-[250px] h-[250px] object-contain -mt-10 sm:w-[325px] sm:h-[160px] sm:pl-3 sm:ml-0.5"
             />
 
             {/* Description */}
