@@ -107,6 +107,22 @@ const Footer = () => {
           </div>
         </div>
       </div>
+
+      {/* Map Image Section */}
+      <div className="w-full mt-0">
+        <a
+          href="https://www.google.com/maps/place/MPHD+Group+(SearchRent.in)/@21.1533533,79.132809,17z/data=!4m14!1m7!3m6!1s0x3bd4c74de6f51b47:0x125118ce7e76fd3a!2sMPHD+Group+(SearchRent.in)!8m2!3d21.1533533!4d79.132809!16s%2Fg%2F11rfq37mv7!3m5!1s0x3bd4c74de6f51b47:0x125118ce7e76fd3a!8m2!3d21.1533533!4d79.132809!16s%2Fg%2F11rfq37mv7?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block"
+        >
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets%2F371acd9a25a7494cb5e15d62a5f4d89c%2F7c93f3751ffe4a61ab3d8596cafee3ca"
+            alt="Location map"
+            className="w-full h-auto object-cover"
+          />
+        </a>
+      </div>
     </footer>
   );
 };
