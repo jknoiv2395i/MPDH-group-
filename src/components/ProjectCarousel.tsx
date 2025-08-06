@@ -195,7 +195,11 @@ const ProjectCarousel = () => {
         </div>
 
         {/* Desktop Grid Layout */}
-        <div className="hidden lg:block relative">
+        <div
+          className="hidden lg:block relative"
+          onMouseEnter={() => setIsAutoPlay(false)}
+          onMouseLeave={() => setIsAutoPlay(true)}
+        >
           <div className="grid grid-cols-12 gap-8 items-start">
             {/* Project 1 - Large left */}
             <div className="col-span-5 space-y-6">
