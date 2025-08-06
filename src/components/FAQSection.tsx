@@ -9,33 +9,33 @@ const FAQSection = () => {
   const faqData = [
     {
       id: "item-1",
-      question: "Who are the best property consultants in Nagpur?",
+      question: "How do I start the process of buying a home?",
       answer: "Starting your home buying journey begins with getting pre-approved for a mortgage. This gives you a clear understanding of your budget and shows sellers you're a serious buyer. We'll help you connect with trusted lenders and guide you through the entire process from initial consultation to closing."
     },
     {
       id: "item-2", 
-      question: "What services does MPHD Group offer as a real estate agency in Nagpur?",
+      question: "How can I start a project with Altuz?",
       answer: "Beginning a project with us is simple. Start by scheduling a free consultation where we'll discuss your vision, requirements, and budget. Our team will then create a detailed proposal outlining the scope, timeline, and investment needed to bring your architectural dreams to life."
     },
     {
       id: "item-3",
-      question: "How can I rent a flat or commercial space through MPHD Group's rental services in Nagpur?",
+      question: "What services does the studio offer?",
       answer: "We offer comprehensive architectural and design services including residential design, commercial architecture, interior design, sustainable building solutions, project management, and consultation services. Our team handles everything from initial concept to final construction oversight."
     },
     {
       id: "item-4",
-      question: "Does MPHD Group provide legal help for property in India?",
+      question: "How long does it take to complete a project?",
       answer: "Project timelines vary based on complexity and scope. Typically, residential projects take 6-12 months from design to completion, while commercial projects may take 12-24 months. We'll provide a detailed timeline during our initial consultation based on your specific requirements."
     },
     {
       id: "item-5",
-      question: "Can MPHD Group help with land acquisition for infrastructure or industrial projects?",
+      question: "Do you offer advice on sustainable design?",
       answer: "Absolutely! Sustainability is at the core of our design philosophy. We specialize in eco-friendly materials, energy-efficient systems, and sustainable building practices. Our team can help you achieve green building certifications and create environmentally responsible spaces that reduce your carbon footprint."
     }
   ];
 
   return (
-    <section className="bg-white py-[68px] px-4 pb-10">
+    <section className="bg-white py-16 px-4 md:py-20 lg:py-32">
       <div className="container mx-auto max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Left Column - Header */}
