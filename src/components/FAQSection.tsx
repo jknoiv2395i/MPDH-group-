@@ -9,28 +9,28 @@ const FAQSection = () => {
   const faqData = [
     {
       id: "item-1",
-      question: "How do I start the process of buying a home?",
-      answer: "Starting your home buying journey begins with getting pre-approved for a mortgage. This gives you a clear understanding of your budget and shows sellers you're a serious buyer. We'll help you connect with trusted lenders and guide you through the entire process from initial consultation to closing."
+      question: "Who are the best property consultants in Nagpur?",
+      answer: "MPHD Group is one of the most trusted property consultants in Nagpur, offering end-to-end solutions for property buying, selling, rentals, and legal services. With years of experience in the local market, we provide personalized guidance to help you make informed property decisions."
     },
     {
-      id: "item-2", 
-      question: "How can I start a project with Altuz?",
-      answer: "Beginning a project with us is simple. Start by scheduling a free consultation where we'll discuss your vision, requirements, and budget. Our team will then create a detailed proposal outlining the scope, timeline, and investment needed to bring your architectural dreams to life."
+      id: "item-2",
+      question: "What services does MPHD Group offer as a real estate agency in Nagpur?",
+      answer: "As a full-service real estate agency in Nagpur, MPHD Group provides property brokerage, land acquisition, casting yard setup, documentation, approvals, and rental assistance. We handle everything from property search to final documentation, ensuring a smooth transaction process."
     },
     {
       id: "item-3",
-      question: "What services does the studio offer?",
-      answer: "We offer comprehensive architectural and design services including residential design, commercial architecture, interior design, sustainable building solutions, project management, and consultation services. Our team handles everything from initial concept to final construction oversight."
+      question: "How can I rent a flat or commercial space through MPHD Group's rental services in Nagpur?",
+      answer: "Our rental services team will help you find the perfect flat or commercial space based on your requirements and budget. We maintain an extensive database of verified properties and provide complete assistance with lease agreements, documentation, and property handover processes."
     },
     {
       id: "item-4",
-      question: "How long does it take to complete a project?",
-      answer: "Project timelines vary based on complexity and scope. Typically, residential projects take 6-12 months from design to completion, while commercial projects may take 12-24 months. We'll provide a detailed timeline during our initial consultation based on your specific requirements."
+      question: "Does MPHD Group provide legal help for property in India?",
+      answer: "Yes, MPHD Group provides comprehensive legal assistance for property transactions in India. Our legal team helps with title verification, documentation review, registration processes, and ensures all legal compliance requirements are met for safe property transactions."
     },
     {
       id: "item-5",
-      question: "Do you offer advice on sustainable design?",
-      answer: "Absolutely! Sustainability is at the core of our design philosophy. We specialize in eco-friendly materials, energy-efficient systems, and sustainable building practices. Our team can help you achieve green building certifications and create environmentally responsible spaces that reduce your carbon footprint."
+      question: "Can MPHD Group help with land acquisition for infrastructure or industrial projects?",
+      answer: "Absolutely! MPHD Group specializes in land acquisition services for infrastructure and industrial projects. We assist with site identification, due diligence, negotiation, approvals, and complete documentation to help you secure the right land for your project requirements."
     }
   ];
 
