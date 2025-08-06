@@ -60,7 +60,7 @@ const FAQSection = () => {
                   value={faq.id}
                   className="border-t-2 border-[#C3D5F1] last:border-b-2"
                 >
-                  <AccordionTrigger className="flex items-center justify-between py-6 md:py-8 text-left hover:no-underline group">
+                  <AccordionTrigger className="flex items-center justify-between py-6 md:py-8 text-left hover:no-underline group [&>svg]:hidden">
                     <span className="font-instrument text-xl md:text-2xl lg:text-[27px] font-normal leading-tight tracking-tight text-[#222] pr-4">
                       {faq.question}
                     </span>
