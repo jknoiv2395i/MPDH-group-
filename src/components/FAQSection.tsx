@@ -10,7 +10,7 @@ const FAQSection = () => {
     {
       id: "item-1",
       question: "Who are the best property consultants in Nagpur?",
-      answer: "MPHD Group is one of the most trusted property consultants in Nagpur, offering end-to-end solutions for property buying, selling, rentals, and legal services. With years of experience in the local market, we provide personalized guidance to help you make informed property decisions."
+      answer: "MPHD Group is one of the most trusted property consultants in Nagpur, offering end-to-end solutions for property buying, selling, rentals, and legal services."
     },
     {
       id: "item-2",
