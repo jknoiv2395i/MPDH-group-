@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { motion } from "framer-motion";
 
 const FAQSection = () => {
   const faqData = [
@@ -37,22 +38,100 @@ const FAQSection = () => {
   return (
     <section className="bg-white py-16 px-4 md:py-20 lg:py-32">
       <div className="container mx-auto max-w-7xl">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+        <motion.div
+          className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start"
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: {},
+            visible: {
+              transition: {
+                staggerChildren: 0.3
+              }
+            }
+          }}
+        >
           {/* Left Column - Header */}
-          <div className="space-y-6">
-            <h2 className="font-instrument text-4xl md:text-5xl lg:text-6xl font-normal leading-tight tracking-tight text-black">
+          <motion.div
+            className="space-y-6"
+            variants={{
+              hidden: {
+                opacity: 0,
+                x: -50
+              },
+              visible: {
+                opacity: 1,
+                x: 0,
+                transition: {
+                  duration: 0.8,
+                  ease: "easeOut",
+                  staggerChildren: 0.2
+                }
+              }
+            }}
+          >
+            <motion.h2
+              className="font-instrument text-4xl md:text-5xl lg:text-6xl font-normal leading-tight tracking-tight text-black"
+              variants={{
+                hidden: {
+                  opacity: 0,
+                  y: 30
+                },
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  transition: {
+                    duration: 0.6,
+                    ease: "easeOut"
+                  }
+                }
+              }}
+            >
               Frequently asked
               <br />
               questions
-            </h2>
-            <p className="text-gray-600 text-lg leading-relaxed max-w-md">
+            </motion.h2>
+            <motion.p
+              className="text-gray-600 text-lg leading-relaxed max-w-md"
+              variants={{
+                hidden: {
+                  opacity: 0,
+                  y: 20
+                },
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  transition: {
+                    duration: 0.5,
+                    ease: "easeOut"
+                  }
+                }
+              }}
+            >
               To help you make informed decisions, we've compiled answers to
               some of the most commonly asked questions.
-            </p>
-          </div>
+            </motion.p>
+          </motion.div>
 
           {/* Right Column - FAQ Accordion */}
-          <div className="space-y-0">
+          <motion.div
+            className="space-y-0"
+            variants={{
+              hidden: {
+                opacity: 0,
+                x: 50
+              },
+              visible: {
+                opacity: 1,
+                x: 0,
+                transition: {
+                  duration: 0.8,
+                  ease: "easeOut",
+                  delay: 0.2
+                }
+              }
+            }}
+          >
             <Accordion type="single" collapsible className="w-full">
               {faqData.map((faq) => (
                 <AccordionItem 
@@ -91,8 +170,8 @@ const FAQSection = () => {
                 </AccordionItem>
               ))}
             </Accordion>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );
