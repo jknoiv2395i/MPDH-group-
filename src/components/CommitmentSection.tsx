@@ -37,13 +37,13 @@ const CommitmentSection = () => {
   const fadeInFromLeft = {
     initial: { opacity: 0, x: -50 },
     whileInView: { opacity: 1, x: 0 },
-    transition: { duration: 0.8, ease: "easeOut" }
+    transition: { duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }
   };
 
   const fadeInFromRight = {
     initial: { opacity: 0, x: 50 },
     whileInView: { opacity: 1, x: 0 },
-    transition: { duration: 0.8, ease: "easeOut" }
+    transition: { duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }
   };
 
   const staggerChildren = {
@@ -64,6 +64,7 @@ const CommitmentSection = () => {
     visible: {
       opacity: 1,
       y: 0,
+      transition: { duration: 0.6, ease: "easeOut" }
     }
   };
 
@@ -73,6 +74,7 @@ const CommitmentSection = () => {
       opacity: 1,
       scale: 1,
       y: 0,
+      transition: { duration: 0.6, ease: "easeOut" }
     }
   };
 
