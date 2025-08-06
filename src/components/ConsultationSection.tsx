@@ -1,6 +1,6 @@
 const ConsultationSection = () => {
   return (
-    <section className="relative w-full h-[900px] overflow-hidden bg-gradient-to-r from-blue-400 to-blue-600">
+    <section className="relative w-full h-[900px] overflow-hidden bg-gradient-to-b from-purple-500 to-pink-500 md:bg-gradient-to-r md:from-blue-400 md:to-blue-600">
       {/* Background Image */}
       <div className="absolute inset-0 w-full h-full">
         {/* Mobile Background */}
