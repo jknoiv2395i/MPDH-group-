@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 const ConsultationSection = () => {
   return (
     <section className="relative w-full h-[900px] overflow-hidden bg-gradient-to-b from-purple-500 to-pink-500 md:bg-gradient-to-r md:from-blue-400 md:to-blue-600">
@@ -20,23 +22,85 @@ const ConsultationSection = () => {
 
       {/* Content Container */}
       <div className="relative z-10 flex items-center px-4 py-8 md:px-8 lg:px-16 xl:px-24 h-full">
-        <div className="max-w-2xl">
+        <motion.div
+          className="max-w-2xl"
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: {},
+            visible: {
+              transition: {
+                staggerChildren: 0.3
+              }
+            }
+          }}
+        >
           {/* Main Heading */}
-          <h2 className="text-white text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-normal leading-tight tracking-tight mb-6 md:mb-8">
+          <motion.h2
+            className="text-white text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-normal leading-tight tracking-tight mb-6 md:mb-8"
+            variants={{
+              hidden: {
+                opacity: 0,
+                y: 50
+              },
+              visible: {
+                opacity: 1,
+                y: 0,
+                transition: {
+                  duration: 0.8,
+                  ease: "easeOut"
+                }
+              }
+            }}
+          >
             Schedule a free
             <br />
             consultation
-          </h2>
+          </motion.h2>
 
           {/* Description */}
-          <p className="text-white text-lg md:text-xl leading-relaxed mb-8 md:mb-10 max-w-md">
+          <motion.p
+            className="text-white text-lg md:text-xl leading-relaxed mb-8 md:mb-10 max-w-md"
+            variants={{
+              hidden: {
+                opacity: 0,
+                y: 30
+              },
+              visible: {
+                opacity: 1,
+                y: 0,
+                transition: {
+                  duration: 0.6,
+                  ease: "easeOut"
+                }
+              }
+            }}
+          >
             We craft inspiring spaces that blend cutting-edge
             design with enduring functionality, turning your
             vision into reality.
-          </p>
+          </motion.p>
 
           {/* CTA Button */}
-          <div className="inline-flex items-center bg-white rounded-full px-6 py-3 hover:bg-gray-50 transition-colors duration-300 group cursor-pointer sm:-mr-px">
+          <motion.div
+            className="inline-flex items-center bg-white rounded-full px-6 py-3 hover:bg-gray-50 transition-colors duration-300 group cursor-pointer sm:-mr-px"
+            variants={{
+              hidden: {
+                opacity: 0,
+                y: 20
+              },
+              visible: {
+                opacity: 1,
+                y: 0,
+                transition: {
+                  duration: 0.5,
+                  ease: "easeOut"
+                }
+              }
+            }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
             <span className="text-black text-lg font-medium mr-3">Get started</span>
             <div className="bg-black rounded-full p-3 group-hover:scale-110 transition-transform duration-300">
               <svg
@@ -56,8 +120,8 @@ const ConsultationSection = () => {
                 />
               </svg>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );
