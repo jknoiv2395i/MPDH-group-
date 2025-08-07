@@ -309,20 +309,42 @@ const Services = () => {
       <section className="bg-white" style={{ padding: '123px 0 80px' }}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-0">
           {/* Header */}
-          <div className="text-center mb-16">
-            <h2 className="font-instrument text-4xl md:text-5xl lg:text-6xl font-normal text-black mb-6 tracking-tight">
+          <motion.div
+            className="text-center mb-16"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={containerVariants}
+          >
+            <motion.h2
+              className="font-instrument text-4xl md:text-5xl lg:text-6xl font-normal text-black mb-6 tracking-tight"
+              variants={textVariants}
+            >
               Frequently asked questions
-            </h2>
-            <p className="font-inter text-lg text-gray-600 tracking-wide max-w-3xl mx-auto">
+            </motion.h2>
+            <motion.p
+              className="font-inter text-lg text-gray-600 tracking-wide max-w-3xl mx-auto"
+              variants={textVariants}
+            >
               To help you make informed decisions, we've compiled answers to some of the most
               commonly asked questions.
-            </p>
-          </div>
+            </motion.p>
+          </motion.div>
 
           {/* FAQ Items */}
-          <div className="space-y-4">
+          <motion.div
+            className="space-y-4"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+            variants={containerVariants}
+          >
             {faqItems.map((item, index) => (
-              <div key={index} className="border-t-2 border-blue-200">
+              <motion.div
+                key={index}
+                className="border-t-2 border-blue-200"
+                variants={faqItemVariants}
+              >
                 <button
                   onClick={() => toggleFAQ(index)}
                   className="w-full flex items-center justify-between py-8 text-left focus:outline-none"
@@ -350,15 +372,20 @@ const Services = () => {
                   </div>
                 </button>
                 {openFAQ === index && (
-                  <div className="pb-8 pr-16">
+                  <motion.div
+                    className="pb-8 pr-16"
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    transition={{ duration: 0.3, ease: "easeOut" }}
+                  >
                     <p className="font-inter text-lg text-gray-600 leading-relaxed">
                       {item.answer}
                     </p>
-                  </div>
+                  </motion.div>
                 )}
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
