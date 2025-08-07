@@ -51,10 +51,8 @@ const ServicesSection = () => {
   };
   return <>
       <section className="bg-white" style={{
-style={{
-  padding: '7px 0 5px'
-}}
-
+        padding: '7px 0 5px'
+      }}>
         <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
           <motion.div className="mb-12 lg:mb-16" initial="hidden" whileInView="visible" viewport={{
           once: true,
