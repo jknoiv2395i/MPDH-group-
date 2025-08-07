@@ -140,49 +140,94 @@ const Projects = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left side - Image */}
-            <div className="relative order-2 lg:order-1">
+            <motion.div
+              className="relative order-2 lg:order-1"
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+              viewport={{ once: true, margin: "-100px" }}
+            >
               <img
                 src="https://api.builder.io/api/v1/image/assets/TEMP/2bf588901604ca88af12a976de7d28ba79f2e66b?width=828"
                 alt="Achievements"
                 className="w-full h-64 sm:h-80 lg:h-96 object-cover rounded-2xl"
               />
-            </div>
+            </motion.div>
 
             {/* Right side - Content */}
-            <div className="space-y-8 lg:space-y-12 order-1 lg:order-2">
-              <h2 className="font-instrument text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-normal text-black tracking-tight leading-tight">
+            <motion.div
+              className="space-y-8 lg:space-y-12 order-1 lg:order-2"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={containerVariants}
+            >
+              <motion.h2
+                className="font-instrument text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-normal text-black tracking-tight leading-tight"
+                variants={textVariants}
+              >
                 Here are some of our success stories that showcase how we help buyers, sellers, and
                 investors achieve their real estate goals.
-              </h2>
-              
+              </motion.h2>
+
               {/* Stats */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 lg:gap-12 pt-8">
-                <div className="text-center sm:text-left">
-                  <div className="font-instrument text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal text-black tracking-tight">
+              <motion.div
+                className="grid grid-cols-1 sm:grid-cols-3 gap-8 lg:gap-12 pt-8"
+                variants={containerVariants}
+              >
+                <motion.div className="text-center sm:text-left" variants={cardVariants}>
+                  <motion.div
+                    className="font-instrument text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal text-black tracking-tight"
+                    initial={{ scale: 0.8, opacity: 0 }}
+                    whileInView={{ scale: 1, opacity: 1 }}
+                    transition={{ duration: 0.6, ease: "easeOut" }}
+                    viewport={{ once: true }}
+                  >
                     50+
-                  </div>
-                  <div className="font-inter text-base lg:text-lg text-gray-600 mt-2">
+                  </motion.div>
+                  <motion.div
+                    className="font-inter text-base lg:text-lg text-gray-600 mt-2"
+                    variants={textVariants}
+                  >
                     Project complete
-                  </div>
-                </div>
-                <div className="text-center">
-                  <div className="font-instrument text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal text-black tracking-tight">
+                  </motion.div>
+                </motion.div>
+                <motion.div className="text-center" variants={cardVariants}>
+                  <motion.div
+                    className="font-instrument text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal text-black tracking-tight"
+                    initial={{ scale: 0.8, opacity: 0 }}
+                    whileInView={{ scale: 1, opacity: 1 }}
+                    transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+                    viewport={{ once: true }}
+                  >
                     100+
-                  </div>
-                  <div className="font-inter text-base lg:text-lg text-gray-600 mt-2">
+                  </motion.div>
+                  <motion.div
+                    className="font-inter text-base lg:text-lg text-gray-600 mt-2"
+                    variants={textVariants}
+                  >
                     Expert teams
-                  </div>
-                </div>
-                <div className="text-center sm:text-right">
-                  <div className="font-instrument text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal text-black tracking-tight">
+                  </motion.div>
+                </motion.div>
+                <motion.div className="text-center sm:text-right" variants={cardVariants}>
+                  <motion.div
+                    className="font-instrument text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal text-black tracking-tight"
+                    initial={{ scale: 0.8, opacity: 0 }}
+                    whileInView={{ scale: 1, opacity: 1 }}
+                    transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+                    viewport={{ once: true }}
+                  >
                     $3.5M
-                  </div>
-                  <div className="font-inter text-base lg:text-lg text-gray-600 mt-2">
+                  </motion.div>
+                  <motion.div
+                    className="font-inter text-base lg:text-lg text-gray-600 mt-2"
+                    variants={textVariants}
+                  >
                     Project value
-                  </div>
-                </div>
-              </div>
-            </div>
+                  </motion.div>
+                </motion.div>
+              </motion.div>
+            </motion.div>
           </div>
         </div>
       </section>
