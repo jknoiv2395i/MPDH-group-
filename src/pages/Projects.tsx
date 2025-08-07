@@ -1,6 +1,38 @@
 import { FigmaNavBar } from "@/components/ui/figma-navbar";
 import Footer from "@/components/Footer";
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useSpring, useInView } from "framer-motion";
+import { useEffect, useRef } from "react";
+
+const Counter = ({ value, suffix = "", prefix = "", duration = 2 }) => {
+  const ref = useRef(null);
+  const motionValue = useMotionValue(0);
+  const springValue = useSpring(motionValue, { duration: duration * 1000 });
+  const isInView = useInView(ref, { once: true, margin: "-50px" });
+
+  useEffect(() => {
+    if (isInView) {
+      motionValue.set(value);
+    }
+  }, [motionValue, isInView, value]);
+
+  useEffect(() => {
+    springValue.on("change", (latest) => {
+      if (ref.current) {
+        let displayValue;
+        if (prefix === "$" && value >= 1000000) {
+          displayValue = (latest / 1000000).toFixed(1) + "M";
+        } else if (suffix === "+") {
+          displayValue = Math.floor(latest) + "+";
+        } else {
+          displayValue = Math.floor(latest);
+        }
+        ref.current.textContent = prefix + displayValue;
+      }
+    });
+  }, [springValue, prefix, suffix, value]);
+
+  return <span ref={ref}>{prefix}0{suffix}</span>;
+};
 
 const Projects = () => {
   // Animation variants
