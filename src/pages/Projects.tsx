@@ -215,7 +215,7 @@ const Projects = () => {
                     transition={{ duration: 0.6, ease: "easeOut" }}
                     viewport={{ once: true }}
                   >
-                    50+
+                    <Counter value={50} suffix="+" duration={2} />
                   </motion.div>
                   <motion.div
                     className="font-inter text-base lg:text-lg text-gray-600 mt-2"
@@ -232,7 +232,7 @@ const Projects = () => {
                     transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
                     viewport={{ once: true }}
                   >
-                    100+
+                    <Counter value={100} suffix="+" duration={2.2} />
                   </motion.div>
                   <motion.div
                     className="font-inter text-base lg:text-lg text-gray-600 mt-2"
@@ -249,7 +249,7 @@ const Projects = () => {
                     transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
                     viewport={{ once: true }}
                   >
-                    $3.5M
+                    <Counter value={3500000} prefix="$" duration={2.5} />
                   </motion.div>
                   <motion.div
                     className="font-inter text-base lg:text-lg text-gray-600 mt-2"
