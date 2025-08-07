@@ -1,5 +1,6 @@
 import { FigmaNavBar } from "@/components/ui/figma-navbar";
 import Footer from "@/components/Footer";
+import { motion } from "framer-motion";
 
 const Projects = () => {
   const projects = [
