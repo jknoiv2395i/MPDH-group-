@@ -56,7 +56,7 @@ const AnimatedText = React.forwardRef<HTMLDivElement, AnimatedTextProps>(
               "@media (max-width: 640px)": {
                 fontWeight: "400",
                 lineHeight: "34px",
-                fontSize: "28px",
+                fontSize: "25px",
               }
             }}
             initial={{ y: -20, opacity: 0 }}
