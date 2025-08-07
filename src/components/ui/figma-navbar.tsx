@@ -77,11 +77,21 @@ export function FigmaNavBar({ className }: NavBarProps) {
         <div className="md:hidden">
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="text-white"
+            className="relative flex flex-col items-center justify-center w-8 h-8 text-white focus:outline-none"
+            aria-label="Toggle mobile menu"
           >
-            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
+            <span className={cn(
+              "block h-0.5 w-6 bg-white transition-all duration-300 ease-in-out",
+              isMobileMenuOpen ? "rotate-45 translate-y-1.5" : "translate-y-0"
+            )}></span>
+            <span className={cn(
+              "block h-0.5 w-6 bg-white transition-all duration-300 ease-in-out my-1",
+              isMobileMenuOpen ? "opacity-0" : "opacity-100"
+            )}></span>
+            <span className={cn(
+              "block h-0.5 w-6 bg-white transition-all duration-300 ease-in-out",
+              isMobileMenuOpen ? "-rotate-45 -translate-y-1.5" : "translate-y-0"
+            )}></span>
           </button>
         </div>
       </div>
