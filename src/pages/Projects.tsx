@@ -362,31 +362,62 @@ const Projects = () => {
 
       {/* Call to Action Section */}
       <section className="relative py-24 lg:py-32 xl:py-40 overflow-hidden">
-        <div 
+        <motion.div
+          initial={{ opacity: 0, scale: 1.05 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 2,
+            ease: "easeOut",
+            delay: 0.5
+          }}
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/e43dc123aea7bc6d9ccb45fb5c6678fed11a62af?width=3810')"
           }}
         />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-2xl lg:max-w-3xl text-white">
-            <h2 className="font-inter text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-normal mb-6 lg:mb-8 tracking-tight leading-tight">
+        <motion.div
+          className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={containerVariants}
+        >
+          <motion.div
+            className="max-w-2xl lg:max-w-3xl text-white"
+            variants={containerVariants}
+          >
+            <motion.h2
+              className="font-inter text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-normal mb-6 lg:mb-8 tracking-tight leading-tight"
+              variants={headlineVariants}
+            >
               Schedule a free consultation
-            </h2>
-            <p className="font-inter text-base sm:text-lg lg:text-xl leading-relaxed mb-8 lg:mb-12 max-w-lg opacity-90">
+            </motion.h2>
+            <motion.p
+              className="font-inter text-base sm:text-lg lg:text-xl leading-relaxed mb-8 lg:mb-12 max-w-lg opacity-90"
+              variants={textVariants}
+            >
               We craft inspiring spaces that blend cutting-edge design with enduring functionality, turning your
               vision into reality.
-            </p>
-            <button className="inline-flex items-center bg-white text-black px-6 sm:px-8 py-3 sm:py-4 rounded-full font-inter text-base sm:text-lg font-medium hover:bg-gray-100 transition-colors group">
+            </motion.p>
+            <motion.button
+              className="inline-flex items-center bg-white text-black px-6 sm:px-8 py-3 sm:py-4 rounded-full font-inter text-base sm:text-lg font-medium hover:bg-gray-100 transition-colors group"
+              variants={cardVariants}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
               Get started
-              <div className="ml-3 sm:ml-4 w-10 h-10 sm:w-11 sm:h-11 bg-black rounded-full flex items-center justify-center group-hover:bg-gray-800 transition-colors">
+              <motion.div
+                className="ml-3 sm:ml-4 w-10 h-10 sm:w-11 sm:h-11 bg-black rounded-full flex items-center justify-center group-hover:bg-gray-800 transition-colors"
+                whileHover={{ rotate: 45 }}
+                transition={{ duration: 0.3 }}
+              >
                 <svg width="16" height="16" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg" className="sm:w-[18px] sm:h-[18px]">
                   <path d="M5.79917 5.90234H13.0103V13.1135M12.5096 6.40313L5.19824 13.7145" stroke="white" strokeWidth="1.69969" strokeMiterlimit="10" strokeLinecap="square"/>
                 </svg>
-              </div>
-            </button>
-          </div>
-        </div>
+              </motion.div>
+            </motion.button>
+          </motion.div>
+        </motion.div>
       </section>
 
       <Footer />
