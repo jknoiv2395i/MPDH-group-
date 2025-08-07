@@ -45,9 +45,8 @@ const FeatureBlogsSection = () => {
   };
 
   return (
-    <section className="bg-white" style={{
-      padding: '80px 0 1px'
-    }}>
+<section className="bg-white pt-20 lg:pt-24 pb-[1px]">
+
       <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
         {/* Heading */}
         <motion.div

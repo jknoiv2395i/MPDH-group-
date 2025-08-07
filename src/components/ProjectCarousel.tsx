@@ -73,9 +73,8 @@ const ProjectCarousel = () => {
   };
 
   return (
-    <section className="bg-white" style={{
-      paddingTop: '96px'
-    }}>
+<section className="bg-white pt-24">
+
       <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
         {/* Mobile Carousel */}
         <div className="lg:hidden">
