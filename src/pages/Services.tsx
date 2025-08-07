@@ -390,9 +390,18 @@ const Services = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-20">
+      <motion.footer
+        className="bg-gray-900 text-white py-20"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
+        variants={containerVariants}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12"
+            variants={containerVariants}
+          >
             {/* Brand Section */}
             <div className="lg:col-span-2">
               <div className="mb-8">
@@ -439,10 +448,13 @@ const Services = () => {
                 <a href="#" className="block font-inter text-white/75 hover:text-white transition-colors">Inner blog</a>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Footer Bottom */}
-          <div className="mt-16 pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center">
+          <motion.div
+            className="mt-16 pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center"
+            variants={itemVariants}
+          >
             <p className="font-inter text-white text-base mb-4 md:mb-0">
               © 2025 Temlis. All right Reserved
             </p>
@@ -457,9 +469,9 @@ const Services = () => {
                 Licensing
               </a>
             </div>
-          </div>
+          </motion.div>
         </div>
-      </footer>
+      </motion.footer>
     </motion.div>
   );
 };
