@@ -45,7 +45,7 @@ const ServicesSection = () => {
   return (
     <>
       <section className="bg-white" style={{
-        padding: '7px 0 128px'
+        paddingTop: '7px'
       }}>
         <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
           <motion.div

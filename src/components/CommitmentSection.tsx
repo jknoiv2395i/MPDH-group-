@@ -89,7 +89,7 @@ const CommitmentSection = () => {
 
   return (
     <>
-      <section className="bg-white pt-16 lg:pt-16 pb-16 lg:pb-32" style={{ paddingTop: '59px' }}>
+      <section className="bg-white" style={{ paddingTop: '59px' }}>
         <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-24 items-center">
             {/* Left Content */}
