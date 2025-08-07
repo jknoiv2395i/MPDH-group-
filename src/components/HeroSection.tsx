@@ -73,6 +73,7 @@ const HeroSection = () => {
         {/* Main Heading */}
         <motion.div
           className="text-center max-w-4xl mx-auto"
+          style={{ margin: "0 auto auto" }}
           variants={containerVariants}
           initial="hidden"
           animate="visible"
