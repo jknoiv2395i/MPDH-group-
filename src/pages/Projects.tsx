@@ -237,69 +237,124 @@ const Projects = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-16 lg:space-y-24">
             {projects.map((project, index) => (
-              <div key={project.id} className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+              <motion.div
+                key={project.id}
+                className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-100px" }}
+                variants={containerVariants}
+              >
                 {index % 2 === 0 ? (
                   <>
                     {/* Left side - Small image for even projects */}
-                    <div className="order-2 lg:order-1">
-                      <img
+                    <motion.div
+                      className="order-2 lg:order-1"
+                      variants={cardVariants}
+                      transition={{ duration: 0.6, ease: "easeOut" }}
+                    >
+                      <motion.img
                         src={project.smallImage}
                         alt={project.title}
                         className="w-full h-64 sm:h-80 lg:h-96 object-cover rounded-2xl"
+                        whileHover={{ scale: 1.02 }}
+                        transition={{ duration: 0.3 }}
                       />
-                    </div>
+                    </motion.div>
                     {/* Right side - Large image and content */}
-                    <div className="order-1 lg:order-2 space-y-6 lg:space-y-8">
+                    <motion.div
+                      className="order-1 lg:order-2 space-y-6 lg:space-y-8"
+                      variants={cardVariants}
+                      transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+                    >
                       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
-                        <h3 className="font-instrument text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-normal text-black tracking-tight leading-tight max-w-lg">
+                        <motion.h3
+                          className="font-instrument text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-normal text-black tracking-tight leading-tight max-w-lg"
+                          variants={textVariants}
+                        >
                           {project.title}
-                        </h3>
-                        <button className="self-start bg-black text-white px-6 py-3 rounded-full font-inter text-base lg:text-lg font-medium hover:bg-gray-800 transition-colors whitespace-nowrap">
+                        </motion.h3>
+                        <motion.button
+                          className="self-start bg-black text-white px-6 py-3 rounded-full font-inter text-base lg:text-lg font-medium hover:bg-gray-800 transition-colors whitespace-nowrap"
+                          variants={cardVariants}
+                          whileHover={{ scale: 1.05 }}
+                          whileTap={{ scale: 0.95 }}
+                        >
                           View project
-                        </button>
+                        </motion.button>
                       </div>
-                      <p className="font-inter text-base lg:text-lg text-gray-600 leading-relaxed">
+                      <motion.p
+                        className="font-inter text-base lg:text-lg text-gray-600 leading-relaxed"
+                        variants={textVariants}
+                      >
                         {project.description}
-                      </p>
-                      <img
+                      </motion.p>
+                      <motion.img
                         src={project.largeImage}
                         alt={`${project.title} main view`}
                         className="w-full h-64 sm:h-80 lg:h-96 xl:h-[28rem] object-cover rounded-2xl mt-6"
+                        variants={cardVariants}
+                        transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+                        whileHover={{ scale: 1.02 }}
                       />
-                    </div>
+                    </motion.div>
                   </>
                 ) : (
                   <>
                     {/* Left side - Large image and content for odd projects */}
-                    <div className="space-y-6 lg:space-y-8">
+                    <motion.div
+                      className="space-y-6 lg:space-y-8"
+                      variants={cardVariants}
+                      transition={{ duration: 0.6, ease: "easeOut" }}
+                    >
                       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
-                        <h3 className="font-instrument text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-normal text-black tracking-tight leading-tight max-w-lg">
+                        <motion.h3
+                          className="font-instrument text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-normal text-black tracking-tight leading-tight max-w-lg"
+                          variants={textVariants}
+                        >
                           {project.title}
-                        </h3>
-                        <button className="self-start bg-black text-white px-6 py-3 rounded-full font-inter text-base lg:text-lg font-medium hover:bg-gray-800 transition-colors whitespace-nowrap">
+                        </motion.h3>
+                        <motion.button
+                          className="self-start bg-black text-white px-6 py-3 rounded-full font-inter text-base lg:text-lg font-medium hover:bg-gray-800 transition-colors whitespace-nowrap"
+                          variants={cardVariants}
+                          whileHover={{ scale: 1.05 }}
+                          whileTap={{ scale: 0.95 }}
+                        >
                           View project
-                        </button>
+                        </motion.button>
                       </div>
-                      <p className="font-inter text-base lg:text-lg text-gray-600 leading-relaxed">
+                      <motion.p
+                        className="font-inter text-base lg:text-lg text-gray-600 leading-relaxed"
+                        variants={textVariants}
+                      >
                         {project.description}
-                      </p>
-                      <img
+                      </motion.p>
+                      <motion.img
                         src={project.largeImage}
                         alt={`${project.title} main view`}
                         className="w-full h-64 sm:h-80 lg:h-96 xl:h-[28rem] object-cover rounded-2xl mt-6"
+                        variants={cardVariants}
+                        transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+                        whileHover={{ scale: 1.02 }}
                       />
-                    </div>
+                    </motion.div>
                     {/* Right side - Small image */}
-                    <div className="order-2">
-                      <img
+                    <motion.div
+                      className="order-2"
+                      variants={cardVariants}
+                      transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+                    >
+                      <motion.img
                         src={project.smallImage}
                         alt={project.title}
                         className="w-full h-64 sm:h-80 lg:h-96 object-cover rounded-2xl"
+                        whileHover={{ scale: 1.02 }}
+                        transition={{ duration: 0.3 }}
                       />
-                    </div>
+                    </motion.div>
                   </>
                 )}
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
