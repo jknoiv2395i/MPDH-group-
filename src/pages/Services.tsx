@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { ChevronDown, ChevronRight } from "lucide-react";
 import { FigmaNavBar } from "@/components/ui/figma-navbar";
 import Footer from "@/components/Footer";
+import { motion } from "framer-motion";
 
 const Services = () => {
   const [formData, setFormData] = useState({
@@ -57,112 +58,261 @@ const Services = () => {
     }
   ];
 
+  // Animation variants from Index page components
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+        delayChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const headlineVariants = {
+    hidden: { opacity: 0, y: 50, scale: 0.95 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 1.2,
+        ease: [0.25, 0.25, 0.25, 1],
+        delay: 0.1,
+      },
+    },
+  };
+
+  const textVariants = {
+    hidden: {
+      opacity: 0,
+      y: 30,
+      scale: 0.95
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.8,
+        ease: [0.25, 0.46, 0.45, 0.94]
+      }
+    }
+  };
+
+  const fadeInFromLeft = {
+    initial: { opacity: 0, x: -50 },
+    whileInView: { opacity: 1, x: 0 },
+    transition: { duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }
+  };
+
+  const fadeInFromRight = {
+    initial: { opacity: 0, x: 50 },
+    whileInView: { opacity: 1, x: 0 },
+    transition: { duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }
+  };
+
+  const textReveal = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" }
+    }
+  };
+
+  const cardVariants = {
+    hidden: {
+      opacity: 0,
+      y: 30
+    },
+    visible: {
+      opacity: 1,
+      y: 0
+    }
+  };
+
+  const staggerChildren = {
+    initial: "hidden",
+    whileInView: "visible",
+    variants: {
+      hidden: {},
+      visible: {
+        transition: {
+          staggerChildren: 0.2
+        }
+      }
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-white relative">
+    <motion.div 
+      className="min-h-screen bg-white relative"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
       <FigmaNavBar />
 
       {/* Contact Form Section */}
-      <section className="relative min-h-screen">
+      <section className="relative min-h-screen overflow-hidden">
         {/* Background Image */}
-        <div
+        <motion.div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/e8013bbbc820f05a3f48efd4964535ee8fadc977?width=3810')",
             width: '1905px',
             height: '1137.88px'
           }}
+          initial={{ opacity: 0, scale: 1.05 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 2,
+            ease: "easeOut",
+            delay: 0.5
+          }}
         />
         
         {/* Form Container */}
         <div className="relative z-10 flex items-center min-h-screen p-4 md:p-8">
-          <div
+          <motion.div
             className="w-full max-w-2xl bg-white rounded-2xl p-6 md:p-8 lg:p-12 shadow-lg mx-auto"
             style={{ marginTop: "108px" }}
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            whileHover={{ y: -5 }}
+            transition={{ duration: 0.3 }}
           >
             {/* Header */}
-            <div className="mb-8">
-              <h1 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-normal text-black mb-4 tracking-tight">
+            <motion.div className="mb-8" variants={itemVariants}>
+              <motion.h1 
+                className="font-instrument text-3xl md:text-4xl lg:text-5xl font-normal text-black mb-4 tracking-tight"
+                variants={headlineVariants}
+              >
                 Connect with us
-              </h1>
-              <p className="font-inter text-base md:text-lg text-gray-600 tracking-wide">
+              </motion.h1>
+              <motion.p 
+                className="font-inter text-base md:text-lg text-gray-600 tracking-wide"
+                variants={itemVariants}
+              >
                 Share your vision with us.
-              </p>
-            </div>
+              </motion.p>
+            </motion.div>
 
             {/* Form */}
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <motion.form onSubmit={handleSubmit} className="space-y-6" variants={itemVariants}>
               {/* Full Name */}
-              <div className="space-y-3">
+              <motion.div className="space-y-3" variants={itemVariants}>
                 <Label htmlFor="fullName" className="font-inter text-lg text-gray-900 tracking-wide">
                   Full name
                 </Label>
-                <Input
-                  id="fullName"
-                  name="fullName"
-                  value={formData.fullName}
-                  onChange={handleInputChange}
-                  placeholder="Your name"
-                  className="h-16 rounded-2xl border-blue-200 text-lg font-inter placeholder:text-gray-400 px-5"
-                />
-              </div>
+                <motion.div
+                  whileFocus={{ scale: 1.02 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <Input
+                    id="fullName"
+                    name="fullName"
+                    value={formData.fullName}
+                    onChange={handleInputChange}
+                    placeholder="Your name"
+                    className="h-16 rounded-2xl border-blue-200 text-lg font-inter placeholder:text-gray-400 px-5 transition-all duration-200 hover:border-blue-300 focus:border-blue-400"
+                  />
+                </motion.div>
+              </motion.div>
 
               {/* Email Address */}
-              <div className="space-y-3">
+              <motion.div className="space-y-3" variants={itemVariants}>
                 <Label htmlFor="email" className="font-inter text-lg text-gray-900 tracking-wide">
                   Email address
                 </Label>
-                <Input
-                  id="email"
-                  name="email"
-                  type="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  placeholder="Your mail address"
-                  className="h-16 rounded-2xl border-blue-200 text-lg font-inter placeholder:text-gray-400 px-5"
-                />
-              </div>
+                <motion.div
+                  whileFocus={{ scale: 1.02 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    placeholder="Your mail address"
+                    className="h-16 rounded-2xl border-blue-200 text-lg font-inter placeholder:text-gray-400 px-5 transition-all duration-200 hover:border-blue-300 focus:border-blue-400"
+                  />
+                </motion.div>
+              </motion.div>
 
               {/* Company Name */}
-              <div className="space-y-3">
+              <motion.div className="space-y-3" variants={itemVariants}>
                 <Label htmlFor="company" className="font-inter text-lg text-gray-900 tracking-wide">
                   Company name
                 </Label>
-                <Input
-                  id="company"
-                  name="company"
-                  value={formData.company}
-                  onChange={handleInputChange}
-                  placeholder="Company name"
-                  className="h-16 rounded-2xl border-blue-200 text-lg font-inter placeholder:text-gray-400 px-5"
-                />
-              </div>
+                <motion.div
+                  whileFocus={{ scale: 1.02 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <Input
+                    id="company"
+                    name="company"
+                    value={formData.company}
+                    onChange={handleInputChange}
+                    placeholder="Company name"
+                    className="h-16 rounded-2xl border-blue-200 text-lg font-inter placeholder:text-gray-400 px-5 transition-all duration-200 hover:border-blue-300 focus:border-blue-400"
+                  />
+                </motion.div>
+              </motion.div>
 
               {/* Project Information */}
-              <div className="space-y-3">
+              <motion.div className="space-y-3" variants={itemVariants}>
                 <Label htmlFor="projectInfo" className="font-inter text-lg text-gray-900 tracking-wide">
                   Project information
                 </Label>
-                <Textarea
-                  id="projectInfo"
-                  name="projectInfo"
-                  value={formData.projectInfo}
-                  onChange={handleInputChange}
-                  placeholder="Example Text"
-                  className="min-h-40 rounded-2xl border-blue-200 text-lg font-inter placeholder:text-gray-400 px-5 py-5 resize-none"
-                />
-              </div>
+                <motion.div
+                  whileFocus={{ scale: 1.02 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <Textarea
+                    id="projectInfo"
+                    name="projectInfo"
+                    value={formData.projectInfo}
+                    onChange={handleInputChange}
+                    placeholder="Example Text"
+                    className="min-h-40 rounded-2xl border-blue-200 text-lg font-inter placeholder:text-gray-400 px-5 py-5 resize-none transition-all duration-200 hover:border-blue-300 focus:border-blue-400"
+                  />
+                </motion.div>
+              </motion.div>
 
               {/* Submit Button */}
-              <div className="pt-4">
-                <Button
-                  type="submit"
-                  className="bg-gray-900 hover:bg-gray-800 text-white font-inter text-lg font-medium px-8 py-4 rounded-full h-auto transition-colors"
+              <motion.div className="pt-4" variants={itemVariants}>
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ duration: 0.2 }}
                 >
-                  Submit
-                </Button>
-              </div>
-            </form>
-          </div>
+                  <Button
+                    type="submit"
+                    className="bg-gray-900 hover:bg-gray-800 text-white font-inter text-lg font-medium px-8 py-4 rounded-full h-auto transition-all duration-300 shadow-lg hover:shadow-xl"
+                  >
+                    Submit
+                  </Button>
+                </motion.div>
+              </motion.div>
+            </motion.form>
+          </motion.div>
         </div>
       </section>
 
@@ -170,35 +320,80 @@ const Services = () => {
       <section className="bg-white" style={{ padding: '123px 0 80px' }}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-0">
           {/* Header */}
-          <div className="text-center mb-16">
-            <h2 className="font-instrument text-4xl md:text-5xl lg:text-6xl font-normal text-black mb-6 tracking-tight">
+          <motion.div 
+            className="text-center mb-16"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={containerVariants}
+          >
+            <motion.h2 
+              className="font-instrument text-4xl md:text-5xl lg:text-6xl font-normal text-black mb-6 tracking-tight"
+              variants={headlineVariants}
+            >
               Frequently asked questions
-            </h2>
-            <p className="font-inter text-lg text-gray-600 tracking-wide max-w-3xl mx-auto">
+            </motion.h2>
+            <motion.p 
+              className="font-inter text-lg text-gray-600 tracking-wide max-w-3xl mx-auto"
+              variants={textVariants}
+            >
               To help you make informed decisions, we've compiled answers to some of the most
               commonly asked questions.
-            </p>
-          </div>
+            </motion.p>
+          </motion.div>
 
           {/* FAQ Items */}
-          <div className="space-y-4">
+          <motion.div 
+            className="space-y-4"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={{
+              hidden: {},
+              visible: {
+                transition: {
+                  staggerChildren: 0.1
+                }
+              }
+            }}
+          >
             {faqItems.map((item, index) => (
-              <div key={index} className="border-t-2 border-blue-200">
-                <button
+              <motion.div 
+                key={index} 
+                className="border-t-2 border-blue-200"
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: {
+                    opacity: 1,
+                    y: 0,
+                    transition: { duration: 0.5, ease: "easeOut" }
+                  }
+                }}
+                whileHover={{ x: 5 }}
+                transition={{ duration: 0.2 }}
+              >
+                <motion.button
                   onClick={() => toggleFAQ(index)}
-                  className="w-full flex items-center justify-between py-8 text-left focus:outline-none"
+                  className="w-full flex items-center justify-between py-8 text-left focus:outline-none group"
+                  whileHover={{ scale: 1.01 }}
+                  transition={{ duration: 0.2 }}
                 >
-                  <h3 className="font-instrument text-xl md:text-2xl lg:text-3xl font-normal text-gray-800 tracking-tight pr-8">
+                  <h3 className="font-instrument text-xl md:text-2xl lg:text-3xl font-normal text-gray-800 tracking-tight pr-8 group-hover:text-blue-600 transition-colors duration-200">
                     {item.question}
                   </h3>
-                  <div className="flex-shrink-0 w-12 h-12 bg-gray-900 rounded-full flex items-center justify-center">
+                  <motion.div 
+                    className="flex-shrink-0 w-12 h-12 bg-gray-900 rounded-full flex items-center justify-center group-hover:bg-blue-600"
+                    whileHover={{ scale: 1.1, rotate: 5 }}
+                    whileTap={{ scale: 0.95 }}
+                    transition={{ duration: 0.2 }}
+                  >
                     <svg 
                       width="19" 
                       height="19" 
                       viewBox="0 0 19 19" 
                       fill="none" 
                       xmlns="http://www.w3.org/2000/svg"
-                      className={`transition-transform duration-200 ${openFAQ === index ? 'rotate-45' : ''}`}
+                      className={`transition-transform duration-300 ${openFAQ === index ? 'rotate-45' : ''}`}
                     >
                       <path 
                         d="M6.12439 5.42871H13.3475V12.6518M12.8459 5.93032L5.52246 13.2538" 
@@ -208,23 +403,69 @@ const Services = () => {
                         strokeLinecap="square"
                       />
                     </svg>
-                  </div>
-                </button>
+                  </motion.div>
+                </motion.button>
                 {openFAQ === index && (
-                  <div className="pb-8 pr-16">
-                    <p className="font-inter text-lg text-gray-600 leading-relaxed">
+                  <motion.div 
+                    className="pb-8 pr-16"
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.3, ease: "easeOut" }}
+                  >
+                    <motion.p 
+                      className="font-inter text-lg text-gray-600 leading-relaxed"
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.3, delay: 0.1 }}
+                    >
                       {item.answer}
-                    </p>
-                  </div>
+                    </motion.p>
+                  </motion.div>
                 )}
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
+      {/* Vision Section (from Index page) */}
+      <motion.section 
+        className="bg-white py-16 px-4 md:py-24 lg:py-32"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={containerVariants}
+      >
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            className="flex flex-col items-center text-center text-2xl"
+            variants={containerVariants}
+          >
+            <motion.h2
+              className="font-instrument text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[54px] font-normal leading-tight text-black mb-4 sm:mb-6 max-w-4xl tracking-[-0.5px] sm:tracking-[-1.6px] text-center"
+              variants={textVariants}
+            >
+              Experience innovative spaces
+              <br />
+              where real estate meets your vision
+              <br />
+              and turns it into reality.
+            </motion.h2>
+
+            <motion.p
+              className="text-[#5D5D5D] text-base md:text-lg font-normal leading-relaxed max-w-[634px] tracking-[0.2px] sm:tracking-[0.36px]"
+              variants={textVariants}
+            >
+              We craft inspiring spaces that blend cutting-edge design with enduring
+              functionality, turning your vision into reality.
+            </motion.p>
+          </motion.div>
+        </div>
+      </motion.section>
+
       <Footer />
-    </div>
+    </motion.div>
   );
 };
 
