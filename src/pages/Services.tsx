@@ -181,14 +181,25 @@ const Services = () => {
             animate="visible"
           >
             {/* Header */}
-            <div className="mb-8">
-              <h1 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-normal text-black mb-4 tracking-tight">
+            <motion.div
+              className="mb-8"
+              variants={containerVariants}
+              initial="hidden"
+              animate="visible"
+            >
+              <motion.h1
+                className="font-instrument text-3xl md:text-4xl lg:text-5xl font-normal text-black mb-4 tracking-tight"
+                variants={headlineVariants}
+              >
                 Connect with us
-              </h1>
-              <p className="font-inter text-base md:text-lg text-gray-600 tracking-wide">
+              </motion.h1>
+              <motion.p
+                className="font-inter text-base md:text-lg text-gray-600 tracking-wide"
+                variants={itemVariants}
+              >
                 Share your vision with us.
-              </p>
-            </div>
+              </motion.p>
+            </motion.div>
 
             {/* Form */}
             <form onSubmit={handleSubmit} className="space-y-6">
