@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white py-20" style={{ margin: "-2px 0 0 -5px", padding: "11px 64px 80px" }}>
+    <footer className="bg-gray-900 text-white py-20" style={{ margin: "-2px 0 0 -5px", padding: "11px 64px 0" }}>
       <footer className="bg-gray-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
@@ -52,7 +52,7 @@ const Footer = () => {
           </div>
 
           {/* Footer Bottom */}
-          <div className="mt-16 pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center">
+          <div className="pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center" style={{ marginTop: "54px" }}>
             <p className="font-inter text-white text-base mb-4 md:mb-0">
               © 2025 Temlis. All right Reserved
             </p>
@@ -78,21 +78,7 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
           className="block"
-        >
-          <img
-            src="https://cdn.builder.io/api/v1/image/assets%2F371acd9a25a7494cb5e15d62a5f4d89c%2F7c93f3751ffe4a61ab3d8596cafee3ca"
-            alt="Location map"
-            className="w-full h-auto object-cover"
-            style={{
-              "@media (max-width: 640px)": {
-                marginTop: "9px",
-                paddingBottom: "22px",
-                fontSize: "32px",
-                fontWeight: "600",
-              }
-            }}
-          />
-        </a>
+        />
       </div>
     </footer>
   );
