@@ -146,16 +146,21 @@ const Projects = () => {
           }}
         />
         <motion.div
-          className="relative z-10 text-center text-white max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"
+          className="relative z-10 text-center text-white max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
           <motion.h1
-            className="font-instrument text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-normal mb-6 sm:mb-8 tracking-tight leading-tight"
+            className="font-instrument font-normal mb-6 sm:mb-8 tracking-tight leading-tight"
+            style={{
+              fontSize: "118px",
+              lineHeight: "128px",
+              letterSpacing: "-3.2px"
+            }}
             variants={headlineVariants}
           >
-            MPHD projects
+            MPHD Projects
           </motion.h1>
           <motion.p
             className="font-inter text-base sm:text-lg lg:text-xl leading-relaxed max-w-2xl lg:max-w-3xl mx-auto opacity-90"
