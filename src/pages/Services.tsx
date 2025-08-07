@@ -173,9 +173,12 @@ const Services = () => {
         
         {/* Form Container */}
         <div className="relative z-10 flex items-center min-h-screen p-4 md:p-8">
-          <div
+          <motion.div
             className="w-full max-w-2xl bg-white rounded-2xl p-6 md:p-8 lg:p-12 shadow-lg mx-auto"
             style={{ marginTop: "108px" }}
+            variants={formVariants}
+            initial="hidden"
+            animate="visible"
           >
             {/* Header */}
             <div className="mb-8">
@@ -260,7 +263,7 @@ const Services = () => {
                 </Button>
               </div>
             </form>
-          </div>
+          </motion.div>
         </div>
       </section>
 
