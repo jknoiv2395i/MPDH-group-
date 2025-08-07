@@ -354,14 +354,19 @@ const Services = () => {
                   <h3 className="font-instrument text-xl md:text-2xl lg:text-3xl font-normal text-gray-800 tracking-tight pr-8">
                     {item.question}
                   </h3>
-                  <div className="flex-shrink-0 w-12 h-12 bg-gray-900 rounded-full flex items-center justify-center">
-                    <svg 
-                      width="19" 
-                      height="19" 
-                      viewBox="0 0 19 19" 
-                      fill="none" 
+                  <motion.div
+                    className="flex-shrink-0 w-12 h-12 bg-gray-900 rounded-full flex items-center justify-center"
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                  >
+                    <motion.svg
+                      width="19"
+                      height="19"
+                      viewBox="0 0 19 19"
+                      fill="none"
                       xmlns="http://www.w3.org/2000/svg"
-                      className={`transition-transform duration-200 ${openFAQ === index ? 'rotate-45' : ''}`}
+                      animate={{ rotate: openFAQ === index ? 45 : 0 }}
+                      transition={{ duration: 0.3, ease: "easeInOut" }}
                     >
                       <path 
                         d="M6.12439 5.42871H13.3475V12.6518M12.8459 5.93032L5.52246 13.2538" 
@@ -370,8 +375,8 @@ const Services = () => {
                         strokeMiterlimit="10" 
                         strokeLinecap="square"
                       />
-                    </svg>
-                  </div>
+                    </motion.svg>
+                  </motion.div>
                 </motion.button>
                 {openFAQ === index && (
                   <motion.div
