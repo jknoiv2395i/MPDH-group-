@@ -345,9 +345,11 @@ const Services = () => {
                 className="border-t-2 border-blue-200"
                 variants={faqItemVariants}
               >
-                <button
+                <motion.button
                   onClick={() => toggleFAQ(index)}
                   className="w-full flex items-center justify-between py-8 text-left focus:outline-none"
+                  whileHover={{ x: 5 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 >
                   <h3 className="font-instrument text-xl md:text-2xl lg:text-3xl font-normal text-gray-800 tracking-tight pr-8">
                     {item.question}
@@ -370,7 +372,7 @@ const Services = () => {
                       />
                     </svg>
                   </div>
-                </button>
+                </motion.button>
                 {openFAQ === index && (
                   <motion.div
                     className="pb-8 pr-16"
