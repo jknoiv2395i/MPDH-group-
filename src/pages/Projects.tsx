@@ -3,6 +3,66 @@ import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 
 const Projects = () => {
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+        delayChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const headlineVariants = {
+    hidden: { opacity: 0, y: 50, scale: 0.95 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 1.2,
+        ease: [0.25, 0.25, 0.25, 1],
+        delay: 0.1,
+      },
+    },
+  };
+
+  const textVariants = {
+    hidden: {
+      opacity: 0,
+      y: 30,
+      scale: 0.95
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.8,
+        ease: [0.25, 0.46, 0.45, 0.94]
+      }
+    }
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0 }
+  };
+
   const projects = [
     {
       id: 1,
