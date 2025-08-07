@@ -403,7 +403,10 @@ const Services = () => {
             variants={containerVariants}
           >
             {/* Brand Section */}
-            <div className="lg:col-span-2">
+            <motion.div
+              className="lg:col-span-2"
+              variants={itemVariants}
+            >
               <div className="mb-8">
                 <svg className="h-8 w-auto mb-8" viewBox="0 0 108 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M26.9507 25.2651H36.0116L13.5659 2.81934H4.50488L26.9507 25.2651Z" fill="white"/>
@@ -415,10 +418,12 @@ const Services = () => {
               <p className="font-inter text-lg text-gray-300 leading-relaxed max-w-md">
                 Bring your architectural projects to life with a template that puts your work front and center.
               </p>
-            </div>
+            </motion.div>
 
             {/* Navigation Links */}
-            <div>
+            <motion.div
+              variants={itemVariants}
+            >
               <div className="space-y-4">
                 <a href="#" className="block font-inter text-white/75 hover:text-white transition-colors">Home V.1</a>
                 <a href="#" className="block font-inter text-white/75 hover:text-white transition-colors">Home V.2</a>
@@ -426,9 +431,11 @@ const Services = () => {
                 <a href="#" className="block font-inter text-white/75 hover:text-white transition-colors">Services</a>
                 <a href="#" className="block font-inter text-white/75 hover:text-white transition-colors">About Us</a>
               </div>
-            </div>
+            </motion.div>
 
-            <div>
+            <motion.div
+              variants={itemVariants}
+            >
               <div className="space-y-4">
                 <a href="#" className="block font-inter text-white/75 hover:text-white transition-colors">Contact V.1</a>
                 <a href="#" className="block font-inter text-white/75 hover:text-white transition-colors">Contact V.2</a>
@@ -436,9 +443,11 @@ const Services = () => {
                 <a href="#" className="block font-inter text-white/75 hover:text-white transition-colors">Product</a>
                 <a href="#" className="block font-inter text-white/75 hover:text-white transition-colors">Categories</a>
               </div>
-            </div>
+            </motion.div>
 
-            <div>
+            <motion.div
+              variants={itemVariants}
+            >
               <div className="space-y-4">
                 <a href="#" className="block font-inter text-white/75 hover:text-white transition-colors">Projects V.1</a>
                 <a href="#" className="block font-inter text-white/75 hover:text-white transition-colors">Projects V.2</a>
@@ -447,7 +456,7 @@ const Services = () => {
                 <a href="#" className="block font-inter text-white/75 hover:text-white transition-colors">Blogs</a>
                 <a href="#" className="block font-inter text-white/75 hover:text-white transition-colors">Inner blog</a>
               </div>
-            </div>
+            </motion.div>
           </motion.div>
 
           {/* Footer Bottom */}
