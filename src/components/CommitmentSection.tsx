@@ -115,12 +115,13 @@ const CommitmentSection = () => {
               </motion.p>
 
               {/* CTA Button */}
-              <motion.button
-                className="bg-[#131313] text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-gray-800 transition-colors"
+              <motion.a
+                href="https://bae3d00ef19341029c10c22b2986b118-460282766e5d4212bb58f5dc1.fly.dev/properties"
+                className="bg-[#131313] text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-gray-800 transition-colors cursor-pointer"
                 variants={textReveal}
               >
                 Learn more
-              </motion.button>
+              </motion.a>
 
               {/* Stats Grid */}
               <motion.div
