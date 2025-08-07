@@ -91,17 +91,19 @@ const CommitmentSection = () => {
     <>
       <section className="bg-white" style={{ paddingTop: '59px' }}>
         <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-24 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-24 items-center" style={{ marginBottom: '44px' }}>
             {/* Left Content */}
             <motion.div
               className="space-y-8"
               {...staggerChildren}
               viewport={{ once: true, margin: "-100px" }}
+              style={{ marginBottom: '-2px' }}
             >
               {/* Main Heading */}
               <motion.h2
                 className="font-instrument text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-normal text-black leading-tight tracking-tight"
                 variants={textReveal}
+                style={{ paddingBottom: '23px' }}
               >
                 With a commitment to excellence and customer satisfaction.
               </motion.h2>
@@ -110,6 +112,7 @@ const CommitmentSection = () => {
               <motion.p
                 className="text-[#5D5D5D] text-lg leading-relaxed"
                 variants={textReveal}
+                style={{ margin: '3px 0 35px' }}
               >
                 With a commitment to innovation, sustainability, and precision, we bring your ideas to life while enhancing functionality and aesthetics. Our team of dedicated architects and designers is here to turn your unique vision into a tangible masterpiece.
               </motion.p>
@@ -119,6 +122,7 @@ const CommitmentSection = () => {
                 href="https://bae3d00ef19341029c10c22b2986b118-460282766e5d4212bb58f5dc1.fly.dev/properties"
                 className="bg-[#131313] text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-gray-800 transition-colors cursor-pointer"
                 variants={textReveal}
+                style={{ padding: '13px 32px 16px' }}
               >
                 Learn more
               </motion.a>
