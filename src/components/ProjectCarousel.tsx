@@ -73,7 +73,8 @@ const ProjectCarousel = () => {
   };
 
   return (
-    <section className="bg-white pt-16 lg:pt-24">
+<section className="bg-white pt-24">
+
       <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
         {/* Mobile Carousel */}
         <div className="lg:hidden">
@@ -128,7 +129,7 @@ const ProjectCarousel = () => {
 
         {/* Desktop Grid Layout */}
         <div className="hidden lg:block relative">
-          <div className="grid grid-cols-12 gap-8 items-start">
+          <a href="https://bae3d00ef19341029c10c22b2986b118-460282766e5d4212bb58f5dc1.fly.dev/properties" className="grid grid-cols-12 gap-8 items-start cursor-pointer">
             {/* Project 1 - Large left */}
             <div className="col-span-5 space-y-6">
               <div className="rounded-2xl overflow-hidden aspect-[628/532]">
@@ -185,7 +186,7 @@ const ProjectCarousel = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </a>
 
           {/* Navigation Buttons - Desktop */}
           <div className="flex justify-center items-center gap-4 mt-12">

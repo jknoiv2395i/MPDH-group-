@@ -32,14 +32,14 @@ export function FigmaNavBar({ className }: NavBarProps) {
         {/* Logo */}
         <div className="flex items-center">
           <img
-            src="https://cdn.builder.io/api/v1/image/assets%2Feccf9e96f3f54e0db99db209e78762b2%2Fc52ba548c4974d7fbb9f4138923b5787"
+            src="https://cdn.builder.io/api/v1/image/assets%2F921ba7c35aeb45608b276bd350a50610%2Fd7c2fd863b5a4d1fb85ad73e9fc07bd1"
             alt="MPHD GROUP Real Estate Logo"
-            className="h-16 md:h-20 lg:h-24 w-auto mr-auto"
+            className="h-12 w-auto mr-auto"
           />
         </div>
 
         {/* Navigation Links - Hidden on mobile */}
-        <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
+        <nav className="hidden md:flex items-center space-x-6 lg:space-x-8 mx-auto">
           {navItems.map((item) => (
             <div
               key={item.name}
@@ -67,7 +67,7 @@ export function FigmaNavBar({ className }: NavBarProps) {
         <div className="hidden md:flex items-center">
           <a
             href="https://c81dcd8934204bc39d562f1debf9ab43-8e591c7522cc4e05a161006e3.fly.dev/services"
-            className="px-6 py-2 bg-white text-[black] rounded-full text-sm lg:text-base font-medium hover:bg-gray-50 transition-colors duration-200 sm:ml-auto cursor-pointer"
+            className="px-6 py-2 bg-white text-[black] rounded-full text-sm lg:text-base font-medium hover:bg-gray-50 transition-colors duration-200 cursor-pointer"
           >
             Contact us
           </a>
@@ -77,11 +77,21 @@ export function FigmaNavBar({ className }: NavBarProps) {
         <div className="md:hidden">
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="text-white"
+            className="relative flex flex-col items-center justify-center w-8 h-8 text-white focus:outline-none"
+            aria-label="Toggle mobile menu"
           >
-            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
+            <span className={cn(
+              "block h-0.5 w-6 bg-white rounded-full transition-all duration-300 ease-in-out",
+              isMobileMenuOpen ? "rotate-45 translate-y-1.5" : "translate-y-0"
+            )}></span>
+            <span className={cn(
+              "block h-0.5 w-6 bg-white rounded-full transition-all duration-300 ease-in-out my-1",
+              isMobileMenuOpen ? "opacity-0" : "opacity-100"
+            )}></span>
+            <span className={cn(
+              "block h-0.5 w-6 bg-white rounded-full transition-all duration-300 ease-in-out",
+              isMobileMenuOpen ? "-rotate-45 -translate-y-1.5" : "translate-y-0"
+            )}></span>
           </button>
         </div>
       </div>
