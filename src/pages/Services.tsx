@@ -202,9 +202,18 @@ const Services = () => {
             </motion.div>
 
             {/* Form */}
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <motion.form
+              onSubmit={handleSubmit}
+              className="space-y-6"
+              variants={containerVariants}
+              initial="hidden"
+              animate="visible"
+            >
               {/* Full Name */}
-              <div className="space-y-3">
+              <motion.div
+                className="space-y-3"
+                variants={itemVariants}
+              >
                 <Label htmlFor="fullName" className="font-inter text-lg text-gray-900 tracking-wide">
                   Full name
                 </Label>
@@ -216,10 +225,13 @@ const Services = () => {
                   placeholder="Your name"
                   className="h-16 rounded-2xl border-blue-200 text-lg font-inter placeholder:text-gray-400 px-5"
                 />
-              </div>
+              </motion.div>
 
               {/* Email Address */}
-              <div className="space-y-3">
+              <motion.div
+                className="space-y-3"
+                variants={itemVariants}
+              >
                 <Label htmlFor="email" className="font-inter text-lg text-gray-900 tracking-wide">
                   Email address
                 </Label>
@@ -232,10 +244,13 @@ const Services = () => {
                   placeholder="Your mail address"
                   className="h-16 rounded-2xl border-blue-200 text-lg font-inter placeholder:text-gray-400 px-5"
                 />
-              </div>
+              </motion.div>
 
               {/* Company Name */}
-              <div className="space-y-3">
+              <motion.div
+                className="space-y-3"
+                variants={itemVariants}
+              >
                 <Label htmlFor="company" className="font-inter text-lg text-gray-900 tracking-wide">
                   Company name
                 </Label>
@@ -247,10 +262,13 @@ const Services = () => {
                   placeholder="Company name"
                   className="h-16 rounded-2xl border-blue-200 text-lg font-inter placeholder:text-gray-400 px-5"
                 />
-              </div>
+              </motion.div>
 
               {/* Project Information */}
-              <div className="space-y-3">
+              <motion.div
+                className="space-y-3"
+                variants={itemVariants}
+              >
                 <Label htmlFor="projectInfo" className="font-inter text-lg text-gray-900 tracking-wide">
                   Project information
                 </Label>
@@ -262,18 +280,27 @@ const Services = () => {
                   placeholder="Example Text"
                   className="min-h-40 rounded-2xl border-blue-200 text-lg font-inter placeholder:text-gray-400 px-5 py-5 resize-none"
                 />
-              </div>
+              </motion.div>
 
               {/* Submit Button */}
-              <div className="pt-4">
-                <Button
-                  type="submit"
-                  className="bg-gray-900 hover:bg-gray-800 text-white font-inter text-lg font-medium px-8 py-4 rounded-full h-auto transition-colors"
+              <motion.div
+                className="pt-4"
+                variants={itemVariants}
+              >
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 >
-                  Submit
-                </Button>
-              </div>
-            </form>
+                  <Button
+                    type="submit"
+                    className="bg-gray-900 hover:bg-gray-800 text-white font-inter text-lg font-medium px-8 py-4 rounded-full h-auto transition-colors"
+                  >
+                    Submit
+                  </Button>
+                </motion.div>
+              </motion.div>
+            </motion.form>
           </motion.div>
         </div>
       </section>
