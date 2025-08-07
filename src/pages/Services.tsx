@@ -138,18 +138,36 @@ const Services = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white relative">
-      <FigmaNavBar />
+    <motion.div
+      className="min-h-screen bg-white relative"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+    >
+      <motion.div
+        initial={{ y: -20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+      >
+        <FigmaNavBar />
+      </motion.div>
 
       {/* Contact Form Section */}
       <section className="relative min-h-screen">
         {/* Background Image */}
-        <div
+        <motion.div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/e8013bbbc820f05a3f48efd4964535ee8fadc977?width=3810')",
             width: '1905px',
             height: '1137.88px'
+          }}
+          initial={{ opacity: 0, scale: 1.05 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 2,
+            ease: "easeOut",
+            delay: 0.5
           }}
         />
         
@@ -374,7 +392,7 @@ const Services = () => {
           </div>
         </div>
       </footer>
-    </div>
+    </motion.div>
   );
 };
 
