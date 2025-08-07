@@ -1,7 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
 import FeatureBlogsSection from "./FeatureBlogsSection";
-
 const ServicesSection = () => {
   const services = [{
     icon: <svg width="24" height="24" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -22,12 +21,16 @@ const ServicesSection = () => {
     title: "Industrial Property",
     description: "Functional design configures the industrial property to support its operational real estate purposes."
   }];
-
   const textAnimationVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 }
+    hidden: {
+      opacity: 0,
+      y: 20
+    },
+    visible: {
+      opacity: 1,
+      y: 0
+    }
   };
-
   const containerVariants = {
     hidden: {},
     visible: {
@@ -36,48 +39,41 @@ const ServicesSection = () => {
       }
     }
   };
-
   const cardVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0 }
+    hidden: {
+      opacity: 0,
+      y: 30
+    },
+    visible: {
+      opacity: 1,
+      y: 0
+    }
   };
-
-  return (
-    <>
+  return <>
       <section className="bg-white" style={{
-        paddingTop: '7px'
-      }}>
+      paddingTop: '7px'
+    }}>
         <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
-          <motion.div
-            className="mb-12 lg:mb-16"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-50px" }}
-            variants={containerVariants}
-          >
-            <motion.h2
-              className="font-instrument lg:text-5xl font-normal text-black mb-8 lg:mb-12 tracking-tight xl:text-2xl text-xl text-left"
-              variants={textAnimationVariants}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-            >
+          <motion.div className="mb-12 lg:mb-16" initial="hidden" whileInView="visible" viewport={{
+          once: true,
+          margin: "-50px"
+        }} variants={containerVariants}>
+            <motion.h2 variants={textAnimationVariants} transition={{
+            duration: 0.6,
+            ease: "easeOut"
+          }} className="font-instrument font-normal text-black mb-8 lg:mb-12 tracking-tight xl:text-2xl text-xl text-left lg:text-3xl">
               OUR SERVICES
             </motion.h2>
           </motion.div>
 
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-12 lg:mb-16"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-50px" }}
-            variants={containerVariants}
-          >
-            {services.map((service, index) =>
-              <motion.div
-                key={index}
-                className="border border-[#C3D5F1] rounded-2xl p-6 lg:p-8 h-full flex flex-col cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#3b82f6] active:bg-[#3b82f6] group"
-                variants={cardVariants}
-                transition={{ duration: 0.6, ease: "easeOut" }}
-              >
+          <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-12 lg:mb-16" initial="hidden" whileInView="visible" viewport={{
+          once: true,
+          margin: "-50px"
+        }} variants={containerVariants}>
+            {services.map((service, index) => <motion.div key={index} className="border border-[#C3D5F1] rounded-2xl p-6 lg:p-8 h-full flex flex-col cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#3b82f6] active:bg-[#3b82f6] group" variants={cardVariants} transition={{
+            duration: 0.6,
+            ease: "easeOut"
+          }}>
                 <div className="w-16 h-16 bg-[#071839] group-hover:bg-white group-active:bg-white text-white group-hover:text-[#3b82f6] group-active:text-[#3b82f6] rounded-full flex items-center justify-center mb-6 lg:mb-8 transition-colors duration-300">
                   {service.icon}
                 </div>
@@ -96,40 +92,33 @@ const ServicesSection = () => {
                   <span>Learn more</span>
                   <ArrowUpRight className="w-4 h-4 lg:w-5 lg:h-5" />
                 </div>
-              </motion.div>
-            )}
+              </motion.div>)}
           </motion.div>
 
-          <motion.div
-            className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-50px" }}
-            variants={containerVariants}
-          >
-            <motion.p
-              className="text-[#5D5D5D] text-base lg:text-lg leading-relaxed max-w-xl"
-              variants={textAnimationVariants}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-            >
+          <motion.div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8" initial="hidden" whileInView="visible" viewport={{
+          once: true,
+          margin: "-50px"
+        }} variants={containerVariants}>
+            <motion.p className="text-[#5D5D5D] text-base lg:text-lg leading-relaxed max-w-xl" variants={textAnimationVariants} transition={{
+            duration: 0.6,
+            ease: "easeOut"
+          }}>
               Whether you're looking for your dream home, selling a property,
               or seeking investment opportunities, our expert team is here to
               assist you every step of the way.
             </motion.p>
 
-            <motion.a
-              href="https://bae3d00ef19341029c10c22b2986b118-460282766e5d4212bb58f5dc1.fly.dev/properties"
-              className="bg-[#131313] text-white px-8 py-4 rounded-full text-base lg:text-lg font-medium hover:bg-gray-800 transition-colors self-start lg:self-auto cursor-pointer"
-              variants={textAnimationVariants}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-            >
+            <motion.a href="https://bae3d00ef19341029c10c22b2986b118-460282766e5d4212bb58f5dc1.fly.dev/properties" className="bg-[#131313] text-white px-8 py-4 rounded-full text-base lg:text-lg font-medium hover:bg-gray-800 transition-colors self-start lg:self-auto cursor-pointer" variants={textAnimationVariants} transition={{
+            duration: 0.6,
+            ease: "easeOut",
+            delay: 0.1
+          }}>
               View all
             </motion.a>
           </motion.div>
         </div>
       </section>
       <FeatureBlogsSection />
-    </>
-  );
+    </>;
 };
 export default ServicesSection;
