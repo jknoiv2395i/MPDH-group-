@@ -100,21 +100,39 @@ const Projects = () => {
 
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div 
+        <motion.div
+          initial={{ opacity: 0, scale: 1.05 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 2,
+            ease: "easeOut",
+            delay: 0.5
+          }}
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/85ba31e9405bf31242094298c176c337fe1a8e33?width=3810')"
           }}
         />
-        <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="font-instrument text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-normal mb-6 sm:mb-8 tracking-tight leading-tight">
+        <motion.div
+          className="relative z-10 text-center text-white max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <motion.h1
+            className="font-instrument text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-normal mb-6 sm:mb-8 tracking-tight leading-tight"
+            variants={headlineVariants}
+          >
             MPHD projects
-          </h1>
-          <p className="font-inter text-base sm:text-lg lg:text-xl leading-relaxed max-w-2xl lg:max-w-3xl mx-auto opacity-90">
+          </motion.h1>
+          <motion.p
+            className="font-inter text-base sm:text-lg lg:text-xl leading-relaxed max-w-2xl lg:max-w-3xl mx-auto opacity-90"
+            variants={itemVariants}
+          >
             Bring your architectural projects to life with a template that puts your work front and
             center. Simple, elegant, and made for creators like you.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
       </section>
 
       {/* Stats Section */}
