@@ -83,6 +83,14 @@ const Footer = () => {
             src="https://cdn.builder.io/api/v1/image/assets%2F371acd9a25a7494cb5e15d62a5f4d89c%2F7c93f3751ffe4a61ab3d8596cafee3ca"
             alt="Location map"
             className="w-full h-auto object-cover"
+            style={{
+              "@media (max-width: 640px)": {
+                marginTop: "9px",
+                paddingBottom: "22px",
+                fontSize: "32px",
+                fontWeight: "600",
+              }
+            }}
           />
         </a>
       </div>
