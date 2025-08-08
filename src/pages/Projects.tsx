@@ -156,11 +156,15 @@ const Projects = () => {
             style={{
               fontSize: "118px",
               lineHeight: "128px",
-              letterSpacing: "-3.2px"
+              letterSpacing: "-3.2px",
+              "@media (max-width: 640px)": {
+                fontSize: "52px",
+                lineHeight: "100px",
+              }
             }}
             variants={headlineVariants}
           >
-            MPHD Projects
+            MPHD&nbsp; Projects
           </motion.h1>
           <motion.p
             className="font-inter text-base sm:text-lg lg:text-xl leading-relaxed max-w-2xl lg:max-w-3xl mx-auto opacity-90"
