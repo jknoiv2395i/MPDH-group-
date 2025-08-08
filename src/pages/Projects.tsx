@@ -158,8 +158,8 @@ const Projects = () => {
               lineHeight: "128px",
               letterSpacing: "-3.2px",
               "@media (max-width: 640px)": {
-                fontSize: "52px",
-                lineHeight: "100px",
+                fontSize: "50px",
+                lineHeight: "50px",
               }
             }}
             variants={headlineVariants}
@@ -168,6 +168,11 @@ const Projects = () => {
           </motion.h1>
           <motion.p
             className="font-inter text-base sm:text-lg lg:text-xl leading-relaxed max-w-2xl lg:max-w-3xl mx-auto opacity-90"
+            style={{
+              "@media (max-width: 640px)": {
+                marginBottom: "124px",
+              }
+            }}
             variants={itemVariants}
           >
             Bring your architectural projects to life with a template that puts your work front and
