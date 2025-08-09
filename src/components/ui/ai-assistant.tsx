@@ -383,13 +383,6 @@ export function AIAssistant({ className }: AIAssistantProps) {
 
   return (
     <div className={cn("relative", className)}>
-      {/* Voice Speaking Indicator */}
-      {isSpeaking && (
-        <div className="absolute -top-8 right-0 bg-red-500 text-white px-3 py-1 rounded-full text-xs animate-pulse z-50">
-          🎤 Speaking...
-        </div>
-      )}
-
       {/* Chat Toggle Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
