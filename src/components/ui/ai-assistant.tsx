@@ -369,15 +369,41 @@ export function AIAssistant({ className }: AIAssistantProps) {
     }
   }
 
+  const quickActions = [
+    { text: "Services ke baare mein batayiye", query: "services" },
+    { text: "Legal help chahiye", query: "legal services" },
+    { text: "Property rent karna hai", query: "rent" },
+    { text: "Free consultation book karein", query: "consultation" }
+  ]
+
+  const handleQuickAction = (query: string) => {
+    setCurrentMessage(query)
+    setTimeout(() => sendMessage(), 100)
+  }
+
   return (
     <div className={cn("relative", className)}>
+      {/* Voice Speaking Indicator */}
+      {isSpeaking && (
+        <div className="absolute -top-8 right-0 bg-red-500 text-white px-3 py-1 rounded-full text-xs animate-pulse z-50">
+          🎤 Speaking...
+        </div>
+      )}
+
       {/* Chat Toggle Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center space-x-2 px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white hover:bg-white/20 transition-all duration-200"
+        className={cn(
+          "flex items-center space-x-2 px-4 py-2 backdrop-blur-sm border rounded-full text-white transition-all duration-200",
+          isSpeaking
+            ? "bg-red-500/20 border-red-400/40 animate-pulse"
+            : "bg-white/10 border-white/20 hover:bg-white/20"
+        )}
       >
         <MessageCircle className="h-5 w-5" />
-        <span className="hidden sm:inline text-sm">AI Assistant</span>
+        <span className="hidden sm:inline text-sm">
+          {isSpeaking ? "Speaking..." : "AI Assistant"}
+        </span>
       </button>
 
       {/* Chat Window */}
@@ -451,6 +477,23 @@ export function AIAssistant({ className }: AIAssistantProps) {
             <div ref={messagesEndRef} />
           </div>
 
+          {/* Quick Actions */}
+          <div className="p-3 border-t border-gray-100 bg-gray-50">
+            <p className="text-xs text-gray-600 mb-2">Quick Actions:</p>
+            <div className="grid grid-cols-2 gap-2">
+              {quickActions.map((action, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleQuickAction(action.query)}
+                  className="text-xs p-2 bg-blue-100 text-blue-700 rounded-md hover:bg-blue-200 transition-colors"
+                  disabled={isSpeaking}
+                >
+                  {action.text}
+                </button>
+              ))}
+            </div>
+          </div>
+
           {/* Input */}
           <div className="p-4 border-t border-gray-200">
             <div className="flex items-center space-x-2">
@@ -462,25 +505,29 @@ export function AIAssistant({ className }: AIAssistantProps) {
                   placeholder="Apna sawal likhiye..."
                   className="w-full p-2 border border-gray-300 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-blue-500 text-black"
                   rows={1}
+                  disabled={isSpeaking}
                 />
               </div>
-              
+
               <button
                 onClick={isListening ? stopListening : startListening}
                 className={cn(
                   "p-2 rounded-lg transition-colors",
-                  isListening 
-                    ? "bg-red-500 text-white" 
+                  isListening
+                    ? "bg-red-500 text-white"
                     : "bg-gray-200 text-gray-600 hover:bg-gray-300"
                 )}
+                disabled={isSpeaking}
+                title={isListening ? "Stop listening" : "Start voice input"}
               >
                 {isListening ? <MicOff className="h-5 w-5" /> : <Mic className="h-5 w-5" />}
               </button>
-              
+
               <button
                 onClick={sendMessage}
-                disabled={!currentMessage.trim()}
+                disabled={!currentMessage.trim() || isSpeaking}
                 className="p-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
+                title="Send message"
               >
                 <Send className="h-5 w-5" />
               </button>
