@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { ChevronDown } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { AIAssistant } from "./ai-assistant"
 
 interface NavItem {
   name: string
@@ -63,8 +64,9 @@ export function FigmaNavBar({ className }: NavBarProps) {
           ))}
         </nav>
 
-        {/* Contact Us Button */}
-        <div className="hidden md:flex items-center">
+        {/* AI Assistant and Contact Us Button */}
+        <div className="hidden md:flex items-center space-x-4">
+          <AIAssistant />
           <a
             href="https://c81dcd8934204bc39d562f1debf9ab43-8e591c7522cc4e05a161006e3.fly.dev/services"
             className="px-6 py-2 bg-white text-[black] rounded-full text-sm lg:text-base font-medium hover:bg-gray-50 transition-colors duration-200 cursor-pointer"
@@ -113,13 +115,18 @@ export function FigmaNavBar({ className }: NavBarProps) {
                 )}
               </a>
             ))}
-            <a
-              href="/contact"
-              className="block text-white/80 hover:text-white transition-colors duration-200 py-2 border-t border-white/10 mt-3 pt-3"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Contact us
-            </a>
+            <div className="border-t border-white/10 mt-3 pt-3 space-y-3">
+              <div className="flex justify-center">
+                <AIAssistant />
+              </div>
+              <a
+                href="/contact"
+                className="block text-white/80 hover:text-white transition-colors duration-200 py-2 text-center"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Contact us
+              </a>
+            </div>
           </nav>
         </div>
       )}
