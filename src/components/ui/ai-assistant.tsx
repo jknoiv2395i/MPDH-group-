@@ -146,9 +146,13 @@ export function AIAssistant({ className }: AIAssistantProps) {
   const [currentMessage, setCurrentMessage] = useState('')
   const [isListening, setIsListening] = useState(false)
   const [isSpeaking, setIsSpeaking] = useState(false)
+  const [hasGreeted, setHasGreeted] = useState(false)
+  const [lastInteraction, setLastInteraction] = useState(Date.now())
+  const [isAutoSpeakEnabled, setIsAutoSpeakEnabled] = useState(true)
   const [recognition, setRecognition] = useState<SpeechRecognition | null>(null)
   const [synthesis] = useState(window.speechSynthesis)
   const messagesEndRef = useRef<HTMLDivElement>(null)
+  const proactiveTimerRef = useRef<NodeJS.Timeout | null>(null)
 
   useEffect(() => {
     if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
@@ -179,6 +183,75 @@ export function AIAssistant({ className }: AIAssistantProps) {
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
   }, [messages])
+
+  // Auto-greet visitors when component mounts
+  useEffect(() => {
+    if (!hasGreeted && isAutoSpeakEnabled) {
+      const greetingTimer = setTimeout(() => {
+        const welcomeMessage = "Namaste! Main MPHD Group ki AI assistant hoon. Aap real estate ya property ke baare mein kuch bhi pooch sakte hain. Main voice aur text dono mein aapki madad kar sakti hoon!"
+        speakText(welcomeMessage)
+        setHasGreeted(true)
+      }, 2000) // Greet after 2 seconds
+
+      return () => clearTimeout(greetingTimer)
+    }
+  }, [hasGreeted, isAutoSpeakEnabled])
+
+  // Proactive assistance
+  useEffect(() => {
+    const checkForProactiveHelp = () => {
+      const timeSinceLastInteraction = Date.now() - lastInteraction
+
+      if (timeSinceLastInteraction > 30000 && !isSpeaking && hasGreeted) { // 30 seconds
+        const proactiveMessages = [
+          "Kya main aapko koi property related jaankari de sakti hoon?",
+          "MPHD Group ki services ke baare mein jaanna chahte hain?",
+          "Legal documentation ya property buying mein koi help chahiye?",
+          "Free consultation call book karna chahte hain?"
+        ]
+
+        const randomMessage = proactiveMessages[Math.floor(Math.random() * proactiveMessages.length)]
+
+        const proactiveMessage: Message = {
+          id: Date.now().toString(),
+          text: randomMessage,
+          sender: 'assistant',
+          timestamp: new Date()
+        }
+
+        setMessages(prev => [...prev, proactiveMessage])
+        if (isAutoSpeakEnabled) {
+          speakText(randomMessage)
+        }
+        setLastInteraction(Date.now())
+      }
+    }
+
+    proactiveTimerRef.current = setInterval(checkForProactiveHelp, 10000) // Check every 10 seconds
+
+    return () => {
+      if (proactiveTimerRef.current) {
+        clearInterval(proactiveTimerRef.current)
+      }
+    }
+  }, [lastInteraction, isSpeaking, hasGreeted, isAutoSpeakEnabled])
+
+  // Update last interaction time on user activity
+  useEffect(() => {
+    const handleUserActivity = () => {
+      setLastInteraction(Date.now())
+    }
+
+    document.addEventListener('mousemove', handleUserActivity)
+    document.addEventListener('keypress', handleUserActivity)
+    document.addEventListener('click', handleUserActivity)
+
+    return () => {
+      document.removeEventListener('mousemove', handleUserActivity)
+      document.removeEventListener('keypress', handleUserActivity)
+      document.removeEventListener('click', handleUserActivity)
+    }
+  }, [])
 
   const startListening = () => {
     if (recognition) {
@@ -282,8 +355,11 @@ export function AIAssistant({ className }: AIAssistantProps) {
     }
 
     setMessages(prev => [...prev, userMessage, assistantMessage])
-    speakText(assistantResponse)
+    if (isAutoSpeakEnabled) {
+      speakText(assistantResponse)
+    }
     setCurrentMessage('')
+    setLastInteraction(Date.now())
   }
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
@@ -310,15 +386,31 @@ export function AIAssistant({ className }: AIAssistantProps) {
           {/* Header */}
           <div className="flex items-center justify-between p-4 border-b border-gray-200 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-t-lg">
             <div className="flex items-center space-x-2">
-              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+              <div className={cn(
+                "w-2 h-2 rounded-full",
+                isSpeaking ? "bg-red-400 animate-pulse" : "bg-green-400 animate-pulse"
+              )}></div>
               <h3 className="font-semibold">MPHD AI Assistant</h3>
+              {isSpeaking && <span className="text-xs">Speaking...</span>}
             </div>
-            <button
-              onClick={() => setIsOpen(false)}
-              className="text-white/80 hover:text-white"
-            >
-              <X className="h-5 w-5" />
-            </button>
+            <div className="flex items-center space-x-2">
+              <button
+                onClick={() => setIsAutoSpeakEnabled(!isAutoSpeakEnabled)}
+                className={cn(
+                  "p-1 rounded text-xs",
+                  isAutoSpeakEnabled ? "bg-green-500" : "bg-gray-500"
+                )}
+                title={isAutoSpeakEnabled ? "Voice On" : "Voice Off"}
+              >
+                <Volume2 className="h-3 w-3" />
+              </button>
+              <button
+                onClick={() => setIsOpen(false)}
+                className="text-white/80 hover:text-white"
+              >
+                <X className="h-5 w-5" />
+              </button>
+            </div>
           </div>
 
           {/* Messages */}
@@ -343,8 +435,12 @@ export function AIAssistant({ className }: AIAssistantProps) {
                   {message.sender === 'assistant' && (
                     <button
                       onClick={() => speakText(message.text)}
-                      className="mt-2 text-gray-600 hover:text-gray-800"
+                      className={cn(
+                        "mt-2 hover:text-gray-800 transition-colors",
+                        isSpeaking ? "text-red-600" : "text-gray-600"
+                      )}
                       disabled={isSpeaking}
+                      title="Replay message"
                     >
                       <Volume2 className="h-4 w-4" />
                     </button>
