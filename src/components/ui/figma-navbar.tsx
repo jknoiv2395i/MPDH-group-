@@ -66,7 +66,7 @@ export function FigmaNavBar({ className }: NavBarProps) {
 
         {/* AI Assistant and Contact Us Button */}
         <div className="hidden md:flex items-center space-x-4">
-          <AIAssistant />
+          <AIAssistantButton />
           <a
             href="https://c81dcd8934204bc39d562f1debf9ab43-8e591c7522cc4e05a161006e3.fly.dev/services"
             className="px-6 py-2 bg-white text-[black] rounded-full text-sm lg:text-base font-medium hover:bg-gray-50 transition-colors duration-200 cursor-pointer"
@@ -117,7 +117,7 @@ export function FigmaNavBar({ className }: NavBarProps) {
             ))}
             <div className="border-t border-white/10 mt-3 pt-3 space-y-3">
               <div className="flex justify-center">
-                <AIAssistant />
+                <AIAssistantButton />
               </div>
               <a
                 href="/contact"
