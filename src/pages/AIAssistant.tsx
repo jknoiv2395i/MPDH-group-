@@ -1,5 +1,6 @@
 import React from "react";
 import AIMessageBar from "@/components/ui/ai-assistant";
+import { Component as BgGradient } from "@/components/ui/bg-gradient";
 import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
@@ -7,7 +8,14 @@ const AIAssistantPage = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-indigo-950 to-slate-900 p-4 flex flex-col">
+    <div className="min-h-screen relative p-4 flex flex-col">
+      <BgGradient
+        gradientFrom="#1e1b4b"
+        gradientTo="#0f0a19"
+        gradientSize="150% 150%"
+        gradientPosition="50% 20%"
+        gradientStop="30%"
+      />
       {/* Header */}
       <div className="max-w-4xl mx-auto w-full mb-8">
         <button
