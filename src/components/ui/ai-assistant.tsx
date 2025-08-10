@@ -176,3 +176,4 @@ const AIMessageBar = () => {
 };
 
 export default AIMessageBar;
+export { AIMessageBar };
