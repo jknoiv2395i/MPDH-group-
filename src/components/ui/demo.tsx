@@ -1,12 +1,11 @@
-import { GradientBars } from "@/components/ui/bg-bars";
+import { HandWrittenTitle } from "@/components/ui/hand-writing-text"
 
-export default function DemoOne() {
-   return (
-    <div className="flex h-full w-full flex-col items-center justify-center">
-      <GradientBars />
-    </div>
-  );
+
+function HandWrittenTitleDemo() {
+    return <HandWrittenTitle title="Kokonut UI" subtitle="Optional subtitle" />
 }
+
+export { HandWrittenTitleDemo }
 
 interface VoiceChatProps {
   onStart?: () => void;

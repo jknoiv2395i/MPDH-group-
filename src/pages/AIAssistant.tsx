@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import AIMessageBar from "@/components/ui/ai-assistant";
 import { VoiceChat } from "@/components/ui/ia-siri-chat";
 import { GradientBars } from "@/components/ui/bg-bars";
+import { HandWrittenTitle } from "@/components/ui/hand-writing-text";
 import { ArrowLeft, MessageCircle, Mic } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { cn } from "@/lib/utils";
@@ -27,22 +28,19 @@ const AIAssistantPage = () => {
         </button>
 
         <div className="text-center mb-8">
-          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Smart AI Assistant
-          </h1>
-          <p className="text-indigo-200 text-lg max-w-2xl mx-auto mb-8">
-            Interact with an intelligent assistant that understands your queries and provides instant responses.
-          </p>
+          <HandWrittenTitle
+            title="SMART AI ASSISTANT"
+          />
 
           {/* Tab Navigation */}
-          <div className="flex justify-center">
+          <div className="flex justify-center mt-20 ml-1">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-1 flex space-x-1">
               <button
                 onClick={() => setActiveTab("text")}
                 className={cn(
                   "flex items-center space-x-2 px-6 py-3 rounded-md transition-all duration-200",
                   activeTab === "text"
-                    ? "bg-indigo-600 text-white shadow-lg"
+                    ? "bg-[#441c88] text-white shadow-lg"
                     : "text-indigo-200 hover:text-white hover:bg-white/10"
                 )}
               >
@@ -54,7 +52,7 @@ const AIAssistantPage = () => {
                 className={cn(
                   "flex items-center space-x-2 px-6 py-3 rounded-md transition-all duration-200",
                   activeTab === "voice"
-                    ? "bg-indigo-600 text-white shadow-lg"
+                    ? "bg-[#441c88] text-white shadow-lg"
                     : "text-indigo-200 hover:text-white hover:bg-white/10"
                 )}
               >
