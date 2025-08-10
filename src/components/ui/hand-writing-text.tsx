@@ -46,30 +46,18 @@ function HandWrittenTitle({
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         variants={draw}
-                        className="text-black dark:text-white opacity-90"
+                        className="text-white opacity-90"
                     />
                 </motion.svg>
             </div>
-            <div className="relative text-center z-10 flex flex-col items-center justify-center">
-                <motion.h1
-                    className="text-4xl md:text-6xl text-black dark:text-white tracking-tighter flex items-center gap-2"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.5, duration: 0.8 }}
-                >
-                    {title}
-                </motion.h1>
-                {subtitle && (
-                    <motion.p
-                        className="text-xl text-black/80 dark:text-white/80"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 1, duration: 0.8 }}
-                    >
-                        {subtitle}
-                    </motion.p>
-                )}
-            </div>
+            <motion.div
+                className="relative z-10 text-white text-[45px] font-normal gap-2 tracking-[-3px] leading-[60px] pl-5"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5, duration: 0.8 }}
+            >
+                {title}
+            </motion.div>
         </div>
     );
 }

@@ -14,7 +14,7 @@ export const GradientBars = ({
   const gradientStyle = `linear-gradient(to top, ${colors.join(', ')})`;
   return (
     <div className="absolute inset-0 z-0 overflow-hidden">
-      <div className="flex h-full w-full">
+      <div className="flex h-full w-full text-white">
         {Array.from({ length: bars }).map((_, index) => {
           const position = index / (bars - 1);
           const center = 0.5;
