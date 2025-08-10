@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { ChevronDown } from "lucide-react"
 import { cn } from "@/lib/utils"
-import { AIAssistant } from "./ai-assistant"
+import { AIAssistantButton } from "./ai-assistant-button"
 
 interface NavItem {
   name: string
