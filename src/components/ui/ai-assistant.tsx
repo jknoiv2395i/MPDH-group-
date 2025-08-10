@@ -55,7 +55,7 @@ const AIMessageBar = () => {
   return (
     <div className="w-full max-w-xl mx-auto h-[600px] bg-gradient-to-br from-slate-900 to-indigo-950 rounded-xl overflow-hidden shadow-2xl border border-indigo-500/20">
       {/* Header */}
-      <div className="bg-indigo-600/30 backdrop-blur-sm p-4 border-b border-indigo-500/30 flex justify-between items-center">
+      <div className="bg-[#382257] backdrop-blur-sm p-4 border-b border-indigo-500/30 flex justify-between items-center">
         <div className="flex items-center space-x-2">
           <Sparkles className="text-indigo-300 h-5 w-5" />
           <h2 className="text-white font-medium">AI Assistant</h2>
