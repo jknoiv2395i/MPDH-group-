@@ -1,9 +1,12 @@
-"use client";
+import { GradientBars } from "@/components/ui/bg-bars";
 
-import { Mic, MicOff, Volume2, VolumeX, Sparkles, Loader2 } from "lucide-react";
-import { useState, useEffect, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { cn } from "@/lib/utils";
+export default function DemoOne() {
+   return (
+    <div className="flex h-full w-full flex-col items-center justify-center">
+      <GradientBars />
+    </div>
+  );
+}
 
 interface VoiceChatProps {
   onStart?: () => void;

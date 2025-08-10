@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import AIMessageBar from "@/components/ui/ai-assistant";
 import { VoiceChat } from "@/components/ui/ia-siri-chat";
-import { Component as BgGradient } from "@/components/ui/bg-gradient";
+import { GradientBars } from "@/components/ui/bg-bars";
 import { ArrowLeft, MessageCircle, Mic } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { cn } from "@/lib/utils";
@@ -11,13 +11,10 @@ const AIAssistantPage = () => {
   const [activeTab, setActiveTab] = useState<"text" | "voice">("text");
 
   return (
-    <div className="min-h-screen relative p-4 flex flex-col">
-      <BgGradient
-        gradientFrom="#1e1b4b"
-        gradientTo="#0f0a19"
-        gradientSize="150% 150%"
-        gradientPosition="50% 20%"
-        gradientStop="30%"
+    <div className="min-h-screen relative p-4 flex flex-col bg-slate-900">
+      <GradientBars
+        bars={25}
+        colors={['#4c1d95', '#1e1b4b', 'transparent']}
       />
       {/* Header */}
       <div className="max-w-4xl mx-auto w-full mb-8 relative z-10">
