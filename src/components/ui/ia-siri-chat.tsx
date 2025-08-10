@@ -87,13 +87,13 @@ export function VoiceChat({
     if (isListening) {
       intervalRef.current = setInterval(() => {
         setDuration(prev => prev + 1);
-
+        
         // Simulate audio waveform
-        const newWaveform = Array(32).fill(0).map(() =>
+        const newWaveform = Array(32).fill(0).map(() => 
           Math.random() * (isListening ? 100 : 20)
         );
         setWaveformData(newWaveform);
-
+        
         // Simulate volume changes
         const newVolume = Math.random() * 100;
         setVolume(newVolume);
@@ -122,26 +122,26 @@ export function VoiceChat({
       // Start listening
       setIsListening(true);
       onStart?.();
-
+      
       await new Promise(resolve => setTimeout(resolve, 3000));
-
+      
       // Stop listening and start processing
       setIsListening(false);
       setIsProcessing(true);
       onStop?.(duration);
-
+      
       await new Promise(resolve => setTimeout(resolve, 2000));
-
+      
       // Start speaking response
       setIsProcessing(false);
       setIsSpeaking(true);
-
+      
       await new Promise(resolve => setTimeout(resolve, 4000));
-
+      
       // Reset
       setIsSpeaking(false);
       setDuration(0);
-
+      
       // Repeat demo
       setTimeout(demoSequence, 2000);
     };
@@ -152,7 +152,7 @@ export function VoiceChat({
 
   const handleToggleListening = () => {
     if (demoMode) return;
-
+    
     if (isListening) {
       setIsListening(false);
       onStop?.(duration);
@@ -242,7 +242,7 @@ export function VoiceChat({
               "border-border hover:border-primary/50"
             )}
             animate={{
-              boxShadow: isListening
+              boxShadow: isListening 
                 ? ["0 0 0 0 rgba(59, 130, 246, 0.4)", "0 0 0 20px rgba(59, 130, 246, 0)"]
                 : undefined
             }}
@@ -358,7 +358,7 @@ export function VoiceChat({
           >
             {getStatusText()}
           </motion.p>
-
+          
           <p className="text-sm text-muted-foreground font-mono">
             {formatTime(duration)}
           </p>
