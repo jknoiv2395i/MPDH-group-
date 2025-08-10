@@ -208,23 +208,7 @@ export function VoiceChat({
         ))}
       </div>
 
-      {/* Background glow effects */}
-      <div className="absolute inset-0 flex items-center justify-center">
-        <motion.div
-          className="w-96 h-96 rounded-full bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 blur-3xl"
-          animate={{
-            scale: isListening ? [1, 1.2, 1] : [1, 1.1, 1],
-            opacity: isListening ? [0.3, 0.6, 0.3] : [0.1, 0.2, 0.1]
-          }}
-          transition={{
-            duration: 2,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-      </div>
-
-      <div className="relative z-10 flex flex-col items-center space-y-8">
+      <div className="relative z-10 flex flex-col items-center space-y-8 mx-auto mb-48">
         {/* Main voice button */}
         <motion.div
           className="relative"
@@ -395,6 +379,22 @@ export function VoiceChat({
           <Sparkles className="w-4 h-4" />
           <span>AI Voice Assistant</span>
         </motion.div>
+      </div>
+
+      {/* Background glow effects */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <motion.div
+          className="w-96 h-[522px] rounded-full bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 blur-3xl"
+          animate={{
+            scale: isListening ? [1, 1.2, 1] : [1, 1.1, 1],
+            opacity: isListening ? [0.3, 0.6, 0.3] : [0.1, 0.2, 0.1]
+          }}
+          transition={{
+            duration: 2,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
       </div>
     </div>
   );
