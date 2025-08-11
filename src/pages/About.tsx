@@ -231,7 +231,6 @@ const About = () => {
             backgroundImage: 'url(https://api.builder.io/api/v1/image/assets/TEMP/880d01e46aa3064123bdf5adda602e00b9417ef7?width=3810)'
           }}
         />
-        <div className="absolute inset-0 bg-black/40" />
 
         <div className="relative max-w-7xl mx-auto">
           <div className="max-w-2xl">
