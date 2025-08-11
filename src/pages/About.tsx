@@ -140,7 +140,7 @@ const About = () => {
       </section>
 
       {/* Company Description Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
           <p className="text-lg text-gray-600 mb-8">Our sustainability journey</p>
           <div className="mb-12">
