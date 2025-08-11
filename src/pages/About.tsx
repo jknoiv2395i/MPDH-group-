@@ -57,42 +57,9 @@ const About = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation Bar */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-navbar border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
-            {/* Logo */}
-            <div className="flex items-center">
-              <svg width="107" height="27" viewBox="0 0 108 28" fill="none" className="h-7">
-                <path d="M27.1753 25.0249H36.2362L13.7905 2.5791H4.72949L27.1753 25.0249Z" fill="#131313"/>
-                <path d="M18.4531 2.5791L40.0905 24.2164V2.5791H34.235V9.41041L27.4037 2.5791H18.4531Z" fill="#131313"/>
-                <path d="M0.94043 3.33203V25.0264H6.79586V18.195L13.6271 25.0264H22.6348L0.94043 3.33203Z" fill="#131313"/>
-                <path d="M56.3555 21.7345H54.2627L60.3156 5.25H62.3762L68.4291 21.7345H66.3363L61.4102 7.85789H61.2815L56.3555 21.7345ZM57.1282 15.2953H65.5636V17.066H57.1282V15.2953ZM72.1854 5.25V21.7345H70.2859V5.25H72.1854ZM80.5881 9.37112V10.9809H74.181V9.37112H80.5881ZM76.0484 6.40906H77.9479V18.1929C77.9479 18.7295 78.0258 19.132 78.1814 19.4002C78.3424 19.6631 78.5463 19.8403 78.7932 19.9315C79.0453 20.0173 79.311 20.0602 79.59 20.0602C79.7993 20.0602 79.971 20.0496 80.1052 20.0281C80.2393 20.0012 80.3466 19.9798 80.427 19.9637L80.8135 21.6701C80.6847 21.7184 80.5049 21.7667 80.2742 21.8149C80.0434 21.8687 79.751 21.8954 79.3969 21.8954C78.8603 21.8954 78.3344 21.78 77.8192 21.5493C77.3094 21.3186 76.8855 20.9671 76.5475 20.4949C76.2148 20.0227 76.0484 19.4271 76.0484 18.708V6.40906ZM90.7837 16.6797V9.37112H92.6832V21.7345H90.7837V19.6417H90.6549C90.3652 20.2696 89.9144 20.8035 89.3027 21.2435C88.6909 21.6782 87.9182 21.8954 86.9845 21.8954C86.2118 21.8954 85.5249 21.7264 84.9239 21.3884C84.3229 21.045 83.8508 20.5298 83.5073 19.843C83.1639 19.1508 82.9922 18.2788 82.9922 17.227V9.37112H84.8917V17.0982C84.8917 17.9997 85.144 18.7187 85.6483 19.2554C86.1582 19.792 86.8075 20.0602 87.5962 20.0602C88.0685 20.0602 88.5487 19.9395 89.037 19.698C89.5307 19.4566 89.9439 19.0864 90.2766 18.5873C90.6146 18.0883 90.7837 17.4524 90.7837 16.6797ZM95.355 21.7345V20.2857L102.374 11.2707V11.1419H95.5804V9.37112H104.821V10.8843L97.995 19.8349V19.9637H105.046V21.7345H95.355Z" fill="#131313"/>
-              </svg>
-            </div>
-
-            {/* Navigation Links */}
-            <div className="hidden md:flex items-center space-x-8">
-              <a href="/" className="text-gray-600 hover:text-gray-900 transition-colors">Home V.1</a>
-              <a href="/contact" className="text-gray-600 hover:text-gray-900 transition-colors">Contact V.1</a>
-              <a href="/projects" className="text-gray-600 hover:text-gray-900 transition-colors">Projects V.1</a>
-              <div className="flex items-center space-x-2 text-gray-600 hover:text-gray-900 transition-colors">
-                <span>Pages</span>
-                <svg width="20" height="19" viewBox="0 0 20 19" fill="none">
-                  <path d="M15.3037 5.60352L10.4346 10.4727L5.54785 5.60352L3.93066 7.2207L10.417 14.041L16.9209 7.2207L15.3037 5.60352Z" fill="currentColor"/>
-                </svg>
-              </div>
-            </div>
-
-            {/* Cart and Contact Button */}
-            <div className="flex items-center space-x-6">
-              <span className="text-gray-600">Cart (0)</span>
-              <button className="bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800 transition-colors">
-                Contact us
-              </button>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <div style={{ backgroundColor: 'rgba(30, 156, 232, 1)' }}>
+        <FigmaNavBar />
+      </div>
 
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
