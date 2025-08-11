@@ -64,10 +64,11 @@ const About = () => {
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="font-instrument text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-normal leading-tight text-black mb-6 tracking-tight">
-            About The Great History of MPHD group
+          <h1 className="font-instrument text-7xl xl:text-8xl font-normal leading-tight text-black mb-6 tracking-tight text-left ml-12">
+            <p>About The Great</p>
+            <p>History of MPHD group</p>
           </h1>
-          <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
             We are passionate about creating inspiring, attention-grabbing, and enduring spaces that adapt to innovation.
           </p>
           <button className="inline-flex items-center bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 transition-colors group">
