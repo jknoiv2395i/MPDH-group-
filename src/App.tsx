@@ -8,6 +8,7 @@ import Contact from "./pages/Contact";
 import Landing from "./pages/Landing";
 import Services from "./pages/Services";
 import Projects from "./pages/Projects";
+import About from "./pages/About";
 import AIAssistantPage from "./pages/AIAssistant";
 import NotFound from "./pages/NotFound";
 
