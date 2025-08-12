@@ -61,38 +61,19 @@ const About = () => {
         <FigmaNavBar />
       </div>
 
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="font-instrument text-7xl xl:text-8xl font-normal leading-tight text-black mb-6 tracking-tight text-left ml-12">
-            <p>About The Great</p>
-            <p>History of MPHD group</p>
-          </h1>
-          <p className="text-base text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-            We are passionate about creating inspiring, attention-grabbing, and enduring spaces that adapt to innovation.
-          </p>
-          <button className="inline-flex items-center bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 transition-colors group">
-            <span className="mr-3">Get started</span>
-            <div className="bg-white rounded-full p-3">
-              <ArrowUpRight className="w-4 h-4 text-black" />
-            </div>
-          </button>
-        </div>
-      </section>
-
       {/* Hero Image */}
       <section className="px-4 sm:px-6 lg:px-8 mb-20">
         <div className="max-w-7xl mx-auto">
           <img
             src="https://api.builder.io/api/v1/image/assets/TEMP/c2a63b43ccbb9770ff76043a4b8e214f6d535e46?width=3810"
             alt="Modern architectural building"
-            className="w-full h-[400px] sm:h-[500px] lg:h-[600px] object-cover rounded-lg"
+            className="w-full h-[400px] sm:h-[500px] lg:h-[600px] object-cover rounded-lg mt-[86px]"
           />
         </div>
       </section>
 
       {/* About Us Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="px-4 sm:px-6 lg:px-8 pb-20 -mt-1">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             {/* Left Column */}
@@ -140,11 +121,11 @@ const About = () => {
       </section>
 
       {/* Company Description Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+      <section className="pt-[31px] pb-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
           <p className="text-lg text-gray-600 mb-8">Our sustainability journey</p>
-          <div className="mb-12">
-            <p className="font-instrument text-2xl lg:text-3xl font-normal text-black leading-relaxed">
+          <div className="mb-12 pb-[-4px]">
+            <p className="font-instrument text-[23px] leading-9 font-normal text-black">
               Founded in 2011, MPHD Group has become a trusted name in India's real estate and infrastructure consulting scene. With more than 14 years of experience under our belt, we've earned a reputation for delivering reliable, transparent, and comprehensive property solutions that cater to the unique needs of individuals, businesses, and developers alike. We take pride in being more than just a typical real estate firm. At MPHD Group we see ourselves as strategic partners, guiding our clients through the intricate world of property transactions, legal compliance, land acquisition, and infrastructure readiness.
             </p>
           </div>
@@ -155,7 +136,7 @@ const About = () => {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <p className="text-lg text-gray-600 mb-4">Our teams</p>
@@ -187,7 +168,7 @@ const About = () => {
       </section>
 
       {/* Team That Works for You Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="px-4 sm:px-6 lg:px-8 -mt-px">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="font-instrument text-4xl lg:text-5xl font-normal text-black mb-6 leading-tight">
             A Team That Works for You
@@ -197,7 +178,7 @@ const About = () => {
           </p>
 
           <div className="max-w-6xl mx-auto">
-            <p className="font-instrument text-2xl lg:text-3xl xl:text-4xl font-normal text-black leading-relaxed text-left">
+            <p className="font-instrument text-[21px] leading-[31px] font-normal text-black text-left">
               Our true strength lies in our people. We've assembled a dedicated in-house team that includes: Sales professionals who know the market inside and out and understand your specific goals Legal experts who ensure that every transaction is compliant and secure. Financial advisors who provide clarity to your investments and decisions. This integrated approach enables us to offer each client personalized guidance and comprehensive support—from the very first conversation to the final execution. Our Network, Our Reach Over the years, we've built an extensive nationwide network of over 1,300+ vendor contacts, allowing us to deliver quick and efficient support no matter where you are—whether in bustling urban centers or remote locations. Whether you're working on a private deal or a large-scale infrastructure project, MPHD Group brings the reach, expertise, and relationships that truly make a difference.
             </p>
           </div>
@@ -223,80 +204,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Schedule Consultation Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 text-white">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: 'url(https://api.builder.io/api/v1/image/assets/TEMP/880d01e46aa3064123bdf5adda602e00b9417ef7?width=3810)'
-          }}
-        />
-
-        <div className="relative max-w-7xl mx-auto">
-          <div className="max-w-2xl">
-            <h2 className="font-inter text-5xl lg:text-6xl xl:text-7xl font-normal leading-tight mb-8">
-              Schedule a free consultation
-            </h2>
-            <p className="text-lg leading-relaxed mb-8">
-              We craft inspiring spaces that blend cutting-edge design with enduring functionality, turning your vision into reality.
-            </p>
-            <button className="inline-flex items-center bg-white text-black px-8 py-4 rounded-full hover:bg-gray-100 transition-colors group">
-              <span className="mr-3">Get started</span>
-              <div className="bg-black rounded-full p-3">
-                <ArrowUpRight className="w-4 h-4 text-white" />
-              </div>
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-16">
-            {/* Left Column */}
-            <div>
-              <h2 className="font-instrument text-4xl lg:text-5xl font-normal text-black mb-6 leading-tight">
-                Frequently asked questions
-              </h2>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                To help you make informed decisions, we've compiled answers to some of the most commonly asked questions.
-              </p>
-
-              {/* FAQ Image */}
-              <div className="mt-12 rounded-2xl overflow-hidden">
-                <img
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/47bb2c18d6f9a6802f681700ae62437c7a76b0ef?width=1012"
-                  alt="Modern building architecture"
-                  className="w-full h-[400px] object-cover"
-                />
-              </div>
-            </div>
-
-            {/* Right Column - FAQ Items */}
-            <div className="space-y-0">
-              {[
-                "How do I start the process of buying a home?",
-                "How can I start a project with Altuz?",
-                "What services does the studio offer?",
-                "How long does it take to complete a project?",
-                "Do you offer advice on sustainable design?"
-              ].map((question, index) => (
-                <div key={index} className="border-t-2 border-blue-200 py-8">
-                  <div className="flex items-center justify-between">
-                    <h3 className="font-instrument text-xl lg:text-2xl font-normal text-gray-900 pr-8">
-                      {question}
-                    </h3>
-                    <div className="bg-black rounded-full p-3 flex-shrink-0">
-                      <ArrowUpRight className="w-4 h-4 text-white" />
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };
