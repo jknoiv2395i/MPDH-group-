@@ -105,9 +105,9 @@ const ResidentialProperties = () => {
         />
         
         {/* Hero Content */}
-        <div className="relative z-10 text-center px-4">
-          <h1 className="font-instrument text-6xl md:text-[120px] lg:text-[180px] font-normal leading-tight text-white tracking-[-2px] md:tracking-[-4px]">
-            Residential Properties
+        <div className="relative z-10 text-center px-4 pb-[200px]">
+          <h1 className="font-instrument text-[100px] font-normal leading-[236px] text-white tracking-[1px]">
+            <p>Residential Properties</p>
           </h1>
         </div>
       </section>
