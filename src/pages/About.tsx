@@ -178,7 +178,7 @@ const About = () => {
           </p>
 
           <div className="max-w-6xl mx-auto">
-            <p className="font-instrument text-2xl lg:text-3xl xl:text-4xl font-normal text-black leading-relaxed text-left">
+            <p className="font-instrument text-[21px] leading-[31px] font-normal text-black text-left">
               Our true strength lies in our people. We've assembled a dedicated in-house team that includes: Sales professionals who know the market inside and out and understand your specific goals Legal experts who ensure that every transaction is compliant and secure. Financial advisors who provide clarity to your investments and decisions. This integrated approach enables us to offer each client personalized guidance and comprehensive support—from the very first conversation to the final execution. Our Network, Our Reach Over the years, we've built an extensive nationwide network of over 1,300+ vendor contacts, allowing us to deliver quick and efficient support no matter where you are—whether in bustling urban centers or remote locations. Whether you're working on a private deal or a large-scale infrastructure project, MPHD Group brings the reach, expertise, and relationships that truly make a difference.
             </p>
           </div>
