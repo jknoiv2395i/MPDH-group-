@@ -231,53 +231,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-16">
-            {/* Left Column */}
-            <div>
-              <h2 className="font-instrument text-4xl lg:text-5xl font-normal text-black mb-6 leading-tight">
-                Frequently asked questions
-              </h2>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                To help you make informed decisions, we've compiled answers to some of the most commonly asked questions.
-              </p>
-
-              {/* FAQ Image */}
-              <div className="mt-12 rounded-2xl overflow-hidden">
-                <img
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/47bb2c18d6f9a6802f681700ae62437c7a76b0ef?width=1012"
-                  alt="Modern building architecture"
-                  className="w-full h-[400px] object-cover"
-                />
-              </div>
-            </div>
-
-            {/* Right Column - FAQ Items */}
-            <div className="space-y-0">
-              {[
-                "How do I start the process of buying a home?",
-                "How can I start a project with Altuz?",
-                "What services does the studio offer?",
-                "How long does it take to complete a project?",
-                "Do you offer advice on sustainable design?"
-              ].map((question, index) => (
-                <div key={index} className="border-t-2 border-blue-200 py-8">
-                  <div className="flex items-center justify-between">
-                    <h3 className="font-instrument text-xl lg:text-2xl font-normal text-gray-900 pr-8">
-                      {question}
-                    </h3>
-                    <div className="bg-black rounded-full p-3 flex-shrink-0">
-                      <ArrowUpRight className="w-4 h-4 text-white" />
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };
