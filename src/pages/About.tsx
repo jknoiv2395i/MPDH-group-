@@ -168,7 +168,7 @@ const About = () => {
       </section>
 
       {/* Team That Works for You Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="px-4 sm:px-6 lg:px-8 -mt-px">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="font-instrument text-4xl lg:text-5xl font-normal text-black mb-6 leading-tight">
             A Team That Works for You
