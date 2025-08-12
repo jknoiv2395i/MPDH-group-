@@ -14,10 +14,10 @@ interface NavBarProps {
 }
 
 const navItems: NavItem[] = [
-  { name: 'Link One', url: '/' },
-  { name: 'Link Two', url: '/properties' },
-  { name: 'Link Three', url: '/services' },
-  { name: 'Link Four', url: '/about', hasDropdown: true },
+  { name: 'Home', url: '/' },
+  { name: 'Properties', url: '/properties' },
+  { name: 'Services', url: '/services' },
+  { name: 'About', url: '/about', hasDropdown: true },
 ]
 
 const dropdownContent = {
