@@ -136,7 +136,7 @@ const About = () => {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <p className="text-lg text-gray-600 mb-4">Our teams</p>
@@ -200,33 +200,6 @@ const About = () => {
                 Contact us
               </button>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Schedule Consultation Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 text-white">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: 'url(https://api.builder.io/api/v1/image/assets/TEMP/880d01e46aa3064123bdf5adda602e00b9417ef7?width=3810)'
-          }}
-        />
-
-        <div className="relative max-w-7xl mx-auto">
-          <div className="max-w-2xl">
-            <h2 className="font-inter text-5xl lg:text-6xl xl:text-7xl font-normal leading-tight mb-8">
-              Schedule a free consultation
-            </h2>
-            <p className="text-lg leading-relaxed mb-8">
-              We craft inspiring spaces that blend cutting-edge design with enduring functionality, turning your vision into reality.
-            </p>
-            <button className="inline-flex items-center bg-white text-black px-8 py-4 rounded-full hover:bg-gray-100 transition-colors group">
-              <span className="mr-3">Get started</span>
-              <div className="bg-black rounded-full p-3">
-                <ArrowUpRight className="w-4 h-4 text-white" />
-              </div>
-            </button>
           </div>
         </div>
       </section>
