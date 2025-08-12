@@ -124,8 +124,8 @@ const About = () => {
       <section className="pt-[31px] pb-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
           <p className="text-lg text-gray-600 mb-8">Our sustainability journey</p>
-          <div className="mb-12">
-            <p className="font-instrument text-2xl lg:text-3xl font-normal text-black leading-relaxed">
+          <div className="mb-12 pb-[-4px]">
+            <p className="font-instrument text-[23px] leading-9 font-normal text-black">
               Founded in 2011, MPHD Group has become a trusted name in India's real estate and infrastructure consulting scene. With more than 14 years of experience under our belt, we've earned a reputation for delivering reliable, transparent, and comprehensive property solutions that cater to the unique needs of individuals, businesses, and developers alike. We take pride in being more than just a typical real estate firm. At MPHD Group we see ourselves as strategic partners, guiding our clients through the intricate world of property transactions, legal compliance, land acquisition, and infrastructure readiness.
             </p>
           </div>
