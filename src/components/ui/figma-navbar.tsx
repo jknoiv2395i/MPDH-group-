@@ -20,6 +20,33 @@ const navItems: NavItem[] = [
   { name: 'Link Four', url: '/about', hasDropdown: true },
 ]
 
+const dropdownContent = {
+  homePages: [
+    { name: 'Home V.1', url: '/', current: false },
+    { name: 'Home V.2', url: '/home/v2', current: true },
+    { name: 'Home V.3', url: '/home/v3', current: false },
+    { name: 'Services', url: '/services', current: false },
+  ],
+  contactPages: [
+    { name: 'Contact V.1', url: '/contact', current: false },
+    { name: 'Contact V.2', url: '/contact/v2', current: false },
+    { name: 'Contact V.3', url: '/contact/v3', current: false },
+    { name: 'About Us', url: '/about', current: false },
+  ],
+  projectPages: [
+    { name: 'Projects V.1', url: '/projects', current: false },
+    { name: 'Projects V.2', url: '/projects/v2', current: false },
+    { name: 'Projects V.3', url: '/projects/v3', current: false },
+    { name: 'Inner case study', url: '/projects/case-study', current: false },
+  ],
+  otherPages: [
+    { name: 'Blog', url: '/blog', current: false },
+    { name: 'Inner blog', url: '/blog/post', current: false },
+    { name: 'Product', url: '/product', current: false },
+    { name: 'Categories', url: '/categories', current: false },
+  ]
+}
+
 export function FigmaNavBar({ className }: NavBarProps) {
   const [hoveredItem, setHoveredItem] = useState<string | null>(null)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -60,6 +87,90 @@ export function FigmaNavBar({ className }: NavBarProps) {
                   <ChevronDown className="ml-1 h-4 w-4" />
                 )}
               </a>
+
+              {/* Dropdown Menu */}
+              {item.hasDropdown && hoveredItem === item.name && (
+                <div 
+                  className="absolute left-0 top-full mt-4 w-[660px] -translate-x-1/4"
+                  style={{ top: '160%' }}
+                >
+                  <div className="bg-white rounded-[18px] border border-blue-200 shadow-lg overflow-hidden">
+                    <div className="bg-white rounded-[18px] p-6 grid grid-cols-4 gap-6">
+                      {/* Home Pages Column */}
+                      <div className="flex flex-col gap-[18px]">
+                        {dropdownContent.homePages.map((page) => (
+                          <a
+                            key={page.name}
+                            href={page.url}
+                            className={cn(
+                              "text-left text-[#071839] py-[14px] transition-opacity duration-300 whitespace-nowrap relative",
+                              page.current 
+                                ? "font-semibold text-[#256FE3]" 
+                                : "font-medium opacity-70 hover:opacity-100"
+                            )}
+                          >
+                            {page.name}
+                          </a>
+                        ))}
+                      </div>
+
+                      {/* Contact Pages Column */}
+                      <div className="flex flex-col gap-[18px]">
+                        {dropdownContent.contactPages.map((page) => (
+                          <a
+                            key={page.name}
+                            href={page.url}
+                            className={cn(
+                              "text-left text-[#071839] py-[14px] transition-opacity duration-300 whitespace-nowrap relative",
+                              page.current 
+                                ? "font-semibold text-[#256FE3]" 
+                                : "font-medium opacity-70 hover:opacity-100"
+                            )}
+                          >
+                            {page.name}
+                          </a>
+                        ))}
+                      </div>
+
+                      {/* Project Pages Column */}
+                      <div className="flex flex-col gap-[18px]">
+                        {dropdownContent.projectPages.map((page) => (
+                          <a
+                            key={page.name}
+                            href={page.url}
+                            className={cn(
+                              "text-left text-[#071839] py-[14px] transition-opacity duration-300 whitespace-nowrap relative",
+                              page.current 
+                                ? "font-semibold text-[#256FE3]" 
+                                : "font-medium opacity-70 hover:opacity-100"
+                            )}
+                          >
+                            {page.name}
+                          </a>
+                        ))}
+                      </div>
+
+                      {/* Other Pages Column */}
+                      <div className="flex flex-col gap-[18px]">
+                        {dropdownContent.otherPages.map((page) => (
+                          <a
+                            key={page.name}
+                            href={page.url}
+                            className={cn(
+                              "text-left text-[#071839] py-[14px] transition-opacity duration-300 whitespace-nowrap relative",
+                              page.current 
+                                ? "font-semibold text-[#256FE3]" 
+                                : "font-medium opacity-70 hover:opacity-100"
+                            )}
+                          >
+                            {page.name}
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
           ))}
         </nav>
