@@ -60,6 +60,22 @@ const ResidentialProperties = () => {
     },
   };
 
+  const fadeUpImageVariants = {
+    hidden: {
+      opacity: 0,
+      y: 40
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: [0.25, 0.46, 0.45, 0.94], // easeOutCubic
+        delay: 0.1,
+      },
+    },
+  };
+
   const gridVariants = {
     hidden: {},
     visible: {
@@ -290,13 +306,19 @@ const ResidentialProperties = () => {
                 variants={cardVariants}
               >
                 {/* Property Image */}
-                <div className="mb-6 overflow-hidden rounded-[30px]">
+                <motion.div
+                  className="mb-6 overflow-hidden rounded-[30px]"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, margin: "-50px" }}
+                  variants={fadeUpImageVariants}
+                >
                   <img
                     src={property.image}
                     alt={property.title}
-                    className="w-full h-[400px] md:h-[500px] lg:h-[638px] object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="fade-up-image w-full h-[400px] md:h-[500px] lg:h-[638px] object-cover group-hover:scale-105 transition-transform duration-300"
                   />
-                </div>
+                </motion.div>
 
                 {/* Property Details */}
                 <div className="space-y-4">
