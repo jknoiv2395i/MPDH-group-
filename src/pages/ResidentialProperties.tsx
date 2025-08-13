@@ -122,6 +122,14 @@ const ResidentialProperties = () => {
       {/* Navigation Bar */}
       <FigmaNavBar />
 
+      {/* Property Choice Popup */}
+      <PropertyChoicePopup
+        isOpen={showPopup}
+        onClose={handleClosePopup}
+        onPurchaseClick={handlePurchaseClick}
+        onRentClick={handleRentClick}
+      />
+
       {/* Hero Section */}
       <section className="relative h-[600px] md:h-[901px] flex items-center justify-center overflow-hidden">
         {/* Background Image */}
