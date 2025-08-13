@@ -5,24 +5,24 @@ import { FigmaNavBar } from '@/components/ui/figma-navbar';
 const About = () => {
   const teamMembers = [
     {
-      name: 'Justin Torff',
-      role: 'Architect',
-      image: 'https://api.builder.io/api/v1/image/assets/TEMP/abff25ef0c0af7b9865912d56d6bc6b9c3ff7f9e?width=852'
+      name: 'Adv. Ankit Yadav',
+      role: 'Legal and compliance Expert',
+      image: 'https://cdn.builder.io/api/v1/image/assets%2F64d5b2c9ccba4a419b784580e4130fef%2Fb0f5679a5b20424f9304714abcf087e7'
     },
     {
-      name: 'Abram Rosser',
-      role: 'Architect',
-      image: 'https://api.builder.io/api/v1/image/assets/TEMP/998be1f2e4f66c413559d686311a33f09f9d8a97?width=853'
+      name: 'Amol Ramteke',
+      role: 'Residential and rental Expert',
+      image: 'https://cdn.builder.io/api/v1/image/assets%2F64d5b2c9ccba4a419b784580e4130fef%2F0873b36f87d7495cab0c4acfb17bad48'
     },
     {
-      name: 'Laura Romano',
-      role: 'Architect',
-      image: 'https://api.builder.io/api/v1/image/assets/TEMP/7ac8fe61d9e68aeea8409d132f55110f7b945046?width=852'
+      name: 'Amar Shahu',
+      role: 'Vender Co-Ordinator',
+      image: 'https://cdn.builder.io/api/v1/image/assets%2F64d5b2c9ccba4a419b784580e4130fef%2F8b2e7c91838b48a4ba47ad2f96cc6130'
     },
     {
-      name: 'Martin Mango',
-      role: 'Architect',
-      image: 'https://api.builder.io/api/v1/image/assets/TEMP/913a07e540da384df7b9852fe70c8ee93fc18fbd?width=852'
+      name: 'Archana Upadhyay',
+      role: 'Marketing Expert',
+      image: 'https://cdn.builder.io/api/v1/image/assets%2F64d5b2c9ccba4a419b784580e4130fef%2F0451830a23fb4cd1aeca2d0ef1f5510b'
     },
     {
       name: 'Isabella Greene',
