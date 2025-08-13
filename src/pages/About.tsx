@@ -67,7 +67,7 @@ const About = () => {
           <img
             src="https://api.builder.io/api/v1/image/assets/TEMP/c2a63b43ccbb9770ff76043a4b8e214f6d535e46?width=3810"
             alt="Modern architectural building"
-            className="w-full h-[400px] sm:h-[500px] lg:h-[600px] object-cover rounded-lg -mt-1"
+            className="w-[728%] h-[400px] sm:h-[500px] lg:h-[600px] object-cover rounded-lg -mt-1"
           />
         </div>
       </section>
