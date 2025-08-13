@@ -73,7 +73,7 @@ const ServicesSection = () => {
             {services.map((service, index) => {
               const CardComponent = index === 0 ? motion.a : motion.div;
               const cardProps = index === 0 ? {
-                href: "https://1b18dddfba804eb7a210e134b13902a6-6b64f4bddeee4a9e9e572e465.fly.dev/properties"
+                href: "https://1b18dddfba804eb7a210e134b13902a6-10bdce55034149e8ae9a2c0cc.fly.dev/properties"
               } : {};
 
               return <CardComponent key={index} {...cardProps} className="border border-[#C3D5F1] rounded-2xl p-6 lg:p-8 h-full flex flex-col cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#3b82f6] active:bg-[#3b82f6] group" variants={cardVariants} transition={{
