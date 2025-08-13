@@ -208,7 +208,7 @@ export function VoiceChat({
         ))}
       </div>
 
-      <div className="relative z-10 flex flex-col items-center space-y-8 mx-auto mb-48">
+      <div className="relative z-10 flex flex-col items-center space-y-8 mx-auto mb-48 h-[627px]">
         {/* Main voice button */}
         <motion.div
           className="relative"
