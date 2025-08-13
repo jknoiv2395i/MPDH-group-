@@ -1,11 +1,38 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FigmaNavBar } from '@/components/ui/figma-navbar';
 import { ChevronDown, MapPin, Menu, Grid } from 'lucide-react';
 import Footer from '@/components/Footer';
+import PropertyChoicePopup from '@/components/ui/PropertyChoicePopup';
 
 const ResidentialProperties = () => {
   const [viewMode, setViewMode] = useState<'list' | 'grid'>('list');
   const [sortOrder, setSortOrder] = useState('New To Old');
+  const [showPopup, setShowPopup] = useState(false);
+
+  // Show popup when component mounts
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowPopup(true);
+    }, 500); // Show popup after 500ms for better UX
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  const handlePurchaseClick = () => {
+    setShowPopup(false);
+    // Add purchase navigation logic here
+    console.log('Purchase option selected');
+  };
+
+  const handleRentClick = () => {
+    setShowPopup(false);
+    // Add rent navigation logic here
+    console.log('Rent option selected');
+  };
+
+  const handleClosePopup = () => {
+    setShowPopup(false);
+  };
 
   const properties = [
     {
@@ -94,6 +121,14 @@ const ResidentialProperties = () => {
     <div className="min-h-screen bg-white">
       {/* Navigation Bar */}
       <FigmaNavBar />
+
+      {/* Property Choice Popup */}
+      <PropertyChoicePopup
+        isOpen={showPopup}
+        onClose={handleClosePopup}
+        onPurchaseClick={handlePurchaseClick}
+        onRentClick={handleRentClick}
+      />
 
       {/* Hero Section */}
       <section className="relative h-[600px] md:h-[901px] flex items-center justify-center overflow-hidden">
