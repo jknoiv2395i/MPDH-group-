@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import AIMessageBar from "@/components/ui/ai-assistant";
 import { VoiceChat } from "@/components/ui/ia-siri-chat";
 import { GradientBars } from "@/components/ui/bg-bars";
-import { HandWrittenTitle } from "@/components/ui/hand-writing-text";
 import { ArrowLeft, MessageCircle, Mic } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { cn } from "@/lib/utils";
