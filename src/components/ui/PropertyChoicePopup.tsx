@@ -1,5 +1,6 @@
 import React from 'react';
 import { X } from 'lucide-react';
+import { motion } from 'framer-motion';
 interface PropertyChoicePopupProps {
   isOpen: boolean;
   onClose: () => void;
@@ -30,9 +31,14 @@ const PropertyChoicePopup: React.FC<PropertyChoicePopupProps> = ({
           <div className="flex-1 relative">
             {/* Header */}
             <div className="mb-6">
-              <h2 className="text-white text-2xl font-normal font-inter leading-7 tracking-[0.363px] text-center">
+              <motion.h2
+                className="text-white text-2xl font-normal font-inter leading-7 tracking-[0.363px] text-center"
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, ease: 'easeOut', delay: 0.1 }}
+              >
                 Want to Purchase?
-              </h2>
+              </motion.h2>
             </div>
 
             {/* Image */}
@@ -57,9 +63,14 @@ const PropertyChoicePopup: React.FC<PropertyChoicePopupProps> = ({
           <div className="flex-1 relative">
             {/* Header */}
             <div className="mb-6">
-              <h2 className="text-white text-2xl font-normal font-inter leading-7 tracking-[0.363px] text-center">
+              <motion.h2
+                className="text-white text-2xl font-normal font-inter leading-7 tracking-[0.363px] text-center"
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, ease: 'easeOut', delay: 0.3 }}
+              >
                 Want to Rent?
-              </h2>
+              </motion.h2>
             </div>
 
             {/* Image */}

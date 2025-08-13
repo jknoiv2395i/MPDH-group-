@@ -1,6 +1,8 @@
-import { HandWrittenTitle } from "@/components/ui/hand-writing-text"
-
-
+import React, { useEffect, useRef, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { HandWrittenTitle } from "@/components/ui/hand-writing-text";
+import { cn } from "@/lib/utils";
+import { Loader2, Volume2, Mic, VolumeX, Sparkles } from "lucide-react";
 function HandWrittenTitleDemo() {
     return <HandWrittenTitle title="Kokonut UI" subtitle="Optional subtitle" />
 }

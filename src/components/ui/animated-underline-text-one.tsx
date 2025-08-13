@@ -47,24 +47,12 @@ const AnimatedText = React.forwardRef<HTMLDivElement, AnimatedTextProps>(
         <div className="relative">
           <motion.h1
             className={cn("text-4xl font-bold text-center", textClassName)}
-            style={{
-              fontSize: "36px",
-              fontWeight: "700",
-              letterSpacing: "-1.8px",
-              lineHeight: "40px",
-              textAlign: "center",
-              "@media (max-width: 640px)": {
-                fontWeight: "400",
-                lineHeight: "34px",
-                fontSize: "25px",
-              }
-            }}
             initial={{ y: -20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6 }}
             whileHover={{ scale: 1.02 }}
           >
-            <span style={{ fontWeight: "normal" }}>
+            <span className="font-normal">
               {text}
             </span>
           </motion.h1>
