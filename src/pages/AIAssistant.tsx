@@ -18,7 +18,7 @@ const AIAssistantPage = () => {
         colors={['#4c1d95', '#1e1b4b', 'transparent']}
       />
       {/* Header */}
-      <div className="max-w-4xl mx-auto w-full mb-8 relative z-10">
+      <div className="max-w-4xl mx-auto w-full -mb-1 relative z-10">
         <button
           onClick={() => navigate(-1)}
           className="flex items-center space-x-2 text-indigo-300 hover:text-white transition-colors mb-6"
@@ -28,10 +28,6 @@ const AIAssistantPage = () => {
         </button>
 
         <div className="text-center mb-8">
-          <HandWrittenTitle
-            title="SMART AI ASSISTANT"
-          />
-
           {/* Tab Navigation */}
           <div className="flex justify-center mt-20 ml-1">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-1 flex space-x-1">
