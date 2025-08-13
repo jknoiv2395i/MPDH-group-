@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import { FigmaNavBar } from '@/components/ui/figma-navbar';
 import { ChevronDown, MapPin, Menu, Grid } from 'lucide-react';
 import Footer from '@/components/Footer';
@@ -8,6 +9,81 @@ const ResidentialProperties = () => {
   const [viewMode, setViewMode] = useState<'list' | 'grid'>('list');
   const [sortOrder, setSortOrder] = useState('New To Old');
   const [showPopup, setShowPopup] = useState(false);
+
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+        delayChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const headlineVariants = {
+    hidden: { opacity: 0, y: 50, scale: 0.95 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 1.2,
+        ease: [0.25, 0.25, 0.25, 1],
+        delay: 0.1,
+      },
+    },
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 40 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const fadeUpImageVariants = {
+    hidden: {
+      opacity: 0,
+      y: 40
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: [0.25, 0.46, 0.45, 0.94], // easeOutCubic
+        delay: 0.1,
+      },
+    },
+  };
+
+  const gridVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
 
   // Show popup when component mounts
   useEffect(() => {
@@ -131,27 +207,51 @@ const ResidentialProperties = () => {
       />
 
       {/* Hero Section */}
-      <section className="relative h-[600px] md:h-[901px] flex items-center justify-center overflow-hidden">
+      <motion.section
+        className="relative h-[600px] md:h-[901px] flex items-center justify-center overflow-hidden"
+        initial="hidden"
+        animate="visible"
+        variants={containerVariants}
+      >
         {/* Background Image */}
-        <img
+        <motion.img
           src="https://api.builder.io/api/v1/image/assets/TEMP/8d4ffccf04b7eb57f4736f6c8132230ec51f5a91?width=3810"
           alt="Residential Properties Background"
           className="absolute inset-0 w-full h-full object-cover"
+          initial={{ opacity: 0, scale: 1.05 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 2,
+            ease: "easeOut",
+            delay: 0.5
+          }}
         />
-        
+
         {/* Hero Content */}
         <div className="relative z-10 text-center px-4 pb-[200px]">
-          <h1 className="font-instrument text-[100px] font-normal leading-[236px] text-white tracking-[1px]">
+          <motion.h1
+            className="font-instrument text-[100px] font-normal leading-[236px] text-white tracking-[1px]"
+            variants={headlineVariants}
+          >
             <p>Residential Properties</p>
-          </h1>
+          </motion.h1>
         </div>
-      </section>
+      </motion.section>
 
       {/* Properties Section */}
-      <section className="py-12 md:py-20 px-4 md:px-8 lg:px-16 xl:px-24">
+      <motion.section
+        className="py-12 md:py-20 px-4 md:px-8 lg:px-16 xl:px-24"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-50px" }}
+        variants={containerVariants}
+      >
         <div className="max-w-7xl mx-auto">
           {/* Properties Header */}
-          <div className="bg-white rounded-sm border border-gray-100 mb-8">
+          <motion.div
+            className="bg-white rounded-sm border border-gray-100 mb-8"
+            variants={itemVariants}
+          >
             <div className="flex items-center justify-between p-4">
               {/* Properties List Label */}
               <div className="flex items-center gap-6">
@@ -173,8 +273,8 @@ const ResidentialProperties = () => {
                 <button
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded-sm border ${
-                    viewMode === 'list' 
-                      ? 'bg-black text-white border-black' 
+                    viewMode === 'list'
+                      ? 'bg-black text-white border-black'
                       : 'bg-white text-black border-black'
                   }`}
                 >
@@ -183,8 +283,8 @@ const ResidentialProperties = () => {
                 <button
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-sm border ${
-                    viewMode === 'grid' 
-                      ? 'bg-black text-white border-black' 
+                    viewMode === 'grid'
+                      ? 'bg-black text-white border-black'
                       : 'bg-white text-black border-black'
                   }`}
                 >
@@ -192,20 +292,33 @@ const ResidentialProperties = () => {
                 </button>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Properties Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+          <motion.div
+            className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12"
+            variants={gridVariants}
+          >
             {properties.map((property, index) => (
-              <div key={property.id} className="group">
+              <motion.div
+                key={property.id}
+                className="group"
+                variants={cardVariants}
+              >
                 {/* Property Image */}
-                <div className="mb-6 overflow-hidden rounded-[30px]">
+                <motion.div
+                  className="mb-6 overflow-hidden rounded-[30px]"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, margin: "-50px" }}
+                  variants={fadeUpImageVariants}
+                >
                   <img
                     src={property.image}
                     alt={property.title}
-                    className="w-full h-[400px] md:h-[500px] lg:h-[638px] object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="fade-up-image w-full h-[400px] md:h-[500px] lg:h-[638px] object-cover group-hover:scale-105 transition-transform duration-300"
                   />
-                </div>
+                </motion.div>
 
                 {/* Property Details */}
                 <div className="space-y-4">
@@ -256,20 +369,33 @@ const ResidentialProperties = () => {
                     </button>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
 
           {/* Load More / Pagination */}
-          <div className="mt-16 text-center">
+          <motion.div
+            className="mt-16 text-center"
+            variants={itemVariants}
+          >
             <button className="bg-[#131313] text-white rounded-full py-4 px-8 hover:bg-gray-800 transition-colors">
               <span className="text-lg font-medium">Load More Properties</span>
             </button>
-          </div>
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
 
-      <Footer />
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{
+          duration: 0.8,
+          ease: "easeOut",
+        }}
+      >
+        <Footer />
+      </motion.div>
     </div>
   );
 };
