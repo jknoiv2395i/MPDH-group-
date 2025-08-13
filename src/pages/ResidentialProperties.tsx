@@ -7,6 +7,32 @@ import PropertyChoicePopup from '@/components/ui/PropertyChoicePopup';
 const ResidentialProperties = () => {
   const [viewMode, setViewMode] = useState<'list' | 'grid'>('list');
   const [sortOrder, setSortOrder] = useState('New To Old');
+  const [showPopup, setShowPopup] = useState(false);
+
+  // Show popup when component mounts
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowPopup(true);
+    }, 500); // Show popup after 500ms for better UX
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  const handlePurchaseClick = () => {
+    setShowPopup(false);
+    // Add purchase navigation logic here
+    console.log('Purchase option selected');
+  };
+
+  const handleRentClick = () => {
+    setShowPopup(false);
+    // Add rent navigation logic here
+    console.log('Rent option selected');
+  };
+
+  const handleClosePopup = () => {
+    setShowPopup(false);
+  };
 
   const properties = [
     {
