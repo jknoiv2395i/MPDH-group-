@@ -70,10 +70,16 @@ const ServicesSection = () => {
           once: true,
           margin: "-50px"
         }} variants={containerVariants}>
-            {services.map((service, index) => <motion.div key={index} className="border border-[#C3D5F1] rounded-2xl p-6 lg:p-8 h-full flex flex-col cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#3b82f6] active:bg-[#3b82f6] group" variants={cardVariants} transition={{
-            duration: 0.6,
-            ease: "easeOut"
-          }}>
+            {services.map((service, index) => {
+              const CardComponent = index === 0 ? motion.a : motion.div;
+              const cardProps = index === 0 ? {
+                href: "https://1b18dddfba804eb7a210e134b13902a6-6b64f4bddeee4a9e9e572e465.fly.dev/properties"
+              } : {};
+
+              return <CardComponent key={index} {...cardProps} className="border border-[#C3D5F1] rounded-2xl p-6 lg:p-8 h-full flex flex-col cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#3b82f6] active:bg-[#3b82f6] group" variants={cardVariants} transition={{
+                duration: 0.6,
+                ease: "easeOut"
+              }}>
                 <div className="w-16 h-16 bg-[#071839] group-hover:bg-white group-active:bg-white text-white group-hover:text-[#3b82f6] group-active:text-[#3b82f6] rounded-full flex items-center justify-center mb-6 lg:mb-8 transition-colors duration-300">
                   {service.icon}
                 </div>
@@ -92,7 +98,8 @@ const ServicesSection = () => {
                   <span>Learn more</span>
                   <ArrowUpRight className="w-4 h-4 lg:w-5 lg:h-5" />
                 </div>
-              </motion.div>)}
+              </CardComponent>;
+            })}
           </motion.div>
 
           <motion.div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8" initial="hidden" whileInView="visible" viewport={{
