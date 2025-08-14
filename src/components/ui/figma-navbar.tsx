@@ -15,7 +15,7 @@ interface NavBarProps {
 
 const navItems: NavItem[] = [
   { name: 'Home', url: '/' },
-  { name: 'Residential', url: 'https://774f3ac84e5c4c21bb7423c21a05cb35-64a251550e4543a9894d2be7f.fly.dev/properties' },
+  { name: 'Residential', url: '/residential' },
   { name: 'Commercial', url: '/commercial' },
   { name: 'Industrial', url: '/industrial' },
   { name: 'Services', url: '/services' },
