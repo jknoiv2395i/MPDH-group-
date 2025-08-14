@@ -1,39 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
 import { FigmaNavBar } from '@/components/ui/figma-navbar';
 import { ChevronDown, MapPin, Menu, Grid } from 'lucide-react';
 import Footer from '@/components/Footer';
-import PropertyChoicePopup from '@/components/ui/PropertyChoicePopup';
 
-const CommercialProperties = () => {
-  const navigate = useNavigate();
+const CommercialRental = () => {
   const [viewMode, setViewMode] = useState<'list' | 'grid'>('list');
-  const [showPopup, setShowPopup] = useState(false);
-
-  // Show popup when component mounts
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowPopup(true);
-    }, 500); // Show popup after 500ms for better UX
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  const handlePurchaseClick = () => {
-    setShowPopup(false);
-    // Add purchase navigation logic here
-    console.log('Purchase option selected');
-  };
-
-  const handleRentClick = () => {
-    setShowPopup(false);
-    navigate('/commercial-rental');
-  };
-
-  const handleClosePopup = () => {
-    setShowPopup(false);
-  };
 
   const properties = [
     {
@@ -43,7 +14,7 @@ const CommercialProperties = () => {
       superArea: "3 BHK 1550 Sqft  4 BHK 3000 Sqft",
       transaction: "New",
       description: "Ready to move Commercial Sanctioned, Fire NoC and OC are available",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/ab39aee17e8dfc110c4406ef7bd747ab417b4863?width=1485"
+      image: "https://api.builder.io/api/v1/image/assets/TEMP/0cde9d4c0a28abff220953a8f47e85f4a66851b2?width=1485"
     },
     {
       id: 2,
@@ -52,7 +23,7 @@ const CommercialProperties = () => {
       superArea: "3 BHK 1550 Sqft  4 BHK 3000 Sqft",
       transaction: "New",
       description: "Ready to move Commercial Sanctioned, Fire NoC and OC are available",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/3516253f2a4dd9d4bb90f1da4907439836a4a595?width=1485"
+      image: "https://api.builder.io/api/v1/image/assets/TEMP/58f913a126708769cfeacf636332370ecb81872b?width=1485"
     },
     {
       id: 3,
@@ -115,16 +86,8 @@ const CommercialProperties = () => {
       {/* Navigation Bar */}
       <FigmaNavBar />
 
-      {/* Property Choice Popup */}
-      <PropertyChoicePopup
-        isOpen={showPopup}
-        onClose={handleClosePopup}
-        onPurchaseClick={handlePurchaseClick}
-        onRentClick={handleRentClick}
-      />
-
       {/* Hero Section */}
-      <section className="relative h-[824px] flex items-center justify-center overflow-hidden text-[#2d93b9] bg-[#3195bc]">
+      <section className="relative h-[832px] flex items-center justify-center overflow-hidden bg-[#3295bc]">
         {/* Background Image */}
         <img
           src="https://api.builder.io/api/v1/image/assets/TEMP/fd64f5bc9182eae5c8cc8191e52b62acb0a392eb?width=4794"
@@ -133,15 +96,13 @@ const CommercialProperties = () => {
         />
 
         {/* Hero Content */}
-        <div className="relative z-10 text-center px-4 pb-[400px]">
-          <h1 className="font-instrument text-[111px] font-normal leading-[75.6px] text-white tracking-[-2.3px]">
-            Commercial Properties
-          </h1>
+        <div className="relative z-10 text-center px-4 pb-[200px] text-white tracking-[-4.3px] font-instrument text-[114px] font-normal leading-[236px] h-[707px]">
+          Commercial Properties
         </div>
       </section>
 
       {/* Main Content */}
-      <section className="pt-[34px] pb-20 px-4 md:px-8 lg:px-16 xl:px-24">
+      <section className="pt-[34px] pb-20 px-4 md:px-8 lg:px-16 xl:px-16">
         <div className="max-w-[1333px] mx-auto">
           {/* Properties Header */}
           <div className="mb-8">
@@ -260,4 +221,4 @@ const CommercialProperties = () => {
   );
 };
 
-export default CommercialProperties;
+export default CommercialRental;

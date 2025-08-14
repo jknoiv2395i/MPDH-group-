@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import { FigmaNavBar } from '@/components/ui/figma-navbar';
 import { ChevronDown, MapPin, Menu, Grid } from 'lucide-react';
 import Footer from '@/components/Footer';
 import PropertyChoicePopup from '@/components/ui/PropertyChoicePopup';
 
 const ResidentialProperties = () => {
+  const navigate = useNavigate();
   const [viewMode, setViewMode] = useState<'list' | 'grid'>('list');
   const [sortOrder, setSortOrder] = useState('New To Old');
   const [showPopup, setShowPopup] = useState(false);
@@ -102,8 +104,7 @@ const ResidentialProperties = () => {
 
   const handleRentClick = () => {
     setShowPopup(false);
-    // Add rent navigation logic here
-    console.log('Rent option selected');
+    navigate('/commercial-rental');
   };
 
   const handleClosePopup = () => {
