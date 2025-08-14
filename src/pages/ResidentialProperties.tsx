@@ -104,8 +104,7 @@ const ResidentialProperties = () => {
 
   const handleRentClick = () => {
     setShowPopup(false);
-    // Add rent navigation logic here
-    console.log('Rent option selected');
+    navigate('/commercial-rental');
   };
 
   const handleClosePopup = () => {
