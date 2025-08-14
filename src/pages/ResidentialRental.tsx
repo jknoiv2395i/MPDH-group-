@@ -195,7 +195,7 @@ const ResidentialRental = () => {
         {/* Hero Content */}
         <div className="relative z-10 text-center px-4 pb-[200px]">
           <motion.h1
-            className="font-instrument text-[60px] md:text-[120px] lg:text-[124px] font-normal leading-[234px] text-white tracking-[-4px] md:tracking-[-4.3px] h-[482px]"
+            className="font-instrument text-[60px] md:text-[120px] lg:text-[124px] font-normal leading-[234px] text-white tracking-[-4px] md:tracking-[-4.3px] h-[359px]"
             variants={headlineVariants}
           >
             Residential Properties
@@ -205,26 +205,13 @@ const ResidentialRental = () => {
 
       {/* Main Content */}
       <motion.section
-        className="py-12 md:py-20 px-4 md:px-8 lg:px-16 xl:px-24"
+        className="pt-10 md:pt-10 pb-12 md:pb-20 px-4 md:px-8 lg:px-16 xl:px-24"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-50px" }}
         variants={containerVariants}
       >
         <div className="max-w-7xl mx-auto">
-          {/* Urban Retreat Section */}
-          <motion.div
-            className="mb-12"
-            variants={itemVariants}
-          >
-            <h2 className="font-instrument text-[25px] md:text-[41px] font-normal leading-[1.2] text-black tracking-[-1.2px] mb-2">
-              Urban retreat
-            </h2>
-            <p className="text-[#5D5D5D] font-inter text-[14px] md:text-[18px] font-normal leading-[1.5] tracking-[0.36px] max-w-[366px]">
-              A spacious conference room with natural light for meetings and presentations.
-            </p>
-          </motion.div>
-
           {/* Properties Header */}
           <motion.div
             className="bg-white rounded-sm border border-gray-100 mb-8"
