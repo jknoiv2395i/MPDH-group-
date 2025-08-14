@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowUpRight, Star, Settings, Hammer } from 'lucide-react';
 import { FigmaNavBar } from '@/components/ui/figma-navbar';
+import Footer from '@/components/Footer';
 
 const About = () => {
   const teamMembers = [
