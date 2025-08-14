@@ -13,6 +13,7 @@ import AIAssistantPage from "./pages/AIAssistant";
 import ResidentialProperties from "./pages/ResidentialProperties";
 import CommercialProperties from "./pages/CommercialProperties";
 import CommercialRental from "./pages/CommercialRental";
+import ResidentialRental from "./pages/ResidentialRental";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/projects" element={<Projects />} />
           <Route path="/properties" element={<ResidentialProperties />} />
           <Route path="/residential" element={<ResidentialProperties />} />
+          <Route path="/residential-rental" element={<ResidentialRental />} />
           <Route path="/commercial" element={<CommercialProperties />} />
           <Route path="/commercial-rental" element={<CommercialRental />} />
           <Route path="/about" element={<About />} />
