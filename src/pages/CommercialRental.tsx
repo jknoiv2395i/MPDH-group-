@@ -87,16 +87,16 @@ const CommercialRental = () => {
       <FigmaNavBar />
 
       {/* Hero Section */}
-      <section className="relative h-[689px] flex items-center justify-center overflow-hidden bg-[#3295bc]">
+      <section className="relative h-[832px] flex items-center justify-center overflow-hidden bg-[#3295bc]">
         {/* Background Image */}
         <img
           src="https://api.builder.io/api/v1/image/assets/TEMP/c0f3f140e47c44b88f3bdfb5f6af0d49843e7c5d?width=3810"
           alt="Commercial Properties Background"
-          className="absolute w-full h-full object-cover top-[171px]"
+          className="absolute w-[%] h-full object-cover top-[171px]"
         />
 
         {/* Hero Content */}
-        <div className="relative z-10 text-center px-4 pb-[200px] text-white tracking-[-4.3px] font-instrument text-[114px] font-normal leading-[236px]">
+        <div className="relative z-10 text-center px-4 pb-[200px] text-white tracking-[-4.3px] font-instrument text-[114px] font-normal leading-[236px] h-[707px]">
           Commercial Properties
         </div>
       </section>
