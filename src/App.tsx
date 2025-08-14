@@ -14,6 +14,7 @@ import ResidentialProperties from "./pages/ResidentialProperties";
 import CommercialProperties from "./pages/CommercialProperties";
 import CommercialRental from "./pages/CommercialRental";
 import ResidentialRental from "./pages/ResidentialRental";
+import Industrial from "./pages/Industrial";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -35,6 +36,7 @@ const App = () => (
           <Route path="/residential-rental" element={<ResidentialRental />} />
           <Route path="/commercial" element={<CommercialProperties />} />
           <Route path="/commercial-rental" element={<CommercialRental />} />
+          <Route path="/industrial" element={<Industrial />} />
           <Route path="/about" element={<About />} />
           <Route path="/ai-assistant" element={<AIAssistantPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
