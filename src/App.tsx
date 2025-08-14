@@ -14,6 +14,7 @@ import ResidentialProperties from "./pages/ResidentialProperties";
 import CommercialProperties from "./pages/CommercialProperties";
 import CommercialRental from "./pages/CommercialRental";
 import ResidentialRental from "./pages/ResidentialRental";
+import Industrial from "./pages/Industrial";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
