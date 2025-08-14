@@ -177,7 +177,7 @@ const Industrial = () => {
                   
                   <div className="flex items-center gap-2 mb-4">
                     <MapPin className="w-3 h-3 text-[#4A4747]" />
-                    <span className="text-[#4A4747] font-open-sans text-sm">
+                    <span className="text-[#4A4747] font-inter text-sm">
                       {property.location}
                     </span>
                   </div>
