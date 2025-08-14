@@ -15,14 +15,22 @@ interface NavBarProps {
 
 const navItems: NavItem[] = [
   { name: 'Home', url: '/' },
-  { name: 'Residential', url: '/residential' },
-  { name: 'Commercial', url: '/commercial' },
+  { name: 'Residential', url: '/residential', hasDropdown: true },
+  { name: 'Commercial', url: '/commercial', hasDropdown: true },
   { name: 'Industrial', url: '/industrial' },
   { name: 'Services', url: '/services' },
   { name: 'About', url: '/about', hasDropdown: true },
 ]
 
 const dropdownContent = {
+  residential: [
+    { name: 'Purchase', url: '/residential', current: false },
+    { name: 'Rent', url: '/residential-rental', current: false },
+  ],
+  commercial: [
+    { name: 'Purchase', url: '/commercial', current: false },
+    { name: 'Rent', url: '/commercial-rental', current: false },
+  ],
   homePages: [
     { name: 'Home V.1', url: '/', current: false },
     { name: 'Home V.2', url: '/home/v2', current: true },
@@ -92,84 +100,110 @@ export function FigmaNavBar({ className }: NavBarProps) {
 
               {/* Dropdown Menu */}
               {item.hasDropdown && hoveredItem === item.name && (
-                <div 
-                  className="absolute left-0 top-full mt-4 w-[660px] -translate-x-1/4"
+                <div
+                  className={cn(
+                    "absolute left-0 top-full mt-4 -translate-x-1/4",
+                    (item.name === 'Residential' || item.name === 'Commercial') ? "w-[200px]" : "w-[660px]"
+                  )}
                   style={{ top: '160%' }}
                 >
                   <div className="bg-white rounded-[18px] border border-blue-200 shadow-lg overflow-hidden">
-                    <div className="bg-white rounded-[18px] p-6 grid grid-cols-4 gap-6">
-                      {/* Home Pages Column */}
-                      <div className="flex flex-col gap-[18px]">
-                        {dropdownContent.homePages.map((page) => (
-                          <a
-                            key={page.name}
-                            href={page.url}
-                            className={cn(
-                              "text-left text-[#071839] py-[14px] transition-opacity duration-300 whitespace-nowrap relative",
-                              page.current 
-                                ? "font-semibold text-[#256FE3]" 
-                                : "font-medium opacity-70 hover:opacity-100"
-                            )}
-                          >
-                            {page.name}
-                          </a>
-                        ))}
+                    {(item.name === 'Residential' || item.name === 'Commercial') ? (
+                      // Simple dropdown for Residential/Commercial
+                      <div className="bg-white rounded-[18px] p-4">
+                        <div className="flex flex-col gap-[12px]">
+                          {(item.name === 'Residential' ? dropdownContent.residential : dropdownContent.commercial).map((page) => (
+                            <a
+                              key={page.name}
+                              href={page.url}
+                              className={cn(
+                                "text-left text-[#071839] py-[10px] px-[12px] rounded-lg transition-all duration-300 whitespace-nowrap relative",
+                                page.current
+                                  ? "font-semibold text-[#256FE3] bg-blue-50"
+                                  : "font-medium opacity-70 hover:opacity-100 hover:bg-gray-50"
+                              )}
+                            >
+                              {page.name}
+                            </a>
+                          ))}
+                        </div>
                       </div>
+                    ) : (
+                      // Original 4-column dropdown for About
+                      <div className="bg-white rounded-[18px] p-6 grid grid-cols-4 gap-6">
+                        {/* Home Pages Column */}
+                        <div className="flex flex-col gap-[18px]">
+                          {dropdownContent.homePages.map((page) => (
+                            <a
+                              key={page.name}
+                              href={page.url}
+                              className={cn(
+                                "text-left text-[#071839] py-[14px] transition-opacity duration-300 whitespace-nowrap relative",
+                                page.current
+                                  ? "font-semibold text-[#256FE3]"
+                                  : "font-medium opacity-70 hover:opacity-100"
+                              )}
+                            >
+                              {page.name}
+                            </a>
+                          ))}
+                        </div>
 
-                      {/* Contact Pages Column */}
-                      <div className="flex flex-col gap-[18px]">
-                        {dropdownContent.contactPages.map((page) => (
-                          <a
-                            key={page.name}
-                            href={page.url}
-                            className={cn(
-                              "text-left text-[#071839] py-[14px] transition-opacity duration-300 whitespace-nowrap relative",
-                              page.current 
-                                ? "font-semibold text-[#256FE3]" 
-                                : "font-medium opacity-70 hover:opacity-100"
-                            )}
-                          >
-                            {page.name}
-                          </a>
-                        ))}
-                      </div>
+                        {/* Contact Pages Column */}
+                        <div className="flex flex-col gap-[18px]">
+                          {dropdownContent.contactPages.map((page) => (
+                            <a
+                              key={page.name}
+                              href={page.url}
+                              className={cn(
+                                "text-left text-[#071839] py-[14px] transition-opacity duration-300 whitespace-nowrap relative",
+                                page.current
+                                  ? "font-semibold text-[#256FE3]"
+                                  : "font-medium opacity-70 hover:opacity-100"
+                              )}
+                            >
+                              {page.name}
+                            </a>
+                          ))}
+                        </div>
 
-                      {/* Project Pages Column */}
-                      <div className="flex flex-col gap-[18px]">
-                        {dropdownContent.projectPages.map((page) => (
-                          <a
-                            key={page.name}
-                            href={page.url}
-                            className={cn(
-                              "text-left text-[#071839] py-[14px] transition-opacity duration-300 whitespace-nowrap relative",
-                              page.current 
-                                ? "font-semibold text-[#256FE3]" 
-                                : "font-medium opacity-70 hover:opacity-100"
-                            )}
-                          >
-                            {page.name}
-                          </a>
-                        ))}
-                      </div>
+                        {/* Project Pages Column */}
+                        <div className="flex flex-col gap-[18px]">
+                          {dropdownContent.projectPages.map((page) => (
+                            <a
+                              key={page.name}
+                              href={page.url}
+                              className={cn(
+                                "text-left text-[#071839] py-[14px] transition-opacity duration-300 whitespace-nowrap relative",
+                                page.current
+                                  ? "font-semibold text-[#256FE3]"
+                                  : "font-medium opacity-70 hover:opacity-100"
+                              )}
+                            >
+                              {page.name}
+                            </a>
+                          ))}
+                        </div>
 
-                      {/* Other Pages Column */}
-                      <div className="flex flex-col gap-[18px]">
-                        {dropdownContent.otherPages.map((page) => (
-                          <a
-                            key={page.name}
-                            href={page.url}
-                            className={cn(
-                              "text-left text-[#071839] py-[14px] transition-opacity duration-300 whitespace-nowrap relative",
-                              page.current 
-                                ? "font-semibold text-[#256FE3]" 
-                                : "font-medium opacity-70 hover:opacity-100"
-                            )}
-                          >
-                            {page.name}
-                          </a>
-                        ))}
+                        {/* Other Pages Column */}
+                        <div className="flex flex-col gap-[18px]">
+                          {dropdownContent.otherPages.map((page) => (
+                            <a
+                              key={page.name}
+                              href={page.url}
+                              className={cn(
+                                "text-left text-[#071839] py-[14px] transition-opacity duration-300 whitespace-nowrap relative",
+                                page.current
+                                  ? "font-semibold text-[#256FE3]"
+                                  : "font-medium opacity-70 hover:opacity-100"
+                              )}
+                            >
+                              {page.name}
+                            </a>
+                          ))}
+                        </div>
                       </div>
-                    </div>
+                    )}
                   </div>
                 </div>
               )}
