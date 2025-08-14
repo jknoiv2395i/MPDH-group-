@@ -104,7 +104,7 @@ const ResidentialProperties = () => {
 
   const handleRentClick = () => {
     setShowPopup(false);
-    navigate('/commercial-rental');
+    navigate('/residential-rental');
   };
 
   const handleClosePopup = () => {
