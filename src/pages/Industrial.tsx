@@ -200,7 +200,7 @@ const Industrial = () => {
                   </div>
 
                   <div className="border-t border-[#F1F1F1] pt-3 mb-6">
-                    <p className="text-[#535353] font-open-sans text-sm leading-relaxed">
+                    <p className="text-[#535353] font-inter text-sm leading-relaxed">
                       {property.description}
                     </p>
                   </div>
