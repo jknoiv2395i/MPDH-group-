@@ -127,7 +127,7 @@ const Industrial = () => {
               <div className="flex items-center gap-6">
                 <div className="flex items-center gap-3 bg-black text-white px-4 py-3 rounded-sm">
                   <List className="w-4 h-4" />
-                  <span className="font-open-sans text-lg font-semibold">Properties List</span>
+                  <span className="font-inter text-lg font-semibold">Properties List</span>
                 </div>
               </div>
               
