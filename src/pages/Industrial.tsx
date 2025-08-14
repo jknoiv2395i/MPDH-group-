@@ -133,7 +133,7 @@ const Industrial = () => {
               
               <div className="flex items-center gap-2">
                 <div className="flex items-center border border-gray-200 bg-white px-4 py-2 rounded-sm">
-                  <span className="text-gray-500 font-open-sans text-sm mr-16">New To Old</span>
+                  <span className="text-gray-500 font-inter text-sm mr-16">New To Old</span>
                   <ChevronDown className="w-4 h-4 text-gray-500" />
                 </div>
                 
