@@ -140,7 +140,7 @@ const CommercialProperties = () => {
       </section>
 
       {/* Main Content */}
-      <section className="py-20 px-4 md:px-8 lg:px-16 xl:px-24">
+      <section className="pt-[34px] pb-20 px-4 md:px-8 lg:px-16 xl:px-24">
         <div className="max-w-[1333px] mx-auto">
           {/* Properties Header */}
           <div className="mb-8">
