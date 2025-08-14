@@ -231,7 +231,7 @@ const ResidentialProperties = () => {
         {/* Hero Content */}
         <div className="relative z-10 text-center px-4 pb-[200px]">
           <motion.h1
-            className="font-instrument text-[100px] font-normal leading-[236px] text-white tracking-[1px]"
+            className="font-instrument text-[100px] font-normal leading-[236px] text-white tracking-[1px] h-[359px]"
             variants={headlineVariants}
           >
             <p>Residential Properties</p>
