@@ -97,7 +97,7 @@ const CommercialProperties = () => {
         />
 
         {/* Hero Content */}
-        <div className="relative z-10 text-center px-4 pb-[200px]">
+        <div className="relative z-10 text-center px-4 pb-[400px]">
           <h1 className="font-instrument text-[111px] font-normal leading-[75.6px] text-white tracking-[-2.3px]">
             Commercial Properties
           </h1>
