@@ -216,7 +216,6 @@ const Industrial = () => {
         </div>
       </div>
 
-      <Footer />
     </div>
   );
 };
