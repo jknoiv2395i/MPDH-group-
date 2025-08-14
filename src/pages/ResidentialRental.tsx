@@ -195,7 +195,7 @@ const ResidentialRental = () => {
         {/* Hero Content */}
         <div className="relative z-10 text-center px-4 pb-[200px]">
           <motion.h1
-            className="font-instrument text-[60px] md:text-[120px] lg:text-[180px] font-normal leading-[1.3] text-white tracking-[-4px] md:tracking-[-4.3px]"
+            className="font-instrument text-[60px] md:text-[120px] lg:text-[124px] font-normal leading-[234px] text-white tracking-[-4px] md:tracking-[-4.3px] h-[482px]"
             variants={headlineVariants}
           >
             Residential Properties
