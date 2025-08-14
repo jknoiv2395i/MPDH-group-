@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import { FigmaNavBar } from '@/components/ui/figma-navbar';
 import { ChevronDown, MapPin, Menu, Grid } from 'lucide-react';
 import Footer from '@/components/Footer';
