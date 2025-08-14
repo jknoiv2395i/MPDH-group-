@@ -1,4 +1,4 @@
-import Header from "@/components/ui/21st-navbar";
+import { FigmaNavbar } from "@/components/ui/figma-navbar";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ChevronDown, MapPin, LayoutGrid, List } from "lucide-react";
