@@ -82,21 +82,29 @@ export function FigmaNavBar({ className }: NavBarProps) {
             <div
               key={item.name}
               className="relative"
-              onMouseEnter={() => setHoveredItem(item.name)}
-              onMouseLeave={() => setHoveredItem(null)}
             >
-              <a
-                href={item.url}
-                className={cn(
-                  "flex items-center text-sm lg:text-base text-white/80 hover:text-white transition-colors duration-200",
-                  hoveredItem === item.name && "text-white"
-                )}
-              >
-                {item.name}
-                {item.hasDropdown && (
-                  <ChevronDown className="ml-1 h-4 w-4" />
-                )}
-              </a>
+              {item.hasDropdown ? (
+                <button
+                  onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
+                  className={cn(
+                    "flex items-center text-sm lg:text-base text-white/80 hover:text-white transition-colors duration-200",
+                    activeDropdown === item.name && "text-white"
+                  )}
+                >
+                  {item.name}
+                  <ChevronDown className={cn(
+                    "ml-1 h-4 w-4 transition-transform duration-200",
+                    activeDropdown === item.name && "rotate-180"
+                  )} />
+                </button>
+              ) : (
+                <a
+                  href={item.url}
+                  className="flex items-center text-sm lg:text-base text-white/80 hover:text-white transition-colors duration-200"
+                >
+                  {item.name}
+                </a>
+              )}
 
               {/* Dropdown Menu */}
               {item.hasDropdown && hoveredItem === item.name && (
