@@ -107,7 +107,7 @@ export function FigmaNavBar({ className }: NavBarProps) {
               )}
 
               {/* Dropdown Menu */}
-              {item.hasDropdown && hoveredItem === item.name && (
+              {item.hasDropdown && activeDropdown === item.name && (
                 <div
                   className={cn(
                     "absolute left-0 top-full mt-4 -translate-x-1/4",
