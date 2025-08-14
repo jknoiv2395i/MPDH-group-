@@ -2,6 +2,7 @@ import { Navbar21st } from "@/components/ui/21st-navbar";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ChevronDown, MapPin, LayoutGrid, List } from "lucide-react";
+import Footer from "@/components/Footer";
 
 const Industrial = () => {
   const properties = [
