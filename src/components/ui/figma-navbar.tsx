@@ -15,7 +15,9 @@ interface NavBarProps {
 
 const navItems: NavItem[] = [
   { name: 'Home', url: '/' },
-  { name: 'Properties', url: '/properties' },
+  { name: 'Residential', url: '/residential' },
+  { name: 'Commercial', url: '/commercial' },
+  { name: 'Industrial', url: '/industrial' },
   { name: 'Services', url: '/services' },
   { name: 'About', url: '/about', hasDropdown: true },
 ]
