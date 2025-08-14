@@ -1,4 +1,4 @@
-import { FigmaNavbar } from "@/components/ui/figma-navbar";
+import { FigmaNavBar } from "@/components/ui/figma-navbar";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ChevronDown, MapPin, LayoutGrid, List } from "lucide-react";
