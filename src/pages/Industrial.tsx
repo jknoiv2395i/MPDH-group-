@@ -2,6 +2,7 @@ import { FigmaNavBar } from "@/components/ui/figma-navbar";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ChevronDown, MapPin, LayoutGrid, List } from "lucide-react";
+import Footer from "@/components/Footer";
 
 const Industrial = () => {
   const properties = [
@@ -215,6 +216,7 @@ const Industrial = () => {
         </div>
       </div>
 
+      <Footer />
     </div>
   );
 };
