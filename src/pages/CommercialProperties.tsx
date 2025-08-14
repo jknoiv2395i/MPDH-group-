@@ -7,6 +7,7 @@ import Footer from '@/components/Footer';
 import PropertyChoicePopup from '@/components/ui/PropertyChoicePopup';
 
 const CommercialProperties = () => {
+  const navigate = useNavigate();
   const [viewMode, setViewMode] = useState<'list' | 'grid'>('list');
   const [showPopup, setShowPopup] = useState(false);
 
