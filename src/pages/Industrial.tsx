@@ -171,7 +171,7 @@ const Industrial = () => {
 
                 {/* Property Details */}
                 <Card className="p-6 shadow-none border-0">
-                  <h3 className="text-[#131313] font-open-sans text-lg font-bold leading-tight mb-3">
+                  <h3 className="text-[#131313] font-inter text-lg font-bold leading-tight mb-3">
                     {property.title}
                   </h3>
                   
