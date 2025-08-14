@@ -90,7 +90,7 @@ const Industrial = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      <Navbar21st />
+      <Header />
       
       {/* Hero Section */}
       <div className="relative h-[689px] w-full overflow-hidden">
