@@ -114,6 +114,14 @@ const CommercialProperties = () => {
       {/* Navigation Bar */}
       <FigmaNavBar />
 
+      {/* Property Choice Popup */}
+      <PropertyChoicePopup
+        isOpen={showPopup}
+        onClose={handleClosePopup}
+        onPurchaseClick={handlePurchaseClick}
+        onRentClick={handleRentClick}
+      />
+
       {/* Hero Section */}
       <section className="relative h-[824px] flex items-center justify-center overflow-hidden text-[#2d93b9] bg-[#3195bc]">
         {/* Background Image */}
