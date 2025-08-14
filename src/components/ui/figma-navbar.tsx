@@ -58,7 +58,7 @@ const dropdownContent = {
 }
 
 export function FigmaNavBar({ className }: NavBarProps) {
-  const [hoveredItem, setHoveredItem] = useState<string | null>(null)
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   return (
