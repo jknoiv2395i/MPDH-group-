@@ -12,6 +12,7 @@ import About from "./pages/About";
 import AIAssistantPage from "./pages/AIAssistant";
 import ResidentialProperties from "./pages/ResidentialProperties";
 import CommercialProperties from "./pages/CommercialProperties";
+import CommercialRental from "./pages/CommercialRental";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
