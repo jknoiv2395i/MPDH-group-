@@ -1,8 +1,10 @@
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import Footer from "@/components/Footer";
+import { usePageTitle } from "@/hooks/use-page-title";
 
 const NotFound = () => {
+  usePageTitle("Page Not Found - MPHD Group");
   const location = useLocation();
 
   useEffect(() => {
