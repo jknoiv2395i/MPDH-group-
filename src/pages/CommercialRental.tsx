@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import { FigmaNavBar } from '@/components/ui/figma-navbar';
 import { ChevronDown, MapPin, Menu, Grid } from 'lucide-react';
 import Footer from '@/components/Footer';
+import { usePageTitle } from '@/hooks/use-page-title';
 
 const CommercialRental = () => {
+  usePageTitle("Commercial Rental - MPHD Group");
   const [viewMode, setViewMode] = useState<'list' | 'grid'>('list');
 
   const properties = [
