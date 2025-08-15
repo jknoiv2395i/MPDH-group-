@@ -98,7 +98,7 @@ const CommercialRental = () => {
         />
 
         {/* Hero Content */}
-        <div className="relative z-10 text-center px-4 pb-[200px] text-white tracking-[-4.3px] font-instrument text-[114px] font-normal leading-[236px] h-[707px]">
+        <div className="relative z-10 text-center px-4 pb-[200px] text-white tracking-[-4.3px] font-instrument text-[114px] font-normal leading-[236px] h-[674px]">
           Commercial Properties
         </div>
       </section>
