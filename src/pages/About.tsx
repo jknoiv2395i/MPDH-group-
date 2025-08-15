@@ -2,8 +2,10 @@ import React from 'react';
 import { ArrowUpRight, Star, Settings, Hammer } from 'lucide-react';
 import { FigmaNavBar } from '@/components/ui/figma-navbar';
 import Footer from '@/components/Footer';
+import { usePageTitle } from '@/hooks/use-page-title';
 
 const About = () => {
+  usePageTitle("About - MPHD Group");
   const teamMembers = [
     {
       name: 'Adv. Ankit Yadav',

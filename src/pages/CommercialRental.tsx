@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import { FigmaNavBar } from '@/components/ui/figma-navbar';
 import { ChevronDown, MapPin, Menu, Grid } from 'lucide-react';
 import Footer from '@/components/Footer';
+import { usePageTitle } from '@/hooks/use-page-title';
 
 const CommercialRental = () => {
+  usePageTitle("Commercial Rental - MPHD Group");
   const [viewMode, setViewMode] = useState<'list' | 'grid'>('list');
 
   const properties = [
@@ -96,7 +98,7 @@ const CommercialRental = () => {
         />
 
         {/* Hero Content */}
-        <div className="relative z-10 text-center px-4 pb-[200px] text-white tracking-[-4.3px] font-instrument text-[114px] font-normal leading-[236px] h-[707px]">
+        <div className="relative z-10 text-center px-4 pb-[200px] text-white tracking-[-4.3px] font-instrument text-[114px] font-normal leading-[236px] h-[674px]">
           Commercial Properties
         </div>
       </section>

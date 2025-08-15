@@ -7,8 +7,10 @@ import { ChevronDown, ChevronRight } from "lucide-react";
 import { FigmaNavBar } from "@/components/ui/figma-navbar";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
+import { usePageTitle } from "@/hooks/use-page-title";
 
 const Services = () => {
+  usePageTitle("Services - MPHD Group");
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',

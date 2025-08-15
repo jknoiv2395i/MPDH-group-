@@ -5,8 +5,10 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { ChevronRight } from "lucide-react";
 import Footer from "@/components/Footer";
+import { usePageTitle } from "@/hooks/use-page-title";
 
 const Landing = () => {
+  usePageTitle("Landing - MPHD Group");
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
