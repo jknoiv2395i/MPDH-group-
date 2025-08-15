@@ -7,8 +7,11 @@ import ConsultationSection from "@/components/ConsultationSection";
 import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
 import { MarqueeDemo } from "@/components/ui/marquee";
+import { usePageTitle } from "@/hooks/use-page-title";
 
 const Index = () => {
+  usePageTitle("Home - MPHD Group");
+
   return (
     <>
       <HeroSection />
