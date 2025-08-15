@@ -3,8 +3,10 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ChevronDown, MapPin, LayoutGrid, List } from "lucide-react";
 import Footer from "@/components/Footer";
+import { usePageTitle } from "@/hooks/use-page-title";
 
 const Industrial = () => {
+  usePageTitle("Industrial - MPHD Group");
   const properties = [
     {
       id: 1,
