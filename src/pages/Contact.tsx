@@ -4,8 +4,10 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import Footer from "@/components/Footer";
+import { usePageTitle } from "@/hooks/use-page-title";
 
 const Contact = () => {
+  usePageTitle("Contact - MPHD Group");
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
