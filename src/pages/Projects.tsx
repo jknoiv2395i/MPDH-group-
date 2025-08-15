@@ -2,6 +2,7 @@ import { FigmaNavBar } from "@/components/ui/figma-navbar";
 import Footer from "@/components/Footer";
 import { motion, useMotionValue, useSpring, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
+import { usePageTitle } from "@/hooks/use-page-title";
 
 const Counter = ({ value, suffix = "", prefix = "", duration = 2 }) => {
   const ref = useRef(null);
