@@ -36,6 +36,8 @@ const Counter = ({ value, suffix = "", prefix = "", duration = 2 }) => {
 };
 
 const Projects = () => {
+  usePageTitle("Projects - MPHD Group");
+
   // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
