@@ -48,11 +48,6 @@ const companyLogos = [
     className: "h-8 md:h-10 w-auto"
   },
   {
-    name: "EuroKids",
-    src: "https://api.builder.io/api/v1/image/assets/TEMP/fec4285dbb624029e8b6c9de36959767d19bc4c4?width=318",
-    className: "h-10 md:h-12 w-auto"
-  },
-  {
     name: "PNB",
     src: "https://api.builder.io/api/v1/image/assets/TEMP/d3e5b2cccee6943288c277b332bf0366a46b8e52?width=264",
     className: "h-8 md:h-10 w-auto"
