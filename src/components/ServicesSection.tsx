@@ -71,10 +71,22 @@ const ServicesSection = () => {
           margin: "-50px"
         }} variants={containerVariants}>
             {services.map((service, index) => {
-              const CardComponent = index === 0 ? motion.a : motion.div;
-              const cardProps = index === 0 ? {
-                href: "https://1b18dddfba804eb7a210e134b13902a6-10bdce55034149e8ae9a2c0cc.fly.dev/properties"
-              } : {};
+              const CardComponent = motion.a;
+              const getHref = (index: number) => {
+                switch (index) {
+                  case 0:
+                    return "https://79572934b8934ea987a4d39822ddc46e-2975758423fc4a3385a929ab8.fly.dev/residential";
+                  case 1:
+                    return "https://79572934b8934ea987a4d39822ddc46e-2975758423fc4a3385a929ab8.fly.dev/commercial";
+                  case 2:
+                    return "https://79572934b8934ea987a4d39822ddc46e-2975758423fc4a3385a929ab8.fly.dev/industrial";
+                  default:
+                    return "#";
+                }
+              };
+              const cardProps = {
+                href: getHref(index)
+              };
 
               return <CardComponent key={index} {...cardProps} className="border border-[#C3D5F1] rounded-2xl p-6 lg:p-8 h-full flex flex-col cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#3b82f6] active:bg-[#3b82f6] group" variants={cardVariants} transition={{
                 duration: 0.6,
