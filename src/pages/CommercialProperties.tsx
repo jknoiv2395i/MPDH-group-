@@ -13,6 +13,81 @@ const CommercialProperties = () => {
   const [viewMode, setViewMode] = useState<'list' | 'grid'>('list');
   const [showPopup, setShowPopup] = useState(false);
 
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+        delayChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const headlineVariants = {
+    hidden: { opacity: 0, y: 50, scale: 0.95 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 1.2,
+        ease: [0.25, 0.25, 0.25, 1],
+        delay: 0.1,
+      },
+    },
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 40 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const fadeUpImageVariants = {
+    hidden: {
+      opacity: 0,
+      y: 40
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: [0.25, 0.46, 0.45, 0.94], // easeOutCubic
+        delay: 0.1,
+      },
+    },
+  };
+
+  const gridVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
   // Show popup when component mounts
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -126,27 +201,51 @@ const CommercialProperties = () => {
       />
 
       {/* Hero Section */}
-      <section className="relative h-[824px] flex items-center justify-center overflow-hidden text-[#2d93b9] bg-[#3195bc]">
+      <motion.section
+        className="relative h-[824px] flex items-center justify-center overflow-hidden text-[#2d93b9] bg-[#3195bc]"
+        initial="hidden"
+        animate="visible"
+        variants={containerVariants}
+      >
         {/* Background Image */}
-        <img
+        <motion.img
           src="https://api.builder.io/api/v1/image/assets/TEMP/fd64f5bc9182eae5c8cc8191e52b62acb0a392eb?width=4794"
           alt="Commercial Properties Background"
           className="absolute w-full h-full object-cover top-[200px]"
+          initial={{ opacity: 0, scale: 1.05 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 2,
+            ease: "easeOut",
+            delay: 0.5
+          }}
         />
 
         {/* Hero Content */}
         <div className="relative z-10 text-center px-4 pb-[400px]">
-          <h1 className="font-instrument text-[111px] font-normal leading-[75.6px] text-white tracking-[-2.3px] h-[81.6px]">
+          <motion.h1
+            className="font-instrument text-[111px] font-normal leading-[75.6px] text-white tracking-[-2.3px] h-[81.6px]"
+            variants={headlineVariants}
+          >
             Commercial Properties
-          </h1>
+          </motion.h1>
         </div>
-      </section>
+      </motion.section>
 
       {/* Main Content */}
-      <section className="pt-[34px] pb-20 px-4 md:px-8 lg:px-16 xl:px-24">
+      <motion.section
+        className="pt-[34px] pb-20 px-4 md:px-8 lg:px-16 xl:px-24"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-50px" }}
+        variants={containerVariants}
+      >
         <div className="max-w-[1333px] mx-auto">
           {/* Properties Header */}
-          <div className="mb-8">
+          <motion.div
+            className="mb-8"
+            variants={itemVariants}
+          >
             <div className="bg-white rounded-sm border border-gray-100 flex items-center justify-between p-4">
               {/* Properties List Label */}
               <div className="flex items-center">
@@ -187,20 +286,33 @@ const CommercialProperties = () => {
                 </button>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Properties Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <motion.div
+            className="grid grid-cols-1 lg:grid-cols-2 gap-12"
+            variants={gridVariants}
+          >
             {properties.map((property, index) => (
-              <div key={property.id} className="group">
+              <motion.div
+                key={property.id}
+                className="group"
+                variants={cardVariants}
+              >
                 {/* Property Image */}
-                <div className="mb-6 overflow-hidden rounded-[30px]">
+                <motion.div
+                  className="mb-6 overflow-hidden rounded-[30px]"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, margin: "-50px" }}
+                  variants={fadeUpImageVariants}
+                >
                   <img
                     src={property.image}
                     alt={property.title}
-                    className="w-full h-[638px] object-cover"
+                    className="w-full h-[638px] object-cover group-hover:scale-105 transition-transform duration-300"
                   />
-                </div>
+                </motion.div>
 
                 {/* Property Details */}
                 <div className="space-y-4">
@@ -251,13 +363,23 @@ const CommercialProperties = () => {
                     </button>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
 
-      <Footer />
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{
+          duration: 0.8,
+          ease: "easeOut",
+        }}
+      >
+        <Footer />
+      </motion.div>
     </div>
   );
 };
