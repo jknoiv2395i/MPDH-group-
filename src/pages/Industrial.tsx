@@ -193,11 +193,10 @@ const Industrial = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-transparent" />
         <div className="absolute inset-0 flex items-center justify-start pl-10">
           <motion.h1
-            className="text-left text-white font-instrument text-8xl md:text-[180px] font-normal leading-tight tracking-tight"
+            className="text-left text-white font-instrument text-8xl md:text-[180px] font-normal leading-tight tracking-tight h-[506px]"
             variants={headlineVariants}
           >
-            <p>Industrial </p>
-            <p>Properties</p>
+            <p>Industrial Properties</p>
           </motion.h1>
         </div>
       </motion.div>
