@@ -85,29 +85,38 @@ const ServicesSection = () => {
                 }
               };
 
-              return <CardComponent key={index} {...cardProps} className="border border-[#C3D5F1] rounded-2xl p-6 lg:p-8 h-full flex flex-col cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#3b82f6] active:bg-[#3b82f6] group" variants={cardVariants} transition={{
-                duration: 0.6,
-                ease: "easeOut"
-              }}>
-                <div className="w-16 h-16 bg-[#071839] group-hover:bg-white group-active:bg-white text-white group-hover:text-[#3b82f6] group-active:text-[#3b82f6] rounded-full flex items-center justify-center mb-6 lg:mb-8 transition-colors duration-300">
-                  {service.icon}
-                </div>
+              return (
+                <motion.div
+                  key={index}
+                  className="border border-[#C3D5F1] rounded-2xl h-full transition-all duration-300 ease-in-out hover:bg-[#3b82f6] active:bg-[#3b82f6] group"
+                  variants={cardVariants}
+                  transition={{
+                    duration: 0.6,
+                    ease: "easeOut"
+                  }}
+                >
+                  <Link to={getRoute(index)} className="p-6 lg:p-8 h-full flex flex-col cursor-pointer">
+                    <div className="w-16 h-16 bg-[#071839] group-hover:bg-white group-active:bg-white text-white group-hover:text-[#3b82f6] group-active:text-[#3b82f6] rounded-full flex items-center justify-center mb-6 lg:mb-8 transition-colors duration-300">
+                      {service.icon}
+                    </div>
 
-                <h3 className="font-instrument text-xl lg:text-2xl xl:text-3xl font-normal text-[#131313] group-hover:text-white group-active:text-white mb-6 lg:mb-8 leading-tight transition-colors duration-300">
-                  {service.title}
-                </h3>
+                    <h3 className="font-instrument text-xl lg:text-2xl xl:text-3xl font-normal text-[#131313] group-hover:text-white group-active:text-white mb-6 lg:mb-8 leading-tight transition-colors duration-300">
+                      {service.title}
+                    </h3>
 
-                <div className="flex-grow">
-                  <p className="text-[#5D5D5D] group-hover:text-white group-active:text-white text-base lg:text-lg leading-relaxed mb-6 lg:mb-8 transition-colors duration-300">
-                    {service.description}
-                  </p>
-                </div>
+                    <div className="flex-grow">
+                      <p className="text-[#5D5D5D] group-hover:text-white group-active:text-white text-base lg:text-lg leading-relaxed mb-6 lg:mb-8 transition-colors duration-300">
+                        {service.description}
+                      </p>
+                    </div>
 
-                <div className="flex items-center gap-3 text-[#131313] group-hover:text-white group-active:text-white text-base lg:text-lg transition-colors duration-300">
-                  <span>Learn more</span>
-                  <ArrowUpRight className="w-4 h-4 lg:w-5 lg:h-5" />
-                </div>
-              </CardComponent>;
+                    <div className="flex items-center gap-3 text-[#131313] group-hover:text-white group-active:text-white text-base lg:text-lg transition-colors duration-300">
+                      <span>Learn more</span>
+                      <ArrowUpRight className="w-4 h-4 lg:w-5 lg:h-5" />
+                    </div>
+                  </Link>
+                </motion.div>
+              );
             })}
           </motion.div>
 
