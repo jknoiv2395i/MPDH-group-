@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { FigmaNavBar } from "@/components/ui/figma-navbar";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -7,6 +8,82 @@ import { usePageTitle } from "@/hooks/use-page-title";
 
 const Industrial = () => {
   usePageTitle("Industrial - MPHD Group");
+
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+        delayChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const headlineVariants = {
+    hidden: { opacity: 0, y: 50, scale: 0.95 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 1.2,
+        ease: [0.25, 0.25, 0.25, 1],
+        delay: 0.1,
+      },
+    },
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 40 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const fadeUpImageVariants = {
+    hidden: {
+      opacity: 0,
+      y: 40
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: [0.25, 0.46, 0.45, 0.94], // easeOutCubic
+        delay: 0.1,
+      },
+    },
+  };
+
+  const gridVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
   const properties = [
     {
       id: 1,
@@ -95,26 +172,50 @@ const Industrial = () => {
       <FigmaNavBar />
       
       {/* Hero Section */}
-      <div className="relative h-[689px] w-full overflow-hidden">
-        <img
+      <motion.div
+        className="relative h-[689px] w-full overflow-hidden"
+        initial="hidden"
+        animate="visible"
+        variants={containerVariants}
+      >
+        <motion.img
           src="https://api.builder.io/api/v1/image/assets/TEMP/c0f3f140e47c44b88f3bdfb5f6af0d49843e7c5d?width=3810"
           alt="Commercial Properties Hero"
           className="absolute inset-0 w-full h-full object-cover"
+          initial={{ opacity: 0, scale: 1.05 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 2,
+            ease: "easeOut",
+            delay: 0.5
+          }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-transparent" />
         <div className="absolute inset-0 flex items-center justify-start pl-10">
-          <h1 className="text-left text-white font-instrument text-8xl md:text-[180px] font-normal leading-tight tracking-tight">
+          <motion.h1
+            className="text-left text-white font-instrument text-8xl md:text-[180px] font-normal leading-tight tracking-tight"
+            variants={headlineVariants}
+          >
             <p>Industrial </p>
             <p>Properties</p>
-          </h1>
+          </motion.h1>
         </div>
-      </div>
+      </motion.div>
 
       {/* Main Content */}
-      <div className="container mx-auto px-4 py-16">
+      <motion.div
+        className="container mx-auto px-4 py-16"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-50px" }}
+        variants={containerVariants}
+      >
         <div className="max-w-7xl mx-auto">
           {/* Header Section */}
-          <div className="mb-12">
+          <motion.div
+            className="mb-12"
+            variants={itemVariants}
+          >
             <h2 className="text-black font-instrument text-4xl md:text-[41px] font-normal leading-tight tracking-tight mb-4">
               INDUSTRIAL
               <br />
@@ -123,10 +224,13 @@ const Industrial = () => {
             <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed max-w-2xl">
               We help all kinds of businesses—startups, MSMEs, MNCs, or hospitality groups Establish their business at project sites including buy and lease the perfect properties for business.
             </p>
-          </div>
+          </motion.div>
 
           {/* Filter Section */}
-          <div className="bg-white rounded-sm border border-gray-200 mb-8 p-4">
+          <motion.div
+            className="bg-white rounded-sm border border-gray-200 mb-8 p-4"
+            variants={itemVariants}
+          >
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-6">
                 <div className="flex items-center gap-3 bg-black text-white px-4 py-3 rounded-sm">
@@ -158,20 +262,33 @@ const Industrial = () => {
                 </Button>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Properties Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <motion.div
+            className="grid grid-cols-1 lg:grid-cols-2 gap-8"
+            variants={gridVariants}
+          >
             {properties.map((property, index) => (
-              <div key={property.id} className="flex flex-col">
+              <motion.div
+                key={property.id}
+                className="flex flex-col"
+                variants={cardVariants}
+              >
                 {/* Property Image */}
-                <div className="w-full h-[400px] md:h-[500px] lg:h-[638px] mb-6">
+                <motion.div
+                  className="w-full h-[400px] md:h-[500px] lg:h-[638px] mb-6"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, margin: "-50px" }}
+                  variants={fadeUpImageVariants}
+                >
                   <img
                     src={property.image}
                     alt={`Property ${property.id}`}
-                    className="w-full h-full object-cover rounded-[30px]"
+                    className="w-full h-full object-cover rounded-[30px] hover:scale-105 transition-transform duration-300"
                   />
-                </div>
+                </motion.div>
 
                 {/* Property Details */}
                 <Card className="p-6 shadow-none border-0">
@@ -213,13 +330,23 @@ const Industrial = () => {
                     View project
                   </Button>
                 </Card>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
 
-      <Footer />
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{
+          duration: 0.8,
+          ease: "easeOut",
+        }}
+      >
+        <Footer />
+      </motion.div>
     </div>
   );
 };
