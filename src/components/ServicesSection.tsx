@@ -72,21 +72,17 @@ const ServicesSection = () => {
           margin: "-50px"
         }} variants={containerVariants}>
             {services.map((service, index) => {
-              const CardComponent = motion.a;
-              const getHref = (index: number) => {
+              const getRoute = (index: number) => {
                 switch (index) {
                   case 0:
-                    return "https://79572934b8934ea987a4d39822ddc46e-2975758423fc4a3385a929ab8.fly.dev/residential";
+                    return "/residential";
                   case 1:
-                    return "https://79572934b8934ea987a4d39822ddc46e-2975758423fc4a3385a929ab8.fly.dev/commercial";
+                    return "/commercial";
                   case 2:
-                    return "https://79572934b8934ea987a4d39822ddc46e-2975758423fc4a3385a929ab8.fly.dev/industrial";
+                    return "/industrial";
                   default:
                     return "#";
                 }
-              };
-              const cardProps = {
-                href: getHref(index)
               };
 
               return <CardComponent key={index} {...cardProps} className="border border-[#C3D5F1] rounded-2xl p-6 lg:p-8 h-full flex flex-col cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#3b82f6] active:bg-[#3b82f6] group" variants={cardVariants} transition={{
