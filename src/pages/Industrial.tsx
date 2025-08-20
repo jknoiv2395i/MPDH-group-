@@ -263,42 +263,239 @@ const Industrial = () => {
             </div>
           </motion.div>
 
-          {/* Properties Grid */}
+          {/* Services Grid */}
           <motion.div
             className="grid grid-cols-1 lg:grid-cols-2 gap-8"
             variants={gridVariants}
           >
-            {properties.map((property, index) => (
+            {/* First Card - Image */}
+            <motion.div
+              className="flex flex-col"
+              variants={cardVariants}
+            >
               <motion.div
-                key={property.id}
-                className="flex flex-col"
-                variants={cardVariants}
+                className="w-full h-[400px] md:h-[500px] lg:h-[638px] mb-6"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-50px" }}
+                variants={fadeUpImageVariants}
               >
-                {/* Property Image */}
-                <motion.div
-                  className="w-full h-[400px] md:h-[500px] lg:h-[638px] mb-6"
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true, margin: "-50px" }}
-                  variants={fadeUpImageVariants}
-                >
-                  <img
-                    src={property.image}
-                    alt={`Property ${property.id}`}
-                    className="w-full h-full object-cover rounded-[30px] hover:scale-105 transition-transform duration-300"
-                  />
-                </motion.div>
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F701ea542ab5b4bb3a64f146c221a3d1d%2Fa99576c105274b32818247def8f321d1"
+                  alt="Property 1"
+                  className="w-full h-full object-cover rounded-[30px] hover:scale-105 transition-transform duration-300"
+                />
+              </motion.div>
+            </motion.div>
 
-                {/* Property Details */}
+            {/* Second Card - Casting Yard Setup */}
+            <motion.div
+              className="flex flex-col pb-3"
+              variants={cardVariants}
+            >
+              <motion.div
+                className="w-full h-[255px] mb-6"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-50px" }}
+                variants={fadeUpImageVariants}
+              >
+                <h2 className="text-black font-instrument text-4xl md:text-[41px] font-normal leading-tight tracking-tight pt-8 flex flex-col -my-px">
+                  <span>
+                    <p>Casting Yard Setup and Installation Support</p>
+                  </span>
+                  <br />
+                </h2>
+                <p className="text-[#5D5D5D] font-inter text-xl leading-6 max-w-[699px] h-[225px] min-h-0">
+                  We have built a strong network of 1300+ trusted vendors across India, covering products and services for construction, infrastructure, real estate, and allied industries. This allows us to provide our clients with quick access, competitive pricing, and reliable supply chains, ensuring projects run smoothly without delays.
+                </p>
+              </motion.div>
+
+              <Card className="shadow-none border-0 mt-14 py-0 px-6 pb-6">
+                <div className="flex items-center gap-2 mb-4">
+                </div>
+                <Button className="w-full bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-6 rounded-full">
+                  View project
+                </Button>
+              </Card>
+            </motion.div>
+
+            {/* Third Card - Image */}
+            <motion.div
+              className="flex flex-col"
+              variants={cardVariants}
+            >
+              <motion.div
+                className="w-full h-[400px] md:h-[500px] lg:h-[638px] mb-6"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-50px" }}
+                variants={fadeUpImageVariants}
+              >
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F701ea542ab5b4bb3a64f146c221a3d1d%2F4401cec37d6245e58e3abf569efcae32?format=webp"
+                  alt="Property 3"
+                  className="w-full h-full object-cover rounded-[30px] hover:scale-105 transition-transform duration-300"
+                />
+              </motion.div>
+            </motion.div>
+
+            {/* Fourth Card - 1300+ Vendor Network */}
+            <motion.div
+              className="flex flex-col pb-1.5"
+              variants={cardVariants}
+            >
+              <motion.div
+                className="w-full h-[503px] mb-6"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-50px" }}
+                variants={fadeUpImageVariants}
+              >
+                <div className="flex flex-col pb-3">
+                  <div className="w-full h-[255px] mb-6">
+                    <h2 className="text-black font-instrument text-4xl md:text-[41px] font-normal leading-tight tracking-tight pt-8 flex flex-col -my-px">
+                      <span>
+                        <p>1300+ Vendor Network</p>
+                      </span>
+                      <br />
+                    </h2>
+                    <p className="text-[#5D5D5D] font-inter text-xl leading-6 max-w-[699px] h-[225px] min-h-[104px]">
+                      <p>
+                        We are among the few companies offering end-to-end casting yard solutions for construction and infrastructure projects. We manage everything from land identification and NA conversion to securing government approvals, water use exemptions, and compliance clearances, ensuring your casting yard is established quickly, legally, and strategically located for metro, highway, and large-scale real estate projects.
+                      </p>
+                    </p>
+                  </div>
+                  <div className="bg-white rounded-lg shadow-none border-0 mt-[67px] py-0 px-6">
+                    <Button className="w-full bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-6 rounded-full -ml-px mt-2.5">
+                      View project
+                    </Button>
+                  </div>
+                </div>
+              </motion.div>
+            </motion.div>
+
+            {/* Fifth Card - Contract Compliance */}
+            <motion.div
+              className="flex flex-col pb-12"
+              variants={cardVariants}
+            >
+              <motion.div
+                className="w-full h-[400px] md:h-[500px] lg:h-[638px] mb-6"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-50px" }}
+                variants={fadeUpImageVariants}
+              >
+                <h2 className="text-black font-instrument text-4xl md:text-[41px] font-normal leading-tight tracking-tight mb-4 flex flex-col">
+                  <span style={{ fontSize: "52px" }}>
+                    <p>Contract Compliance</p>
+                  </span>
+                  <br />
+                  <span>PROPERTIES</span>
+                </h2>
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F701ea542ab5b4bb3a64f146c221a3d1d%2F152e8c96235446c1965fd277e11cf95e?format=webp"
+                  alt="Property 6"
+                  className="w-full h-full object-cover rounded-[30px] hover:scale-105 transition-transform duration-300"
+                />
+                <Button className="w-full bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-6 rounded-full mt-2.5">
+                  View project
+                </Button>
+              </motion.div>
+            </motion.div>
+
+            {/* Sixth Card - Image with overlaid content */}
+            <motion.div
+              className="flex flex-col"
+              variants={cardVariants}
+            >
+              <motion.div
+                className="w-full h-[400px] md:h-[500px] lg:h-[638px] mb-6"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-50px" }}
+                variants={fadeUpImageVariants}
+              >
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F701ea542ab5b4bb3a64f146c221a3d1d%2F1a1d15c083eb48b5bf7365f4fa9a7406"
+                  alt="Property 3"
+                  className="w-full h-full object-cover rounded-[30px] hover:scale-105 transition-transform duration-300 mt-[117px]"
+                />
+                <Button className="w-full bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-6 rounded-full mt-3.5">
+                  View project
+                </Button>
+                <div className="flex flex-col">
+                  <div className="w-full h-[400px] md:h-[500px] lg:h-[638px] mb-6">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F701ea542ab5b4bb3a64f146c221a3d1d%2F4401cec37d6245e58e3abf569efcae32?format=webp"
+                      alt="Property 3"
+                      className="w-full h-full object-cover rounded-[30px] hover:scale-105 transition-transform duration-300 pt-0.5 mt-[70px]"
+                    />
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F701ea542ab5b4bb3a64f146c221a3d1d%2F4401cec37d6245e58e3abf569efcae32?format=webp"
+                      alt="Property 3"
+                      className="w-full h-full object-cover rounded-[30px] hover:scale-105 transition-transform duration-300 pt-0.5 mt-[92px]"
+                    />
+                    <Button className="w-full bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-6 rounded-full mt-4.5">
+                      View project
+                    </Button>
+                  </div>
+                  <Button className="w-full bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-6 rounded-full mt-[63px]">
+                    View project
+                  </Button>
+                </div>
+              </motion.div>
+            </motion.div>
+
+            {/* Seventh Card - Additional Layout */}
+            <motion.div
+              className="flex flex-col mt-[71px]"
+              variants={cardVariants}
+            >
+              <div className="flex flex-col mt-[27px]">
+                <div className="w-full h-[400px] md:h-[500px] lg:h-[638px] -my-1 mb-6">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F701ea542ab5b4bb3a64f146c221a3d1d%2F4401cec37d6245e58e3abf569efcae32?format=webp"
+                    alt="Property 3"
+                    className="w-full h-full object-cover rounded-[30px] hover:scale-105 transition-transform duration-300 mt-[50px]"
+                  />
+                </div>
+              </div>
+              <div className="flex flex-col">
+              </div>
+              <div className="flex flex-col">
+                <div className="w-full h-[400px] md:h-[500px] lg:h-[638px] mb-6">
+                  <Button className="w-full bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-6 rounded-full mt-[41px]">
+                    View project
+                  </Button>
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F701ea542ab5b4bb3a64f146c221a3d1d%2F4401cec37d6245e58e3abf569efcae32?format=webp"
+                    alt="Property 3"
+                    className="w-full h-full object-cover rounded-[30px] hover:scale-105 transition-transform duration-300 mt-[29px]"
+                  />
+                  <Button className="w-full bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-6 rounded-full mt-4.5">
+                    View project
+                  </Button>
+                </div>
+              </div>
+              <div className="flex flex-col mt-[164px]">
+                <div className="w-full h-[400px] md:h-[500px] lg:h-[638px] my-[190px] mb-6">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F701ea542ab5b4bb3a64f146c221a3d1d%2F4401cec37d6245e58e3abf569efcae32?format=webp"
+                    alt="Property 3"
+                    className="w-full h-full object-cover rounded-[30px] hover:scale-105 transition-transform duration-300 mt-[200px]"
+                  />
+                </div>
                 <Card className="p-6 shadow-none border-0">
                   <h3 className="text-[#131313] font-inter text-lg font-bold leading-tight mb-3">
-                    {property.title}
+                    22163 Sq.Ft. Commercial Office/Space for Rent
                   </h3>
-                  
+
                   <div className="flex items-center gap-2 mb-4">
                     <MapPin className="w-3 h-3 text-[#4A4747]" />
                     <span className="text-[#4A4747] font-inter text-sm">
-                      {property.location}
+                      KT Nagar, Friends Colony, Nagpur
                     </span>
                   </div>
 
@@ -306,22 +503,22 @@ const Industrial = () => {
                     <div className="grid grid-cols-3 gap-4 text-xs">
                       <div>
                         <div className="text-[#7B7A7A] font-bold mb-1">SUPER AREA</div>
-                        <div className="text-[#535353] font-bold">{property.superArea}</div>
+                        <div className="text-[#535353] font-bold">3 BHK 1550 Sqft 4 BHK 3000 Sqft</div>
                       </div>
                       <div>
                         <div className="text-[#7B7A7A] font-bold mb-1">STATUS</div>
-                        <div className="text-[#535353] font-bold">{property.status}</div>
+                        <div className="text-[#535353] font-bold">New</div>
                       </div>
                       <div>
                         <div className="text-[#7B7A7A] font-bold mb-1">TRANSACTION</div>
-                        <div className="text-[#535353] font-bold">{property.transaction}</div>
+                        <div className="text-[#535353] font-bold">Rent</div>
                       </div>
                     </div>
                   </div>
 
                   <div className="border-t border-[#F1F1F1] pt-3 mb-6">
                     <p className="text-[#535353] font-inter text-sm leading-relaxed">
-                      {property.description}
+                      Ready to move Commercial Sanctioned, Fire NoC and OC are available
                     </p>
                   </div>
 
@@ -329,8 +526,8 @@ const Industrial = () => {
                     View project
                   </Button>
                 </Card>
-              </motion.div>
-            ))}
+              </div>
+            </motion.div>
           </motion.div>
         </div>
       </motion.div>
