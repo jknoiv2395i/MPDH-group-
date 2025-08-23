@@ -11,22 +11,36 @@ export function AIAssistantButton({ className }: AIAssistantButtonProps) {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Add the voice agent script
+    // Add the ElevenLabs ConvAI voice agent script
     const script = document.createElement('script');
-    script.id = 'omnidimension-web-widget';
+    script.id = 'elevenlabs-convai-widget';
     script.async = true;
-    script.src = 'https://backend.omnidim.io/web_widget.js?secret_key=b10106b36b33562b3b61aedcad616a36';
+    script.type = 'text/javascript';
+    script.src = 'https://unpkg.com/@elevenlabs/convai-widget-embed';
 
     // Only add if not already present
-    if (!document.getElementById('omnidimension-web-widget')) {
+    if (!document.getElementById('elevenlabs-convai-widget')) {
       document.head.appendChild(script);
+    }
+
+    // Add the ConvAI widget element
+    let convaiWidget = document.getElementById('elevenlabs-convai-widget-element');
+    if (!convaiWidget) {
+      convaiWidget = document.createElement('elevenlabs-convai');
+      convaiWidget.id = 'elevenlabs-convai-widget-element';
+      convaiWidget.setAttribute('agent-id', 'agent_9601k3c0dph4eezaj7qxsf837x4z');
+      document.body.appendChild(convaiWidget);
     }
 
     return () => {
       // Cleanup on component unmount
-      const existingScript = document.getElementById('omnidimension-web-widget');
+      const existingScript = document.getElementById('elevenlabs-convai-widget');
       if (existingScript) {
         existingScript.remove();
+      }
+      const existingWidget = document.getElementById('elevenlabs-convai-widget-element');
+      if (existingWidget) {
+        existingWidget.remove();
       }
     };
   }, []);
