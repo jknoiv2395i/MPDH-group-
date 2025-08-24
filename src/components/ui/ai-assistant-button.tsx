@@ -104,15 +104,24 @@ export function AIAssistantButton({ className, isMobile = false }: AIAssistantBu
     const removeBrandingElements = () => {
       const brandingSelectors = [
         'elevenlabs-convai [data-testid*="powered"]',
+        'elevenlabs-convai [data-testid*="branding"]',
+        'elevenlabs-convai [data-testid*="attribution"]',
+        'elevenlabs-convai [data-testid*="footer"]',
         'elevenlabs-convai [class*="powered"]',
         'elevenlabs-convai [class*="branding"]',
         'elevenlabs-convai [class*="footer"]',
         'elevenlabs-convai [class*="attribution"]',
+        'elevenlabs-convai [class*="credit"]',
+        'elevenlabs-convai [class*="logo"]',
+        'elevenlabs-convai [class*="eleven"]',
         'elevenlabs-convai .powered-by',
         'elevenlabs-convai .branding',
         'elevenlabs-convai .footer',
         'elevenlabs-convai .attribution',
-        'elevenlabs-convai a[href*="elevenlabs"]'
+        'elevenlabs-convai .credits',
+        'elevenlabs-convai .logo',
+        'elevenlabs-convai a[href*="elevenlabs"]',
+        'elevenlabs-convai a[href*="11labs"]'
       ];
 
       brandingSelectors.forEach(selector => {
@@ -123,17 +132,52 @@ export function AIAssistantButton({ className, isMobile = false }: AIAssistantBu
         });
       });
 
-      // Also check for text content
+      // Comprehensive text content check
       const allElements = document.querySelectorAll('elevenlabs-convai *');
       allElements.forEach(el => {
-        if (el.textContent?.includes('Powered by') ||
-            el.textContent?.includes('ElevenLabs') ||
-            el.innerHTML?.includes('Powered by') ||
-            el.innerHTML?.includes('ElevenLabs')) {
+        const text = el.textContent?.toLowerCase() || '';
+        const html = el.innerHTML?.toLowerCase() || '';
+
+        // Check for various branding text combinations
+        const brandingTexts = [
+          'powered by',
+          'elevenlabs',
+          '11labs',
+          'eleven labs',
+          'made with',
+          'created with',
+          'built with'
+        ];
+
+        if (brandingTexts.some(brandText => text.includes(brandText) || html.includes(brandText))) {
           (el as HTMLElement).style.display = 'none';
           (el as HTMLElement).remove();
         }
+
+        // Target small elements positioned at bottom (likely branding)
+        const style = window.getComputedStyle(el as HTMLElement);
+        if (style.position === 'absolute' || style.position === 'fixed') {
+          const bottom = style.bottom;
+          const fontSize = parseFloat(style.fontSize);
+          if ((bottom === '0px' || bottom.includes('0')) && fontSize <= 14) {
+            (el as HTMLElement).style.display = 'none';
+            (el as HTMLElement).remove();
+          }
+        }
       });
+
+      // Target shadow DOM elements if accessible
+      const widget = document.querySelector('elevenlabs-convai');
+      if (widget && (widget as any).shadowRoot) {
+        const shadowElements = (widget as any).shadowRoot.querySelectorAll('*');
+        shadowElements.forEach((el: HTMLElement) => {
+          const text = el.textContent?.toLowerCase() || '';
+          if (text.includes('powered by') || text.includes('elevenlabs') || text.includes('11labs')) {
+            el.style.display = 'none';
+            el.remove();
+          }
+        });
+      }
     };
 
     // Auto-trigger the voice agent after a short delay to ensure it's loaded
