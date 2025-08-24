@@ -142,6 +142,9 @@ export function AIAssistantButton({ className, isMobile = false }: AIAssistantBu
 
     return () => {
       clearTimeout(autoTriggerTimeout);
+      clearTimeout(observerTimeout);
+      brandingObserver.disconnect();
+
       // Cleanup on component unmount
       const existingScript = document.getElementById('elevenlabs-convai-widget');
       if (existingScript) {
@@ -150,6 +153,10 @@ export function AIAssistantButton({ className, isMobile = false }: AIAssistantBu
       const existingWidget = document.getElementById('elevenlabs-convai-widget-element');
       if (existingWidget) {
         existingWidget.remove();
+      }
+      const existingStyle = document.getElementById('hide-elevenlabs-branding');
+      if (existingStyle) {
+        existingStyle.remove();
       }
     };
   }, []);
