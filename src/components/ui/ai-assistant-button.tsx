@@ -192,6 +192,44 @@ export function AIAssistantButton({ className, isMobile = false }: AIAssistantBu
         setTimeout(removeBrandingElements, 800);
         setTimeout(removeBrandingElements, 1500);
         setTimeout(removeBrandingElements, 3000);
+
+        // Add event listeners for widget state changes
+        const handleWidgetOpen = () => {
+          setVoiceAgentActive(true);
+        };
+
+        const handleWidgetClose = () => {
+          setVoiceAgentActive(false);
+        };
+
+        // Listen for custom events that the widget might dispatch
+        document.addEventListener('elevenlabs-convai-open', handleWidgetOpen);
+        document.addEventListener('elevenlabs-convai-close', handleWidgetClose);
+
+        // Also listen for any changes to the widget's visibility/display
+        const stateObserver = new MutationObserver(() => {
+          // Check if widget is visible/active
+          const isVisible = widget.style.display !== 'none' &&
+                           widget.style.visibility !== 'hidden' &&
+                           widget.offsetParent !== null;
+
+          // If widget becomes hidden, update our state
+          if (!isVisible && voiceAgentActive) {
+            setVoiceAgentActive(false);
+          }
+        });
+
+        stateObserver.observe(widget, {
+          attributes: true,
+          attributeFilter: ['style', 'class']
+        });
+
+        // Cleanup function for event listeners
+        return () => {
+          document.removeEventListener('elevenlabs-convai-open', handleWidgetOpen);
+          document.removeEventListener('elevenlabs-convai-close', handleWidgetClose);
+          stateObserver.disconnect();
+        };
       }
     }, 2000);
 
