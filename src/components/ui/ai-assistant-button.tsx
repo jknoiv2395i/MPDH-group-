@@ -11,6 +11,7 @@ interface AIAssistantButtonProps {
 export function AIAssistantButton({ className, isMobile = false }: AIAssistantButtonProps) {
   const navigate = useNavigate();
   const [voiceAgentLoaded, setVoiceAgentLoaded] = useState(false);
+  const [voiceAgentActive, setVoiceAgentActive] = useState(false);
 
   useEffect(() => {
     // Add CSS to hide ElevenLabs branding
@@ -96,7 +97,7 @@ export function AIAssistantButton({ className, isMobile = false }: AIAssistantBu
       convaiWidget = document.createElement('elevenlabs-convai');
       convaiWidget.id = 'elevenlabs-convai-widget-element';
       convaiWidget.setAttribute('agent-id', 'agent_9601k3c0dph4eezaj7qxsf837x4z');
-      convaiWidget.setAttribute('auto-start', 'true'); // Auto-start the voice agent
+      convaiWidget.setAttribute('auto-start', 'false'); // Don't auto-start, let user control it
       document.body.appendChild(convaiWidget);
     }
 
@@ -180,26 +181,19 @@ export function AIAssistantButton({ className, isMobile = false }: AIAssistantBu
       }
     };
 
-    // Auto-trigger the voice agent after a short delay to ensure it's loaded
-    const autoTriggerTimeout = setTimeout(() => {
-      // Try to programmatically open the voice agent
+    // Wait for widget to load and mark as loaded
+    const loadTimeout = setTimeout(() => {
       const widget = document.querySelector('elevenlabs-convai') as any;
-      if (widget && widget.open) {
-        widget.open();
+      if (widget) {
         setVoiceAgentLoaded(true);
-      } else {
-        // Fallback: dispatch a custom event to trigger the widget
-        const openEvent = new CustomEvent('elevenlabs-convai-open');
-        document.dispatchEvent(openEvent);
-        setVoiceAgentLoaded(true);
-      }
 
-      // Remove branding multiple times after widget loads
-      setTimeout(removeBrandingElements, 300);
-      setTimeout(removeBrandingElements, 800);
-      setTimeout(removeBrandingElements, 1500);
-      setTimeout(removeBrandingElements, 3000);
-    }, 2000); // 2 second delay to ensure widget is loaded
+        // Remove branding multiple times after widget loads
+        setTimeout(removeBrandingElements, 300);
+        setTimeout(removeBrandingElements, 800);
+        setTimeout(removeBrandingElements, 1500);
+        setTimeout(removeBrandingElements, 3000);
+      }
+    }, 2000);
 
     // Set up observer to continuously remove branding
     const brandingObserver = new MutationObserver(() => {
@@ -233,7 +227,7 @@ export function AIAssistantButton({ className, isMobile = false }: AIAssistantBu
     const periodicCleanup = setInterval(removeBrandingElements, 2000);
 
     return () => {
-      clearTimeout(autoTriggerTimeout);
+      clearTimeout(loadTimeout);
       clearTimeout(observerTimeout);
       clearInterval(periodicCleanup);
       brandingObserver.disconnect();
@@ -255,7 +249,32 @@ export function AIAssistantButton({ className, isMobile = false }: AIAssistantBu
   }, []);
 
   const handleClick = () => {
-    navigate("/ai-assistant");
+    if (voiceAgentLoaded) {
+      // Toggle the voice agent
+      const widget = document.querySelector('elevenlabs-convai') as any;
+      if (widget) {
+        if (voiceAgentActive) {
+          // Close the voice agent
+          if (widget.close) {
+            widget.close();
+          }
+          setVoiceAgentActive(false);
+        } else {
+          // Open the voice agent
+          if (widget.open) {
+            widget.open();
+          } else {
+            // Fallback: dispatch a custom event to trigger the widget
+            const openEvent = new CustomEvent('elevenlabs-convai-open');
+            document.dispatchEvent(openEvent);
+          }
+          setVoiceAgentActive(true);
+        }
+      }
+    } else {
+      // Fallback: navigate to AI assistant if voice agent not loaded
+      navigate("/ai-assistant");
+    }
   };
 
   return (
