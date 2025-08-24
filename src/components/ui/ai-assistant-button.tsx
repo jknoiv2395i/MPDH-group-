@@ -182,7 +182,7 @@ export function AIAssistantButton({ className, isMobile = false }: AIAssistantBu
       onClick={handleClick}
       className={cn(
         // Base styles
-        "backdrop-blur-sm border rounded-full text-white transition-all duration-200 bg-white/10 border-white/20 hover:bg-white/20 group relative flex flex-row overflow-auto",
+        "hidden backdrop-blur-sm border rounded-full text-white transition-all duration-200 bg-white/10 border-white/20 hover:bg-white/20 group relative flex flex-row overflow-auto",
         // Mobile vs Desktop responsive styling
         isMobile
           ? "w-12 h-12 justify-center" // Compact circular button for mobile
