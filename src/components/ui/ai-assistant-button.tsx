@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { MessageCircle, Sparkles } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { cn } from "@/lib/utils";
@@ -9,6 +9,7 @@ interface AIAssistantButtonProps {
 
 export function AIAssistantButton({ className }: AIAssistantButtonProps) {
   const navigate = useNavigate();
+  const [voiceAgentLoaded, setVoiceAgentLoaded] = useState(false);
 
   useEffect(() => {
     // Add the ElevenLabs ConvAI voice agent script
@@ -29,10 +30,27 @@ export function AIAssistantButton({ className }: AIAssistantButtonProps) {
       convaiWidget = document.createElement('elevenlabs-convai');
       convaiWidget.id = 'elevenlabs-convai-widget-element';
       convaiWidget.setAttribute('agent-id', 'agent_9601k3c0dph4eezaj7qxsf837x4z');
+      convaiWidget.setAttribute('auto-start', 'true'); // Auto-start the voice agent
       document.body.appendChild(convaiWidget);
     }
 
+    // Auto-trigger the voice agent after a short delay to ensure it's loaded
+    const autoTriggerTimeout = setTimeout(() => {
+      // Try to programmatically open the voice agent
+      const widget = document.querySelector('elevenlabs-convai') as any;
+      if (widget && widget.open) {
+        widget.open();
+        setVoiceAgentLoaded(true);
+      } else {
+        // Fallback: dispatch a custom event to trigger the widget
+        const openEvent = new CustomEvent('elevenlabs-convai-open');
+        document.dispatchEvent(openEvent);
+        setVoiceAgentLoaded(true);
+      }
+    }, 2000); // 2 second delay to ensure widget is loaded
+
     return () => {
+      clearTimeout(autoTriggerTimeout);
       // Cleanup on component unmount
       const existingScript = document.getElementById('elevenlabs-convai-widget');
       if (existingScript) {
