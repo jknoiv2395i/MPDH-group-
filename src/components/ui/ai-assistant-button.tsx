@@ -15,27 +15,58 @@ export function AIAssistantButton({ className, isMobile = false }: AIAssistantBu
   useEffect(() => {
     // Add CSS to hide ElevenLabs branding
     const hideBrandingCSS = `
-      /* Hide ElevenLabs branding elements */
+      /* Hide ElevenLabs branding elements - comprehensive targeting */
       elevenlabs-convai [data-testid*="powered"],
+      elevenlabs-convai [data-testid*="branding"],
+      elevenlabs-convai [data-testid*="attribution"],
+      elevenlabs-convai [data-testid*="footer"],
       elevenlabs-convai [class*="powered"],
       elevenlabs-convai [class*="branding"],
       elevenlabs-convai [class*="footer"],
       elevenlabs-convai [class*="attribution"],
+      elevenlabs-convai [class*="credit"],
+      elevenlabs-convai [class*="logo"],
+      elevenlabs-convai [class*="eleven"],
       elevenlabs-convai .powered-by,
       elevenlabs-convai .branding,
       elevenlabs-convai .footer,
       elevenlabs-convai .attribution,
+      elevenlabs-convai .credits,
+      elevenlabs-convai .logo,
       elevenlabs-convai a[href*="elevenlabs"],
+      elevenlabs-convai a[href*="11labs"],
       elevenlabs-convai *[innerHTML*="Powered by"],
       elevenlabs-convai *[innerHTML*="ElevenLabs"],
+      elevenlabs-convai *[innerHTML*="11Labs"],
       elevenlabs-convai *[innerText*="Powered by"],
-      elevenlabs-convai *[innerText*="ElevenLabs"] {
+      elevenlabs-convai *[innerText*="ElevenLabs"],
+      elevenlabs-convai *[innerText*="11Labs"],
+      /* Target bottom positioned elements */
+      elevenlabs-convai [style*="bottom"],
+      elevenlabs-convai [style*="position: absolute"][style*="bottom"],
+      elevenlabs-convai [style*="position: fixed"][style*="bottom"],
+      /* Target small text elements commonly used for attribution */
+      elevenlabs-convai div[style*="font-size: 12px"],
+      elevenlabs-convai div[style*="font-size: 10px"],
+      elevenlabs-convai span[style*="font-size: 12px"],
+      elevenlabs-convai span[style*="font-size: 10px"],
+      elevenlabs-convai p[style*="font-size: 12px"],
+      elevenlabs-convai p[style*="font-size: 10px"],
+      /* Target flex elements that might contain branding */
+      elevenlabs-convai div[style*="justify-content: center"][style*="align-items: center"] {
         display: none !important;
         visibility: hidden !important;
         opacity: 0 !important;
         height: 0 !important;
         width: 0 !important;
         overflow: hidden !important;
+        position: absolute !important;
+        left: -9999px !important;
+      }
+
+      /* Additional targeting for shadow DOM elements */
+      elevenlabs-convai * {
+        --branding-display: none !important;
       }
     `;
 
