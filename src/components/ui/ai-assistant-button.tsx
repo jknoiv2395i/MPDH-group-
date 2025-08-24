@@ -13,6 +13,40 @@ export function AIAssistantButton({ className, isMobile = false }: AIAssistantBu
   const [voiceAgentLoaded, setVoiceAgentLoaded] = useState(false);
 
   useEffect(() => {
+    // Add CSS to hide ElevenLabs branding
+    const hideBrandingCSS = `
+      /* Hide ElevenLabs branding elements */
+      elevenlabs-convai [data-testid*="powered"],
+      elevenlabs-convai [class*="powered"],
+      elevenlabs-convai [class*="branding"],
+      elevenlabs-convai [class*="footer"],
+      elevenlabs-convai [class*="attribution"],
+      elevenlabs-convai .powered-by,
+      elevenlabs-convai .branding,
+      elevenlabs-convai .footer,
+      elevenlabs-convai .attribution,
+      elevenlabs-convai a[href*="elevenlabs"],
+      elevenlabs-convai *[innerHTML*="Powered by"],
+      elevenlabs-convai *[innerHTML*="ElevenLabs"],
+      elevenlabs-convai *[innerText*="Powered by"],
+      elevenlabs-convai *[innerText*="ElevenLabs"] {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        height: 0 !important;
+        width: 0 !important;
+        overflow: hidden !important;
+      }
+    `;
+
+    // Add custom styles if not already present
+    if (!document.getElementById('hide-elevenlabs-branding')) {
+      const style = document.createElement('style');
+      style.id = 'hide-elevenlabs-branding';
+      style.textContent = hideBrandingCSS;
+      document.head.appendChild(style);
+    }
+
     // Add the ElevenLabs ConvAI voice agent script
     const script = document.createElement('script');
     script.id = 'elevenlabs-convai-widget';
