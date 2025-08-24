@@ -72,15 +72,22 @@ export function AIAssistantButton({ className }: AIAssistantButtonProps) {
       onClick={handleClick}
       className={cn(
         "flex items-center space-x-2 px-4 py-2 backdrop-blur-sm border rounded-full text-white transition-all duration-200 bg-white/10 border-white/20 hover:bg-white/20 group",
+        voiceAgentLoaded && "ring-2 ring-green-400/50",
         className
       )}
     >
       <div className="relative">
         <MessageCircle className="h-5 w-5" />
-        <Sparkles className="h-3 w-3 absolute -top-1 -right-1 text-indigo-300 opacity-0 group-hover:opacity-100 transition-opacity" />
+        <Sparkles className={cn(
+          "h-3 w-3 absolute -top-1 -right-1 text-indigo-300 transition-opacity",
+          voiceAgentLoaded ? "opacity-100 animate-pulse" : "opacity-0 group-hover:opacity-100"
+        )} />
+        {voiceAgentLoaded && (
+          <div className="absolute -top-1 -right-1 w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+        )}
       </div>
       <span className="hidden sm:inline text-sm">
-        AI Assistant
+        {voiceAgentLoaded ? "Voice Active" : "AI Assistant"}
       </span>
     </button>
   );
