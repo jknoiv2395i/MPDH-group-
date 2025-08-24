@@ -69,6 +69,42 @@ export function AIAssistantButton({ className, isMobile = false }: AIAssistantBu
       document.body.appendChild(convaiWidget);
     }
 
+    // Function to remove branding elements
+    const removeBrandingElements = () => {
+      const brandingSelectors = [
+        'elevenlabs-convai [data-testid*="powered"]',
+        'elevenlabs-convai [class*="powered"]',
+        'elevenlabs-convai [class*="branding"]',
+        'elevenlabs-convai [class*="footer"]',
+        'elevenlabs-convai [class*="attribution"]',
+        'elevenlabs-convai .powered-by',
+        'elevenlabs-convai .branding',
+        'elevenlabs-convai .footer',
+        'elevenlabs-convai .attribution',
+        'elevenlabs-convai a[href*="elevenlabs"]'
+      ];
+
+      brandingSelectors.forEach(selector => {
+        const elements = document.querySelectorAll(selector);
+        elements.forEach(el => {
+          (el as HTMLElement).style.display = 'none';
+          (el as HTMLElement).remove();
+        });
+      });
+
+      // Also check for text content
+      const allElements = document.querySelectorAll('elevenlabs-convai *');
+      allElements.forEach(el => {
+        if (el.textContent?.includes('Powered by') ||
+            el.textContent?.includes('ElevenLabs') ||
+            el.innerHTML?.includes('Powered by') ||
+            el.innerHTML?.includes('ElevenLabs')) {
+          (el as HTMLElement).style.display = 'none';
+          (el as HTMLElement).remove();
+        }
+      });
+    };
+
     // Auto-trigger the voice agent after a short delay to ensure it's loaded
     const autoTriggerTimeout = setTimeout(() => {
       // Try to programmatically open the voice agent
@@ -82,7 +118,27 @@ export function AIAssistantButton({ className, isMobile = false }: AIAssistantBu
         document.dispatchEvent(openEvent);
         setVoiceAgentLoaded(true);
       }
+
+      // Remove branding after widget loads
+      setTimeout(removeBrandingElements, 500);
     }, 2000); // 2 second delay to ensure widget is loaded
+
+    // Set up observer to continuously remove branding
+    const brandingObserver = new MutationObserver(() => {
+      removeBrandingElements();
+    });
+
+    // Start observing when widget is added
+    const observerTimeout = setTimeout(() => {
+      const widget = document.querySelector('elevenlabs-convai');
+      if (widget) {
+        brandingObserver.observe(widget, {
+          childList: true,
+          subtree: true,
+          attributes: true
+        });
+      }
+    }, 1000);
 
     return () => {
       clearTimeout(autoTriggerTimeout);
