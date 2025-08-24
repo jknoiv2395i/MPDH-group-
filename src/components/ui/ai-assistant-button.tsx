@@ -288,7 +288,7 @@ export function AIAssistantButton({ className, isMobile = false }: AIAssistantBu
           ? "w-12 h-12 justify-center" // Compact circular button for mobile
           : "space-x-2 px-4 py-2", // Standard button with text for desktop
         // Voice agent indicator
-        voiceAgentLoaded && !isMobile && "ring-2 ring-green-400/50",
+        voiceAgentActive && !isMobile && "ring-2 ring-green-400/50",
         className
       )}
     >
