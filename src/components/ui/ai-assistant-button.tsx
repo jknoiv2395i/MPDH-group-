@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 
 interface AIAssistantButtonProps {
   className?: string;
+  isMobile?: boolean;
 }
 
 export function AIAssistantButton({ className }: AIAssistantButtonProps) {
