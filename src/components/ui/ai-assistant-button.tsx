@@ -72,24 +72,55 @@ export function AIAssistantButton({ className, isMobile = false }: AIAssistantBu
     <button
       onClick={handleClick}
       className={cn(
-        "flex items-center space-x-2 px-4 py-2 backdrop-blur-sm border rounded-full text-white transition-all duration-200 bg-white/10 border-white/20 hover:bg-white/20 group",
-        voiceAgentLoaded && "ring-2 ring-green-400/50",
+        // Base styles
+        "flex items-center backdrop-blur-sm border rounded-full text-white transition-all duration-200 bg-white/10 border-white/20 hover:bg-white/20 group relative",
+        // Mobile vs Desktop responsive styling
+        isMobile
+          ? "w-12 h-12 justify-center" // Compact circular button for mobile
+          : "space-x-2 px-4 py-2", // Standard button with text for desktop
+        // Voice agent indicator
+        voiceAgentLoaded && !isMobile && "ring-2 ring-green-400/50",
         className
       )}
     >
       <div className="relative">
-        <MessageCircle className="h-5 w-5" />
-        <Sparkles className={cn(
-          "h-3 w-3 absolute -top-1 -right-1 text-indigo-300 transition-opacity",
-          voiceAgentLoaded ? "opacity-100 animate-pulse" : "opacity-0 group-hover:opacity-100"
+        <MessageCircle className={cn(
+          isMobile ? "h-6 w-6" : "h-5 w-5"
         )} />
-        {voiceAgentLoaded && (
-          <div className="absolute -top-1 -right-1 w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+
+        {/* Simplified indicator for mobile, full indicator for desktop */}
+        {isMobile ? (
+          // Simple green dot indicator for mobile
+          voiceAgentLoaded && (
+            <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full animate-pulse border border-white/20" />
+          )
+        ) : (
+          // Full sparkles + dot indicator for desktop
+          <>
+            <Sparkles className={cn(
+              "h-3 w-3 absolute -top-1 -right-1 text-indigo-300 transition-opacity",
+              voiceAgentLoaded ? "opacity-100 animate-pulse" : "opacity-0 group-hover:opacity-100"
+            )} />
+            {voiceAgentLoaded && (
+              <div className="absolute -top-1 -right-1 w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+            )}
+          </>
         )}
       </div>
-      <span className="hidden sm:inline text-sm">
-        {voiceAgentLoaded ? "Voice Active" : "AI Assistant"}
-      </span>
+
+      {/* Text only shown on desktop */}
+      {!isMobile && (
+        <span className="hidden sm:inline text-sm">
+          {voiceAgentLoaded ? "Voice Active" : "AI Assistant"}
+        </span>
+      )}
+
+      {/* Mobile tooltip-like text (optional) */}
+      {isMobile && voiceAgentLoaded && (
+        <span className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-xs text-green-400 whitespace-nowrap">
+          Voice Active
+        </span>
+      )}
     </button>
   );
 }
