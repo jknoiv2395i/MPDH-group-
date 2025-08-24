@@ -24,24 +24,44 @@ export function AIAssistantButton({ className, isMobile = false }: AIAssistantBu
     // Only add if not already present
     if (!document.getElementById('elevenlabs-convai-script')) {
       document.head.appendChild(script);
+
+      // Wait for script to load before creating widget
+      script.onload = () => {
+        // Add the ConvAI widget element exactly as provided
+        let convaiWidget = document.getElementById('elevenlabs-convai-widget');
+        if (!convaiWidget) {
+          convaiWidget = document.createElement('elevenlabs-convai');
+          convaiWidget.id = 'elevenlabs-convai-widget';
+          convaiWidget.setAttribute('agent-id', 'agent_9601k3c0dph4eezaj7qxsf837x4z');
+          document.body.appendChild(convaiWidget);
+
+          console.log('ElevenLabs voice agent widget created');
+          setVoiceAgentLoaded(true);
+        }
+      };
+    } else {
+      // Script already exists, check if widget exists
+      let convaiWidget = document.getElementById('elevenlabs-convai-widget');
+      if (!convaiWidget) {
+        convaiWidget = document.createElement('elevenlabs-convai');
+        convaiWidget.id = 'elevenlabs-convai-widget';
+        convaiWidget.setAttribute('agent-id', 'agent_9601k3c0dph4eezaj7qxsf837x4z');
+        document.body.appendChild(convaiWidget);
+        console.log('ElevenLabs voice agent widget created (script existed)');
+      }
+      setVoiceAgentLoaded(true);
     }
 
-    // Add the ConvAI widget element exactly as provided
-    let convaiWidget = document.getElementById('elevenlabs-convai-widget');
-    if (!convaiWidget) {
-      convaiWidget = document.createElement('elevenlabs-convai');
-      convaiWidget.id = 'elevenlabs-convai-widget';
-      convaiWidget.setAttribute('agent-id', 'agent_9601k3c0dph4eezaj7qxsf837x4z');
-      document.body.appendChild(convaiWidget);
-    }
-
-    // Simple check for widget availability
+    // Additional check for widget availability
     const checkWidget = setTimeout(() => {
       const widget = document.querySelector('elevenlabs-convai');
       if (widget) {
+        console.log('ElevenLabs voice agent widget found:', widget);
         setVoiceAgentLoaded(true);
+      } else {
+        console.log('ElevenLabs voice agent widget not found');
       }
-    }, 2000);
+    }, 3000);
 
     return () => {
       clearTimeout(checkWidget);
