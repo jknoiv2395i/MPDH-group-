@@ -235,6 +235,7 @@ export function AIAssistantButton({ className, isMobile = false }: AIAssistantBu
     return () => {
       clearTimeout(autoTriggerTimeout);
       clearTimeout(observerTimeout);
+      clearInterval(periodicCleanup);
       brandingObserver.disconnect();
 
       // Cleanup on component unmount
