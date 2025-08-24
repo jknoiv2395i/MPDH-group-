@@ -316,7 +316,7 @@ export function AIAssistantButton({ className, isMobile = false }: AIAssistantBu
         existingStyle.remove();
       }
     };
-  }, [voiceAgentActive]);
+  }, []);
 
   const handleClick = () => {
     if (voiceAgentLoaded) {
