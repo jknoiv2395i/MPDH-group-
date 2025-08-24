@@ -194,13 +194,17 @@ export function AIAssistantButton({ className, isMobile = false }: AIAssistantBu
         setVoiceAgentLoaded(true);
       }
 
-      // Remove branding after widget loads
-      setTimeout(removeBrandingElements, 500);
+      // Remove branding multiple times after widget loads
+      setTimeout(removeBrandingElements, 300);
+      setTimeout(removeBrandingElements, 800);
+      setTimeout(removeBrandingElements, 1500);
+      setTimeout(removeBrandingElements, 3000);
     }, 2000); // 2 second delay to ensure widget is loaded
 
     // Set up observer to continuously remove branding
     const brandingObserver = new MutationObserver(() => {
-      removeBrandingElements();
+      // Debounce the branding removal to avoid excessive calls
+      setTimeout(removeBrandingElements, 100);
     });
 
     // Start observing when widget is added
@@ -210,10 +214,23 @@ export function AIAssistantButton({ className, isMobile = false }: AIAssistantBu
         brandingObserver.observe(widget, {
           childList: true,
           subtree: true,
-          attributes: true
+          attributes: true,
+          characterData: true
         });
+
+        // Also observe the document body for any new ElevenLabs elements
+        brandingObserver.observe(document.body, {
+          childList: true,
+          subtree: true
+        });
+
+        // Run initial cleanup immediately
+        removeBrandingElements();
       }
     }, 1000);
+
+    // Additional periodic cleanup every 2 seconds
+    const periodicCleanup = setInterval(removeBrandingElements, 2000);
 
     return () => {
       clearTimeout(autoTriggerTimeout);
