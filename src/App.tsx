@@ -26,6 +26,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
+      <VoiceAgent />
       <BrowserRouter>
         <ScrollToTop />
         <Routes>
