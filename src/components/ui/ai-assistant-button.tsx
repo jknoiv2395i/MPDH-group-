@@ -300,7 +300,7 @@ export function AIAssistantButton({ className, isMobile = false }: AIAssistantBu
         {/* Simplified indicator for mobile, full indicator for desktop */}
         {isMobile ? (
           // Simple green dot indicator for mobile
-          voiceAgentLoaded && (
+          voiceAgentActive && (
             <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full animate-pulse border border-white/20" />
           )
         ) : (
@@ -308,9 +308,9 @@ export function AIAssistantButton({ className, isMobile = false }: AIAssistantBu
           <>
             <Sparkles className={cn(
               "h-3 w-3 absolute -top-1 -right-1 text-indigo-300 transition-opacity",
-              voiceAgentLoaded ? "opacity-100 animate-pulse" : "opacity-0 group-hover:opacity-100"
+              voiceAgentActive ? "opacity-100 animate-pulse" : voiceAgentLoaded ? "opacity-60" : "opacity-0 group-hover:opacity-100"
             )} />
-            {voiceAgentLoaded && (
+            {voiceAgentActive && (
               <div className="absolute -top-1 -right-1 w-2 h-2 bg-green-400 rounded-full animate-pulse" />
             )}
           </>
@@ -320,12 +320,12 @@ export function AIAssistantButton({ className, isMobile = false }: AIAssistantBu
       {/* Text only shown on desktop */}
       {!isMobile && (
         <span className="hidden sm:inline text-sm">
-          {voiceAgentLoaded ? "Voice Active" : "AI Assistant"}
+          {voiceAgentActive ? "Voice Active" : voiceAgentLoaded ? "Start Voice" : "AI Assistant"}
         </span>
       )}
 
       {/* Mobile tooltip-like text (optional) */}
-      {isMobile && voiceAgentLoaded && (
+      {isMobile && voiceAgentActive && (
         <span className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-xs text-green-400 whitespace-nowrap">
           Voice Active
         </span>
