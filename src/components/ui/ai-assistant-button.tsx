@@ -204,7 +204,7 @@ export function AIAssistantButton({ className, isMobile = false }: AIAssistantBu
 
       {/* Text only shown on desktop */}
       {!isMobile && (
-        <span className="hidden sm:inline text-sm">
+        <span className="hidden">
           {voiceAgentLoaded ? "Voice Assistant" : "AI Assistant"}
         </span>
       )}
