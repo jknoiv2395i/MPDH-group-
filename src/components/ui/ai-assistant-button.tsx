@@ -78,24 +78,67 @@ export function AIAssistantButton({ className, isMobile = false }: AIAssistantBu
   }, []);
 
   const handleClick = () => {
+    console.log('AI Assistant button clicked, voiceAgentLoaded:', voiceAgentLoaded);
+
     if (voiceAgentLoaded) {
       // Try to activate the voice agent
       const widget = document.querySelector('elevenlabs-convai') as any;
+      console.log('Found widget:', widget);
+
       if (widget) {
-        // Try to click the widget to activate it
+        // Try different methods to activate the widget
+        let activated = false;
+
+        // Method 1: Try the click method
         if (widget.click && typeof widget.click === 'function') {
-          widget.click();
-          setVoiceAgentActive(true);
-        } else if (widget.open && typeof widget.open === 'function') {
-          widget.open();
+          try {
+            widget.click();
+            activated = true;
+            console.log('Widget activated via click method');
+          } catch (e) {
+            console.log('Click method failed:', e);
+          }
+        }
+
+        // Method 2: Try the open method
+        if (!activated && widget.open && typeof widget.open === 'function') {
+          try {
+            widget.open();
+            activated = true;
+            console.log('Widget activated via open method');
+          } catch (e) {
+            console.log('Open method failed:', e);
+          }
+        }
+
+        // Method 3: Try triggering a mouse event
+        if (!activated) {
+          try {
+            const event = new MouseEvent('click', {
+              view: window,
+              bubbles: true,
+              cancelable: true
+            });
+            widget.dispatchEvent(event);
+            activated = true;
+            console.log('Widget activated via mouse event');
+          } catch (e) {
+            console.log('Mouse event method failed:', e);
+          }
+        }
+
+        if (activated) {
           setVoiceAgentActive(true);
         } else {
-          // Fallback: Navigate to AI assistant page
+          console.log('All activation methods failed, navigating to AI assistant page');
           navigate("/ai-assistant");
         }
+      } else {
+        console.log('Widget not found, navigating to AI assistant page');
+        navigate("/ai-assistant");
       }
     } else {
-      // Fallback: navigate to AI assistant if voice agent not loaded
+      console.log('Voice agent not loaded, navigating to AI assistant page');
       navigate("/ai-assistant");
     }
   };
