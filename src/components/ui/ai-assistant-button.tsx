@@ -33,6 +33,23 @@ export function AIAssistantButton({ className, isMobile = false }: AIAssistantBu
           convaiWidget = document.createElement('elevenlabs-convai');
           convaiWidget.id = 'elevenlabs-convai-widget';
           convaiWidget.setAttribute('agent-id', 'agent_9601k3c0dph4eezaj7qxsf837x4z');
+
+          // Apply styles to match the diff requirements
+          Object.assign(convaiWidget.style, {
+            bottom: '0px',
+            color: 'rgb(0, 0, 0)',
+            display: 'block',
+            fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif',
+            fontWeight: '400',
+            left: '0px',
+            pointerEvents: 'auto',
+            position: 'fixed',
+            right: '0px',
+            scrollbarColor: 'rgb(229, 231, 235) rgba(0, 0, 0, 0)',
+            top: '192px',
+            zIndex: '1000'
+          });
+
           document.body.appendChild(convaiWidget);
 
           console.log('ElevenLabs voice agent widget created');
@@ -46,6 +63,23 @@ export function AIAssistantButton({ className, isMobile = false }: AIAssistantBu
         convaiWidget = document.createElement('elevenlabs-convai');
         convaiWidget.id = 'elevenlabs-convai-widget';
         convaiWidget.setAttribute('agent-id', 'agent_9601k3c0dph4eezaj7qxsf837x4z');
+
+        // Apply styles to match the diff requirements
+        Object.assign(convaiWidget.style, {
+          bottom: '0px',
+          color: 'rgb(0, 0, 0)',
+          display: 'block',
+          fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif',
+          fontWeight: '400',
+          left: '0px',
+          pointerEvents: 'auto',
+          position: 'fixed',
+          right: '0px',
+          scrollbarColor: 'rgb(229, 231, 235) rgba(0, 0, 0, 0)',
+          top: '192px',
+          zIndex: '1000'
+        });
+
         document.body.appendChild(convaiWidget);
         console.log('ElevenLabs voice agent widget created (script existed)');
       }
@@ -148,7 +182,7 @@ export function AIAssistantButton({ className, isMobile = false }: AIAssistantBu
       onClick={handleClick}
       className={cn(
         // Base styles
-        "flex items-center backdrop-blur-sm border rounded-full text-white transition-all duration-200 bg-white/10 border-white/20 hover:bg-white/20 group relative",
+        "hidden backdrop-blur-sm border rounded-full text-white transition-all duration-200 bg-white/10 border-white/20 hover:bg-white/20 group relative flex flex-row overflow-auto",
         // Mobile vs Desktop responsive styling
         isMobile
           ? "w-12 h-12 justify-center" // Compact circular button for mobile
@@ -170,7 +204,7 @@ export function AIAssistantButton({ className, isMobile = false }: AIAssistantBu
 
       {/* Text only shown on desktop */}
       {!isMobile && (
-        <span className="hidden sm:inline text-sm">
+        <span className="hidden">
           {voiceAgentLoaded ? "Voice Assistant" : "AI Assistant"}
         </span>
       )}
