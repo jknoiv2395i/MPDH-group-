@@ -264,10 +264,38 @@ export function AIAssistantButton({ className, isMobile = false }: AIAssistantBu
     // Additional periodic cleanup every 2 seconds
     const periodicCleanup = setInterval(removeBrandingElements, 2000);
 
+    // Poll voice agent state every second to keep our state in sync
+    const statePolling = setInterval(() => {
+      const widget = document.querySelector('elevenlabs-convai') as any;
+      if (widget && voiceAgentLoaded) {
+        // Check if widget is actually visible and active
+        const isVisible = widget.style.display !== 'none' &&
+                         widget.style.visibility !== 'hidden' &&
+                         widget.offsetParent !== null;
+
+        // Check for common indicators that the widget might be active
+        const hasActiveClass = widget.classList.contains('active') ||
+                              widget.classList.contains('open') ||
+                              widget.classList.contains('visible');
+
+        const hasActiveAttribute = widget.hasAttribute('open') ||
+                                  widget.getAttribute('aria-expanded') === 'true';
+
+        // Try to detect if the widget's internal state indicates it's active
+        const isActive = isVisible || hasActiveClass || hasActiveAttribute;
+
+        // Update our state if it doesn't match
+        if (isActive !== voiceAgentActive) {
+          setVoiceAgentActive(isActive);
+        }
+      }
+    }, 1000);
+
     return () => {
       clearTimeout(loadTimeout);
       clearTimeout(observerTimeout);
       clearInterval(periodicCleanup);
+      clearInterval(statePolling);
       brandingObserver.disconnect();
 
       // Cleanup on component unmount
