@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { MessageCircle, Sparkles } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { cn } from "@/lib/utils";
@@ -12,6 +12,10 @@ export function AIAssistantButton({ className, isMobile = false }: AIAssistantBu
   const navigate = useNavigate();
   const [voiceAgentLoaded, setVoiceAgentLoaded] = useState(false);
   const [voiceAgentActive, setVoiceAgentActive] = useState(false);
+  const voiceAgentActiveRef = useRef(voiceAgentActive);
+
+  // Keep ref in sync with state
+  voiceAgentActiveRef.current = voiceAgentActive;
 
   useEffect(() => {
     // Add CSS to hide ElevenLabs branding
