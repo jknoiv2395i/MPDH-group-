@@ -289,7 +289,7 @@ export function AIAssistantButton({ className, isMobile = false }: AIAssistantBu
         const isActive = isVisible || hasActiveClass || hasActiveAttribute;
 
         // Update our state if it doesn't match
-        if (isActive !== voiceAgentActive) {
+        if (isActive !== voiceAgentActiveRef.current) {
           setVoiceAgentActive(isActive);
         }
       }
