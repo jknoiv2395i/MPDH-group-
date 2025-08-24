@@ -289,7 +289,7 @@ export function FigmaNavBar({ className }: NavBarProps) {
             ))}
             <div className="border-t border-white/10 mt-3 pt-3 space-y-3">
               <div className="flex justify-center">
-                <AIAssistantButton />
+                <AIAssistantButton isMobile={true} />
               </div>
               <a
                 href="/contact"
