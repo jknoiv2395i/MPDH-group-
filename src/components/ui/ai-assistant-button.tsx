@@ -397,7 +397,7 @@ export function AIAssistantButton({ className, isMobile = false }: AIAssistantBu
           const isVisible = widget.style.display !== 'none' &&
                            widget.style.visibility !== 'hidden' &&
                            widget.offsetParent !== null;
-          if (isVisible !== voiceAgentActive) {
+          if (isVisible !== voiceAgentActiveRef.current) {
             setVoiceAgentActive(isVisible);
           }
         }, 500);
