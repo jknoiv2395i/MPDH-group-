@@ -320,22 +320,83 @@ export function AIAssistantButton({ className, isMobile = false }: AIAssistantBu
       const widget = document.querySelector('elevenlabs-convai') as any;
       if (widget) {
         if (voiceAgentActive) {
-          // Close the voice agent
-          if (widget.close) {
-            widget.close();
+          // Try multiple methods to close the voice agent
+          let closed = false;
+
+          // Method 1: Try the close method
+          if (widget.close && typeof widget.close === 'function') {
+            try {
+              widget.close();
+              closed = true;
+            } catch (e) {
+              console.log('Close method failed:', e);
+            }
           }
+
+          // Method 2: Try hiding the widget
+          if (!closed) {
+            try {
+              widget.style.display = 'none';
+              widget.style.visibility = 'hidden';
+              closed = true;
+            } catch (e) {
+              console.log('Hide method failed:', e);
+            }
+          }
+
+          // Method 3: Dispatch close event
+          if (!closed) {
+            const closeEvent = new CustomEvent('elevenlabs-convai-close');
+            document.dispatchEvent(closeEvent);
+          }
+
           setVoiceAgentActive(false);
         } else {
-          // Open the voice agent
-          if (widget.open) {
-            widget.open();
-          } else {
-            // Fallback: dispatch a custom event to trigger the widget
+          // Try multiple methods to open the voice agent
+          let opened = false;
+
+          // Method 1: Try the open method
+          if (widget.open && typeof widget.open === 'function') {
+            try {
+              widget.open();
+              opened = true;
+            } catch (e) {
+              console.log('Open method failed:', e);
+            }
+          }
+
+          // Method 2: Try showing the widget and triggering click
+          if (!opened) {
+            try {
+              widget.style.display = '';
+              widget.style.visibility = 'visible';
+              if (widget.click && typeof widget.click === 'function') {
+                widget.click();
+                opened = true;
+              }
+            } catch (e) {
+              console.log('Show and click method failed:', e);
+            }
+          }
+
+          // Method 3: Dispatch open event
+          if (!opened) {
             const openEvent = new CustomEvent('elevenlabs-convai-open');
             document.dispatchEvent(openEvent);
           }
+
           setVoiceAgentActive(true);
         }
+
+        // Double-check state after a short delay
+        setTimeout(() => {
+          const isVisible = widget.style.display !== 'none' &&
+                           widget.style.visibility !== 'hidden' &&
+                           widget.offsetParent !== null;
+          if (isVisible !== voiceAgentActive) {
+            setVoiceAgentActive(isVisible);
+          }
+        }, 500);
       }
     } else {
       // Fallback: navigate to AI assistant if voice agent not loaded
