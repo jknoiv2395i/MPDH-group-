@@ -12,10 +12,6 @@ export function AIAssistantButton({ className, isMobile = false }: AIAssistantBu
   const navigate = useNavigate();
   const [voiceAgentLoaded, setVoiceAgentLoaded] = useState(false);
   const [voiceAgentActive, setVoiceAgentActive] = useState(false);
-  const voiceAgentActiveRef = useRef(voiceAgentActive);
-
-  // Keep ref in sync with state
-  voiceAgentActiveRef.current = voiceAgentActive;
 
   useEffect(() => {
     // Add the ElevenLabs ConvAI script exactly as provided
