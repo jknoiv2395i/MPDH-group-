@@ -8,7 +8,7 @@ interface AIAssistantButtonProps {
   isMobile?: boolean;
 }
 
-export function AIAssistantButton({ className }: AIAssistantButtonProps) {
+export function AIAssistantButton({ className, isMobile = false }: AIAssistantButtonProps) {
   const navigate = useNavigate();
   const [voiceAgentLoaded, setVoiceAgentLoaded] = useState(false);
 
