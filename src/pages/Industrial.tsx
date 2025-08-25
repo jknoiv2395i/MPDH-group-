@@ -419,7 +419,7 @@ const Industrial = () => {
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F701ea542ab5b4bb3a64f146c221a3d1d%2F1a1d15c083eb48b5bf7365f4fa9a7406"
                   alt="Property 3"
-                  className="w-full h-full object-cover rounded-[30px] hover:scale-105 transition-transform duration-300 mt-[117px]"
+                  className="w-full h-full object-cover rounded-[30px] hover:scale-105 transition-transform duration-300 mt-[136px]"
                 />
                 <Button className="w-full bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-6 rounded-full mt-3.5">
                   View project
