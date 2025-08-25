@@ -399,7 +399,7 @@ const Industrial = () => {
                   className="w-full h-full object-cover rounded-[30px] hover:scale-105 transition-transform duration-300"
                 />
                 <Button className="w-full bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-6 rounded-full mt-2.5">
-                  View project
+                  <p>Approvals</p>
                 </Button>
               </motion.div>
             </motion.div>
