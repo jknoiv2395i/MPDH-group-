@@ -422,7 +422,7 @@ const Industrial = () => {
                   className="w-full h-full object-cover rounded-[30px] hover:scale-105 transition-transform duration-300 mt-[136px]"
                 />
                 <Button className="w-full bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-6 rounded-full mt-3.5">
-                  View project
+                  <p>BOW and Labour Licenses</p>
                 </Button>
                 <div className="flex flex-col">
                   <div className="w-full h-[400px] md:h-[500px] lg:h-[638px] mb-6">
