@@ -466,7 +466,7 @@ const Industrial = () => {
               <div className="flex flex-col">
                 <div className="w-full h-[400px] md:h-[500px] lg:h-[638px] mb-6">
                   <Button className="w-full bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-6 rounded-full mt-[41px]">
-                    View project
+                    <p>Electricity</p>
                   </Button>
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F701ea542ab5b4bb3a64f146c221a3d1d%2F4401cec37d6245e58e3abf569efcae32?format=webp"
