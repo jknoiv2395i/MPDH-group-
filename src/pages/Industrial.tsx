@@ -392,7 +392,6 @@ const Industrial = () => {
                     <p>Contract Compliance</p>
                   </span>
                   <br />
-                  <span>PROPERTIES</span>
                 </h2>
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F701ea542ab5b4bb3a64f146c221a3d1d%2F152e8c96235446c1965fd277e11cf95e?format=webp"
@@ -400,7 +399,7 @@ const Industrial = () => {
                   className="w-full h-full object-cover rounded-[30px] hover:scale-105 transition-transform duration-300"
                 />
                 <Button className="w-full bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-6 rounded-full mt-2.5">
-                  View project
+                  <p>Approvals</p>
                 </Button>
               </motion.div>
             </motion.div>
@@ -420,29 +419,29 @@ const Industrial = () => {
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F701ea542ab5b4bb3a64f146c221a3d1d%2F1a1d15c083eb48b5bf7365f4fa9a7406"
                   alt="Property 3"
-                  className="w-full h-full object-cover rounded-[30px] hover:scale-105 transition-transform duration-300 mt-[117px]"
+                  className="w-full h-full object-cover rounded-[30px] hover:scale-105 transition-transform duration-300 mt-[136px]"
                 />
                 <Button className="w-full bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-6 rounded-full mt-3.5">
-                  View project
+                  <p>BOW and Labour Licenses</p>
                 </Button>
                 <div className="flex flex-col">
                   <div className="w-full h-[400px] md:h-[500px] lg:h-[638px] mb-6">
                     <img
-                      src="https://cdn.builder.io/api/v1/image/assets%2F701ea542ab5b4bb3a64f146c221a3d1d%2F4401cec37d6245e58e3abf569efcae32?format=webp"
+                      src="https://cdn.builder.io/api/v1/image/assets%2Feccf9e96f3f54e0db99db209e78762b2%2F1b4e75044d054361ab44eddb0def4bac"
                       alt="Property 3"
-                      className="w-full h-full object-cover rounded-[30px] hover:scale-105 transition-transform duration-300 pt-0.5 mt-[70px]"
+                      className="w-full h-full object-cover rounded-[30px] hover:scale-105 transition-transform duration-300 pt-0.5 mt-[51px]"
                     />
                     <img
-                      src="https://cdn.builder.io/api/v1/image/assets%2F701ea542ab5b4bb3a64f146c221a3d1d%2F4401cec37d6245e58e3abf569efcae32?format=webp"
+                      src="https://cdn.builder.io/api/v1/image/assets%2Feccf9e96f3f54e0db99db209e78762b2%2F080388be217b4e04b6b0c1e4032cbed9"
                       alt="Property 3"
-                      className="w-full h-full object-cover rounded-[30px] hover:scale-105 transition-transform duration-300 pt-0.5 mt-[92px]"
+                      className="w-full h-full object-cover rounded-[30px] hover:scale-105 transition-transform duration-300 pt-0.5 mt-[90px]"
                     />
-                    <Button className="w-full bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-6 rounded-full mt-4.5">
-                      View project
+                    <Button className="w-full bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-6 rounded-full mt-[10px]">
+                      <p>Water Use Exemption</p>
                     </Button>
                   </div>
-                  <Button className="w-full bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-6 rounded-full mt-[63px]">
-                    View project
+                  <Button className="w-full bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-6 rounded-full mt-[40px]">
+                    <p>Land Conversion</p>
                   </Button>
                 </div>
               </motion.div>
@@ -456,7 +455,7 @@ const Industrial = () => {
               <div className="flex flex-col mt-[27px]">
                 <div className="w-full h-[400px] md:h-[500px] lg:h-[638px] -my-1 mb-6">
                   <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F701ea542ab5b4bb3a64f146c221a3d1d%2F4401cec37d6245e58e3abf569efcae32?format=webp"
+                    src="https://cdn.builder.io/api/v1/image/assets%2Feccf9e96f3f54e0db99db209e78762b2%2F07be61527f89430689e152ce9eac2aa1"
                     alt="Property 3"
                     className="w-full h-full object-cover rounded-[30px] hover:scale-105 transition-transform duration-300 mt-[50px]"
                   />
@@ -467,15 +466,15 @@ const Industrial = () => {
               <div className="flex flex-col">
                 <div className="w-full h-[400px] md:h-[500px] lg:h-[638px] mb-6">
                   <Button className="w-full bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-6 rounded-full mt-[41px]">
-                    View project
+                    <p>Electricity</p>
                   </Button>
                   <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F701ea542ab5b4bb3a64f146c221a3d1d%2F4401cec37d6245e58e3abf569efcae32?format=webp"
+                    src="https://cdn.builder.io/api/v1/image/assets%2Feccf9e96f3f54e0db99db209e78762b2%2F1593d790f165447c9056bcb5172526bf"
                     alt="Property 3"
                     className="w-full h-full object-cover rounded-[30px] hover:scale-105 transition-transform duration-300 mt-[29px]"
                   />
-                  <Button className="w-full bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-6 rounded-full mt-4.5">
-                    View project
+                  <Button className="w-full bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-6 rounded-full mt-[11px]">
+                    <p>Pollution</p>
                   </Button>
                 </div>
               </div>
@@ -487,7 +486,7 @@ const Industrial = () => {
                     className="w-full h-full object-cover rounded-[30px] hover:scale-105 transition-transform duration-300 mt-[200px]"
                   />
                 </div>
-                <Card className="p-6 shadow-none border-0">
+                <Card className="p-6 shadow-none border-0 mt-[195px]">
                   <h3 className="text-[#131313] font-inter text-lg font-bold leading-tight mb-3">
                     22163 Sq.Ft. Commercial Office/Space for Rent
                   </h3>
