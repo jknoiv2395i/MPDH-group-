@@ -473,8 +473,8 @@ const Industrial = () => {
                     alt="Property 3"
                     className="w-full h-full object-cover rounded-[30px] hover:scale-105 transition-transform duration-300 mt-[29px]"
                   />
-                  <Button className="w-full bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-6 rounded-full mt-4.5">
-                    View project
+                  <Button className="w-full bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-6 rounded-full mt-[11px]">
+                    <p>Pollution</p>
                   </Button>
                 </div>
               </div>
