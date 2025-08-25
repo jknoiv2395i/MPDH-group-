@@ -469,7 +469,7 @@ const Industrial = () => {
                     <p>Electricity</p>
                   </Button>
                   <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F701ea542ab5b4bb3a64f146c221a3d1d%2F4401cec37d6245e58e3abf569efcae32?format=webp"
+                    src="https://cdn.builder.io/api/v1/image/assets%2Feccf9e96f3f54e0db99db209e78762b2%2F1593d790f165447c9056bcb5172526bf"
                     alt="Property 3"
                     className="w-full h-full object-cover rounded-[30px] hover:scale-105 transition-transform duration-300 mt-[29px]"
                   />
