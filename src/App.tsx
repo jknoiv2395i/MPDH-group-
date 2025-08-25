@@ -17,8 +17,6 @@ import ResidentialRental from "./pages/ResidentialRental";
 import Industrial from "./pages/Industrial";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
-import { VoiceAgent } from "./components/VoiceAgent";
-
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -26,7 +24,6 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <VoiceAgent />
       <BrowserRouter>
         <ScrollToTop />
         <Routes>
