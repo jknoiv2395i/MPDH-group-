@@ -392,7 +392,6 @@ const Industrial = () => {
                     <p>Contract Compliance</p>
                   </span>
                   <br />
-                  <span>PROPERTIES</span>
                 </h2>
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F701ea542ab5b4bb3a64f146c221a3d1d%2F152e8c96235446c1965fd277e11cf95e?format=webp"
