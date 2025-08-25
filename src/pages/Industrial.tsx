@@ -440,8 +440,8 @@ const Industrial = () => {
                       <p>Water Use Exemption</p>
                     </Button>
                   </div>
-                  <Button className="w-full bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-6 rounded-full mt-[63px]">
-                    View project
+                  <Button className="w-full bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-6 rounded-full mt-[1px]">
+                    <p>Land Conversion</p>
                   </Button>
                 </div>
               </motion.div>
