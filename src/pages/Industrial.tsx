@@ -432,7 +432,7 @@ const Industrial = () => {
                       className="w-full h-full object-cover rounded-[30px] hover:scale-105 transition-transform duration-300 pt-0.5 mt-[13px]"
                     />
                     <img
-                      src="https://cdn.builder.io/api/v1/image/assets%2F701ea542ab5b4bb3a64f146c221a3d1d%2F4401cec37d6245e58e3abf569efcae32?format=webp"
+                      src="https://cdn.builder.io/api/v1/image/assets%2Feccf9e96f3f54e0db99db209e78762b2%2F080388be217b4e04b6b0c1e4032cbed9"
                       alt="Property 3"
                       className="w-full h-full object-cover rounded-[30px] hover:scale-105 transition-transform duration-300 pt-0.5 mt-[92px]"
                     />
