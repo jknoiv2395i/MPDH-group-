@@ -4,10 +4,11 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import Footer from "@/components/Footer";
-import { usePageTitle } from "@/hooks/use-page-title";
+import { useSEO } from "@/hooks/use-seo";
+import { SEO_PAGES } from "@/lib/seo-constants";
 
 const Contact = () => {
-  usePageTitle("Contact - MPHD Group");
+  useSEO(SEO_PAGES.contact);
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',

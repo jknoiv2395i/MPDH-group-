@@ -7,10 +7,59 @@ import { ChevronDown, ChevronRight } from "lucide-react";
 import { FigmaNavBar } from "@/components/ui/figma-navbar";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
-import { usePageTitle } from "@/hooks/use-page-title";
+import { useSEO } from "@/hooks/use-seo";
+import { SEO_PAGES } from "@/lib/seo-constants";
 
 const Services = () => {
-  usePageTitle("Services - MPHD Group");
+  useSEO({
+    ...SEO_PAGES.services,
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I start the process of buying a home?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "To start your home buying journey, begin by getting pre-approved for a mortgage to understand your budget. Then, work with our experienced agents to identify properties that meet your criteria and schedule viewings."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I start a project with MPHD Group?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Starting a project with MPHD Group is simple. Contact us through our form or call our office directly. We'll schedule a consultation to discuss your vision, timeline, and budget requirements."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What services does MPHD Group offer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We offer comprehensive real estate services including residential property, commercial property, industrial property, legal compliance, land acquisition, architectural design, and project management from concept to completion."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to complete a project?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Project timelines vary depending on scope and complexity. Typically, residential projects take 3-6 months for design and 6-18 months for construction. We'll provide detailed timelines during consultation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer advice on sustainable design?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we specialize in sustainable and eco-friendly design solutions. Our team incorporates green building practices, energy-efficient systems, and sustainable materials in all our projects."
+          }
+        }
+      ]
+    }
+  });
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',

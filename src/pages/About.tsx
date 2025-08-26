@@ -2,10 +2,14 @@ import React from 'react';
 import { ArrowUpRight, Star, Settings, Hammer } from 'lucide-react';
 import { FigmaNavBar } from '@/components/ui/figma-navbar';
 import Footer from '@/components/Footer';
-import { usePageTitle } from '@/hooks/use-page-title';
+import { useSEO } from '@/hooks/use-seo';
+import { SEO_PAGES, SCHEMAS } from '@/lib/seo-constants';
 
 const About = () => {
-  usePageTitle("About - MPHD Group");
+  useSEO({
+    ...SEO_PAGES.about,
+    structuredData: SCHEMAS.organization
+  });
   const teamMembers = [
     {
       name: 'Adv. Ankit Yadav',
