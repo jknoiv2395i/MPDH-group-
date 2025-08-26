@@ -11,6 +11,8 @@ import { useSEO } from "@/hooks/use-seo";
 import { SEO_PAGES, SCHEMAS } from "@/lib/seo-constants";
 import HyperLocalSEO, { BusinessHours } from "@/components/HyperLocalSEO";
 import { ServiceAreas } from "@/components/LocalAreaPages";
+import { initializeDailyOptimization } from "@/lib/daily-seo-optimizer";
+import { useEffect } from 'react';
 
 const Index = () => {
   useSEO({
@@ -20,6 +22,12 @@ const Index = () => {
       SCHEMAS.website
     ]
   });
+
+  // Initialize daily SEO optimization
+  useEffect(() => {
+    const dailyOptimization = initializeDailyOptimization();
+    console.log('Daily SEO Optimization Initialized:', dailyOptimization);
+  }, []);
 
   return (
     <>
