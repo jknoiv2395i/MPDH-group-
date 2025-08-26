@@ -53,30 +53,30 @@ export const SEO_PAGES = {
   },
   
   residential: {
-    title: 'Residential Properties in Nagpur - Buy, Sell & Rent Homes | MPHD Group',
-    description: 'Find residential properties in Nagpur with MPHD Group. Buy, sell, or rent homes in prime locations like KT Nagar, Dharampeth, Civil Lines, Sadar. Expert residential property services.',
-    keywords: 'residential properties Nagpur, buy home Nagpur, sell house Nagpur, rent apartment Nagpur, residential property consultants, homes for sale Nagpur, apartments for rent Nagpur',
+    title: 'Residential Properties in Nagpur 440008 - Buy, Sell & Rent Homes | MPHD Group',
+    description: 'Best residential properties in Nagpur 440008, Maharashtra. Buy, sell, rent homes in KT Nagar, Dharampeth, Civil Lines, Sadar. Top property dealers in Nagpur 440008 with 14+ years expertise.',
+    keywords: 'residential properties Nagpur 440008, buy home Nagpur Maharashtra, sell house Nagpur 440008, rent apartment Nagpur, residential property consultants Nagpur, homes for sale Nagpur 440008, apartments for rent Nagpur Maharashtra',
     canonicalUrl: `${SEO_CONFIG.siteUrl}/residential`,
   },
   
   commercial: {
-    title: 'Commercial Properties in Nagpur - Office Spaces, Retail & Business Properties | MPHD Group',
-    description: 'Commercial property solutions in Nagpur. Office spaces, retail properties, business establishments for sale and rent. Expert commercial real estate services by MPHD Group.',
-    keywords: 'commercial properties Nagpur, office space Nagpur, retail properties Nagpur, commercial real estate Nagpur, business properties for sale, office space for rent Nagpur',
+    title: 'Commercial Properties in Nagpur 440008 - Office Spaces & Business Properties',
+    description: 'Prime commercial properties in Nagpur 440008, Maharashtra. Office spaces, retail shops, business establishments for sale and rent. Leading commercial real estate consultants in Nagpur.',
+    keywords: 'commercial properties Nagpur 440008, office space Nagpur Maharashtra, retail properties Nagpur 440008, commercial real estate Nagpur, business properties for sale Nagpur 440008, office space for rent Nagpur',
     canonicalUrl: `${SEO_CONFIG.siteUrl}/commercial`,
   },
   
   industrial: {
-    title: 'Industrial Properties in Nagpur - Warehouses, Manufacturing & Industrial Land | MPHD Group',
-    description: 'Industrial property solutions in Nagpur. Warehouses, manufacturing facilities, industrial land for sale and lease. Expert industrial real estate consulting by MPHD Group.',
-    keywords: 'industrial properties Nagpur, warehouse for sale Nagpur, manufacturing facilities Nagpur, industrial land Nagpur, industrial real estate consultants',
+    title: 'Industrial Properties in Nagpur 440008 - Warehouses & Manufacturing Facilities',
+    description: 'Industrial properties in Nagpur 440008, Maharashtra. Warehouses, manufacturing facilities, industrial land for sale and lease. Expert industrial real estate consulting in Nagpur.',
+    keywords: 'industrial properties Nagpur 440008, warehouse for sale Nagpur Maharashtra, manufacturing facilities Nagpur 440008, industrial land Nagpur, industrial real estate consultants Nagpur',
     canonicalUrl: `${SEO_CONFIG.siteUrl}/industrial`,
   },
   
   projects: {
-    title: 'Real Estate Projects by MPHD Group - 50+ Completed Projects in Nagpur',
-    description: 'Explore 50+ successfully completed real estate projects by MPHD Group in Nagpur. Residential, commercial, and industrial developments with expert project management.',
-    keywords: 'MPHD Group projects, real estate projects Nagpur, completed projects, residential projects Nagpur, commercial projects, project management real estate',
+    title: 'MPHD Group Projects - 50+ Completed Real Estate Projects in Nagpur 440008',
+    description: 'Explore 50+ successfully completed real estate projects by MPHD Group in Nagpur 440008, Maharashtra. Award-winning residential, commercial & industrial developments.',
+    keywords: 'MPHD Group projects Nagpur 440008, real estate projects Nagpur Maharashtra, completed projects Nagpur, residential projects Nagpur 440008, commercial projects Nagpur, project management real estate Nagpur',
     canonicalUrl: `${SEO_CONFIG.siteUrl}/projects`,
   },
   
