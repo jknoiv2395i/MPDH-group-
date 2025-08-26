@@ -199,7 +199,7 @@ const Projects = () => {
             >
               <img
                 src="https://api.builder.io/api/v1/image/assets/TEMP/2bf588901604ca88af12a976de7d28ba79f2e66b?width=828"
-                alt="Achievements"
+                alt="MPHD Group project achievements showcase - completed residential and commercial developments"
                 className="w-full h-64 sm:h-80 lg:h-96 object-cover rounded-2xl"
               />
             </motion.div>

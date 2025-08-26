@@ -283,7 +283,7 @@ const Industrial = () => {
               >
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F701ea542ab5b4bb3a64f146c221a3d1d%2Fa99576c105274b32818247def8f321d1"
-                  alt="Property 1"
+                  alt="Industrial warehouse facility with loading docks and parking area"
                   className="w-full h-full object-cover rounded-[30px] hover:scale-105 transition-transform duration-300"
                 />
               </motion.div>
@@ -335,7 +335,7 @@ const Industrial = () => {
               >
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F701ea542ab5b4bb3a64f146c221a3d1d%2F4401cec37d6245e58e3abf569efcae32?format=webp"
-                  alt="Property 3"
+                  alt="Industrial commercial complex with modern infrastructure and access roads"
                   className="w-full h-full object-cover rounded-[30px] hover:scale-105 transition-transform duration-300"
                 />
               </motion.div>
@@ -396,7 +396,7 @@ const Industrial = () => {
                 </h2>
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F701ea542ab5b4bb3a64f146c221a3d1d%2F152e8c96235446c1965fd277e11cf95e?format=webp"
-                  alt="Property 6"
+                  alt="Large industrial facility exterior with office and manufacturing sections"
                   className="w-full h-full object-cover rounded-[30px] hover:scale-105 transition-transform duration-300"
                 />
                 <Button className="w-full bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-6 rounded-full mt-2.5">
@@ -419,7 +419,7 @@ const Industrial = () => {
               >
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F701ea542ab5b4bb3a64f146c221a3d1d%2F1a1d15c083eb48b5bf7365f4fa9a7406"
-                  alt="Property 3"
+                  alt="Industrial commercial complex with modern infrastructure and access roads"
                   className="w-full h-full object-cover rounded-[30px] hover:scale-105 transition-transform duration-300 mt-[136px]"
                 />
                 <Button className="w-full bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-6 rounded-full mt-3.5">
@@ -429,12 +429,12 @@ const Industrial = () => {
                   <div className="w-full h-[400px] md:h-[500px] lg:h-[638px] mb-6">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Feccf9e96f3f54e0db99db209e78762b2%2F1b4e75044d054361ab44eddb0def4bac"
-                      alt="Property 3"
+                      alt="Industrial commercial complex with modern infrastructure and access roads"
                       className="w-full h-full object-cover rounded-[30px] hover:scale-105 transition-transform duration-300 pt-0.5 mt-[51px]"
                     />
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Feccf9e96f3f54e0db99db209e78762b2%2F080388be217b4e04b6b0c1e4032cbed9"
-                      alt="Property 3"
+                      alt="Industrial commercial complex with modern infrastructure and access roads"
                       className="w-full h-full object-cover rounded-[30px] hover:scale-105 transition-transform duration-300 pt-0.5 mt-[90px]"
                     />
                     <Button className="w-full bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-6 rounded-full mt-[10px]">
@@ -457,7 +457,7 @@ const Industrial = () => {
                 <div className="w-full h-[400px] md:h-[500px] lg:h-[638px] -my-1 mb-6">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2Feccf9e96f3f54e0db99db209e78762b2%2F07be61527f89430689e152ce9eac2aa1"
-                    alt="Property 3"
+                    alt="Industrial commercial complex with modern infrastructure and access roads"
                     className="w-full h-full object-cover rounded-[30px] hover:scale-105 transition-transform duration-300 mt-[50px]"
                   />
                 </div>
@@ -471,7 +471,7 @@ const Industrial = () => {
                   </Button>
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2Feccf9e96f3f54e0db99db209e78762b2%2F1593d790f165447c9056bcb5172526bf"
-                    alt="Property 3"
+                    alt="Industrial commercial complex with modern infrastructure and access roads"
                     className="w-full h-full object-cover rounded-[30px] hover:scale-105 transition-transform duration-300 mt-[29px]"
                   />
                   <Button className="w-full bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-6 rounded-full mt-[11px]">
@@ -483,7 +483,7 @@ const Industrial = () => {
                 <div className="w-full h-[400px] md:h-[500px] lg:h-[638px] my-[190px] mb-6">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F701ea542ab5b4bb3a64f146c221a3d1d%2F4401cec37d6245e58e3abf569efcae32?format=webp"
-                    alt="Property 3"
+                    alt="Industrial commercial complex with modern infrastructure and access roads"
                     className="w-full h-full object-cover rounded-[30px] hover:scale-105 transition-transform duration-300 mt-[200px]"
                   />
                 </div>
