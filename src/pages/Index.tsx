@@ -7,10 +7,17 @@ import ConsultationSection from "@/components/ConsultationSection";
 import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
 import { MarqueeDemo } from "@/components/ui/marquee";
-import { usePageTitle } from "@/hooks/use-page-title";
+import { useSEO } from "@/hooks/use-seo";
+import { SEO_PAGES, SCHEMAS } from "@/lib/seo-constants";
 
 const Index = () => {
-  usePageTitle("Home - MPHD Group");
+  useSEO({
+    ...SEO_PAGES.home,
+    structuredData: [
+      SCHEMAS.organization,
+      SCHEMAS.website
+    ]
+  });
 
   return (
     <>
