@@ -5,10 +5,11 @@ import { FigmaNavBar } from '@/components/ui/figma-navbar';
 import { ChevronDown, MapPin, Menu, Grid } from 'lucide-react';
 import Footer from '@/components/Footer';
 import PropertyChoicePopup from '@/components/ui/PropertyChoicePopup';
-import { usePageTitle } from '@/hooks/use-page-title';
+import { useSEO } from '@/hooks/use-seo';
+import { SEO_PAGES } from '@/lib/seo-constants';
 
 const CommercialProperties = () => {
-  usePageTitle("Commercial - MPHD Group");
+  useSEO(SEO_PAGES.commercial);
   const navigate = useNavigate();
   const [viewMode, setViewMode] = useState<'list' | 'grid'>('list');
   const [showPopup, setShowPopup] = useState(false);

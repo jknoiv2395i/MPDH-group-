@@ -2,7 +2,8 @@ import { FigmaNavBar } from "@/components/ui/figma-navbar";
 import Footer from "@/components/Footer";
 import { motion, useMotionValue, useSpring, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
-import { usePageTitle } from "@/hooks/use-page-title";
+import { useSEO } from "@/hooks/use-seo";
+import { SEO_PAGES } from "@/lib/seo-constants";
 
 const Counter = ({ value, suffix = "", prefix = "", duration = 2 }) => {
   const ref = useRef(null);
@@ -36,7 +37,7 @@ const Counter = ({ value, suffix = "", prefix = "", duration = 2 }) => {
 };
 
 const Projects = () => {
-  usePageTitle("Projects - MPHD Group");
+  useSEO(SEO_PAGES.projects);
 
   // Animation variants
   const containerVariants = {

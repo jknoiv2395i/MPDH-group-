@@ -3,10 +3,11 @@ import { motion } from 'framer-motion';
 import { FigmaNavBar } from '@/components/ui/figma-navbar';
 import { ChevronDown, MapPin, Menu, Grid } from 'lucide-react';
 import Footer from '@/components/Footer';
-import { usePageTitle } from '@/hooks/use-page-title';
+import { useSEO } from '@/hooks/use-seo';
+import { SEO_PAGES } from '@/lib/seo-constants';
 
 const ResidentialRental = () => {
-  usePageTitle("Residential Rental - MPHD Group");
+  useSEO(SEO_PAGES.residentialRental);
   const [viewMode, setViewMode] = useState<'list' | 'grid'>('list');
   const [sortOrder, setSortOrder] = useState('New To Old');
 
