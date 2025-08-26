@@ -2,7 +2,8 @@ import { FigmaNavBar } from "@/components/ui/figma-navbar";
 import Footer from "@/components/Footer";
 import { motion, useMotionValue, useSpring, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
-import { usePageTitle } from "@/hooks/use-page-title";
+import { useSEO } from "@/hooks/use-seo";
+import { SEO_PAGES } from "@/lib/seo-constants";
 
 const Counter = ({ value, suffix = "", prefix = "", duration = 2 }) => {
   const ref = useRef(null);
@@ -36,7 +37,7 @@ const Counter = ({ value, suffix = "", prefix = "", duration = 2 }) => {
 };
 
 const Projects = () => {
-  usePageTitle("Projects - MPHD Group");
+  useSEO(SEO_PAGES.projects);
 
   // Animation variants
   const containerVariants = {
@@ -198,7 +199,7 @@ const Projects = () => {
             >
               <img
                 src="https://api.builder.io/api/v1/image/assets/TEMP/2bf588901604ca88af12a976de7d28ba79f2e66b?width=828"
-                alt="Achievements"
+                alt="MPHD Group project achievements showcase - completed residential and commercial developments"
                 className="w-full h-64 sm:h-80 lg:h-96 object-cover rounded-2xl"
               />
             </motion.div>

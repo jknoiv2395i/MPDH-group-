@@ -17,6 +17,7 @@ import ResidentialRental from "./pages/ResidentialRental";
 import Industrial from "./pages/Industrial";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
+import LocationSpecificPage, { ResidentialNagpur440008, CommercialNagpur440008 } from "./pages/LocationPages";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -40,6 +41,12 @@ const App = () => (
           <Route path="/industrial" element={<Industrial />} />
           <Route path="/about" element={<About />} />
           <Route path="/ai-assistant" element={<AIAssistantPage />} />
+
+          {/* Location-specific pages for local SEO */}
+          <Route path="/location/:area" element={<LocationSpecificPage />} />
+          <Route path="/residential-nagpur-440008" element={<ResidentialNagpur440008 />} />
+          <Route path="/commercial-nagpur-440008" element={<CommercialNagpur440008 />} />
+
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

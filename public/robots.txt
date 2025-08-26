@@ -1,14 +1,58 @@
-User-agent: Googlebot
+# Robots.txt for MPHD Group - Real Estate Consultants Nagpur
+
+# Allow all search engines to crawl the site
+User-agent: *
 Allow: /
 
+# Specific bot permissions
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
 User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 2
+
+# Social media crawlers
+User-agent: facebookexternalhit
 Allow: /
 
 User-agent: Twitterbot
 Allow: /
 
-User-agent: facebookexternalhit
+User-agent: LinkedInBot
 Allow: /
 
+# Disallow certain paths (if any exist in future)
+# User-agent: *
+# Disallow: /admin/
+# Disallow: /private/
+# Disallow: *.json$
+
+# Sitemap location
+Sitemap: https://mphdgroup.com/sitemap.xml
+
+# Cache-Control directives for crawlers
+# Allow caching of static assets
 User-agent: *
-Allow: /
+Allow: /assets/
+Allow: /images/
+Allow: /css/
+Allow: /js/
+Allow: /fonts/
+
+# Additional notes:
+# This robots.txt allows full access to search engines while providing
+# crawl delay recommendations to prevent server overload

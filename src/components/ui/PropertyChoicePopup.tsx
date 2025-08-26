@@ -43,7 +43,7 @@ const PropertyChoicePopup: React.FC<PropertyChoicePopupProps> = ({
 
             {/* Image */}
             <div className="mb-8">
-              <img src="https://api.builder.io/api/v1/image/assets/TEMP/c85e12fe2743f3c6c03ab9ebfcbf3568ae6d191a?width=562" alt="Purchase Option" className="w-full h-auto rounded-lg" />
+              <img src="https://api.builder.io/api/v1/image/assets/TEMP/c85e12fe2743f3c6c03ab9ebfcbf3568ae6d191a?width=562" alt="Property purchase illustration - modern residential building with sold sign" className="w-full h-auto rounded-lg" />
             </div>
 
             {/* Button */}
@@ -75,7 +75,7 @@ const PropertyChoicePopup: React.FC<PropertyChoicePopupProps> = ({
 
             {/* Image */}
             <div className="mb-8">
-              <img src="https://api.builder.io/api/v1/image/assets/TEMP/88cbf4e99eaaff254a045f55d352294425951e90?width=558" alt="Rent Option" className="w-full h-auto rounded-lg" />
+              <img src="https://api.builder.io/api/v1/image/assets/TEMP/88cbf4e99eaaff254a045f55d352294425951e90?width=558" alt="Property rental illustration - apartment building with for rent sign" className="w-full h-auto rounded-lg" />
             </div>
 
             {/* Button */}

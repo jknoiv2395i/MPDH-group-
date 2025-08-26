@@ -9,7 +9,7 @@ const Footer = () => {
               <div className="-mb-1">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F371acd9a25a7494cb5e15d62a5f4d89c%2Fb84c4269217e4d5fad47dc96ada4c10f?format=webp&width=800"
-                  alt="MPHD GROUP Logo"
+                  alt="MPHD Group - Real Estate Consultants Nagpur Logo"
                   className="h-[110px] w-[136px]"
                 />
               </div>
