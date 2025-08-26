@@ -9,6 +9,8 @@ import Footer from "@/components/Footer";
 import { MarqueeDemo } from "@/components/ui/marquee";
 import { useSEO } from "@/hooks/use-seo";
 import { SEO_PAGES, SCHEMAS } from "@/lib/seo-constants";
+import HyperLocalSEO, { BusinessHours } from "@/components/HyperLocalSEO";
+import { ServiceAreas } from "@/components/LocalAreaPages";
 
 const Index = () => {
   useSEO({
@@ -21,12 +23,20 @@ const Index = () => {
 
   return (
     <>
+      {/* Daily Local SEO Optimization */}
+      <HyperLocalSEO />
+      <BusinessHours />
+
       <HeroSection />
       <MarqueeDemo />
       <VisionSection />
       <ServicesSection />
       <CommitmentSection />
       <Testimonials />
+
+      {/* Local Service Areas Component */}
+      <ServiceAreas />
+
       <ConsultationSection />
       <FAQSection />
       <Footer />
