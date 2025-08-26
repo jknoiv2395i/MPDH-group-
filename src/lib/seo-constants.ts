@@ -1,4 +1,4 @@
-// SEO Constants for MPHD Group
+// SEO Constants for MPHD Group - Hyper-Local Nagpur 440008 Targeting
 export const SEO_CONFIG = {
   siteName: 'MPHD Group',
   siteUrl: 'https://mphdgroup.com',
@@ -7,23 +7,34 @@ export const SEO_CONFIG = {
     name: 'MPHD Group',
     foundedYear: '2011',
     experience: '14+ years',
-    location: 'Nagpur, Maharashtra, India',
-    description: 'Trusted real estate and infrastructure consulting company specializing in residential, commercial, and industrial property services, legal compliance, land acquisition, and architectural design.'
+    location: 'Nagpur, Maharashtra 440008, India',
+    fullAddress: 'Nagpur, Maharashtra 440008, India',
+    postalCode: '440008',
+    city: 'Nagpur',
+    state: 'Maharashtra',
+    country: 'India',
+    phone: '+91-712-XXXXXXX', // To be updated with actual number
+    email: 'info@mphdgroup.com', // To be updated with actual email
+    coordinates: {
+      latitude: 21.1458,
+      longitude: 79.0882
+    },
+    description: 'Leading real estate consultants in Nagpur 440008, Maharashtra. Trusted property advisors since 2011 specializing in residential, commercial & industrial properties in Nagpur with 14+ years local market expertise.'
   }
 };
 
 export const SEO_PAGES = {
   home: {
-    title: 'MPHD Group - Real Estate & Property Consultants in Nagpur, India',
-    description: 'MPHD Group - Trusted real estate consultants in Nagpur since 2011. Expert residential, commercial & industrial property services, legal compliance, land acquisition & architectural design. 14+ years experience.',
-    keywords: 'real estate Nagpur, property consultants Nagpur, MPHD Group, residential property Nagpur, commercial property Nagpur, industrial property Nagpur, property rentals Nagpur, land acquisition Nagpur, real estate agents Nagpur, property legal compliance',
+    title: 'MPHD Group - #1 Real Estate Consultants in Nagpur 440008, Maharashtra',
+    description: 'MPHD Group - Top real estate consultants in Nagpur 440008 since 2011. Expert property services in Maharashtra with 14+ years local expertise. Buy, sell, rent properties in Nagpur 440008. Free consultation available.',
+    keywords: 'real estate Nagpur 440008, property consultants Nagpur Maharashtra, MPHD Group Nagpur, residential property Nagpur 440008, commercial property Nagpur, real estate agents Nagpur 440008, property dealers Nagpur, buy property Nagpur 440008, sell property Nagpur, rent property Nagpur Maharashtra',
     canonicalUrl: `${SEO_CONFIG.siteUrl}/`,
   },
   
   about: {
-    title: 'About MPHD Group - 14+ Years of Real Estate Excellence in Nagpur',
-    description: 'Founded in 2011, MPHD Group has 14+ years of experience in real estate and infrastructure consulting in Nagpur. Strategic partners in property transactions, legal compliance, land acquisition, and infrastructure readiness.',
-    keywords: 'MPHD Group about, real estate company Nagpur, founded 2011, experienced property consultants Nagpur, real estate expertise Nagpur, trusted property advisors',
+    title: 'About MPHD Group - Leading Real Estate Company in Nagpur 440008 Since 2011',
+    description: 'Founded in 2011, MPHD Group is the leading real estate consultancy in Nagpur 440008, Maharashtra. 14+ years of local market expertise, 50+ completed projects, trusted by 1000+ clients in Nagpur.',
+    keywords: 'MPHD Group about, real estate company Nagpur 440008, founded 2011 Nagpur, experienced property consultants Maharashtra, real estate expertise Nagpur 440008, trusted property advisors Nagpur',
     canonicalUrl: `${SEO_CONFIG.siteUrl}/about`,
   },
   
@@ -35,9 +46,9 @@ export const SEO_PAGES = {
   },
   
   contact: {
-    title: 'Contact MPHD Group - Real Estate Consultants in Nagpur | Get Expert Property Advice',
-    description: 'Contact MPHD Group for expert real estate consulting in Nagpur. Get professional advice on residential, commercial, and industrial properties. Free consultation available.',
-    keywords: 'contact MPHD Group, real estate consultants Nagpur contact, property advice Nagpur, real estate consultation, property consultants contact number',
+    title: 'Contact MPHD Group Nagpur 440008 - Best Property Consultants in Maharashtra',
+    description: 'Contact MPHD Group in Nagpur 440008 for expert real estate consulting. Local property experts in Maharashtra. Call now for free consultation on buying, selling, renting properties in Nagpur.',
+    keywords: 'contact MPHD Group Nagpur 440008, real estate consultants Nagpur Maharashtra contact, property advice Nagpur 440008, real estate consultation Nagpur, property consultants contact number Maharashtra',
     canonicalUrl: `${SEO_CONFIG.siteUrl}/contact`,
   },
   
@@ -84,10 +95,33 @@ export const SEO_PAGES = {
   }
 };
 
-// Common local keywords for Nagpur areas
+// Hyper-local keywords for Nagpur 440008 and surrounding areas
 export const NAGPUR_AREAS = [
-  'KT Nagar', 'Dharampeth', 'Civil Lines', 'Sadar', 'Hingna Road', 
-  'Manish Nagar', 'Ramdaspeth', 'Wadi', 'Friends Colony', 'Kharbi'
+  'KT Nagar', 'Dharampeth', 'Civil Lines', 'Sadar', 'Hingna Road',
+  'Manish Nagar', 'Ramdaspeth', 'Wadi', 'Friends Colony', 'Kharbi',
+  'Sitabuldi', 'Laxmi Nagar', 'Bajaj Nagar', 'Seminary Hills', 'Pratap Nagar',
+  'Trimurti Nagar', 'Gandhibagh', 'Itwari', 'Mahal', 'Lakadganj'
+];
+
+// Daily SEO optimization keywords
+export const DAILY_KEYWORDS = [
+  'real estate Nagpur 440008',
+  'property dealers Nagpur Maharashtra',
+  'buy property Nagpur today',
+  'best real estate agents Nagpur',
+  'property for sale Nagpur 440008',
+  'rent property Nagpur Maharashtra',
+  'MPHD Group property consultants',
+  'Nagpur real estate market today',
+  'property investment Nagpur 440008',
+  'real estate services Nagpur Maharashtra'
+];
+
+// Location-specific business areas
+export const BUSINESS_COVERAGE_AREAS = [
+  'Nagpur 440008', 'Nagpur 440001', 'Nagpur 440010', 'Nagpur 440012',
+  'Nagpur 440015', 'Nagpur 440018', 'Nagpur 440022', 'Nagpur 440024',
+  'Central Nagpur', 'East Nagpur', 'West Nagpur', 'South Nagpur'
 ];
 
 // Structured data schemas
@@ -108,11 +142,33 @@ export const SCHEMAS = {
     "description": SEO_CONFIG.company.description,
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "Your Street Address", // To be updated
       "addressLocality": "Nagpur",
       "addressRegion": "Maharashtra",
+      "postalCode": "440008",
       "addressCountry": "IN"
     },
-    "areaServed": "Nagpur, Maharashtra, India",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 21.1458,
+      "longitude": 79.0882
+    },
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "Nagpur",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "Maharashtra",
+          "containedInPlace": {
+            "@type": "Country",
+            "name": "India"
+          }
+        }
+      }
+    ],
+    "telephone": "+91-712-XXXXXXX",
+    "email": "info@mphdgroup.com",
     "serviceType": [
       "Real Estate Consulting",
       "Property Management", 
