@@ -325,6 +325,14 @@ export function FigmaNavBar({ className }: NavBarProps) {
           </nav>
         </div>
       )}
+
+      {/* Property Choice Popup */}
+      <PropertyChoicePopup
+        isOpen={showPropertyPopup}
+        onClose={handleClosePopup}
+        onPurchaseClick={handlePurchaseClick}
+        onRentClick={handleRentClick}
+      />
     </header>
   )
 }
