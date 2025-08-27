@@ -203,7 +203,7 @@ const CommercialProperties = () => {
 
       {/* Hero Section */}
       <motion.section
-        className="relative h-[824px] flex items-center justify-center overflow-hidden text-[#2d93b9] bg-[#3195bc]"
+        className="relative h-[569px] flex items-center justify-center overflow-hidden text-[#2d93b9] bg-[#3195bc]"
         initial="hidden"
         animate="visible"
         variants={containerVariants}
@@ -212,7 +212,15 @@ const CommercialProperties = () => {
         <motion.img
           src="https://api.builder.io/api/v1/image/assets/TEMP/fd64f5bc9182eae5c8cc8191e52b62acb0a392eb?width=4794"
           alt="Commercial Properties Background"
-          className="absolute w-full h-full object-cover top-[200px]"
+          className="absolute object-cover"
+          style={{
+            height: "99%",
+            top: "183px",
+            width: "805%",
+            maxWidth: "112%",
+            minHeight: "147px",
+            left: "-81px"
+          }}
           initial={{ opacity: 0, scale: 1.05 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{
@@ -223,9 +231,10 @@ const CommercialProperties = () => {
         />
 
         {/* Hero Content */}
-        <div className="relative z-10 text-center px-4 pb-[400px]">
+        <div className="relative z-10 text-center px-4 pb-[400px]" style={{ marginTop: "-5px" }}>
           <motion.h1
-            className="font-instrument text-[111px] font-normal leading-[75.6px] text-white tracking-[-2.3px] h-[81.6px]"
+            className="font-instrument text-[93px] font-normal leading-[75.6px] text-white tracking-[-2.3px] h-[81.6px]"
+            style={{ marginTop: "111px" }}
             variants={headlineVariants}
           >
             Commercial Properties
@@ -235,7 +244,7 @@ const CommercialProperties = () => {
 
       {/* Main Content */}
       <motion.section
-        className="pt-[34px] pb-20 px-4 md:px-8 lg:px-16 xl:px-24"
+        className="pt-[34px] pb-20 px-4 md:px-8 lg:px-24 xl:px-24"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-50px" }}

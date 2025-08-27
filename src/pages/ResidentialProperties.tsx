@@ -212,25 +212,17 @@ const ResidentialProperties = () => {
 
       {/* Hero Section */}
       <motion.section
-        className="relative h-[600px] md:h-[732px] flex items-center justify-center overflow-hidden"
+        className="relative h-[569px] flex items-center justify-center overflow-hidden"
+        style={{
+          backgroundImage: "url(https://cdn.builder.io/api/v1/image/assets%2Feccf9e96f3f54e0db99db209e78762b2%2Fd2807e0ed4c545d9b8fa46455c7318e7)",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          backgroundSize: "cover"
+        }}
         initial="hidden"
         animate="visible"
         variants={containerVariants}
       >
-        {/* Background Image */}
-        <motion.img
-          src="https://api.builder.io/api/v1/image/assets/TEMP/8d4ffccf04b7eb57f4736f6c8132230ec51f5a91?width=3810"
-          alt="Residential Properties Background"
-          className="absolute inset-0 object-cover"
-          style={{ height: '81%', width: '126%' }}
-          initial={{ opacity: 0, scale: 1.05 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{
-            duration: 2,
-            ease: "easeOut",
-            delay: 0.5
-          }}
-        />
 
         {/* Hero Content */}
         <div className="relative z-10 text-center px-4 pb-[105px]">
@@ -238,7 +230,7 @@ const ResidentialProperties = () => {
             className="font-instrument text-[100px] font-normal leading-[236px] text-white tracking-[1px] h-[359px]"
             variants={headlineVariants}
           >
-            <p>Residential Properties</p>
+            <div style={{ marginTop: "33px" }}>Residential Properties</div>
           </motion.h1>
         </div>
       </motion.section>
