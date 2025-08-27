@@ -214,8 +214,8 @@ const CommercialProperties = () => {
           alt="Commercial Properties Background"
           className="absolute object-cover"
           style={{
-            height: "104%",
-            top: "138px",
+            height: "99%",
+            top: "183px",
             width: "805%",
             maxWidth: "112%",
             minHeight: "147px",
