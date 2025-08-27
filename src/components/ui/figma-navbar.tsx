@@ -61,7 +61,27 @@ const dropdownContent = {
 export function FigmaNavBar({ className }: NavBarProps) {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [showPropertyPopup, setShowPropertyPopup] = useState(false)
   const navRef = useRef<HTMLElement>(null)
+  const navigate = useNavigate()
+
+  const handleLogoClick = () => {
+    setShowPropertyPopup(true)
+  }
+
+  const handlePurchaseClick = () => {
+    setShowPropertyPopup(false)
+    navigate('/residential')
+  }
+
+  const handleRentClick = () => {
+    setShowPropertyPopup(false)
+    navigate('/residential-rental')
+  }
+
+  const handleClosePopup = () => {
+    setShowPropertyPopup(false)
+  }
 
   // Close dropdown when clicking outside
   useEffect(() => {
