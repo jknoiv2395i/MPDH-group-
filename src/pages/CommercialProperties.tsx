@@ -203,7 +203,7 @@ const CommercialProperties = () => {
 
       {/* Hero Section */}
       <motion.section
-        className="relative h-[698px] flex items-center justify-center overflow-hidden text-[#2d93b9] bg-[#3195bc]"
+        className="relative h-[583px] flex items-center justify-center overflow-hidden text-[#2d93b9] bg-[#3195bc]"
         initial="hidden"
         animate="visible"
         variants={containerVariants}
@@ -214,8 +214,8 @@ const CommercialProperties = () => {
           alt="Commercial Properties Background"
           className="absolute object-cover"
           style={{
-            height: "89%",
-            top: "190px",
+            height: "106%",
+            top: "170px",
             width: "438%",
             maxWidth: "118%",
             minHeight: "147px"
@@ -233,7 +233,7 @@ const CommercialProperties = () => {
         <div className="relative z-10 text-center px-4 pb-[400px]">
           <motion.h1
             className="font-instrument text-[111px] font-normal leading-[75.6px] text-white tracking-[-2.3px] h-[81.6px]"
-            style={{ marginTop: "81px" }}
+            style={{ marginTop: "84px" }}
             variants={headlineVariants}
           >
             Commercial Properties
