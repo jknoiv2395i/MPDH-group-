@@ -221,7 +221,8 @@ const ResidentialProperties = () => {
         <motion.img
           src="https://api.builder.io/api/v1/image/assets/TEMP/8d4ffccf04b7eb57f4736f6c8132230ec51f5a91?width=3810"
           alt="Residential Properties Background"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 object-cover"
+          style={{ height: '65%', width: '126%' }}
           initial={{ opacity: 0, scale: 1.05 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{
@@ -244,7 +245,7 @@ const ResidentialProperties = () => {
 
       {/* Properties Section */}
       <motion.section
-        className="py-12 md:py-20 px-4 md:px-8 lg:px-16 xl:px-24"
+        className="pb-12 md:pb-20 px-4 md:px-8 lg:px-16 xl:px-24"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-50px" }}
