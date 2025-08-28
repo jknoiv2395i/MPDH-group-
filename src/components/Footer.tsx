@@ -23,22 +23,22 @@ const Footer = () => {
             {/* Navigation Links */}
             <nav className="w-full">
               <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 text-sm">
-                <li><a href="/" className="block text-white/90 hover:text-white transition-colors">Home</a></li>
-                <li><a href="/landing" className="block text-white/90 hover:text-white transition-colors">Landing</a></li>
-                <li><a href="/about" className="block text-white/90 hover:text-white transition-colors">About</a></li>
-                <li><a href="/services" className="block text-white/90 hover:text-white transition-colors">Services</a></li>
-                <li><a href="/projects" className="block text-white/90 hover:text-white transition-colors">Projects</a></li>
-                <li><a href="/properties" className="block text-white/90 hover:text-white transition-colors">Properties</a></li>
-                <li><a href="/residential" className="block text-white/90 hover:text-white transition-colors">Residential Properties</a></li>
-                <li><a href="/residential-rental" className="block text-white/90 hover:text-white transition-colors">Residential Rentals</a></li>
-                <li><a href="/commercial" className="block text-white/90 hover:text-white transition-colors">Commercial Properties</a></li>
-                <li><a href="/commercial-rental" className="block text-white/90 hover:text-white transition-colors">Commercial Rentals</a></li>
-                <li><a href="/industrial" className="block text-white/90 hover:text-white transition-colors">Industrial</a></li>
-                <li><a href="/contact" className="block text-white/90 hover:text-white transition-colors">Contact</a></li>
-                <li><a href="/ai-assistant" className="block text-white/90 hover:text-white transition-colors">AI Assistant</a></li>
-                <li><a href="/service-areas" className="block text-white/90 hover:text-white transition-colors">Service Areas</a></li>
-                <li><a href="/residential-nagpur-440008" className="block text-white/90 hover:text-white transition-colors">Residential Nagpur 440008</a></li>
-                <li><a href="/commercial-nagpur-440008" className="block text-white/90 hover:text-white transition-colors">Commercial Nagpur 440008</a></li>
+                <li><Link to="/" className="block text-white/90 hover:text-white transition-colors">Home</Link></li>
+                <li><Link to="/landing" className="block text-white/90 hover:text-white transition-colors">Landing</Link></li>
+                <li><Link to="/about" className="block text-white/90 hover:text-white transition-colors">About</Link></li>
+                <li><Link to="/services" className="block text-white/90 hover:text-white transition-colors">Services</Link></li>
+                <li><Link to="/projects" className="block text-white/90 hover:text-white transition-colors">Projects</Link></li>
+                <li><Link to="/properties" className="block text-white/90 hover:text-white transition-colors">Properties</Link></li>
+                <li><Link to="/residential" className="block text-white/90 hover:text-white transition-colors">Residential Properties</Link></li>
+                <li><Link to="/residential-rental" className="block text-white/90 hover:text-white transition-colors">Residential Rentals</Link></li>
+                <li><Link to="/commercial" className="block text-white/90 hover:text-white transition-colors">Commercial Properties</Link></li>
+                <li><Link to="/commercial-rental" className="block text-white/90 hover:text-white transition-colors">Commercial Rentals</Link></li>
+                <li><Link to="/industrial" className="block text-white/90 hover:text-white transition-colors">Industrial</Link></li>
+                <li><Link to="/contact" className="block text-white/90 hover:text-white transition-colors">Contact</Link></li>
+                <li><Link to="/ai-assistant" className="block text-white/90 hover:text-white transition-colors">AI Assistant</Link></li>
+                <li><Link to="/service-areas" className="block text-white/90 hover:text-white transition-colors">Service Areas</Link></li>
+                <li><Link to="/residential-nagpur-440008" className="block text-white/90 hover:text-white transition-colors">Residential Nagpur 440008</Link></li>
+                <li><Link to="/commercial-nagpur-440008" className="block text-white/90 hover:text-white transition-colors">Commercial Nagpur 440008</Link></li>
               </ul>
             </nav>
           </div>
