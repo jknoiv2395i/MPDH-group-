@@ -51,7 +51,14 @@ export const SEO_PAGES = {
     keywords: 'contact MPHD Group Nagpur 440008, real estate consultants Nagpur Maharashtra contact, property advice Nagpur 440008, real estate consultation Nagpur, property consultants contact number Maharashtra',
     canonicalUrl: `${SEO_CONFIG.siteUrl}/contact`,
   },
-  
+
+  serviceAreas: {
+    title: 'Service Areas in Nagpur 440008 - Local Real Estate Coverage | MPHD Group',
+    description: 'Explore all areas we serve across Nagpur, Maharashtra including KT Nagar, Dharampeth, Civil Lines, Sadar, and more. Local real estate experts for buying, selling, and renting properties.',
+    keywords: 'service areas Nagpur 440008, areas we serve Nagpur, real estate coverage Nagpur, local property services Nagpur, MPHD Group service locations',
+    canonicalUrl: `${SEO_CONFIG.siteUrl}/service-areas`,
+  },
+
   residential: {
     title: 'Residential Properties in Nagpur 440008 - Buy, Sell & Rent Homes | MPHD Group',
     description: 'Best residential properties in Nagpur 440008, Maharashtra. Buy, sell, rent homes in KT Nagar, Dharampeth, Civil Lines, Sadar. Top property dealers in Nagpur 440008 with 14+ years expertise.',

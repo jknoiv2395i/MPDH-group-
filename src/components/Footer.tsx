@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const Footer = () => {
   return (
     <footer className="bg-[#131313] text-white py-20">
@@ -19,47 +21,70 @@ const Footer = () => {
             </div>
 
             {/* Navigation Links */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-sm">
-              <div className="space-y-4">
-                <a href="#" className="block text-white/75 hover:text-white transition-colors">Home V.1</a>
-                <a href="#" className="block text-white/75 hover:text-white transition-colors">Home V.2</a>
-                <a href="#" className="block text-white/75 hover:text-white transition-colors">Home V.3</a>
-                <a href="#" className="block text-white/75 hover:text-white transition-colors">Services</a>
-                <a href="#" className="block text-white/75 hover:text-white transition-colors">About Us</a>
+            <nav className="grid grid-cols-2 md:grid-cols-4 gap-10 w-full text-sm">
+              <div>
+                <h4 className="text-white/60 uppercase tracking-wider text-xs mb-4">Company</h4>
+                <ul className="space-y-3">
+                  <li><Link to="/" className="text-white/90 hover:text-white transition-colors">Home</Link></li>
+                  <li><Link to="/about" className="text-white/90 hover:text-white transition-colors">About</Link></li>
+                  <li><Link to="/contact" className="text-white/90 hover:text-white transition-colors">Contact</Link></li>
+                </ul>
               </div>
 
-              <div className="space-y-4">
-                <a href="#" className="block text-white/75 hover:text-white transition-colors">Contact V.1</a>
-                <a href="#" className="block text-white/75 hover:text-white transition-colors">Contact V.2</a>
-                <a href="#" className="block text-white/75 hover:text-white transition-colors">Contact V.3</a>
-                <a href="#" className="block text-white/75 hover:text-white transition-colors">Product</a>
-                <a href="#" className="block text-white/75 hover:text-white transition-colors">Categories</a>
+              <div>
+                <h4 className="text-white/60 uppercase tracking-wider text-xs mb-4">Services</h4>
+                <ul className="space-y-3">
+                  <li><Link to="/services" className="text-white/90 hover:text-white transition-colors">Services</Link></li>
+                  <li><Link to="/projects" className="text-white/90 hover:text-white transition-colors">Projects</Link></li>
+                  <li><Link to="/industrial" className="text-white/90 hover:text-white transition-colors">Industrial</Link></li>
+                  <li><Link to="/landing" className="text-white/90 hover:text-white transition-colors">Landing</Link></li>
+                </ul>
               </div>
 
-              <div className="space-y-4">
-                <a href="#" className="block text-white/75 hover:text-white transition-colors">Projects V.1</a>
-                <a href="#" className="block text-white/75 hover:text-white transition-colors">Projects V.2</a>
-                <a href="#" className="block text-white/75 hover:text-white transition-colors">Projects V.3</a>
-                <a href="#" className="block text-white/75 hover:text-white transition-colors">Inner case study</a>
+              <div>
+                <h4 className="text-white/60 uppercase tracking-wider text-xs mb-4">Properties</h4>
+                <ul className="space-y-3">
+                  <li><Link to="/properties" className="text-white/90 hover:text-white transition-colors">All Properties</Link></li>
+                  <li><Link to="/residential" className="text-white/90 hover:text-white transition-colors">Residential</Link></li>
+                  <li><Link to="/commercial" className="text-white/90 hover:text-white transition-colors">Commercial</Link></li>
+                  <li><Link to="/residential-rental" className="text-white/90 hover:text-white transition-colors">Residential Rentals</Link></li>
+                  <li><Link to="/commercial-rental" className="text-white/90 hover:text-white transition-colors">Commercial Rentals</Link></li>
+                </ul>
               </div>
 
-              <div className="space-y-4">
-                <a href="#" className="block text-white/75 hover:text-white transition-colors">Blogs</a>
-                <a href="#" className="block text-white/75 hover:text-white transition-colors">Inner blog</a>
+              <div>
+                <h4 className="text-white/60 uppercase tracking-wider text-xs mb-4">Local Pages</h4>
+                <ul className="space-y-3">
+                  <li><Link to="/service-areas" className="text-white/90 hover:text-white transition-colors">Service Areas</Link></li>
+                  <li><Link to="/residential-nagpur-440008" className="text-white/90 hover:text-white transition-colors">Residential Nagpur 440008</Link></li>
+                  <li><Link to="/commercial-nagpur-440008" className="text-white/90 hover:text-white transition-colors">Commercial Nagpur 440008</Link></li>
+                </ul>
               </div>
-            </div>
+            </nav>
           </div>
 
           {/* Bottom Section */}
-          <div className="flex flex-col md:flex-row justify-between items-center pt-16 mt-16 border-t border-white/10">
-            <p className="text-white font-inter text-base mb-4 md:mb-0">
-              © 2025 Temlis. All right Reserved
-            </p>
-            
-            <div className="flex gap-6 text-sm">
-              <a href="#" className="text-white/75 hover:text-white transition-colors">Powered by Webflow</a>
-              <a href="#" className="text-white/75 hover:text-white transition-colors">Style Guide</a>
-              <a href="#" className="text-white/75 hover:text-white transition-colors">Licensing</a>
+          <div className="flex flex-col md:flex-row justify-between items-start border-t border-white/10">
+            <div className="font-inter text-[#989898]">
+              <p><strong>Office Address</strong></p>
+              <p>
+                Bhandara Road, Behind Jk Tower, Small Factory Area Bagadgangj
+                <br />
+                Nagper Maharashtra-2440008
+                <br />
+                <br />
+              </p>
+              <p><strong>Phone Number</strong></p>
+              <p>office: 7387777085</p>
+              <p>
+                Mobile:-7387777686/8275046765
+                <br />
+                <br />
+                EMAIL :- info@mphdgroup.com
+              </p>
+              <p>
+                <br />
+              </p>
             </div>
           </div>
         </div>

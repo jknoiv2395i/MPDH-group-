@@ -15,6 +15,7 @@ import CommercialProperties from "./pages/CommercialProperties";
 import CommercialRental from "./pages/CommercialRental";
 import ResidentialRental from "./pages/ResidentialRental";
 import Industrial from "./pages/Industrial";
+import ServiceAreasPage from "./pages/ServiceAreas";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
 import LocationSpecificPage, { ResidentialNagpur440008, CommercialNagpur440008 } from "./pages/LocationPages";
@@ -40,6 +41,7 @@ const App = () => (
           <Route path="/commercial-rental" element={<CommercialRental />} />
           <Route path="/industrial" element={<Industrial />} />
           <Route path="/about" element={<About />} />
+          <Route path="/service-areas" element={<ServiceAreasPage />} />
           <Route path="/ai-assistant" element={<AIAssistantPage />} />
 
           {/* Location-specific pages for local SEO */}

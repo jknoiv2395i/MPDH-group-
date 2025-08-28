@@ -19,7 +19,7 @@ const navItems: NavItem[] = [
   { name: 'Residential', url: '/residential', hasDropdown: true },
   { name: 'Commercial', url: '/commercial', hasDropdown: true },
   { name: 'Industrial', url: '/industrial' },
-  { name: 'Services', url: '/services' },
+  { name: 'Contact us', url: '/services' },
   { name: 'About', url: '/about', hasDropdown: true },
 ]
 

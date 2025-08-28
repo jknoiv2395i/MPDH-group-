@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { useSEO } from "@/hooks/use-seo";
 import { SEO_PAGES } from "@/lib/seo-constants";
+import { toast } from "@/hooks/use-toast";
 
 const Services = () => {
   useSEO({
@@ -62,8 +63,8 @@ const Services = () => {
   });
   const [formData, setFormData] = useState({
     fullName: '',
+    phone: '',
     email: '',
-    company: '',
     projectInfo: ''
   });
 
@@ -77,9 +78,60 @@ const Services = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const normalizePhone = (raw: string) => {
+    const onlyDigits = raw.replace(/\D/g, "");
+    if (onlyDigits.length >= 10) {
+      const local = onlyDigits.slice(-10);
+      const cc = onlyDigits.slice(0, Math.max(onlyDigits.length - 10, 1));
+      return `+${cc}-${local}`;
+    }
+    return raw.trim();
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+
+    const firstName = (formData.fullName || "").trim().split(/\s+/)[0] || "";
+
+    if (!firstName) {
+      toast({ title: "Name required", description: "Please enter your full name." });
+      return;
+    }
+    if (!formData.phone?.trim()) {
+      toast({ title: "Phone required", description: "Please enter your phone number." });
+      return;
+    }
+    if (!formData.email?.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      toast({ title: "Valid email required", description: "Please enter a valid email address." });
+      return;
+    }
+
+    const formattedPhone = normalizePhone(formData.phone);
+
+    const payload = {
+      name: firstName,
+      phone: formattedPhone,
+      email: formData.email,
+      remark: formData.projectInfo?.trim() || "N/A",
+    };
+
+    try {
+      const res = await fetch("https://api.realestate.orggencrm.com/api/hit/h6ICio9glvMg/5VOZw41jNX", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      if (!res.ok) {
+        throw new Error(`Request failed: ${res.status}`);
+      }
+
+      toast({ title: "Submitted", description: "We received your details. Our team will contact you soon." });
+      setFormData({ fullName: "", phone: "", email: "", projectInfo: "" });
+    } catch (err) {
+      console.error(err);
+      toast({ title: "Submission failed", description: "Please try again later.", variant: "destructive" as any });
+    }
   };
 
   const toggleFAQ = (index: number) => {
@@ -241,7 +293,7 @@ const Services = () => {
         <div className="relative z-10 flex items-center min-h-screen p-4 md:p-8">
           <motion.div
             className="w-full max-w-2xl bg-white rounded-2xl p-6 md:p-8 lg:p-12 shadow-lg mx-auto"
-            style={{ marginTop: "108px" }}
+            style={{ marginTop: "60px" }}
             variants={containerVariants}
             initial="hidden"
             animate="visible"
@@ -254,7 +306,7 @@ const Services = () => {
                 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-normal text-black mb-4 tracking-tight"
                 variants={headlineVariants}
               >
-                Connect with us
+                Contact us
               </motion.h1>
               <motion.p 
                 className="font-inter text-base md:text-lg text-gray-600 tracking-wide"
@@ -289,6 +341,27 @@ const Services = () => {
               {/* Email Address */}
               <motion.div className="space-y-3" variants={itemVariants}>
                 <Label htmlFor="email" className="font-inter text-lg text-gray-900 tracking-wide">
+                  Phone number
+                </Label>
+                <motion.div
+                  whileFocus={{ scale: 1.02 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <Input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    placeholder="Your phone number"
+                    className="h-16 rounded-2xl border-blue-200 text-lg font-inter placeholder:text-gray-400 px-5 transition-all duration-200 hover:border-blue-300 focus:border-blue-400"
+                  />
+                </motion.div>
+              </motion.div>
+
+              {/* Company Name */}
+              <motion.div className="space-y-3" variants={itemVariants}>
+                <Label htmlFor="company" className="font-inter text-lg text-gray-900 tracking-wide">
                   Email address
                 </Label>
                 <motion.div
@@ -302,26 +375,6 @@ const Services = () => {
                     value={formData.email}
                     onChange={handleInputChange}
                     placeholder="Your mail address"
-                    className="h-16 rounded-2xl border-blue-200 text-lg font-inter placeholder:text-gray-400 px-5 transition-all duration-200 hover:border-blue-300 focus:border-blue-400"
-                  />
-                </motion.div>
-              </motion.div>
-
-              {/* Company Name */}
-              <motion.div className="space-y-3" variants={itemVariants}>
-                <Label htmlFor="company" className="font-inter text-lg text-gray-900 tracking-wide">
-                  Company name
-                </Label>
-                <motion.div
-                  whileFocus={{ scale: 1.02 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <Input
-                    id="company"
-                    name="company"
-                    value={formData.company}
-                    onChange={handleInputChange}
-                    placeholder="Company name"
                     className="h-16 rounded-2xl border-blue-200 text-lg font-inter placeholder:text-gray-400 px-5 transition-all duration-200 hover:border-blue-300 focus:border-blue-400"
                   />
                 </motion.div>
@@ -368,7 +421,7 @@ const Services = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="bg-white" style={{ padding: '123px 0 80px' }}>
+      <section className="bg-white" style={{ padding: '39px 0 80px' }}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-0">
           {/* Header */}
           <motion.div 
