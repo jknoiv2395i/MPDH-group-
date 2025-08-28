@@ -75,9 +75,9 @@ const Footer = () => {
                 <br />
               </p>
               <p><strong>Phone Number</strong></p>
-              <p>office: 7387777085</p>
+              <p>office: <a href="tel:+917387777085">7387777085</a></p>
               <p>
-                Mobile:-7387777686/8275046765
+                Mobile: <a href="tel:+917387777686">7387777686</a> / <a href="tel:+918275046765">8275046765</a>
                 <br />
                 <br />
                 EMAIL :- info@mphdgroup.com
