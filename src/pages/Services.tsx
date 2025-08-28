@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { useSEO } from "@/hooks/use-seo";
 import { SEO_PAGES } from "@/lib/seo-constants";
+import { toast } from "@/hooks/use-toast";
 
 const Services = () => {
   useSEO({
@@ -77,9 +78,42 @@ const Services = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+
+    const firstName = (formData.fullName || "").trim().split(/\s+/)[0] || "";
+
+    // Format phone as +<country>-<number> if possible
+    let formattedPhone = (formData.phone || "").trim();
+    const m = formattedPhone.replace(/\s+/g, "").match(/^\+?(\d{1,3})[-]?([0-9]{5,})$/);
+    if (m) {
+      formattedPhone = `+${m[1]}-${m[2]}`;
+    }
+
+    const payload = {
+      name: firstName,
+      phone: formattedPhone,
+      email: formData.email,
+      remark: formData.projectInfo,
+    };
+
+    try {
+      const res = await fetch("https://api.realestate.orggencrm.com/api/hit/h6ICio9glvMg/5VOZw41jNX", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      if (!res.ok) {
+        throw new Error(`Request failed: ${res.status}`);
+      }
+
+      toast({ title: "Submitted", description: "We received your details. Our team will contact you soon." });
+      setFormData({ fullName: "", phone: "", email: "", projectInfo: "" });
+    } catch (err) {
+      console.error(err);
+      toast({ title: "Submission failed", description: "Please try again later.", variant: "destructive" as any });
+    }
   };
 
   const toggleFAQ = (index: number) => {
