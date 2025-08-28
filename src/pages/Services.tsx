@@ -254,7 +254,7 @@ const Services = () => {
                 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-normal text-black mb-4 tracking-tight"
                 variants={headlineVariants}
               >
-                Connect with us
+                Contact us
               </motion.h1>
               <motion.p 
                 className="font-inter text-base md:text-lg text-gray-600 tracking-wide"
