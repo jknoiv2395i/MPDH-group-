@@ -19,35 +19,26 @@ const Footer = () => {
             </div>
 
             {/* Navigation Links */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-sm">
-              <div className="space-y-4">
-                <a href="#" className="block text-white/75 hover:text-white transition-colors">Home V.1</a>
-                <a href="#" className="block text-white/75 hover:text-white transition-colors">Home V.2</a>
-                <a href="#" className="block text-white/75 hover:text-white transition-colors">Home V.3</a>
-                <a href="#" className="block text-white/75 hover:text-white transition-colors">Services</a>
-                <a href="#" className="block text-white/75 hover:text-white transition-colors">About Us</a>
-              </div>
-
-              <div className="space-y-4">
-                <a href="#" className="block text-white/75 hover:text-white transition-colors">Contact V.1</a>
-                <a href="#" className="block text-white/75 hover:text-white transition-colors">Contact V.2</a>
-                <a href="#" className="block text-white/75 hover:text-white transition-colors">Contact V.3</a>
-                <a href="#" className="block text-white/75 hover:text-white transition-colors">Product</a>
-                <a href="#" className="block text-white/75 hover:text-white transition-colors">Categories</a>
-              </div>
-
-              <div className="space-y-4">
-                <a href="#" className="block text-white/75 hover:text-white transition-colors">Projects V.1</a>
-                <a href="#" className="block text-white/75 hover:text-white transition-colors">Projects V.2</a>
-                <a href="#" className="block text-white/75 hover:text-white transition-colors">Projects V.3</a>
-                <a href="#" className="block text-white/75 hover:text-white transition-colors">Inner case study</a>
-              </div>
-
-              <div className="space-y-4">
-                <a href="#" className="block text-white/75 hover:text-white transition-colors">Blogs</a>
-                <a href="#" className="block text-white/75 hover:text-white transition-colors">Inner blog</a>
-              </div>
-            </div>
+            <nav className="w-full">
+              <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 text-sm">
+                <li><a href="/" className="block text-white/90 hover:text-white transition-colors">Home</a></li>
+                <li><a href="/landing" className="block text-white/90 hover:text-white transition-colors">Landing</a></li>
+                <li><a href="/about" className="block text-white/90 hover:text-white transition-colors">About</a></li>
+                <li><a href="/services" className="block text-white/90 hover:text-white transition-colors">Services</a></li>
+                <li><a href="/projects" className="block text-white/90 hover:text-white transition-colors">Projects</a></li>
+                <li><a href="/properties" className="block text-white/90 hover:text-white transition-colors">Properties</a></li>
+                <li><a href="/residential" className="block text-white/90 hover:text-white transition-colors">Residential Properties</a></li>
+                <li><a href="/residential-rental" className="block text-white/90 hover:text-white transition-colors">Residential Rentals</a></li>
+                <li><a href="/commercial" className="block text-white/90 hover:text-white transition-colors">Commercial Properties</a></li>
+                <li><a href="/commercial-rental" className="block text-white/90 hover:text-white transition-colors">Commercial Rentals</a></li>
+                <li><a href="/industrial" className="block text-white/90 hover:text-white transition-colors">Industrial</a></li>
+                <li><a href="/contact" className="block text-white/90 hover:text-white transition-colors">Contact</a></li>
+                <li><a href="/ai-assistant" className="block text-white/90 hover:text-white transition-colors">AI Assistant</a></li>
+                <li><a href="/service-areas" className="block text-white/90 hover:text-white transition-colors">Service Areas</a></li>
+                <li><a href="/residential-nagpur-440008" className="block text-white/90 hover:text-white transition-colors">Residential Nagpur 440008</a></li>
+                <li><a href="/commercial-nagpur-440008" className="block text-white/90 hover:text-white transition-colors">Commercial Nagpur 440008</a></li>
+              </ul>
+            </nav>
           </div>
 
           {/* Bottom Section */}
