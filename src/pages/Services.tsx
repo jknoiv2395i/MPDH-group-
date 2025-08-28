@@ -62,8 +62,8 @@ const Services = () => {
   });
   const [formData, setFormData] = useState({
     fullName: '',
+    phone: '',
     email: '',
-    company: '',
     projectInfo: ''
   });
 
@@ -296,12 +296,12 @@ const Services = () => {
                   transition={{ duration: 0.2 }}
                 >
                   <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    value={formData.email}
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    value={formData.phone}
                     onChange={handleInputChange}
-                    placeholder="Your mail address"
+                    placeholder="Your phone number"
                     className="h-16 rounded-2xl border-blue-200 text-lg font-inter placeholder:text-gray-400 px-5 transition-all duration-200 hover:border-blue-300 focus:border-blue-400"
                   />
                 </motion.div>
@@ -317,11 +317,12 @@ const Services = () => {
                   transition={{ duration: 0.2 }}
                 >
                   <Input
-                    id="company"
-                    name="company"
-                    value={formData.company}
+                    id="email"
+                    name="email"
+                    type="email"
+                    value={formData.email}
                     onChange={handleInputChange}
-                    placeholder="Company name"
+                    placeholder="Your mail address"
                     className="h-16 rounded-2xl border-blue-200 text-lg font-inter placeholder:text-gray-400 px-5 transition-all duration-200 hover:border-blue-300 focus:border-blue-400"
                   />
                 </motion.div>
