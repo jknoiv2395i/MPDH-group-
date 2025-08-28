@@ -289,7 +289,7 @@ const Services = () => {
               {/* Email Address */}
               <motion.div className="space-y-3" variants={itemVariants}>
                 <Label htmlFor="email" className="font-inter text-lg text-gray-900 tracking-wide">
-                  Email address
+                  Phone number
                 </Label>
                 <motion.div
                   whileFocus={{ scale: 1.02 }}
@@ -310,7 +310,7 @@ const Services = () => {
               {/* Company Name */}
               <motion.div className="space-y-3" variants={itemVariants}>
                 <Label htmlFor="company" className="font-inter text-lg text-gray-900 tracking-wide">
-                  Company name
+                  Email address
                 </Label>
                 <motion.div
                   whileFocus={{ scale: 1.02 }}
