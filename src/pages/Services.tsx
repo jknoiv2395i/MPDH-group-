@@ -78,29 +78,47 @@ const Services = () => {
     }));
   };
 
+  const normalizePhone = (raw: string) => {
+    const onlyDigits = raw.replace(/\D/g, "");
+    if (onlyDigits.length >= 10) {
+      const local = onlyDigits.slice(-10);
+      const cc = onlyDigits.slice(0, Math.max(onlyDigits.length - 10, 1));
+      return `+${cc}-${local}`;
+    }
+    return raw.trim();
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     const firstName = (formData.fullName || "").trim().split(/\s+/)[0] || "";
 
-    // Format phone as +<country>-<number> if possible
-    let formattedPhone = (formData.phone || "").trim();
-    const m = formattedPhone.replace(/\s+/g, "").match(/^\+?(\d{1,3})[-]?([0-9]{5,})$/);
-    if (m) {
-      formattedPhone = `+${m[1]}-${m[2]}`;
+    if (!firstName) {
+      toast({ title: "Name required", description: "Please enter your full name." });
+      return;
     }
+    if (!formData.phone?.trim()) {
+      toast({ title: "Phone required", description: "Please enter your phone number." });
+      return;
+    }
+    if (!formData.email?.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      toast({ title: "Valid email required", description: "Please enter a valid email address." });
+      return;
+    }
+
+    const formattedPhone = normalizePhone(formData.phone);
 
     const payload = {
       name: firstName,
       phone: formattedPhone,
       email: formData.email,
-      remark: formData.projectInfo,
+      remark: formData.projectInfo?.trim() || "N/A",
     };
 
     try {
       const res = await fetch("https://api.realestate.orggencrm.com/api/hit/h6ICio9glvMg/5VOZw41jNX", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
         body: JSON.stringify(payload),
       });
 
