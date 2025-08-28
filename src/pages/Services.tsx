@@ -241,7 +241,7 @@ const Services = () => {
         <div className="relative z-10 flex items-center min-h-screen p-4 md:p-8">
           <motion.div
             className="w-full max-w-2xl bg-white rounded-2xl p-6 md:p-8 lg:p-12 shadow-lg mx-auto"
-            style={{ marginTop: "108px" }}
+            style={{ marginTop: "60px" }}
             variants={containerVariants}
             initial="hidden"
             animate="visible"
@@ -369,7 +369,7 @@ const Services = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="bg-white" style={{ padding: '123px 0 80px' }}>
+      <section className="bg-white" style={{ padding: '39px 0 80px' }}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-0">
           {/* Header */}
           <motion.div 
