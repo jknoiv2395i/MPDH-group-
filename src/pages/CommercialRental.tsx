@@ -95,7 +95,7 @@ const CommercialRental = () => {
         <img
           src="https://api.builder.io/api/v1/image/assets/TEMP/fd64f5bc9182eae5c8cc8191e52b62acb0a392eb?width=4794"
           alt="Commercial Properties Background"
-          className="absolute w-full h-[84%] object-cover top-[200px]"
+          className="absolute w-full h-[84%] object-cover top-[261px]"
         />
 
         {/* Hero Content */}
