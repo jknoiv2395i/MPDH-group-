@@ -204,7 +204,7 @@ const Industrial = () => {
 
       {/* Main Content */}
       <motion.div
-        className="container mx-auto px-4 py-16"
+        className="container mx-auto px-4 pt-16"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-50px" }}
