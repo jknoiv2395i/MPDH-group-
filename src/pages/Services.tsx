@@ -68,69 +68,280 @@ const Services = () => {
     projectInfo: ''
   });
 
+  const [formErrors, setFormErrors] = useState({
+    fullName: '',
+    phone: '',
+    email: '',
+    projectInfo: ''
+  });
+
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const validateField = (name: string, value: string) => {
+    let error = '';
+
+    switch (name) {
+      case 'fullName':
+        if (!value.trim()) {
+          error = 'Full name is required';
+        } else if (value.trim().length < 2) {
+          error = 'Name must be at least 2 characters';
+        } else if (!/^[a-zA-Z\s.'-]+$/.test(value.trim())) {
+          error = 'Name can only contain letters, spaces, dots, apostrophes, and hyphens';
+        }
+        break;
+
+      case 'phone':
+        const phoneDigits = value.replace(/\D/g, '');
+        if (!value.trim()) {
+          error = 'Phone number is required';
+        } else if (phoneDigits.length < 10) {
+          error = 'Phone number must be at least 10 digits';
+        } else if (phoneDigits.length > 15) {
+          error = 'Phone number cannot exceed 15 digits';
+        }
+        break;
+
+      case 'email':
+        if (!value.trim()) {
+          error = 'Email is required';
+        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim())) {
+          error = 'Please enter a valid email address';
+        } else if (value.trim().length > 100) {
+          error = 'Email address is too long';
+        }
+        break;
+
+      case 'projectInfo':
+        if (value.trim().length > 1000) {
+          error = 'Project information cannot exceed 1000 characters';
+        }
+        break;
+    }
+
+    return error;
+  };
+
+  const formatPhoneNumber = (value: string) => {
+    // Remove all non-digits
+    const phoneDigits = value.replace(/\D/g, '');
+
+    // Format based on length
+    if (phoneDigits.length <= 10) {
+      // Format as (XXX) XXX-XXXX for 10 digits or less
+      const match = phoneDigits.match(/^(\d{0,3})(\d{0,3})(\d{0,4})$/);
+      if (match) {
+        return [match[1], match[2], match[3]].filter(Boolean).join(match[1] && match[2] ? (match[3] ? '-' : '') : '');
+      }
+    } else {
+      // For international numbers, keep the format simple
+      return phoneDigits.replace(/(\d{2})(\d{10})/, '+$1 $2');
+    }
+
+    return phoneDigits;
+  };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
+
+    let processedValue = value;
+
+    // Special handling for phone number formatting
+    if (name === 'phone') {
+      processedValue = formatPhoneNumber(value);
+    }
+
+    // Update form data
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: processedValue
+    }));
+
+    // Real-time validation
+    const error = validateField(name, processedValue);
+    setFormErrors(prev => ({
+      ...prev,
+      [name]: error
     }));
   };
 
   const normalizePhone = (raw: string) => {
     const onlyDigits = raw.replace(/\D/g, "");
-    if (onlyDigits.length >= 10) {
+
+    // Handle different phone number formats
+    if (onlyDigits.length === 10) {
+      // Assume Indian number without country code
+      return `+91-${onlyDigits}`;
+    } else if (onlyDigits.length === 12 && onlyDigits.startsWith("91")) {
+      // Indian number with country code (91xxxxxxxxxx)
+      const local = onlyDigits.slice(2);
+      return `+91-${local}`;
+    } else if (onlyDigits.length === 11 && onlyDigits.startsWith("1")) {
+      // US number with country code
+      const local = onlyDigits.slice(1);
+      return `+1-${local}`;
+    } else if (onlyDigits.length >= 10) {
+      // Other international formats
       const local = onlyDigits.slice(-10);
-      const cc = onlyDigits.slice(0, Math.max(onlyDigits.length - 10, 1));
+      const cc = onlyDigits.slice(0, onlyDigits.length - 10) || "91";
       return `+${cc}-${local}`;
     }
+
+    // Fallback - return as is for manual correction
     return raw.trim();
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const firstName = (formData.fullName || "").trim().split(/\s+/)[0] || "";
+    if (isSubmitting) return; // Prevent multiple submissions
 
-    if (!firstName) {
-      toast({ title: "Name required", description: "Please enter your full name." });
+    setIsSubmitting(true);
+
+    // Better name extraction with fallback
+    const fullNameTrimmed = (formData.fullName || "").trim();
+    const nameParts = fullNameTrimmed.split(/\s+/).filter(part => part.length > 0);
+    const firstName = nameParts[0] || "";
+
+    // Comprehensive validation using validation functions
+    const validationErrors = {
+      fullName: validateField('fullName', formData.fullName),
+      phone: validateField('phone', formData.phone),
+      email: validateField('email', formData.email),
+      projectInfo: validateField('projectInfo', formData.projectInfo)
+    };
+
+    // Check if there are any validation errors
+    const hasErrors = Object.values(validationErrors).some(error => error !== '');
+
+    if (hasErrors) {
+      setFormErrors(validationErrors);
+
+      // Show specific error message for the first error found
+      const firstError = Object.entries(validationErrors).find(([, error]) => error !== '');
+      if (firstError) {
+        const [fieldName, errorMessage] = firstError;
+        const fieldLabels = {
+          fullName: 'Full Name',
+          phone: 'Phone Number',
+          email: 'Email',
+          projectInfo: 'Project Information'
+        };
+
+        toast({
+          title: `${fieldLabels[fieldName as keyof typeof fieldLabels]} Error`,
+          description: errorMessage,
+          variant: "destructive" as any
+        });
+      }
+
+      setIsSubmitting(false);
       return;
     }
-    if (!formData.phone?.trim()) {
-      toast({ title: "Phone required", description: "Please enter your phone number." });
-      return;
-    }
-    if (!formData.email?.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      toast({ title: "Valid email required", description: "Please enter a valid email address." });
-      return;
-    }
+
+    // Clear any previous errors
+    setFormErrors({ fullName: '', phone: '', email: '', projectInfo: '' });
 
     const formattedPhone = normalizePhone(formData.phone);
 
     const payload = {
       name: firstName,
       phone: formattedPhone,
-      email: formData.email,
-      remark: formData.projectInfo?.trim() || "N/A",
+      email: formData.email.trim().toLowerCase(),
+      remark: formData.projectInfo?.trim() || "Contact form submission",
     };
 
+    console.log("Submitting to CRM:", payload);
+
     try {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
+
       const res = await fetch("https://api.realestate.orggencrm.com/api/hit/h6ICio9glvMg/5VOZw41jNX", {
         method: "POST",
-        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
         body: JSON.stringify(payload),
+        signal: controller.signal
       });
 
-      if (!res.ok) {
-        throw new Error(`Request failed: ${res.status}`);
+      clearTimeout(timeoutId);
+
+      // Handle response
+      let responseData = {};
+      let responseText = "";
+
+      try {
+        responseText = await res.text();
+        if (responseText) {
+          responseData = JSON.parse(responseText);
+        }
+      } catch (parseError) {
+        console.log("Response text:", responseText);
+        responseData = { message: responseText || "No response" };
       }
 
-      toast({ title: "Submitted", description: "We received your details. Our team will contact you soon." });
+      console.log("CRM API Response:", { status: res.status, data: responseData });
+
+      if (!res.ok) {
+        // Handle duplicate email specifically
+        if (res.status === 400 && responseText.includes("Already present")) {
+          toast({
+            title: "Email already registered",
+            description: "This email is already in our system. Our team will contact you soon.",
+            variant: "default"
+          });
+          setFormData({ fullName: "", phone: "", email: "", projectInfo: "" });
+          setIsSubmitting(false);
+          return;
+        }
+
+        // Handle other errors
+        console.error("CRM API Error:", { status: res.status, response: responseData });
+        toast({
+          title: "Submission failed",
+          description: "Please check your information and try again.",
+          variant: "destructive" as any
+        });
+        setIsSubmitting(false);
+        return;
+      }
+
+      // Success case
+      console.log("CRM Success:", responseData);
+      toast({
+        title: "Successfully submitted!",
+        description: "We received your details. Our team will contact you soon."
+      });
       setFormData({ fullName: "", phone: "", email: "", projectInfo: "" });
+      setIsSubmitting(false);
+
     } catch (err) {
-      console.error(err);
-      toast({ title: "Submission failed", description: "Please try again later.", variant: "destructive" as any });
+      console.error("CRM Integration Error:", err);
+      setIsSubmitting(false);
+
+      if (err instanceof Error && err.name === 'AbortError') {
+        toast({
+          title: "Request timeout",
+          description: "The request took too long. Please try again.",
+          variant: "destructive" as any
+        });
+      } else if (err instanceof Error && (err.message.includes("fetch") || err.message.includes("network"))) {
+        toast({
+          title: "Connection error",
+          description: "Unable to connect to our servers. Please try again later.",
+          variant: "destructive" as any
+        });
+      } else {
+        toast({
+          title: "Submission error",
+          description: "An error occurred. Please try again or contact us directly.",
+          variant: "destructive" as any
+        });
+      }
     }
   };
 
@@ -321,7 +532,7 @@ const Services = () => {
               {/* Full Name */}
               <motion.div className="space-y-3" variants={itemVariants}>
                 <Label htmlFor="fullName" className="font-inter text-lg text-gray-900 tracking-wide">
-                  Full name
+                  Full name *
                 </Label>
                 <motion.div
                   whileFocus={{ scale: 1.02 }}
@@ -332,37 +543,63 @@ const Services = () => {
                     name="fullName"
                     value={formData.fullName}
                     onChange={handleInputChange}
-                    placeholder="Your name"
-                    className="h-16 rounded-2xl border-blue-200 text-lg font-inter placeholder:text-gray-400 px-5 transition-all duration-200 hover:border-blue-300 focus:border-blue-400"
+                    placeholder="Enter your full name"
+                    className={`h-16 rounded-2xl text-lg font-inter placeholder:text-gray-400 px-5 transition-all duration-200 ${
+                      formErrors.fullName
+                        ? 'border-red-300 focus:border-red-400 hover:border-red-400'
+                        : 'border-blue-200 hover:border-blue-300 focus:border-blue-400'
+                    }`}
                   />
+                  {formErrors.fullName && (
+                    <p className="text-red-500 text-sm mt-1 font-inter">{formErrors.fullName}</p>
+                  )}
+                </motion.div>
+              </motion.div>
+
+              {/* Phone Number */}
+              <motion.div className="space-y-3" variants={itemVariants}>
+                <Label htmlFor="phone" className="font-inter text-lg text-gray-900 tracking-wide">
+                  Phone number *
+                </Label>
+                <motion.div
+                  whileFocus={{ scale: 1.02 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <div className="relative">
+                    <Input
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      placeholder="Enter phone number (e.g., 9876543210)"
+                      className={`h-16 rounded-2xl text-lg font-inter placeholder:text-gray-400 px-5 transition-all duration-200 ${
+                        formErrors.phone
+                          ? 'border-red-300 focus:border-red-400 hover:border-red-400'
+                          : 'border-blue-200 hover:border-blue-300 focus:border-blue-400'
+                      }`}
+                    />
+                    <div className="absolute right-4 top-1/2 transform -translate-y-1/2 text-xs text-gray-500 bg-white px-2">
+                      {formData.phone && formData.phone.replace(/\D/g, '').length >= 10 ? (
+                        <span className="text-green-600">✓ Valid</span>
+                      ) : (
+                        <span>10+ digits</span>
+                      )}
+                    </div>
+                  </div>
+                  {formErrors.phone && (
+                    <p className="text-red-500 text-sm mt-1 font-inter">{formErrors.phone}</p>
+                  )}
+                  <p className="text-xs text-gray-500 mt-1 font-inter">
+                    Enter 10 digits for Indian numbers or include country code for international
+                  </p>
                 </motion.div>
               </motion.div>
 
               {/* Email Address */}
               <motion.div className="space-y-3" variants={itemVariants}>
                 <Label htmlFor="email" className="font-inter text-lg text-gray-900 tracking-wide">
-                  Phone number
-                </Label>
-                <motion.div
-                  whileFocus={{ scale: 1.02 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <Input
-                    id="phone"
-                    name="phone"
-                    type="tel"
-                    value={formData.phone}
-                    onChange={handleInputChange}
-                    placeholder="Your phone number"
-                    className="h-16 rounded-2xl border-blue-200 text-lg font-inter placeholder:text-gray-400 px-5 transition-all duration-200 hover:border-blue-300 focus:border-blue-400"
-                  />
-                </motion.div>
-              </motion.div>
-
-              {/* Company Name */}
-              <motion.div className="space-y-3" variants={itemVariants}>
-                <Label htmlFor="company" className="font-inter text-lg text-gray-900 tracking-wide">
-                  Email address
+                  Email address *
                 </Label>
                 <motion.div
                   whileFocus={{ scale: 1.02 }}
@@ -374,9 +611,16 @@ const Services = () => {
                     type="email"
                     value={formData.email}
                     onChange={handleInputChange}
-                    placeholder="Your mail address"
-                    className="h-16 rounded-2xl border-blue-200 text-lg font-inter placeholder:text-gray-400 px-5 transition-all duration-200 hover:border-blue-300 focus:border-blue-400"
+                    placeholder="Enter your email address"
+                    className={`h-16 rounded-2xl text-lg font-inter placeholder:text-gray-400 px-5 transition-all duration-200 ${
+                      formErrors.email
+                        ? 'border-red-300 focus:border-red-400 hover:border-red-400'
+                        : 'border-blue-200 hover:border-blue-300 focus:border-blue-400'
+                    }`}
                   />
+                  {formErrors.email && (
+                    <p className="text-red-500 text-sm mt-1 font-inter">{formErrors.email}</p>
+                  )}
                 </motion.div>
               </motion.div>
 
@@ -389,31 +633,57 @@ const Services = () => {
                   whileFocus={{ scale: 1.02 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <Textarea
-                    id="projectInfo"
-                    name="projectInfo"
-                    value={formData.projectInfo}
-                    onChange={handleInputChange}
-                    placeholder="Example Text"
-                    className="min-h-40 rounded-2xl border-blue-200 text-lg font-inter placeholder:text-gray-400 px-5 py-5 resize-none transition-all duration-200 hover:border-blue-300 focus:border-blue-400"
-                  />
+                  <div className="relative">
+                    <Textarea
+                      id="projectInfo"
+                      name="projectInfo"
+                      value={formData.projectInfo}
+                      onChange={handleInputChange}
+                      placeholder="Tell us about your project requirements, timeline, budget, or any specific needs..."
+                      className={`min-h-40 rounded-2xl text-lg font-inter placeholder:text-gray-400 px-5 py-5 resize-none transition-all duration-200 ${
+                        formErrors.projectInfo
+                          ? 'border-red-300 focus:border-red-400 hover:border-red-400'
+                          : 'border-blue-200 hover:border-blue-300 focus:border-blue-400'
+                      }`}
+                    />
+                    <div className="absolute bottom-3 right-4 text-xs text-gray-500 bg-white px-2">
+                      {formData.projectInfo.length}/1000
+                    </div>
+                  </div>
+                  {formErrors.projectInfo && (
+                    <p className="text-red-500 text-sm mt-1 font-inter">{formErrors.projectInfo}</p>
+                  )}
+                  <p className="text-xs text-gray-500 mt-1 font-inter">
+                    Optional: Provide details about your requirements to help us serve you better
+                  </p>
                 </motion.div>
               </motion.div>
 
               {/* Submit Button */}
-              <motion.div className="pt-4" variants={itemVariants}>
+              <motion.div className="pt-6" variants={itemVariants}>
                 <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={{ scale: isSubmitting ? 1 : 1.05 }}
+                  whileTap={{ scale: isSubmitting ? 1 : 0.95 }}
                   transition={{ duration: 0.2 }}
                 >
                   <Button
                     type="submit"
-                    className="bg-gray-900 hover:bg-gray-800 text-white font-inter text-lg font-medium px-8 py-4 rounded-full h-auto transition-all duration-300 shadow-lg hover:shadow-xl"
+                    disabled={isSubmitting}
+                    className="w-full bg-gray-900 hover:bg-gray-800 disabled:bg-gray-500 disabled:cursor-not-allowed text-white font-inter text-lg font-medium px-8 py-4 rounded-full h-auto transition-all duration-300 shadow-lg hover:shadow-xl"
                   >
-                    Submit
+                    {isSubmitting ? (
+                      <div className="flex items-center justify-center space-x-2">
+                        <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                        <span>Submitting...</span>
+                      </div>
+                    ) : (
+                      "Submit Contact Form"
+                    )}
                   </Button>
                 </motion.div>
+                <p className="text-xs text-gray-500 mt-3 text-center font-inter">
+                  * Required fields. We'll respond within 24 hours during business days.
+                </p>
               </motion.div>
             </motion.form>
           </motion.div>
