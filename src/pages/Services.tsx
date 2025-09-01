@@ -145,17 +145,30 @@ const Services = () => {
       if (!res.ok) {
         // Handle specific CRM errors
         if (res.status === 400) {
-          const errorMessage = responseData.message || responseData.error || JSON.stringify(responseData);
+          // Check for duplicate email error (specific to this CRM API)
+          if (responseData.email && responseData.email.includes("Already present")) {
+            const existingRecord = responseData.duplicate_ref?.[0];
+            const existingName = existingRecord?.firstname || "user";
 
-          if (errorMessage.includes("Already present") || errorMessage.includes("already exists")) {
             toast({
-              title: "Email already exists",
-              description: "This email is already in our system. Our team will contact you soon.",
+              title: "Email already registered",
+              description: `This email is already in our system under the name "${existingName}". Our team will reach out to you soon.`,
               variant: "default"
             });
             setFormData({ fullName: "", phone: "", email: "", projectInfo: "" });
             return;
           }
+
+          // Handle other 400 errors
+          const errorMessage = responseData.message || responseData.error || responseData.email || "Invalid request";
+          console.error("CRM API Error:", responseData);
+
+          toast({
+            title: "Submission failed",
+            description: `Please check your information and try again. ${errorMessage.includes("undefined") ? "Please ensure all fields are filled correctly." : ""}`,
+            variant: "destructive" as any
+          });
+          return;
         }
 
         console.error("CRM API Error:", responseData);
