@@ -185,6 +185,7 @@ const Services = () => {
               variant: "default"
             });
             setFormData({ fullName: "", phone: "", email: "", projectInfo: "" });
+            setIsSubmitting(false);
             return;
           }
 
@@ -197,6 +198,7 @@ const Services = () => {
             description: `Please check your information and try again. ${errorMessage.includes("undefined") ? "Please ensure all fields are filled correctly." : ""}`,
             variant: "destructive" as any
           });
+          setIsSubmitting(false);
           return;
         }
 
