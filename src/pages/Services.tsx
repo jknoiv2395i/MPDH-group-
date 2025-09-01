@@ -633,14 +633,29 @@ const Services = () => {
                   whileFocus={{ scale: 1.02 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <Textarea
-                    id="projectInfo"
-                    name="projectInfo"
-                    value={formData.projectInfo}
-                    onChange={handleInputChange}
-                    placeholder="Example Text"
-                    className="min-h-40 rounded-2xl border-blue-200 text-lg font-inter placeholder:text-gray-400 px-5 py-5 resize-none transition-all duration-200 hover:border-blue-300 focus:border-blue-400"
-                  />
+                  <div className="relative">
+                    <Textarea
+                      id="projectInfo"
+                      name="projectInfo"
+                      value={formData.projectInfo}
+                      onChange={handleInputChange}
+                      placeholder="Tell us about your project requirements, timeline, budget, or any specific needs..."
+                      className={`min-h-40 rounded-2xl text-lg font-inter placeholder:text-gray-400 px-5 py-5 resize-none transition-all duration-200 ${
+                        formErrors.projectInfo
+                          ? 'border-red-300 focus:border-red-400 hover:border-red-400'
+                          : 'border-blue-200 hover:border-blue-300 focus:border-blue-400'
+                      }`}
+                    />
+                    <div className="absolute bottom-3 right-4 text-xs text-gray-500 bg-white px-2">
+                      {formData.projectInfo.length}/1000
+                    </div>
+                  </div>
+                  {formErrors.projectInfo && (
+                    <p className="text-red-500 text-sm mt-1 font-inter">{formErrors.projectInfo}</p>
+                  )}
+                  <p className="text-xs text-gray-500 mt-1 font-inter">
+                    Optional: Provide details about your requirements to help us serve you better
+                  </p>
                 </motion.div>
               </motion.div>
 
