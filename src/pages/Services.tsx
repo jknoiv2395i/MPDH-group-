@@ -177,6 +177,10 @@ const Services = () => {
       // Indian number with country code (91xxxxxxxxxx)
       const local = onlyDigits.slice(2);
       return `+91-${local}`;
+    } else if (onlyDigits.length === 11 && onlyDigits.startsWith("1")) {
+      // US number with country code
+      const local = onlyDigits.slice(1);
+      return `+1-${local}`;
     } else if (onlyDigits.length >= 10) {
       // Other international formats
       const local = onlyDigits.slice(-10);
