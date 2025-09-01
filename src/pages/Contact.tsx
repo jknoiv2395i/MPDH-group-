@@ -12,6 +12,7 @@ const Contact = () => {
   useSEO(SEO_PAGES.contact);
   const [formData, setFormData] = useState({
     fullName: '',
+    phone: '',
     email: '',
     company: '',
     projectInfo: ''
