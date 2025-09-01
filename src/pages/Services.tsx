@@ -151,74 +151,67 @@ const Services = () => {
     console.log("Submitting to CRM:", payload);
 
     try {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
+
       const res = await fetch("https://api.realestate.orggencrm.com/api/hit/h6ICio9glvMg/5VOZw41jNX", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "Accept": "application/json",
-          "User-Agent": "MPHD-Website"
+          "Accept": "application/json"
         },
         body: JSON.stringify(payload),
+        signal: controller.signal
       });
 
-      // Clone response to avoid "body stream already read" error
-      const responseClone = res.clone();
-      let responseData;
+      clearTimeout(timeoutId);
 
-      // Check if response is JSON
-      const contentType = res.headers.get('content-type');
-      if (contentType && contentType.includes('application/json')) {
-        try {
-          responseData = await res.json();
-        } catch (parseError) {
-          console.error("JSON parse error:", parseError);
-          const responseText = await responseClone.text();
-          responseData = { message: responseText };
+      // Handle response
+      let responseData = {};
+      let responseText = "";
+
+      try {
+        responseText = await res.text();
+        if (responseText) {
+          responseData = JSON.parse(responseText);
         }
-      } else {
-        // Response is not JSON, read as text
-        const responseText = await res.text();
-        console.log("Non-JSON response:", responseText);
-        responseData = { message: responseText };
+      } catch (parseError) {
+        console.log("Response text:", responseText);
+        responseData = { message: responseText || "No response" };
       }
 
+      console.log("CRM API Response:", { status: res.status, data: responseData });
+
       if (!res.ok) {
-        // Handle specific CRM errors
-        if (res.status === 400) {
-          // Check for duplicate email error (specific to this CRM API)
-          if (responseData.email && responseData.email.includes("Already present")) {
-            const existingRecord = responseData.duplicate_ref?.[0];
-            const existingName = existingRecord?.firstname || "user";
-
-            toast({
-              title: "Email already registered",
-              description: `This email is already in our system under the name "${existingName}". Our team will reach out to you soon.`,
-              variant: "default"
-            });
-            setFormData({ fullName: "", phone: "", email: "", projectInfo: "" });
-            setIsSubmitting(false);
-            return;
-          }
-
-          // Handle other 400 errors
-          const errorMessage = responseData.message || responseData.error || responseData.email || "Invalid request";
-          console.error("CRM API Error:", responseData);
-
+        // Handle duplicate email specifically
+        if (res.status === 400 && responseText.includes("Already present")) {
           toast({
-            title: "Submission failed",
-            description: `Please check your information and try again. ${errorMessage.includes("undefined") ? "Please ensure all fields are filled correctly." : ""}`,
-            variant: "destructive" as any
+            title: "Email already registered",
+            description: "This email is already in our system. Our team will contact you soon.",
+            variant: "default"
           });
+          setFormData({ fullName: "", phone: "", email: "", projectInfo: "" });
           setIsSubmitting(false);
           return;
         }
 
-        console.error("CRM API Error:", responseData);
-        throw new Error(`CRM API Error: ${res.status} - ${responseData.message || responseData.error || 'Unknown error'}`);
+        // Handle other errors
+        console.error("CRM API Error:", { status: res.status, response: responseData });
+        toast({
+          title: "Submission failed",
+          description: "Please check your information and try again.",
+          variant: "destructive" as any
+        });
+        setIsSubmitting(false);
+        return;
       }
 
-      console.log("CRM Response:", responseData);
-      toast({ title: "Successfully submitted!", description: "We received your details. Our team will contact you soon." });
+      // Success case
+      console.log("CRM Success:", responseData);
+      toast({
+        title: "Successfully submitted!",
+        description: "We received your details. Our team will contact you soon."
+      });
       setFormData({ fullName: "", phone: "", email: "", projectInfo: "" });
       setIsSubmitting(false);
 
@@ -226,16 +219,22 @@ const Services = () => {
       console.error("CRM Integration Error:", err);
       setIsSubmitting(false);
 
-      if (err instanceof Error && err.message.includes("CRM API Error")) {
+      if (err instanceof Error && err.name === 'AbortError') {
         toast({
-          title: "Submission issue",
-          description: "There was an issue with your submission. Please try with a different email or contact us directly.",
+          title: "Request timeout",
+          description: "The request took too long. Please try again.",
+          variant: "destructive" as any
+        });
+      } else if (err instanceof Error && (err.message.includes("fetch") || err.message.includes("network"))) {
+        toast({
+          title: "Connection error",
+          description: "Unable to connect to our servers. Please try again later.",
           variant: "destructive" as any
         });
       } else {
         toast({
-          title: "Network error",
-          description: "Please check your internet connection and try again.",
+          title: "Submission error",
+          description: "An error occurred. Please try again or contact us directly.",
           variant: "destructive" as any
         });
       }
