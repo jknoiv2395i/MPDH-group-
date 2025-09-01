@@ -78,11 +78,91 @@ const Services = () => {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  const validateField = (name: string, value: string) => {
+    let error = '';
+
+    switch (name) {
+      case 'fullName':
+        if (!value.trim()) {
+          error = 'Full name is required';
+        } else if (value.trim().length < 2) {
+          error = 'Name must be at least 2 characters';
+        } else if (!/^[a-zA-Z\s.'-]+$/.test(value.trim())) {
+          error = 'Name can only contain letters, spaces, dots, apostrophes, and hyphens';
+        }
+        break;
+
+      case 'phone':
+        const phoneDigits = value.replace(/\D/g, '');
+        if (!value.trim()) {
+          error = 'Phone number is required';
+        } else if (phoneDigits.length < 10) {
+          error = 'Phone number must be at least 10 digits';
+        } else if (phoneDigits.length > 15) {
+          error = 'Phone number cannot exceed 15 digits';
+        }
+        break;
+
+      case 'email':
+        if (!value.trim()) {
+          error = 'Email is required';
+        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim())) {
+          error = 'Please enter a valid email address';
+        } else if (value.trim().length > 100) {
+          error = 'Email address is too long';
+        }
+        break;
+
+      case 'projectInfo':
+        if (value.trim().length > 1000) {
+          error = 'Project information cannot exceed 1000 characters';
+        }
+        break;
+    }
+
+    return error;
+  };
+
+  const formatPhoneNumber = (value: string) => {
+    // Remove all non-digits
+    const phoneDigits = value.replace(/\D/g, '');
+
+    // Format based on length
+    if (phoneDigits.length <= 10) {
+      // Format as (XXX) XXX-XXXX for 10 digits or less
+      const match = phoneDigits.match(/^(\d{0,3})(\d{0,3})(\d{0,4})$/);
+      if (match) {
+        return [match[1], match[2], match[3]].filter(Boolean).join(match[1] && match[2] ? (match[3] ? '-' : '') : '');
+      }
+    } else {
+      // For international numbers, keep the format simple
+      return phoneDigits.replace(/(\d{2})(\d{10})/, '+$1 $2');
+    }
+
+    return phoneDigits;
+  };
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
+
+    let processedValue = value;
+
+    // Special handling for phone number formatting
+    if (name === 'phone') {
+      processedValue = formatPhoneNumber(value);
+    }
+
+    // Update form data
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: processedValue
+    }));
+
+    // Real-time validation
+    const error = validateField(name, processedValue);
+    setFormErrors(prev => ({
+      ...prev,
+      [name]: error
     }));
   };
 
