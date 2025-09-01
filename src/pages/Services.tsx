@@ -116,6 +116,7 @@ const Services = () => {
     // Enhanced validation
     if (!firstName || firstName.length < 2) {
       toast({ title: "Name required", description: "Please enter your full name (at least 2 characters)." });
+      setIsSubmitting(false);
       return;
     }
 
@@ -123,15 +124,18 @@ const Services = () => {
     const phoneDigits = (formData.phone || "").replace(/\D/g, "");
     if (!formData.phone?.trim()) {
       toast({ title: "Phone required", description: "Please enter your phone number." });
+      setIsSubmitting(false);
       return;
     }
     if (phoneDigits.length < 10) {
       toast({ title: "Invalid phone", description: "Please enter a valid phone number (at least 10 digits)." });
+      setIsSubmitting(false);
       return;
     }
 
     if (!formData.email?.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       toast({ title: "Valid email required", description: "Please enter a valid email address." });
+      setIsSubmitting(false);
       return;
     }
 
