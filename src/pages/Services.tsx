@@ -532,7 +532,7 @@ const Services = () => {
               {/* Full Name */}
               <motion.div className="space-y-3" variants={itemVariants}>
                 <Label htmlFor="fullName" className="font-inter text-lg text-gray-900 tracking-wide">
-                  Full name
+                  Full name *
                 </Label>
                 <motion.div
                   whileFocus={{ scale: 1.02 }}
@@ -543,9 +543,16 @@ const Services = () => {
                     name="fullName"
                     value={formData.fullName}
                     onChange={handleInputChange}
-                    placeholder="Your name"
-                    className="h-16 rounded-2xl border-blue-200 text-lg font-inter placeholder:text-gray-400 px-5 transition-all duration-200 hover:border-blue-300 focus:border-blue-400"
+                    placeholder="Enter your full name"
+                    className={`h-16 rounded-2xl text-lg font-inter placeholder:text-gray-400 px-5 transition-all duration-200 ${
+                      formErrors.fullName
+                        ? 'border-red-300 focus:border-red-400 hover:border-red-400'
+                        : 'border-blue-200 hover:border-blue-300 focus:border-blue-400'
+                    }`}
                   />
+                  {formErrors.fullName && (
+                    <p className="text-red-500 text-sm mt-1 font-inter">{formErrors.fullName}</p>
+                  )}
                 </motion.div>
               </motion.div>
 
