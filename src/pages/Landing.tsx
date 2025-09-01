@@ -6,11 +6,13 @@ import { Textarea } from "@/components/ui/textarea";
 import { ChevronRight } from "lucide-react";
 import Footer from "@/components/Footer";
 import { usePageTitle } from "@/hooks/use-page-title";
+import { toast } from "@/hooks/use-toast";
 
 const Landing = () => {
   usePageTitle("Landing - MPHD Group");
   const [formData, setFormData] = useState({
     fullName: '',
+    phone: '',
     email: '',
     company: '',
     projectInfo: ''
@@ -26,9 +28,60 @@ const Landing = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const normalizePhone = (raw: string) => {
+    const onlyDigits = raw.replace(/\D/g, "");
+    if (onlyDigits.length >= 10) {
+      const local = onlyDigits.slice(-10);
+      const cc = onlyDigits.slice(0, Math.max(onlyDigits.length - 10, 1));
+      return `+${cc}-${local}`;
+    }
+    return raw.trim();
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+
+    const firstName = (formData.fullName || "").trim().split(/\s+/)[0] || "";
+
+    if (!firstName) {
+      toast({ title: "Name required", description: "Please enter your full name." });
+      return;
+    }
+    if (!formData.phone?.trim()) {
+      toast({ title: "Phone required", description: "Please enter your phone number." });
+      return;
+    }
+    if (!formData.email?.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      toast({ title: "Valid email required", description: "Please enter a valid email address." });
+      return;
+    }
+
+    const formattedPhone = normalizePhone(formData.phone);
+
+    const payload = {
+      name: firstName,
+      phone: formattedPhone,
+      email: formData.email,
+      remark: formData.projectInfo?.trim() || "N/A",
+    };
+
+    try {
+      const res = await fetch("https://api.realestate.orggencrm.com/api/hit/h6ICio9glvMg/5VOZw41jNX", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      if (!res.ok) {
+        throw new Error(`Request failed: ${res.status}`);
+      }
+
+      toast({ title: "Submitted", description: "We received your details. Our team will contact you soon." });
+      setFormData({ fullName: "", phone: "", email: "", company: "", projectInfo: "" });
+    } catch (err) {
+      console.error(err);
+      toast({ title: "Submission failed", description: "Please try again later.", variant: "destructive" as any });
+    }
   };
 
   const toggleFAQ = (index: number) => {
@@ -132,6 +185,22 @@ const Landing = () => {
                   value={formData.fullName}
                   onChange={handleInputChange}
                   placeholder="Your name"
+                  className="h-16 rounded-2xl border-blue-200 text-lg font-inter placeholder:text-gray-400 px-5"
+                />
+              </div>
+
+              {/* Phone Number */}
+              <div className="space-y-3">
+                <Label htmlFor="phone" className="font-inter text-lg text-gray-900 tracking-wide">
+                  Phone number
+                </Label>
+                <Input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                  placeholder="Your phone number"
                   className="h-16 rounded-2xl border-blue-200 text-lg font-inter placeholder:text-gray-400 px-5"
                 />
               </div>
