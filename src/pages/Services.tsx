@@ -204,31 +204,44 @@ const Services = () => {
     const nameParts = fullNameTrimmed.split(/\s+/).filter(part => part.length > 0);
     const firstName = nameParts[0] || "";
 
-    // Enhanced validation
-    if (!firstName || firstName.length < 2) {
-      toast({ title: "Name required", description: "Please enter your full name (at least 2 characters)." });
+    // Comprehensive validation using validation functions
+    const validationErrors = {
+      fullName: validateField('fullName', formData.fullName),
+      phone: validateField('phone', formData.phone),
+      email: validateField('email', formData.email),
+      projectInfo: validateField('projectInfo', formData.projectInfo)
+    };
+
+    // Check if there are any validation errors
+    const hasErrors = Object.values(validationErrors).some(error => error !== '');
+
+    if (hasErrors) {
+      setFormErrors(validationErrors);
+
+      // Show specific error message for the first error found
+      const firstError = Object.entries(validationErrors).find(([, error]) => error !== '');
+      if (firstError) {
+        const [fieldName, errorMessage] = firstError;
+        const fieldLabels = {
+          fullName: 'Full Name',
+          phone: 'Phone Number',
+          email: 'Email',
+          projectInfo: 'Project Information'
+        };
+
+        toast({
+          title: `${fieldLabels[fieldName as keyof typeof fieldLabels]} Error`,
+          description: errorMessage,
+          variant: "destructive" as any
+        });
+      }
+
       setIsSubmitting(false);
       return;
     }
 
-    // Phone validation
-    const phoneDigits = (formData.phone || "").replace(/\D/g, "");
-    if (!formData.phone?.trim()) {
-      toast({ title: "Phone required", description: "Please enter your phone number." });
-      setIsSubmitting(false);
-      return;
-    }
-    if (phoneDigits.length < 10) {
-      toast({ title: "Invalid phone", description: "Please enter a valid phone number (at least 10 digits)." });
-      setIsSubmitting(false);
-      return;
-    }
-
-    if (!formData.email?.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      toast({ title: "Valid email required", description: "Please enter a valid email address." });
-      setIsSubmitting(false);
-      return;
-    }
+    // Clear any previous errors
+    setFormErrors({ fullName: '', phone: '', email: '', projectInfo: '' });
 
     const formattedPhone = normalizePhone(formData.phone);
 
