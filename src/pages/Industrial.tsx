@@ -269,7 +269,7 @@ const Industrial = () => {
 
       {/* Industrial Properties Section */}
       <motion.section
-        className="py-16 bg-white"
+        className="pb-16 bg-white -mt-1"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-50px" }}
@@ -278,48 +278,6 @@ const Industrial = () => {
         <div className="max-w-7xl mx-auto px-4">
           {/* Section Header */}
           <motion.div className="mb-12" variants={itemVariants}>
-            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
-              <div className="lg:w-1/3">
-                <h2 className="text-black font-instrument text-4xl md:text-[41px] font-normal leading-tight tracking-tight mb-4">
-                  INDUSTRIAL
-                  <br />
-                  PROPERTIES
-                </h2>
-              </div>
-              <div className="lg:w-2/3">
-                <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed">
-                  We help all kinds of businesses—startups, MSMEs, MNCs, or hospitality groups Establish their business at project sites including buy and lease the perfect properties for business.
-                </p>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Properties Filter Bar */}
-          <motion.div
-            className="bg-white rounded border border-gray-100 mb-8 p-4"
-            variants={itemVariants}
-          >
-            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-              <div className="flex items-center gap-3 bg-black text-white px-4 py-3 rounded">
-                <List className="w-[18px] h-[18px]" />
-                <span className="font-semibold text-lg">Properties List</span>
-              </div>
-
-              <div className="flex items-center gap-2">
-                <div className="flex items-center border border-gray-200 bg-white px-4 py-2 rounded">
-                  <span className="text-gray-400 text-sm mr-16">New To Old</span>
-                  <ChevronDown className="w-4 h-4 text-gray-400" />
-                </div>
-
-                <button className="p-2 rounded border border-black bg-black text-white">
-                  <List className="w-[14px] h-[14px]" />
-                </button>
-
-                <button className="p-2 rounded border border-black">
-                  <LayoutGrid className="w-[13px] h-[13px] text-black" />
-                </button>
-              </div>
-            </div>
           </motion.div>
 
           {/* Properties Grid */}
