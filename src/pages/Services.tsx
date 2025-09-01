@@ -69,6 +69,7 @@ const Services = () => {
   });
 
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
