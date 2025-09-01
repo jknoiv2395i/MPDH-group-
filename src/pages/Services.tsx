@@ -91,10 +91,14 @@ const Services = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const firstName = (formData.fullName || "").trim().split(/\s+/)[0] || "";
+    // Better name extraction with fallback
+    const fullNameTrimmed = (formData.fullName || "").trim();
+    const nameParts = fullNameTrimmed.split(/\s+/).filter(part => part.length > 0);
+    const firstName = nameParts[0] || "";
 
-    if (!firstName) {
-      toast({ title: "Name required", description: "Please enter your full name." });
+    // Enhanced validation
+    if (!firstName || firstName.length < 2) {
+      toast({ title: "Name required", description: "Please enter your full name (at least 2 characters)." });
       return;
     }
     if (!formData.phone?.trim()) {
@@ -111,26 +115,63 @@ const Services = () => {
     const payload = {
       name: firstName,
       phone: formattedPhone,
-      email: formData.email,
-      remark: formData.projectInfo?.trim() || "N/A",
+      email: formData.email.trim().toLowerCase(),
+      remark: formData.projectInfo?.trim() || "Contact form submission",
     };
+
+    console.log("Submitting to CRM:", payload);
 
     try {
       const res = await fetch("https://api.realestate.orggencrm.com/api/hit/h6ICio9glvMg/5VOZw41jNX", {
         method: "POST",
-        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json",
+          "User-Agent": "MPHD-Website"
+        },
         body: JSON.stringify(payload),
       });
 
+      const responseData = await res.json();
+
       if (!res.ok) {
-        throw new Error(`Request failed: ${res.status}`);
+        // Handle specific CRM errors
+        if (res.status === 400 && responseData.email) {
+          if (responseData.email.includes("Already present")) {
+            toast({
+              title: "Email already exists",
+              description: "This email is already in our system. Our team will contact you soon.",
+              variant: "default"
+            });
+            setFormData({ fullName: "", phone: "", email: "", projectInfo: "" });
+            return;
+          }
+        }
+
+        console.error("CRM API Error:", responseData);
+        throw new Error(`CRM API Error: ${res.status} - ${responseData.message || 'Unknown error'}`);
       }
 
-      toast({ title: "Submitted", description: "We received your details. Our team will contact you soon." });
+      console.log("CRM Response:", responseData);
+      toast({ title: "Successfully submitted!", description: "We received your details. Our team will contact you soon." });
       setFormData({ fullName: "", phone: "", email: "", projectInfo: "" });
+
     } catch (err) {
-      console.error(err);
-      toast({ title: "Submission failed", description: "Please try again later.", variant: "destructive" as any });
+      console.error("CRM Integration Error:", err);
+
+      if (err instanceof Error && err.message.includes("CRM API Error")) {
+        toast({
+          title: "Submission issue",
+          description: "There was an issue with your submission. Please try with a different email or contact us directly.",
+          variant: "destructive" as any
+        });
+      } else {
+        toast({
+          title: "Network error",
+          description: "Please check your internet connection and try again.",
+          variant: "destructive" as any
+        });
+      }
     }
   };
 
