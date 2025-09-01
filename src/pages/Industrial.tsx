@@ -267,6 +267,194 @@ const Industrial = () => {
         </div>
       </motion.div>
 
+      {/* Industrial Properties Section */}
+      <motion.section
+        className="py-16 bg-white"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-50px" }}
+        variants={containerVariants}
+      >
+        <div className="max-w-7xl mx-auto px-4">
+          {/* Section Header */}
+          <motion.div className="mb-12" variants={itemVariants}>
+            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+              <div className="lg:w-1/3">
+                <h2 className="text-black font-instrument text-4xl md:text-[41px] font-normal leading-tight tracking-tight mb-4">
+                  INDUSTRIAL
+                  <br />
+                  PROPERTIES
+                </h2>
+              </div>
+              <div className="lg:w-2/3">
+                <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed">
+                  We help all kinds of businesses—startups, MSMEs, MNCs, or hospitality groups Establish their business at project sites including buy and lease the perfect properties for business.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Properties Filter Bar */}
+          <motion.div
+            className="bg-white rounded border border-gray-100 mb-8 p-4"
+            variants={itemVariants}
+          >
+            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+              <div className="flex items-center gap-3 bg-black text-white px-4 py-3 rounded">
+                <List className="w-[18px] h-[18px]" />
+                <span className="font-semibold text-lg">Properties List</span>
+              </div>
+
+              <div className="flex items-center gap-2">
+                <div className="flex items-center border border-gray-200 bg-white px-4 py-2 rounded">
+                  <span className="text-gray-400 text-sm mr-16">New To Old</span>
+                  <ChevronDown className="w-4 h-4 text-gray-400" />
+                </div>
+
+                <button className="p-2 rounded border border-black bg-black text-white">
+                  <List className="w-[14px] h-[14px]" />
+                </button>
+
+                <button className="p-2 rounded border border-black">
+                  <LayoutGrid className="w-[13px] h-[13px] text-black" />
+                </button>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Properties Grid */}
+          <motion.div
+            className="grid grid-cols-1 lg:grid-cols-2 gap-8"
+            variants={gridVariants}
+          >
+            {/* 1300+ Vendor Network Card */}
+            <motion.div className="order-2 lg:order-1" variants={cardVariants}>
+              <div className="w-full h-[400px] lg:h-[638px] mb-6 rounded-[30px] overflow-hidden">
+                <img
+                  src="https://api.builder.io/api/v1/image/assets/TEMP/01bd9f15b36dd98048084a7476883ad1d1fc4ae7?width=1485"
+                  alt="1300+ Vendor Network"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </motion.div>
+
+            <motion.div className="order-1 lg:order-2" variants={cardVariants}>
+              <div className="h-full flex flex-col">
+                <div className="mb-6">
+                  <h3 className="text-black font-instrument text-4xl md:text-[41px] font-normal leading-tight tracking-tight mb-4">
+                    1300+ Vendor Network
+                  </h3>
+                  <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed mb-8">
+                    We have built a strong network of 1300+ trusted vendors across India, covering products and services for construction, infrastructure, real estate, and allied industries. This allows us to provide our clients with quick access, competitive pricing, and reliable supply chains, ensuring projects run smoothly without delays.
+                  </p>
+                </div>
+
+                <div className="flex-1 flex flex-col justify-end">
+                  <div className="flex items-center gap-2 mb-4">
+                    <MapPin className="w-3 h-3 text-[#4A4747]" />
+                    <span className="text-[#4A4747] font-inter text-sm">
+                      KT Nagar, Friends Colony, Nagpur
+                    </span>
+                  </div>
+
+                  <div className="bg-[#F5F5F5] p-4 mb-4 rounded relative">
+                    <div className="grid grid-cols-3 gap-4 text-xs">
+                      <div>
+                        <div className="text-[#7B7A7A] font-bold mb-1">SUPER AREA</div>
+                        <div className="text-[#535353] font-bold">3 BHK 1550 Sqft 4 BHK 3000 Sqft</div>
+                      </div>
+                      <div>
+                        <div className="text-[#7B7A7A] font-bold mb-1">STATUS</div>
+                        <div className="text-[#535353] font-bold">New</div>
+                      </div>
+                      <div>
+                        <div className="text-[#7B7A7A] font-bold mb-1">TRANSACTION</div>
+                        <div className="text-[#535353] font-bold">New</div>
+                      </div>
+                    </div>
+                    <div className="absolute top-4 right-4">
+                      <ChevronDown className="w-3 h-3 text-black" />
+                    </div>
+                  </div>
+
+                  <div className="border-t border-[#F1F1F1] pt-3 mb-6">
+                    <p className="text-[#535353] text-xs leading-relaxed">
+                      Ready to move Commercial Sanctioned, Fire NoC and OC are available
+                    </p>
+                  </div>
+
+                  <Button className="w-full max-w-[402px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-4 rounded-full">
+                    View project
+                  </Button>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Casting Yard Setup Card */}
+            <motion.div className="order-3 lg:order-3" variants={cardVariants}>
+              <div className="h-full flex flex-col">
+                <div className="mb-6">
+                  <h3 className="text-black font-instrument text-4xl md:text-[41px] font-normal leading-tight tracking-tight mb-4">
+                    Casting Yard Setup and Installation Support
+                  </h3>
+                  <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed mb-8">
+                    We are among the few companies offering end-to-end casting yard solutions for construction and infrastructure projects. We manage everything from land identification and NA conversion to securing government approvals, water use exemptions, and compliance clearances, ensuring your casting yard is established quickly, legally, and strategically located for metro, highway, and large-scale real estate projects.
+                  </p>
+                </div>
+
+                <div className="flex-1 flex flex-col justify-end">
+                  <div className="flex items-center gap-2 mb-4">
+                    <MapPin className="w-3 h-3 text-[#4A4747]" />
+                    <span className="text-[#4A4747] font-inter text-sm">
+                      KT Nagar, Friends Colony, Nagpur
+                    </span>
+                  </div>
+
+                  <div className="bg-[#F5F5F5] p-4 mb-4 rounded relative">
+                    <div className="grid grid-cols-3 gap-4 text-xs">
+                      <div>
+                        <div className="text-[#7B7A7A] font-bold mb-1">SUPER AREA</div>
+                        <div className="text-[#535353] font-bold">3 BHK 1550 Sqft 4 BHK 3000 Sqft</div>
+                      </div>
+                      <div>
+                        <div className="text-[#7B7A7A] font-bold mb-1">STATUS</div>
+                        <div className="text-[#535353] font-bold">New</div>
+                      </div>
+                      <div>
+                        <div className="text-[#7B7A7A] font-bold mb-1">TRANSACTION</div>
+                        <div className="text-[#535353] font-bold">New</div>
+                      </div>
+                    </div>
+                    <div className="absolute top-4 right-4">
+                      <ChevronDown className="w-3 h-3 text-black" />
+                    </div>
+                  </div>
+
+                  <div className="border-t border-[#F1F1F1] pt-3 mb-6">
+                    <p className="text-[#535353] text-xs leading-relaxed">
+                      Ready to move Commercial Sanctioned, Fire NoC and OC are available
+                    </p>
+                  </div>
+
+                  <Button className="w-full max-w-[402px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-4 rounded-full">
+                    View project
+                  </Button>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div className="order-4 lg:order-4" variants={cardVariants}>
+              <div className="w-full h-[400px] lg:h-[638px] rounded-[30px] overflow-hidden">
+                <img
+                  src="https://api.builder.io/api/v1/image/assets/TEMP/a50d26348a94fd61960c6e222364b84992937a43?width=1485"
+                  alt="Casting Yard Setup and Installation Support"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
+      </motion.section>
 
       <motion.div
         initial={{ opacity: 0, y: 50 }}
