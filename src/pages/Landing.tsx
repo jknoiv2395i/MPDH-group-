@@ -12,6 +12,7 @@ const Landing = () => {
   usePageTitle("Landing - MPHD Group");
   const [formData, setFormData] = useState({
     fullName: '',
+    phone: '',
     email: '',
     company: '',
     projectInfo: ''
