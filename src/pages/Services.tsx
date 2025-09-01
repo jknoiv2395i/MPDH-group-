@@ -104,6 +104,10 @@ const Services = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
+    if (isSubmitting) return; // Prevent multiple submissions
+
+    setIsSubmitting(true);
+
     // Better name extraction with fallback
     const fullNameTrimmed = (formData.fullName || "").trim();
     const nameParts = fullNameTrimmed.split(/\s+/).filter(part => part.length > 0);
