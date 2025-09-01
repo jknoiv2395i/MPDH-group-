@@ -556,24 +556,43 @@ const Services = () => {
                 </motion.div>
               </motion.div>
 
-              {/* Email Address */}
+              {/* Phone Number */}
               <motion.div className="space-y-3" variants={itemVariants}>
-                <Label htmlFor="email" className="font-inter text-lg text-gray-900 tracking-wide">
-                  Phone number
+                <Label htmlFor="phone" className="font-inter text-lg text-gray-900 tracking-wide">
+                  Phone number *
                 </Label>
                 <motion.div
                   whileFocus={{ scale: 1.02 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <Input
-                    id="phone"
-                    name="phone"
-                    type="tel"
-                    value={formData.phone}
-                    onChange={handleInputChange}
-                    placeholder="Your phone number"
-                    className="h-16 rounded-2xl border-blue-200 text-lg font-inter placeholder:text-gray-400 px-5 transition-all duration-200 hover:border-blue-300 focus:border-blue-400"
-                  />
+                  <div className="relative">
+                    <Input
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      placeholder="Enter phone number (e.g., 9876543210)"
+                      className={`h-16 rounded-2xl text-lg font-inter placeholder:text-gray-400 px-5 transition-all duration-200 ${
+                        formErrors.phone
+                          ? 'border-red-300 focus:border-red-400 hover:border-red-400'
+                          : 'border-blue-200 hover:border-blue-300 focus:border-blue-400'
+                      }`}
+                    />
+                    <div className="absolute right-4 top-1/2 transform -translate-y-1/2 text-xs text-gray-500 bg-white px-2">
+                      {formData.phone && formData.phone.replace(/\D/g, '').length >= 10 ? (
+                        <span className="text-green-600">✓ Valid</span>
+                      ) : (
+                        <span>10+ digits</span>
+                      )}
+                    </div>
+                  </div>
+                  {formErrors.phone && (
+                    <p className="text-red-500 text-sm mt-1 font-inter">{formErrors.phone}</p>
+                  )}
+                  <p className="text-xs text-gray-500 mt-1 font-inter">
+                    Enter 10 digits for Indian numbers or include country code for international
+                  </p>
                 </motion.div>
               </motion.div>
 
