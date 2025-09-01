@@ -209,9 +209,11 @@ const Services = () => {
       console.log("CRM Response:", responseData);
       toast({ title: "Successfully submitted!", description: "We received your details. Our team will contact you soon." });
       setFormData({ fullName: "", phone: "", email: "", projectInfo: "" });
+      setIsSubmitting(false);
 
     } catch (err) {
       console.error("CRM Integration Error:", err);
+      setIsSubmitting(false);
 
       if (err instanceof Error && err.message.includes("CRM API Error")) {
         toast({
