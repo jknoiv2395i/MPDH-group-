@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { ChevronRight } from "lucide-react";
 import Footer from "@/components/Footer";
 import { usePageTitle } from "@/hooks/use-page-title";
+import { toast } from "@/hooks/use-toast";
 
 const Landing = () => {
   usePageTitle("Landing - MPHD Group");
