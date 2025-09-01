@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import Footer from "@/components/Footer";
 import { useSEO } from "@/hooks/use-seo";
 import { SEO_PAGES } from "@/lib/seo-constants";
+import { toast } from "@/hooks/use-toast";
 
 const Contact = () => {
   useSEO(SEO_PAGES.contact);
