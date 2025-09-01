@@ -660,20 +660,30 @@ const Services = () => {
               </motion.div>
 
               {/* Submit Button */}
-              <motion.div className="pt-4" variants={itemVariants}>
+              <motion.div className="pt-6" variants={itemVariants}>
                 <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={{ scale: isSubmitting ? 1 : 1.05 }}
+                  whileTap={{ scale: isSubmitting ? 1 : 0.95 }}
                   transition={{ duration: 0.2 }}
                 >
                   <Button
                     type="submit"
                     disabled={isSubmitting}
-                    className="bg-gray-900 hover:bg-gray-800 disabled:bg-gray-500 disabled:cursor-not-allowed text-white font-inter text-lg font-medium px-8 py-4 rounded-full h-auto transition-all duration-300 shadow-lg hover:shadow-xl"
+                    className="w-full bg-gray-900 hover:bg-gray-800 disabled:bg-gray-500 disabled:cursor-not-allowed text-white font-inter text-lg font-medium px-8 py-4 rounded-full h-auto transition-all duration-300 shadow-lg hover:shadow-xl"
                   >
-                    {isSubmitting ? "Submitting..." : "Submit"}
+                    {isSubmitting ? (
+                      <div className="flex items-center justify-center space-x-2">
+                        <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                        <span>Submitting...</span>
+                      </div>
+                    ) : (
+                      "Submit Contact Form"
+                    )}
                   </Button>
                 </motion.div>
+                <p className="text-xs text-gray-500 mt-3 text-center font-inter">
+                  * Required fields. We'll respond within 24 hours during business days.
+                </p>
               </motion.div>
             </motion.form>
           </motion.div>
