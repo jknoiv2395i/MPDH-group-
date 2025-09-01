@@ -189,6 +189,22 @@ const Landing = () => {
                 />
               </div>
 
+              {/* Phone Number */}
+              <div className="space-y-3">
+                <Label htmlFor="phone" className="font-inter text-lg text-gray-900 tracking-wide">
+                  Phone number
+                </Label>
+                <Input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                  placeholder="Your phone number"
+                  className="h-16 rounded-2xl border-blue-200 text-lg font-inter placeholder:text-gray-400 px-5"
+                />
+              </div>
+
               {/* Email Address */}
               <div className="space-y-3">
                 <Label htmlFor="email" className="font-inter text-lg text-gray-900 tracking-wide">
