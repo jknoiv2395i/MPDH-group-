@@ -596,10 +596,10 @@ const Services = () => {
                 </motion.div>
               </motion.div>
 
-              {/* Company Name */}
+              {/* Email Address */}
               <motion.div className="space-y-3" variants={itemVariants}>
-                <Label htmlFor="company" className="font-inter text-lg text-gray-900 tracking-wide">
-                  Email address
+                <Label htmlFor="email" className="font-inter text-lg text-gray-900 tracking-wide">
+                  Email address *
                 </Label>
                 <motion.div
                   whileFocus={{ scale: 1.02 }}
@@ -611,9 +611,16 @@ const Services = () => {
                     type="email"
                     value={formData.email}
                     onChange={handleInputChange}
-                    placeholder="Your mail address"
-                    className="h-16 rounded-2xl border-blue-200 text-lg font-inter placeholder:text-gray-400 px-5 transition-all duration-200 hover:border-blue-300 focus:border-blue-400"
+                    placeholder="Enter your email address"
+                    className={`h-16 rounded-2xl text-lg font-inter placeholder:text-gray-400 px-5 transition-all duration-200 ${
+                      formErrors.email
+                        ? 'border-red-300 focus:border-red-400 hover:border-red-400'
+                        : 'border-blue-200 hover:border-blue-300 focus:border-blue-400'
+                    }`}
                   />
+                  {formErrors.email && (
+                    <p className="text-red-500 text-sm mt-1 font-inter">{formErrors.email}</p>
+                  )}
                 </motion.div>
               </motion.div>
 
