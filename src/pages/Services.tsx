@@ -68,6 +68,13 @@ const Services = () => {
     projectInfo: ''
   });
 
+  const [formErrors, setFormErrors] = useState({
+    fullName: '',
+    phone: '',
+    email: '',
+    projectInfo: ''
+  });
+
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
