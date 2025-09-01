@@ -80,11 +80,23 @@ const Services = () => {
 
   const normalizePhone = (raw: string) => {
     const onlyDigits = raw.replace(/\D/g, "");
-    if (onlyDigits.length >= 10) {
+
+    // Handle different phone number formats
+    if (onlyDigits.length === 10) {
+      // Assume Indian number without country code
+      return `+91-${onlyDigits}`;
+    } else if (onlyDigits.length === 12 && onlyDigits.startsWith("91")) {
+      // Indian number with country code (91xxxxxxxxxx)
+      const local = onlyDigits.slice(2);
+      return `+91-${local}`;
+    } else if (onlyDigits.length >= 10) {
+      // Other international formats
       const local = onlyDigits.slice(-10);
-      const cc = onlyDigits.slice(0, Math.max(onlyDigits.length - 10, 1));
+      const cc = onlyDigits.slice(0, onlyDigits.length - 10) || "91";
       return `+${cc}-${local}`;
     }
+
+    // Fallback - return as is for manual correction
     return raw.trim();
   };
 
