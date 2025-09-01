@@ -506,9 +506,10 @@ const Services = () => {
                 >
                   <Button
                     type="submit"
-                    className="bg-gray-900 hover:bg-gray-800 text-white font-inter text-lg font-medium px-8 py-4 rounded-full h-auto transition-all duration-300 shadow-lg hover:shadow-xl"
+                    disabled={isSubmitting}
+                    className="bg-gray-900 hover:bg-gray-800 disabled:bg-gray-500 disabled:cursor-not-allowed text-white font-inter text-lg font-medium px-8 py-4 rounded-full h-auto transition-all duration-300 shadow-lg hover:shadow-xl"
                   >
-                    Submit
+                    {isSubmitting ? "Submitting..." : "Submit"}
                   </Button>
                 </motion.div>
               </motion.div>
