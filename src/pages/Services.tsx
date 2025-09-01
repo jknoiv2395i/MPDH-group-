@@ -161,11 +161,22 @@ const Services = () => {
         body: JSON.stringify(payload),
       });
 
+      // Clone response to avoid "body stream already read" error
+      const responseClone = res.clone();
       let responseData;
-      try {
-        responseData = await res.json();
-      } catch (parseError) {
-        // If response is not JSON, get text instead
+
+      // Check if response is JSON
+      const contentType = res.headers.get('content-type');
+      if (contentType && contentType.includes('application/json')) {
+        try {
+          responseData = await res.json();
+        } catch (parseError) {
+          console.error("JSON parse error:", parseError);
+          const responseText = await responseClone.text();
+          responseData = { message: responseText };
+        }
+      } else {
+        // Response is not JSON, read as text
         const responseText = await res.text();
         console.log("Non-JSON response:", responseText);
         responseData = { message: responseText };
