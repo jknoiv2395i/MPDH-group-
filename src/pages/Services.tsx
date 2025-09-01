@@ -132,12 +132,22 @@ const Services = () => {
         body: JSON.stringify(payload),
       });
 
-      const responseData = await res.json();
+      let responseData;
+      try {
+        responseData = await res.json();
+      } catch (parseError) {
+        // If response is not JSON, get text instead
+        const responseText = await res.text();
+        console.log("Non-JSON response:", responseText);
+        responseData = { message: responseText };
+      }
 
       if (!res.ok) {
         // Handle specific CRM errors
-        if (res.status === 400 && responseData.email) {
-          if (responseData.email.includes("Already present")) {
+        if (res.status === 400) {
+          const errorMessage = responseData.message || responseData.error || JSON.stringify(responseData);
+
+          if (errorMessage.includes("Already present") || errorMessage.includes("already exists")) {
             toast({
               title: "Email already exists",
               description: "This email is already in our system. Our team will contact you soon.",
@@ -149,7 +159,7 @@ const Services = () => {
         }
 
         console.error("CRM API Error:", responseData);
-        throw new Error(`CRM API Error: ${res.status} - ${responseData.message || 'Unknown error'}`);
+        throw new Error(`CRM API Error: ${res.status} - ${responseData.message || responseData.error || 'Unknown error'}`);
       }
 
       console.log("CRM Response:", responseData);
