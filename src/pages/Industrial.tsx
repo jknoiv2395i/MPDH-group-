@@ -354,16 +354,94 @@ const Industrial = () => {
             </motion.div>
 
             {/* Casting Yard Setup Card */}
-            <motion.div className="order-3 lg:order-3" variants={cardVariants}>
+            <motion.div className="order-3 lg:order-3" variants={cardVariants} />
+
+            <motion.div className="order-4 lg:order-4" variants={cardVariants} />
+          </motion.div>
+        </div>
+      </motion.section>
+
+      {/* Casting Yard Setup Section */}
+      <motion.section
+        className="pb-16 bg-white"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-50px" }}
+        variants={containerVariants}
+      >
+        <div className="max-w-7xl mx-auto px-4">
+          <motion.div
+            className="flex flex-col lg:flex-row items-center gap-8 lg:gap-[148px]"
+            variants={gridVariants}
+          >
+            {/* Image */}
+            <motion.div className="w-full lg:w-auto flex-shrink-0" variants={cardVariants}>
               <img
                 src="https://api.builder.io/api/v1/image/assets/TEMP/8e4bff137b48d509979aa1fec648168981054b0e?width=1485"
                 alt="Casting Yard Setup and Installation Support"
-                className="w-full h-full object-cover"
+                className="w-full lg:w-[742px] h-[400px] lg:h-[638px] object-cover rounded-[30px]"
               />
             </motion.div>
 
-            <motion.div className="order-4 lg:order-4" variants={cardVariants}>
-              <div className="w-full h-[400px] lg:h-[638px] rounded-[30px] overflow-hidden" />
+            {/* Content */}
+            <motion.div className="w-full lg:w-[742px] flex flex-col" variants={cardVariants}>
+              {/* Header */}
+              <div className="mb-8">
+                <h2 className="text-black font-instrument text-4xl lg:text-[41px] font-normal leading-tight tracking-tight mb-6">
+                  Casting Yard Setup and Installation Support
+                </h2>
+                <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed">
+                  We are among the few companies offering end-to-end casting yard solutions for construction and infrastructure projects. We manage everything from land identification and NA conversion to securing government approvals, water use exemptions, and compliance clearances, ensuring your casting yard is established quickly, legally, and strategically located for metro, highway, and large-scale real estate projects.
+                </p>
+              </div>
+
+              {/* Property Details Container */}
+              <div className="bg-white rounded-lg p-4 lg:p-6 max-w-[586px]">
+                {/* Location */}
+                <div className="flex items-center gap-2 mb-4">
+                  <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.39355 6.75753C5.39355 6.75753 5.48424 6.66685 5.6656 6.48549C5.84696 6.30413 5.93764 5.95712 5.93764 5.44448C5.93764 4.93183 5.75628 4.49414 5.39355 4.13142C5.03083 3.76869 4.59315 3.58733 4.0805 3.58733C3.56785 3.58733 3.13016 3.76869 2.76744 4.13142C2.40472 4.49414 2.22335 4.93183 2.22335 5.44448C2.22335 5.95712 2.40472 6.39481 2.76744 6.75753C3.13016 7.12026 3.56785 7.30162 4.0805 7.30162C4.59315 7.30162 5.03083 7.12026 5.39355 6.75753ZM7.79478 5.44448C7.79478 5.97163 7.71498 6.40448 7.55538 6.74302L4.91476 12.358C4.83738 12.5176 4.72252 12.6433 4.57017 12.7352C4.41783 12.8271 4.2546 12.873 4.0805 12.873C3.90639 12.873 3.74316 12.8271 3.59082 12.7352C3.43848 12.6433 3.32603 12.5176 3.25349 12.358L0.605608 6.74302C0.44601 6.40448 0.366211 5.97163 0.366211 5.44448C0.366211 4.41918 0.728934 3.54381 1.45438 2.81836C2.17983 2.09291 3.0552 1.73019 4.0805 1.73019C5.10579 1.73019 5.98117 2.09291 6.70661 2.81836C7.43206 3.54381 7.79478 4.41918 7.79478 5.44448Z" fill="#4A4747"/>
+                  </svg>
+                  <span className="text-[#4A4747] font-inter text-sm">
+                    KT Nagar, Friends Colony, Nagpur
+                  </span>
+                </div>
+
+                {/* Property Details Box */}
+                <div className="bg-[#F5F5F5] p-4 mb-4 rounded relative">
+                  <div className="grid grid-cols-3 gap-4 text-xs">
+                    <div>
+                      <div className="text-[#7B7A7A] font-bold mb-1">SUPER AREA</div>
+                      <div className="text-[#535353] font-bold">3 BHK 1550 Sqft 4 BHK 3000 Sqft</div>
+                    </div>
+                    <div>
+                      <div className="text-[#7B7A7A] font-bold mb-1">STATUS</div>
+                      <div className="text-[#535353] font-bold">New</div>
+                    </div>
+                    <div>
+                      <div className="text-[#7B7A7A] font-bold mb-1">TRANSACTION</div>
+                      <div className="text-[#535353] font-bold">New</div>
+                    </div>
+                  </div>
+                  <div className="absolute top-4 right-4">
+                    <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0.860352 3.78125C0.860352 3.74219 0.868164 3.70508 0.883789 3.66992C0.899414 3.63477 0.918945 3.60156 0.942383 3.57031C1.00488 3.51563 1.07715 3.48828 1.15918 3.48828C1.24121 3.48828 1.31348 3.51563 1.37598 3.57031L6.55566 8.76172L11.7471 3.57031C11.8096 3.51563 11.8818 3.48828 11.9639 3.48828C12.0459 3.48828 12.1143 3.51563 12.1689 3.57031C12.2314 3.63281 12.2627 3.70508 12.2627 3.78711C12.2627 3.86914 12.2314 3.94141 12.1689 4.00391L6.77832 9.39453C6.71582 9.45703 6.64355 9.48828 6.56152 9.48828C6.47949 9.48828 6.40723 9.45703 6.34473 9.39453L0.942383 4.00391C0.918945 3.97266 0.899414 3.9375 0.883789 3.89844C0.868164 3.85938 0.860352 3.82031 0.860352 3.78125Z" fill="black"/>
+                    </svg>
+                  </div>
+                </div>
+
+                {/* Description */}
+                <div className="border-t border-[#F1F1F1] pt-3 mb-6">
+                  <p className="text-[#535353] text-sm leading-relaxed">
+                    Ready to move Commercial Sanctioned, Fire NoC and OC are available
+                  </p>
+                </div>
+
+                {/* View Project Button */}
+                <Button className="w-full max-w-[402px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-4 rounded-full">
+                  View project
+                </Button>
+              </div>
             </motion.div>
           </motion.div>
         </div>
