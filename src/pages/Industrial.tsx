@@ -285,7 +285,7 @@ const Industrial = () => {
             className="grid grid-cols-1 lg:grid-cols-2 gap-8"
             variants={gridVariants}
           >
-            {/* 1300+ Vendor Network Card */}
+            {/* Casting Yard Setup Card */}
             <motion.div className="order-2 lg:order-1" variants={cardVariants}>
               <div className="w-full h-[400px] lg:h-[638px] mb-6 rounded-[30px] overflow-hidden">
                 <img
@@ -300,10 +300,14 @@ const Industrial = () => {
               <div className="h-full flex flex-col">
                 <div>
                   <h3 className="text-black font-instrument text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
-                    Casting Yard Setup and Installation Support
+                    <span style={{ whiteSpaceCollapse: "preserve" }}>
+                      Casting Yard Setup and Installation Support
+                    </span>
                   </h3>
                   <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed" style={{marginBottom: "-4px", paddingBottom: "27px"}}>
-                    We are among the few companies offering end-to-end casting yard solutions for construction and infrastructure projects. We manage everything from land identification and NA conversion to securing government approvals, water use exemptions, and compliance clearances, ensuring your casting yard is established quickly, legally, and strategically located for metro, highway, and large-scale real estate projects.
+                    <span style={{ whiteSpaceCollapse: "preserve" }}>
+                      We are among the few companies offering end-to-end casting yard solutions for construction and infrastructure projects. We manage everything from land identification and NA conversion to securing government approvals, water use exemptions, and compliance clearances, ensuring your casting yard is established quickly, legally, and strategically located for metro, highway, and large-scale real estate projects.
+                    </span>
                   </p>
                 </div>
 
@@ -348,7 +352,6 @@ const Industrial = () => {
               </div>
             </motion.div>
 
-            {/* Casting Yard Setup Card */}
             <motion.div className="order-3 lg:order-3" variants={cardVariants} />
 
             <motion.div className="order-4 lg:order-4" variants={cardVariants} />
@@ -464,10 +467,14 @@ const Industrial = () => {
                   <div className="h-full flex flex-col">
                     <div>
                       <h3 className="text-black font-instrument text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
-                        Approvals
+                        <span style={{ whiteSpaceCollapse: "preserve" }}>
+                          Approvals
+                        </span>
                       </h3>
                       <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed" style={{margin: "34px 0 -4px"}}>
-                        Complete management of all necessary government and local authority approvals, including securing the Local Body Certificate (LBC), coordinating with municipal or panchayat offices, ensuring adherence to legal and regulatory requirements, and streamlining the entire process to avoid delays and ensure full compliance with applicable laws.
+                        <span style={{ whiteSpaceCollapse: "preserve" }}>
+                          Complete management of all necessary government and local authority approvals, including securing the Local Body Certificate (LBC), coordinating with municipal or panchayat offices, ensuring adherence to legal and regulatory requirements, and streamlining the entire process to avoid delays and ensure full compliance with applicable laws.
+                        </span>
                       </p>
                     </div>
 
@@ -514,6 +521,8 @@ const Industrial = () => {
                 <div className="order-3" />
                 <div className="order-4" />
               </div>
+
+              {/* BOW and Labour Licenses */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div className="order-1">
                   <div className="w-full h-[638px] mb-6 rounded-[30px] overflow-hidden">
@@ -528,10 +537,14 @@ const Industrial = () => {
                   <div className="h-full flex flex-col">
                     <div>
                       <h3 className="text-black font-instrument text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
-                        1300+ Vendor Network
+                        <span style={{ whiteSpaceCollapse: "preserve" }}>
+                          BOW and Labour Licenses
+                        </span>
                       </h3>
                       <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed" style={{margin: "34px 0 -4px"}}>
-                        We have built a strong network of 1300+ trusted vendors across India, covering products and services for construction, infrastructure, real estate, and allied industries. This allows us to provide our clients with quick access, competitive pricing, and reliable supply chains, ensuring projects run smoothly without delays.
+                        <span style={{ whiteSpaceCollapse: "preserve" }}>
+                          End-to-end assistance in obtaining the Building and Other Construction Workers (BOC) License and Labour License, including preparation and submission of required documentation, coordination with labour departments, ensuring compliance with labour welfare regulations, and facilitating timely renewals to keep your operations legally protected.
+                        </span>
                       </p>
                     </div>
 
@@ -578,6 +591,8 @@ const Industrial = () => {
                 <div className="order-3" />
                 <div className="order-4" />
               </div>
+
+              {/* Electricity */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div className="order-1">
                   <div className="w-full h-[638px] mb-6 rounded-[30px] overflow-hidden">
@@ -592,10 +607,14 @@ const Industrial = () => {
                   <div className="h-full flex flex-col">
                     <div>
                       <h3 className="text-black font-instrument text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
-                        1300+ Vendor Network
+                        <span style={{ whiteSpaceCollapse: "preserve" }}>
+                          Electricity
+                        </span>
                       </h3>
                       <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed" style={{margin: "34px 0 -4px"}}>
-                        We have built a strong network of 1300+ trusted vendors across India, covering products and services for construction, infrastructure, real estate, and allied industries. This allows us to provide our clients with quick access, competitive pricing, and reliable supply chains, ensuring projects run smoothly without delays.
+                        <span style={{ whiteSpaceCollapse: "preserve" }}>
+                          Complete facilitation of electricity connections for construction or operational needs, including installation of Distribution Panels (DP), coordination with electricity boards, arranging power extensions up to 1000 kW, ensuring adherence to safety and technical standards, and expediting approvals to guarantee uninterrupted power supply for your projects.
+                        </span>
                       </p>
                     </div>
 
@@ -642,6 +661,8 @@ const Industrial = () => {
                 <div className="order-3" />
                 <div className="order-4" />
               </div>
+
+              {/* Land Conversion */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div className="order-1">
                   <div className="w-full h-[638px] mb-6 rounded-[30px] overflow-hidden">
@@ -656,10 +677,18 @@ const Industrial = () => {
                   <div className="h-full flex flex-col">
                     <div>
                       <h3 className="text-black font-instrument text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
-                        1300+ Vendor Network
+                        <span style={{ whiteSpaceCollapse: "preserve" }}>
+                          Land Conversion
+                        </span>
                       </h3>
-                      <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed" style={{margin: "34px 0 -4px"}}>
-                        We have built a strong network of 1300+ trusted vendors across India, covering products and services for construction, infrastructure, real estate, and allied industries. This allows us to provide our clients with quick access, competitive pricing, and reliable supply chains, ensuring projects run smoothly without delays.
+                      <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed" style={{margin: "5px 0 24px"}}>
+                        <span style={{ whiteSpaceCollapse: "preserve" }}>
+                          NA (Non-Agricultural) Land Conversion:{" "}
+                        </span>
+                        <br />
+                        <span style={{ whiteSpaceCollapse: "preserve" }}>
+                          Comprehensive end-to-end support for converting agricultural land into legally approved non-agricultural (NA) status, including guidance on documentation, liaison with government authorities, obtaining required approvals, ensuring compliance with local zoning regulations, and facilitating smooth processing so that the land can be legally used for residential, commercial, or industrial purposes.
+                        </span>
                       </p>
                     </div>
 
@@ -706,6 +735,8 @@ const Industrial = () => {
                 <div className="order-3" />
                 <div className="order-4" />
               </div>
+
+              {/* Pollution */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div className="order-1">
                   <div className="w-full h-[638px] mb-6 rounded-[30px] overflow-hidden">
@@ -720,10 +751,14 @@ const Industrial = () => {
                   <div className="h-full flex flex-col">
                     <div>
                       <h3 className="text-black font-instrument text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
-                        1300+ Vendor Network
+                        <span style={{ whiteSpaceCollapse: "preserve" }}>
+                          Pollution{" "}
+                        </span>
                       </h3>
                       <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed" style={{margin: "34px 0 -4px"}}>
-                        We have built a strong network of 1300+ trusted vendors across India, covering products and services for construction, infrastructure, real estate, and allied industries. This allows us to provide our clients with quick access, competitive pricing, and reliable supply chains, ensuring projects run smoothly without delays.
+                        <span style={{ whiteSpaceCollapse: "preserve" }}>
+                          End-to-end assistance in obtaining mandatory pollution control clearances and certificates from the State Pollution Control Board, including preparation of environmental compliance documents, liaison with authorities, ensuring adherence to air, water, and noise pollution norms, and facilitating timely renewals to keep your project fully compliant with environmental regulations.
+                        </span>
                       </p>
                     </div>
 
@@ -770,6 +805,8 @@ const Industrial = () => {
                 <div className="order-3" />
                 <div className="order-4" />
               </div>
+
+              {/* Water Use Exemption */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div className="order-1">
                   <div className="w-full h-[638px] mb-6 rounded-[30px] overflow-hidden">
@@ -784,10 +821,14 @@ const Industrial = () => {
                   <div className="h-full flex flex-col">
                     <div>
                       <h3 className="text-black font-instrument text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
-                        1300+ Vendor Network
+                        <span style={{ whiteSpaceCollapse: "preserve" }}>
+                          Water Use Exemption
+                        </span>
                       </h3>
                       <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed" style={{margin: "34px 0 -4px"}}>
-                        We have built a strong network of 1300+ trusted vendors across India, covering products and services for construction, infrastructure, real estate, and allied industries. This allows us to provide our clients with quick access, competitive pricing, and reliable supply chains, ensuring projects run smoothly without delays.
+                        <span style={{ whiteSpaceCollapse: "preserve" }}>
+                          Comprehensive support in obtaining legal exemptions and permissions for water usage in construction activities, including preparation of applications, coordination with relevant water resource departments, compliance with environmental and municipal regulations, and ensuring timely approvals to avoid project delays.
+                        </span>
                       </p>
                     </div>
 
@@ -834,6 +875,8 @@ const Industrial = () => {
                 <div className="order-3" />
                 <div className="order-4" />
               </div>
+
+              {/* Guest Houses */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div className="order-1">
                   <div className="w-full h-[638px] mb-6 rounded-[30px] overflow-hidden">
@@ -848,10 +891,14 @@ const Industrial = () => {
                   <div className="h-full flex flex-col">
                     <div>
                       <h3 className="text-black font-instrument text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
-                        1300+ Vendor Network
+                        <span style={{ whiteSpaceCollapse: "preserve" }}>
+                          Guest Houses
+                        </span>
                       </h3>
-                      <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed" style={{margin: "34px 0 -4px"}}>
-                        We have built a strong network of 1300+ trusted vendors across India, covering products and services for construction, infrastructure, real estate, and allied industries. This allows us to provide our clients with quick access, competitive pricing, and reliable supply chains, ensuring projects run smoothly without delays.
+                      <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed" style={{margin: "-4px 0 30px"}}>
+                        <span style={{ whiteSpaceCollapse: "preserve" }}>
+                          We arrange exclusive guest houses tailored for directors, senior management, and visiting clients. Our team identifies premium properties near project sites or business hubs and ensures they are fully furnished, secure, and equipped with modern amenities. We handle property search, lease or purchase negotiations, legal agreements, and compliance, while also assisting with custom interior setup, utilities, and facility management. Whether short-term or long-term, we deliver comfortable, professional-grade guest house solutions that reflect your company's standards and provide a seamless stay experience for leadership and clients.
+                        </span>
                       </p>
                     </div>
 
@@ -898,6 +945,8 @@ const Industrial = () => {
                 <div className="order-3" />
                 <div className="order-4" />
               </div>
+
+              {/* Hotel and Lodging Facilities */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div className="order-1">
                   <div className="w-full h-[638px] mb-6 rounded-[30px] overflow-hidden">
@@ -912,10 +961,14 @@ const Industrial = () => {
                   <div className="h-full flex flex-col">
                     <div>
                       <h3 className="text-black font-instrument text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
-                        1300+ Vendor Network
+                        <span style={{ whiteSpaceCollapse: "preserve" }}>
+                          Hotel and Lodging Facilities
+                        </span>
                       </h3>
                       <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed" style={{margin: "34px 0 -4px"}}>
-                        We have built a strong network of 1300+ trusted vendors across India, covering products and services for construction, infrastructure, real estate, and allied industries. This allows us to provide our clients with quick access, competitive pricing, and reliable supply chains, ensuring projects run smoothly without delays.
+                        <span style={{ whiteSpaceCollapse: "preserve" }}>
+                          We assist businesses and individuals in finding the ideal hotel and lodging facilities across India, whether for short-term stays, long-term staff accommodation, or business travel needs. We help set up guest houses, hotels, and lodging solutions tailored to workforce or client requirements. From identifying suitable properties to handling legal compliances, agreements, and possession, we ensure a hassle-free experience.
+                        </span>
                       </p>
                     </div>
 
@@ -962,6 +1015,8 @@ const Industrial = () => {
                 <div className="order-3" />
                 <div className="order-4" />
               </div>
+
+              {/* Labour Accommodation */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div className="order-1">
                   <div className="w-full h-[638px] mb-6 rounded-[30px] overflow-hidden">
@@ -976,10 +1031,14 @@ const Industrial = () => {
                   <div className="h-full flex flex-col">
                     <div>
                       <h3 className="text-black font-instrument text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
-                        1300+ Vendor Network
+                        <span style={{ whiteSpaceCollapse: "preserve" }}>
+                          Labour Accomodation
+                        </span>
                       </h3>
-                      <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed" style={{margin: "34px 0 -4px"}}>
-                        We have built a strong network of 1300+ trusted vendors across India, covering products and services for construction, infrastructure, real estate, and allied industries. This allows us to provide our clients with quick access, competitive pricing, and reliable supply chains, ensuring projects run smoothly without delays.
+                      <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed" style={{margin: "12px 0 17px"}}>
+                        <span style={{ whiteSpaceCollapse: "preserve" }}>
+                          We helps the construction and infrastructure companies provide safe, affordable, and convenient labour housing near project sites. From identifying suitable properties to negotiating rentals or purchase, we ensure workers stay close to the site, reducing travel time and improving productivity. We also handle all legal agreements, compliance requirements, and basic facility arrangements such as water, sanitation, and electricity to ensure a hassle-free setup. Whether it's a small workforce or large-scale labour colony, MPHD Group delivers accommodation solutions that are cost-effective, compliant, and site-specific.
+                        </span>
                       </p>
                     </div>
 
@@ -1026,6 +1085,8 @@ const Industrial = () => {
                 <div className="order-3" />
                 <div className="order-4" />
               </div>
+
+              {/* Office Spaces */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div className="order-1">
                   <div className="w-full h-[638px] mb-6 rounded-[30px] overflow-hidden">
@@ -1040,10 +1101,14 @@ const Industrial = () => {
                   <div className="h-full flex flex-col">
                     <div>
                       <h3 className="text-black font-instrument text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
-                        1300+ Vendor Network
+                        <span style={{ whiteSpaceCollapse: "preserve" }}>
+                          Office Spaces
+                        </span>
                       </h3>
-                      <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed" style={{margin: "34px 0 -4px"}}>
-                        We have built a strong network of 1300+ trusted vendors across India, covering products and services for construction, infrastructure, real estate, and allied industries. This allows us to provide our clients with quick access, competitive pricing, and reliable supply chains, ensuring projects run smoothly without delays.
+                      <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed" style={{margin: "11px 0 20px"}}>
+                        <span style={{ whiteSpaceCollapse: "preserve" }}>
+                          we help businesses to establish their presence by arranging office spaces for purchase or rent, tailored to their size, budget, and operational needs. From premium corporate offices to flexible co-working spaces, we identify the most suitable options near prime business hubs or project sites. Our services include property shortlisting, negotiations, legal documentation, and compliance support, ensuring a smooth and transparent transaction. Whether you need a head office, branch office, or co-working setup for remote teams, MPHD Group provides strategic, cost-effective, and ready-to-move solutions across India.
+                        </span>
                       </p>
                     </div>
 
@@ -1090,6 +1155,8 @@ const Industrial = () => {
                 <div className="order-3" />
                 <div className="order-4" />
               </div>
+
+              {/* Staff Quarters */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div className="order-1">
                   <div className="w-full h-[638px] mb-6 rounded-[30px] overflow-hidden">
@@ -1104,266 +1171,14 @@ const Industrial = () => {
                   <div className="h-full flex flex-col">
                     <div>
                       <h3 className="text-black font-instrument text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
-                        1300+ Vendor Network
-                      </h3>
-                      <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed" style={{margin: "34px 0 -4px"}}>
-                        We have built a strong network of 1300+ trusted vendors across India, covering products and services for construction, infrastructure, real estate, and allied industries. This allows us to provide our clients with quick access, competitive pricing, and reliable supply chains, ensuring projects run smoothly without delays.
-                      </p>
-                    </div>
-
-                    <div className="flex-1 flex flex-col justify-end mb-32" style={{margin: "-5px 0 128px"}}>
-                      <div className="flex items-center gap-2 mb-4">
-                        <MapPin className="w-3 h-3 text-[#4A4747]" />
-                        <span className="text-[#4A4747] font-inter text-sm">
-                          KT Nagar, Friends Colony, Nagpur
+                        <span style={{ whiteSpaceCollapse: "preserve" }}>
+                          Staff Quarters
                         </span>
-                      </div>
-
-                      <div className="bg-[#F5F5F5] p-4 mb-4 rounded relative">
-                        <div className="grid grid-cols-3 gap-4 text-xs">
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">SUPER AREA</div>
-                            <div className="text-[#535353] font-bold">3 BHK 1550 Sqft 4 BHK 3000 Sqft</div>
-                          </div>
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">STATUS</div>
-                            <div className="text-[#535353] font-bold">New</div>
-                          </div>
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">TRANSACTION</div>
-                            <div className="text-[#535353] font-bold">New</div>
-                          </div>
-                        </div>
-                        <div className="absolute top-4 right-4">
-                          <ChevronDown className="w-3 h-3 text-black" />
-                        </div>
-                      </div>
-
-                      <div className="border-t border-[#F1F1F1] pt-3 mb-6">
-                        <p className="text-[#535353] text-xs leading-relaxed">
-                          Ready to move Commercial Sanctioned, Fire NoC and OC are available
-                        </p>
-                      </div>
-
-                      <Button className="w-full max-w-[402px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-4 rounded-full" style={{marginLeft: "70px"}}>
-                        View project
-                      </Button>
-                    </div>
-                  </div>
-                </div>
-                <div className="order-3" />
-                <div className="order-4" />
-              </div>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div className="order-1">
-                  <div className="w-full h-[638px] mb-6 rounded-[30px] overflow-hidden">
-                    <img
-                      src="https://api.builder.io/api/v1/image/assets/TEMP/01bd9f15b36dd98048084a7476883ad1d1fc4ae7?width=1485"
-                      alt="1300+ Vendor Network"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-                <div className="order-2">
-                  <div className="h-full flex flex-col">
-                    <div>
-                      <h3 className="text-black font-instrument text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
-                        1300+ Vendor Network
                       </h3>
-                      <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed" style={{margin: "34px 0 -4px"}}>
-                        We have built a strong network of 1300+ trusted vendors across India, covering products and services for construction, infrastructure, real estate, and allied industries. This allows us to provide our clients with quick access, competitive pricing, and reliable supply chains, ensuring projects run smoothly without delays.
-                      </p>
-                    </div>
-
-                    <div className="flex-1 flex flex-col justify-end mb-32" style={{margin: "-5px 0 128px"}}>
-                      <div className="flex items-center gap-2 mb-4">
-                        <MapPin className="w-3 h-3 text-[#4A4747]" />
-                        <span className="text-[#4A4747] font-inter text-sm">
-                          KT Nagar, Friends Colony, Nagpur
+                      <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed" style={{margin: "-4px 0 26px"}}>
+                        <span style={{ whiteSpaceCollapse: "preserve" }}>
+                          We assist companies in arranging comfortable and well-connected staff quarters close to their project locations. We identify suitable residential properties or land parcels near the site, ensuring easy daily commutes and better work-life balance for employees. Our services cover property search, lease or purchase negotiations, legal documentation, and compliance clearances, along with basic facility arrangements such as electricity, water, and sanitation. Whether for engineers, managers, or support staff, we provide tailored housing solutions that are secure, cost-effective, and strategically located to meet your project needs.
                         </span>
-                      </div>
-
-                      <div className="bg-[#F5F5F5] p-4 mb-4 rounded relative">
-                        <div className="grid grid-cols-3 gap-4 text-xs">
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">SUPER AREA</div>
-                            <div className="text-[#535353] font-bold">3 BHK 1550 Sqft 4 BHK 3000 Sqft</div>
-                          </div>
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">STATUS</div>
-                            <div className="text-[#535353] font-bold">New</div>
-                          </div>
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">TRANSACTION</div>
-                            <div className="text-[#535353] font-bold">New</div>
-                          </div>
-                        </div>
-                        <div className="absolute top-4 right-4">
-                          <ChevronDown className="w-3 h-3 text-black" />
-                        </div>
-                      </div>
-
-                      <div className="border-t border-[#F1F1F1] pt-3 mb-6">
-                        <p className="text-[#535353] text-xs leading-relaxed">
-                          Ready to move Commercial Sanctioned, Fire NoC and OC are available
-                        </p>
-                      </div>
-
-                      <Button className="w-full max-w-[402px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-4 rounded-full" style={{marginLeft: "70px"}}>
-                        View project
-                      </Button>
-                    </div>
-                  </div>
-                </div>
-                <div className="order-3" />
-                <div className="order-4" />
-              </div>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div className="order-1">
-                  <div className="w-full h-[638px] mb-6 rounded-[30px] overflow-hidden">
-                    <img
-                      src="https://api.builder.io/api/v1/image/assets/TEMP/01bd9f15b36dd98048084a7476883ad1d1fc4ae7?width=1485"
-                      alt="1300+ Vendor Network"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-                <div className="order-2">
-                  <div className="h-full flex flex-col">
-                    <div>
-                      <h3 className="text-black font-instrument text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
-                        1300+ Vendor Network
-                      </h3>
-                      <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed" style={{margin: "34px 0 -4px"}}>
-                        We have built a strong network of 1300+ trusted vendors across India, covering products and services for construction, infrastructure, real estate, and allied industries. This allows us to provide our clients with quick access, competitive pricing, and reliable supply chains, ensuring projects run smoothly without delays.
-                      </p>
-                    </div>
-
-                    <div className="flex-1 flex flex-col justify-end mb-32" style={{margin: "-5px 0 128px"}}>
-                      <div className="flex items-center gap-2 mb-4">
-                        <MapPin className="w-3 h-3 text-[#4A4747]" />
-                        <span className="text-[#4A4747] font-inter text-sm">
-                          KT Nagar, Friends Colony, Nagpur
-                        </span>
-                      </div>
-
-                      <div className="bg-[#F5F5F5] p-4 mb-4 rounded relative">
-                        <div className="grid grid-cols-3 gap-4 text-xs">
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">SUPER AREA</div>
-                            <div className="text-[#535353] font-bold">3 BHK 1550 Sqft 4 BHK 3000 Sqft</div>
-                          </div>
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">STATUS</div>
-                            <div className="text-[#535353] font-bold">New</div>
-                          </div>
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">TRANSACTION</div>
-                            <div className="text-[#535353] font-bold">New</div>
-                          </div>
-                        </div>
-                        <div className="absolute top-4 right-4">
-                          <ChevronDown className="w-3 h-3 text-black" />
-                        </div>
-                      </div>
-
-                      <div className="border-t border-[#F1F1F1] pt-3 mb-6">
-                        <p className="text-[#535353] text-xs leading-relaxed">
-                          Ready to move Commercial Sanctioned, Fire NoC and OC are available
-                        </p>
-                      </div>
-
-                      <Button className="w-full max-w-[402px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-4 rounded-full" style={{marginLeft: "70px"}}>
-                        View project
-                      </Button>
-                    </div>
-                  </div>
-                </div>
-                <div className="order-3" />
-                <div className="order-4" />
-              </div>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div className="order-1">
-                  <div className="w-full h-[638px] mb-6 rounded-[30px] overflow-hidden">
-                    <img
-                      src="https://api.builder.io/api/v1/image/assets/TEMP/01bd9f15b36dd98048084a7476883ad1d1fc4ae7?width=1485"
-                      alt="1300+ Vendor Network"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-                <div className="order-2">
-                  <div className="h-full flex flex-col">
-                    <div>
-                      <h3 className="text-black font-instrument text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
-                        1300+ Vendor Network
-                      </h3>
-                      <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed" style={{margin: "34px 0 -4px"}}>
-                        We have built a strong network of 1300+ trusted vendors across India, covering products and services for construction, infrastructure, real estate, and allied industries. This allows us to provide our clients with quick access, competitive pricing, and reliable supply chains, ensuring projects run smoothly without delays.
-                      </p>
-                    </div>
-
-                    <div className="flex-1 flex flex-col justify-end mb-32" style={{margin: "-5px 0 128px"}}>
-                      <div className="flex items-center gap-2 mb-4">
-                        <MapPin className="w-3 h-3 text-[#4A4747]" />
-                        <span className="text-[#4A4747] font-inter text-sm">
-                          KT Nagar, Friends Colony, Nagpur
-                        </span>
-                      </div>
-
-                      <div className="bg-[#F5F5F5] p-4 mb-4 rounded relative">
-                        <div className="grid grid-cols-3 gap-4 text-xs">
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">SUPER AREA</div>
-                            <div className="text-[#535353] font-bold">3 BHK 1550 Sqft 4 BHK 3000 Sqft</div>
-                          </div>
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">STATUS</div>
-                            <div className="text-[#535353] font-bold">New</div>
-                          </div>
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">TRANSACTION</div>
-                            <div className="text-[#535353] font-bold">New</div>
-                          </div>
-                        </div>
-                        <div className="absolute top-4 right-4">
-                          <ChevronDown className="w-3 h-3 text-black" />
-                        </div>
-                      </div>
-
-                      <div className="border-t border-[#F1F1F1] pt-3 mb-6">
-                        <p className="text-[#535353] text-xs leading-relaxed">
-                          Ready to move Commercial Sanctioned, Fire NoC and OC are available
-                        </p>
-                      </div>
-
-                      <Button className="w-full max-w-[402px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-4 rounded-full" style={{marginLeft: "70px"}}>
-                        View project
-                      </Button>
-                    </div>
-                  </div>
-                </div>
-                <div className="order-3" />
-                <div className="order-4" />
-              </div>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div className="order-1">
-                  <div className="w-full h-[638px] mb-6 rounded-[30px] overflow-hidden">
-                    <img
-                      src="https://api.builder.io/api/v1/image/assets/TEMP/01bd9f15b36dd98048084a7476883ad1d1fc4ae7?width=1485"
-                      alt="1300+ Vendor Network"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-                <div className="order-2">
-                  <div className="h-full flex flex-col">
-                    <div>
-                      <h3 className="text-black font-instrument text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
-                        1300+ Vendor Network
-                      </h3>
-                      <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed" style={{margin: "34px 0 -4px"}}>
-                        We have built a strong network of 1300+ trusted vendors across India, covering products and services for construction, infrastructure, real estate, and allied industries. This allows us to provide our clients with quick access, competitive pricing, and reliable supply chains, ensuring projects run smoothly without delays.
                       </p>
                     </div>
 
@@ -1413,8 +1228,6 @@ const Industrial = () => {
             </motion.div>
 
             {/* Other services as empty cards */}
-            <motion.div className="flex flex-col" variants={cardVariants} />
-            <motion.div className="flex flex-col" variants={cardVariants} />
             <motion.div className="flex flex-col" variants={cardVariants} />
             <motion.div className="flex flex-col" variants={cardVariants} />
             <motion.div className="flex flex-col" variants={cardVariants} />
