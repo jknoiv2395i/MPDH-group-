@@ -293,21 +293,26 @@ const Industrial = () => {
                   alt="1300+ Vendor Network"
                   className="w-full h-full object-cover"
                 />
+                <img
+                  src="https://api.builder.io/api/v1/image/assets/TEMP/01bd9f15b36dd98048084a7476883ad1d1fc4ae7?width=1485"
+                  alt="1300+ Vendor Network"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </motion.div>
 
             <motion.div className="order-1 lg:order-2" variants={cardVariants}>
               <div className="h-full flex flex-col">
-                <div className="mb-6">
-                  <h3 className="text-black font-instrument text-4xl md:text-[41px] font-normal leading-tight tracking-tight mb-4">
+                <div>
+                  <h3 className="text-black font-instrument text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
                     1300+ Vendor Network
                   </h3>
-                  <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed mb-8">
+                  <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed" style={{margin: "34px 0 -4px"}}>
                     We have built a strong network of 1300+ trusted vendors across India, covering products and services for construction, infrastructure, real estate, and allied industries. This allows us to provide our clients with quick access, competitive pricing, and reliable supply chains, ensuring projects run smoothly without delays.
                   </p>
                 </div>
 
-                <div className="flex-1 flex flex-col justify-end -my-0.5 mb-32">
+                <div className="flex-1 flex flex-col justify-end mb-32" style={{margin: "-5px 0 128px"}}>
                   <div className="flex items-center gap-2 mb-4">
                     <MapPin className="w-3 h-3 text-[#4A4747]" />
                     <span className="text-[#4A4747] font-inter text-sm">
@@ -341,7 +346,7 @@ const Industrial = () => {
                     </p>
                   </div>
 
-                  <Button className="w-full max-w-[402px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-4 rounded-full ml-17">
+                  <Button className="w-full max-w-[402px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-4 rounded-full" style={{marginLeft: "70px"}}>
                     View project
                   </Button>
                 </div>
@@ -350,8 +355,11 @@ const Industrial = () => {
 
             {/* Casting Yard Setup Card */}
             <motion.div className="order-3 lg:order-3" variants={cardVariants}>
-              <div className="h-full flex flex-col">
-              </div>
+              <img
+                src="https://api.builder.io/api/v1/image/assets/TEMP/8e4bff137b48d509979aa1fec648168981054b0e?width=1485"
+                alt="Casting Yard Setup and Installation Support"
+                className="w-full h-full object-cover"
+              />
             </motion.div>
 
             <motion.div className="order-4 lg:order-4" variants={cardVariants}>
