@@ -464,10 +464,10 @@ const Industrial = () => {
                   <div className="h-full flex flex-col">
                     <div>
                       <h3 className="text-black font-instrument text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
-                        1300+ Vendor Network
+                        Approvals
                       </h3>
                       <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed" style={{margin: "34px 0 -4px"}}>
-                        We have built a strong network of 1300+ trusted vendors across India, covering products and services for construction, infrastructure, real estate, and allied industries. This allows us to provide our clients with quick access, competitive pricing, and reliable supply chains, ensuring projects run smoothly without delays.
+                        Complete management of all necessary government and local authority approvals, including securing the Local Body Certificate (LBC), coordinating with municipal or panchayat offices, ensuring adherence to legal and regulatory requirements, and streamlining the entire process to avoid delays and ensure full compliance with applicable laws.
                       </p>
                     </div>
 
