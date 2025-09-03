@@ -269,7 +269,7 @@ const Industrial = () => {
 
       {/* Industrial Properties Section */}
       <motion.section
-        className="pb-16 bg-white -mt-1"
+        className="bg-white -mt-1"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-50px" }}
@@ -288,11 +288,6 @@ const Industrial = () => {
             {/* 1300+ Vendor Network Card */}
             <motion.div className="order-2 lg:order-1" variants={cardVariants}>
               <div className="w-full h-[400px] lg:h-[638px] mb-6 rounded-[30px] overflow-hidden">
-                <img
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/01bd9f15b36dd98048084a7476883ad1d1fc4ae7?width=1485"
-                  alt="1300+ Vendor Network"
-                  className="w-full h-full object-cover"
-                />
                 <img
                   src="https://api.builder.io/api/v1/image/assets/TEMP/01bd9f15b36dd98048084a7476883ad1d1fc4ae7?width=1485"
                   alt="1300+ Vendor Network"
