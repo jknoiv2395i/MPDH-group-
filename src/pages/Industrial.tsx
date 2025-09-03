@@ -300,10 +300,10 @@ const Industrial = () => {
               <div className="h-full flex flex-col">
                 <div>
                   <h3 className="text-black font-instrument text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
-                    1300+ Vendor Network
+                    Casting Yard Setup and Installation Support
                   </h3>
-                  <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed" style={{margin: "34px 0 -4px"}}>
-                    We have built a strong network of 1300+ trusted vendors across India, covering products and services for construction, infrastructure, real estate, and allied industries. This allows us to provide our clients with quick access, competitive pricing, and reliable supply chains, ensuring projects run smoothly without delays.
+                  <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed" style={{marginBottom: "-4px", paddingBottom: "27px"}}>
+                    We are among the few companies offering end-to-end casting yard solutions for construction and infrastructure projects. We manage everything from land identification and NA conversion to securing government approvals, water use exemptions, and compliance clearances, ensuring your casting yard is established quickly, legally, and strategically located for metro, highway, and large-scale real estate projects.
                   </p>
                 </div>
 
