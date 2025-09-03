@@ -351,53 +351,6 @@ const Industrial = () => {
             {/* Casting Yard Setup Card */}
             <motion.div className="order-3 lg:order-3" variants={cardVariants}>
               <div className="h-full flex flex-col">
-                <div className="mb-6">
-                  <h3 className="text-black font-instrument text-4xl md:text-[41px] font-normal leading-tight tracking-tight mb-4">
-                    Casting Yard Setup and Installation Support
-                  </h3>
-                  <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed mb-8">
-                    We are among the few companies offering end-to-end casting yard solutions for construction and infrastructure projects. We manage everything from land identification and NA conversion to securing government approvals, water use exemptions, and compliance clearances, ensuring your casting yard is established quickly, legally, and strategically located for metro, highway, and large-scale real estate projects.
-                  </p>
-                </div>
-
-                <div className="flex-1 flex flex-col justify-end mb-9">
-                  <div className="flex items-center gap-2 mb-4">
-                    <MapPin className="w-3 h-3 text-[#4A4747]" />
-                    <span className="text-[#4A4747] font-inter text-sm">
-                      KT Nagar, Friends Colony, Nagpur
-                    </span>
-                  </div>
-
-                  <div className="bg-[#F5F5F5] p-4 mb-4 rounded relative">
-                    <div className="grid grid-cols-3 gap-4 text-xs">
-                      <div>
-                        <div className="text-[#7B7A7A] font-bold mb-1">SUPER AREA</div>
-                        <div className="text-[#535353] font-bold">3 BHK 1550 Sqft 4 BHK 3000 Sqft</div>
-                      </div>
-                      <div>
-                        <div className="text-[#7B7A7A] font-bold mb-1">STATUS</div>
-                        <div className="text-[#535353] font-bold">New</div>
-                      </div>
-                      <div>
-                        <div className="text-[#7B7A7A] font-bold mb-1">TRANSACTION</div>
-                        <div className="text-[#535353] font-bold">New</div>
-                      </div>
-                    </div>
-                    <div className="absolute top-4 right-4">
-                      <ChevronDown className="w-3 h-3 text-black" />
-                    </div>
-                  </div>
-
-                  <div className="border-t border-[#F1F1F1] pt-3 mb-6">
-                    <p className="text-[#535353] text-xs leading-relaxed">
-                      Ready to move Commercial Sanctioned, Fire NoC and OC are available
-                    </p>
-                  </div>
-
-                  <Button className="w-full max-w-[402px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-4 rounded-full ml-25">
-                    View project
-                  </Button>
-                </div>
               </div>
             </motion.div>
 
