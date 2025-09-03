@@ -355,13 +355,7 @@ const Industrial = () => {
             </motion.div>
 
             <motion.div className="order-4 lg:order-4" variants={cardVariants}>
-              <div className="w-full h-[400px] lg:h-[638px] rounded-[30px] overflow-hidden">
-                <img
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/a50d26348a94fd61960c6e222364b84992937a43?width=1485"
-                  alt="Casting Yard Setup and Installation Support"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+              <div className="w-full h-[400px] lg:h-[638px] rounded-[30px] overflow-hidden" />
             </motion.div>
           </motion.div>
         </div>
