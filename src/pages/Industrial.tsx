@@ -269,7 +269,7 @@ const Industrial = () => {
 
       {/* Industrial Properties Section */}
       <motion.section
-        className="pb-16 bg-white -mt-1"
+        className="bg-white -mt-1"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-50px" }}
@@ -298,16 +298,16 @@ const Industrial = () => {
 
             <motion.div className="order-1 lg:order-2" variants={cardVariants}>
               <div className="h-full flex flex-col">
-                <div className="mb-6">
-                  <h3 className="text-black font-instrument text-4xl md:text-[41px] font-normal leading-tight tracking-tight mb-4">
+                <div>
+                  <h3 className="text-black font-instrument text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
                     1300+ Vendor Network
                   </h3>
-                  <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed mb-8">
+                  <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed" style={{margin: "34px 0 -4px"}}>
                     We have built a strong network of 1300+ trusted vendors across India, covering products and services for construction, infrastructure, real estate, and allied industries. This allows us to provide our clients with quick access, competitive pricing, and reliable supply chains, ensuring projects run smoothly without delays.
                   </p>
                 </div>
 
-                <div className="flex-1 flex flex-col justify-end -my-0.5 mb-32">
+                <div className="flex-1 flex flex-col justify-end mb-32" style={{margin: "-5px 0 128px"}}>
                   <div className="flex items-center gap-2 mb-4">
                     <MapPin className="w-3 h-3 text-[#4A4747]" />
                     <span className="text-[#4A4747] font-inter text-sm">
@@ -341,7 +341,7 @@ const Industrial = () => {
                     </p>
                   </div>
 
-                  <Button className="w-full max-w-[402px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-4 rounded-full ml-17">
+                  <Button className="w-full max-w-[402px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-4 rounded-full" style={{marginLeft: "70px"}}>
                     View project
                   </Button>
                 </div>
@@ -349,70 +349,13 @@ const Industrial = () => {
             </motion.div>
 
             {/* Casting Yard Setup Card */}
-            <motion.div className="order-3 lg:order-3" variants={cardVariants}>
-              <div className="h-full flex flex-col">
-                <div className="mb-6">
-                  <h3 className="text-black font-instrument text-4xl md:text-[41px] font-normal leading-tight tracking-tight mb-4">
-                    Casting Yard Setup and Installation Support
-                  </h3>
-                  <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed mb-8">
-                    We are among the few companies offering end-to-end casting yard solutions for construction and infrastructure projects. We manage everything from land identification and NA conversion to securing government approvals, water use exemptions, and compliance clearances, ensuring your casting yard is established quickly, legally, and strategically located for metro, highway, and large-scale real estate projects.
-                  </p>
-                </div>
+            <motion.div className="order-3 lg:order-3" variants={cardVariants} />
 
-                <div className="flex-1 flex flex-col justify-end mb-9">
-                  <div className="flex items-center gap-2 mb-4">
-                    <MapPin className="w-3 h-3 text-[#4A4747]" />
-                    <span className="text-[#4A4747] font-inter text-sm">
-                      KT Nagar, Friends Colony, Nagpur
-                    </span>
-                  </div>
-
-                  <div className="bg-[#F5F5F5] p-4 mb-4 rounded relative">
-                    <div className="grid grid-cols-3 gap-4 text-xs">
-                      <div>
-                        <div className="text-[#7B7A7A] font-bold mb-1">SUPER AREA</div>
-                        <div className="text-[#535353] font-bold">3 BHK 1550 Sqft 4 BHK 3000 Sqft</div>
-                      </div>
-                      <div>
-                        <div className="text-[#7B7A7A] font-bold mb-1">STATUS</div>
-                        <div className="text-[#535353] font-bold">New</div>
-                      </div>
-                      <div>
-                        <div className="text-[#7B7A7A] font-bold mb-1">TRANSACTION</div>
-                        <div className="text-[#535353] font-bold">New</div>
-                      </div>
-                    </div>
-                    <div className="absolute top-4 right-4">
-                      <ChevronDown className="w-3 h-3 text-black" />
-                    </div>
-                  </div>
-
-                  <div className="border-t border-[#F1F1F1] pt-3 mb-6">
-                    <p className="text-[#535353] text-xs leading-relaxed">
-                      Ready to move Commercial Sanctioned, Fire NoC and OC are available
-                    </p>
-                  </div>
-
-                  <Button className="w-full max-w-[402px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-4 rounded-full ml-25">
-                    View project
-                  </Button>
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div className="order-4 lg:order-4" variants={cardVariants}>
-              <div className="w-full h-[400px] lg:h-[638px] rounded-[30px] overflow-hidden">
-                <img
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/a50d26348a94fd61960c6e222364b84992937a43?width=1485"
-                  alt="Casting Yard Setup and Installation Support"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </motion.div>
+            <motion.div className="order-4 lg:order-4" variants={cardVariants} />
           </motion.div>
         </div>
       </motion.section>
+
 
       {/* Additional Industrial Services Section */}
       <motion.section
@@ -442,287 +385,13 @@ const Industrial = () => {
               />
             </motion.div>
 
-            {/* Approvals */}
-            <motion.div className="flex flex-col" variants={cardVariants}>
-              <div className="mb-6">
-                <h3 className="text-black font-instrument text-4xl md:text-[41px] font-normal leading-tight tracking-tight mb-4">
-                  Approvals
-                </h3>
-                <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed mb-8">
-                  Complete management of all necessary government and local authority approvals, including securing the Local Body Certificate (LBC), coordinating with municipal or panchayat offices, ensuring adherence to legal and regulatory requirements, and streamlining the entire process to avoid delays and ensure full compliance with applicable laws.
-                </p>
-              </div>
-
-              <div className="flex-1 flex flex-col justify-end">
-                <div className="flex items-center gap-2 mb-4">
-                  <MapPin className="w-3 h-3 text-[#4A4747]" />
-                  <span className="text-[#4A4747] font-inter text-sm">
-                    KT Nagar, Friends Colony, Nagpur
-                  </span>
-                </div>
-
-                <div className="bg-[#F5F5F5] p-4 mb-4 rounded relative">
-                  <div className="grid grid-cols-3 gap-4 text-xs">
-                    <div>
-                      <div className="text-[#7B7A7A] font-bold mb-1">SUPER AREA</div>
-                      <div className="text-[#535353] font-bold">3 BHK 1550 Sqft 4 BHK 3000 Sqft</div>
-                    </div>
-                    <div>
-                      <div className="text-[#7B7A7A] font-bold mb-1">STATUS</div>
-                      <div className="text-[#535353] font-bold">New</div>
-                    </div>
-                    <div>
-                      <div className="text-[#7B7A7A] font-bold mb-1">TRANSACTION</div>
-                      <div className="text-[#535353] font-bold">New</div>
-                    </div>
-                  </div>
-                  <div className="absolute top-4 right-4">
-                    <ChevronDown className="w-3 h-3 text-black" />
-                  </div>
-                </div>
-
-                <div className="border-t border-[#F1F1F1] pt-3 mb-6">
-                  <p className="text-[#535353] text-xs leading-relaxed">
-                    Ready to move Commercial Sanctioned, Fire NoC and OC are available
-                  </p>
-                </div>
-
-                <Button className="w-full max-w-[402px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-4 rounded-full">
-                  View project
-                </Button>
-              </div>
-            </motion.div>
-
-            {/* BOW and Labour Licenses Image */}
-            <motion.div className="flex flex-col" variants={cardVariants}>
-              <img
-                src="https://api.builder.io/api/v1/image/assets/TEMP/c01f0abf0d83f42ef3ed32d83aae24603d236c3d?width=1485"
-                alt="BOW and Labour Licenses"
-                className="w-full h-[400px] lg:h-[638px] object-cover rounded-[30px]"
-              />
-            </motion.div>
-
-            {/* BOW and Labour Licenses Details */}
-            <motion.div className="flex flex-col" variants={cardVariants}>
-              <div className="mb-6">
-                <h3 className="text-black font-instrument text-4xl md:text-[41px] font-normal leading-tight tracking-tight mb-4">
-                  BOW and Labour Licenses
-                </h3>
-                <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed mb-8">
-                  End-to-end assistance in obtaining the Building and Other Construction Workers (BOC) License and Labour License, including preparation and submission of required documentation, coordination with labour departments, ensuring compliance with labour welfare regulations, and facilitating timely renewals to keep your operations legally protected.
-                </p>
-              </div>
-
-              <div className="flex-1 flex flex-col justify-end">
-                <div className="flex items-center gap-2 mb-4">
-                  <MapPin className="w-3 h-3 text-[#4A4747]" />
-                  <span className="text-[#4A4747] font-inter text-sm">
-                    KT Nagar, Friends Colony, Nagpur
-                  </span>
-                </div>
-
-                <div className="bg-[#F5F5F5] p-4 mb-4 rounded relative">
-                  <div className="grid grid-cols-3 gap-4 text-xs">
-                    <div>
-                      <div className="text-[#7B7A7A] font-bold mb-1">SUPER AREA</div>
-                      <div className="text-[#535353] font-bold">3 BHK 1550 Sqft 4 BHK 3000 Sqft</div>
-                    </div>
-                    <div>
-                      <div className="text-[#7B7A7A] font-bold mb-1">STATUS</div>
-                      <div className="text-[#535353] font-bold">New</div>
-                    </div>
-                    <div>
-                      <div className="text-[#7B7A7A] font-bold mb-1">TRANSACTION</div>
-                      <div className="text-[#535353] font-bold">New</div>
-                    </div>
-                  </div>
-                  <div className="absolute top-4 right-4">
-                    <ChevronDown className="w-3 h-3 text-black" />
-                  </div>
-                </div>
-
-                <div className="border-t border-[#F1F1F1] pt-3 mb-6">
-                  <p className="text-[#535353] text-xs leading-relaxed">
-                    Ready to move Commercial Sanctioned, Fire NoC and OC are available
-                  </p>
-                </div>
-
-                <Button className="w-full max-w-[402px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-4 rounded-full">
-                  View project
-                </Button>
-              </div>
-            </motion.div>
-
-            {/* Electricity Details */}
-            <motion.div className="flex flex-col" variants={cardVariants}>
-              <div className="mb-6">
-                <h3 className="text-black font-instrument text-4xl md:text-[41px] font-normal leading-tight tracking-tight mb-4">
-                  Electricity
-                </h3>
-                <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed mb-8">
-                  Complete facilitation of electricity connections for construction or operational needs, including installation of Distribution Panels (DP), coordination with electricity boards, arranging power extensions up to 1000 kW, ensuring adherence to safety and technical standards, and expediting approvals to guarantee uninterrupted power supply for your projects.
-                </p>
-              </div>
-
-              <div className="flex-1 flex flex-col justify-end">
-                <div className="flex items-center gap-2 mb-4">
-                  <MapPin className="w-3 h-3 text-[#4A4747]" />
-                  <span className="text-[#4A4747] font-inter text-sm">
-                    KT Nagar, Friends Colony, Nagpur
-                  </span>
-                </div>
-
-                <div className="bg-[#F5F5F5] p-4 mb-4 rounded relative">
-                  <div className="grid grid-cols-3 gap-4 text-xs">
-                    <div>
-                      <div className="text-[#7B7A7A] font-bold mb-1">SUPER AREA</div>
-                      <div className="text-[#535353] font-bold">3 BHK 1550 Sqft 4 BHK 3000 Sqft</div>
-                    </div>
-                    <div>
-                      <div className="text-[#7B7A7A] font-bold mb-1">STATUS</div>
-                      <div className="text-[#535353] font-bold">New</div>
-                    </div>
-                    <div>
-                      <div className="text-[#7B7A7A] font-bold mb-1">TRANSACTION</div>
-                      <div className="text-[#535353] font-bold">New</div>
-                    </div>
-                  </div>
-                  <div className="absolute top-4 right-4">
-                    <ChevronDown className="w-3 h-3 text-black" />
-                  </div>
-                </div>
-
-                <div className="border-t border-[#F1F1F1] pt-3 mb-6">
-                  <p className="text-[#535353] text-xs leading-relaxed">
-                    Ready to move Commercial Sanctioned, Fire NoC and OC are available
-                  </p>
-                </div>
-
-                <Button className="w-full max-w-[402px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-4 rounded-full">
-                  View project
-                </Button>
-              </div>
-            </motion.div>
-
-            {/* Land Conversion Image */}
-            <motion.div className="flex flex-col" variants={cardVariants}>
-              <img
-                src="https://api.builder.io/api/v1/image/assets/TEMP/3b8118dad47608d35ba0e0a7e258e587e8b79379?width=1485"
-                alt="Land Conversion"
-                className="w-full h-[400px] lg:h-[638px] object-cover rounded-[30px]"
-              />
-            </motion.div>
-
-            {/* Land Conversion Details */}
-            <motion.div className="flex flex-col" variants={cardVariants}>
-              <div className="mb-6">
-                <h3 className="text-black font-instrument text-4xl md:text-[41px] font-normal leading-tight tracking-tight mb-4">
-                  Land Conversion
-                </h3>
-                <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed mb-8">
-                  NA (Non-Agricultural) Land Conversion: Comprehensive end-to-end support for converting agricultural land into legally approved non-agricultural (NA) status, including guidance on documentation, liaison with government authorities, obtaining required approvals, ensuring compliance with local zoning regulations, and facilitating smooth processing so that the land can be legally used for residential, commercial, or industrial purposes.
-                </p>
-              </div>
-
-              <div className="flex-1 flex flex-col justify-end">
-                <div className="flex items-center gap-2 mb-4">
-                  <MapPin className="w-3 h-3 text-[#4A4747]" />
-                  <span className="text-[#4A4747] font-inter text-sm">
-                    KT Nagar, Friends Colony, Nagpur
-                  </span>
-                </div>
-
-                <div className="bg-[#F5F5F5] p-4 mb-4 rounded relative">
-                  <div className="grid grid-cols-3 gap-4 text-xs">
-                    <div>
-                      <div className="text-[#7B7A7A] font-bold mb-1">SUPER AREA</div>
-                      <div className="text-[#535353] font-bold">3 BHK 1550 Sqft 4 BHK 3000 Sqft</div>
-                    </div>
-                    <div>
-                      <div className="text-[#7B7A7A] font-bold mb-1">STATUS</div>
-                      <div className="text-[#535353] font-bold">New</div>
-                    </div>
-                    <div>
-                      <div className="text-[#7B7A7A] font-bold mb-1">TRANSACTION</div>
-                      <div className="text-[#535353] font-bold">New</div>
-                    </div>
-                  </div>
-                  <div className="absolute top-4 right-4">
-                    <ChevronDown className="w-3 h-3 text-black" />
-                  </div>
-                </div>
-
-                <div className="border-t border-[#F1F1F1] pt-3 mb-6">
-                  <p className="text-[#535353] text-xs leading-relaxed">
-                    Ready to move Commercial Sanctioned, Fire NoC and OC are available
-                  </p>
-                </div>
-
-                <Button className="w-full max-w-[402px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-4 rounded-full">
-                  View project
-                </Button>
-              </div>
-            </motion.div>
-
-            {/* Pollution Details */}
-            <motion.div className="flex flex-col" variants={cardVariants}>
-              <div className="mb-6">
-                <h3 className="text-black font-instrument text-4xl md:text-[41px] font-normal leading-tight tracking-tight mb-4">
-                  Pollution
-                </h3>
-                <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed mb-8">
-                  End-to-end assistance in obtaining mandatory pollution control clearances and certificates from the State Pollution Control Board, including preparation of environmental compliance documents, liaison with authorities, ensuring adherence to air, water, and noise pollution norms, and facilitating timely renewals to keep your project fully compliant with environmental regulations.
-                </p>
-              </div>
-
-              <div className="flex-1 flex flex-col justify-end">
-                <div className="flex items-center gap-2 mb-4">
-                  <MapPin className="w-3 h-3 text-[#4A4747]" />
-                  <span className="text-[#4A4747] font-inter text-sm">
-                    KT Nagar, Friends Colony, Nagpur
-                  </span>
-                </div>
-
-                <div className="bg-[#F5F5F5] p-4 mb-4 rounded relative">
-                  <div className="grid grid-cols-3 gap-4 text-xs">
-                    <div>
-                      <div className="text-[#7B7A7A] font-bold mb-1">SUPER AREA</div>
-                      <div className="text-[#535353] font-bold">3 BHK 1550 Sqft 4 BHK 3000 Sqft</div>
-                    </div>
-                    <div>
-                      <div className="text-[#7B7A7A] font-bold mb-1">STATUS</div>
-                      <div className="text-[#535353] font-bold">New</div>
-                    </div>
-                    <div>
-                      <div className="text-[#7B7A7A] font-bold mb-1">TRANSACTION</div>
-                      <div className="text-[#535353] font-bold">New</div>
-                    </div>
-                  </div>
-                  <div className="absolute top-4 right-4">
-                    <ChevronDown className="w-3 h-3 text-black" />
-                  </div>
-                </div>
-
-                <div className="border-t border-[#F1F1F1] pt-3 mb-6">
-                  <p className="text-[#535353] text-xs leading-relaxed">
-                    Ready to move Commercial Sanctioned, Fire NoC and OC are available
-                  </p>
-                </div>
-
-                <Button className="w-full max-w-[402px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-4 rounded-full">
-                  View project
-                </Button>
-              </div>
-            </motion.div>
-
-            {/* Additional Service Image */}
-            <motion.div className="flex flex-col" variants={cardVariants}>
-              <img
-                src="https://api.builder.io/api/v1/image/assets/TEMP/b843e34a6e83af8aa0cd86147e91e6e2aaa0b09a?width=1485"
-                alt="Additional Industrial Services"
-                className="w-full h-[400px] lg:h-[638px] object-cover rounded-[30px]"
-              />
-            </motion.div>
+            {/* Other services as empty cards */}
+            <motion.div className="flex flex-col" variants={cardVariants} />
+            <motion.div className="flex flex-col" variants={cardVariants} />
+            <motion.div className="flex flex-col" variants={cardVariants} />
+            <motion.div className="flex flex-col" variants={cardVariants} />
+            <motion.div className="flex flex-col" variants={cardVariants} />
+            <motion.div className="flex flex-col" variants={cardVariants} />
           </motion.div>
         </div>
       </motion.section>
