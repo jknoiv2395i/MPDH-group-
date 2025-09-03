@@ -369,6 +369,17 @@ const Industrial = () => {
         viewport={{ once: true, margin: "-50px" }}
         variants={containerVariants}
       >
+        <div className="max-w-7xl mx-auto px-4" />
+      </motion.section>
+
+      {/* Replicated Casting Yard Setup Section */}
+      <motion.section
+        className="pb-16 bg-white"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-50px" }}
+        variants={containerVariants}
+      >
         <div className="max-w-7xl mx-auto px-4">
           <motion.div
             className="flex flex-col lg:flex-row items-center gap-8 lg:gap-[148px]"
