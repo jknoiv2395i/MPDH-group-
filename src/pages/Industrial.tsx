@@ -642,6 +642,198 @@ const Industrial = () => {
                 <div className="order-3" />
                 <div className="order-4" />
               </div>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div className="order-1">
+                  <div className="w-full h-[638px] mb-6 rounded-[30px] overflow-hidden">
+                    <img
+                      src="https://api.builder.io/api/v1/image/assets/TEMP/01bd9f15b36dd98048084a7476883ad1d1fc4ae7?width=1485"
+                      alt="1300+ Vendor Network"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+                <div className="order-2">
+                  <div className="h-full flex flex-col">
+                    <div>
+                      <h3 className="text-black font-instrument text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
+                        1300+ Vendor Network
+                      </h3>
+                      <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed" style={{margin: "34px 0 -4px"}}>
+                        We have built a strong network of 1300+ trusted vendors across India, covering products and services for construction, infrastructure, real estate, and allied industries. This allows us to provide our clients with quick access, competitive pricing, and reliable supply chains, ensuring projects run smoothly without delays.
+                      </p>
+                    </div>
+
+                    <div className="flex-1 flex flex-col justify-end mb-32" style={{margin: "-5px 0 128px"}}>
+                      <div className="flex items-center gap-2 mb-4">
+                        <MapPin className="w-3 h-3 text-[#4A4747]" />
+                        <span className="text-[#4A4747] font-inter text-sm">
+                          KT Nagar, Friends Colony, Nagpur
+                        </span>
+                      </div>
+
+                      <div className="bg-[#F5F5F5] p-4 mb-4 rounded relative">
+                        <div className="grid grid-cols-3 gap-4 text-xs">
+                          <div>
+                            <div className="text-[#7B7A7A] font-bold mb-1">SUPER AREA</div>
+                            <div className="text-[#535353] font-bold">3 BHK 1550 Sqft 4 BHK 3000 Sqft</div>
+                          </div>
+                          <div>
+                            <div className="text-[#7B7A7A] font-bold mb-1">STATUS</div>
+                            <div className="text-[#535353] font-bold">New</div>
+                          </div>
+                          <div>
+                            <div className="text-[#7B7A7A] font-bold mb-1">TRANSACTION</div>
+                            <div className="text-[#535353] font-bold">New</div>
+                          </div>
+                        </div>
+                        <div className="absolute top-4 right-4">
+                          <ChevronDown className="w-3 h-3 text-black" />
+                        </div>
+                      </div>
+
+                      <div className="border-t border-[#F1F1F1] pt-3 mb-6">
+                        <p className="text-[#535353] text-xs leading-relaxed">
+                          Ready to move Commercial Sanctioned, Fire NoC and OC are available
+                        </p>
+                      </div>
+
+                      <Button className="w-full max-w-[402px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-4 rounded-full" style={{marginLeft: "70px"}}>
+                        View project
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+                <div className="order-3" />
+                <div className="order-4" />
+              </div>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div className="order-1">
+                  <div className="w-full h-[638px] mb-6 rounded-[30px] overflow-hidden">
+                    <img
+                      src="https://api.builder.io/api/v1/image/assets/TEMP/01bd9f15b36dd98048084a7476883ad1d1fc4ae7?width=1485"
+                      alt="1300+ Vendor Network"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+                <div className="order-2">
+                  <div className="h-full flex flex-col">
+                    <div>
+                      <h3 className="text-black font-instrument text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
+                        1300+ Vendor Network
+                      </h3>
+                      <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed" style={{margin: "34px 0 -4px"}}>
+                        We have built a strong network of 1300+ trusted vendors across India, covering products and services for construction, infrastructure, real estate, and allied industries. This allows us to provide our clients with quick access, competitive pricing, and reliable supply chains, ensuring projects run smoothly without delays.
+                      </p>
+                    </div>
+
+                    <div className="flex-1 flex flex-col justify-end mb-32" style={{margin: "-5px 0 128px"}}>
+                      <div className="flex items-center gap-2 mb-4">
+                        <MapPin className="w-3 h-3 text-[#4A4747]" />
+                        <span className="text-[#4A4747] font-inter text-sm">
+                          KT Nagar, Friends Colony, Nagpur
+                        </span>
+                      </div>
+
+                      <div className="bg-[#F5F5F5] p-4 mb-4 rounded relative">
+                        <div className="grid grid-cols-3 gap-4 text-xs">
+                          <div>
+                            <div className="text-[#7B7A7A] font-bold mb-1">SUPER AREA</div>
+                            <div className="text-[#535353] font-bold">3 BHK 1550 Sqft 4 BHK 3000 Sqft</div>
+                          </div>
+                          <div>
+                            <div className="text-[#7B7A7A] font-bold mb-1">STATUS</div>
+                            <div className="text-[#535353] font-bold">New</div>
+                          </div>
+                          <div>
+                            <div className="text-[#7B7A7A] font-bold mb-1">TRANSACTION</div>
+                            <div className="text-[#535353] font-bold">New</div>
+                          </div>
+                        </div>
+                        <div className="absolute top-4 right-4">
+                          <ChevronDown className="w-3 h-3 text-black" />
+                        </div>
+                      </div>
+
+                      <div className="border-t border-[#F1F1F1] pt-3 mb-6">
+                        <p className="text-[#535353] text-xs leading-relaxed">
+                          Ready to move Commercial Sanctioned, Fire NoC and OC are available
+                        </p>
+                      </div>
+
+                      <Button className="w-full max-w-[402px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-4 rounded-full" style={{marginLeft: "70px"}}>
+                        View project
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+                <div className="order-3" />
+                <div className="order-4" />
+              </div>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div className="order-1">
+                  <div className="w-full h-[638px] mb-6 rounded-[30px] overflow-hidden">
+                    <img
+                      src="https://api.builder.io/api/v1/image/assets/TEMP/01bd9f15b36dd98048084a7476883ad1d1fc4ae7?width=1485"
+                      alt="1300+ Vendor Network"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+                <div className="order-2">
+                  <div className="h-full flex flex-col">
+                    <div>
+                      <h3 className="text-black font-instrument text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
+                        1300+ Vendor Network
+                      </h3>
+                      <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed" style={{margin: "34px 0 -4px"}}>
+                        We have built a strong network of 1300+ trusted vendors across India, covering products and services for construction, infrastructure, real estate, and allied industries. This allows us to provide our clients with quick access, competitive pricing, and reliable supply chains, ensuring projects run smoothly without delays.
+                      </p>
+                    </div>
+
+                    <div className="flex-1 flex flex-col justify-end mb-32" style={{margin: "-5px 0 128px"}}>
+                      <div className="flex items-center gap-2 mb-4">
+                        <MapPin className="w-3 h-3 text-[#4A4747]" />
+                        <span className="text-[#4A4747] font-inter text-sm">
+                          KT Nagar, Friends Colony, Nagpur
+                        </span>
+                      </div>
+
+                      <div className="bg-[#F5F5F5] p-4 mb-4 rounded relative">
+                        <div className="grid grid-cols-3 gap-4 text-xs">
+                          <div>
+                            <div className="text-[#7B7A7A] font-bold mb-1">SUPER AREA</div>
+                            <div className="text-[#535353] font-bold">3 BHK 1550 Sqft 4 BHK 3000 Sqft</div>
+                          </div>
+                          <div>
+                            <div className="text-[#7B7A7A] font-bold mb-1">STATUS</div>
+                            <div className="text-[#535353] font-bold">New</div>
+                          </div>
+                          <div>
+                            <div className="text-[#7B7A7A] font-bold mb-1">TRANSACTION</div>
+                            <div className="text-[#535353] font-bold">New</div>
+                          </div>
+                        </div>
+                        <div className="absolute top-4 right-4">
+                          <ChevronDown className="w-3 h-3 text-black" />
+                        </div>
+                      </div>
+
+                      <div className="border-t border-[#F1F1F1] pt-3 mb-6">
+                        <p className="text-[#535353] text-xs leading-relaxed">
+                          Ready to move Commercial Sanctioned, Fire NoC and OC are available
+                        </p>
+                      </div>
+
+                      <Button className="w-full max-w-[402px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-4 rounded-full" style={{marginLeft: "70px"}}>
+                        View project
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+                <div className="order-3" />
+                <div className="order-4" />
+              </div>
             </motion.div>
 
             {/* Other services as empty cards */}
