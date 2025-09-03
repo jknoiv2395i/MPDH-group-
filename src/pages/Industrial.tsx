@@ -289,7 +289,7 @@ const Industrial = () => {
             <motion.div className="order-2 lg:order-1" variants={cardVariants}>
               <div className="w-full h-[400px] lg:h-[638px] mb-6 rounded-[30px] overflow-hidden">
                 <img
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/01bd9f15b36dd98048084a7476883ad1d1fc4ae7?width=1485"
+                  src="https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2F1fd1d1f8412a4dce8463b6c049b2e13b"
                   alt="1300+ Vendor Network"
                   className="w-full h-full object-cover"
                 />
@@ -457,7 +457,7 @@ const Industrial = () => {
                 <div className="order-1">
                   <div className="w-full h-[638px] mb-6 rounded-[30px] overflow-hidden">
                     <img
-                      src="https://api.builder.io/api/v1/image/assets/TEMP/01bd9f15b36dd98048084a7476883ad1d1fc4ae7?width=1485"
+                      src="https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2F35d4ef9d6b9b49d6bc50a503ea243b9a?format=webp"
                       alt="1300+ Vendor Network"
                       className="w-full h-full object-cover"
                     />
@@ -527,7 +527,7 @@ const Industrial = () => {
                 <div className="order-1">
                   <div className="w-full h-[638px] mb-6 rounded-[30px] overflow-hidden">
                     <img
-                      src="https://api.builder.io/api/v1/image/assets/TEMP/01bd9f15b36dd98048084a7476883ad1d1fc4ae7?width=1485"
+                      src="https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2Ff0500f68212a4fc28fb5e9707e33e8e8"
                       alt="1300+ Vendor Network"
                       className="w-full h-full object-cover"
                     />
@@ -597,7 +597,7 @@ const Industrial = () => {
                 <div className="order-1">
                   <div className="w-full h-[638px] mb-6 rounded-[30px] overflow-hidden">
                     <img
-                      src="https://api.builder.io/api/v1/image/assets/TEMP/01bd9f15b36dd98048084a7476883ad1d1fc4ae7?width=1485"
+                      src="https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2F25aaa5389b6d4647a6cf13fba49b214d"
                       alt="1300+ Vendor Network"
                       className="w-full h-full object-cover"
                     />
@@ -667,7 +667,7 @@ const Industrial = () => {
                 <div className="order-1">
                   <div className="w-full h-[638px] mb-6 rounded-[30px] overflow-hidden">
                     <img
-                      src="https://api.builder.io/api/v1/image/assets/TEMP/01bd9f15b36dd98048084a7476883ad1d1fc4ae7?width=1485"
+                      src="https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2F356d6ffdafc7480684b68928389d9dcc"
                       alt="1300+ Vendor Network"
                       className="w-full h-full object-cover"
                     />
@@ -741,7 +741,7 @@ const Industrial = () => {
                 <div className="order-1">
                   <div className="w-full h-[638px] mb-6 rounded-[30px] overflow-hidden">
                     <img
-                      src="https://api.builder.io/api/v1/image/assets/TEMP/01bd9f15b36dd98048084a7476883ad1d1fc4ae7?width=1485"
+                      src="https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2Fee3ecd0a781b48648eef62ecc4da3f07"
                       alt="1300+ Vendor Network"
                       className="w-full h-full object-cover"
                     />
@@ -811,7 +811,7 @@ const Industrial = () => {
                 <div className="order-1">
                   <div className="w-full h-[638px] mb-6 rounded-[30px] overflow-hidden">
                     <img
-                      src="https://api.builder.io/api/v1/image/assets/TEMP/01bd9f15b36dd98048084a7476883ad1d1fc4ae7?width=1485"
+                      src="https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2Fc0db88533a434f9aa7733aa2b3ec0087"
                       alt="1300+ Vendor Network"
                       className="w-full h-full object-cover"
                     />
@@ -881,7 +881,7 @@ const Industrial = () => {
                 <div className="order-1">
                   <div className="w-full h-[638px] mb-6 rounded-[30px] overflow-hidden">
                     <img
-                      src="https://api.builder.io/api/v1/image/assets/TEMP/01bd9f15b36dd98048084a7476883ad1d1fc4ae7?width=1485"
+                      src="https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2Fb6cff114e5a94737aa68ac8723320ff1"
                       alt="1300+ Vendor Network"
                       className="w-full h-full object-cover"
                     />
@@ -951,7 +951,7 @@ const Industrial = () => {
                 <div className="order-1">
                   <div className="w-full h-[638px] mb-6 rounded-[30px] overflow-hidden">
                     <img
-                      src="https://api.builder.io/api/v1/image/assets/TEMP/01bd9f15b36dd98048084a7476883ad1d1fc4ae7?width=1485"
+                      src="https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2F15d993e567e843b6943b1fd87be7910c"
                       alt="1300+ Vendor Network"
                       className="w-full h-full object-cover"
                     />
@@ -1021,7 +1021,7 @@ const Industrial = () => {
                 <div className="order-1">
                   <div className="w-full h-[638px] mb-6 rounded-[30px] overflow-hidden">
                     <img
-                      src="https://api.builder.io/api/v1/image/assets/TEMP/01bd9f15b36dd98048084a7476883ad1d1fc4ae7?width=1485"
+                      src="https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2F2bd014e2c540431989b664fc720787ae?format=webp"
                       alt="1300+ Vendor Network"
                       className="w-full h-full object-cover"
                     />
@@ -1161,7 +1161,7 @@ const Industrial = () => {
                 <div className="order-1">
                   <div className="w-full h-[638px] mb-6 rounded-[30px] overflow-hidden">
                     <img
-                      src="https://api.builder.io/api/v1/image/assets/TEMP/01bd9f15b36dd98048084a7476883ad1d1fc4ae7?width=1485"
+                      src="https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2Fba23e42b2a6a4e9684d5e313980c3448"
                       alt="1300+ Vendor Network"
                       className="w-full h-full object-cover"
                     />
