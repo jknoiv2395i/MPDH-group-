@@ -174,7 +174,7 @@ const Industrial = () => {
       
       {/* Hero Section */}
       <motion.div
-        className="relative h-[689px] w-full overflow-hidden"
+        className="relative h-[320px] sm:h-[420px] md:h-[560px] lg:h-[689px] w-full overflow-hidden"
         initial="hidden"
         animate="visible"
         variants={containerVariants}
@@ -192,9 +192,9 @@ const Industrial = () => {
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-transparent" />
-        <div className="absolute inset-0 flex items-center justify-start pl-10 -top-[81px]">
+        <div className="absolute inset-0 flex items-center justify-start pl-4 md:pl-10 top-0">
           <motion.h1
-            className="text-left text-white font-instrument text-8xl md:text-[180px] font-normal leading-tight tracking-tight h-[506px] pl-[7px]"
+            className="text-left text-white font-instrument text-3xl sm:text-4xl md:text-6xl lg:text-8xl xl:text-[180px] font-normal leading-tight tracking-tight max-w-full md:pl-[7px]"
             variants={headlineVariants}
           >
             <p>Industrial Properties</p>
@@ -216,12 +216,12 @@ const Industrial = () => {
             className="mb-12"
             variants={itemVariants}
           >
-            <h2 className="text-black font-instrument text-4xl md:text-[41px] font-normal leading-tight tracking-tight mb-4">
+            <h2 className="text-black font-instrument text-2xl sm:text-3xl md:text-4xl lg:text-[41px] font-normal leading-tight tracking-tight mb-4">
               INDUSTRIAL
               <br />
               PROPERTIES
             </h2>
-            <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed max-w-2xl">
+            <p className="text-[#5D5D5D] font-inter text-base sm:text-lg leading-relaxed max-w-2xl">
               We help all kinds of businesses—startups, MSMEs, MNCs, or hospitality groups Establish their business at project sites including buy and lease the perfect properties for business.
             </p>
           </motion.div>
@@ -235,7 +235,7 @@ const Industrial = () => {
               <div className="flex items-center gap-6">
                 <div className="flex items-center gap-3 bg-black text-white px-4 py-3 rounded-sm">
                   <List className="w-4 h-4" />
-                  <span className="font-inter text-lg font-semibold">Properties List</span>
+                  <span className="font-inter text-base sm:text-lg font-semibold">Properties List</span>
                 </div>
               </div>
               
@@ -287,7 +287,7 @@ const Industrial = () => {
           >
             {/* Casting Yard Setup Card */}
             <motion.div className="order-2 lg:order-1" variants={cardVariants}>
-              <div className="w-full h-[400px] lg:h-[638px] mb-6 rounded-[30px] overflow-hidden">
+              <div className="w-full h-[220px] sm:h-[280px] md:h-[400px] lg:h-[638px] mb-6 rounded-[30px] overflow-hidden">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2F1fd1d1f8412a4dce8463b6c049b2e13b"
                   alt="1300+ Vendor Network"
@@ -299,19 +299,19 @@ const Industrial = () => {
             <motion.div className="order-1 lg:order-2" variants={cardVariants}>
               <div className="h-full flex flex-col">
                 <div>
-                  <h3 className="text-black font-instrument text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
+                  <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
                     <span style={{ whiteSpaceCollapse: "preserve" }}>
                       Casting Yard Setup and Installation Support
                     </span>
                   </h3>
-                  <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed" style={{marginBottom: "-4px", paddingBottom: "27px"}}>
+                  <p className="text-[#5D5D5D] font-inter text-base sm:text-lg leading-relaxed" style={{marginBottom: "-4px", paddingBottom: "27px"}}>
                     <span style={{ whiteSpaceCollapse: "preserve" }}>
                       We are among the few companies offering end-to-end casting yard solutions for construction and infrastructure projects. We manage everything from land identification and NA conversion to securing government approvals, water use exemptions, and compliance clearances, ensuring your casting yard is established quickly, legally, and strategically located for metro, highway, and large-scale real estate projects.
                     </span>
                   </p>
                 </div>
 
-                <div className="flex-1 flex flex-col justify-end mb-32" style={{margin: "-5px 0 128px"}}>
+                <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 128px"}}>
                   <div className="flex items-center gap-2 mb-4">
                     <MapPin className="w-3 h-3 text-[#4A4747]" />
                     <span className="text-[#4A4747] font-inter text-sm">
@@ -345,7 +345,7 @@ const Industrial = () => {
                     </p>
                   </div>
 
-                  <Button className="w-full max-w-[402px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-4 rounded-full" style={{marginLeft: "70px"}}>
+                  <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
                     View project
                   </Button>
                 </div>
@@ -363,7 +363,7 @@ const Industrial = () => {
             variants={gridVariants}
           >
             <motion.div className="order-1" variants={cardVariants}>
-              <div className="w-full h-[400px] lg:h-[638px] mb-6 rounded-[30px] overflow-hidden">
+              <div className="w-full h-[220px] sm:h-[280px] md:h-[400px] lg:h-[638px] mb-6 rounded-[30px] overflow-hidden">
                 <img
                   src="https://api.builder.io/api/v1/image/assets/TEMP/01bd9f15b36dd98048084a7476883ad1d1fc4ae7?width=1485"
                   alt="1300+ Vendor Network"
@@ -375,15 +375,15 @@ const Industrial = () => {
             <motion.div className="order-2" variants={cardVariants}>
               <div className="h-full flex flex-col">
                 <div>
-                  <h3 className="text-black font-instrument text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
+                  <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
                     1300+ Vendor Network
                   </h3>
-                  <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed" style={{margin: "34px 0 -4px"}}>
+                  <p className="text-[#5D5D5D] font-inter text-base sm:text-lg leading-relaxed" style={{margin: "34px 0 -4px"}}>
                     We have built a strong network of 1300+ trusted vendors across India, covering products and services for construction, infrastructure, real estate, and allied industries. This allows us to provide our clients with quick access, competitive pricing, and reliable supply chains, ensuring projects run smoothly without delays.
                   </p>
                 </div>
 
-                <div className="flex-1 flex flex-col justify-end mb-32" style={{margin: "-5px 0 128px"}}>
+                <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 128px"}}>
                   <div className="flex items-center gap-2 mb-4">
                     <MapPin className="w-3 h-3 text-[#4A4747]" />
                     <span className="text-[#4A4747] font-inter text-sm">
@@ -417,7 +417,7 @@ const Industrial = () => {
                     </p>
                   </div>
 
-                  <Button className="w-full max-w-[402px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-4 rounded-full" style={{marginLeft: "70px"}}>
+                  <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
                     View project
                   </Button>
                 </div>
@@ -455,7 +455,7 @@ const Industrial = () => {
               </div>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div className="order-1">
-                  <div className="w-full h-[638px] mb-6 rounded-[30px] overflow-hidden">
+                  <div className="w-full h-[320px] sm:h-[420px] md:h-[520px] lg:h-[638px] mb-6 rounded-[30px] overflow-hidden">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2F35d4ef9d6b9b49d6bc50a503ea243b9a?format=webp"
                       alt="1300+ Vendor Network"
@@ -466,19 +466,19 @@ const Industrial = () => {
                 <div className="order-2">
                   <div className="h-full flex flex-col">
                     <div>
-                      <h3 className="text-black font-instrument text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
+                      <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
                         <span style={{ whiteSpaceCollapse: "preserve" }}>
                           Approvals
                         </span>
                       </h3>
-                      <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed" style={{margin: "34px 0 -4px"}}>
+                      <p className="text-[#5D5D5D] font-inter text-base sm:text-lg leading-relaxed" style={{margin: "34px 0 -4px"}}>
                         <span style={{ whiteSpaceCollapse: "preserve" }}>
                           Complete management of all necessary government and local authority approvals, including securing the Local Body Certificate (LBC), coordinating with municipal or panchayat offices, ensuring adherence to legal and regulatory requirements, and streamlining the entire process to avoid delays and ensure full compliance with applicable laws.
                         </span>
                       </p>
                     </div>
 
-                    <div className="flex-1 flex flex-col justify-end mb-32" style={{margin: "-5px 0 128px"}}>
+                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 128px"}}>
                       <div className="flex items-center gap-2 mb-4">
                         <MapPin className="w-3 h-3 text-[#4A4747]" />
                         <span className="text-[#4A4747] font-inter text-sm">
@@ -512,7 +512,7 @@ const Industrial = () => {
                         </p>
                       </div>
 
-                      <Button className="w-full max-w-[402px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-4 rounded-full" style={{marginLeft: "70px"}}>
+                      <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
                         View project
                       </Button>
                     </div>
@@ -525,7 +525,7 @@ const Industrial = () => {
               {/* BOW and Labour Licenses */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div className="order-1">
-                  <div className="w-full h-[638px] mb-6 rounded-[30px] overflow-hidden">
+                  <div className="w-full h-[320px] sm:h-[420px] md:h-[520px] lg:h-[638px] mb-6 rounded-[30px] overflow-hidden">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2Ff0500f68212a4fc28fb5e9707e33e8e8"
                       alt="1300+ Vendor Network"
@@ -536,19 +536,19 @@ const Industrial = () => {
                 <div className="order-2">
                   <div className="h-full flex flex-col">
                     <div>
-                      <h3 className="text-black font-instrument text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
+                      <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
                         <span style={{ whiteSpaceCollapse: "preserve" }}>
                           BOW and Labour Licenses
                         </span>
                       </h3>
-                      <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed" style={{margin: "34px 0 -4px"}}>
+                      <p className="text-[#5D5D5D] font-inter text-base sm:text-lg leading-relaxed" style={{margin: "34px 0 -4px"}}>
                         <span style={{ whiteSpaceCollapse: "preserve" }}>
                           End-to-end assistance in obtaining the Building and Other Construction Workers (BOC) License and Labour License, including preparation and submission of required documentation, coordination with labour departments, ensuring compliance with labour welfare regulations, and facilitating timely renewals to keep your operations legally protected.
                         </span>
                       </p>
                     </div>
 
-                    <div className="flex-1 flex flex-col justify-end mb-32" style={{margin: "-5px 0 128px"}}>
+                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 128px"}}>
                       <div className="flex items-center gap-2 mb-4">
                         <MapPin className="w-3 h-3 text-[#4A4747]" />
                         <span className="text-[#4A4747] font-inter text-sm">
@@ -582,7 +582,7 @@ const Industrial = () => {
                         </p>
                       </div>
 
-                      <Button className="w-full max-w-[402px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-4 rounded-full" style={{marginLeft: "70px"}}>
+                      <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
                         View project
                       </Button>
                     </div>
@@ -595,7 +595,7 @@ const Industrial = () => {
               {/* Electricity */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div className="order-1">
-                  <div className="w-full h-[638px] mb-6 rounded-[30px] overflow-hidden">
+                  <div className="w-full h-[320px] sm:h-[420px] md:h-[520px] lg:h-[638px] mb-6 rounded-[30px] overflow-hidden">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2F25aaa5389b6d4647a6cf13fba49b214d"
                       alt="1300+ Vendor Network"
@@ -606,19 +606,19 @@ const Industrial = () => {
                 <div className="order-2">
                   <div className="h-full flex flex-col">
                     <div>
-                      <h3 className="text-black font-instrument text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
+                      <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
                         <span style={{ whiteSpaceCollapse: "preserve" }}>
                           Electricity
                         </span>
                       </h3>
-                      <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed" style={{margin: "34px 0 -4px"}}>
+                      <p className="text-[#5D5D5D] font-inter text-base sm:text-lg leading-relaxed" style={{margin: "34px 0 -4px"}}>
                         <span style={{ whiteSpaceCollapse: "preserve" }}>
                           Complete facilitation of electricity connections for construction or operational needs, including installation of Distribution Panels (DP), coordination with electricity boards, arranging power extensions up to 1000 kW, ensuring adherence to safety and technical standards, and expediting approvals to guarantee uninterrupted power supply for your projects.
                         </span>
                       </p>
                     </div>
 
-                    <div className="flex-1 flex flex-col justify-end mb-32" style={{margin: "-5px 0 128px"}}>
+                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 128px"}}>
                       <div className="flex items-center gap-2 mb-4">
                         <MapPin className="w-3 h-3 text-[#4A4747]" />
                         <span className="text-[#4A4747] font-inter text-sm">
@@ -652,7 +652,7 @@ const Industrial = () => {
                         </p>
                       </div>
 
-                      <Button className="w-full max-w-[402px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-4 rounded-full" style={{marginLeft: "70px"}}>
+                      <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
                         View project
                       </Button>
                     </div>
@@ -665,7 +665,7 @@ const Industrial = () => {
               {/* Land Conversion */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div className="order-1">
-                  <div className="w-full h-[638px] mb-6 rounded-[30px] overflow-hidden">
+                  <div className="w-full h-[320px] sm:h-[420px] md:h-[520px] lg:h-[638px] mb-6 rounded-[30px] overflow-hidden">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2F356d6ffdafc7480684b68928389d9dcc"
                       alt="1300+ Vendor Network"
@@ -676,12 +676,12 @@ const Industrial = () => {
                 <div className="order-2">
                   <div className="h-full flex flex-col">
                     <div>
-                      <h3 className="text-black font-instrument text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
+                      <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
                         <span style={{ whiteSpaceCollapse: "preserve" }}>
                           Land Conversion
                         </span>
                       </h3>
-                      <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed" style={{margin: "5px 0 24px"}}>
+                      <p className="text-[#5D5D5D] font-inter text-base sm:text-lg leading-relaxed" style={{margin: "5px 0 24px"}}>
                         <span style={{ whiteSpaceCollapse: "preserve" }}>
                           NA (Non-Agricultural) Land Conversion:{" "}
                         </span>
@@ -692,7 +692,7 @@ const Industrial = () => {
                       </p>
                     </div>
 
-                    <div className="flex-1 flex flex-col justify-end mb-32" style={{margin: "-5px 0 128px"}}>
+                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 128px"}}>
                       <div className="flex items-center gap-2 mb-4">
                         <MapPin className="w-3 h-3 text-[#4A4747]" />
                         <span className="text-[#4A4747] font-inter text-sm">
@@ -726,7 +726,7 @@ const Industrial = () => {
                         </p>
                       </div>
 
-                      <Button className="w-full max-w-[402px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-4 rounded-full" style={{marginLeft: "70px"}}>
+                      <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
                         View project
                       </Button>
                     </div>
@@ -739,7 +739,7 @@ const Industrial = () => {
               {/* Pollution */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div className="order-1">
-                  <div className="w-full h-[638px] mb-6 rounded-[30px] overflow-hidden">
+                  <div className="w-full h-[320px] sm:h-[420px] md:h-[520px] lg:h-[638px] mb-6 rounded-[30px] overflow-hidden">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2Fee3ecd0a781b48648eef62ecc4da3f07"
                       alt="1300+ Vendor Network"
@@ -750,19 +750,19 @@ const Industrial = () => {
                 <div className="order-2">
                   <div className="h-full flex flex-col">
                     <div>
-                      <h3 className="text-black font-instrument text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
+                      <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
                         <span style={{ whiteSpaceCollapse: "preserve" }}>
                           Pollution{" "}
                         </span>
                       </h3>
-                      <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed" style={{margin: "34px 0 -4px"}}>
+                      <p className="text-[#5D5D5D] font-inter text-base sm:text-lg leading-relaxed" style={{margin: "34px 0 -4px"}}>
                         <span style={{ whiteSpaceCollapse: "preserve" }}>
                           End-to-end assistance in obtaining mandatory pollution control clearances and certificates from the State Pollution Control Board, including preparation of environmental compliance documents, liaison with authorities, ensuring adherence to air, water, and noise pollution norms, and facilitating timely renewals to keep your project fully compliant with environmental regulations.
                         </span>
                       </p>
                     </div>
 
-                    <div className="flex-1 flex flex-col justify-end mb-32" style={{margin: "-5px 0 128px"}}>
+                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 128px"}}>
                       <div className="flex items-center gap-2 mb-4">
                         <MapPin className="w-3 h-3 text-[#4A4747]" />
                         <span className="text-[#4A4747] font-inter text-sm">
@@ -796,7 +796,7 @@ const Industrial = () => {
                         </p>
                       </div>
 
-                      <Button className="w-full max-w-[402px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-4 rounded-full" style={{marginLeft: "70px"}}>
+                      <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
                         View project
                       </Button>
                     </div>
@@ -809,7 +809,7 @@ const Industrial = () => {
               {/* Water Use Exemption */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div className="order-1">
-                  <div className="w-full h-[638px] mb-6 rounded-[30px] overflow-hidden">
+                  <div className="w-full h-[320px] sm:h-[420px] md:h-[520px] lg:h-[638px] mb-6 rounded-[30px] overflow-hidden">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2Fc0db88533a434f9aa7733aa2b3ec0087"
                       alt="1300+ Vendor Network"
@@ -820,19 +820,19 @@ const Industrial = () => {
                 <div className="order-2">
                   <div className="h-full flex flex-col">
                     <div>
-                      <h3 className="text-black font-instrument text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
+                      <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
                         <span style={{ whiteSpaceCollapse: "preserve" }}>
                           Water Use Exemption
                         </span>
                       </h3>
-                      <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed" style={{margin: "34px 0 -4px"}}>
+                      <p className="text-[#5D5D5D] font-inter text-base sm:text-lg leading-relaxed" style={{margin: "34px 0 -4px"}}>
                         <span style={{ whiteSpaceCollapse: "preserve" }}>
                           Comprehensive support in obtaining legal exemptions and permissions for water usage in construction activities, including preparation of applications, coordination with relevant water resource departments, compliance with environmental and municipal regulations, and ensuring timely approvals to avoid project delays.
                         </span>
                       </p>
                     </div>
 
-                    <div className="flex-1 flex flex-col justify-end mb-32" style={{margin: "-5px 0 128px"}}>
+                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 128px"}}>
                       <div className="flex items-center gap-2 mb-4">
                         <MapPin className="w-3 h-3 text-[#4A4747]" />
                         <span className="text-[#4A4747] font-inter text-sm">
@@ -866,7 +866,7 @@ const Industrial = () => {
                         </p>
                       </div>
 
-                      <Button className="w-full max-w-[402px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-4 rounded-full" style={{marginLeft: "70px"}}>
+                      <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
                         View project
                       </Button>
                     </div>
@@ -879,7 +879,7 @@ const Industrial = () => {
               {/* Guest Houses */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div className="order-1">
-                  <div className="w-full h-[638px] mb-6 rounded-[30px] overflow-hidden">
+                  <div className="w-full h-[320px] sm:h-[420px] md:h-[520px] lg:h-[638px] mb-6 rounded-[30px] overflow-hidden">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2Fb6cff114e5a94737aa68ac8723320ff1"
                       alt="1300+ Vendor Network"
@@ -890,19 +890,19 @@ const Industrial = () => {
                 <div className="order-2">
                   <div className="h-full flex flex-col">
                     <div>
-                      <h3 className="text-black font-instrument text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
+                      <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
                         <span style={{ whiteSpaceCollapse: "preserve" }}>
                           Guest Houses
                         </span>
                       </h3>
-                      <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed" style={{margin: "-4px 0 30px"}}>
+                      <p className="text-[#5D5D5D] font-inter text-base sm:text-lg leading-relaxed" style={{margin: "-4px 0 30px"}}>
                         <span style={{ whiteSpaceCollapse: "preserve" }}>
                           We arrange exclusive guest houses tailored for directors, senior management, and visiting clients. Our team identifies premium properties near project sites or business hubs and ensures they are fully furnished, secure, and equipped with modern amenities. We handle property search, lease or purchase negotiations, legal agreements, and compliance, while also assisting with custom interior setup, utilities, and facility management. Whether short-term or long-term, we deliver comfortable, professional-grade guest house solutions that reflect your company's standards and provide a seamless stay experience for leadership and clients.
                         </span>
                       </p>
                     </div>
 
-                    <div className="flex-1 flex flex-col justify-end mb-32" style={{margin: "-5px 0 128px"}}>
+                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 128px"}}>
                       <div className="flex items-center gap-2 mb-4">
                         <MapPin className="w-3 h-3 text-[#4A4747]" />
                         <span className="text-[#4A4747] font-inter text-sm">
@@ -936,7 +936,7 @@ const Industrial = () => {
                         </p>
                       </div>
 
-                      <Button className="w-full max-w-[402px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-4 rounded-full" style={{marginLeft: "70px"}}>
+                      <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
                         View project
                       </Button>
                     </div>
@@ -949,7 +949,7 @@ const Industrial = () => {
               {/* Hotel and Lodging Facilities */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div className="order-1">
-                  <div className="w-full h-[638px] mb-6 rounded-[30px] overflow-hidden">
+                  <div className="w-full h-[320px] sm:h-[420px] md:h-[520px] lg:h-[638px] mb-6 rounded-[30px] overflow-hidden">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2F15d993e567e843b6943b1fd87be7910c"
                       alt="1300+ Vendor Network"
@@ -960,19 +960,19 @@ const Industrial = () => {
                 <div className="order-2">
                   <div className="h-full flex flex-col">
                     <div>
-                      <h3 className="text-black font-instrument text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
+                      <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
                         <span style={{ whiteSpaceCollapse: "preserve" }}>
                           Hotel and Lodging Facilities
                         </span>
                       </h3>
-                      <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed" style={{margin: "34px 0 -4px"}}>
+                      <p className="text-[#5D5D5D] font-inter text-base sm:text-lg leading-relaxed" style={{margin: "34px 0 -4px"}}>
                         <span style={{ whiteSpaceCollapse: "preserve" }}>
                           We assist businesses and individuals in finding the ideal hotel and lodging facilities across India, whether for short-term stays, long-term staff accommodation, or business travel needs. We help set up guest houses, hotels, and lodging solutions tailored to workforce or client requirements. From identifying suitable properties to handling legal compliances, agreements, and possession, we ensure a hassle-free experience.
                         </span>
                       </p>
                     </div>
 
-                    <div className="flex-1 flex flex-col justify-end mb-32" style={{margin: "-5px 0 128px"}}>
+                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 128px"}}>
                       <div className="flex items-center gap-2 mb-4">
                         <MapPin className="w-3 h-3 text-[#4A4747]" />
                         <span className="text-[#4A4747] font-inter text-sm">
@@ -1006,7 +1006,7 @@ const Industrial = () => {
                         </p>
                       </div>
 
-                      <Button className="w-full max-w-[402px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-4 rounded-full" style={{marginLeft: "70px"}}>
+                      <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
                         View project
                       </Button>
                     </div>
@@ -1019,7 +1019,7 @@ const Industrial = () => {
               {/* Labour Accommodation */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div className="order-1">
-                  <div className="w-full h-[638px] mb-6 rounded-[30px] overflow-hidden">
+                  <div className="w-full h-[320px] sm:h-[420px] md:h-[520px] lg:h-[638px] mb-6 rounded-[30px] overflow-hidden">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2F2bd014e2c540431989b664fc720787ae?format=webp"
                       alt="1300+ Vendor Network"
@@ -1030,19 +1030,19 @@ const Industrial = () => {
                 <div className="order-2">
                   <div className="h-full flex flex-col">
                     <div>
-                      <h3 className="text-black font-instrument text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
+                      <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
                         <span style={{ whiteSpaceCollapse: "preserve" }}>
                           Labour Accomodation
                         </span>
                       </h3>
-                      <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed" style={{margin: "12px 0 17px"}}>
+                      <p className="text-[#5D5D5D] font-inter text-base sm:text-lg leading-relaxed" style={{margin: "12px 0 17px"}}>
                         <span style={{ whiteSpaceCollapse: "preserve" }}>
                           We helps the construction and infrastructure companies provide safe, affordable, and convenient labour housing near project sites. From identifying suitable properties to negotiating rentals or purchase, we ensure workers stay close to the site, reducing travel time and improving productivity. We also handle all legal agreements, compliance requirements, and basic facility arrangements such as water, sanitation, and electricity to ensure a hassle-free setup. Whether it's a small workforce or large-scale labour colony, MPHD Group delivers accommodation solutions that are cost-effective, compliant, and site-specific.
                         </span>
                       </p>
                     </div>
 
-                    <div className="flex-1 flex flex-col justify-end mb-32" style={{margin: "-5px 0 128px"}}>
+                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 128px"}}>
                       <div className="flex items-center gap-2 mb-4">
                         <MapPin className="w-3 h-3 text-[#4A4747]" />
                         <span className="text-[#4A4747] font-inter text-sm">
@@ -1076,7 +1076,7 @@ const Industrial = () => {
                         </p>
                       </div>
 
-                      <Button className="w-full max-w-[402px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-4 rounded-full" style={{marginLeft: "70px"}}>
+                      <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
                         View project
                       </Button>
                     </div>
@@ -1089,7 +1089,7 @@ const Industrial = () => {
               {/* Office Spaces */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div className="order-1">
-                  <div className="w-full h-[638px] mb-6 rounded-[30px] overflow-hidden">
+                  <div className="w-full h-[320px] sm:h-[420px] md:h-[520px] lg:h-[638px] mb-6 rounded-[30px] overflow-hidden">
                     <img
                       src="https://api.builder.io/api/v1/image/assets/TEMP/01bd9f15b36dd98048084a7476883ad1d1fc4ae7?width=1485"
                       alt="1300+ Vendor Network"
@@ -1100,19 +1100,19 @@ const Industrial = () => {
                 <div className="order-2">
                   <div className="h-full flex flex-col">
                     <div>
-                      <h3 className="text-black font-instrument text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
+                      <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
                         <span style={{ whiteSpaceCollapse: "preserve" }}>
                           Office Spaces
                         </span>
                       </h3>
-                      <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed" style={{margin: "11px 0 20px"}}>
+                      <p className="text-[#5D5D5D] font-inter text-base sm:text-lg leading-relaxed" style={{margin: "11px 0 20px"}}>
                         <span style={{ whiteSpaceCollapse: "preserve" }}>
                           we help businesses to establish their presence by arranging office spaces for purchase or rent, tailored to their size, budget, and operational needs. From premium corporate offices to flexible co-working spaces, we identify the most suitable options near prime business hubs or project sites. Our services include property shortlisting, negotiations, legal documentation, and compliance support, ensuring a smooth and transparent transaction. Whether you need a head office, branch office, or co-working setup for remote teams, MPHD Group provides strategic, cost-effective, and ready-to-move solutions across India.
                         </span>
                       </p>
                     </div>
 
-                    <div className="flex-1 flex flex-col justify-end mb-32" style={{margin: "-5px 0 128px"}}>
+                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 128px"}}>
                       <div className="flex items-center gap-2 mb-4">
                         <MapPin className="w-3 h-3 text-[#4A4747]" />
                         <span className="text-[#4A4747] font-inter text-sm">
@@ -1146,7 +1146,7 @@ const Industrial = () => {
                         </p>
                       </div>
 
-                      <Button className="w-full max-w-[402px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-4 rounded-full" style={{marginLeft: "70px"}}>
+                      <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
                         View project
                       </Button>
                     </div>
@@ -1159,7 +1159,7 @@ const Industrial = () => {
               {/* Staff Quarters */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div className="order-1">
-                  <div className="w-full h-[638px] mb-6 rounded-[30px] overflow-hidden">
+                  <div className="w-full h-[320px] sm:h-[420px] md:h-[520px] lg:h-[638px] mb-6 rounded-[30px] overflow-hidden">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2Fba23e42b2a6a4e9684d5e313980c3448"
                       alt="1300+ Vendor Network"
@@ -1170,19 +1170,19 @@ const Industrial = () => {
                 <div className="order-2">
                   <div className="h-full flex flex-col">
                     <div>
-                      <h3 className="text-black font-instrument text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
+                      <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
                         <span style={{ whiteSpaceCollapse: "preserve" }}>
                           Staff Quarters
                         </span>
                       </h3>
-                      <p className="text-[#5D5D5D] font-inter text-lg leading-relaxed" style={{margin: "-4px 0 26px"}}>
+                      <p className="text-[#5D5D5D] font-inter text-base sm:text-lg leading-relaxed" style={{margin: "-4px 0 26px"}}>
                         <span style={{ whiteSpaceCollapse: "preserve" }}>
                           We assist companies in arranging comfortable and well-connected staff quarters close to their project locations. We identify suitable residential properties or land parcels near the site, ensuring easy daily commutes and better work-life balance for employees. Our services cover property search, lease or purchase negotiations, legal documentation, and compliance clearances, along with basic facility arrangements such as electricity, water, and sanitation. Whether for engineers, managers, or support staff, we provide tailored housing solutions that are secure, cost-effective, and strategically located to meet your project needs.
                         </span>
                       </p>
                     </div>
 
-                    <div className="flex-1 flex flex-col justify-end mb-32" style={{margin: "-5px 0 128px"}}>
+                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 128px"}}>
                       <div className="flex items-center gap-2 mb-4">
                         <MapPin className="w-3 h-3 text-[#4A4747]" />
                         <span className="text-[#4A4747] font-inter text-sm">
@@ -1216,7 +1216,7 @@ const Industrial = () => {
                         </p>
                       </div>
 
-                      <Button className="w-full max-w-[402px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-lg py-4 rounded-full" style={{marginLeft: "70px"}}>
+                      <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
                         View project
                       </Button>
                     </div>
