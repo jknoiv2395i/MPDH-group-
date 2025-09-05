@@ -203,7 +203,7 @@ const CommercialProperties = () => {
 
       {/* Hero Section */}
       <motion.section
-        className="relative h-[569px] flex items-center justify-center overflow-hidden text-[#2d93b9] bg-[#3195bc]"
+        className="relative h-[280px] sm:h-[380px] md:h-[480px] lg:h-[569px] flex items-center justify-center overflow-hidden text-[#2d93b9] bg-[#3195bc]"
         initial="hidden"
         animate="visible"
         variants={containerVariants}
@@ -231,9 +231,9 @@ const CommercialProperties = () => {
         />
 
         {/* Hero Content */}
-        <div className="relative z-10 text-center px-4 pb-[400px]" style={{ marginTop: "-5px" }}>
+        <div className="relative z-10 text-center px-4 pb-[80px] md:pb-[200px]">
           <motion.h1
-            className="font-instrument text-[93px] font-normal leading-[75.6px] text-white tracking-[-2.3px] h-[81.6px]"
+            className="font-instrument text-3xl sm:text-4xl md:text-5xl lg:text-[93px] font-normal md:leading-[75.6px] text-white tracking-[-2.3px] h-auto md:h-[81.6px]"
             style={{ marginTop: "111px" }}
             variants={headlineVariants}
           >
@@ -261,7 +261,7 @@ const CommercialProperties = () => {
               <div className="flex items-center">
                 <div className="flex items-center bg-black text-white rounded-sm px-4 py-3">
                   <Menu className="w-[18px] h-[18px] mr-3" />
-                  <span className="font-semibold text-lg">Properties List</span>
+                  <span className="font-semibold text-base sm:text-lg">Properties List</span>
                 </div>
               </div>
 
@@ -369,7 +369,7 @@ const CommercialProperties = () => {
                   {/* View Project Button */}
                   <div className="pt-6">
                     <button className="w-full max-w-[402px] mx-auto flex items-center justify-center bg-[#131313] text-white rounded-full py-4 px-8 hover:bg-gray-800 transition-colors">
-                      <span className="text-lg font-medium">View project</span>
+                      <span className="text-base sm:text-lg font-medium">View project</span>
                     </button>
                   </div>
                 </div>
