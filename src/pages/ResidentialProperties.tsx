@@ -212,7 +212,7 @@ const ResidentialProperties = () => {
 
       {/* Hero Section */}
       <motion.section
-        className="relative h-[569px] flex items-center justify-center overflow-hidden"
+        className="relative h-[280px] sm:h-[380px] md:h-[480px] lg:h-[569px] flex items-center justify-center overflow-hidden"
         style={{
           backgroundImage: "url(https://cdn.builder.io/api/v1/image/assets%2Feccf9e96f3f54e0db99db209e78762b2%2Fd2807e0ed4c545d9b8fa46455c7318e7)",
           backgroundRepeat: "no-repeat",
@@ -227,7 +227,7 @@ const ResidentialProperties = () => {
         {/* Hero Content */}
         <div className="relative z-10 text-center px-4 pb-[105px]">
           <motion.h1
-            className="font-instrument text-[100px] font-normal leading-[236px] text-white tracking-[1px] h-[359px]"
+            className="font-instrument text-3xl sm:text-4xl md:text-6xl lg:text-[100px] font-normal md:leading-[236px] text-white tracking-[1px] h-auto md:h-[359px]"
             variants={headlineVariants}
           >
             <div style={{ marginTop: "33px" }}>Residential Properties</div>
@@ -254,7 +254,7 @@ const ResidentialProperties = () => {
               <div className="flex items-center gap-6">
                 <div className="flex items-center bg-black text-white rounded-sm px-4 py-3">
                   <Menu className="w-[18px] h-[18px] mr-3" />
-                  <span className="font-semibold text-lg">Properties List</span>
+                  <span className="font-semibold text-base sm:text-lg">Properties List</span>
                 </div>
               </div>
 
@@ -313,7 +313,7 @@ const ResidentialProperties = () => {
                   <img
                     src={property.image}
                     alt={property.title}
-                    className="fade-up-image w-full h-[400px] md:h-[500px] lg:h-[638px] object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="fade-up-image w-full h-[180px] sm:h-[240px] md:h-[400px] lg:h-[638px] object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </motion.div>
 
@@ -321,7 +321,7 @@ const ResidentialProperties = () => {
                 <div className="space-y-4">
                   {/* Title and Location */}
                   <div className="space-y-3">
-                    <h3 className="font-semibold text-lg text-[#131313] leading-tight">
+                    <h3 className="font-semibold text-base sm:text-lg text-[#131313] leading-tight">
                       {property.title}
                     </h3>
                     <div className="flex items-center gap-2 text-[#4A4747]">
@@ -362,7 +362,7 @@ const ResidentialProperties = () => {
                   {/* View Project Button */}
                   <div className="pt-6">
                     <button className="w-full max-w-[400px] mx-auto flex items-center justify-center bg-[#131313] text-white rounded-full py-4 px-8 hover:bg-gray-800 transition-colors">
-                      <span className="text-lg font-medium">View project</span>
+                      <span className="text-base sm:text-lg font-medium">View project</span>
                     </button>
                   </div>
                 </div>
