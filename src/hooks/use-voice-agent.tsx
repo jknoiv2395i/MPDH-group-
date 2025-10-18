@@ -122,59 +122,64 @@ export function useVoiceAgent() {
   }, []);
 
   const activateVoiceAgent = () => {
-    console.log('Attempting to activate voice agent, loaded:', voiceAgentLoaded);
+    try {
+      console.log('Attempting to activate voice agent, loaded:', voiceAgentLoaded);
 
-    if (voiceAgentLoaded) {
-      const widget = document.querySelector('elevenlabs-convai') as any;
-      console.log('Found widget:', widget);
+      if (voiceAgentLoaded) {
+        const widget = document.querySelector('elevenlabs-convai') as any;
+        console.log('Found widget:', widget);
 
-      if (widget) {
-        // Try different methods to activate the widget
-        let activated = false;
+        if (widget) {
+          // Try different methods to activate the widget
+          let activated = false;
 
-        // Method 1: Try the click method
-        if (widget.click && typeof widget.click === 'function') {
-          try {
-            widget.click();
-            activated = true;
-            console.log('Widget activated via click method');
-          } catch (e) {
-            console.log('Click method failed:', e);
+          // Method 1: Try the click method
+          if (widget.click && typeof widget.click === 'function') {
+            try {
+              widget.click();
+              activated = true;
+              console.log('Widget activated via click method');
+            } catch (e) {
+              console.log('Click method failed:', e);
+            }
           }
-        }
 
-        // Method 2: Try the open method
-        if (!activated && widget.open && typeof widget.open === 'function') {
-          try {
-            widget.open();
-            activated = true;
-            console.log('Widget activated via open method');
-          } catch (e) {
-            console.log('Open method failed:', e);
+          // Method 2: Try the open method
+          if (!activated && widget.open && typeof widget.open === 'function') {
+            try {
+              widget.open();
+              activated = true;
+              console.log('Widget activated via open method');
+            } catch (e) {
+              console.log('Open method failed:', e);
+            }
           }
-        }
 
-        // Method 3: Try triggering a mouse event
-        if (!activated) {
-          try {
-            const event = new MouseEvent('click', {
-              view: window,
-              bubbles: true,
-              cancelable: true
-            });
-            widget.dispatchEvent(event);
-            activated = true;
-            console.log('Widget activated via mouse event');
-          } catch (e) {
-            console.log('Mouse event method failed:', e);
+          // Method 3: Try triggering a mouse event
+          if (!activated) {
+            try {
+              const event = new MouseEvent('click', {
+                view: window,
+                bubbles: true,
+                cancelable: true
+              });
+              widget.dispatchEvent(event);
+              activated = true;
+              console.log('Widget activated via mouse event');
+            } catch (e) {
+              console.log('Mouse event method failed:', e);
+            }
           }
-        }
 
-        return activated;
+          return activated;
+        }
       }
+
+      return false;
+    } catch (err) {
+      console.error('activateVoiceAgent encountered an error:', err);
+      return false;
     }
-    
-    return false;
   };
 
   return {
