@@ -1,5 +1,6 @@
 import { motion, useMotionValue, useSpring, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
+import { isBuilderEditor } from '@/lib/utils'
 import ProjectCarousel from "./ProjectCarousel";
 
 const Counter = ({ value, suffix = "", prefix = "", duration = 2 }) => {
