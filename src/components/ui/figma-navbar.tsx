@@ -23,7 +23,6 @@ const navItems: NavItem[] = [
 ]
 
 export function FigmaNavBar({ className }: NavBarProps) {
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [showPropertyPopup, setShowPropertyPopup] = useState(false)
   const navRef = useRef<HTMLElement>(null)
