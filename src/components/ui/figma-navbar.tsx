@@ -140,9 +140,6 @@ export function FigmaNavBar({ className }: NavBarProps) {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.name}
-                {item.hasDropdown && (
-                  <ChevronDown className="h-4 w-4" />
-                )}
               </a>
             ))}
             <div className="border-t border-white/10 mt-3 pt-3">
