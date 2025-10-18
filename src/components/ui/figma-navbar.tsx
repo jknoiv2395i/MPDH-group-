@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react"
-import { ChevronDown } from "lucide-react"
+import { useState, useRef } from "react"
 import { useNavigate } from "react-router-dom"
 import { cn } from "@/lib/utils"
 import PropertyChoicePopup from './PropertyChoicePopup'
@@ -17,49 +17,13 @@ interface NavBarProps {
 
 const navItems: NavItem[] = [
   { name: 'Home', url: '/' },
-  { name: 'About us', url: '/about', hasDropdown: true },
-  { name: 'Residential', url: '/residential', hasDropdown: true },
-  { name: 'Commercial', url: '/commercial', hasDropdown: true },
+  { name: 'About us', url: '/about' },
+  { name: 'Residential', url: '/residential' },
+  { name: 'Commercial', url: '/commercial' },
   { name: 'Industrial', url: '/industrial' },
 ]
 
-const dropdownContent = {
-  residential: [
-    { name: 'Purchase', url: '/residential', current: false },
-    { name: 'Rent', url: '/residential-rental', current: false },
-  ],
-  commercial: [
-    { name: 'Purchase', url: '/commercial', current: false },
-    { name: 'Rent', url: '/commercial-rental', current: false },
-  ],
-  homePages: [
-    { name: 'Home V.1', url: '/', current: false },
-    { name: 'Home V.2', url: '/home/v2', current: true },
-    { name: 'Home V.3', url: '/home/v3', current: false },
-    { name: 'Services', url: '/services', current: false },
-  ],
-  contactPages: [
-    { name: 'Contact V.1', url: '/contact', current: false },
-    { name: 'Contact V.2', url: '/contact/v2', current: false },
-    { name: 'Contact V.3', url: '/contact/v3', current: false },
-    { name: 'About Us', url: '/about', current: false },
-  ],
-  projectPages: [
-    { name: 'Projects V.1', url: '/projects', current: false },
-    { name: 'Projects V.2', url: '/projects/v2', current: false },
-    { name: 'Projects V.3', url: '/projects/v3', current: false },
-    { name: 'Inner case study', url: '/projects/case-study', current: false },
-  ],
-  otherPages: [
-    { name: 'Blog', url: '/blog', current: false },
-    { name: 'Inner blog', url: '/blog/post', current: false },
-    { name: 'Product', url: '/product', current: false },
-    { name: 'Categories', url: '/categories', current: false },
-  ]
-}
-
 export function FigmaNavBar({ className }: NavBarProps) {
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [showPropertyPopup, setShowPropertyPopup] = useState(false)
   const navRef = useRef<HTMLElement>(null)
@@ -87,19 +51,6 @@ export function FigmaNavBar({ className }: NavBarProps) {
     setShowPropertyPopup(false)
   }
 
-  // Close dropdown when clicking outside
-  useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
-      if (navRef.current && !navRef.current.contains(event.target as Node)) {
-        setActiveDropdown(null)
-      }
-    }
-
-    document.addEventListener('mousedown', handleClickOutside)
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside)
-    }
-  }, [])
 
   return (
     <header
@@ -141,115 +92,6 @@ export function FigmaNavBar({ className }: NavBarProps) {
                 </a>
                               </div>
 
-              {/* Dropdown Menu */}
-              {item.hasDropdown && activeDropdown === item.name && (
-                <div
-                  className={cn(
-                    "absolute left-0 top-full mt-4 -translate-x-1/4",
-                    (item.name === 'Residential' || item.name === 'Commercial') ? "w-[200px]" : "w-[660px]"
-                  )}
-                  style={{ top: '160%' }}
-                >
-                  <div className="bg-white rounded-[18px] border border-blue-200 shadow-lg overflow-hidden">
-                    {(item.name === 'Residential' || item.name === 'Commercial') ? (
-                      // Simple dropdown for Residential/Commercial
-                      <div className="bg-white rounded-[18px] p-4">
-                        <div className="flex flex-col gap-[12px]">
-                          {(item.name === 'Residential' ? dropdownContent.residential : dropdownContent.commercial).map((page) => (
-                            <a
-                              key={page.name}
-                              href={page.url}
-                              className={cn(
-                                "text-left text-[#071839] py-[10px] px-[12px] rounded-lg transition-all duration-300 whitespace-nowrap relative",
-                                page.current
-                                  ? "font-semibold text-[#256FE3] bg-blue-50"
-                                  : "font-medium opacity-70 hover:opacity-100 hover:bg-gray-50"
-                              )}
-                            >
-                              {page.name}
-                            </a>
-                          ))}
-                        </div>
-                      </div>
-                    ) : (
-                      // Original 4-column dropdown for About
-                      <div className="bg-white rounded-[18px] p-6 grid grid-cols-4 gap-6">
-                        {/* Home Pages Column */}
-                        <div className="flex flex-col gap-[18px]">
-                          {dropdownContent.homePages.map((page) => (
-                            <a
-                              key={page.name}
-                              href={page.url}
-                              className={cn(
-                                "text-left text-[#071839] py-[14px] transition-opacity duration-300 whitespace-nowrap relative",
-                                page.current
-                                  ? "font-semibold text-[#256FE3]"
-                                  : "font-medium opacity-70 hover:opacity-100"
-                              )}
-                            >
-                              {page.name}
-                            </a>
-                          ))}
-                        </div>
-
-                        {/* Contact Pages Column */}
-                        <div className="flex flex-col gap-[18px]">
-                          {dropdownContent.contactPages.map((page) => (
-                            <a
-                              key={page.name}
-                              href={page.url}
-                              className={cn(
-                                "text-left text-[#071839] py-[14px] transition-opacity duration-300 whitespace-nowrap relative",
-                                page.current
-                                  ? "font-semibold text-[#256FE3]"
-                                  : "font-medium opacity-70 hover:opacity-100"
-                              )}
-                            >
-                              {page.name}
-                            </a>
-                          ))}
-                        </div>
-
-                        {/* Project Pages Column */}
-                        <div className="flex flex-col gap-[18px]">
-                          {dropdownContent.projectPages.map((page) => (
-                            <a
-                              key={page.name}
-                              href={page.url}
-                              className={cn(
-                                "text-left text-[#071839] py-[14px] transition-opacity duration-300 whitespace-nowrap relative",
-                                page.current
-                                  ? "font-semibold text-[#256FE3]"
-                                  : "font-medium opacity-70 hover:opacity-100"
-                              )}
-                            >
-                              {page.name}
-                            </a>
-                          ))}
-                        </div>
-
-                        {/* Other Pages Column */}
-                        <div className="flex flex-col gap-[18px]">
-                          {dropdownContent.otherPages.map((page) => (
-                            <a
-                              key={page.name}
-                              href={page.url}
-                              className={cn(
-                                "text-left text-[#071839] py-[14px] transition-opacity duration-300 whitespace-nowrap relative",
-                                page.current
-                                  ? "font-semibold text-[#256FE3]"
-                                  : "font-medium opacity-70 hover:opacity-100"
-                              )}
-                            >
-                              {page.name}
-                            </a>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                </div>
-              )}
             </div>
           ))}
         </nav>
@@ -299,9 +141,6 @@ export function FigmaNavBar({ className }: NavBarProps) {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.name}
-                {item.hasDropdown && (
-                  <ChevronDown className="h-4 w-4" />
-                )}
               </a>
             ))}
             <div className="border-t border-white/10 mt-3 pt-3">
