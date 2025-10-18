@@ -16,46 +16,11 @@ interface NavBarProps {
 
 const navItems: NavItem[] = [
   { name: 'Home', url: '/' },
-  { name: 'About us', url: '/about', hasDropdown: true },
-  { name: 'Residential', url: '/residential', hasDropdown: true },
-  { name: 'Commercial', url: '/commercial', hasDropdown: true },
+  { name: 'About us', url: '/about' },
+  { name: 'Residential', url: '/residential' },
+  { name: 'Commercial', url: '/commercial' },
   { name: 'Industrial', url: '/industrial' },
 ]
-
-const dropdownContent = {
-  residential: [
-    { name: 'Purchase', url: '/residential', current: false },
-    { name: 'Rent', url: '/residential-rental', current: false },
-  ],
-  commercial: [
-    { name: 'Purchase', url: '/commercial', current: false },
-    { name: 'Rent', url: '/commercial-rental', current: false },
-  ],
-  homePages: [
-    { name: 'Home V.1', url: '/', current: false },
-    { name: 'Home V.2', url: '/home/v2', current: true },
-    { name: 'Home V.3', url: '/home/v3', current: false },
-    { name: 'Services', url: '/services', current: false },
-  ],
-  contactPages: [
-    { name: 'Contact V.1', url: '/contact', current: false },
-    { name: 'Contact V.2', url: '/contact/v2', current: false },
-    { name: 'Contact V.3', url: '/contact/v3', current: false },
-    { name: 'About Us', url: '/about', current: false },
-  ],
-  projectPages: [
-    { name: 'Projects V.1', url: '/projects', current: false },
-    { name: 'Projects V.2', url: '/projects/v2', current: false },
-    { name: 'Projects V.3', url: '/projects/v3', current: false },
-    { name: 'Inner case study', url: '/projects/case-study', current: false },
-  ],
-  otherPages: [
-    { name: 'Blog', url: '/blog', current: false },
-    { name: 'Inner blog', url: '/blog/post', current: false },
-    { name: 'Product', url: '/product', current: false },
-    { name: 'Categories', url: '/categories', current: false },
-  ]
-}
 
 export function FigmaNavBar({ className }: NavBarProps) {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
