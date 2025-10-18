@@ -66,6 +66,10 @@ export function FigmaNavBar({ className }: NavBarProps) {
   const navRef = useRef<HTMLElement>(null)
   const navigate = useNavigate()
 
+  // If the Builder editor/preview is open we make header non-interactive so
+  // the editor's visual controls are not blocked by page overlays.
+  const isEditor = typeof window !== 'undefined' && isBuilderEditor()
+
   const handleLogoClick = () => {
     setShowPropertyPopup(true)
   }
