@@ -3,6 +3,7 @@ import { ChevronDown } from "lucide-react"
 import { useNavigate } from "react-router-dom"
 import { cn } from "@/lib/utils"
 import PropertyChoicePopup from './PropertyChoicePopup'
+import { isBuilderEditor } from '@/lib/utils'
 
 interface NavItem {
   name: string
@@ -16,11 +17,10 @@ interface NavBarProps {
 
 const navItems: NavItem[] = [
   { name: 'Home', url: '/' },
+  { name: 'About us', url: '/about', hasDropdown: true },
   { name: 'Residential', url: '/residential', hasDropdown: true },
   { name: 'Commercial', url: '/commercial', hasDropdown: true },
   { name: 'Industrial', url: '/industrial' },
-  { name: 'Contact us', url: '/services' },
-  { name: 'About', url: '/about', hasDropdown: true },
 ]
 
 const dropdownContent = {
@@ -65,6 +65,10 @@ export function FigmaNavBar({ className }: NavBarProps) {
   const navRef = useRef<HTMLElement>(null)
   const navigate = useNavigate()
 
+  // If the Builder editor/preview is open we make header non-interactive so
+  // the editor's visual controls are not blocked by page overlays.
+  const isEditor = typeof window !== 'undefined' && isBuilderEditor()
+
   const handleLogoClick = () => {
     setShowPropertyPopup(true)
   }
@@ -102,6 +106,7 @@ export function FigmaNavBar({ className }: NavBarProps) {
       ref={navRef}
       className={cn(
         "absolute top-0 left-0 right-0 z-50 bg-transparent text-white",
+        isEditor && "pointer-events-none",
         className
       )}>
       <div className="flex items-center justify-between h-16 px-4 md:px-8 lg:px-16 xl:px-24">
@@ -134,21 +139,7 @@ export function FigmaNavBar({ className }: NavBarProps) {
                 >
                   {item.name}
                 </a>
-                {item.hasDropdown && (
-                  <button
-                    onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
-                    className={cn(
-                      "ml-1 p-1 text-white/80 hover:text-white transition-all duration-200 flex items-center justify-center w-6 h-6",
-                      activeDropdown === item.name && "text-white"
-                    )}
-                  >
-                    <ChevronDown className={cn(
-                      "h-4 w-4 transition-transform duration-200",
-                      activeDropdown === item.name && "rotate-180"
-                    )} />
-                  </button>
-                )}
-              </div>
+                              </div>
 
               {/* Dropdown Menu */}
               {item.hasDropdown && activeDropdown === item.name && (
@@ -266,7 +257,7 @@ export function FigmaNavBar({ className }: NavBarProps) {
         {/* Contact Us Button */}
         <div className="hidden md:flex items-center">
           <a
-            href="https://a47020e7f35a430790e8e8cb315ba73a-cbcc19fa-16c4-4fe7-882c-a8f669.fly.dev/services"
+            href="https://77847e60805f4b2d973ac716e7f4ef79-aa781709277d4c4685ad7339f.fly.dev/services"
             className="px-6 py-2 bg-white text-[black] rounded-full text-sm lg:text-base font-medium hover:bg-gray-50 transition-colors duration-200 cursor-pointer pointer-events-auto"
           >
             Contact us
