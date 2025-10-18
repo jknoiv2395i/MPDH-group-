@@ -100,7 +100,7 @@ export function FigmaNavBar({ className }: NavBarProps) {
         {/* Contact Us Button */}
         <div className="hidden md:flex items-center">
           <a
-            href="https://77847e60805f4b2d973ac716e7f4ef79-aa781709277d4c4685ad7339f.fly.dev/services"
+            href="https://4e7f55704d4b4fa4bf5eb3b5017b6705-b9e86d62c6a94b2193c7b262b.fly.dev/services"
             className="px-6 py-2 bg-white text-[black] rounded-full text-sm lg:text-base font-medium hover:bg-gray-50 transition-colors duration-200 cursor-pointer pointer-events-auto"
           >
             Contact us
