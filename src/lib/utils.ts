@@ -11,18 +11,18 @@ export function cn(...inputs: ClassValue[]) {
 export function isBuilderEditor(): boolean {
   if (typeof window === "undefined") return false
   try {
-    // If this page is embedded in an iframe (common for editor previews), treat as editor.
-    if (window.self !== window.top) return true
-
     const href = window.location.href.toLowerCase()
+    const host = window.location.host.toLowerCase()
     const search = window.location.search.toLowerCase()
+
+    // Only treat as Builder editor when URL explicitly indicates Builder context
     return (
-      href.includes("builder") ||
-      href.includes("editor") ||
-      href.includes("preview") ||
+      host.includes("builder.io") ||
+      href.includes("builder.io") ||
       search.includes("builder") ||
-      search.includes("editor") ||
-      search.includes("preview")
+      search.includes("builder_preview") ||
+      search.includes("builder-editor") ||
+      href.includes("builder-preview")
     )
   } catch (e) {
     return false
