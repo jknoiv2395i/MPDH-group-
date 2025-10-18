@@ -77,53 +77,9 @@ const About = () => {
         />
       </section>
 
-      {/* About Us Section */}
-      <section className="px-4 sm:px-6 lg:px-8 pb-20 -mt-1">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-16 items-start">
-            {/* Left Column */}
-            <div>
-              <h2 className="font-instrument text-4xl lg:text-5xl font-normal text-black mb-6 leading-tight">
-                About us
-              </h2>
-              <p className="text-lg text-gray-600 mb-12 leading-relaxed">
-                Focused on creativity and precision, we turn ideas into lasting designs.
-              </p>
-              <div className="rounded-2xl overflow-hidden">
-                <img
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/47bb2c18d6f9a6802f681700ae62437c7a76b0ef?width=1012"
-                  alt="Modern building architecture"
-                  className="w-full h-[400px] object-cover"
-                />
-              </div>
-            </div>
-
-            {/* Right Column - Feature Cards */}
-            <div className="space-y-6">
-              {features.map((feature, index) => {
-                const Icon = feature.icon;
-                return (
-                  <div key={index} className="border border-blue-200 rounded-2xl p-6 hover:shadow-lg transition-shadow">
-                    <div className="flex items-start space-x-4">
-                      <div className="bg-[#071839] rounded-full p-4 flex-shrink-0">
-                        <Icon className="w-6 h-6 text-white" />
-                      </div>
-                      <div>
-                        <h3 className="font-instrument text-xl lg:text-2xl font-normal text-black mb-3 leading-tight">
-                          {feature.title}
-                        </h3>
-                        <p className="text-gray-600 leading-relaxed">
-                          {feature.description}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-      </section>
+      <div className="text-black ml-[182px] mb-6 font-instrument text-[48px] leading-[48px]">
+        About us
+      </div>
 
       {/* Company Description Section */}
       <section className="pt-[31px] pb-20 px-4 sm:px-6 lg:px-8 bg-white">
