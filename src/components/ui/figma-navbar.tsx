@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react"
-import { ChevronDown } from "lucide-react"
 import { useNavigate } from "react-router-dom"
 import { cn } from "@/lib/utils"
 import PropertyChoicePopup from './PropertyChoicePopup'
