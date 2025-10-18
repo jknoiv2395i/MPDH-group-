@@ -88,9 +88,11 @@ const CommitmentSection = () => {
     }
   };
 
+  const isEditor = typeof window !== 'undefined' && isBuilderEditor();
+
   return (
     <>
-      <section className="bg-white" style={{ paddingTop: '59px' }}>
+      <section className={`bg-white ${isEditor ? 'relative z-40 pointer-events-auto' : ''}`} style={{ paddingTop: '59px' }}>
         <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-24 items-center" style={{ marginBottom: '44px' }}>
             {/* Left Content */}
