@@ -13,16 +13,68 @@ export function useVoiceAgent() {
 
     // Only add if not already present
     if (!document.getElementById('elevenlabs-convai-script')) {
-      document.head.appendChild(script);
+      try {
+        document.head.appendChild(script);
+      } catch (e) {
+        console.error('Failed to append convai script to head', e);
+      }
 
       // Wait for script to load before creating widget
       script.onload = () => {
-        // Add the ConvAI widget element exactly as provided
+        try {
+          // Add the ConvAI widget element exactly as provided
+          let convaiWidget = document.getElementById('elevenlabs-convai-widget');
+          if (!convaiWidget) {
+            convaiWidget = document.createElement('elevenlabs-convai');
+            convaiWidget.id = 'elevenlabs-convai-widget';
+            // only set agent-id if available
+            try {
+              convaiWidget.setAttribute('agent-id', 'agent_9601k3c0dph4eezaj7qxsf837x4z');
+            } catch (e) {
+              console.warn('Failed to set agent-id on convai widget', e);
+            }
+
+            // Apply styles to match the diff requirements
+            Object.assign(convaiWidget.style, {
+              bottom: '0px',
+              color: 'rgb(0, 0, 0)',
+              display: 'block',
+              fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif',
+              fontWeight: '400',
+              left: '0px',
+              pointerEvents: 'auto',
+              position: 'fixed',
+              right: '0px',
+              scrollbarColor: 'rgb(229, 231, 235) rgba(0, 0, 0, 0)',
+              top: '192px',
+              zIndex: '1000'
+            });
+
+            document.body.appendChild(convaiWidget);
+
+            console.log('ElevenLabs voice agent widget created');
+            setVoiceAgentLoaded(true);
+          }
+        } catch (e) {
+          console.error('Error while creating convai widget after script load', e);
+        }
+      };
+
+      script.onerror = (err) => {
+        console.error('Failed to load convai script', err);
+      };
+    } else {
+      // Script already exists, check if widget exists
+      try {
         let convaiWidget = document.getElementById('elevenlabs-convai-widget');
         if (!convaiWidget) {
           convaiWidget = document.createElement('elevenlabs-convai');
           convaiWidget.id = 'elevenlabs-convai-widget';
-          convaiWidget.setAttribute('agent-id', 'agent_9601k3c0dph4eezaj7qxsf837x4z');
+          try {
+            convaiWidget.setAttribute('agent-id', 'agent_9601k3c0dph4eezaj7qxsf837x4z');
+          } catch (e) {
+            console.warn('Failed to set agent-id on convai widget', e);
+          }
 
           // Apply styles to match the diff requirements
           Object.assign(convaiWidget.style, {
@@ -41,39 +93,12 @@ export function useVoiceAgent() {
           });
 
           document.body.appendChild(convaiWidget);
-
-          console.log('ElevenLabs voice agent widget created');
-          setVoiceAgentLoaded(true);
+          console.log('ElevenLabs voice agent widget created (script existed)');
         }
-      };
-    } else {
-      // Script already exists, check if widget exists
-      let convaiWidget = document.getElementById('elevenlabs-convai-widget');
-      if (!convaiWidget) {
-        convaiWidget = document.createElement('elevenlabs-convai');
-        convaiWidget.id = 'elevenlabs-convai-widget';
-        convaiWidget.setAttribute('agent-id', 'agent_9601k3c0dph4eezaj7qxsf837x4z');
-
-        // Apply styles to match the diff requirements
-        Object.assign(convaiWidget.style, {
-          bottom: '0px',
-          color: 'rgb(0, 0, 0)',
-          display: 'block',
-          fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif',
-          fontWeight: '400',
-          left: '0px',
-          pointerEvents: 'auto',
-          position: 'fixed',
-          right: '0px',
-          scrollbarColor: 'rgb(229, 231, 235) rgba(0, 0, 0, 0)',
-          top: '192px',
-          zIndex: '1000'
-        });
-
-        document.body.appendChild(convaiWidget);
-        console.log('ElevenLabs voice agent widget created (script existed)');
+        setVoiceAgentLoaded(true);
+      } catch (e) {
+        console.error('Error while ensuring convai widget exists', e);
       }
-      setVoiceAgentLoaded(true);
     }
 
     // Additional check for widget availability
