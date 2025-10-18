@@ -140,13 +140,13 @@ const CommitmentSection = () => {
                     className="font-instrument text-4xl md:text-5xl font-normal text-black tracking-tight"
                     variants={textReveal}
                   >
-                    <Counter value={50} suffix="+" duration={2} />
+                    <Counter value={30} suffix="+" duration={2} />
                   </motion.h3>
                   <motion.p
                     className="text-[#5D5D5D] text-base md:text-lg"
                     variants={textReveal}
                   >
-                    Project complete
+                    Project Handled
                   </motion.p>
                 </motion.div>
 
