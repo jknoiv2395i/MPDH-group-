@@ -16,11 +16,11 @@ interface NavBarProps {
 
 const navItems: NavItem[] = [
   { name: 'Home', url: '/' },
+  { name: 'About us', url: '/about', hasDropdown: true },
   { name: 'Residential', url: '/residential', hasDropdown: true },
   { name: 'Commercial', url: '/commercial', hasDropdown: true },
   { name: 'Industrial', url: '/industrial' },
   { name: 'Contact us', url: '/services' },
-  { name: 'About', url: '/about', hasDropdown: true },
 ]
 
 const dropdownContent = {
