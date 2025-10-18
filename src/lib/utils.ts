@@ -11,6 +11,9 @@ export function cn(...inputs: ClassValue[]) {
 export function isBuilderEditor(): boolean {
   if (typeof window === "undefined") return false
   try {
+    // If this page is embedded in an iframe (common for editor previews), treat as editor.
+    if (window.self !== window.top) return true
+
     const href = window.location.href.toLowerCase()
     const search = window.location.search.toLowerCase()
     return (
