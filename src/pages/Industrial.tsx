@@ -197,7 +197,7 @@ const Industrial = () => {
             className="text-left text-white font-instrument text-3xl sm:text-4xl md:text-6xl lg:text-8xl xl:text-[180px] font-normal leading-tight tracking-tight max-w-full md:pl-[7px]"
             variants={headlineVariants}
           >
-            <p>Industrial Properties</p>
+            <p>Industrial Services</p>
           </motion.h1>
         </div>
       </motion.div>
