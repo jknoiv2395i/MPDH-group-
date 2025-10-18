@@ -29,10 +29,8 @@ const ConsultationSection = () => {
           </h2>
 
           {/* Description */}
-          <p className="text-white text-lg md:text-xl leading-relaxed mb-8 md:mb-10 max-w-md">
-            We craft inspiring spaces that blend cutting-edge
-            design with enduring functionality, turning your
-            vision into reality.
+          <p className="text-white text-lg md:text-xl leading-relaxed mb-8 md:mb-10 max-w-[590px]">
+            Schedule a Free Consultation. Your property goals, our expertise — making real estate simple, secure, and profitable.
           </p>
 
           {/* CTA Button */}
