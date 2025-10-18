@@ -10,7 +10,6 @@ import { MarqueeDemo } from "@/components/ui/marquee";
 import { useSEO } from "@/hooks/use-seo";
 import { SEO_PAGES, SCHEMAS } from "@/lib/seo-constants";
 import HyperLocalSEO, { BusinessHours } from "@/components/HyperLocalSEO";
-import { ServiceAreas } from "@/components/LocalAreaPages";
 import { initializeDailyOptimization } from "@/lib/daily-seo-optimizer";
 import { useEffect } from 'react';
 
@@ -41,9 +40,6 @@ const Index = () => {
       <ServicesSection />
       <CommitmentSection />
       <Testimonials />
-
-      {/* Local Service Areas Component */}
-      <ServiceAreas />
 
       <ConsultationSection />
       <FAQSection />
