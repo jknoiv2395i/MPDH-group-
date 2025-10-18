@@ -92,47 +92,44 @@ const CommitmentSection = () => {
 
   return (
     <>
-      <section className={`bg-white ${isEditor ? 'relative z-40 pointer-events-auto' : ''}`} style={{ paddingTop: '59px' }}>
+      <section className={`bg-white py-16 md:py-20 lg:py-24 ${isEditor ? 'relative z-40 pointer-events-auto' : ''}`}>
         <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-24 items-center" style={{ marginBottom: '44px' }}>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-24 items-center">
             {/* Left Content */}
             <motion.div
-              className="space-y-8"
+              className="space-y-6 lg:space-y-8"
               {...staggerChildren}
               viewport={{ once: true, margin: "-100px" }}
-              style={{ marginBottom: '-2px' }}
             >
               {/* Main Heading */}
               <motion.h2
-                className="font-instrument text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-normal text-black leading-tight tracking-tight"
+                className="font-instrument text-4xl md:text-5xl lg:text-6xl font-normal text-black leading-tight tracking-tight"
                 variants={textReveal}
-                style={{ paddingBottom: '23px' }}
               >
                 With a commitment to excellence and customer satisfaction.
               </motion.h2>
 
               {/* Description */}
               <motion.p
-                className="text-[#5D5D5D] text-lg leading-relaxed"
+                className="text-[#5D5D5D] text-base md:text-lg leading-relaxed max-w-xl"
                 variants={textReveal}
-                style={{ margin: '3px 0 35px' }}
               >
-                With a commitment to innovation, sustainability, and precision, we bring your ideas to life while enhancing functionality and aesthetics. Our team of dedicated architects and designers is here to turn your unique vision into a tangible masterpiece.
+                With a commitment to excellence, transparency, and growth, we transform property goals into profitable realities. Our team of experienced professionals in sales, legal, and compliance works together to deliver seamless solutions that maximize value and ensure long-term success for every client
               </motion.p>
 
               {/* CTA Button */}
-              <motion.a
-                href="https://bae3d00ef19341029c10c22b2986b118-460282766e5d4212bb58f5dc1.fly.dev/properties"
-                className="bg-[#131313] text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-gray-800 transition-colors cursor-pointer"
-                variants={textReveal}
-                style={{ padding: '13px 32px 16px' }}
-              >
-                Learn more
-              </motion.a>
+              <motion.div variants={textReveal}>
+                <a
+                  href="/about"
+                  className="inline-block bg-[#131313] text-white px-8 py-3.5 rounded-full text-base md:text-lg font-medium hover:bg-gray-800 transition-all duration-300 hover:scale-105"
+                >
+                  Learn more
+                </a>
+              </motion.div>
 
               {/* Stats Grid */}
               <motion.div
-                className="grid grid-cols-3 gap-8 pt-8"
+                className="grid grid-cols-2 gap-8 md:gap-12 pt-6 lg:pt-8 max-w-md"
                 variants={statsContainer}
                 initial="hidden"
                 whileInView="visible"
@@ -140,13 +137,13 @@ const CommitmentSection = () => {
               >
                 <motion.div className="space-y-2" variants={statReveal}>
                   <motion.h3
-                    className="font-instrument text-3xl lg:text-4xl xl:text-5xl font-normal text-black tracking-tight"
+                    className="font-instrument text-4xl md:text-5xl font-normal text-black tracking-tight"
                     variants={textReveal}
                   >
                     <Counter value={50} suffix="+" duration={2} />
                   </motion.h3>
                   <motion.p
-                    className="text-[#5D5D5D] text-lg"
+                    className="text-[#5D5D5D] text-base md:text-lg"
                     variants={textReveal}
                   >
                     Project complete
@@ -155,31 +152,16 @@ const CommitmentSection = () => {
 
                 <motion.div className="space-y-2 text-center" variants={statReveal}>
                   <motion.h3
-                    className="font-instrument text-3xl lg:text-4xl xl:text-5xl font-normal text-black tracking-tight"
+                    className="font-instrument text-4xl md:text-5xl font-normal text-black tracking-tight"
                     variants={textReveal}
                   >
                     <Counter value={100} suffix="+" duration={2.2} />
                   </motion.h3>
                   <motion.p
-                    className="text-[#5D5D5D] text-lg"
+                    className="text-[#5D5D5D] text-base md:text-lg"
                     variants={textReveal}
                   >
                     Expert teams
-                  </motion.p>
-                </motion.div>
-
-                <motion.div className="space-y-2 text-right" variants={statReveal}>
-                  <motion.h3
-                    className="font-instrument text-3xl lg:text-4xl xl:text-5xl font-normal text-black tracking-tight"
-                    variants={textReveal}
-                  >
-                    <Counter value={3500000} prefix="$" duration={2.5} />
-                  </motion.h3>
-                  <motion.p
-                    className="text-[#5D5D5D] text-lg"
-                    variants={textReveal}
-                  >
-                    Project value
                   </motion.p>
                 </motion.div>
               </motion.div>
@@ -193,11 +175,11 @@ const CommitmentSection = () => {
               viewport={{ once: true, margin: "-100px" }}
               variants={fadeInFromRight}
             >
-              <div className="rounded-2xl lg:rounded-3xl overflow-hidden aspect-[4/5] lg:aspect-[630/694]">
+              <div className="rounded-2xl lg:rounded-3xl overflow-hidden aspect-[560/617] w-full">
                 <img
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/ccd05e016a805ef47d6ee702ec0a9ff978d5cc66?width=1261"
+                  src="https://api.builder.io/api/v1/image/assets/TEMP/b57b7c71197cd9bfd4d23021b8abd2b37ab5cb3e?width=1120"
                   alt="Modern architectural building with curved glass facade"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 />
               </div>
             </motion.div>
