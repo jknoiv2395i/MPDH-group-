@@ -7,6 +7,10 @@ export function useVoiceAgent() {
   const [voiceAgentLoaded, setVoiceAgentLoaded] = useState(false);
 
   useEffect(() => {
+    if (typeof window !== 'undefined' && isBuilderEditor()) {
+      console.log('Builder editor detected — skipping ElevenLabs voice agent injection')
+      return
+    }
     // Add the ElevenLabs ConvAI script exactly as provided
     const script = document.createElement('script');
     script.src = 'https://unpkg.com/@elevenlabs/convai-widget-embed';
