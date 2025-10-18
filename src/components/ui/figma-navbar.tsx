@@ -21,7 +21,6 @@ const navItems: NavItem[] = [
   { name: 'Residential', url: '/residential', hasDropdown: true },
   { name: 'Commercial', url: '/commercial', hasDropdown: true },
   { name: 'Industrial', url: '/industrial' },
-  { name: 'Contact us', url: '/services' },
 ]
 
 const dropdownContent = {
