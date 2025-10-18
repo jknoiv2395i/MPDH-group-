@@ -13,7 +13,7 @@ const ToastViewport = React.forwardRef<
 >(({ className, ...props }, ref) => {
   // If the Builder editor/preview is open, make toasts non-interactive
   // so editor UI (visual change controls) can receive pointer events.
-  const isEditor = typeof window !== 'undefined' && require('@/lib/utils').isBuilderEditor && require('@/lib/utils').isBuilderEditor();
+  const isEditor = typeof window !== 'undefined' && isBuilderEditor();
 
   return (
     <ToastPrimitives.Viewport
