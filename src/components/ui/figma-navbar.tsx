@@ -100,7 +100,7 @@ export function FigmaNavBar({ className }: NavBarProps) {
         {/* Contact Us Button */}
         <div className="hidden md:flex items-center">
           <a
-            href="https://4e7f55704d4b4fa4bf5eb3b5017b6705-b9e86d62c6a94b2193c7b262b.fly.dev/services"
+            href="https://mphdgroup.com/services"
             className="px-6 py-2 bg-white text-[black] rounded-full text-sm lg:text-base font-medium hover:bg-gray-50 transition-colors duration-200 cursor-pointer pointer-events-auto"
           >
             Contact us
@@ -146,7 +146,7 @@ export function FigmaNavBar({ className }: NavBarProps) {
             ))}
             <div className="border-t border-white/10 mt-3 pt-3">
               <a
-                href="/contact"
+                href="/services"
                 className="block text-white/80 hover:text-white transition-colors duration-200 py-2 text-center"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
