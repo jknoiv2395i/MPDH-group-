@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { ChevronDown, ChevronRight } from "lucide-react";
 import { FigmaNavBar } from "@/components/ui/figma-navbar";
 import Footer from "@/components/Footer";
+import FAQSection from "@/components/FAQSection";
 import { motion } from "framer-motion";
 import { useSEO } from "@/hooks/use-seo";
 import { SEO_PAGES } from "@/lib/seo-constants";
@@ -690,153 +691,10 @@ const Services = () => {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="bg-white" style={{ padding: '39px 0 80px' }}>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-0">
-          {/* Header */}
-          <motion.div 
-            className="text-center mb-16"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            variants={containerVariants}
-          >
-            <motion.h2 
-              className="font-instrument text-4xl md:text-5xl lg:text-6xl font-normal text-black mb-6 tracking-tight"
-              variants={headlineVariants}
-            >
-              Frequently asked questions
-            </motion.h2>
-            <motion.p 
-              className="font-inter text-lg text-gray-600 tracking-wide max-w-3xl mx-auto"
-              variants={textVariants}
-            >
-              To help you make informed decisions, we've compiled answers to some of the most
-              commonly asked questions.
-            </motion.p>
-          </motion.div>
 
-          {/* FAQ Items */}
-          <motion.div 
-            className="space-y-4"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            variants={{
-              hidden: {},
-              visible: {
-                transition: {
-                  staggerChildren: 0.1
-                }
-              }
-            }}
-          >
-            {faqItems.map((item, index) => (
-              <motion.div 
-                key={index} 
-                className="border-t-2 border-blue-200"
-                variants={{
-                  hidden: { opacity: 0, y: 20 },
-                  visible: {
-                    opacity: 1,
-                    y: 0,
-                    transition: { duration: 0.5, ease: "easeOut" }
-                  }
-                }}
-                whileHover={{ x: 5 }}
-                transition={{ duration: 0.2 }}
-              >
-                <motion.button
-                  onClick={() => toggleFAQ(index)}
-                  className="w-full flex items-center justify-between py-8 text-left focus:outline-none group"
-                  whileHover={{ scale: 1.01 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <h3 className="font-instrument text-xl md:text-2xl lg:text-3xl font-normal text-gray-800 tracking-tight pr-8 group-hover:text-blue-600 transition-colors duration-200">
-                    {item.question}
-                  </h3>
-                  <motion.div 
-                    className="flex-shrink-0 w-12 h-12 bg-gray-900 rounded-full flex items-center justify-center group-hover:bg-blue-600"
-                    whileHover={{ scale: 1.1, rotate: 5 }}
-                    whileTap={{ scale: 0.95 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <svg 
-                      width="19" 
-                      height="19" 
-                      viewBox="0 0 19 19" 
-                      fill="none" 
-                      xmlns="http://www.w3.org/2000/svg"
-                      className={`transition-transform duration-300 ${openFAQ === index ? 'rotate-45' : ''}`}
-                    >
-                      <path 
-                        d="M6.12439 5.42871H13.3475V12.6518M12.8459 5.93032L5.52246 13.2538" 
-                        stroke="white" 
-                        strokeWidth="1.7025" 
-                        strokeMiterlimit="10" 
-                        strokeLinecap="square"
-                      />
-                    </svg>
-                  </motion.div>
-                </motion.button>
-                {openFAQ === index && (
-                  <motion.div 
-                    className="pb-8 pr-16"
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.3, ease: "easeOut" }}
-                  >
-                    <motion.p 
-                      className="font-inter text-lg text-gray-600 leading-relaxed"
-                      initial={{ opacity: 0, y: -10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.3, delay: 0.1 }}
-                    >
-                      {item.answer}
-                    </motion.p>
-                  </motion.div>
-                )}
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
 
-      {/* Vision Section (from Index page) */}
-      <motion.section 
-        className="bg-white py-16 px-4 md:py-24 lg:py-32"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        variants={containerVariants}
-      >
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            className="flex flex-col items-center text-center text-2xl"
-            variants={containerVariants}
-          >
-            <motion.h2
-              className="font-instrument text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[54px] font-normal leading-tight text-black mb-4 sm:mb-6 max-w-4xl tracking-[-0.5px] sm:tracking-[-1.6px] text-center"
-              variants={textVariants}
-            >
-              Experience innovative spaces
-              <br />
-              where real estate meets your vision
-              <br />
-              and turns it into reality.
-            </motion.h2>
-
-            <motion.p
-              className="text-[#5D5D5D] text-base md:text-lg font-normal leading-relaxed max-w-[634px] tracking-[0.2px] sm:tracking-[0.36px]"
-              variants={textVariants}
-            >
-              We craft inspiring spaces that blend cutting-edge design with enduring
-              functionality, turning your vision into reality.
-            </motion.p>
-          </motion.div>
-        </div>
-      </motion.section>
+      {/* FAQ Section (added below contact form) */}
+      <FAQSection />
 
       <Footer />
     </motion.div>
