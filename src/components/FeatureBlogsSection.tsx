@@ -61,7 +61,7 @@ const FeatureBlogsSection = () => {
             variants={textAnimationVariants}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            Feature blogs
+            Our Featured Projects
           </motion.h2>
         </motion.div>
 
