@@ -146,7 +146,7 @@ export function FigmaNavBar({ className }: NavBarProps) {
             ))}
             <div className="border-t border-white/10 mt-3 pt-3">
               <a
-                href="/contact"
+                href="/services"
                 className="block text-white/80 hover:text-white transition-colors duration-200 py-2 text-center"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
