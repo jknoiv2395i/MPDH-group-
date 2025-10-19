@@ -692,6 +692,9 @@ const Services = () => {
 
 
 
+      {/* FAQ Section (added below contact form) */}
+      <FAQSection />
+
       <Footer />
     </motion.div>
   );
