@@ -32,8 +32,8 @@ const About = () => {
       image: 'https://cdn.builder.io/api/v1/image/assets%2F64d5b2c9ccba4a419b784580e4130fef%2F0451830a23fb4cd1aeca2d0ef1f5510b'
     },
     {
-      name: 'Isabella Greene',
-      role: 'Architect',
+      name: 'Neha hironde',
+      role: 'content writer',
       image: 'https://api.builder.io/api/v1/image/assets/TEMP/2ac6202210de4946999ad2d8978b70ec4554f26b?width=853'
     },
     {
