@@ -21,7 +21,7 @@ const faqs = [
 
 const FAQSection: React.FC = () => {
   return (
-    <section className="bg-white font-normal pt-17 pb-10 px-4">
+    <section className="bg-white font-normal" style={{ padding: '69px 16px 40px' }}>
       <div className="mx-auto w-full max-w-7xl px-8">
         <div className="grid gap-16 items-start md:grid-cols-2">
           <div>
