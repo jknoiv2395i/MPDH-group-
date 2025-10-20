@@ -51,6 +51,9 @@ const ConsultationSection = () => {
                   strokeWidth="1.69969"
                   strokeMiterlimit="10"
                   strokeLinecap="square"
+                  fill="none"
+                  pointerEvents="none"
+                  style={{ transformOrigin: '0px 0px' }}
                 />
               </svg>
             </div>
