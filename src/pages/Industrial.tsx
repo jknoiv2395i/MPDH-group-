@@ -319,26 +319,6 @@ const Industrial = () => {
                     </span>
                   </div>
 
-                  <div className="bg-[#F5F5F5] p-4 mb-4 rounded relative">
-                    <div className="grid grid-cols-3 gap-4 text-xs">
-                      <div>
-                        <div className="text-[#7B7A7A] font-bold mb-1">SUPER AREA</div>
-                        <div className="text-[#535353] font-bold">3 BHK 1550 Sqft 4 BHK 3000 Sqft</div>
-                      </div>
-                      <div>
-                        <div className="text-[#7B7A7A] font-bold mb-1">STATUS</div>
-                        <div className="text-[#535353] font-bold">New</div>
-                      </div>
-                      <div>
-                        <div className="text-[#7B7A7A] font-bold mb-1">TRANSACTION</div>
-                        <div className="text-[#535353] font-bold">New</div>
-                      </div>
-                    </div>
-                    <div className="absolute top-4 right-4">
-                      <ChevronDown className="w-3 h-3 text-black" />
-                    </div>
-                  </div>
-
                   <div className="border-t border-[#F1F1F1] pt-3 mb-6">
                     <p className="text-[#535353] text-xs leading-relaxed">
                       Ready to move Commercial Sanctioned, Fire NoC and OC are available
@@ -389,26 +369,6 @@ const Industrial = () => {
                     <span className="text-[#4A4747] font-inter text-sm">
                       KT Nagar, Friends Colony, Nagpur
                     </span>
-                  </div>
-
-                  <div className="bg-[#F5F5F5] p-4 mb-4 rounded relative">
-                    <div className="grid grid-cols-3 gap-4 text-xs">
-                      <div>
-                        <div className="text-[#7B7A7A] font-bold mb-1">SUPER AREA</div>
-                        <div className="text-[#535353] font-bold">3 BHK 1550 Sqft 4 BHK 3000 Sqft</div>
-                      </div>
-                      <div>
-                        <div className="text-[#7B7A7A] font-bold mb-1">STATUS</div>
-                        <div className="text-[#535353] font-bold">New</div>
-                      </div>
-                      <div>
-                        <div className="text-[#7B7A7A] font-bold mb-1">TRANSACTION</div>
-                        <div className="text-[#535353] font-bold">New</div>
-                      </div>
-                    </div>
-                    <div className="absolute top-4 right-4">
-                      <ChevronDown className="w-3 h-3 text-black" />
-                    </div>
                   </div>
 
                   <div className="border-t border-[#F1F1F1] pt-3 mb-6">
@@ -486,26 +446,6 @@ const Industrial = () => {
                         </span>
                       </div>
 
-                      <div className="bg-[#F5F5F5] p-4 mb-4 rounded relative">
-                        <div className="grid grid-cols-3 gap-4 text-xs">
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">SUPER AREA</div>
-                            <div className="text-[#535353] font-bold">3 BHK 1550 Sqft 4 BHK 3000 Sqft</div>
-                          </div>
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">STATUS</div>
-                            <div className="text-[#535353] font-bold">New</div>
-                          </div>
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">TRANSACTION</div>
-                            <div className="text-[#535353] font-bold">New</div>
-                          </div>
-                        </div>
-                        <div className="absolute top-4 right-4">
-                          <ChevronDown className="w-3 h-3 text-black" />
-                        </div>
-                      </div>
-
                       <div className="border-t border-[#F1F1F1] pt-3 mb-6">
                         <p className="text-[#535353] text-xs leading-relaxed">
                           Ready to move Commercial Sanctioned, Fire NoC and OC are available
@@ -556,26 +496,6 @@ const Industrial = () => {
                         </span>
                       </div>
 
-                      <div className="bg-[#F5F5F5] p-4 mb-4 rounded relative">
-                        <div className="grid grid-cols-3 gap-4 text-xs">
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">SUPER AREA</div>
-                            <div className="text-[#535353] font-bold">3 BHK 1550 Sqft 4 BHK 3000 Sqft</div>
-                          </div>
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">STATUS</div>
-                            <div className="text-[#535353] font-bold">New</div>
-                          </div>
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">TRANSACTION</div>
-                            <div className="text-[#535353] font-bold">New</div>
-                          </div>
-                        </div>
-                        <div className="absolute top-4 right-4">
-                          <ChevronDown className="w-3 h-3 text-black" />
-                        </div>
-                      </div>
-
                       <div className="border-t border-[#F1F1F1] pt-3 mb-6">
                         <p className="text-[#535353] text-xs leading-relaxed">
                           Ready to move Commercial Sanctioned, Fire NoC and OC are available
@@ -624,26 +544,6 @@ const Industrial = () => {
                         <span className="text-[#4A4747] font-inter text-sm">
                           KT Nagar, Friends Colony, Nagpur
                         </span>
-                      </div>
-
-                      <div className="bg-[#F5F5F5] p-4 mb-4 rounded relative">
-                        <div className="grid grid-cols-3 gap-4 text-xs">
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">SUPER AREA</div>
-                            <div className="text-[#535353] font-bold">3 BHK 1550 Sqft 4 BHK 3000 Sqft</div>
-                          </div>
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">STATUS</div>
-                            <div className="text-[#535353] font-bold">New</div>
-                          </div>
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">TRANSACTION</div>
-                            <div className="text-[#535353] font-bold">New</div>
-                          </div>
-                        </div>
-                        <div className="absolute top-4 right-4">
-                          <ChevronDown className="w-3 h-3 text-black" />
-                        </div>
                       </div>
 
                       <div className="border-t border-[#F1F1F1] pt-3 mb-6">
@@ -700,26 +600,6 @@ const Industrial = () => {
                         </span>
                       </div>
 
-                      <div className="bg-[#F5F5F5] p-4 mb-4 rounded relative">
-                        <div className="grid grid-cols-3 gap-4 text-xs">
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">SUPER AREA</div>
-                            <div className="text-[#535353] font-bold">3 BHK 1550 Sqft 4 BHK 3000 Sqft</div>
-                          </div>
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">STATUS</div>
-                            <div className="text-[#535353] font-bold">New</div>
-                          </div>
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">TRANSACTION</div>
-                            <div className="text-[#535353] font-bold">New</div>
-                          </div>
-                        </div>
-                        <div className="absolute top-4 right-4">
-                          <ChevronDown className="w-3 h-3 text-black" />
-                        </div>
-                      </div>
-
                       <div className="border-t border-[#F1F1F1] pt-3 mb-6">
                         <p className="text-[#535353] text-xs leading-relaxed">
                           Ready to move Commercial Sanctioned, Fire NoC and OC are available
@@ -768,26 +648,6 @@ const Industrial = () => {
                         <span className="text-[#4A4747] font-inter text-sm">
                           KT Nagar, Friends Colony, Nagpur
                         </span>
-                      </div>
-
-                      <div className="bg-[#F5F5F5] p-4 mb-4 rounded relative">
-                        <div className="grid grid-cols-3 gap-4 text-xs">
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">SUPER AREA</div>
-                            <div className="text-[#535353] font-bold">3 BHK 1550 Sqft 4 BHK 3000 Sqft</div>
-                          </div>
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">STATUS</div>
-                            <div className="text-[#535353] font-bold">New</div>
-                          </div>
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">TRANSACTION</div>
-                            <div className="text-[#535353] font-bold">New</div>
-                          </div>
-                        </div>
-                        <div className="absolute top-4 right-4">
-                          <ChevronDown className="w-3 h-3 text-black" />
-                        </div>
                       </div>
 
                       <div className="border-t border-[#F1F1F1] pt-3 mb-6">
@@ -840,26 +700,6 @@ const Industrial = () => {
                         </span>
                       </div>
 
-                      <div className="bg-[#F5F5F5] p-4 mb-4 rounded relative">
-                        <div className="grid grid-cols-3 gap-4 text-xs">
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">SUPER AREA</div>
-                            <div className="text-[#535353] font-bold">3 BHK 1550 Sqft 4 BHK 3000 Sqft</div>
-                          </div>
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">STATUS</div>
-                            <div className="text-[#535353] font-bold">New</div>
-                          </div>
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">TRANSACTION</div>
-                            <div className="text-[#535353] font-bold">New</div>
-                          </div>
-                        </div>
-                        <div className="absolute top-4 right-4">
-                          <ChevronDown className="w-3 h-3 text-black" />
-                        </div>
-                      </div>
-
                       <div className="border-t border-[#F1F1F1] pt-3 mb-6">
                         <p className="text-[#535353] text-xs leading-relaxed">
                           Ready to move Commercial Sanctioned, Fire NoC and OC are available
@@ -908,26 +748,6 @@ const Industrial = () => {
                         <span className="text-[#4A4747] font-inter text-sm">
                           KT Nagar, Friends Colony, Nagpur
                         </span>
-                      </div>
-
-                      <div className="bg-[#F5F5F5] p-4 mb-4 rounded relative">
-                        <div className="grid grid-cols-3 gap-4 text-xs">
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">SUPER AREA</div>
-                            <div className="text-[#535353] font-bold">3 BHK 1550 Sqft 4 BHK 3000 Sqft</div>
-                          </div>
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">STATUS</div>
-                            <div className="text-[#535353] font-bold">New</div>
-                          </div>
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">TRANSACTION</div>
-                            <div className="text-[#535353] font-bold">New</div>
-                          </div>
-                        </div>
-                        <div className="absolute top-4 right-4">
-                          <ChevronDown className="w-3 h-3 text-black" />
-                        </div>
                       </div>
 
                       <div className="border-t border-[#F1F1F1] pt-3 mb-6">
@@ -980,26 +800,6 @@ const Industrial = () => {
                         </span>
                       </div>
 
-                      <div className="bg-[#F5F5F5] p-4 mb-4 rounded relative">
-                        <div className="grid grid-cols-3 gap-4 text-xs">
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">SUPER AREA</div>
-                            <div className="text-[#535353] font-bold">3 BHK 1550 Sqft 4 BHK 3000 Sqft</div>
-                          </div>
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">STATUS</div>
-                            <div className="text-[#535353] font-bold">New</div>
-                          </div>
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">TRANSACTION</div>
-                            <div className="text-[#535353] font-bold">New</div>
-                          </div>
-                        </div>
-                        <div className="absolute top-4 right-4">
-                          <ChevronDown className="w-3 h-3 text-black" />
-                        </div>
-                      </div>
-
                       <div className="border-t border-[#F1F1F1] pt-3 mb-6">
                         <p className="text-[#535353] text-xs leading-relaxed">
                           Ready to move Commercial Sanctioned, Fire NoC and OC are available
@@ -1048,26 +848,6 @@ const Industrial = () => {
                         <span className="text-[#4A4747] font-inter text-sm">
                           KT Nagar, Friends Colony, Nagpur
                         </span>
-                      </div>
-
-                      <div className="bg-[#F5F5F5] p-4 mb-4 rounded relative">
-                        <div className="grid grid-cols-3 gap-4 text-xs">
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">SUPER AREA</div>
-                            <div className="text-[#535353] font-bold">3 BHK 1550 Sqft 4 BHK 3000 Sqft</div>
-                          </div>
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">STATUS</div>
-                            <div className="text-[#535353] font-bold">New</div>
-                          </div>
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">TRANSACTION</div>
-                            <div className="text-[#535353] font-bold">New</div>
-                          </div>
-                        </div>
-                        <div className="absolute top-4 right-4">
-                          <ChevronDown className="w-3 h-3 text-black" />
-                        </div>
                       </div>
 
                       <div className="border-t border-[#F1F1F1] pt-3 mb-6">
@@ -1120,26 +900,6 @@ const Industrial = () => {
                         </span>
                       </div>
 
-                      <div className="bg-[#F5F5F5] p-4 mb-4 rounded relative">
-                        <div className="grid grid-cols-3 gap-4 text-xs">
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">SUPER AREA</div>
-                            <div className="text-[#535353] font-bold">3 BHK 1550 Sqft 4 BHK 3000 Sqft</div>
-                          </div>
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">STATUS</div>
-                            <div className="text-[#535353] font-bold">New</div>
-                          </div>
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">TRANSACTION</div>
-                            <div className="text-[#535353] font-bold">New</div>
-                          </div>
-                        </div>
-                        <div className="absolute top-4 right-4">
-                          <ChevronDown className="w-3 h-3 text-black" />
-                        </div>
-                      </div>
-
                       <div className="border-t border-[#F1F1F1] pt-3 mb-6">
                         <p className="text-[#535353] text-xs leading-relaxed">
                           Ready to move Commercial Sanctioned, Fire NoC and OC are available
@@ -1188,26 +948,6 @@ const Industrial = () => {
                         <span className="text-[#4A4747] font-inter text-sm">
                           KT Nagar, Friends Colony, Nagpur
                         </span>
-                      </div>
-
-                      <div className="bg-[#F5F5F5] p-4 mb-4 rounded relative">
-                        <div className="grid grid-cols-3 gap-4 text-xs">
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">SUPER AREA</div>
-                            <div className="text-[#535353] font-bold">3 BHK 1550 Sqft 4 BHK 3000 Sqft</div>
-                          </div>
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">STATUS</div>
-                            <div className="text-[#535353] font-bold">New</div>
-                          </div>
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">TRANSACTION</div>
-                            <div className="text-[#535353] font-bold">New</div>
-                          </div>
-                        </div>
-                        <div className="absolute top-4 right-4">
-                          <ChevronDown className="w-3 h-3 text-black" />
-                        </div>
                       </div>
 
                       <div className="border-t border-[#F1F1F1] pt-3 mb-6">
