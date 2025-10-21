@@ -314,7 +314,7 @@ const Industrial = () => {
 
                 <div className="flex-1 flex flex-col justify-end" style={{margin: "-5px 0 0"}} />
 
-                <div className="border-t border-[#F1F1F1] pt-3 mb-6">
+                <div className="border-t border-[#F1F1F1] pt-2 mb-2">
                   <p className="text-[#535353] text-xs leading-relaxed">
                     Ready to move Commercial Sanctioned, Fire NoC and OC are available
                   </p>
@@ -359,7 +359,7 @@ const Industrial = () => {
 
                 <div className="flex-1 flex flex-col justify-end" style={{margin: "-5px 0 0"}} />
 
-                <div className="border-t border-[#F1F1F1] pt-3 mb-6">
+                <div className="border-t border-[#F1F1F1] pt-2 mb-2">
                   <p className="text-[#535353] text-xs leading-relaxed">
                     Ready to move Commercial Sanctioned, Fire NoC and OC are available
                   </p>
@@ -427,7 +427,7 @@ const Industrial = () => {
 
                     <div className="flex-1 flex flex-col justify-end" style={{margin: "-5px 0 0"}} />
 
-                <div className="border-t border-[#F1F1F1] pt-3 mb-6">
+                <div className="border-t border-[#F1F1F1] pt-2 mb-2">
                   <p className="text-[#535353] text-xs leading-relaxed">
                     Ready to move Commercial Sanctioned, Fire NoC and OC are available
                   </p>
@@ -470,7 +470,7 @@ const Industrial = () => {
 
                     <div className="flex-1 flex flex-col justify-end" style={{margin: "-5px 0 0"}} />
 
-                <div className="border-t border-[#F1F1F1] pt-3 mb-6">
+                <div className="border-t border-[#F1F1F1] pt-2 mb-2">
                   <p className="text-[#535353] text-xs leading-relaxed">
                     Ready to move Commercial Sanctioned, Fire NoC and OC are available
                   </p>
@@ -513,7 +513,7 @@ const Industrial = () => {
 
                     <div className="flex-1 flex flex-col justify-end" style={{margin: "-5px 0 0"}} />
 
-                <div className="border-t border-[#F1F1F1] pt-3 mb-6">
+                <div className="border-t border-[#F1F1F1] pt-2 mb-2">
                   <p className="text-[#535353] text-xs leading-relaxed">
                     Ready to move Commercial Sanctioned, Fire NoC and OC are available
                   </p>
@@ -560,7 +560,7 @@ const Industrial = () => {
 
                     <div className="flex-1 flex flex-col justify-end" style={{margin: "-5px 0 0"}} />
 
-                <div className="border-t border-[#F1F1F1] pt-3 mb-6">
+                <div className="border-t border-[#F1F1F1] pt-2 mb-2">
                   <p className="text-[#535353] text-xs leading-relaxed">
                     Ready to move Commercial Sanctioned, Fire NoC and OC are available
                   </p>
@@ -603,7 +603,7 @@ const Industrial = () => {
 
                     <div className="flex-1 flex flex-col justify-end" style={{margin: "-5px 0 0"}} />
 
-                <div className="border-t border-[#F1F1F1] pt-3 mb-6">
+                <div className="border-t border-[#F1F1F1] pt-2 mb-2">
                   <p className="text-[#535353] text-xs leading-relaxed">
                     Ready to move Commercial Sanctioned, Fire NoC and OC are available
                   </p>
@@ -646,7 +646,7 @@ const Industrial = () => {
 
                     <div className="flex-1 flex flex-col justify-end" style={{margin: "-5px 0 0"}} />
 
-                <div className="border-t border-[#F1F1F1] pt-3 mb-6">
+                <div className="border-t border-[#F1F1F1] pt-2 mb-2">
                   <p className="text-[#535353] text-xs leading-relaxed">
                     Ready to move Commercial Sanctioned, Fire NoC and OC are available
                   </p>
@@ -689,7 +689,7 @@ const Industrial = () => {
 
                     <div className="flex-1 flex flex-col justify-end" style={{margin: "-5px 0 0"}} />
 
-                <div className="border-t border-[#F1F1F1] pt-3 mb-6">
+                <div className="border-t border-[#F1F1F1] pt-2 mb-2">
                   <p className="text-[#535353] text-xs leading-relaxed">
                     Ready to move Commercial Sanctioned, Fire NoC and OC are available
                   </p>
@@ -732,7 +732,7 @@ const Industrial = () => {
 
                     <div className="flex-1 flex flex-col justify-end" style={{margin: "-5px 0 0"}} />
 
-                <div className="border-t border-[#F1F1F1] pt-3 mb-6">
+                <div className="border-t border-[#F1F1F1] pt-2 mb-2">
                   <p className="text-[#535353] text-xs leading-relaxed">
                     Ready to move Commercial Sanctioned, Fire NoC and OC are available
                   </p>
@@ -775,7 +775,7 @@ const Industrial = () => {
 
                     <div className="flex-1 flex flex-col justify-end" style={{margin: "-5px 0 0"}} />
 
-                <div className="border-t border-[#F1F1F1] pt-3 mb-6">
+                <div className="border-t border-[#F1F1F1] pt-2 mb-2">
                   <p className="text-[#535353] text-xs leading-relaxed">
                     Ready to move Commercial Sanctioned, Fire NoC and OC are available
                   </p>
@@ -818,7 +818,7 @@ const Industrial = () => {
 
                     <div className="flex-1 flex flex-col justify-end" style={{margin: "-5px 0 0"}} />
 
-                <div className="border-t border-[#F1F1F1] pt-3 mb-6">
+                <div className="border-t border-[#F1F1F1] pt-2 mb-2">
                   <p className="text-[#535353] text-xs leading-relaxed">
                     Ready to move Commercial Sanctioned, Fire NoC and OC are available
                   </p>
@@ -861,7 +861,7 @@ const Industrial = () => {
 
                     <div className="flex-1 flex flex-col justify-end" style={{margin: "-5px 0 0"}} />
 
-                <div className="border-t border-[#F1F1F1] pt-3 mb-6">
+                <div className="border-t border-[#F1F1F1] pt-2 mb-2">
                   <p className="text-[#535353] text-xs leading-relaxed">
                     Ready to move Commercial Sanctioned, Fire NoC and OC are available
                   </p>
