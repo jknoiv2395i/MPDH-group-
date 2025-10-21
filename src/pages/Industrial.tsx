@@ -181,7 +181,7 @@ const Industrial = () => {
         <img
           src="https://api.builder.io/api/v1/image/assets/TEMP/c0f3f140e47c44b88f3bdfb5f6af0d49843e7c5d?width=3810"
           alt="Commercial Properties Hero"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover pointer-events-none"
           initial={{ opacity: 0, scale: 1.05 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{
@@ -190,10 +190,10 @@ const Industrial = () => {
             delay: 0.5
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-transparent" />
-        <div className="absolute inset-0 flex items-center justify-start pl-4 md:pl-10 top-0">
+        <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-transparent pointer-events-none" />
+        <div className="absolute inset-0 flex items-center justify-start pl-4 md:pl-10 top-0 pointer-events-auto">
           <h1
-            className="text-left text-white font-instrument text-3xl sm:text-4xl md:text-6xl lg:text-8xl xl:text-[180px] font-normal leading-tight tracking-tight max-w-full md:pl-[7px]"
+            className="text-left text-white font-instrument text-3xl sm:text-4xl md:text-6xl lg:text-8xl xl:text-[96px] font-normal leading-tight tracking-tight max-w-full md:pl-[7px] max-w-[1200px]"
             variants={headlineVariants}
           >
             <p>Industrial Services</p>
