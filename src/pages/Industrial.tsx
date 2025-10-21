@@ -311,7 +311,7 @@ const Industrial = () => {
                   </p>
                 </div>
 
-                <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 128px"}}>
+                <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 0"}}>
                   <div className="flex items-center gap-2 mb-4">
                     <MapPin className="w-3 h-3 text-[#4A4747]" />
                     <span className="text-[#4A4747] font-inter text-sm">
@@ -363,7 +363,7 @@ const Industrial = () => {
                   </p>
                 </div>
 
-                <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 128px"}}>
+                <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 0"}}>
                   <div className="flex items-center gap-2 mb-4">
                     <MapPin className="w-3 h-3 text-[#4A4747]" />
                     <span className="text-[#4A4747] font-inter text-sm">
@@ -438,7 +438,7 @@ const Industrial = () => {
                       </p>
                     </div>
 
-                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 128px"}}>
+                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 0"}}>
                       <div className="flex items-center gap-2 mb-4">
                         <MapPin className="w-3 h-3 text-[#4A4747]" />
                         <span className="text-[#4A4747] font-inter text-sm">
@@ -488,7 +488,7 @@ const Industrial = () => {
                       </p>
                     </div>
 
-                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 128px"}}>
+                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 0"}}>
                       <div className="flex items-center gap-2 mb-4">
                         <MapPin className="w-3 h-3 text-[#4A4747]" />
                         <span className="text-[#4A4747] font-inter text-sm">
@@ -538,7 +538,7 @@ const Industrial = () => {
                       </p>
                     </div>
 
-                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 128px"}}>
+                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 0"}}>
                       <div className="flex items-center gap-2 mb-4">
                         <MapPin className="w-3 h-3 text-[#4A4747]" />
                         <span className="text-[#4A4747] font-inter text-sm">
@@ -592,7 +592,7 @@ const Industrial = () => {
                       </p>
                     </div>
 
-                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 128px"}}>
+                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 0"}}>
                       <div className="flex items-center gap-2 mb-4">
                         <MapPin className="w-3 h-3 text-[#4A4747]" />
                         <span className="text-[#4A4747] font-inter text-sm">
@@ -642,7 +642,7 @@ const Industrial = () => {
                       </p>
                     </div>
 
-                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 128px"}}>
+                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 0"}}>
                       <div className="flex items-center gap-2 mb-4">
                         <MapPin className="w-3 h-3 text-[#4A4747]" />
                         <span className="text-[#4A4747] font-inter text-sm">
@@ -692,7 +692,7 @@ const Industrial = () => {
                       </p>
                     </div>
 
-                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 128px"}}>
+                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 0"}}>
                       <div className="flex items-center gap-2 mb-4">
                         <MapPin className="w-3 h-3 text-[#4A4747]" />
                         <span className="text-[#4A4747] font-inter text-sm">
@@ -742,7 +742,7 @@ const Industrial = () => {
                       </p>
                     </div>
 
-                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 128px"}}>
+                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 0"}}>
                       <div className="flex items-center gap-2 mb-4">
                         <MapPin className="w-3 h-3 text-[#4A4747]" />
                         <span className="text-[#4A4747] font-inter text-sm">
@@ -792,7 +792,7 @@ const Industrial = () => {
                       </p>
                     </div>
 
-                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 128px"}}>
+                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 0"}}>
                       <div className="flex items-center gap-2 mb-4">
                         <MapPin className="w-3 h-3 text-[#4A4747]" />
                         <span className="text-[#4A4747] font-inter text-sm">
@@ -842,7 +842,7 @@ const Industrial = () => {
                       </p>
                     </div>
 
-                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 128px"}}>
+                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 0"}}>
                       <div className="flex items-center gap-2 mb-4">
                         <MapPin className="w-3 h-3 text-[#4A4747]" />
                         <span className="text-[#4A4747] font-inter text-sm">
@@ -892,7 +892,7 @@ const Industrial = () => {
                       </p>
                     </div>
 
-                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 128px"}}>
+                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 0"}}>
                       <div className="flex items-center gap-2 mb-4">
                         <MapPin className="w-3 h-3 text-[#4A4747]" />
                         <span className="text-[#4A4747] font-inter text-sm">
@@ -942,7 +942,7 @@ const Industrial = () => {
                       </p>
                     </div>
 
-                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 128px"}}>
+                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 0"}}>
                       <div className="flex items-center gap-2 mb-4">
                         <MapPin className="w-3 h-3 text-[#4A4747]" />
                         <span className="text-[#4A4747] font-inter text-sm">
