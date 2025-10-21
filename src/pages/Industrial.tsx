@@ -312,19 +312,17 @@ const Industrial = () => {
                   </p>
                 </div>
 
-                <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 0"}}>
+                <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 0"}} />
 
-
-                  <div className="border-t border-[#F1F1F1] pt-3 mb-6">
-                    <p className="text-[#535353] text-xs leading-relaxed">
-                      Ready to move Commercial Sanctioned, Fire NoC and OC are available
-                    </p>
-                  </div>
-
-                  <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
-                    View project
-                  </Button>
+                <div className="border-t border-[#F1F1F1] pt-3 mb-6">
+                  <p className="text-[#535353] text-xs leading-relaxed">
+                    Ready to move Commercial Sanctioned, Fire NoC and OC are available
+                  </p>
                 </div>
+
+                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
+                  View project
+                </Button>
               </div>
             </div>
 
@@ -359,19 +357,17 @@ const Industrial = () => {
                   </p>
                 </div>
 
-                <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 0"}}>
+                <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 0"}} />
 
-
-                  <div className="border-t border-[#F1F1F1] pt-3 mb-6">
-                    <p className="text-[#535353] text-xs leading-relaxed">
-                      Ready to move Commercial Sanctioned, Fire NoC and OC are available
-                    </p>
-                  </div>
-
-                  <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
-                    View project
-                  </Button>
+                <div className="border-t border-[#F1F1F1] pt-3 mb-6">
+                  <p className="text-[#535353] text-xs leading-relaxed">
+                    Ready to move Commercial Sanctioned, Fire NoC and OC are available
+                  </p>
                 </div>
+
+                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
+                  View project
+                </Button>
               </div>
             </div>
 
@@ -429,19 +425,17 @@ const Industrial = () => {
                       </p>
                     </div>
 
-                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 0"}}>
-    
+                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 0"}} />
 
-                      <div className="border-t border-[#F1F1F1] pt-3 mb-6">
-                        <p className="text-[#535353] text-xs leading-relaxed">
-                          Ready to move Commercial Sanctioned, Fire NoC and OC are available
-                        </p>
-                      </div>
+                <div className="border-t border-[#F1F1F1] pt-3 mb-6">
+                  <p className="text-[#535353] text-xs leading-relaxed">
+                    Ready to move Commercial Sanctioned, Fire NoC and OC are available
+                  </p>
+                </div>
 
-                      <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
-                        View project
-                      </Button>
-                    </div>
+                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
+                  View project
+                </Button>
                   </div>
                 </div>
                 <div className="order-3" />
@@ -474,19 +468,17 @@ const Industrial = () => {
                       </p>
                     </div>
 
-                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 0"}}>
-    
+                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 0"}} />
 
-                      <div className="border-t border-[#F1F1F1] pt-3 mb-6">
-                        <p className="text-[#535353] text-xs leading-relaxed">
-                          Ready to move Commercial Sanctioned, Fire NoC and OC are available
-                        </p>
-                      </div>
+                <div className="border-t border-[#F1F1F1] pt-3 mb-6">
+                  <p className="text-[#535353] text-xs leading-relaxed">
+                    Ready to move Commercial Sanctioned, Fire NoC and OC are available
+                  </p>
+                </div>
 
-                      <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
-                        View project
-                      </Button>
-                    </div>
+                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
+                  View project
+                </Button>
                   </div>
                 </div>
                 <div className="order-3" />
@@ -519,19 +511,17 @@ const Industrial = () => {
                       </p>
                     </div>
 
-                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 0"}}>
-    
+                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 0"}} />
 
-                      <div className="border-t border-[#F1F1F1] pt-3 mb-6">
-                        <p className="text-[#535353] text-xs leading-relaxed">
-                          Ready to move Commercial Sanctioned, Fire NoC and OC are available
-                        </p>
-                      </div>
+                <div className="border-t border-[#F1F1F1] pt-3 mb-6">
+                  <p className="text-[#535353] text-xs leading-relaxed">
+                    Ready to move Commercial Sanctioned, Fire NoC and OC are available
+                  </p>
+                </div>
 
-                      <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
-                        View project
-                      </Button>
-                    </div>
+                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
+                  View project
+                </Button>
                   </div>
                 </div>
                 <div className="order-3" />
@@ -568,19 +558,17 @@ const Industrial = () => {
                       </p>
                     </div>
 
-                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 0"}}>
-    
+                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 0"}} />
 
-                      <div className="border-t border-[#F1F1F1] pt-3 mb-6">
-                        <p className="text-[#535353] text-xs leading-relaxed">
-                          Ready to move Commercial Sanctioned, Fire NoC and OC are available
-                        </p>
-                      </div>
+                <div className="border-t border-[#F1F1F1] pt-3 mb-6">
+                  <p className="text-[#535353] text-xs leading-relaxed">
+                    Ready to move Commercial Sanctioned, Fire NoC and OC are available
+                  </p>
+                </div>
 
-                      <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
-                        View project
-                      </Button>
-                    </div>
+                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
+                  View project
+                </Button>
                   </div>
                 </div>
                 <div className="order-3" />
@@ -613,19 +601,17 @@ const Industrial = () => {
                       </p>
                     </div>
 
-                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 0"}}>
-    
+                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 0"}} />
 
-                      <div className="border-t border-[#F1F1F1] pt-3 mb-6">
-                        <p className="text-[#535353] text-xs leading-relaxed">
-                          Ready to move Commercial Sanctioned, Fire NoC and OC are available
-                        </p>
-                      </div>
+                <div className="border-t border-[#F1F1F1] pt-3 mb-6">
+                  <p className="text-[#535353] text-xs leading-relaxed">
+                    Ready to move Commercial Sanctioned, Fire NoC and OC are available
+                  </p>
+                </div>
 
-                      <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
-                        View project
-                      </Button>
-                    </div>
+                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
+                  View project
+                </Button>
                   </div>
                 </div>
                 <div className="order-3" />
@@ -658,19 +644,17 @@ const Industrial = () => {
                       </p>
                     </div>
 
-                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 0"}}>
-    
+                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 0"}} />
 
-                      <div className="border-t border-[#F1F1F1] pt-3 mb-6">
-                        <p className="text-[#535353] text-xs leading-relaxed">
-                          Ready to move Commercial Sanctioned, Fire NoC and OC are available
-                        </p>
-                      </div>
+                <div className="border-t border-[#F1F1F1] pt-3 mb-6">
+                  <p className="text-[#535353] text-xs leading-relaxed">
+                    Ready to move Commercial Sanctioned, Fire NoC and OC are available
+                  </p>
+                </div>
 
-                      <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
-                        View project
-                      </Button>
-                    </div>
+                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
+                  View project
+                </Button>
                   </div>
                 </div>
                 <div className="order-3" />
@@ -703,19 +687,17 @@ const Industrial = () => {
                       </p>
                     </div>
 
-                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 0"}}>
-    
+                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 0"}} />
 
-                      <div className="border-t border-[#F1F1F1] pt-3 mb-6">
-                        <p className="text-[#535353] text-xs leading-relaxed">
-                          Ready to move Commercial Sanctioned, Fire NoC and OC are available
-                        </p>
-                      </div>
+                <div className="border-t border-[#F1F1F1] pt-3 mb-6">
+                  <p className="text-[#535353] text-xs leading-relaxed">
+                    Ready to move Commercial Sanctioned, Fire NoC and OC are available
+                  </p>
+                </div>
 
-                      <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
-                        View project
-                      </Button>
-                    </div>
+                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
+                  View project
+                </Button>
                   </div>
                 </div>
                 <div className="order-3" />
@@ -748,19 +730,17 @@ const Industrial = () => {
                       </p>
                     </div>
 
-                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 0"}}>
-    
+                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 0"}} />
 
-                      <div className="border-t border-[#F1F1F1] pt-3 mb-6">
-                        <p className="text-[#535353] text-xs leading-relaxed">
-                          Ready to move Commercial Sanctioned, Fire NoC and OC are available
-                        </p>
-                      </div>
+                <div className="border-t border-[#F1F1F1] pt-3 mb-6">
+                  <p className="text-[#535353] text-xs leading-relaxed">
+                    Ready to move Commercial Sanctioned, Fire NoC and OC are available
+                  </p>
+                </div>
 
-                      <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
-                        View project
-                      </Button>
-                    </div>
+                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
+                  View project
+                </Button>
                   </div>
                 </div>
                 <div className="order-3" />
@@ -793,19 +773,17 @@ const Industrial = () => {
                       </p>
                     </div>
 
-                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 0"}}>
-    
+                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 0"}} />
 
-                      <div className="border-t border-[#F1F1F1] pt-3 mb-6">
-                        <p className="text-[#535353] text-xs leading-relaxed">
-                          Ready to move Commercial Sanctioned, Fire NoC and OC are available
-                        </p>
-                      </div>
+                <div className="border-t border-[#F1F1F1] pt-3 mb-6">
+                  <p className="text-[#535353] text-xs leading-relaxed">
+                    Ready to move Commercial Sanctioned, Fire NoC and OC are available
+                  </p>
+                </div>
 
-                      <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
-                        View project
-                      </Button>
-                    </div>
+                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
+                  View project
+                </Button>
                   </div>
                 </div>
                 <div className="order-3" />
@@ -838,19 +816,17 @@ const Industrial = () => {
                       </p>
                     </div>
 
-                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 0"}}>
-    
+                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 0"}} />
 
-                      <div className="border-t border-[#F1F1F1] pt-3 mb-6">
-                        <p className="text-[#535353] text-xs leading-relaxed">
-                          Ready to move Commercial Sanctioned, Fire NoC and OC are available
-                        </p>
-                      </div>
+                <div className="border-t border-[#F1F1F1] pt-3 mb-6">
+                  <p className="text-[#535353] text-xs leading-relaxed">
+                    Ready to move Commercial Sanctioned, Fire NoC and OC are available
+                  </p>
+                </div>
 
-                      <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
-                        View project
-                      </Button>
-                    </div>
+                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
+                  View project
+                </Button>
                   </div>
                 </div>
                 <div className="order-3" />
@@ -883,19 +859,17 @@ const Industrial = () => {
                       </p>
                     </div>
 
-                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 0"}}>
-    
+                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 0"}} />
 
-                      <div className="border-t border-[#F1F1F1] pt-3 mb-6">
-                        <p className="text-[#535353] text-xs leading-relaxed">
-                          Ready to move Commercial Sanctioned, Fire NoC and OC are available
-                        </p>
-                      </div>
+                <div className="border-t border-[#F1F1F1] pt-3 mb-6">
+                  <p className="text-[#535353] text-xs leading-relaxed">
+                    Ready to move Commercial Sanctioned, Fire NoC and OC are available
+                  </p>
+                </div>
 
-                      <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
-                        View project
-                      </Button>
-                    </div>
+                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
+                  View project
+                </Button>
                   </div>
                 </div>
                 <div className="order-3" />
