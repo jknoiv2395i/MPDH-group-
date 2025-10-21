@@ -215,14 +215,16 @@ const Industrial = () => {
             className="mb-12"
             variants={itemVariants}
           >
-            <h2 className="text-black font-instrument text-2xl sm:text-3xl md:text-4xl lg:text-[41px] font-normal leading-tight tracking-tight mb-4">
+            <h2 className="text-black font-instrument font-normal leading-tight tracking-tight mb-4" style={{letterSpacing: "-1.025px", marginBottom: "16px", font: '400 41px/40px "Instrument Sans", sans-serif'}}>
               INDUSTRIAL
               <br />
-              PROPERTIES
+              SERVICES&nbsp;
             </h2>
-            <p className="text-[#5D5D5D] font-inter text-base sm:text-lg leading-relaxed max-w-2xl">
-              We help all kinds of businesses—startups, MSMEs, MNCs, or hospitality groups Establish their business at project sites including buy and lease the perfect properties for business.
-            </p>
+            <div className="text-[#5D5D5D] font-inter text-base sm:text-lg leading-relaxed" style={{maxWidth: "672px", font: '400 18px/28px Inter, sans-serif'}}>
+              We help all kinds of businesses—startups, MSMEs, MNCs, or
+              hospitality groups Establish their business at project sites
+              including buy and lease the perfect properties for business.
+            </div>
           </div>
 
           {/* Filter Section */}
