@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import { FigmaNavBar } from "@/components/ui/figma-navbar";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -173,13 +172,13 @@ const Industrial = () => {
       <FigmaNavBar />
       
       {/* Hero Section */}
-      <motion.div
+      <div
         className="relative h-[320px] sm:h-[420px] md:h-[560px] lg:h-[689px] w-full overflow-hidden"
         initial="hidden"
         animate="visible"
         variants={containerVariants}
       >
-        <motion.img
+        <img
           src="https://api.builder.io/api/v1/image/assets/TEMP/c0f3f140e47c44b88f3bdfb5f6af0d49843e7c5d?width=3810"
           alt="Commercial Properties Hero"
           className="absolute inset-0 w-full h-full object-cover"
@@ -193,17 +192,17 @@ const Industrial = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-transparent" />
         <div className="absolute inset-0 flex items-center justify-start pl-4 md:pl-10 top-0">
-          <motion.h1
+          <h1
             className="text-left text-white font-instrument text-3xl sm:text-4xl md:text-6xl lg:text-8xl xl:text-[180px] font-normal leading-tight tracking-tight max-w-full md:pl-[7px]"
             variants={headlineVariants}
           >
             <p>Industrial Services</p>
-          </motion.h1>
+          </h1>
         </div>
-      </motion.div>
+      </div>
 
       {/* Main Content */}
-      <motion.div
+      <div
         className="container mx-auto px-4 pt-16"
         initial="hidden"
         whileInView="visible"
@@ -212,7 +211,7 @@ const Industrial = () => {
       >
         <div className="max-w-7xl mx-auto">
           {/* Header Section */}
-          <motion.div
+          <div
             className="mb-12"
             variants={itemVariants}
           >
@@ -224,10 +223,10 @@ const Industrial = () => {
             <p className="text-[#5D5D5D] font-inter text-base sm:text-lg leading-relaxed max-w-2xl">
               We help all kinds of businesses—startups, MSMEs, MNCs, or hospitality groups Establish their business at project sites including buy and lease the perfect properties for business.
             </p>
-          </motion.div>
+          </div>
 
           {/* Filter Section */}
-          <motion.div
+          <div
             className="bg-white rounded-sm border border-gray-200 mb-8 p-4"
             variants={itemVariants}
           >
@@ -262,13 +261,13 @@ const Industrial = () => {
                 </Button>
               </div>
             </div>
-          </motion.div>
+          </div>
 
         </div>
-      </motion.div>
+      </div>
 
       {/* Industrial Properties Section */}
-      <motion.section
+      <section
         className="bg-white -mt-1"
         initial="hidden"
         whileInView="visible"
@@ -277,16 +276,16 @@ const Industrial = () => {
       >
         <div className="max-w-7xl mx-auto px-4">
           {/* Section Header */}
-          <motion.div className="mb-12" variants={itemVariants}>
-          </motion.div>
+          <div className="mb-12" variants={itemVariants}>
+          </div>
 
           {/* Properties Grid */}
-          <motion.div
+          <div
             className="grid grid-cols-1 lg:grid-cols-2 gap-8"
             variants={gridVariants}
           >
             {/* Casting Yard Setup Card */}
-            <motion.div className="order-2 lg:order-1" variants={cardVariants}>
+            <div className="order-2 lg:order-1" variants={cardVariants}>
               <div className="w-full h-[220px] sm:h-[280px] md:h-[400px] lg:h-[638px] mb-6 rounded-[30px] overflow-hidden">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2F1fd1d1f8412a4dce8463b6c049b2e13b"
@@ -294,9 +293,9 @@ const Industrial = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div className="order-1 lg:order-2" variants={cardVariants}>
+            <div className="order-1 lg:order-2" variants={cardVariants}>
               <div className="h-full flex flex-col">
                 <div>
                   <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
@@ -330,19 +329,19 @@ const Industrial = () => {
                   </Button>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div className="order-3 lg:order-3" variants={cardVariants} />
+            <div className="order-3 lg:order-3" variants={cardVariants} />
 
-            <motion.div className="order-4 lg:order-4" variants={cardVariants} />
-          </motion.div>
+            <div className="order-4 lg:order-4" variants={cardVariants} />
+          </div>
 
           {/* Additional 1300+ Vendor Network Grid */}
-          <motion.div
+          <div
             className="grid grid-cols-1 lg:grid-cols-2 gap-8"
             variants={gridVariants}
           >
-            <motion.div className="order-1" variants={cardVariants}>
+            <div className="order-1" variants={cardVariants}>
               <div className="w-full h-[220px] sm:h-[280px] md:h-[400px] lg:h-[638px] mb-6 rounded-[30px] overflow-hidden">
                 <img
                   src="https://api.builder.io/api/v1/image/assets/TEMP/01bd9f15b36dd98048084a7476883ad1d1fc4ae7?width=1485"
@@ -350,9 +349,9 @@ const Industrial = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div className="order-2" variants={cardVariants}>
+            <div className="order-2" variants={cardVariants}>
               <div className="h-full flex flex-col">
                 <div>
                   <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
@@ -382,18 +381,18 @@ const Industrial = () => {
                   </Button>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div className="order-3" variants={cardVariants} />
+            <div className="order-3" variants={cardVariants} />
 
-            <motion.div className="order-4" variants={cardVariants} />
-          </motion.div>
+            <div className="order-4" variants={cardVariants} />
+          </div>
         </div>
-      </motion.section>
+      </section>
 
 
       {/* Additional Industrial Services Section */}
-      <motion.section
+      <section
         className="pb-16 bg-white"
         initial="hidden"
         whileInView="visible"
@@ -402,12 +401,12 @@ const Industrial = () => {
       >
         <div className="max-w-7xl mx-auto px-4">
           {/* Services Grid */}
-          <motion.div
+          <div
             className="grid grid-cols-1 lg:grid-cols-2 gap-8"
             variants={gridVariants}
           >
             {/* Contract Compliance - Large Header with Grid */}
-            <motion.div className="lg:col-span-2 mb-8" variants={cardVariants}>
+            <div className="lg:col-span-2 mb-8" variants={cardVariants}>
               <div className="mb-6">
                 <h2 className="text-black font-instrument text-5xl md:text-[64px] font-normal leading-tight tracking-tight mb-8">
                   Contract Compliance
@@ -965,18 +964,18 @@ const Industrial = () => {
                 <div className="order-3" />
                 <div className="order-4" />
               </div>
-            </motion.div>
+            </div>
 
             {/* Other services as empty cards */}
-            <motion.div className="flex flex-col" variants={cardVariants} />
-            <motion.div className="flex flex-col" variants={cardVariants} />
-            <motion.div className="flex flex-col" variants={cardVariants} />
-            <motion.div className="flex flex-col" variants={cardVariants} />
-          </motion.div>
+            <div className="flex flex-col" variants={cardVariants} />
+            <div className="flex flex-col" variants={cardVariants} />
+            <div className="flex flex-col" variants={cardVariants} />
+            <div className="flex flex-col" variants={cardVariants} />
+          </div>
         </div>
-      </motion.section>
+      </section>
 
-      <motion.div
+      <div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-50px" }}
@@ -986,7 +985,7 @@ const Industrial = () => {
         }}
       >
         <Footer />
-      </motion.div>
+      </div>
     </div>
   );
 };
