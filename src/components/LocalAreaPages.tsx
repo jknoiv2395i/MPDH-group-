@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { SEO_CONFIG, NAGPUR_AREAS, BUSINESS_COVERAGE_AREAS } from '@/lib/seo-constants';
 
 interface LocalAreaPageProps {
