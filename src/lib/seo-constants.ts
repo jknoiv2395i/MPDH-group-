@@ -286,6 +286,69 @@ export const SEO_PAGES = {
       SCHEMAS.website,
       SCHEMAS.localBusiness
     ]
+  },
+
+  // Additional service pages for targeted keyword strategy
+  buyResidential: {
+    title: 'Buy Residential Property in Nagpur - MPHD Group',
+    description: 'Looking to buy residential property in Nagpur? MPHD Group lists the best flats, apartments, and independent houses across Nagpur including KT Nagar, Dharampeth, Wardha Road and more. Expert guidance and verified listings.',
+    keywords: 'buy home in nagpur, buy property in nagpur, property for sale in nagpur, flats for sale in nagpur, apartments for sale in nagpur',
+    canonicalUrl: `${SEO_CONFIG.siteUrl}/buy-residential-property-nagpur`,
+    ogImage: SEO_CONFIG.defaultImage,
+    structuredData: [
+      SCHEMAS.website,
+      SCHEMAS.localBusiness,
+      SCHEMAS.realEstateAgent
+    ]
+  },
+
+  '2bhkFlats': {
+    title: '2BHK Flats in Nagpur - Affordable & Premium | MPHD Group',
+    description: 'Explore 2BHK flats in Nagpur across popular localities. MPHD Group helps you find affordable and premium 2BHK apartments, near schools, transport and shopping.',
+    keywords: '2 bhk flat in nagpur, 2 bhk apartment nagpur, 2 bhk for sale nagpur, 2 bhk under 50 lakhs nagpur',
+    canonicalUrl: `${SEO_CONFIG.siteUrl}/2bhk-flats-nagpur`,
+    ogImage: SEO_CONFIG.defaultImage,
+    structuredData: [
+      SCHEMAS.website,
+      SCHEMAS.localBusiness
+    ]
+  },
+
+  '3bhkApartments': {
+    title: '3BHK Apartments in Nagpur - Spacious Homes | MPHD Group',
+    description: 'Find spacious 3BHK apartments and family homes in Nagpur. MPHD Group curates verified 3BHK listings in prime neighborhoods with modern amenities.',
+    keywords: '3 bhk flat in nagpur, 3 bhk apartment nagpur, 3 bhk for sale nagpur, luxury 3 bhk flat nagpur',
+    canonicalUrl: `${SEO_CONFIG.siteUrl}/3bhk-apartments-nagpur`,
+    ogImage: SEO_CONFIG.defaultImage,
+    structuredData: [
+      SCHEMAS.website,
+      SCHEMAS.localBusiness
+    ]
+  },
+
+  luxuryProperties: {
+    title: 'Luxury Properties in Nagpur - Premium Flats & Villas | MPHD Group',
+    description: 'Discover luxury flats, penthouses and villas in Nagpur. MPHD Group features premium residential projects and high-end properties in areas like Dharampeth and Seminary Hills.',
+    keywords: 'luxury flats in nagpur, premium apartments nagpur, luxury villas nagpur, penthouse in nagpur',
+    canonicalUrl: `${SEO_CONFIG.siteUrl}/luxury-properties-nagpur`,
+    ogImage: SEO_CONFIG.defaultImage,
+    structuredData: [
+      SCHEMAS.website,
+      SCHEMAS.localBusiness,
+      SCHEMAS.realEstateAgent
+    ]
+  },
+
+  affordableFlats: {
+    title: 'Affordable Flats in Nagpur - Budget Homes | MPHD Group',
+    description: 'Search affordable flats and budget-friendly homes in Nagpur. MPHD Group lists low-cost 1BHK and 2BHK options in emerging localities such as Besa, Beltarodi and Wathoda.',
+    keywords: 'affordable flats in nagpur, flats under 30 lakhs in nagpur, cheap property in nagpur, budget homes nagpur',
+    canonicalUrl: `${SEO_CONFIG.siteUrl}/affordable-flats-nagpur`,
+    ogImage: SEO_CONFIG.defaultImage,
+    structuredData: [
+      SCHEMAS.website,
+      SCHEMAS.localBusiness
+    ]
   }
 };
 
