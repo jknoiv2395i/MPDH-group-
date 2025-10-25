@@ -49,6 +49,13 @@ const App = () => (
           <Route path="/service-areas" element={<ServiceAreasPage />} />
           <Route path="/ai-assistant" element={<AIAssistantPage />} />
 
+          {/* Targeted service pages */}
+          <Route path="/buy-residential-property-nagpur" element={<BuyResidential />} />
+          <Route path="/2bhk-flats-nagpur" element={<TwoBHK />} />
+          <Route path="/3bhk-apartments-nagpur" element={<ThreeBHK />} />
+          <Route path="/luxury-properties-nagpur" element={<Luxury />} />
+          <Route path="/affordable-flats-nagpur" element={<Affordable />} />
+
           {/* Location-specific pages for local SEO */}
           <Route path="/location/:area" element={<LocationSpecificPage />} />
           <Route path="/residential-nagpur-440008" element={<ResidentialNagpur440008 />} />
