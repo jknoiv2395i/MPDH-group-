@@ -64,6 +64,37 @@ const App = () => (
           <Route path="/residential-nagpur-440008" element={<ResidentialNagpur440008 />} />
           <Route path="/commercial-nagpur-440008" element={<CommercialNagpur440008 />} />
 
+          {/* Friendly location URLs - redirect to /location/:area */}
+          <Route path="/property-in-mihan-nagpur" element={<Navigate to="/location/mihan" replace />} />
+          <Route path="/property-in-dharampeth-nagpur" element={<Navigate to="/location/dharampeth" replace />} />
+          <Route path="/property-on-wardha-road-nagpur" element={<Navigate to="/location/wardha-road" replace />} />
+          <Route path="/property-in-besa-nagpur" element={<Navigate to="/location/besa" replace />} />
+          <Route path="/property-in-pratap-nagar-nagpur" element={<Navigate to="/location/pratap-nagar" replace />} />
+          <Route path="/flats-in-beltarodi-nagpur" element={<Navigate to="/location/beltarodi" replace />} />
+          <Route path="/property-on-koradi-road-nagpur" element={<Navigate to="/location/koradi-road" replace />} />
+          <Route path="/flats-in-manish-nagar-nagpur" element={<Navigate to="/location/manish-nagar" replace />} />
+          <Route path="/property-in-sadar-nagpur" element={<Navigate to="/location/sadar" replace />} />
+          <Route path="/flats-in-ramdaspeth-nagpur" element={<Navigate to="/location/ramdaspeth" replace />} />
+          <Route path="/property-on-katol-road-nagpur" element={<Navigate to="/location/katol-road" replace />} />
+          <Route path="/flats-on-hingna-road-nagpur" element={<Navigate to="/location/hingna-road" replace />} />
+          <Route path="/property-on-amravati-road-nagpur" element={<Navigate to="/location/amravati-road" replace />} />
+          <Route path="/flats-in-laxmi-nagar-nagpur" element={<Navigate to="/location/laxmi-nagar" replace />} />
+          <Route path="/property-in-sonegaon-nagpur" element={<Navigate to="/location/sonegaon" replace />} />
+          <Route path="/property-in-byramji-town-nagpur" element={<Navigate to="/location/byramji-town" replace />} />
+          <Route path="/flats-in-wathoda-nagpur" element={<Navigate to="/location/wathoda" replace />} />
+          <Route path="/property-friends-colony-nagpur" element={<Navigate to="/location/friends-colony" replace />} />
+          <Route path="/flats-in-jaitala-nagpur" element={<Navigate to="/location/jaitala" replace />} />
+          <Route path="/property-in-ajni-nagpur" element={<Navigate to="/location/ajni" replace />} />
+          <Route path="/flats-in-gokulpeth-nagpur" element={<Navigate to="/location/gokulpeth" replace />} />
+          <Route path="/property-trimurti-nagar-nagpur" element={<Navigate to="/location/trimurti-nagar" replace />} />
+          <Route path="/flats-in-shankar-nagar-nagpur" element={<Navigate to="/location/shankar-nagar" replace />} />
+          <Route path="/property-in-gandhibagh-nagpur" element={<Navigate to="/location/gandhibagh" replace />} />
+          <Route path="/property-in-lakadganj-nagpur" element={<Navigate to="/location/lakadganj" replace />} />
+
+          {/* Blog routes */}
+          <Route path="/blog" element={<BlogIndex />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
+
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
