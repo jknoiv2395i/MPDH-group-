@@ -300,12 +300,12 @@ const Industrial = () => {
             <div className="order-1 lg:order-2" variants={cardVariants}>
               <div className="h-full flex flex-col">
                 <div>
-                  <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
+                  <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 8px"}}>
                     <span style={{ whiteSpaceCollapse: "preserve" }}>
                       Casting Yard Setup and Installation Support
                     </span>
                   </h3>
-                  <p className="text-[#5D5D5D] font-inter text-base sm:text-lg leading-relaxed" style={{marginBottom: "-4px", paddingBottom: "27px"}}>
+                  <p className="text-[#5D5D5D] font-inter text-base sm:text-lg leading-relaxed" style={{marginBottom: "0px", paddingBottom: "0px"}}>
                     <span style={{ whiteSpaceCollapse: "preserve" }}>
                       We are among the few companies offering end-to-end casting yard solutions for construction and infrastructure projects. We manage everything from land identification and NA conversion to securing government approvals, water use exemptions, and compliance clearances, ensuring your casting yard is established quickly, legally, and strategically located for metro, highway, and large-scale real estate projects.
                     </span>
@@ -314,7 +314,7 @@ const Industrial = () => {
 
                 <div className="flex-1 flex flex-col justify-end" style={{margin: "-5px 0 0"}} />
 
-                <div className="border-t border-[#F1F1F1] pt-2 mb-2">
+                <div className="border-t border-[#F1F1F1] pt-1 mb-0">
                   <p className="text-[#535353] text-xs leading-relaxed">
                     Ready to move Commercial Sanctioned, Fire NoC and OC are available
                   </p>
@@ -349,7 +349,7 @@ const Industrial = () => {
             <div className="order-2" variants={cardVariants}>
               <div className="h-full flex flex-col">
                 <div>
-                  <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
+                  <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 8px"}}>
                     1300+ Vendor Network
                   </h3>
                   <p className="text-[#5D5D5D] font-inter text-base sm:text-lg leading-relaxed" style={{margin: "34px 0 -4px"}}>
@@ -359,7 +359,7 @@ const Industrial = () => {
 
                 <div className="flex-1 flex flex-col justify-end" style={{margin: "-5px 0 0"}} />
 
-                <div className="border-t border-[#F1F1F1] pt-2 mb-2">
+                <div className="border-t border-[#F1F1F1] pt-1 mb-0">
                   <p className="text-[#535353] text-xs leading-relaxed">
                     Ready to move Commercial Sanctioned, Fire NoC and OC are available
                   </p>
@@ -413,7 +413,7 @@ const Industrial = () => {
                 <div className="order-2">
                   <div className="h-full flex flex-col">
                     <div>
-                      <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
+                      <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 8px"}}>
                         <span style={{ whiteSpaceCollapse: "preserve" }}>
                           Approvals
                         </span>
@@ -427,7 +427,7 @@ const Industrial = () => {
 
                     <div className="flex-1 flex flex-col justify-end" style={{margin: "-5px 0 0"}} />
 
-                <div className="border-t border-[#F1F1F1] pt-2 mb-2">
+                <div className="border-t border-[#F1F1F1] pt-1 mb-0">
                   <p className="text-[#535353] text-xs leading-relaxed">
                     Ready to move Commercial Sanctioned, Fire NoC and OC are available
                   </p>
@@ -456,7 +456,7 @@ const Industrial = () => {
                 <div className="order-2">
                   <div className="h-full flex flex-col">
                     <div>
-                      <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
+                      <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 8px"}}>
                         <span style={{ whiteSpaceCollapse: "preserve" }}>
                           BOW and Labour Licenses
                         </span>
@@ -470,7 +470,7 @@ const Industrial = () => {
 
                     <div className="flex-1 flex flex-col justify-end" style={{margin: "-5px 0 0"}} />
 
-                <div className="border-t border-[#F1F1F1] pt-2 mb-2">
+                <div className="border-t border-[#F1F1F1] pt-1 mb-0">
                   <p className="text-[#535353] text-xs leading-relaxed">
                     Ready to move Commercial Sanctioned, Fire NoC and OC are available
                   </p>
@@ -499,7 +499,7 @@ const Industrial = () => {
                 <div className="order-2">
                   <div className="h-full flex flex-col">
                     <div>
-                      <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
+                      <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 8px"}}>
                         <span style={{ whiteSpaceCollapse: "preserve" }}>
                           Electricity
                         </span>
@@ -513,7 +513,7 @@ const Industrial = () => {
 
                     <div className="flex-1 flex flex-col justify-end" style={{margin: "-5px 0 0"}} />
 
-                <div className="border-t border-[#F1F1F1] pt-2 mb-2">
+                <div className="border-t border-[#F1F1F1] pt-1 mb-0">
                   <p className="text-[#535353] text-xs leading-relaxed">
                     Ready to move Commercial Sanctioned, Fire NoC and OC are available
                   </p>
@@ -542,7 +542,7 @@ const Industrial = () => {
                 <div className="order-2">
                   <div className="h-full flex flex-col">
                     <div>
-                      <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
+                      <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 8px"}}>
                         <span style={{ whiteSpaceCollapse: "preserve" }}>
                           Land Conversion
                         </span>
@@ -560,7 +560,7 @@ const Industrial = () => {
 
                     <div className="flex-1 flex flex-col justify-end" style={{margin: "-5px 0 0"}} />
 
-                <div className="border-t border-[#F1F1F1] pt-2 mb-2">
+                <div className="border-t border-[#F1F1F1] pt-1 mb-0">
                   <p className="text-[#535353] text-xs leading-relaxed">
                     Ready to move Commercial Sanctioned, Fire NoC and OC are available
                   </p>
@@ -589,7 +589,7 @@ const Industrial = () => {
                 <div className="order-2">
                   <div className="h-full flex flex-col">
                     <div>
-                      <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
+                      <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 8px"}}>
                         <span style={{ whiteSpaceCollapse: "preserve" }}>
                           Pollution{" "}
                         </span>
@@ -603,7 +603,7 @@ const Industrial = () => {
 
                     <div className="flex-1 flex flex-col justify-end" style={{margin: "-5px 0 0"}} />
 
-                <div className="border-t border-[#F1F1F1] pt-2 mb-2">
+                <div className="border-t border-[#F1F1F1] pt-1 mb-0">
                   <p className="text-[#535353] text-xs leading-relaxed">
                     Ready to move Commercial Sanctioned, Fire NoC and OC are available
                   </p>
@@ -632,7 +632,7 @@ const Industrial = () => {
                 <div className="order-2">
                   <div className="h-full flex flex-col">
                     <div>
-                      <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
+                      <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 8px"}}>
                         <span style={{ whiteSpaceCollapse: "preserve" }}>
                           Water Use Exemption
                         </span>
@@ -646,7 +646,7 @@ const Industrial = () => {
 
                     <div className="flex-1 flex flex-col justify-end" style={{margin: "-5px 0 0"}} />
 
-                <div className="border-t border-[#F1F1F1] pt-2 mb-2">
+                <div className="border-t border-[#F1F1F1] pt-1 mb-0">
                   <p className="text-[#535353] text-xs leading-relaxed">
                     Ready to move Commercial Sanctioned, Fire NoC and OC are available
                   </p>
@@ -675,7 +675,7 @@ const Industrial = () => {
                 <div className="order-2">
                   <div className="h-full flex flex-col">
                     <div>
-                      <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
+                      <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 8px"}}>
                         <span style={{ whiteSpaceCollapse: "preserve" }}>
                           Guest Houses
                         </span>
@@ -689,7 +689,7 @@ const Industrial = () => {
 
                     <div className="flex-1 flex flex-col justify-end" style={{margin: "-5px 0 0"}} />
 
-                <div className="border-t border-[#F1F1F1] pt-2 mb-2">
+                <div className="border-t border-[#F1F1F1] pt-1 mb-0">
                   <p className="text-[#535353] text-xs leading-relaxed">
                     Ready to move Commercial Sanctioned, Fire NoC and OC are available
                   </p>
@@ -718,7 +718,7 @@ const Industrial = () => {
                 <div className="order-2">
                   <div className="h-full flex flex-col">
                     <div>
-                      <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
+                      <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 8px"}}>
                         <span style={{ whiteSpaceCollapse: "preserve" }}>
                           Hotel and Lodging Facilities
                         </span>
@@ -732,7 +732,7 @@ const Industrial = () => {
 
                     <div className="flex-1 flex flex-col justify-end" style={{margin: "-5px 0 0"}} />
 
-                <div className="border-t border-[#F1F1F1] pt-2 mb-2">
+                <div className="border-t border-[#F1F1F1] pt-1 mb-0">
                   <p className="text-[#535353] text-xs leading-relaxed">
                     Ready to move Commercial Sanctioned, Fire NoC and OC are available
                   </p>
@@ -761,7 +761,7 @@ const Industrial = () => {
                 <div className="order-2">
                   <div className="h-full flex flex-col">
                     <div>
-                      <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
+                      <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 8px"}}>
                         <span style={{ whiteSpaceCollapse: "preserve" }}>
                           Labour Accomodation
                         </span>
@@ -775,7 +775,7 @@ const Industrial = () => {
 
                     <div className="flex-1 flex flex-col justify-end" style={{margin: "-5px 0 0"}} />
 
-                <div className="border-t border-[#F1F1F1] pt-2 mb-2">
+                <div className="border-t border-[#F1F1F1] pt-1 mb-0">
                   <p className="text-[#535353] text-xs leading-relaxed">
                     Ready to move Commercial Sanctioned, Fire NoC and OC are available
                   </p>
@@ -804,7 +804,7 @@ const Industrial = () => {
                 <div className="order-2">
                   <div className="h-full flex flex-col">
                     <div>
-                      <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
+                      <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 8px"}}>
                         <span style={{ whiteSpaceCollapse: "preserve" }}>
                           Office Spaces
                         </span>
@@ -818,7 +818,7 @@ const Industrial = () => {
 
                     <div className="flex-1 flex flex-col justify-end" style={{margin: "-5px 0 0"}} />
 
-                <div className="border-t border-[#F1F1F1] pt-2 mb-2">
+                <div className="border-t border-[#F1F1F1] pt-1 mb-0">
                   <p className="text-[#535353] text-xs leading-relaxed">
                     Ready to move Commercial Sanctioned, Fire NoC and OC are available
                   </p>
@@ -847,7 +847,7 @@ const Industrial = () => {
                 <div className="order-2">
                   <div className="h-full flex flex-col">
                     <div>
-                      <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
+                      <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 8px"}}>
                         <span style={{ whiteSpaceCollapse: "preserve" }}>
                           Staff Quarters
                         </span>
@@ -861,7 +861,7 @@ const Industrial = () => {
 
                     <div className="flex-1 flex flex-col justify-end" style={{margin: "-5px 0 0"}} />
 
-                <div className="border-t border-[#F1F1F1] pt-2 mb-2">
+                <div className="border-t border-[#F1F1F1] pt-1 mb-0">
                   <p className="text-[#535353] text-xs leading-relaxed">
                     Ready to move Commercial Sanctioned, Fire NoC and OC are available
                   </p>
