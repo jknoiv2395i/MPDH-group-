@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { SEO_CONFIG, NAGPUR_AREAS, BUSINESS_COVERAGE_AREAS } from '@/lib/seo-constants';
 
 interface LocalAreaPageProps {
@@ -118,20 +119,24 @@ export const ServiceAreas = () => {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 mb-12">
-          {NAGPUR_AREAS.map((area, index) => (
-            <motion.div
-              key={area}
-              className="text-center p-4 border border-gray-200 rounded-lg hover:border-blue-500 hover:shadow-md transition-all cursor-pointer"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              whileHover={{ scale: 1.05 }}
-            >
-              <MapPin className="w-5 h-5 text-blue-600 mx-auto mb-2" />
-              <h3 className="font-medium text-sm">{area}</h3>
-              <p className="text-xs text-gray-500 mt-1">Real Estate Services</p>
-            </motion.div>
-          ))}
+          {NAGPUR_AREAS.map((area, index) => {
+            const slug = area.toLowerCase().replace(/\s+/g, '-');
+            return (
+              <Link key={area} to={`/location/${slug}`} className="no-underline">
+                <motion.div
+                  className="text-center p-4 border border-gray-200 rounded-lg hover:border-blue-500 hover:shadow-md transition-all cursor-pointer"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  whileHover={{ scale: 1.05 }}
+                >
+                  <MapPin className="w-5 h-5 text-blue-600 mx-auto mb-2" />
+                  <h3 className="font-medium text-sm">{area}</h3>
+                  <p className="text-xs text-gray-500 mt-1">Real Estate Services</p>
+                </motion.div>
+              </Link>
+            );
+          })}
         </div>
 
         <div className="text-center">

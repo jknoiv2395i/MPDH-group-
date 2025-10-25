@@ -207,7 +207,7 @@ const CommercialRental = () => {
                   </div>
 
                   {/* View Project Button */}
-                  <div className="pt-6">
+                  <div className="pt-0">
                     <button className="w-full max-w-[402px] mx-auto flex items-center justify-center bg-[#131313] text-white rounded-full py-4 px-8 hover:bg-gray-800 transition-colors">
                       <span className="text-lg font-medium">View project</span>
                     </button>

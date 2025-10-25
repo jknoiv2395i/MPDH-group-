@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import { FigmaNavBar } from "@/components/ui/figma-navbar";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -173,16 +172,16 @@ const Industrial = () => {
       <FigmaNavBar />
       
       {/* Hero Section */}
-      <motion.div
+      <div
         className="relative h-[320px] sm:h-[420px] md:h-[560px] lg:h-[689px] w-full overflow-hidden"
         initial="hidden"
         animate="visible"
         variants={containerVariants}
       >
-        <motion.img
+        <img
           src="https://api.builder.io/api/v1/image/assets/TEMP/c0f3f140e47c44b88f3bdfb5f6af0d49843e7c5d?width=3810"
           alt="Commercial Properties Hero"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover pointer-events-none"
           initial={{ opacity: 0, scale: 1.05 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{
@@ -191,19 +190,19 @@ const Industrial = () => {
             delay: 0.5
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-transparent" />
-        <div className="absolute inset-0 flex items-center justify-start pl-4 md:pl-10 top-0">
-          <motion.h1
-            className="text-left text-white font-instrument text-3xl sm:text-4xl md:text-6xl lg:text-8xl xl:text-[180px] font-normal leading-tight tracking-tight max-w-full md:pl-[7px]"
+        <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-transparent pointer-events-none" />
+        <div className="absolute inset-0 flex items-center justify-start pl-4 md:pl-10 top-0 pointer-events-auto">
+          <h1
+            className="text-left text-white font-instrument text-3xl sm:text-4xl md:text-6xl lg:text-8xl xl:text-[96px] font-normal leading-tight tracking-tight max-w-full md:pl-[7px] max-w-[1200px]"
             variants={headlineVariants}
           >
             <p>Industrial Services</p>
-          </motion.h1>
+          </h1>
         </div>
-      </motion.div>
+      </div>
 
       {/* Main Content */}
-      <motion.div
+      <div
         className="container mx-auto px-4 pt-16"
         initial="hidden"
         whileInView="visible"
@@ -212,22 +211,24 @@ const Industrial = () => {
       >
         <div className="max-w-7xl mx-auto">
           {/* Header Section */}
-          <motion.div
+          <div
             className="mb-12"
             variants={itemVariants}
           >
-            <h2 className="text-black font-instrument text-2xl sm:text-3xl md:text-4xl lg:text-[41px] font-normal leading-tight tracking-tight mb-4">
+            <h2 className="text-black font-instrument font-normal leading-tight tracking-tight mb-4" style={{letterSpacing: "-1.025px", marginBottom: "16px", font: '400 41px/40px "Instrument Sans", sans-serif'}}>
               INDUSTRIAL
               <br />
-              PROPERTIES
+              SERVICES&nbsp;
             </h2>
-            <p className="text-[#5D5D5D] font-inter text-base sm:text-lg leading-relaxed max-w-2xl">
-              We help all kinds of businesses—startups, MSMEs, MNCs, or hospitality groups Establish their business at project sites including buy and lease the perfect properties for business.
-            </p>
-          </motion.div>
+            <div className="text-[#5D5D5D] font-inter text-base sm:text-lg leading-relaxed" style={{maxWidth: "672px", font: '400 18px/28px Inter, sans-serif'}}>
+              We help all kinds of businesses—startups, MSMEs, MNCs, or
+              hospitality groups Establish their business at project sites
+              including buy and lease the perfect properties for business.
+            </div>
+          </div>
 
           {/* Filter Section */}
-          <motion.div
+          <div
             className="bg-white rounded-sm border border-gray-200 mb-8 p-4"
             variants={itemVariants}
           >
@@ -262,13 +263,13 @@ const Industrial = () => {
                 </Button>
               </div>
             </div>
-          </motion.div>
+          </div>
 
         </div>
-      </motion.div>
+      </div>
 
       {/* Industrial Properties Section */}
-      <motion.section
+      <section
         className="bg-white -mt-1"
         initial="hidden"
         whileInView="visible"
@@ -277,16 +278,16 @@ const Industrial = () => {
       >
         <div className="max-w-7xl mx-auto px-4">
           {/* Section Header */}
-          <motion.div className="mb-12" variants={itemVariants}>
-          </motion.div>
+          <div className="mb-12" variants={itemVariants}>
+          </div>
 
           {/* Properties Grid */}
-          <motion.div
+          <div
             className="grid grid-cols-1 lg:grid-cols-2 gap-8"
             variants={gridVariants}
           >
             {/* Casting Yard Setup Card */}
-            <motion.div className="order-2 lg:order-1" variants={cardVariants}>
+            <div className="order-2 lg:order-1" variants={cardVariants}>
               <div className="w-full h-[220px] sm:h-[280px] md:h-[400px] lg:h-[638px] mb-6 rounded-[30px] overflow-hidden">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2F1fd1d1f8412a4dce8463b6c049b2e13b"
@@ -294,75 +295,48 @@ const Industrial = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div className="order-1 lg:order-2" variants={cardVariants}>
+            <div className="order-1 lg:order-2" variants={cardVariants}>
               <div className="h-full flex flex-col">
                 <div>
-                  <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
+                  <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 8px"}}>
                     <span style={{ whiteSpaceCollapse: "preserve" }}>
                       Casting Yard Setup and Installation Support
                     </span>
                   </h3>
-                  <p className="text-[#5D5D5D] font-inter text-base sm:text-lg leading-relaxed" style={{marginBottom: "-4px", paddingBottom: "27px"}}>
+                  <p className="text-[#5D5D5D] font-inter text-base sm:text-lg leading-relaxed" style={{marginBottom: "0px", paddingBottom: "0px"}}>
                     <span style={{ whiteSpaceCollapse: "preserve" }}>
                       We are among the few companies offering end-to-end casting yard solutions for construction and infrastructure projects. We manage everything from land identification and NA conversion to securing government approvals, water use exemptions, and compliance clearances, ensuring your casting yard is established quickly, legally, and strategically located for metro, highway, and large-scale real estate projects.
                     </span>
                   </p>
                 </div>
 
-                <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 128px"}}>
-                  <div className="flex items-center gap-2 mb-4">
-                    <MapPin className="w-3 h-3 text-[#4A4747]" />
-                    <span className="text-[#4A4747] font-inter text-sm">
-                      KT Nagar, Friends Colony, Nagpur
-                    </span>
-                  </div>
+                <div className="flex-1 flex flex-col justify-end" style={{margin: "-5px 0 0"}} />
 
-                  <div className="bg-[#F5F5F5] p-4 mb-4 rounded relative">
-                    <div className="grid grid-cols-3 gap-4 text-xs">
-                      <div>
-                        <div className="text-[#7B7A7A] font-bold mb-1">SUPER AREA</div>
-                        <div className="text-[#535353] font-bold">3 BHK 1550 Sqft 4 BHK 3000 Sqft</div>
-                      </div>
-                      <div>
-                        <div className="text-[#7B7A7A] font-bold mb-1">STATUS</div>
-                        <div className="text-[#535353] font-bold">New</div>
-                      </div>
-                      <div>
-                        <div className="text-[#7B7A7A] font-bold mb-1">TRANSACTION</div>
-                        <div className="text-[#535353] font-bold">New</div>
-                      </div>
-                    </div>
-                    <div className="absolute top-4 right-4">
-                      <ChevronDown className="w-3 h-3 text-black" />
-                    </div>
-                  </div>
-
-                  <div className="border-t border-[#F1F1F1] pt-3 mb-6">
-                    <p className="text-[#535353] text-xs leading-relaxed">
-                      Ready to move Commercial Sanctioned, Fire NoC and OC are available
-                    </p>
-                  </div>
-
-                  <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
-                    View project
-                  </Button>
+                <div className="border-t border-[#F1F1F1] pt-1 mb-0">
+                  <p className="text-[#535353] text-xs leading-relaxed">
+                    Ready to move Commercial Sanctioned, Fire NoC and OC are available
+                  </p>
                 </div>
+
+                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
+                  View project
+                </Button>
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div className="order-3 lg:order-3" variants={cardVariants} />
+            <div className="order-3 lg:order-3" variants={cardVariants} />
 
-            <motion.div className="order-4 lg:order-4" variants={cardVariants} />
-          </motion.div>
+            <div className="order-4 lg:order-4" variants={cardVariants} />
+          </div>
 
           {/* Additional 1300+ Vendor Network Grid */}
-          <motion.div
+          <div
             className="grid grid-cols-1 lg:grid-cols-2 gap-8"
             variants={gridVariants}
           >
-            <motion.div className="order-1" variants={cardVariants}>
+            <div className="order-1" variants={cardVariants}>
               <div className="w-full h-[220px] sm:h-[280px] md:h-[400px] lg:h-[638px] mb-6 rounded-[30px] overflow-hidden">
                 <img
                   src="https://api.builder.io/api/v1/image/assets/TEMP/01bd9f15b36dd98048084a7476883ad1d1fc4ae7?width=1485"
@@ -370,12 +344,12 @@ const Industrial = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div className="order-2" variants={cardVariants}>
+            <div className="order-2" variants={cardVariants}>
               <div className="h-full flex flex-col">
                 <div>
-                  <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
+                  <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 8px"}}>
                     1300+ Vendor Network
                   </h3>
                   <p className="text-[#5D5D5D] font-inter text-base sm:text-lg leading-relaxed" style={{margin: "34px 0 -4px"}}>
@@ -383,57 +357,30 @@ const Industrial = () => {
                   </p>
                 </div>
 
-                <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 128px"}}>
-                  <div className="flex items-center gap-2 mb-4">
-                    <MapPin className="w-3 h-3 text-[#4A4747]" />
-                    <span className="text-[#4A4747] font-inter text-sm">
-                      KT Nagar, Friends Colony, Nagpur
-                    </span>
-                  </div>
+                <div className="flex-1 flex flex-col justify-end" style={{margin: "-5px 0 0"}} />
 
-                  <div className="bg-[#F5F5F5] p-4 mb-4 rounded relative">
-                    <div className="grid grid-cols-3 gap-4 text-xs">
-                      <div>
-                        <div className="text-[#7B7A7A] font-bold mb-1">SUPER AREA</div>
-                        <div className="text-[#535353] font-bold">3 BHK 1550 Sqft 4 BHK 3000 Sqft</div>
-                      </div>
-                      <div>
-                        <div className="text-[#7B7A7A] font-bold mb-1">STATUS</div>
-                        <div className="text-[#535353] font-bold">New</div>
-                      </div>
-                      <div>
-                        <div className="text-[#7B7A7A] font-bold mb-1">TRANSACTION</div>
-                        <div className="text-[#535353] font-bold">New</div>
-                      </div>
-                    </div>
-                    <div className="absolute top-4 right-4">
-                      <ChevronDown className="w-3 h-3 text-black" />
-                    </div>
-                  </div>
-
-                  <div className="border-t border-[#F1F1F1] pt-3 mb-6">
-                    <p className="text-[#535353] text-xs leading-relaxed">
-                      Ready to move Commercial Sanctioned, Fire NoC and OC are available
-                    </p>
-                  </div>
-
-                  <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
-                    View project
-                  </Button>
+                <div className="border-t border-[#F1F1F1] pt-1 mb-0">
+                  <p className="text-[#535353] text-xs leading-relaxed">
+                    Ready to move Commercial Sanctioned, Fire NoC and OC are available
+                  </p>
                 </div>
+
+                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
+                  View project
+                </Button>
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div className="order-3" variants={cardVariants} />
+            <div className="order-3" variants={cardVariants} />
 
-            <motion.div className="order-4" variants={cardVariants} />
-          </motion.div>
+            <div className="order-4" variants={cardVariants} />
+          </div>
         </div>
-      </motion.section>
+      </section>
 
 
       {/* Additional Industrial Services Section */}
-      <motion.section
+      <section
         className="pb-16 bg-white"
         initial="hidden"
         whileInView="visible"
@@ -442,12 +389,12 @@ const Industrial = () => {
       >
         <div className="max-w-7xl mx-auto px-4">
           {/* Services Grid */}
-          <motion.div
+          <div
             className="grid grid-cols-1 lg:grid-cols-2 gap-8"
             variants={gridVariants}
           >
             {/* Contract Compliance - Large Header with Grid */}
-            <motion.div className="lg:col-span-2 mb-8" variants={cardVariants}>
+            <div className="lg:col-span-2 mb-8" variants={cardVariants}>
               <div className="mb-6">
                 <h2 className="text-black font-instrument text-5xl md:text-[64px] font-normal leading-tight tracking-tight mb-8">
                   Contract Compliance
@@ -466,7 +413,7 @@ const Industrial = () => {
                 <div className="order-2">
                   <div className="h-full flex flex-col">
                     <div>
-                      <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
+                      <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 8px"}}>
                         <span style={{ whiteSpaceCollapse: "preserve" }}>
                           Approvals
                         </span>
@@ -478,44 +425,17 @@ const Industrial = () => {
                       </p>
                     </div>
 
-                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 128px"}}>
-                      <div className="flex items-center gap-2 mb-4">
-                        <MapPin className="w-3 h-3 text-[#4A4747]" />
-                        <span className="text-[#4A4747] font-inter text-sm">
-                          KT Nagar, Friends Colony, Nagpur
-                        </span>
-                      </div>
+                    <div className="flex-1 flex flex-col justify-end" style={{margin: "-5px 0 0"}} />
 
-                      <div className="bg-[#F5F5F5] p-4 mb-4 rounded relative">
-                        <div className="grid grid-cols-3 gap-4 text-xs">
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">SUPER AREA</div>
-                            <div className="text-[#535353] font-bold">3 BHK 1550 Sqft 4 BHK 3000 Sqft</div>
-                          </div>
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">STATUS</div>
-                            <div className="text-[#535353] font-bold">New</div>
-                          </div>
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">TRANSACTION</div>
-                            <div className="text-[#535353] font-bold">New</div>
-                          </div>
-                        </div>
-                        <div className="absolute top-4 right-4">
-                          <ChevronDown className="w-3 h-3 text-black" />
-                        </div>
-                      </div>
+                <div className="border-t border-[#F1F1F1] pt-1 mb-0">
+                  <p className="text-[#535353] text-xs leading-relaxed">
+                    Ready to move Commercial Sanctioned, Fire NoC and OC are available
+                  </p>
+                </div>
 
-                      <div className="border-t border-[#F1F1F1] pt-3 mb-6">
-                        <p className="text-[#535353] text-xs leading-relaxed">
-                          Ready to move Commercial Sanctioned, Fire NoC and OC are available
-                        </p>
-                      </div>
-
-                      <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
-                        View project
-                      </Button>
-                    </div>
+                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
+                  View project
+                </Button>
                   </div>
                 </div>
                 <div className="order-3" />
@@ -536,7 +456,7 @@ const Industrial = () => {
                 <div className="order-2">
                   <div className="h-full flex flex-col">
                     <div>
-                      <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
+                      <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 8px"}}>
                         <span style={{ whiteSpaceCollapse: "preserve" }}>
                           BOW and Labour Licenses
                         </span>
@@ -548,44 +468,17 @@ const Industrial = () => {
                       </p>
                     </div>
 
-                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 128px"}}>
-                      <div className="flex items-center gap-2 mb-4">
-                        <MapPin className="w-3 h-3 text-[#4A4747]" />
-                        <span className="text-[#4A4747] font-inter text-sm">
-                          KT Nagar, Friends Colony, Nagpur
-                        </span>
-                      </div>
+                    <div className="flex-1 flex flex-col justify-end" style={{margin: "-5px 0 0"}} />
 
-                      <div className="bg-[#F5F5F5] p-4 mb-4 rounded relative">
-                        <div className="grid grid-cols-3 gap-4 text-xs">
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">SUPER AREA</div>
-                            <div className="text-[#535353] font-bold">3 BHK 1550 Sqft 4 BHK 3000 Sqft</div>
-                          </div>
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">STATUS</div>
-                            <div className="text-[#535353] font-bold">New</div>
-                          </div>
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">TRANSACTION</div>
-                            <div className="text-[#535353] font-bold">New</div>
-                          </div>
-                        </div>
-                        <div className="absolute top-4 right-4">
-                          <ChevronDown className="w-3 h-3 text-black" />
-                        </div>
-                      </div>
+                <div className="border-t border-[#F1F1F1] pt-1 mb-0">
+                  <p className="text-[#535353] text-xs leading-relaxed">
+                    Ready to move Commercial Sanctioned, Fire NoC and OC are available
+                  </p>
+                </div>
 
-                      <div className="border-t border-[#F1F1F1] pt-3 mb-6">
-                        <p className="text-[#535353] text-xs leading-relaxed">
-                          Ready to move Commercial Sanctioned, Fire NoC and OC are available
-                        </p>
-                      </div>
-
-                      <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
-                        View project
-                      </Button>
-                    </div>
+                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
+                  View project
+                </Button>
                   </div>
                 </div>
                 <div className="order-3" />
@@ -606,7 +499,7 @@ const Industrial = () => {
                 <div className="order-2">
                   <div className="h-full flex flex-col">
                     <div>
-                      <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
+                      <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 8px"}}>
                         <span style={{ whiteSpaceCollapse: "preserve" }}>
                           Electricity
                         </span>
@@ -618,44 +511,17 @@ const Industrial = () => {
                       </p>
                     </div>
 
-                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 128px"}}>
-                      <div className="flex items-center gap-2 mb-4">
-                        <MapPin className="w-3 h-3 text-[#4A4747]" />
-                        <span className="text-[#4A4747] font-inter text-sm">
-                          KT Nagar, Friends Colony, Nagpur
-                        </span>
-                      </div>
+                    <div className="flex-1 flex flex-col justify-end" style={{margin: "-5px 0 0"}} />
 
-                      <div className="bg-[#F5F5F5] p-4 mb-4 rounded relative">
-                        <div className="grid grid-cols-3 gap-4 text-xs">
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">SUPER AREA</div>
-                            <div className="text-[#535353] font-bold">3 BHK 1550 Sqft 4 BHK 3000 Sqft</div>
-                          </div>
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">STATUS</div>
-                            <div className="text-[#535353] font-bold">New</div>
-                          </div>
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">TRANSACTION</div>
-                            <div className="text-[#535353] font-bold">New</div>
-                          </div>
-                        </div>
-                        <div className="absolute top-4 right-4">
-                          <ChevronDown className="w-3 h-3 text-black" />
-                        </div>
-                      </div>
+                <div className="border-t border-[#F1F1F1] pt-1 mb-0">
+                  <p className="text-[#535353] text-xs leading-relaxed">
+                    Ready to move Commercial Sanctioned, Fire NoC and OC are available
+                  </p>
+                </div>
 
-                      <div className="border-t border-[#F1F1F1] pt-3 mb-6">
-                        <p className="text-[#535353] text-xs leading-relaxed">
-                          Ready to move Commercial Sanctioned, Fire NoC and OC are available
-                        </p>
-                      </div>
-
-                      <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
-                        View project
-                      </Button>
-                    </div>
+                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
+                  View project
+                </Button>
                   </div>
                 </div>
                 <div className="order-3" />
@@ -676,7 +542,7 @@ const Industrial = () => {
                 <div className="order-2">
                   <div className="h-full flex flex-col">
                     <div>
-                      <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
+                      <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 8px"}}>
                         <span style={{ whiteSpaceCollapse: "preserve" }}>
                           Land Conversion
                         </span>
@@ -692,44 +558,17 @@ const Industrial = () => {
                       </p>
                     </div>
 
-                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 128px"}}>
-                      <div className="flex items-center gap-2 mb-4">
-                        <MapPin className="w-3 h-3 text-[#4A4747]" />
-                        <span className="text-[#4A4747] font-inter text-sm">
-                          KT Nagar, Friends Colony, Nagpur
-                        </span>
-                      </div>
+                    <div className="flex-1 flex flex-col justify-end" style={{margin: "-5px 0 0"}} />
 
-                      <div className="bg-[#F5F5F5] p-4 mb-4 rounded relative">
-                        <div className="grid grid-cols-3 gap-4 text-xs">
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">SUPER AREA</div>
-                            <div className="text-[#535353] font-bold">3 BHK 1550 Sqft 4 BHK 3000 Sqft</div>
-                          </div>
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">STATUS</div>
-                            <div className="text-[#535353] font-bold">New</div>
-                          </div>
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">TRANSACTION</div>
-                            <div className="text-[#535353] font-bold">New</div>
-                          </div>
-                        </div>
-                        <div className="absolute top-4 right-4">
-                          <ChevronDown className="w-3 h-3 text-black" />
-                        </div>
-                      </div>
+                <div className="border-t border-[#F1F1F1] pt-1 mb-0">
+                  <p className="text-[#535353] text-xs leading-relaxed">
+                    Ready to move Commercial Sanctioned, Fire NoC and OC are available
+                  </p>
+                </div>
 
-                      <div className="border-t border-[#F1F1F1] pt-3 mb-6">
-                        <p className="text-[#535353] text-xs leading-relaxed">
-                          Ready to move Commercial Sanctioned, Fire NoC and OC are available
-                        </p>
-                      </div>
-
-                      <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
-                        View project
-                      </Button>
-                    </div>
+                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
+                  View project
+                </Button>
                   </div>
                 </div>
                 <div className="order-3" />
@@ -750,7 +589,7 @@ const Industrial = () => {
                 <div className="order-2">
                   <div className="h-full flex flex-col">
                     <div>
-                      <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
+                      <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 8px"}}>
                         <span style={{ whiteSpaceCollapse: "preserve" }}>
                           Pollution{" "}
                         </span>
@@ -762,44 +601,17 @@ const Industrial = () => {
                       </p>
                     </div>
 
-                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 128px"}}>
-                      <div className="flex items-center gap-2 mb-4">
-                        <MapPin className="w-3 h-3 text-[#4A4747]" />
-                        <span className="text-[#4A4747] font-inter text-sm">
-                          KT Nagar, Friends Colony, Nagpur
-                        </span>
-                      </div>
+                    <div className="flex-1 flex flex-col justify-end" style={{margin: "-5px 0 0"}} />
 
-                      <div className="bg-[#F5F5F5] p-4 mb-4 rounded relative">
-                        <div className="grid grid-cols-3 gap-4 text-xs">
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">SUPER AREA</div>
-                            <div className="text-[#535353] font-bold">3 BHK 1550 Sqft 4 BHK 3000 Sqft</div>
-                          </div>
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">STATUS</div>
-                            <div className="text-[#535353] font-bold">New</div>
-                          </div>
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">TRANSACTION</div>
-                            <div className="text-[#535353] font-bold">New</div>
-                          </div>
-                        </div>
-                        <div className="absolute top-4 right-4">
-                          <ChevronDown className="w-3 h-3 text-black" />
-                        </div>
-                      </div>
+                <div className="border-t border-[#F1F1F1] pt-1 mb-0">
+                  <p className="text-[#535353] text-xs leading-relaxed">
+                    Ready to move Commercial Sanctioned, Fire NoC and OC are available
+                  </p>
+                </div>
 
-                      <div className="border-t border-[#F1F1F1] pt-3 mb-6">
-                        <p className="text-[#535353] text-xs leading-relaxed">
-                          Ready to move Commercial Sanctioned, Fire NoC and OC are available
-                        </p>
-                      </div>
-
-                      <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
-                        View project
-                      </Button>
-                    </div>
+                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
+                  View project
+                </Button>
                   </div>
                 </div>
                 <div className="order-3" />
@@ -820,7 +632,7 @@ const Industrial = () => {
                 <div className="order-2">
                   <div className="h-full flex flex-col">
                     <div>
-                      <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
+                      <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 8px"}}>
                         <span style={{ whiteSpaceCollapse: "preserve" }}>
                           Water Use Exemption
                         </span>
@@ -832,44 +644,17 @@ const Industrial = () => {
                       </p>
                     </div>
 
-                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 128px"}}>
-                      <div className="flex items-center gap-2 mb-4">
-                        <MapPin className="w-3 h-3 text-[#4A4747]" />
-                        <span className="text-[#4A4747] font-inter text-sm">
-                          KT Nagar, Friends Colony, Nagpur
-                        </span>
-                      </div>
+                    <div className="flex-1 flex flex-col justify-end" style={{margin: "-5px 0 0"}} />
 
-                      <div className="bg-[#F5F5F5] p-4 mb-4 rounded relative">
-                        <div className="grid grid-cols-3 gap-4 text-xs">
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">SUPER AREA</div>
-                            <div className="text-[#535353] font-bold">3 BHK 1550 Sqft 4 BHK 3000 Sqft</div>
-                          </div>
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">STATUS</div>
-                            <div className="text-[#535353] font-bold">New</div>
-                          </div>
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">TRANSACTION</div>
-                            <div className="text-[#535353] font-bold">New</div>
-                          </div>
-                        </div>
-                        <div className="absolute top-4 right-4">
-                          <ChevronDown className="w-3 h-3 text-black" />
-                        </div>
-                      </div>
+                <div className="border-t border-[#F1F1F1] pt-1 mb-0">
+                  <p className="text-[#535353] text-xs leading-relaxed">
+                    Ready to move Commercial Sanctioned, Fire NoC and OC are available
+                  </p>
+                </div>
 
-                      <div className="border-t border-[#F1F1F1] pt-3 mb-6">
-                        <p className="text-[#535353] text-xs leading-relaxed">
-                          Ready to move Commercial Sanctioned, Fire NoC and OC are available
-                        </p>
-                      </div>
-
-                      <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
-                        View project
-                      </Button>
-                    </div>
+                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
+                  View project
+                </Button>
                   </div>
                 </div>
                 <div className="order-3" />
@@ -890,7 +675,7 @@ const Industrial = () => {
                 <div className="order-2">
                   <div className="h-full flex flex-col">
                     <div>
-                      <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
+                      <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 8px"}}>
                         <span style={{ whiteSpaceCollapse: "preserve" }}>
                           Guest Houses
                         </span>
@@ -902,44 +687,17 @@ const Industrial = () => {
                       </p>
                     </div>
 
-                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 128px"}}>
-                      <div className="flex items-center gap-2 mb-4">
-                        <MapPin className="w-3 h-3 text-[#4A4747]" />
-                        <span className="text-[#4A4747] font-inter text-sm">
-                          KT Nagar, Friends Colony, Nagpur
-                        </span>
-                      </div>
+                    <div className="flex-1 flex flex-col justify-end" style={{margin: "-5px 0 0"}} />
 
-                      <div className="bg-[#F5F5F5] p-4 mb-4 rounded relative">
-                        <div className="grid grid-cols-3 gap-4 text-xs">
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">SUPER AREA</div>
-                            <div className="text-[#535353] font-bold">3 BHK 1550 Sqft 4 BHK 3000 Sqft</div>
-                          </div>
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">STATUS</div>
-                            <div className="text-[#535353] font-bold">New</div>
-                          </div>
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">TRANSACTION</div>
-                            <div className="text-[#535353] font-bold">New</div>
-                          </div>
-                        </div>
-                        <div className="absolute top-4 right-4">
-                          <ChevronDown className="w-3 h-3 text-black" />
-                        </div>
-                      </div>
+                <div className="border-t border-[#F1F1F1] pt-1 mb-0">
+                  <p className="text-[#535353] text-xs leading-relaxed">
+                    Ready to move Commercial Sanctioned, Fire NoC and OC are available
+                  </p>
+                </div>
 
-                      <div className="border-t border-[#F1F1F1] pt-3 mb-6">
-                        <p className="text-[#535353] text-xs leading-relaxed">
-                          Ready to move Commercial Sanctioned, Fire NoC and OC are available
-                        </p>
-                      </div>
-
-                      <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
-                        View project
-                      </Button>
-                    </div>
+                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
+                  View project
+                </Button>
                   </div>
                 </div>
                 <div className="order-3" />
@@ -960,7 +718,7 @@ const Industrial = () => {
                 <div className="order-2">
                   <div className="h-full flex flex-col">
                     <div>
-                      <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
+                      <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 8px"}}>
                         <span style={{ whiteSpaceCollapse: "preserve" }}>
                           Hotel and Lodging Facilities
                         </span>
@@ -972,44 +730,17 @@ const Industrial = () => {
                       </p>
                     </div>
 
-                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 128px"}}>
-                      <div className="flex items-center gap-2 mb-4">
-                        <MapPin className="w-3 h-3 text-[#4A4747]" />
-                        <span className="text-[#4A4747] font-inter text-sm">
-                          KT Nagar, Friends Colony, Nagpur
-                        </span>
-                      </div>
+                    <div className="flex-1 flex flex-col justify-end" style={{margin: "-5px 0 0"}} />
 
-                      <div className="bg-[#F5F5F5] p-4 mb-4 rounded relative">
-                        <div className="grid grid-cols-3 gap-4 text-xs">
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">SUPER AREA</div>
-                            <div className="text-[#535353] font-bold">3 BHK 1550 Sqft 4 BHK 3000 Sqft</div>
-                          </div>
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">STATUS</div>
-                            <div className="text-[#535353] font-bold">New</div>
-                          </div>
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">TRANSACTION</div>
-                            <div className="text-[#535353] font-bold">New</div>
-                          </div>
-                        </div>
-                        <div className="absolute top-4 right-4">
-                          <ChevronDown className="w-3 h-3 text-black" />
-                        </div>
-                      </div>
+                <div className="border-t border-[#F1F1F1] pt-1 mb-0">
+                  <p className="text-[#535353] text-xs leading-relaxed">
+                    Ready to move Commercial Sanctioned, Fire NoC and OC are available
+                  </p>
+                </div>
 
-                      <div className="border-t border-[#F1F1F1] pt-3 mb-6">
-                        <p className="text-[#535353] text-xs leading-relaxed">
-                          Ready to move Commercial Sanctioned, Fire NoC and OC are available
-                        </p>
-                      </div>
-
-                      <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
-                        View project
-                      </Button>
-                    </div>
+                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
+                  View project
+                </Button>
                   </div>
                 </div>
                 <div className="order-3" />
@@ -1030,7 +761,7 @@ const Industrial = () => {
                 <div className="order-2">
                   <div className="h-full flex flex-col">
                     <div>
-                      <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
+                      <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 8px"}}>
                         <span style={{ whiteSpaceCollapse: "preserve" }}>
                           Labour Accomodation
                         </span>
@@ -1042,44 +773,17 @@ const Industrial = () => {
                       </p>
                     </div>
 
-                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 128px"}}>
-                      <div className="flex items-center gap-2 mb-4">
-                        <MapPin className="w-3 h-3 text-[#4A4747]" />
-                        <span className="text-[#4A4747] font-inter text-sm">
-                          KT Nagar, Friends Colony, Nagpur
-                        </span>
-                      </div>
+                    <div className="flex-1 flex flex-col justify-end" style={{margin: "-5px 0 0"}} />
 
-                      <div className="bg-[#F5F5F5] p-4 mb-4 rounded relative">
-                        <div className="grid grid-cols-3 gap-4 text-xs">
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">SUPER AREA</div>
-                            <div className="text-[#535353] font-bold">3 BHK 1550 Sqft 4 BHK 3000 Sqft</div>
-                          </div>
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">STATUS</div>
-                            <div className="text-[#535353] font-bold">New</div>
-                          </div>
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">TRANSACTION</div>
-                            <div className="text-[#535353] font-bold">New</div>
-                          </div>
-                        </div>
-                        <div className="absolute top-4 right-4">
-                          <ChevronDown className="w-3 h-3 text-black" />
-                        </div>
-                      </div>
+                <div className="border-t border-[#F1F1F1] pt-1 mb-0">
+                  <p className="text-[#535353] text-xs leading-relaxed">
+                    Ready to move Commercial Sanctioned, Fire NoC and OC are available
+                  </p>
+                </div>
 
-                      <div className="border-t border-[#F1F1F1] pt-3 mb-6">
-                        <p className="text-[#535353] text-xs leading-relaxed">
-                          Ready to move Commercial Sanctioned, Fire NoC and OC are available
-                        </p>
-                      </div>
-
-                      <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
-                        View project
-                      </Button>
-                    </div>
+                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
+                  View project
+                </Button>
                   </div>
                 </div>
                 <div className="order-3" />
@@ -1100,7 +804,7 @@ const Industrial = () => {
                 <div className="order-2">
                   <div className="h-full flex flex-col">
                     <div>
-                      <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
+                      <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 8px"}}>
                         <span style={{ whiteSpaceCollapse: "preserve" }}>
                           Office Spaces
                         </span>
@@ -1112,44 +816,17 @@ const Industrial = () => {
                       </p>
                     </div>
 
-                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 128px"}}>
-                      <div className="flex items-center gap-2 mb-4">
-                        <MapPin className="w-3 h-3 text-[#4A4747]" />
-                        <span className="text-[#4A4747] font-inter text-sm">
-                          KT Nagar, Friends Colony, Nagpur
-                        </span>
-                      </div>
+                    <div className="flex-1 flex flex-col justify-end" style={{margin: "-5px 0 0"}} />
 
-                      <div className="bg-[#F5F5F5] p-4 mb-4 rounded relative">
-                        <div className="grid grid-cols-3 gap-4 text-xs">
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">SUPER AREA</div>
-                            <div className="text-[#535353] font-bold">3 BHK 1550 Sqft 4 BHK 3000 Sqft</div>
-                          </div>
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">STATUS</div>
-                            <div className="text-[#535353] font-bold">New</div>
-                          </div>
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">TRANSACTION</div>
-                            <div className="text-[#535353] font-bold">New</div>
-                          </div>
-                        </div>
-                        <div className="absolute top-4 right-4">
-                          <ChevronDown className="w-3 h-3 text-black" />
-                        </div>
-                      </div>
+                <div className="border-t border-[#F1F1F1] pt-1 mb-0">
+                  <p className="text-[#535353] text-xs leading-relaxed">
+                    Ready to move Commercial Sanctioned, Fire NoC and OC are available
+                  </p>
+                </div>
 
-                      <div className="border-t border-[#F1F1F1] pt-3 mb-6">
-                        <p className="text-[#535353] text-xs leading-relaxed">
-                          Ready to move Commercial Sanctioned, Fire NoC and OC are available
-                        </p>
-                      </div>
-
-                      <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
-                        View project
-                      </Button>
-                    </div>
+                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
+                  View project
+                </Button>
                   </div>
                 </div>
                 <div className="order-3" />
@@ -1170,7 +847,7 @@ const Industrial = () => {
                 <div className="order-2">
                   <div className="h-full flex flex-col">
                     <div>
-                      <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 16px"}}>
+                      <h3 className="text-black font-instrument text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-[41px] font-normal leading-tight tracking-tight" style={{margin: "-3px 0 8px"}}>
                         <span style={{ whiteSpaceCollapse: "preserve" }}>
                           Staff Quarters
                         </span>
@@ -1182,61 +859,34 @@ const Industrial = () => {
                       </p>
                     </div>
 
-                    <div className="flex-1 flex flex-col justify-end mb-8 md:mb-32" style={{margin: "-5px 0 128px"}}>
-                      <div className="flex items-center gap-2 mb-4">
-                        <MapPin className="w-3 h-3 text-[#4A4747]" />
-                        <span className="text-[#4A4747] font-inter text-sm">
-                          KT Nagar, Friends Colony, Nagpur
-                        </span>
-                      </div>
+                    <div className="flex-1 flex flex-col justify-end" style={{margin: "-5px 0 0"}} />
 
-                      <div className="bg-[#F5F5F5] p-4 mb-4 rounded relative">
-                        <div className="grid grid-cols-3 gap-4 text-xs">
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">SUPER AREA</div>
-                            <div className="text-[#535353] font-bold">3 BHK 1550 Sqft 4 BHK 3000 Sqft</div>
-                          </div>
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">STATUS</div>
-                            <div className="text-[#535353] font-bold">New</div>
-                          </div>
-                          <div>
-                            <div className="text-[#7B7A7A] font-bold mb-1">TRANSACTION</div>
-                            <div className="text-[#535353] font-bold">New</div>
-                          </div>
-                        </div>
-                        <div className="absolute top-4 right-4">
-                          <ChevronDown className="w-3 h-3 text-black" />
-                        </div>
-                      </div>
+                <div className="border-t border-[#F1F1F1] pt-1 mb-0">
+                  <p className="text-[#535353] text-xs leading-relaxed">
+                    Ready to move Commercial Sanctioned, Fire NoC and OC are available
+                  </p>
+                </div>
 
-                      <div className="border-t border-[#F1F1F1] pt-3 mb-6">
-                        <p className="text-[#535353] text-xs leading-relaxed">
-                          Ready to move Commercial Sanctioned, Fire NoC and OC are available
-                        </p>
-                      </div>
-
-                      <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
-                        View project
-                      </Button>
-                    </div>
+                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
+                  View project
+                </Button>
                   </div>
                 </div>
                 <div className="order-3" />
                 <div className="order-4" />
               </div>
-            </motion.div>
+            </div>
 
             {/* Other services as empty cards */}
-            <motion.div className="flex flex-col" variants={cardVariants} />
-            <motion.div className="flex flex-col" variants={cardVariants} />
-            <motion.div className="flex flex-col" variants={cardVariants} />
-            <motion.div className="flex flex-col" variants={cardVariants} />
-          </motion.div>
+            <div className="flex flex-col" variants={cardVariants} />
+            <div className="flex flex-col" variants={cardVariants} />
+            <div className="flex flex-col" variants={cardVariants} />
+            <div className="flex flex-col" variants={cardVariants} />
+          </div>
         </div>
-      </motion.section>
+      </section>
 
-      <motion.div
+      <div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-50px" }}
@@ -1246,7 +896,7 @@ const Industrial = () => {
         }}
       >
         <Footer />
-      </motion.div>
+      </div>
     </div>
   );
 };
