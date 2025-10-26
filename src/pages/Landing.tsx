@@ -10,7 +10,7 @@ import { SEO_PAGES } from '@/lib/seo-constants';
 import { toast } from "@/hooks/use-toast";
 
 const Landing = () => {
-  usePageTitle("Landing - MPHD Group");
+  useSEO(SEO_PAGES.landing);
   const [formData, setFormData] = useState({
     fullName: '',
     phone: '',
