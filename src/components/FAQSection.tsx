@@ -50,10 +50,31 @@ const FAQSection: React.FC = () => {
                         {item.q}
                       </span>
                     </AccordionTrigger>
-                    <AccordionContent className="pr-8" />
+                    <AccordionContent className="pr-8">
+                      <p className="text-gray-600 leading-relaxed">{item.a}</p>
+                    </AccordionContent>
                   </AccordionItem>
                 ))}
               </Accordion>
+
+              {/* FAQ structured data for Google */}
+              <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                  __html: JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "FAQPage",
+                    "mainEntity": faqs.map(f => ({
+                      "@type": "Question",
+                      "name": f.q,
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": f.a
+                      }
+                    }))
+                  })
+                }}
+              />
             </div>
           </div>
         </div>
