@@ -46,7 +46,9 @@ const HeroSection = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <div className="relative w-full h-full overflow-hidden">
-          <motion.div
+          <motion.img
+            src="/lovable-uploads/38a847a7-d213-4ac6-84f6-c04310d775ad.png"
+            alt="Hero background - Nagpur properties"
             initial={{ opacity: 0, scale: 1.05 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
@@ -54,10 +56,11 @@ const HeroSection = () => {
               ease: "easeOut",
               delay: 0.5
             }}
-            className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
-            style={{
-              backgroundImage: 'url(/lovable-uploads/38a847a7-d213-4ac6-84f6-c04310d775ad.png)',
-            }}
+            className="absolute inset-0 w-full h-full object-cover bg-center"
+            loading="eager"
+            decoding="async"
+            width={1905}
+            height={1138}
           />
         </div>
       </div>
@@ -65,8 +68,7 @@ const HeroSection = () => {
 
       {/* Hero Content */}
       <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-4 sm:px-8 mb-16 w-full" style={{
-      padding: '120px 16px 200px 16px',
-      height: '1026px'
+      padding: '120px 16px 200px 16px'
     }}>
         {/* Main Heading */}
         <motion.div

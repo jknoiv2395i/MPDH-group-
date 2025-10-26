@@ -84,6 +84,8 @@ const FeatureBlogsSection = () => {
                 src={blogs[0].image}
                 alt={blogs[0].title}
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <motion.h3
@@ -113,6 +115,8 @@ const FeatureBlogsSection = () => {
                 src={blogs[1].image}
                 alt={blogs[1].title}
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <motion.h3
@@ -142,6 +146,8 @@ const FeatureBlogsSection = () => {
                 src={blogs[2].image}
                 alt={blogs[2].title}
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <motion.h3

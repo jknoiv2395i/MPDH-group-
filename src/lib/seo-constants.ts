@@ -12,7 +12,7 @@ export const SEO_CONFIG = {
     city: 'Nagpur',
     state: 'Maharashtra',
     country: 'India',
-    phone: '+91-712-XXXXXXX', // To be updated with actual number
+    phone: '+91-8275046765', // Updated with provided number
     email: 'info@mphdgroup.com', // To be updated with actual email
     coordinates: {
       latitude: 21.1458,
@@ -348,6 +348,29 @@ export const SEO_PAGES = {
     structuredData: [
       SCHEMAS.website,
       SCHEMAS.localBusiness
+    ]
+  },
+
+  landing: {
+    title: 'Landing - MPHD Group - Find Properties & Consultations in Nagpur 440008',
+    description: 'Landing page for MPHD Group. Explore featured properties, get free consultation, and discover services across Nagpur 440008. Contact us at +91-8275046765 for immediate assistance.',
+    keywords: 'MPHD Group landing, property in nagpur, buy property nagpur, real estate nagpur landing',
+    canonicalUrl: `${SEO_CONFIG.siteUrl}/landing`,
+    ogImage: SEO_CONFIG.defaultImage,
+    structuredData: [
+      SCHEMAS.website,
+      SCHEMAS.localBusiness
+    ]
+  },
+
+  aiAssistant: {
+    title: 'AI Assistant - MPHD Group - Instant Property Help for Nagpur',
+    description: 'AI Assistant by MPHD Group helps answer property queries, suggest listings and provide local market insights for Nagpur 440008. Use our assistant for quick guidance on buying or renting property.',
+    keywords: 'AI assistant nagpur, property assistant nagpur, MPHD AI property help',
+    canonicalUrl: `${SEO_CONFIG.siteUrl}/ai-assistant`,
+    ogImage: SEO_CONFIG.defaultImage,
+    structuredData: [
+      SCHEMAS.website
     ]
   }
 };

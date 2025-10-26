@@ -4,18 +4,23 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 const faqs = [
   {
     q: "Who are the best property consultants in Nagpur?",
+    a: "MPHD Group is a leading local property consultancy with 14+ years of experience specializing in residential, commercial and industrial properties across Nagpur. We provide end-to-end services including valuations, listings, site visits and legal coordination to ensure transparent transactions."
   },
   {
     q: "What services does MPHD Group offer as a real estate agency in Nagpur?",
+    a: "We offer property buying and selling, rentals and leasing, property management, legal and documentation support, site valuations, land acquisition assistance, and advisory services for investments and development projects in Nagpur."
   },
   {
     q: "How can I rent a flat or commercial space through MPHD Group's rental services in Nagpur?",
+    a: "Contact our office or call +91-8275046765 with your requirements. We shortlist matched properties, arrange site visits, negotiate lease terms, and assist with drafting agreements and background checks to make the rental process fast and secure."
   },
   {
     q: "Does MPHD Group provide legal help for property in India?",
+    a: "Yes. We coordinate with experienced local legal partners to verify titles, prepare sale/lease agreements, manage due diligence, and advise on compliance and registration so transactions are legally sound."
   },
   {
     q: "Can MPHD Group help with land acquisition for infrastructure or industrial projects?",
+    a: "Yes. Our team assists with land search, feasibility studies, negotiations, documentation, and coordination with local authorities for approvals to support infrastructure and industrial acquisitions in and around Nagpur."
   },
 ];
 
@@ -45,10 +50,31 @@ const FAQSection: React.FC = () => {
                         {item.q}
                       </span>
                     </AccordionTrigger>
-                    <AccordionContent className="pr-8" />
+                    <AccordionContent className="pr-8">
+                      <p className="text-gray-600 leading-relaxed">{item.a}</p>
+                    </AccordionContent>
                   </AccordionItem>
                 ))}
               </Accordion>
+
+              {/* FAQ structured data for Google */}
+              <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                  __html: JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "FAQPage",
+                    "mainEntity": faqs.map(f => ({
+                      "@type": "Question",
+                      "name": f.q,
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": f.a
+                      }
+                    }))
+                  })
+                }}
+              />
             </div>
           </div>
         </div>

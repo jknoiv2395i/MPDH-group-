@@ -5,10 +5,11 @@ import { GradientBars } from "@/components/ui/bg-bars";
 import { ArrowLeft, MessageCircle, Mic } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { cn } from "@/lib/utils";
-import { usePageTitle } from "@/hooks/use-page-title";
+import { useSEO } from '@/hooks/use-seo';
+import { SEO_PAGES } from '@/lib/seo-constants';
 
 const AIAssistantPage = () => {
-  usePageTitle("AI Assistant - MPHD Group");
+  useSEO(SEO_PAGES.aiAssistant);
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState<"text" | "voice">("text");
 
