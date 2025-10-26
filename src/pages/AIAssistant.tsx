@@ -9,7 +9,7 @@ import { useSEO } from '@/hooks/use-seo';
 import { SEO_PAGES } from '@/lib/seo-constants';
 
 const AIAssistantPage = () => {
-  usePageTitle("AI Assistant - MPHD Group");
+  useSEO(SEO_PAGES.aiAssistant);
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState<"text" | "voice">("text");
 
