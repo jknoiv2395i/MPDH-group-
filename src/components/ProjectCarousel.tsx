@@ -92,6 +92,8 @@ const ProjectCarousel = () => {
                     src={projects[currentIndex].image}
                     alt={projects[currentIndex].title}
                     className="w-full h-full object-cover"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <div className="space-y-4">
@@ -135,6 +137,8 @@ const ProjectCarousel = () => {
                   src={projects[0].image}
                   alt={projects[0].title}
                   className="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div className="space-y-4">
@@ -154,6 +158,8 @@ const ProjectCarousel = () => {
                   src={projects[1].image}
                   alt={projects[1].title}
                   className="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div className="space-y-4">
@@ -173,6 +179,8 @@ const ProjectCarousel = () => {
                   src={projects[2].image}
                   alt={projects[2].title}
                   className="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div className="space-y-4">
