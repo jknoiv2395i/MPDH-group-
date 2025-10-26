@@ -68,8 +68,7 @@ const HeroSection = () => {
 
       {/* Hero Content */}
       <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-4 sm:px-8 mb-16 w-full" style={{
-      padding: '120px 16px 200px 16px',
-      height: '1026px'
+      padding: '120px 16px 200px 16px'
     }}>
         {/* Main Heading */}
         <motion.div
