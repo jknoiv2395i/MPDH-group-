@@ -5,7 +5,8 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { ChevronRight } from "lucide-react";
 import Footer from "@/components/Footer";
-import { usePageTitle } from "@/hooks/use-page-title";
+import { useSEO } from '@/hooks/use-seo';
+import { SEO_PAGES } from '@/lib/seo-constants';
 import { toast } from "@/hooks/use-toast";
 
 const Landing = () => {
