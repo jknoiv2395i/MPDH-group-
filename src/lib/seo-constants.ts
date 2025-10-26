@@ -12,7 +12,7 @@ export const SEO_CONFIG = {
     city: 'Nagpur',
     state: 'Maharashtra',
     country: 'India',
-    phone: '+91-712-XXXXXXX', // To be updated with actual number
+    phone: '+91-8275046765', // Updated with provided number
     email: 'info@mphdgroup.com', // To be updated with actual email
     coordinates: {
       latitude: 21.1458,
