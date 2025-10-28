@@ -499,11 +499,22 @@ const Services = () => {
         />
 
         {/* Cards Container */}
-        <div className="relative z-10 flex items-center justify-center min-h-screen px-12 py-20">
-          <div className="w-full max-w-[1531px] ml-12 flex flex-col lg:flex-row gap-6 lg:gap-8 items-stretch">
+        <motion.div
+          className="relative z-10 flex items-center justify-center min-h-screen px-12 py-20"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <motion.div className="w-full max-w-[1531px] ml-12 flex flex-col lg:flex-row gap-6 lg:gap-8 items-stretch">
 
             {/* Left Card - Contact Information */}
-            <div className="w-full lg:flex-1 lg:max-w-[672px] bg-[#131313] rounded-2xl p-8 md:p-12 shadow-lg flex flex-col">
+            <motion.div
+              className="w-full lg:flex-1 lg:max-w-[672px] bg-[#131313] rounded-2xl p-8 md:p-12 shadow-lg flex flex-col"
+              variants={itemVariants}
+              whileHover={{ y: -5 }}
+              transition={{ duration: 0.3 }}
+            >
               <h1 className="font-instrument text-4xl md:text-5xl font-normal text-white mb-4 tracking-tight" style={{letterSpacing: '-1.2px'}}>
                 Contact us
               </h1>
@@ -547,10 +558,15 @@ const Services = () => {
                   className="w-full rounded-[27px] aspect-[119/61] object-cover"
                 />
               </a>
-            </div>
+            </motion.div>
 
             {/* Right Card - Contact Form */}
-            <div className="w-full lg:flex-1 lg:max-w-[672px] bg-white rounded-2xl p-8 md:p-12 shadow-lg">
+            <motion.div
+              className="w-full lg:flex-1 lg:max-w-[672px] bg-white rounded-2xl p-8 md:p-12 shadow-lg"
+              variants={itemVariants}
+              whileHover={{ y: -5 }}
+              transition={{ duration: 0.3 }}
+            >
               {/* Header */}
               <div className="mb-8">
                 <h1 className="font-instrument text-4xl md:text-5xl font-normal text-black mb-4 tracking-tight" style={{letterSpacing: '-1.2px', lineHeight: '48px'}}>
@@ -704,9 +720,9 @@ const Services = () => {
                   </p>
                 </div>
               </form>
-            </div>
-          </div>
-        </div>
+            </motion.div>
+          </motion.div>
+        </motion.div>
       </motion.section>
 
 
