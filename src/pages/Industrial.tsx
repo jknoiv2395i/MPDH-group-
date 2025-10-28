@@ -5,6 +5,7 @@ import { ChevronDown, MapPin, LayoutGrid, List } from "lucide-react";
 import Footer from "@/components/Footer";
 import { useSEO } from "@/hooks/use-seo";
 import { SEO_PAGES } from "@/lib/seo-constants";
+import { Link } from "react-router-dom";
 
 const Industrial = () => {
   useSEO(SEO_PAGES.industrial);
