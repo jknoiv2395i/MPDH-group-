@@ -758,7 +758,7 @@ const Industrial = () => {
                   </p>
                 </div>
 
-                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
+                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full" style={{margin: "30px auto 0 70px"}}>
                   View project
                 </Button>
                   </div>
