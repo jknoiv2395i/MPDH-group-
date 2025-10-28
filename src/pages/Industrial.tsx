@@ -318,7 +318,7 @@ const Industrial = () => {
                   </p>
                 </div>
 
-                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
+                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full" style={{margin: "18px auto 0 70px"}}>
                   View project
                 </Button>
               </div>
@@ -361,7 +361,7 @@ const Industrial = () => {
                   </p>
                 </div>
 
-                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
+                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full" style={{margin: "27px auto 0 70px"}}>
                   View project
                 </Button>
               </div>
@@ -427,7 +427,7 @@ const Industrial = () => {
                   </p>
                 </div>
 
-                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
+                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full" style={{margin: "31px auto 0 70px"}}>
                   View project
                 </Button>
                   </div>
@@ -468,7 +468,7 @@ const Industrial = () => {
                   </p>
                 </div>
 
-                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
+                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full" style={{margin: "30px auto 0 70px"}}>
                   View project
                 </Button>
                   </div>
@@ -509,7 +509,7 @@ const Industrial = () => {
                   </p>
                 </div>
 
-                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
+                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full" style={{margin: "27px auto 0 70px"}}>
                   View project
                 </Button>
                   </div>
@@ -554,7 +554,7 @@ const Industrial = () => {
                   </p>
                 </div>
 
-                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
+                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full" style={{margin: "30px auto 0 70px"}}>
                   View project
                 </Button>
                   </div>
@@ -595,7 +595,7 @@ const Industrial = () => {
                   </p>
                 </div>
 
-                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
+                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full" style={{margin: "30px auto 0 70px"}}>
                   View project
                 </Button>
                   </div>
@@ -636,7 +636,7 @@ const Industrial = () => {
                   </p>
                 </div>
 
-                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
+                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full" style={{margin: "30px auto 0 70px"}}>
                   View project
                 </Button>
                   </div>
@@ -668,16 +668,15 @@ const Industrial = () => {
                         <span style={{ whiteSpaceCollapse: "preserve" }}>
                           We arrange exclusive guest houses tailored for directors, senior management, and visiting clients. Our team identifies premium properties near project sites or business hubs and ensures they are fully furnished, secure, and equipped with modern amenities. We handle property search, lease or purchase negotiations, legal agreements, and compliance, while also assisting with custom interior setup, utilities, and facility management. Whether short-term or long-term, we deliver comfortable, professional-grade guest house solutions that reflect your company's standards and provide a seamless stay experience for leadership and clients.
                         </span>
+                        <div className="text-[#535353] text-xs leading-relaxed">
+                          Ready to move Commercial Sanctioned, Fire NoC and OC are available
+                        </div>
                       </p>
                     </div>
 
-                <div className="border-t border-[#F1F1F1] pt-1 mb-0">
-                  <p className="text-[#535353] text-xs leading-relaxed">
-                    Ready to move Commercial Sanctioned, Fire NoC and OC are available
-                  </p>
-                </div>
+                <div className="border-t border-[#F1F1F1] pt-1 mb-0" />
 
-                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
+                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full" style={{margin: "0 auto 0 70px"}}>
                   View project
                 </Button>
                   </div>
@@ -718,7 +717,7 @@ const Industrial = () => {
                   </p>
                 </div>
 
-                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full">
+                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full" style={{margin: "29px auto 0 70px"}}>
                   View project
                 </Button>
                   </div>
