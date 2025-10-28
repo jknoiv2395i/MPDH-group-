@@ -575,19 +575,26 @@ const Services = () => {
               transition={{ duration: 0.3 }}
             >
               {/* Header */}
-              <div className="mb-8">
-                <h1 className="font-instrument text-4xl md:text-5xl font-normal text-black mb-4 tracking-tight" style={{letterSpacing: '-1.2px', lineHeight: '48px'}}>
+              <motion.div className="mb-8" variants={itemVariants}>
+                <motion.h1
+                  className="font-instrument text-4xl md:text-5xl font-normal text-black mb-4 tracking-tight"
+                  style={{letterSpacing: '-1.2px', lineHeight: '48px'}}
+                  variants={headlineVariants}
+                >
                   Contact us
-                </h1>
-                <p className="font-inter text-base md:text-lg text-[#4B5563] tracking-wide leading-7">
+                </motion.h1>
+                <motion.p
+                  className="font-inter text-base md:text-lg text-[#4B5563] tracking-wide leading-7"
+                  variants={itemVariants}
+                >
                   Share your vision with us.
-                </p>
-              </div>
+                </motion.p>
+              </motion.div>
 
               {/* Form */}
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <motion.form onSubmit={handleSubmit} className="space-y-6" variants={itemVariants}>
                 {/* Full Name */}
-                <div className="space-y-3">
+                <motion.div className="space-y-3" variants={itemVariants}>
                   <Label htmlFor="fullName" className="font-inter text-lg text-[#111827] tracking-wide">
                     Full name *
                   </Label>
@@ -608,10 +615,10 @@ const Services = () => {
                       <p className="text-red-500 text-sm mt-1 font-inter">{formErrors.fullName}</p>
                     )}
                   </div>
-                </div>
+                </motion.div>
 
                 {/* Phone Number */}
-                <div className="space-y-3">
+                <motion.div className="space-y-3" variants={itemVariants}>
                   <Label htmlFor="phone" className="font-inter text-lg text-[#111827] tracking-wide">
                     Phone number *
                   </Label>
@@ -645,10 +652,10 @@ const Services = () => {
                       Enter 10 digits for Indian numbers or include country code for international
                     </p>
                   </div>
-                </div>
+                </motion.div>
 
                 {/* Email Address */}
-                <div className="space-y-3">
+                <motion.div className="space-y-3" variants={itemVariants}>
                   <Label htmlFor="email" className="font-inter text-lg text-[#111827] tracking-wide">
                     Email address *
                   </Label>
@@ -670,10 +677,10 @@ const Services = () => {
                       <p className="text-red-500 text-sm mt-1 font-inter">{formErrors.email}</p>
                     )}
                   </div>
-                </div>
+                </motion.div>
 
                 {/* Project Information */}
-                <div className="space-y-3">
+                <motion.div className="space-y-3" variants={itemVariants}>
                   <Label htmlFor="projectInfo" className="font-inter text-lg text-[#111827] tracking-wide">
                     Project information
                   </Label>
@@ -702,11 +709,15 @@ const Services = () => {
                       Optional: Provide details about your requirements to help us serve you better
                     </p>
                   </div>
-                </div>
+                </motion.div>
 
                 {/* Submit Button */}
-                <div className="pt-6">
-                  <div>
+                <motion.div className="pt-6" variants={itemVariants}>
+                  <motion.div
+                    whileHover={{ scale: isSubmitting ? 1 : 1.05 }}
+                    whileTap={{ scale: isSubmitting ? 1 : 0.95 }}
+                    transition={{ duration: 0.2 }}
+                  >
                     <Button
                       type="submit"
                       disabled={isSubmitting}
@@ -721,12 +732,12 @@ const Services = () => {
                         "Submit Contact Form"
                       )}
                     </Button>
-                  </div>
+                  </motion.div>
                   <p className="text-xs text-[#6B7280] mt-3 text-center font-inter">
                     * Required fields. We'll respond within 24 hours during business days.
                   </p>
-                </div>
-              </form>
+                </motion.div>
+              </motion.form>
             </motion.div>
           </motion.div>
         </motion.div>
