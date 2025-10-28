@@ -388,8 +388,8 @@ const Services = () => {
         />
 
         {/* Cards Container */}
-        <div className="relative z-10 flex items-center justify-center min-h-screen px-4 py-20 md:px-8 lg:px-12">
-          <div className="w-full max-w-[1500px] flex flex-col lg:flex-row gap-6 lg:gap-8 items-stretch">
+        <div className="relative z-10 flex items-center justify-center min-h-screen px-12 py-20">
+          <div className="w-full max-w-[1531px] ml-12 flex flex-col lg:flex-row gap-6 lg:gap-8 items-stretch">
 
             {/* Left Card - Contact Information */}
             <div className="w-full lg:flex-1 lg:max-w-[672px] bg-[#131313] rounded-2xl p-8 md:p-12 shadow-lg flex flex-col">
