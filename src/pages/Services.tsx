@@ -515,12 +515,19 @@ const Services = () => {
               whileHover={{ y: -5 }}
               transition={{ duration: 0.3 }}
             >
-              <h1 className="font-instrument text-4xl md:text-5xl font-normal text-white mb-4 tracking-tight" style={{letterSpacing: '-1.2px'}}>
+              <motion.h1
+                className="font-instrument text-4xl md:text-5xl font-normal text-white mb-4 tracking-tight"
+                style={{letterSpacing: '-1.2px'}}
+                variants={headlineVariants}
+              >
                 Contact us
-              </h1>
-              <p className="font-inter text-base md:text-lg text-[#B7B7B7] leading-relaxed mb-12">
+              </motion.h1>
+              <motion.p
+                className="font-inter text-base md:text-lg text-[#B7B7B7] leading-relaxed mb-12"
+                variants={textVariants}
+              >
                 Bring your architectural projects to life with a template that puts your work front and center.
-              </p>
+              </motion.p>
 
               {/* Office Address */}
               <div className="mb-8">
