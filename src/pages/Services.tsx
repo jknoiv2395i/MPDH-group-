@@ -474,11 +474,22 @@ const Services = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white relative">
+    <motion.div
+      className="min-h-screen bg-white relative"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
       <FigmaNavBar />
 
       {/* Contact Section */}
-      <section className="relative min-h-screen overflow-hidden">
+      <motion.section
+        className="relative min-h-screen overflow-hidden"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -696,7 +707,7 @@ const Services = () => {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
 
 
@@ -704,7 +715,7 @@ const Services = () => {
       <FAQSection />
 
       <Footer />
-    </div>
+    </motion.div>
   );
 };
 
