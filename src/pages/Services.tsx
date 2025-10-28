@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -7,7 +8,6 @@ import { ChevronDown, ChevronRight } from "lucide-react";
 import { FigmaNavBar } from "@/components/ui/figma-navbar";
 import Footer from "@/components/Footer";
 import FAQSection from "@/components/FAQSection";
-import { motion } from "framer-motion";
 import { useSEO } from "@/hooks/use-seo";
 import { SEO_PAGES } from "@/lib/seo-constants";
 import { toast } from "@/hooks/use-toast";
@@ -474,7 +474,7 @@ const Services = () => {
   };
 
   return (
-    <motion.div 
+    <motion.div
       className="min-h-screen bg-white relative"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -482,214 +482,266 @@ const Services = () => {
     >
       <FigmaNavBar />
 
-      {/* Contact Form Section */}
-      <section className="relative min-h-screen overflow-hidden">
+      {/* Contact Section */}
+      <motion.section
+        className="relative min-h-screen overflow-hidden"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
         {/* Background Image */}
-        <motion.div
+        <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/e8013bbbc820f05a3f48efd4964535ee8fadc977?width=3810')",
-            width: '1905px',
-            height: '1137.88px'
-          }}
-          initial={{ opacity: 0, scale: 1.05 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{
-            duration: 2,
-            ease: "easeOut",
-            delay: 0.5
+            backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/03ee2e510ea6b6dd26c9b662f591ce1522aeee60?width=3810')"
           }}
         />
-        
-        {/* Form Container */}
-        <div className="relative z-10 flex items-center min-h-screen p-4 md:p-8">
-          <motion.div
-            className="w-full max-w-2xl bg-white rounded-2xl p-6 md:p-8 lg:p-12 shadow-lg mx-auto"
-            style={{ marginTop: "60px" }}
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-            whileHover={{ y: -5 }}
-            transition={{ duration: 0.3 }}
-          >
-            {/* Header */}
-            <motion.div className="mb-8" variants={itemVariants}>
-              <motion.h1 
-                className="font-instrument text-3xl md:text-4xl lg:text-5xl font-normal text-black mb-4 tracking-tight"
+
+        {/* Cards Container */}
+        <motion.div
+          className="relative z-10 flex items-center justify-center min-h-screen px-12 py-20"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <motion.div className="w-full max-w-[1531px] ml-12 flex flex-col lg:flex-row gap-6 lg:gap-8 items-stretch">
+
+            {/* Left Card - Contact Information */}
+            <motion.div
+              className="w-full lg:flex-1 lg:max-w-[672px] bg-[#131313] rounded-2xl p-8 md:p-12 shadow-lg flex flex-col"
+              variants={itemVariants}
+              whileHover={{ y: -5 }}
+              transition={{ duration: 0.3 }}
+            >
+              <motion.h1
+                className="font-instrument text-4xl md:text-5xl font-normal text-white mb-4 tracking-tight"
+                style={{letterSpacing: '-1.2px'}}
                 variants={headlineVariants}
               >
                 Contact us
               </motion.h1>
-              <motion.p 
-                className="font-inter text-base md:text-lg text-gray-600 tracking-wide"
-                variants={itemVariants}
+              <motion.p
+                className="font-inter text-base md:text-lg text-[#B7B7B7] leading-relaxed mb-12"
+                variants={textVariants}
               >
-                Share your vision with us.
+                Bring your architectural projects to life with a template that puts your work front and center.
               </motion.p>
-            </motion.div>
 
-            {/* Form */}
-            <motion.form onSubmit={handleSubmit} className="space-y-6" variants={itemVariants}>
-              {/* Full Name */}
-              <motion.div className="space-y-3" variants={itemVariants}>
-                <Label htmlFor="fullName" className="font-inter text-lg text-gray-900 tracking-wide">
-                  Full name *
-                </Label>
-                <motion.div
-                  whileFocus={{ scale: 1.02 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <Input
-                    id="fullName"
-                    name="fullName"
-                    value={formData.fullName}
-                    onChange={handleInputChange}
-                    placeholder="Enter your full name"
-                    className={`h-16 rounded-2xl text-lg font-inter placeholder:text-gray-400 px-5 transition-all duration-200 ${
-                      formErrors.fullName
-                        ? 'border-red-300 focus:border-red-400 hover:border-red-400'
-                        : 'border-blue-200 hover:border-blue-300 focus:border-blue-400'
-                    }`}
-                  />
-                  {formErrors.fullName && (
-                    <p className="text-red-500 text-sm mt-1 font-inter">{formErrors.fullName}</p>
-                  )}
-                </motion.div>
-              </motion.div>
+              {/* Office Address */}
+              <div className="mb-8">
+                <div className="font-inter text-2xl md:text-[32px] font-bold mb-2 leading-[46px]" style={{color: 'rgba(255, 255, 255, 0.8)'}}>
+                  <p>Office Address</p>
+                </div>
+                <p className="font-inter text-xl md:text-[32px] text-[#989898] leading-[46px]">
+                  Bhandara Road, Behind JK Tower, Small Factory Area Bagadgangj Nagper Maharashtra-2440008
+                </p>
+              </div>
 
               {/* Phone Number */}
-              <motion.div className="space-y-3" variants={itemVariants}>
-                <Label htmlFor="phone" className="font-inter text-lg text-gray-900 tracking-wide">
-                  Phone number *
-                </Label>
-                <motion.div
-                  whileFocus={{ scale: 1.02 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <div className="relative">
-                    <Input
-                      id="phone"
-                      name="phone"
-                      type="tel"
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      placeholder="Enter phone number (e.g., 9876543210)"
-                      className={`h-16 rounded-2xl text-lg font-inter placeholder:text-gray-400 px-5 transition-all duration-200 ${
-                        formErrors.phone
-                          ? 'border-red-300 focus:border-red-400 hover:border-red-400'
-                          : 'border-blue-200 hover:border-blue-300 focus:border-blue-400'
-                      }`}
-                    />
-                    <div className="absolute right-4 top-1/2 transform -translate-y-1/2 text-xs text-gray-500 bg-white px-2">
-                      {formData.phone && formData.phone.replace(/\D/g, '').length >= 10 ? (
-                        <span className="text-green-600">✓ Valid</span>
-                      ) : (
-                        <span>10+ digits</span>
-                      )}
-                    </div>
-                  </div>
-                  {formErrors.phone && (
-                    <p className="text-red-500 text-sm mt-1 font-inter">{formErrors.phone}</p>
-                  )}
-                  <p className="text-xs text-gray-500 mt-1 font-inter">
-                    Enter 10 digits for Indian numbers or include country code for international
-                  </p>
-                </motion.div>
-              </motion.div>
-
-              {/* Email Address */}
-              <motion.div className="space-y-3" variants={itemVariants}>
-                <Label htmlFor="email" className="font-inter text-lg text-gray-900 tracking-wide">
-                  Email address *
-                </Label>
-                <motion.div
-                  whileFocus={{ scale: 1.02 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    placeholder="Enter your email address"
-                    className={`h-16 rounded-2xl text-lg font-inter placeholder:text-gray-400 px-5 transition-all duration-200 ${
-                      formErrors.email
-                        ? 'border-red-300 focus:border-red-400 hover:border-red-400'
-                        : 'border-blue-200 hover:border-blue-300 focus:border-blue-400'
-                    }`}
-                  />
-                  {formErrors.email && (
-                    <p className="text-red-500 text-sm mt-1 font-inter">{formErrors.email}</p>
-                  )}
-                </motion.div>
-              </motion.div>
-
-              {/* Project Information */}
-              <motion.div className="space-y-3" variants={itemVariants}>
-                <Label htmlFor="projectInfo" className="font-inter text-lg text-gray-900 tracking-wide">
-                  Project information
-                </Label>
-                <motion.div
-                  whileFocus={{ scale: 1.02 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <div className="relative">
-                    <Textarea
-                      id="projectInfo"
-                      name="projectInfo"
-                      value={formData.projectInfo}
-                      onChange={handleInputChange}
-                      placeholder="Tell us about your project requirements, timeline, budget, or any specific needs..."
-                      className={`min-h-40 rounded-2xl text-lg font-inter placeholder:text-gray-400 px-5 py-5 resize-none transition-all duration-200 ${
-                        formErrors.projectInfo
-                          ? 'border-red-300 focus:border-red-400 hover:border-red-400'
-                          : 'border-blue-200 hover:border-blue-300 focus:border-blue-400'
-                      }`}
-                    />
-                    <div className="absolute bottom-3 right-4 text-xs text-gray-500 bg-white px-2">
-                      {formData.projectInfo.length}/1000
-                    </div>
-                  </div>
-                  {formErrors.projectInfo && (
-                    <p className="text-red-500 text-sm mt-1 font-inter">{formErrors.projectInfo}</p>
-                  )}
-                  <p className="text-xs text-gray-500 mt-1 font-inter">
-                    Optional: Provide details about your requirements to help us serve you better
-                  </p>
-                </motion.div>
-              </motion.div>
-
-              {/* Submit Button */}
-              <motion.div className="pt-6" variants={itemVariants}>
-                <motion.div
-                  whileHover={{ scale: isSubmitting ? 1 : 1.05 }}
-                  whileTap={{ scale: isSubmitting ? 1 : 0.95 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <Button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full bg-gray-900 hover:bg-gray-800 disabled:bg-gray-500 disabled:cursor-not-allowed text-white font-inter text-lg font-medium px-8 py-4 rounded-full h-auto transition-all duration-300 shadow-lg hover:shadow-xl"
-                  >
-                    {isSubmitting ? (
-                      <div className="flex items-center justify-center space-x-2">
-                        <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                        <span>Submitting...</span>
-                      </div>
-                    ) : (
-                      "Submit Contact Form"
-                    )}
-                  </Button>
-                </motion.div>
-                <p className="text-xs text-gray-500 mt-3 text-center font-inter">
-                  * Required fields. We'll respond within 24 hours during business days.
+              <div className="mb-6">
+                <h2 className="font-inter text-2xl md:text-[32px] font-bold mb-2 leading-[46px]" style={{color: '#d0d0d0'}}>
+                  Phone Number
+                </h2>
+                <p className="font-inter text-xl md:text-[32px] text-[#989898] leading-[46px]">
+                  office: 7387777085<br />
+                  Mobile:-7387777686/8275046765
                 </p>
+              </div>
+
+              {/* Email */}
+              <div className="mb-12">
+                <div className="font-inter text-xl md:text-[32px] leading-[48px]" style={{color: '#d0d0c4'}}>
+                  EMAIL :- info@mphdgroup.com
+                </div>
+              </div>
+
+              {/* Map Image */}
+              <a href="https://maps.app.goo.gl/eSZ1uAQuH2g3gfrP6" target="_blank" className="mt-auto cursor-pointer flex">
+                <img
+                  src="https://api.builder.io/api/v1/image/assets/TEMP/deef6e2b4becd669df7a5f112d3dcdcfd244e0e2?width=1190"
+                  alt="Office Location Map"
+                  className="w-full rounded-[27px] aspect-[119/61] object-cover"
+                />
+              </a>
+            </motion.div>
+
+            {/* Right Card - Contact Form */}
+            <motion.div
+              className="w-full lg:flex-1 lg:max-w-[672px] bg-white rounded-2xl p-8 md:p-12 shadow-lg"
+              variants={itemVariants}
+              whileHover={{ y: -5 }}
+              transition={{ duration: 0.3 }}
+            >
+              {/* Header */}
+              <motion.div className="mb-8" variants={itemVariants}>
+                <motion.h1
+                  className="font-instrument text-4xl md:text-5xl font-normal text-black mb-4 tracking-tight"
+                  style={{letterSpacing: '-1.2px', lineHeight: '48px'}}
+                  variants={headlineVariants}
+                >
+                  Contact us
+                </motion.h1>
+                <motion.p
+                  className="font-inter text-base md:text-lg text-[#4B5563] tracking-wide leading-7"
+                  variants={itemVariants}
+                >
+                  Share your vision with us.
+                </motion.p>
               </motion.div>
-            </motion.form>
+
+              {/* Form */}
+              <motion.form onSubmit={handleSubmit} className="space-y-6" variants={itemVariants}>
+                {/* Full Name */}
+                <motion.div className="space-y-3" variants={itemVariants}>
+                  <Label htmlFor="fullName" className="font-inter text-lg text-[#111827] tracking-wide">
+                    Full name *
+                  </Label>
+                  <div>
+                    <Input
+                      id="fullName"
+                      name="fullName"
+                      value={formData.fullName}
+                      onChange={handleInputChange}
+                      placeholder="Enter your full name"
+                      className={`h-16 rounded-2xl text-lg font-inter placeholder:text-[#9CA3AF] px-5 transition-all duration-200 ${
+                        formErrors.fullName
+                          ? 'border-red-300 focus:border-red-400 hover:border-red-400'
+                          : 'border-[#BFDBFE] hover:border-blue-300 focus:border-blue-400'
+                      }`}
+                    />
+                    {formErrors.fullName && (
+                      <p className="text-red-500 text-sm mt-1 font-inter">{formErrors.fullName}</p>
+                    )}
+                  </div>
+                </motion.div>
+
+                {/* Phone Number */}
+                <motion.div className="space-y-3" variants={itemVariants}>
+                  <Label htmlFor="phone" className="font-inter text-lg text-[#111827] tracking-wide">
+                    Phone number *
+                  </Label>
+                  <div>
+                    <div className="relative">
+                      <Input
+                        id="phone"
+                        name="phone"
+                        type="tel"
+                        value={formData.phone}
+                        onChange={handleInputChange}
+                        placeholder="Enter phone number (e.g., 9876543210)"
+                        className={`h-16 rounded-2xl text-lg font-inter placeholder:text-[#9CA3AF] px-5 transition-all duration-200 ${
+                          formErrors.phone
+                            ? 'border-red-300 focus:border-red-400 hover:border-red-400'
+                            : 'border-[#BFDBFE] hover:border-blue-300 focus:border-blue-400'
+                        }`}
+                      />
+                      <div className="absolute right-4 top-1/2 transform -translate-y-1/2 text-xs text-[#6B7280] bg-white px-2">
+                        {formData.phone && formData.phone.replace(/\D/g, '').length >= 10 ? (
+                          <span className="text-green-600">✓ Valid</span>
+                        ) : (
+                          <span>10+ digits</span>
+                        )}
+                      </div>
+                    </div>
+                    {formErrors.phone && (
+                      <p className="text-red-500 text-sm mt-1 font-inter">{formErrors.phone}</p>
+                    )}
+                    <p className="text-xs text-[#6B7280] mt-1 font-inter">
+                      Enter 10 digits for Indian numbers or include country code for international
+                    </p>
+                  </div>
+                </motion.div>
+
+                {/* Email Address */}
+                <motion.div className="space-y-3" variants={itemVariants}>
+                  <Label htmlFor="email" className="font-inter text-lg text-[#111827] tracking-wide">
+                    Email address *
+                  </Label>
+                  <div>
+                    <Input
+                      id="email"
+                      name="email"
+                      type="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      placeholder="Enter your email address"
+                      className={`h-16 rounded-2xl text-lg font-inter placeholder:text-[#9CA3AF] px-5 transition-all duration-200 ${
+                        formErrors.email
+                          ? 'border-red-300 focus:border-red-400 hover:border-red-400'
+                          : 'border-[#BFDBFE] hover:border-blue-300 focus:border-blue-400'
+                      }`}
+                    />
+                    {formErrors.email && (
+                      <p className="text-red-500 text-sm mt-1 font-inter">{formErrors.email}</p>
+                    )}
+                  </div>
+                </motion.div>
+
+                {/* Project Information */}
+                <motion.div className="space-y-3" variants={itemVariants}>
+                  <Label htmlFor="projectInfo" className="font-inter text-lg text-[#111827] tracking-wide">
+                    Project information
+                  </Label>
+                  <div>
+                    <div className="relative">
+                      <Textarea
+                        id="projectInfo"
+                        name="projectInfo"
+                        value={formData.projectInfo}
+                        onChange={handleInputChange}
+                        placeholder="Tell us about your project requirements, timeline, budget, or any specific needs..."
+                        className={`min-h-40 rounded-2xl text-lg font-inter placeholder:text-[#9CA3AF] px-5 py-5 resize-none transition-all duration-200 ${
+                          formErrors.projectInfo
+                            ? 'border-red-300 focus:border-red-400 hover:border-red-400'
+                            : 'border-[#BFDBFE] hover:border-blue-300 focus:border-blue-400'
+                        }`}
+                      />
+                      <div className="absolute bottom-3 right-4 text-xs text-[#6B7280] bg-white px-2">
+                        {formData.projectInfo.length}/1000
+                      </div>
+                    </div>
+                    {formErrors.projectInfo && (
+                      <p className="text-red-500 text-sm mt-1 font-inter">{formErrors.projectInfo}</p>
+                    )}
+                    <p className="text-xs text-[#6B7280] mt-1 font-inter">
+                      Optional: Provide details about your requirements to help us serve you better
+                    </p>
+                  </div>
+                </motion.div>
+
+                {/* Submit Button */}
+                <motion.div className="pt-6" variants={itemVariants}>
+                  <motion.div
+                    whileHover={{ scale: isSubmitting ? 1 : 1.05 }}
+                    whileTap={{ scale: isSubmitting ? 1 : 0.95 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <Button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="w-full bg-[#111827] hover:bg-gray-800 disabled:bg-gray-500 disabled:cursor-not-allowed text-white font-inter text-lg font-medium px-8 py-4 rounded-full h-[60px] transition-all duration-300 shadow-lg hover:shadow-xl"
+                    >
+                      {isSubmitting ? (
+                        <div className="flex items-center justify-center space-x-2">
+                          <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                          <span>Submitting...</span>
+                        </div>
+                      ) : (
+                        "Submit Contact Form"
+                      )}
+                    </Button>
+                  </motion.div>
+                  <p className="text-xs text-[#6B7280] mt-3 text-center font-inter">
+                    * Required fields. We'll respond within 24 hours during business days.
+                  </p>
+                </motion.div>
+              </motion.form>
+            </motion.div>
           </motion.div>
-        </div>
-      </section>
+        </motion.div>
+      </motion.section>
 
 
 
