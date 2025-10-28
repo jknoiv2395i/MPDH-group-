@@ -402,9 +402,9 @@ const Services = () => {
 
               {/* Office Address */}
               <div className="mb-8">
-                <h2 className="font-inter text-2xl md:text-[32px] font-bold text-[#989898] mb-2 leading-[46px]">
-                  Office Address
-                </h2>
+                <div className="font-inter text-2xl md:text-[32px] font-bold mb-2 leading-[46px]" style={{color: 'rgba(255, 255, 255, 0.8)'}}>
+                  <p>Office Address</p>
+                </div>
                 <p className="font-inter text-xl md:text-[32px] text-[#989898] leading-[46px]">
                   Bhandara Road, Behind JK Tower, Small Factory Area Bagadgangj Nagper Maharashtra-2440008
                 </p>
@@ -412,7 +412,7 @@ const Services = () => {
 
               {/* Phone Number */}
               <div className="mb-6">
-                <h2 className="font-inter text-2xl md:text-[32px] font-bold text-[#989898] mb-2 leading-[46px]">
+                <h2 className="font-inter text-2xl md:text-[32px] font-bold mb-2 leading-[46px]" style={{color: '#d0d0d0'}}>
                   Phone Number
                 </h2>
                 <p className="font-inter text-xl md:text-[32px] text-[#989898] leading-[46px]">
@@ -423,9 +423,9 @@ const Services = () => {
 
               {/* Email */}
               <div className="mb-12">
-                <p className="font-inter text-xl md:text-[32px] text-[#989898] leading-[48px]">
+                <div className="font-inter text-xl md:text-[32px] leading-[48px]" style={{color: '#d0d0c4'}}>
                   EMAIL :- info@mphdgroup.com
-                </p>
+                </div>
               </div>
 
               {/* Map Image */}
