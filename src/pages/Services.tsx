@@ -374,71 +374,49 @@ const Services = () => {
 
 
   return (
-    <motion.div 
-      className="min-h-screen bg-white relative"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-    >
+    <div className="min-h-screen bg-white relative">
       <FigmaNavBar />
 
       {/* Contact Form Section */}
       <section className="relative min-h-screen overflow-hidden">
         {/* Background Image */}
-        <motion.div
+        <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/e8013bbbc820f05a3f48efd4964535ee8fadc977?width=3810')",
             width: '1905px',
             height: '1137.88px'
           }}
-          initial={{ opacity: 0, scale: 1.05 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{
-            duration: 2,
-            ease: "easeOut",
-            delay: 0.5
-          }}
         />
         
         {/* Form Container */}
         <div className="relative z-10 flex items-center min-h-screen p-4 md:p-8">
-          <motion.div
+          <div
             className="w-full max-w-2xl bg-white rounded-2xl p-6 md:p-8 lg:p-12 shadow-lg mx-auto"
             style={{ marginTop: "60px" }}
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-            whileHover={{ y: -5 }}
-            transition={{ duration: 0.3 }}
           >
             {/* Header */}
-            <motion.div className="mb-8" variants={itemVariants}>
-              <motion.h1 
+            <div className="mb-8">
+              <h1
                 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-normal text-black mb-4 tracking-tight"
-                variants={headlineVariants}
               >
                 Contact us
-              </motion.h1>
-              <motion.p 
+              </h1>
+              <p
                 className="font-inter text-base md:text-lg text-gray-600 tracking-wide"
-                variants={itemVariants}
               >
                 Share your vision with us.
-              </motion.p>
-            </motion.div>
+              </p>
+            </div>
 
             {/* Form */}
-            <motion.form onSubmit={handleSubmit} className="space-y-6" variants={itemVariants}>
+            <form onSubmit={handleSubmit} className="space-y-6">
               {/* Full Name */}
-              <motion.div className="space-y-3" variants={itemVariants}>
+              <div className="space-y-3">
                 <Label htmlFor="fullName" className="font-inter text-lg text-gray-900 tracking-wide">
                   Full name *
                 </Label>
-                <motion.div
-                  whileFocus={{ scale: 1.02 }}
-                  transition={{ duration: 0.2 }}
-                >
+                <div>
                   <Input
                     id="fullName"
                     name="fullName"
@@ -454,18 +432,15 @@ const Services = () => {
                   {formErrors.fullName && (
                     <p className="text-red-500 text-sm mt-1 font-inter">{formErrors.fullName}</p>
                   )}
-                </motion.div>
-              </motion.div>
+                </div>
+              </div>
 
               {/* Phone Number */}
-              <motion.div className="space-y-3" variants={itemVariants}>
+              <div className="space-y-3">
                 <Label htmlFor="phone" className="font-inter text-lg text-gray-900 tracking-wide">
                   Phone number *
                 </Label>
-                <motion.div
-                  whileFocus={{ scale: 1.02 }}
-                  transition={{ duration: 0.2 }}
-                >
+                <div>
                   <div className="relative">
                     <Input
                       id="phone"
@@ -494,18 +469,15 @@ const Services = () => {
                   <p className="text-xs text-gray-500 mt-1 font-inter">
                     Enter 10 digits for Indian numbers or include country code for international
                   </p>
-                </motion.div>
-              </motion.div>
+                </div>
+              </div>
 
               {/* Email Address */}
-              <motion.div className="space-y-3" variants={itemVariants}>
+              <div className="space-y-3">
                 <Label htmlFor="email" className="font-inter text-lg text-gray-900 tracking-wide">
                   Email address *
                 </Label>
-                <motion.div
-                  whileFocus={{ scale: 1.02 }}
-                  transition={{ duration: 0.2 }}
-                >
+                <div>
                   <Input
                     id="email"
                     name="email"
@@ -522,18 +494,15 @@ const Services = () => {
                   {formErrors.email && (
                     <p className="text-red-500 text-sm mt-1 font-inter">{formErrors.email}</p>
                   )}
-                </motion.div>
-              </motion.div>
+                </div>
+              </div>
 
               {/* Project Information */}
-              <motion.div className="space-y-3" variants={itemVariants}>
+              <div className="space-y-3">
                 <Label htmlFor="projectInfo" className="font-inter text-lg text-gray-900 tracking-wide">
                   Project information
                 </Label>
-                <motion.div
-                  whileFocus={{ scale: 1.02 }}
-                  transition={{ duration: 0.2 }}
-                >
+                <div>
                   <div className="relative">
                     <Textarea
                       id="projectInfo"
@@ -557,16 +526,12 @@ const Services = () => {
                   <p className="text-xs text-gray-500 mt-1 font-inter">
                     Optional: Provide details about your requirements to help us serve you better
                   </p>
-                </motion.div>
-              </motion.div>
+                </div>
+              </div>
 
               {/* Submit Button */}
-              <motion.div className="pt-6" variants={itemVariants}>
-                <motion.div
-                  whileHover={{ scale: isSubmitting ? 1 : 1.05 }}
-                  whileTap={{ scale: isSubmitting ? 1 : 0.95 }}
-                  transition={{ duration: 0.2 }}
-                >
+              <div className="pt-6">
+                <div>
                   <Button
                     type="submit"
                     disabled={isSubmitting}
@@ -581,13 +546,13 @@ const Services = () => {
                       "Submit Contact Form"
                     )}
                   </Button>
-                </motion.div>
+                </div>
                 <p className="text-xs text-gray-500 mt-3 text-center font-inter">
                   * Required fields. We'll respond within 24 hours during business days.
                 </p>
-              </motion.div>
-            </motion.form>
-          </motion.div>
+              </div>
+            </form>
+          </div>
         </div>
       </section>
 
@@ -597,7 +562,7 @@ const Services = () => {
       <FAQSection />
 
       <Footer />
-    </motion.div>
+    </div>
   );
 };
 
