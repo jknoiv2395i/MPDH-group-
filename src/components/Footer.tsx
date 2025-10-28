@@ -21,40 +21,61 @@ const Footer = () => {
             </div>
 
             {/* Navigation Links */}
-            <nav className="grid grid-cols-2 md:grid-cols-4 gap-10 w-full text-sm">
+            <nav className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 w-full text-sm">
               <div>
-                <h4 className="text-white/60 uppercase tracking-wider text-xs mb-4">Company</h4>
+                <h4 className="text-white/60 uppercase tracking-wider text-xs mb-4 font-semibold">Company</h4>
                 <ul className="space-y-3">
                   <li><Link to="/" className="text-white/90 hover:text-white transition-colors">Home</Link></li>
-                  <li><Link to="/about" className="text-white/90 hover:text-white transition-colors">About</Link></li>
+                  <li><Link to="/about" className="text-white/90 hover:text-white transition-colors">About Us</Link></li>
+                  <li><Link to="/contact" className="text-white/90 hover:text-white transition-colors">Contact</Link></li>
+                  <li><Link to="/service-areas" className="text-white/90 hover:text-white transition-colors">Service Areas</Link></li>
                 </ul>
               </div>
 
               <div>
-                <h4 className="text-white/60 uppercase tracking-wider text-xs mb-4">Services</h4>
+                <h4 className="text-white/60 uppercase tracking-wider text-xs mb-4 font-semibold">Property Types</h4>
                 <ul className="space-y-3">
-                  <li><Link to="/services" className="text-white/90 hover:text-white transition-colors">Services</Link></li>
+                  <li><Link to="/buy-residential-property-nagpur" className="text-white/90 hover:text-white transition-colors">Buy Residential</Link></li>
+                  <li><Link to="/2bhk-flats-nagpur" className="text-white/90 hover:text-white transition-colors">2BHK Flats</Link></li>
+                  <li><Link to="/3bhk-apartments-nagpur" className="text-white/90 hover:text-white transition-colors">3BHK Apartments</Link></li>
+                  <li><Link to="/luxury-properties-nagpur" className="text-white/90 hover:text-white transition-colors">Luxury Properties</Link></li>
+                  <li><Link to="/affordable-flats-nagpur" className="text-white/90 hover:text-white transition-colors">Affordable Flats</Link></li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 className="text-white/60 uppercase tracking-wider text-xs mb-4 font-semibold">Categories</h4>
+                <ul className="space-y-3">
+                  <li><Link to="/properties" className="text-white/90 hover:text-white transition-colors">All Properties</Link></li>
+                  <li><Link to="/residential" className="text-white/90 hover:text-white transition-colors">Residential</Link></li>
+                  <li><Link to="/commercial" className="text-white/90 hover:text-white transition-colors">Commercial</Link></li>
                   <li><Link to="/industrial" className="text-white/90 hover:text-white transition-colors">Industrial</Link></li>
                 </ul>
               </div>
 
               <div>
-                <h4 className="text-white/60 uppercase tracking-wider text-xs mb-4">Properties</h4>
+                <h4 className="text-white/60 uppercase tracking-wider text-xs mb-4 font-semibold">Rentals</h4>
                 <ul className="space-y-3">
-                  <li><Link to="/properties" className="text-white/90 hover:text-white transition-colors">All Properties</Link></li>
-                  <li><Link to="/residential" className="text-white/90 hover:text-white transition-colors">Residential</Link></li>
-                  <li><Link to="/commercial" className="text-white/90 hover:text-white transition-colors">Commercial</Link></li>
                   <li><Link to="/residential-rental" className="text-white/90 hover:text-white transition-colors">Residential Rentals</Link></li>
                   <li><Link to="/commercial-rental" className="text-white/90 hover:text-white transition-colors">Commercial Rentals</Link></li>
                 </ul>
               </div>
 
               <div>
-                <h4 className="text-white/60 uppercase tracking-wider text-xs mb-4">Local Pages</h4>
+                <h4 className="text-white/60 uppercase tracking-wider text-xs mb-4 font-semibold">Resources</h4>
                 <ul className="space-y-3">
-                  <li><Link to="/service-areas" className="text-white/90 hover:text-white transition-colors">Service Areas</Link></li>
-                  <li><Link to="/residential-nagpur-440008" className="text-white/90 hover:text-white transition-colors">Residential Nagpur 440008</Link></li>
-                  <li><Link to="/commercial-nagpur-440008" className="text-white/90 hover:text-white transition-colors">Commercial Nagpur 440008</Link></li>
+                  <li><Link to="/services" className="text-white/90 hover:text-white transition-colors">Services</Link></li>
+                  <li><Link to="/projects" className="text-white/90 hover:text-white transition-colors">Projects</Link></li>
+                  <li><Link to="/blog" className="text-white/90 hover:text-white transition-colors">Blog</Link></li>
+                  <li><Link to="/ai-assistant" className="text-white/90 hover:text-white transition-colors">AI Assistant</Link></li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 className="text-white/60 uppercase tracking-wider text-xs mb-4 font-semibold">Local Pages</h4>
+                <ul className="space-y-3">
+                  <li><Link to="/residential-nagpur-440008" className="text-white/90 hover:text-white transition-colors">Residential 440008</Link></li>
+                  <li><Link to="/commercial-nagpur-440008" className="text-white/90 hover:text-white transition-colors">Commercial 440008</Link></li>
                 </ul>
               </div>
             </nav>
