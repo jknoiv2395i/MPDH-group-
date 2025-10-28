@@ -377,181 +377,223 @@ const Services = () => {
     <div className="min-h-screen bg-white relative">
       <FigmaNavBar />
 
-      {/* Contact Form Section */}
+      {/* Contact Section */}
       <section className="relative min-h-screen overflow-hidden">
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/e8013bbbc820f05a3f48efd4964535ee8fadc977?width=3810')",
-            width: '1905px',
-            height: '1137.88px'
+            backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/03ee2e510ea6b6dd26c9b662f591ce1522aeee60?width=3810')"
           }}
         />
-        
-        {/* Form Container */}
-        <div className="relative z-10 flex items-center min-h-screen p-4 md:p-8">
-          <div
-            className="w-full max-w-2xl bg-white rounded-2xl p-6 md:p-8 lg:p-12 shadow-lg mx-auto"
-            style={{ marginTop: "60px" }}
-          >
-            {/* Header */}
-            <div className="mb-8">
-              <h1
-                className="font-instrument text-3xl md:text-4xl lg:text-5xl font-normal text-black mb-4 tracking-tight"
-              >
+
+        {/* Cards Container */}
+        <div className="relative z-10 flex items-center justify-center min-h-screen px-4 py-20 md:px-8 lg:px-12">
+          <div className="w-full max-w-[1500px] flex flex-col lg:flex-row gap-6 lg:gap-8 items-stretch">
+
+            {/* Left Card - Contact Information */}
+            <div className="w-full lg:flex-1 lg:max-w-[672px] bg-[#131313] rounded-2xl p-8 md:p-12 shadow-lg flex flex-col">
+              <h1 className="font-instrument text-4xl md:text-5xl font-normal text-white mb-4 tracking-tight" style={{letterSpacing: '-1.2px'}}>
                 Contact us
               </h1>
-              <p
-                className="font-inter text-base md:text-lg text-gray-600 tracking-wide"
-              >
-                Share your vision with us.
+              <p className="font-inter text-base md:text-lg text-[#B7B7B7] leading-relaxed mb-12">
+                Bring your architectural projects to life with a template that puts your work front and center.
               </p>
-            </div>
 
-            {/* Form */}
-            <form onSubmit={handleSubmit} className="space-y-6">
-              {/* Full Name */}
-              <div className="space-y-3">
-                <Label htmlFor="fullName" className="font-inter text-lg text-gray-900 tracking-wide">
-                  Full name *
-                </Label>
-                <div>
-                  <Input
-                    id="fullName"
-                    name="fullName"
-                    value={formData.fullName}
-                    onChange={handleInputChange}
-                    placeholder="Enter your full name"
-                    className={`h-16 rounded-2xl text-lg font-inter placeholder:text-gray-400 px-5 transition-all duration-200 ${
-                      formErrors.fullName
-                        ? 'border-red-300 focus:border-red-400 hover:border-red-400'
-                        : 'border-blue-200 hover:border-blue-300 focus:border-blue-400'
-                    }`}
-                  />
-                  {formErrors.fullName && (
-                    <p className="text-red-500 text-sm mt-1 font-inter">{formErrors.fullName}</p>
-                  )}
-                </div>
+              {/* Office Address */}
+              <div className="mb-8">
+                <h2 className="font-inter text-2xl md:text-[32px] font-bold text-[#989898] mb-2 leading-[46px]">
+                  Office Address
+                </h2>
+                <p className="font-inter text-xl md:text-[32px] text-[#989898] leading-[46px]">
+                  Bhandara Road, Behind JK Tower, Small Factory Area Bagadgangj Nagper Maharashtra-2440008
+                </p>
               </div>
 
               {/* Phone Number */}
-              <div className="space-y-3">
-                <Label htmlFor="phone" className="font-inter text-lg text-gray-900 tracking-wide">
-                  Phone number *
-                </Label>
-                <div>
-                  <div className="relative">
-                    <Input
-                      id="phone"
-                      name="phone"
-                      type="tel"
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      placeholder="Enter phone number (e.g., 9876543210)"
-                      className={`h-16 rounded-2xl text-lg font-inter placeholder:text-gray-400 px-5 transition-all duration-200 ${
-                        formErrors.phone
-                          ? 'border-red-300 focus:border-red-400 hover:border-red-400'
-                          : 'border-blue-200 hover:border-blue-300 focus:border-blue-400'
-                      }`}
-                    />
-                    <div className="absolute right-4 top-1/2 transform -translate-y-1/2 text-xs text-gray-500 bg-white px-2">
-                      {formData.phone && formData.phone.replace(/\D/g, '').length >= 10 ? (
-                        <span className="text-green-600">✓ Valid</span>
-                      ) : (
-                        <span>10+ digits</span>
-                      )}
-                    </div>
-                  </div>
-                  {formErrors.phone && (
-                    <p className="text-red-500 text-sm mt-1 font-inter">{formErrors.phone}</p>
-                  )}
-                  <p className="text-xs text-gray-500 mt-1 font-inter">
-                    Enter 10 digits for Indian numbers or include country code for international
-                  </p>
-                </div>
-              </div>
-
-              {/* Email Address */}
-              <div className="space-y-3">
-                <Label htmlFor="email" className="font-inter text-lg text-gray-900 tracking-wide">
-                  Email address *
-                </Label>
-                <div>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    placeholder="Enter your email address"
-                    className={`h-16 rounded-2xl text-lg font-inter placeholder:text-gray-400 px-5 transition-all duration-200 ${
-                      formErrors.email
-                        ? 'border-red-300 focus:border-red-400 hover:border-red-400'
-                        : 'border-blue-200 hover:border-blue-300 focus:border-blue-400'
-                    }`}
-                  />
-                  {formErrors.email && (
-                    <p className="text-red-500 text-sm mt-1 font-inter">{formErrors.email}</p>
-                  )}
-                </div>
-              </div>
-
-              {/* Project Information */}
-              <div className="space-y-3">
-                <Label htmlFor="projectInfo" className="font-inter text-lg text-gray-900 tracking-wide">
-                  Project information
-                </Label>
-                <div>
-                  <div className="relative">
-                    <Textarea
-                      id="projectInfo"
-                      name="projectInfo"
-                      value={formData.projectInfo}
-                      onChange={handleInputChange}
-                      placeholder="Tell us about your project requirements, timeline, budget, or any specific needs..."
-                      className={`min-h-40 rounded-2xl text-lg font-inter placeholder:text-gray-400 px-5 py-5 resize-none transition-all duration-200 ${
-                        formErrors.projectInfo
-                          ? 'border-red-300 focus:border-red-400 hover:border-red-400'
-                          : 'border-blue-200 hover:border-blue-300 focus:border-blue-400'
-                      }`}
-                    />
-                    <div className="absolute bottom-3 right-4 text-xs text-gray-500 bg-white px-2">
-                      {formData.projectInfo.length}/1000
-                    </div>
-                  </div>
-                  {formErrors.projectInfo && (
-                    <p className="text-red-500 text-sm mt-1 font-inter">{formErrors.projectInfo}</p>
-                  )}
-                  <p className="text-xs text-gray-500 mt-1 font-inter">
-                    Optional: Provide details about your requirements to help us serve you better
-                  </p>
-                </div>
-              </div>
-
-              {/* Submit Button */}
-              <div className="pt-6">
-                <div>
-                  <Button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full bg-gray-900 hover:bg-gray-800 disabled:bg-gray-500 disabled:cursor-not-allowed text-white font-inter text-lg font-medium px-8 py-4 rounded-full h-auto transition-all duration-300 shadow-lg hover:shadow-xl"
-                  >
-                    {isSubmitting ? (
-                      <div className="flex items-center justify-center space-x-2">
-                        <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                        <span>Submitting...</span>
-                      </div>
-                    ) : (
-                      "Submit Contact Form"
-                    )}
-                  </Button>
-                </div>
-                <p className="text-xs text-gray-500 mt-3 text-center font-inter">
-                  * Required fields. We'll respond within 24 hours during business days.
+              <div className="mb-6">
+                <h2 className="font-inter text-2xl md:text-[32px] font-bold text-[#989898] mb-2 leading-[46px]">
+                  Phone Number
+                </h2>
+                <p className="font-inter text-xl md:text-[32px] text-[#989898] leading-[46px]">
+                  office: 7387777085<br />
+                  Mobile:-7387777686/8275046765
                 </p>
               </div>
-            </form>
+
+              {/* Email */}
+              <div className="mb-12">
+                <p className="font-inter text-xl md:text-[32px] text-[#989898] leading-[48px]">
+                  EMAIL :- info@mphdgroup.com
+                </p>
+              </div>
+
+              {/* Map Image */}
+              <div className="mt-auto">
+                <img
+                  src="https://api.builder.io/api/v1/image/assets/TEMP/deef6e2b4becd669df7a5f112d3dcdcfd244e0e2?width=1190"
+                  alt="Office Location Map"
+                  className="w-full rounded-[27px] aspect-[119/61] object-cover"
+                />
+              </div>
+            </div>
+
+            {/* Right Card - Contact Form */}
+            <div className="w-full lg:flex-1 lg:max-w-[672px] bg-white rounded-2xl p-8 md:p-12 shadow-lg">
+              {/* Header */}
+              <div className="mb-8">
+                <h1 className="font-instrument text-4xl md:text-5xl font-normal text-black mb-4 tracking-tight" style={{letterSpacing: '-1.2px', lineHeight: '48px'}}>
+                  Contact us
+                </h1>
+                <p className="font-inter text-base md:text-lg text-[#4B5563] tracking-wide leading-7">
+                  Share your vision with us.
+                </p>
+              </div>
+
+              {/* Form */}
+              <form onSubmit={handleSubmit} className="space-y-6">
+                {/* Full Name */}
+                <div className="space-y-3">
+                  <Label htmlFor="fullName" className="font-inter text-lg text-[#111827] tracking-wide">
+                    Full name *
+                  </Label>
+                  <div>
+                    <Input
+                      id="fullName"
+                      name="fullName"
+                      value={formData.fullName}
+                      onChange={handleInputChange}
+                      placeholder="Enter your full name"
+                      className={`h-16 rounded-2xl text-lg font-inter placeholder:text-[#9CA3AF] px-5 transition-all duration-200 ${
+                        formErrors.fullName
+                          ? 'border-red-300 focus:border-red-400 hover:border-red-400'
+                          : 'border-[#BFDBFE] hover:border-blue-300 focus:border-blue-400'
+                      }`}
+                    />
+                    {formErrors.fullName && (
+                      <p className="text-red-500 text-sm mt-1 font-inter">{formErrors.fullName}</p>
+                    )}
+                  </div>
+                </div>
+
+                {/* Phone Number */}
+                <div className="space-y-3">
+                  <Label htmlFor="phone" className="font-inter text-lg text-[#111827] tracking-wide">
+                    Phone number *
+                  </Label>
+                  <div>
+                    <div className="relative">
+                      <Input
+                        id="phone"
+                        name="phone"
+                        type="tel"
+                        value={formData.phone}
+                        onChange={handleInputChange}
+                        placeholder="Enter phone number (e.g., 9876543210)"
+                        className={`h-16 rounded-2xl text-lg font-inter placeholder:text-[#9CA3AF] px-5 transition-all duration-200 ${
+                          formErrors.phone
+                            ? 'border-red-300 focus:border-red-400 hover:border-red-400'
+                            : 'border-[#BFDBFE] hover:border-blue-300 focus:border-blue-400'
+                        }`}
+                      />
+                      <div className="absolute right-4 top-1/2 transform -translate-y-1/2 text-xs text-[#6B7280] bg-white px-2">
+                        {formData.phone && formData.phone.replace(/\D/g, '').length >= 10 ? (
+                          <span className="text-green-600">✓ Valid</span>
+                        ) : (
+                          <span>10+ digits</span>
+                        )}
+                      </div>
+                    </div>
+                    {formErrors.phone && (
+                      <p className="text-red-500 text-sm mt-1 font-inter">{formErrors.phone}</p>
+                    )}
+                    <p className="text-xs text-[#6B7280] mt-1 font-inter">
+                      Enter 10 digits for Indian numbers or include country code for international
+                    </p>
+                  </div>
+                </div>
+
+                {/* Email Address */}
+                <div className="space-y-3">
+                  <Label htmlFor="email" className="font-inter text-lg text-[#111827] tracking-wide">
+                    Email address *
+                  </Label>
+                  <div>
+                    <Input
+                      id="email"
+                      name="email"
+                      type="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      placeholder="Enter your email address"
+                      className={`h-16 rounded-2xl text-lg font-inter placeholder:text-[#9CA3AF] px-5 transition-all duration-200 ${
+                        formErrors.email
+                          ? 'border-red-300 focus:border-red-400 hover:border-red-400'
+                          : 'border-[#BFDBFE] hover:border-blue-300 focus:border-blue-400'
+                      }`}
+                    />
+                    {formErrors.email && (
+                      <p className="text-red-500 text-sm mt-1 font-inter">{formErrors.email}</p>
+                    )}
+                  </div>
+                </div>
+
+                {/* Project Information */}
+                <div className="space-y-3">
+                  <Label htmlFor="projectInfo" className="font-inter text-lg text-[#111827] tracking-wide">
+                    Project information
+                  </Label>
+                  <div>
+                    <div className="relative">
+                      <Textarea
+                        id="projectInfo"
+                        name="projectInfo"
+                        value={formData.projectInfo}
+                        onChange={handleInputChange}
+                        placeholder="Tell us about your project requirements, timeline, budget, or any specific needs..."
+                        className={`min-h-40 rounded-2xl text-lg font-inter placeholder:text-[#9CA3AF] px-5 py-5 resize-none transition-all duration-200 ${
+                          formErrors.projectInfo
+                            ? 'border-red-300 focus:border-red-400 hover:border-red-400'
+                            : 'border-[#BFDBFE] hover:border-blue-300 focus:border-blue-400'
+                        }`}
+                      />
+                      <div className="absolute bottom-3 right-4 text-xs text-[#6B7280] bg-white px-2">
+                        {formData.projectInfo.length}/1000
+                      </div>
+                    </div>
+                    {formErrors.projectInfo && (
+                      <p className="text-red-500 text-sm mt-1 font-inter">{formErrors.projectInfo}</p>
+                    )}
+                    <p className="text-xs text-[#6B7280] mt-1 font-inter">
+                      Optional: Provide details about your requirements to help us serve you better
+                    </p>
+                  </div>
+                </div>
+
+                {/* Submit Button */}
+                <div className="pt-6">
+                  <div>
+                    <Button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="w-full bg-[#111827] hover:bg-gray-800 disabled:bg-gray-500 disabled:cursor-not-allowed text-white font-inter text-lg font-medium px-8 py-4 rounded-full h-[60px] transition-all duration-300 shadow-lg hover:shadow-xl"
+                    >
+                      {isSubmitting ? (
+                        <div className="flex items-center justify-center space-x-2">
+                          <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                          <span>Submitting...</span>
+                        </div>
+                      ) : (
+                        "Submit Contact Form"
+                      )}
+                    </Button>
+                  </div>
+                  <p className="text-xs text-[#6B7280] mt-3 text-center font-inter">
+                    * Required fields. We'll respond within 24 hours during business days.
+                  </p>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </section>
