@@ -429,13 +429,13 @@ const Services = () => {
               </div>
 
               {/* Map Image */}
-              <div className="mt-auto">
+              <a href="https://maps.app.goo.gl/eSZ1uAQuH2g3gfrP6" target="_blank" className="mt-auto cursor-pointer flex">
                 <img
                   src="https://api.builder.io/api/v1/image/assets/TEMP/deef6e2b4becd669df7a5f112d3dcdcfd244e0e2?width=1190"
                   alt="Office Location Map"
                   className="w-full rounded-[27px] aspect-[119/61] object-cover"
                 />
-              </div>
+              </a>
             </div>
 
             {/* Right Card - Contact Form */}
