@@ -469,8 +469,8 @@ const Industrial = () => {
                   </p>
                 </div>
 
-                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full" style={{margin: "30px auto 0 70px"}}>
-                  View project
+                <Button asChild className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full" style={{margin: "30px auto 0 70px"}}>
+                  <Link to="/services">View project</Link>
                 </Button>
                   </div>
                 </div>
@@ -510,8 +510,8 @@ const Industrial = () => {
                   </p>
                 </div>
 
-                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full" style={{margin: "27px auto 0 70px"}}>
-                  View project
+                <Button asChild className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full" style={{margin: "27px auto 0 70px"}}>
+                  <Link to="/services">View project</Link>
                 </Button>
                   </div>
                 </div>
@@ -555,8 +555,8 @@ const Industrial = () => {
                   </p>
                 </div>
 
-                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full" style={{margin: "30px auto 0 70px"}}>
-                  View project
+                <Button asChild className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full" style={{margin: "30px auto 0 70px"}}>
+                  <Link to="/services">View project</Link>
                 </Button>
                   </div>
                 </div>
@@ -596,8 +596,8 @@ const Industrial = () => {
                   </p>
                 </div>
 
-                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full" style={{margin: "30px auto 0 70px"}}>
-                  View project
+                <Button asChild className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full" style={{margin: "30px auto 0 70px"}}>
+                  <Link to="/services">View project</Link>
                 </Button>
                   </div>
                 </div>
@@ -637,8 +637,8 @@ const Industrial = () => {
                   </p>
                 </div>
 
-                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full" style={{margin: "30px auto 0 70px"}}>
-                  View project
+                <Button asChild className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full" style={{margin: "30px auto 0 70px"}}>
+                  <Link to="/services">View project</Link>
                 </Button>
                   </div>
                 </div>
@@ -677,8 +677,8 @@ const Industrial = () => {
 
                 <div className="border-t border-[#F1F1F1] pt-1 mb-0" />
 
-                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full" style={{margin: "0 auto 0 70px"}}>
-                  View project
+                <Button asChild className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full" style={{margin: "0 auto 0 70px"}}>
+                  <Link to="/services">View project</Link>
                 </Button>
                   </div>
                 </div>
@@ -718,8 +718,8 @@ const Industrial = () => {
                   </p>
                 </div>
 
-                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full" style={{margin: "29px auto 0 70px"}}>
-                  View project
+                <Button asChild className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full" style={{margin: "29px auto 0 70px"}}>
+                  <Link to="/services">View project</Link>
                 </Button>
                   </div>
                 </div>
@@ -759,8 +759,8 @@ const Industrial = () => {
                   </p>
                 </div>
 
-                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full" style={{margin: "30px auto 0 70px"}}>
-                  View project
+                <Button asChild className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full" style={{margin: "30px auto 0 70px"}}>
+                  <Link to="/services">View project</Link>
                 </Button>
                   </div>
                 </div>
@@ -800,8 +800,8 @@ const Industrial = () => {
                   </p>
                 </div>
 
-                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full" style={{margin: "30px auto 0 70px"}}>
-                  View project
+                <Button asChild className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full" style={{margin: "30px auto 0 70px"}}>
+                  <Link to="/services">View project</Link>
                 </Button>
                   </div>
                 </div>
@@ -841,8 +841,8 @@ const Industrial = () => {
                   </p>
                 </div>
 
-                <Button className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full" style={{margin: "32px auto 0 70px"}}>
-                  View project
+                <Button asChild className="w-full md:max-w-[402px] mx-auto md:ml-[70px] bg-[#131313] hover:bg-[#131313]/90 text-white font-inter text-base sm:text-lg py-4 rounded-full" style={{margin: "32px auto 0 70px"}}>
+                  <Link to="/services">View project</Link>
                 </Button>
                   </div>
                 </div>
