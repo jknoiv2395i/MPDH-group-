@@ -312,8 +312,6 @@ const Industrial = () => {
                   </p>
                 </div>
 
-
-
                 <div className="border-t border-[#F1F1F1] pt-1 mb-0">
                   <p className="text-[#535353] text-xs leading-relaxed">
                     Ready to move Commercial Sanctioned, Fire NoC and OC are available
@@ -356,8 +354,6 @@ const Industrial = () => {
                     We have built a strong network of 1300+ trusted vendors across India, covering products and services for construction, infrastructure, real estate, and allied industries. This allows us to provide our clients with quick access, competitive pricing, and reliable supply chains, ensuring projects run smoothly without delays.
                   </p>
                 </div>
-
-
 
                 <div className="border-t border-[#F1F1F1] pt-1 mb-0">
                   <p className="text-[#535353] text-xs leading-relaxed">
@@ -425,8 +421,6 @@ const Industrial = () => {
                       </p>
                     </div>
 
-    
-
                 <div className="border-t border-[#F1F1F1] pt-1 mb-0">
                   <p className="text-[#535353] text-xs leading-relaxed">
                     Ready to move Commercial Sanctioned, Fire NoC and OC are available
@@ -468,8 +462,6 @@ const Industrial = () => {
                       </p>
                     </div>
 
-    
-
                 <div className="border-t border-[#F1F1F1] pt-1 mb-0">
                   <p className="text-[#535353] text-xs leading-relaxed">
                     Ready to move Commercial Sanctioned, Fire NoC and OC are available
@@ -510,8 +502,6 @@ const Industrial = () => {
                         </span>
                       </p>
                     </div>
-
-    
 
                 <div className="border-t border-[#F1F1F1] pt-1 mb-0">
                   <p className="text-[#535353] text-xs leading-relaxed">
@@ -558,8 +548,6 @@ const Industrial = () => {
                       </p>
                     </div>
 
-    
-
                 <div className="border-t border-[#F1F1F1] pt-1 mb-0">
                   <p className="text-[#535353] text-xs leading-relaxed">
                     Ready to move Commercial Sanctioned, Fire NoC and OC are available
@@ -600,8 +588,6 @@ const Industrial = () => {
                         </span>
                       </p>
                     </div>
-
-    
 
                 <div className="border-t border-[#F1F1F1] pt-1 mb-0">
                   <p className="text-[#535353] text-xs leading-relaxed">
@@ -644,8 +630,6 @@ const Industrial = () => {
                       </p>
                     </div>
 
-    
-
                 <div className="border-t border-[#F1F1F1] pt-1 mb-0">
                   <p className="text-[#535353] text-xs leading-relaxed">
                     Ready to move Commercial Sanctioned, Fire NoC and OC are available
@@ -686,8 +670,6 @@ const Industrial = () => {
                         </span>
                       </p>
                     </div>
-
-    
 
                 <div className="border-t border-[#F1F1F1] pt-1 mb-0">
                   <p className="text-[#535353] text-xs leading-relaxed">
@@ -730,8 +712,6 @@ const Industrial = () => {
                       </p>
                     </div>
 
-    
-
                 <div className="border-t border-[#F1F1F1] pt-1 mb-0">
                   <p className="text-[#535353] text-xs leading-relaxed">
                     Ready to move Commercial Sanctioned, Fire NoC and OC are available
@@ -772,8 +752,6 @@ const Industrial = () => {
                         </span>
                       </p>
                     </div>
-
-    
 
                 <div className="border-t border-[#F1F1F1] pt-1 mb-0">
                   <p className="text-[#535353] text-xs leading-relaxed">
@@ -816,8 +794,6 @@ const Industrial = () => {
                       </p>
                     </div>
 
-    
-
                 <div className="border-t border-[#F1F1F1] pt-1 mb-0">
                   <p className="text-[#535353] text-xs leading-relaxed">
                     Ready to move Commercial Sanctioned, Fire NoC and OC are available
@@ -858,8 +834,6 @@ const Industrial = () => {
                         </span>
                       </p>
                     </div>
-
-    
 
                 <div className="border-t border-[#F1F1F1] pt-1 mb-0">
                   <p className="text-[#535353] text-xs leading-relaxed">
