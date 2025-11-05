@@ -1,0 +1,434 @@
+import React, { useRef, useState } from 'react';
+import { FigmaNavBar } from '@/components/ui/figma-navbar';
+import Footer from '@/components/Footer';
+import { useSEO } from '@/hooks/use-seo';
+import { Volume2, VolumeX } from 'lucide-react';
+
+const TheBrandt = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isMuted, setIsMuted] = useState(true);
+
+  useSEO({
+    title: 'Elevate Your Ambition - The Brandt | Premium Office Spaces',
+    description: 'Since the 80\'s, most people spent their worktime in open-plan offices with suspended ceiling systems, bad coffee, and numerous, endless meetings in boring concrete office buildings. Well, The Brandt is none of that.',
+    keywords: ['The Brandt', 'premium office', 'modern workspace', 'office spaces', 'elevate ambition']
+  });
+
+  const toggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !isMuted;
+      setIsMuted(!isMuted);
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-white">
+      <div style={{ backgroundColor: 'rgba(30, 156, 232, 1)' }}>
+        <FigmaNavBar />
+      </div>
+
+      {/* Hero Section */}
+      <section className="relative w-full px-4 sm:px-8 lg:px-12 py-12 lg:py-20">
+        <div className="max-w-[1809px] mx-auto">
+          {/* Main Heading Container */}
+          <div className="mb-12 lg:mb-16">
+            <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 lg:gap-12">
+              {/* Left Column - Heading and Image */}
+              <div className="flex-1">
+                <div className="mb-8 lg:mb-12">
+                  <h1 className="text-[clamp(48px,8vw,156px)] font-bold leading-[1.02] tracking-[-0.08em] uppercase text-[#231F20] mb-4 lg:mb-6">
+                    elevate your
+                  </h1>
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-6">
+                    <img
+                      src="https://api.builder.io/api/v1/image/assets/TEMP/a7af9e389a2887795635a5211ba391df7b21bc62?width=456"
+                      alt="The Brandt Exterior"
+                      className="w-full sm:w-[228px] h-auto sm:h-[166px] object-cover rounded-lg"
+                    />
+                    <h2 className="text-[clamp(48px,8vw,156px)] font-bold leading-[1.02] tracking-[-0.08em] uppercase text-[#231F20]">
+                      AMBITION
+                    </h2>
+                  </div>
+                </div>
+
+                {/* Description Text */}
+                <div className="max-w-[931px]">
+                  <p className="text-[clamp(20px,2.5vw,40px)] leading-[1.165] text-[#231F20] font-normal">
+                    Since the 80's, most people spent their worktime
+                    in open-plan offices with suspended ceiling
+                    systems, bad coffee, and numerous, endless
+                    meetings in boring concrete office buildings.
+                    Well, The Brandt is none of that.
+                  </p>
+                </div>
+              </div>
+
+              {/* Right Column - Scroll Indicator */}
+              <div className="flex-shrink-0 self-end lg:self-start lg:mt-48">
+                <p className="text-[clamp(20px,1.5vw,28px)] text-[#2E302D] font-normal">(Scroll)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Video Section */}
+      <section className="relative w-full px-4 sm:px-8 lg:px-12 mb-12 lg:mb-20">
+        <div className="max-w-[1809px] mx-auto">
+          <div className="relative w-full aspect-video rounded-2xl overflow-hidden bg-gray-200">
+            <video
+              ref={videoRef}
+              className="w-full h-full object-cover"
+              autoPlay
+              loop
+              muted={isMuted}
+              playsInline
+              poster="https://api.builder.io/api/v1/image/assets/TEMP/c27c95397d0d80850848eeaeb7e7b21f2a2cfb46?width=3618"
+            >
+              <source src="/path-to-video/01_THEBRANDT_MOVIE_audio.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+
+            {/* Sound Toggle Button */}
+            <button
+              onClick={toggleMute}
+              className="absolute bottom-6 right-6 w-[61px] h-[61px] bg-white rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors shadow-lg"
+              aria-label={isMuted ? 'Unmute video' : 'Mute video'}
+            >
+              {isMuted ? (
+                <VolumeX className="w-6 h-6 text-[#231F20]" />
+              ) : (
+                <Volume2 className="w-6 h-6 text-[#231F20]" />
+              )}
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Specifications Section */}
+      <section className="relative w-full px-4 sm:px-8 lg:px-12 py-12 lg:py-20">
+        <div className="max-w-[1809px] mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+            {/* Left Column - Heading and Specifications List */}
+            <div className="space-y-8 lg:space-y-12">
+              {/* Heading */}
+              <h3 className="text-[clamp(32px,3.5vw,55px)] leading-[1.104] text-[#231F20] font-normal">
+                The Brandt offers large and
+                flexible open floor plates of 1,000
+                square meter, which is rare for the
+                historic city centre.
+              </h3>
+
+              {/* Specifications List */}
+              <div className="space-y-0">
+                {/* LOCATION */}
+                <div className="flex justify-between items-center py-5 border-b border-[#2E302D]">
+                  <span className="text-[clamp(20px,1.8vw,30px)] text-[#231F20]">LOCATION</span>
+                  <span className="text-[clamp(18px,1.6vw,28px)] text-[#231F20]">REMBRANDTPLEIN 29 – 45</span>
+                </div>
+
+                {/* PARIS ROOF */}
+                <div className="flex justify-between items-center py-5 border-b border-[#2E302D]">
+                  <span className="text-[clamp(20px,1.8vw,29px)] text-[#231F20]">PARIS ROOF</span>
+                </div>
+
+                {/* BREEAM */}
+                <div className="flex justify-between items-center py-5 border-b border-[#2E302D]">
+                  <span className="text-[clamp(20px,1.8vw,31px)] text-[#231F20]">BREEAM</span>
+                  <span className="text-[clamp(18px,1.6vw,29px)] text-[#231F20]">EXCELLENT</span>
+                </div>
+
+                {/* EPC LEVEL */}
+                <div className="flex justify-between items-center py-5 border-b border-[#2E302D]">
+                  <span className="text-[clamp(20px,1.8vw,29px)] text-[#231F20]">EPC LEVEL</span>
+                  <span className="text-[clamp(18px,1.5vw,25px)] text-[#231F20]">A+++</span>
+                </div>
+
+                {/* FLOORS */}
+                <div className="flex justify-between items-center py-5 border-b border-[#2E302D]">
+                  <span className="text-[clamp(20px,1.8vw,30px)] text-[#231F20]">FLOORS</span>
+                  <span className="text-[clamp(20px,1.8vw,31px)] text-[#231F20]">7</span>
+                </div>
+
+                {/* SQ. M. LFA */}
+                <div className="flex justify-between items-center py-5 border-b border-[#2E302D]">
+                  <span className="text-[clamp(18px,1.6vw,28px)] text-[#231F20]">SQ. M. LFA</span>
+                  <span className="text-[clamp(18px,1.5vw,27px)] text-[#231F20]">5,340 SQ.M.</span>
+                </div>
+
+                {/* FLOOR PLATES */}
+                <div className="flex justify-between items-center py-5 border-b border-[#2E302D]">
+                  <span className="text-[clamp(20px,1.8vw,29px)] text-[#231F20]">FLOOR PLATES</span>
+                  <span className="text-[clamp(18px,1.5vw,27px)] text-[#231F20]">242 – 1,056 SQ.M.(APPROX.)</span>
+                </div>
+
+                {/* LIFTS */}
+                <div className="flex justify-between items-center py-5 border-b border-[#2E302D]">
+                  <span className="text-[clamp(20px,1.8vw,29px)] text-[#231F20]">LIFTS</span>
+                  <span className="text-[clamp(20px,1.8vw,31px)] text-[#231F20]">2</span>
+                </div>
+
+                {/* TERRACES */}
+                <div className="flex justify-between items-center py-5 border-b border-[#2E302D]">
+                  <span className="text-[clamp(20px,1.8vw,30px)] text-[#231F20]">TERRACES</span>
+                  <span className="text-[clamp(20px,1.8vw,31px)] text-[#231F20]">9</span>
+                </div>
+
+                {/* GARDEN */}
+                <div className="flex justify-between items-center py-5 border-b border-[#2E302D]">
+                  <span className="text-[clamp(20px,1.8vw,30px)] text-[#231F20]">GARDEN</span>
+                  <span className="text-[clamp(20px,1.8vw,31px)] text-[#231F20]">1</span>
+                </div>
+
+                {/* SHOWER */}
+                <div className="flex justify-between items-center py-5 border-b border-[#2E302D]">
+                  <span className="text-[clamp(20px,1.8vw,30px)] text-[#231F20]">SHOWER</span>
+                  <span className="text-[clamp(20px,1.8vw,31px)] text-[#231F20]">1</span>
+                </div>
+              </div>
+
+              {/* Contact Us Button */}
+              <div className="pt-8">
+                <button className="bg-[#231F20] text-white px-8 py-4 rounded-[27px] text-[clamp(18px,1.5vw,23px)] font-bold uppercase hover:bg-[#2E302D] transition-colors">
+                  contact us
+                </button>
+              </div>
+            </div>
+
+            {/* Right Column - Interior Image */}
+            <div className="relative flex items-center justify-center lg:justify-end">
+              <div className="w-full max-w-[873px]">
+                <img
+                  src="https://api.builder.io/api/v1/image/assets/TEMP/c5490e0f2a3102db7e614a5e8fc18aa50dd571e1?width=1745"
+                  alt="The Brandt Interior Staircase"
+                  className="w-full h-auto object-cover rounded-lg"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* The Building Section */}
+      <section className="relative w-full px-4 sm:px-8 lg:px-12 py-12 lg:py-20 bg-[#FBEEE6]">
+        <div className="max-w-[1809px] mx-auto">
+          {/* Main Heading */}
+          <h2 className="text-[clamp(80px,15vw,284px)] font-bold leading-[0.79] uppercase text-[#231F20] text-center mb-12 lg:mb-16">
+            the building
+          </h2>
+
+          {/* Two Column Layout */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+            {/* Left Column - Building Illustration */}
+            <div className="flex items-center justify-center lg:justify-start">
+              <div className="w-full max-w-[893px]">
+                <img
+                  src="https://api.builder.io/api/v1/image/assets/TEMP/6052b6891ec14dbba5ad3c7e10843f06445b40b7?width=1785"
+                  alt="The Brandt Building Illustration"
+                  className="w-full h-auto object-contain mix-blend-multiply"
+                />
+              </div>
+            </div>
+
+            {/* Right Column - Description and Floor List */}
+            <div className="space-y-8 lg:space-y-12">
+              {/* Description */}
+              <p className="text-[clamp(20px,2.2vw,37px)] leading-[1.44] text-[#231F20] font-normal">
+                A magnificent entrance, a spiral staircase, a
+                stunning atrium, high ceilings, hanging gardens
+                and terraces with a spectacular view – some of the
+                many features of The Brandt that make you smile.
+                All to be found in a fully renovated classic 80's 7-
+                storey office building located at the most famous
+                and iconic square of Amsterdam.
+              </p>
+
+              {/* Floor List */}
+              <div className="space-y-0">
+                {/* Floor 6 */}
+                <div className="flex justify-between items-center py-3 border-b border-black group cursor-pointer hover:bg-black/5 transition-colors">
+                  <span className="text-[clamp(20px,1.8vw,29px)] text-[#231F20] uppercase">Floor 6</span>
+                  <svg className="w-8 h-8 flex-shrink-0" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.33301 22.6666L22.6664 9.33325" stroke="#231F20" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M9.33301 9.33325H22.6664V22.6666" stroke="#231F20" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
+
+                {/* Floor 5 */}
+                <div className="flex justify-between items-center py-3 border-b border-black group cursor-pointer hover:bg-black/5 transition-colors">
+                  <span className="text-[clamp(20px,1.8vw,29px)] text-[#231F20] uppercase">Floor 5</span>
+                  <svg className="w-8 h-8 flex-shrink-0" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.33301 22.6666L22.6664 9.33325" stroke="#231F20" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M9.33301 9.33325H22.6664V22.6666" stroke="#231F20" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
+
+                {/* Floor 4 */}
+                <div className="flex justify-between items-center py-3 border-b border-black group cursor-pointer hover:bg-black/5 transition-colors">
+                  <span className="text-[clamp(20px,1.8vw,29px)] text-[#231F20] uppercase">Floor 4</span>
+                  <svg className="w-8 h-8 flex-shrink-0" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.33301 22.6666L22.6664 9.33325" stroke="#231F20" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M9.33301 9.33325H22.6664V22.6666" stroke="#231F20" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
+
+                {/* Floor 3 */}
+                <div className="flex justify-between items-center py-3 border-b border-black group cursor-pointer hover:bg-black/5 transition-colors">
+                  <span className="text-[clamp(20px,1.8vw,29px)] text-[#231F20] uppercase">Floor 3</span>
+                  <svg className="w-8 h-8 flex-shrink-0" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.33301 22.6666L22.6664 9.33325" stroke="#231F20" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M9.33301 9.33325H22.6664V22.6666" stroke="#231F20" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
+
+                {/* Floor 2 */}
+                <div className="flex justify-between items-center py-3 border-b border-black group cursor-pointer hover:bg-black/5 transition-colors">
+                  <span className="text-[clamp(20px,1.8vw,29px)] text-[#231F20] uppercase">Floor 2</span>
+                  <svg className="w-8 h-8 flex-shrink-0" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.33301 22.6666L22.6664 9.33325" stroke="#231F20" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M9.33301 9.33325H22.6664V22.6666" stroke="#231F20" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
+
+                {/* Floor 1 */}
+                <div className="flex justify-between items-center py-3 border-b border-black group cursor-pointer hover:bg-black/5 transition-colors">
+                  <span className="text-[clamp(20px,1.8vw,29px)] text-[#231F20] uppercase">Floor 1</span>
+                  <svg className="w-8 h-8 flex-shrink-0" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.33301 22.6666L22.6664 9.33325" stroke="#231F20" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M9.33301 9.33325H22.6664V22.6666" stroke="#231F20" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
+              </div>
+
+              {/* Inquire Button */}
+              <div className="pt-8">
+                <button className="border border-[#2E302D] text-[#231F20] px-7 py-4 text-[clamp(18px,1.5vw,23px)] font-bold uppercase hover:bg-[#231F20] hover:text-white transition-colors">
+                  INQUIRE
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Key Facts Section */}
+      <section className="relative w-full px-4 sm:px-8 lg:px-12 py-12 lg:py-20 bg-[#DDE1DF]">
+        <div className="max-w-[1809px] mx-auto">
+          {/* Heading */}
+          <h2 className="text-[clamp(60px,9vw,131px)] font-bold leading-[0.95] uppercase text-[#231F20] mb-12 lg:mb-16">
+            keyfacts
+          </h2>
+
+          {/* Grid of Key Facts */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border-t border-l border-[#2E302D]">
+            {/* FOR EVERYONE */}
+            <div className="flex flex-col items-center justify-center text-center px-6 py-8 border-r border-b border-[#2E302D] min-h-[168px]">
+              <h3 className="text-[clamp(22px,1.8vw,30px)] font-bold uppercase text-[#231F20] mb-2">
+                FOR EVERYONE
+              </h3>
+              <p className="text-[clamp(18px,1.5vw,24px)] text-[#231F20] leading-[1.44]">
+                A perfect home for a<br />wide range of occupiers.
+              </p>
+            </div>
+
+            {/* SPACIOUS OFFICE SPACE */}
+            <div className="flex flex-col items-center justify-center text-center px-6 py-8 border-r border-b border-[#2E302D] min-h-[168px]">
+              <h3 className="text-[clamp(22px,1.8vw,30px)] font-bold uppercase text-[#231F20] mb-2">
+                SPACIOUS OFFICE SPACE
+              </h3>
+              <p className="text-[clamp(18px,1.5vw,24px)] text-[#231F20] leading-[1.44]">
+                Natural light boosts<br />productivity by 20%
+              </p>
+            </div>
+
+            {/* PERFECT ACCESSIBILITY */}
+            <div className="flex flex-col items-center justify-center text-center px-6 py-8 border-r border-b border-[#2E302D] min-h-[168px]">
+              <h3 className="text-[clamp(22px,1.8vw,30px)] font-bold uppercase text-[#231F20] mb-2">
+                PERFECT ACCESSIBILITY
+              </h3>
+              <p className="text-[clamp(18px,1.5vw,24px)] text-[#231F20] leading-[1.44]">
+                By bike, public transport, and by car.
+              </p>
+            </div>
+
+            {/* ONE OF A KIND */}
+            <div className="flex flex-col items-center justify-center text-center px-6 py-8 border-r border-b border-[#2E302D] min-h-[168px]">
+              <h3 className="text-[clamp(22px,1.8vw,30px)] font-bold uppercase text-[#231F20] mb-2">
+                ONE OF A KIND
+              </h3>
+              <p className="text-[clamp(18px,1.5vw,24px)] text-[#231F20] leading-[1.44]">
+                Single and multi-tenant<br />office opportunity.
+              </p>
+            </div>
+
+            {/* EFFICIENT LAYOUT */}
+            <div className="flex flex-col items-center justify-center text-center px-6 py-8 border-r border-b border-[#2E302D] min-h-[168px]">
+              <h3 className="text-[clamp(22px,1.8vw,30px)] font-bold uppercase text-[#231F20] mb-2">
+                EFFICIENT LAYOUT
+              </h3>
+              <p className="text-[clamp(18px,1.5vw,23px)] text-[#231F20] leading-[1.47]">
+                Large, open, and flexible .
+              </p>
+            </div>
+
+            {/* SUSTAINABILITY */}
+            <div className="flex flex-col items-center justify-center text-center px-6 py-8 border-r border-b border-[#2E302D] min-h-[168px]">
+              <h3 className="text-[clamp(22px,1.8vw,31px)] font-bold uppercase text-[#231F20] mb-2">
+                SUSTAINABILITY
+              </h3>
+              <p className="text-[clamp(18px,1.5vw,25px)] text-[#231F20] leading-[1.4]">
+                EPC Label A+++. Paris<br />Proof. BREEAM Excellent.
+              </p>
+            </div>
+
+            {/* OUTDOOR SPACE */}
+            <div className="flex flex-col items-center justify-center text-center px-6 py-8 border-r border-b border-[#2E302D] min-h-[168px]">
+              <h3 className="text-[clamp(22px,1.8vw,30px)] font-bold uppercase text-[#231F20] mb-2">
+                OUTDOOR SPACE
+              </h3>
+              <p className="text-[clamp(18px,1.5vw,23px)] text-[#231F20] leading-[1.47]">
+                Terraces. Garden. Oasis of peace.
+              </p>
+            </div>
+
+            {/* CENTRE */}
+            <div className="flex flex-col items-center justify-center text-center px-6 py-8 border-r border-b border-[#2E302D] min-h-[168px]">
+              <h3 className="text-[clamp(22px,1.8vw,30px)] font-bold uppercase text-[#231F20] mb-2">
+                CENTRE
+              </h3>
+              <p className="text-[clamp(18px,1.5vw,25px)] text-[#231F20] leading-[1.4]">
+                Unique office building. In<br />the heart of Amsterdam.
+              </p>
+            </div>
+
+            {/* EASY FLOORPLAN */}
+            <div className="flex flex-col items-center justify-center text-center px-6 py-8 border-r border-b border-[#2E302D] min-h-[202px] sm:col-span-2 lg:col-span-1">
+              <h3 className="text-[clamp(22px,1.8vw,30px)] font-bold uppercase text-[#231F20] mb-2">
+                EASY FLOORPLAN
+              </h3>
+              <p className="text-[clamp(18px,1.5vw,24px)] text-[#231F20] leading-[1.44]">
+                Floors can be easily divided.
+              </p>
+            </div>
+
+            {/* AMENITIES */}
+            <div className="flex flex-col items-center justify-center text-center px-6 py-8 border-r border-b border-[#2E302D] min-h-[202px] sm:col-span-2 lg:col-span-3">
+              <h3 className="text-[clamp(22px,1.8vw,31px)] font-bold uppercase text-[#231F20] mb-2">
+                AMENITIES
+              </h3>
+              <p className="text-[clamp(18px,1.5vw,25px)] text-[#231F20] leading-[1.4]">
+                In direct surroundings: (Michelin<br />
+                star) restaurants, bars, clubs,<br />
+                hotels, shops, leisure activities.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default TheBrandt;

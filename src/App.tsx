@@ -27,6 +27,7 @@ import Affordable from "./pages/AffordableFlats";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
 import LocationSpecificPage, { ResidentialNagpur440008, CommercialNagpur440008 } from "./pages/LocationPages";
+import TheBrandt from "./pages/TheBrandt";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -51,6 +52,7 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/service-areas" element={<ServiceAreasPage />} />
           <Route path="/ai-assistant" element={<AIAssistantPage />} />
+          <Route path="/the-brandt" element={<TheBrandt />} />
 
           {/* Targeted service pages */}
           <Route path="/buy-residential-property-nagpur" element={<BuyResidential />} />
