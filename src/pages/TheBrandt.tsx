@@ -426,6 +426,360 @@ const TheBrandt = () => {
         </div>
       </section>
 
+      {/* Image Gallery Carousel Section */}
+      <section className="relative w-full px-4 sm:px-8 lg:px-12 py-12 lg:py-20 bg-white overflow-hidden">
+        <div className="max-w-[1905px] mx-auto">
+          <div className="relative">
+            {/* Carousel Container */}
+            <div className="relative overflow-hidden rounded-lg">
+              {/* Image Slider */}
+              <div className="flex gap-4 md:gap-5 overflow-x-auto scroll-smooth snap-x snap-mandatory hide-scrollbar">
+                <div className="flex-shrink-0 w-full md:w-[calc(75%-10px)] snap-center">
+                  <img
+                    src="https://api.builder.io/api/v1/image/assets/TEMP/d6b3b6e39ff59191efbc72ddd4dcef706861e2cb?width=2848"
+                    alt="The Brandt Gallery Image 1"
+                    className="w-full h-auto aspect-[3/2] object-cover rounded-lg"
+                  />
+                </div>
+                <div className="flex-shrink-0 w-full md:w-[calc(75%-10px)] snap-center">
+                  <img
+                    src="https://api.builder.io/api/v1/image/assets/TEMP/65bd395e772cd9ec7529beb894a60e4b228f23f0?width=2848"
+                    alt="The Brandt Gallery Image 2"
+                    className="w-full h-auto aspect-[3/2] object-cover rounded-lg"
+                  />
+                </div>
+                <div className="flex-shrink-0 w-full md:w-[calc(75%-10px)] snap-center">
+                  <img
+                    src="https://api.builder.io/api/v1/image/assets/TEMP/86d8b4a29a6385881278e69cdd1b7cf588344bf5?width=2848"
+                    alt="The Brandt Gallery Image 3"
+                    className="w-full h-auto aspect-[3/2] object-cover rounded-lg"
+                  />
+                </div>
+                <div className="flex-shrink-0 w-full md:w-[calc(75%-10px)] snap-center">
+                  <img
+                    src="https://api.builder.io/api/v1/image/assets/TEMP/b4c009c9e133b31aaea31a6da37fd5d98c956b19?width=2848"
+                    alt="The Brandt Gallery Image 4"
+                    className="w-full h-auto aspect-[3/2] object-cover rounded-lg"
+                  />
+                </div>
+                <div className="flex-shrink-0 w-full md:w-[calc(75%-10px)] snap-center">
+                  <img
+                    src="https://api.builder.io/api/v1/image/assets/TEMP/2d7feecfd1c5a53a1ea244dc93b2748ed7c8e5d1?width=2848"
+                    alt="The Brandt Gallery Image 5"
+                    className="w-full h-auto aspect-[3/2] object-cover rounded-lg"
+                  />
+                </div>
+                <div className="flex-shrink-0 w-full md:w-[calc(75%-10px)] snap-center">
+                  <img
+                    src="https://api.builder.io/api/v1/image/assets/TEMP/7a182fdfafd29cd022feb450d8b86a000ce5ac0c?width=2848"
+                    alt="The Brandt Gallery Image 6"
+                    className="w-full h-auto aspect-[3/2] object-cover rounded-lg"
+                  />
+                </div>
+              </div>
+
+              {/* Previous Button */}
+              <button
+                className="absolute left-2 md:left-4 bottom-4 md:bottom-8 w-16 md:w-20 h-12 md:h-16 bg-white/80 hover:bg-white rounded-lg flex items-center justify-center transition-all hover:scale-105 shadow-lg"
+                onClick={(e) => {
+                  const container = e.currentTarget.parentElement?.querySelector('.flex.gap-4');
+                  if (container) {
+                    container.scrollBy({ left: -container.clientWidth * 0.75, behavior: 'smooth' });
+                  }
+                }}
+                aria-label="Previous slide"
+              >
+                <svg className="w-8 md:w-10 h-8 md:h-10 opacity-50" viewBox="0 0 82 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0.000488281 32.835C16.0927 26.7779 27.6051 16.0453 34.161 0C34.9013 0.343307 35.557 0.648041 36.4659 1.06994C35.5021 3.23538 34.6518 5.39889 33.6006 7.45972C30.9343 12.6865 27.3335 17.2295 23.1943 21.3588C22.668 21.8839 22.1445 22.4152 21.6633 22.9808C20.3237 24.5556 20.0165 26.3315 20.8126 28.2414C21.6331 30.2105 23.1217 31.3292 25.2675 31.5013C25.7602 31.5409 26.2577 31.5312 26.7528 31.5312C44.4481 31.5327 62.144 31.5322 79.8393 31.5322C80.2934 31.5322 80.7476 31.5322 81.2692 31.5322V34.159C80.8133 34.159 80.3684 34.159 79.9234 34.159C62.0155 34.159 44.1078 34.1677 26.2 34.1489C23.9653 34.1465 22.1729 34.8693 21.0745 36.8939C19.8214 39.204 20.2641 41.4283 22.3156 43.4384C25.9482 46.9964 29.2331 50.8417 31.8956 55.1919C33.7116 58.159 35.2748 61.2484 36.3015 64.6709C35.6132 65.0041 34.9571 65.3211 34.1606 65.7067C27.7555 49.5563 16.0457 38.9899 0.000488281 32.835Z" fill="#231F20"/>
+                </svg>
+              </button>
+
+              {/* Next Button */}
+              <button
+                className="absolute right-2 md:right-4 bottom-4 md:bottom-8 w-16 md:w-20 h-12 md:h-16 bg-white/80 hover:bg-white rounded-lg flex items-center justify-center transition-all hover:scale-105 shadow-lg"
+                onClick={(e) => {
+                  const container = e.currentTarget.parentElement?.querySelector('.flex.gap-4');
+                  if (container) {
+                    container.scrollBy({ left: container.clientWidth * 0.75, behavior: 'smooth' });
+                  }
+                }}
+                aria-label="Next slide"
+              >
+                <svg className="w-8 md:w-10 h-8 md:h-10" viewBox="0 0 82 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M81.2669 32.999C65.264 39.0152 53.8151 49.6757 47.2953 65.6129C46.5592 65.2722 45.9072 64.9694 45.0032 64.5505C45.9617 62.3991 46.8073 60.2501 47.8527 58.2035C50.5043 53.0119 54.0852 48.4994 58.2014 44.3979C58.7249 43.8764 59.2454 43.3486 59.7239 42.7868C61.0563 41.2226 61.3615 39.4588 60.57 37.5617C59.754 35.6058 58.2736 34.4947 56.1397 34.3237C55.6497 34.2844 55.155 34.294 54.6626 34.294C37.0652 34.2926 19.4673 34.293 1.86987 34.293C1.41814 34.293 0.966406 34.293 0.447754 34.293V31.6839C0.90092 31.6839 1.34357 31.6839 1.78621 31.6839C19.5949 31.6839 37.4037 31.6839 55.2123 31.6939C57.4347 31.6963 59.2172 30.9784 60.3093 28.9674C61.556 26.6728 61.1153 24.4636 59.0753 22.4669C55.4628 18.9329 52.196 15.1135 49.5483 10.7926C47.7423 7.8453 46.1878 4.77679 45.1667 1.37737C45.8512 1.04643 46.5038 0.731778 47.2958 0.348633C53.6655 16.3903 65.3103 26.8855 81.2669 32.999Z" fill="#231F20"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Location & Accessibility Section */}
+      <section className="relative w-full px-4 sm:px-8 lg:px-12 py-12 lg:py-20 bg-white">
+        <div className="max-w-[1809px] mx-auto">
+          {/* Heading and Description */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-12 lg:mb-16">
+            {/* Left Column - Heading */}
+            <div>
+              <h2 className="text-[clamp(60px,8.5vw,167px)] font-bold leading-[1.17] uppercase text-[#231F20] mb-0">
+                LOCATION,<br />
+                ACCESSIBILITY<br />
+                TIPS
+              </h2>
+            </div>
+
+            {/* Right Column - Description and Button */}
+            <div className="flex flex-col justify-center gap-6 lg:gap-8">
+              <p className="text-[clamp(18px,1.9vw,38px)] leading-[1.4] text-[#231F20]">
+                Amsterdam considers itself as a small metropolis
+                with a big international heart. Here, approximately
+                170 different nationalities live and work together
+                side by side. Its more than 900,000 inhabitants
+                give the city the character for which it is famously
+                known worldwide: progressive, open-minded, and
+                diverse. Amsterdam reflects the world as an inter
+              </p>
+              <p className="text-[clamp(18px,1.9vw,37px)] leading-[1.45] text-[#231F20]">
+                you can find some of the best places around The
+                Brandt building.
+              </p>
+              <div>
+                <button className="bg-[#231F20] text-white px-6 py-4 text-[clamp(18px,1.2vw,23px)] font-bold uppercase hover:bg-[#2E302D] transition-colors">
+                  SEE ACCESIBILITY
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Tabs Navigation */}
+          <div className="border-t border-b border-l border-[#2E302D] grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 mb-0">
+            <div className="border-r border-[#2E302D] px-4 py-3 text-center">
+              <button className="text-[clamp(16px,1.2vw,22px)] uppercase text-[#231F20] hover:font-bold transition-all">
+                MUST VISIT
+              </button>
+            </div>
+            <div className="border-r border-[#2E302D] px-4 py-3 text-center">
+              <button className="text-[clamp(16px,1.2vw,22px)] uppercase text-[#231F20] hover:font-bold transition-all">
+                HOTELS
+              </button>
+            </div>
+            <div className="border-r border-[#2E302D] px-4 py-3 text-center">
+              <button className="text-[clamp(16px,1.2vw,22px)] uppercase text-[#231F20] hover:font-bold transition-all">
+                FOOD & DRINKS
+              </button>
+            </div>
+            <div className="border-r border-[#2E302D] px-4 py-3 text-center">
+              <button className="text-[clamp(16px,1.2vw,22px)] uppercase text-[#231F20] hover:font-bold transition-all">
+                BOUTIQUES
+              </button>
+            </div>
+            <div className="border-r border-[#2E302D] px-4 py-3 text-center">
+              <button className="text-[clamp(16px,1.2vw,22px)] uppercase text-[#231F20] hover:font-bold transition-all">
+                NIGHT CLUBS & BARS
+              </button>
+            </div>
+          </div>
+
+          {/* Content Area - List and Map */}
+          <div className="grid grid-cols-1 lg:grid-cols-[724px_1fr] border-b border-[#2E302D]">
+            {/* Left Column - Scrollable List */}
+            <div className="h-[624px] overflow-y-auto border-l border-r border-[#2E302D] hide-scrollbar">
+              {/* List Items */}
+              <div className="divide-y divide-[#2E302D]">
+                {/* Tivoli Doelen Amsterdam */}
+                <div className="flex gap-4 p-4 hover:bg-gray-50 transition-colors">
+                  <img
+                    src="https://api.builder.io/api/v1/image/assets/TEMP/498f8170a6adf236123ca503a6a92e9b83e28f2f?width=565"
+                    alt="Tivoli Doelen Amsterdam"
+                    className="w-[283px] h-[240px] object-cover flex-shrink-0"
+                  />
+                  <div className="flex-1 flex flex-col justify-start pt-2">
+                    <h3 className="text-[clamp(18px,1.1vw,20px)] font-bold uppercase text-[#231F20] mb-2">
+                      Tivoli Doelen Amsterdam
+                    </h3>
+                    <p className="text-[clamp(16px,1.05vw,20px)] leading-[1.44] text-[#231F20]">
+                      Tivoli Doelen is Amsterdam's oldest
+                      hotel and an integral part of the city's
+                      rich history. Located in the medieval
+                      centre, it has been the preferred
+                      retreat of royalty for centuries.
+                    </p>
+                  </div>
+                </div>
+
+                {/* The Dylan */}
+                <div className="flex gap-4 p-4 hover:bg-gray-50 transition-colors">
+                  <div className="w-[283px] h-[257px] bg-gray-200 flex-shrink-0"></div>
+                  <div className="flex-1 flex flex-col justify-start pt-2">
+                    <h3 className="text-[clamp(18px,1.1vw,20px)] font-bold uppercase text-[#231F20] mb-2">
+                      The Dylan
+                    </h3>
+                    <p className="text-[clamp(16px,1.05vw,20px)] leading-[1.44] text-[#231F20]">
+                      Located in the heart of the "9-streets"
+                      area on the prestigious "Keizersgracht"
+                      canal, The Dylan Amsterdam is the
+                      ideal home base as you discover the
+                      hidden treasures of Amsterdam's
+                      past and present on foot or by bike.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Amstel Hotel */}
+                <div className="flex gap-4 p-4 hover:bg-gray-50 transition-colors">
+                  <div className="w-[283px] h-[239px] bg-gray-200 flex-shrink-0"></div>
+                  <div className="flex-1 flex flex-col justify-start pt-2">
+                    <h3 className="text-[clamp(18px,1.1vw,20px)] font-bold uppercase text-[#231F20] mb-2">
+                      Amstel Hotel
+                    </h3>
+                    <p className="text-[clamp(16px,1.05vw,20px)] leading-[1.44] text-[#231F20]">
+                      Enter through the famous revolving
+                      doors where many greats preceded
+                      you. Enjoy the indoor pool, exquisite
+                      dining, and health and fitness
+                      club to rest, relax, and rejuvenate.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Ku Kitchen & Bar */}
+                <div className="flex gap-4 p-4 hover:bg-gray-50 transition-colors">
+                  <img
+                    src="https://api.builder.io/api/v1/image/assets/TEMP/f9598a267e2a1933163c024d15b9c33de1902cf3?width=565"
+                    alt="Ku Kitchen & Bar"
+                    className="w-[283px] h-[239px] object-cover flex-shrink-0"
+                  />
+                  <div className="flex-1 flex flex-col justify-start pt-2">
+                    <h3 className="text-[clamp(18px,1.1vw,20px)] font-bold uppercase text-[#231F20] mb-2">
+                      Ku Kitchen & Bar
+                    </h3>
+                    <p className="text-[clamp(16px,1.05vw,21px)] leading-[1.41] text-[#231F20]">
+                      Experience authentic Japanese
+                      fusion cuisine, savor premium sushi,
+                      signature cocktails, and Japanese
+                      whiskeys in this vibrant restaurant.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Tia Rosa */}
+                <div className="flex gap-4 p-4 hover:bg-gray-50 transition-colors">
+                  <img
+                    src="https://api.builder.io/api/v1/image/assets/TEMP/f45e664ce63df6e7c653ef2876b5389ed78263f3?width=565"
+                    alt="Tia Rosa"
+                    className="w-[283px] h-[239px] object-cover flex-shrink-0"
+                  />
+                  <div className="flex-1 flex flex-col justify-start pt-2">
+                    <h3 className="text-[clamp(18px,1.1vw,20px)] font-bold uppercase text-[#231F20] mb-2">
+                      Tia Rosa
+                    </h3>
+                    <p className="text-[clamp(16px,1.05vw,21px)] leading-[1.4] text-[#231F20]">
+                      This tapas restaurant is where
+                      Spanish passion and Amsterdam
+                      cosiness come together.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Quartier Latin */}
+                <div className="flex gap-4 p-4 hover:bg-gray-50 transition-colors">
+                  <img
+                    src="https://api.builder.io/api/v1/image/assets/TEMP/f3cfb9c7eccf7adac0c31b14538eb386cecf343c?width=565"
+                    alt="Quartier Latin"
+                    className="w-[283px] h-[239px] object-cover flex-shrink-0"
+                  />
+                  <div className="flex-1 flex flex-col justify-start pt-2">
+                    <h3 className="text-[clamp(18px,1.1vw,20px)] font-bold uppercase text-[#231F20] mb-2">
+                      Quartier Latin
+                    </h3>
+                    <p className="text-[clamp(16px,1.05vw,20px)] leading-[1.45] text-[#231F20]">
+                      A french restaurant with a complete
+                      menu and good bottled wine choices.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Incanto */}
+                <div className="flex gap-4 p-4 hover:bg-gray-50 transition-colors">
+                  <img
+                    src="https://api.builder.io/api/v1/image/assets/TEMP/e3d276ef8b22073f41f07540ed9eaba7c94c0bb5?width=565"
+                    alt="Incanto"
+                    className="w-[283px] h-[239px] object-cover flex-shrink-0"
+                  />
+                  <div className="flex-1 flex flex-col justify-start pt-2">
+                    <h3 className="text-[clamp(18px,1.1vw,20px)] font-bold uppercase text-[#231F20] mb-2">
+                      Incanto
+                    </h3>
+                    <p className="text-[clamp(16px,1.05vw,20px)] leading-[1.44] text-[#231F20]">
+                      Incanto tries to represent the warm,
+                      enchanting ambiance of Italy.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Burgermeester */}
+                <div className="flex gap-4 p-4 hover:bg-gray-50 transition-colors">
+                  <img
+                    src="https://api.builder.io/api/v1/image/assets/TEMP/c69c758cc812afb9eb6dc01203439ce379c7af1f?width=565"
+                    alt="Burgermeester"
+                    className="w-[283px] h-[239px] object-cover flex-shrink-0"
+                  />
+                  <div className="flex-1 flex flex-col justify-start pt-2">
+                    <h3 className="text-[clamp(18px,1.1vw,20px)] font-bold uppercase text-[#231F20] mb-2">
+                      Burgermeester
+                    </h3>
+                    <p className="text-[clamp(16px,1.05vw,20px)] leading-[1.44] text-[#231F20]">
+                      A burger place where everything's
+                      fresh, sustainable, and homemade.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column - Map */}
+            <div className="relative h-[624px] bg-gray-100 border-r border-[#2E302D]">
+              <img
+                src="https://api.builder.io/api/v1/image/assets/TEMP/44b2e6f8afa77067426b132f2f5e46d949ed6f40?width=2169"
+                alt="Amsterdam Map"
+                className="w-full h-full object-cover"
+              />
+
+              {/* Map Markers - Sample positioning */}
+              <div className="absolute top-[48%] left-[52%] w-5 h-5 bg-[#FBEEE6] border border-[#2E302D] rounded-full"></div>
+              <div className="absolute top-[43%] left-[28%] w-5 h-5 bg-[#FBEEE6] border border-[#2E302D] rounded-full"></div>
+              <div className="absolute top-[85%] left-[70%] w-5 h-5 bg-[#FBEEE6] border border-[#2E302D] rounded-full"></div>
+              <div className="absolute top-[2%] left-[39%] w-5 h-5 bg-[#FBEEE6] border border-[#2E302D] rounded-full"></div>
+              <div className="absolute top-[85%] left-[58%] w-5 h-5 bg-[#CFAF85] border border-[#2E302D] rounded-full"></div>
+              <div className="absolute top-[82%] left-[48%] w-5 h-5 bg-[#CFAF85] border border-[#2E302D] rounded-full"></div>
+              <div className="absolute top-[71%] left-[52%] w-5 h-5 bg-[#CFAF85] border border-[#2E302D] rounded-full"></div>
+              <div className="absolute top-[71%] left-[56%] w-5 h-5 bg-[#CFAF85] border border-[#2E302D] rounded-full"></div>
+              <div className="absolute top-[76%] left-[77%] w-5 h-5 bg-[#A4E2F7] border border-[#2E302D] rounded-full"></div>
+              <div className="absolute top-[72%] left-[52%] w-5 h-5 bg-[#A4E2F7] border border-[#2E302D] rounded-full"></div>
+              <div className="absolute top-[84%] left-[58%] w-5 h-5 bg-[#A4E2F7] border border-[#2E302D] rounded-full"></div>
+              <div className="absolute top-[58%] left-[52%] w-5 h-5 bg-[#B03B22] border border-[#2E302D] rounded-full"></div>
+              <div className="absolute top-[64%] left-[52%] w-5 h-5 bg-[#B03B22] border border-[#2E302D] rounded-full"></div>
+              <div className="absolute top-[75%] left-[47%] w-5 h-5 bg-[#31812B] border border-[#2E302D] rounded-full"></div>
+              <div className="absolute top-[72%] left-[47%] w-5 h-5 bg-[#31812B] border border-[#2E302D] rounded-full"></div>
+
+              {/* Map Controls */}
+              <div className="absolute bottom-12 right-8 flex flex-col gap-1">
+                <button className="w-8 h-8 bg-white border border-[#57595E] flex items-center justify-center hover:bg-gray-100 transition-colors">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.7897 2.5C10.1061 2.5 10.3677 2.73501 10.4091 3.04007L10.4148 3.12487L10.4158 9.16667H16.4601C16.8053 9.16667 17.0851 9.44649 17.0851 9.79167C17.0851 10.1081 16.8499 10.3696 16.5449 10.411L16.4601 10.4167H10.4158L10.4175 16.4576C10.4176 16.8028 10.1378 17.0827 9.79266 17.0827C9.47625 17.0827 9.21471 16.8477 9.17326 16.5427L9.16754 16.4578L9.16583 10.4167H3.125C2.77982 10.4167 2.5 10.1368 2.5 9.79167C2.5 9.47525 2.73513 9.21376 3.04019 9.17237L3.125 9.16667H9.16583L9.16483 3.12513C9.16476 2.77995 9.44452 2.5 9.7897 2.5Z" fill="#111111"/>
+                  </svg>
+                </button>
+                <button className="w-8 h-8 bg-white border border-[#57595E] flex items-center justify-center hover:bg-gray-100 transition-colors">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.12891 10.418H16.8722C17.2173 10.418 17.4972 10.1381 17.4972 9.79297C17.4972 9.44779 17.2173 9.16797 16.8722 9.16797H3.12891C2.78373 9.16797 2.50391 9.44779 2.50391 9.79297C2.50391 10.1381 2.78373 10.418 3.12891 10.418Z" fill="#111111"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );
