@@ -58,7 +58,8 @@ export function FigmaNavBar({ className }: NavBarProps) {
     <header
       ref={navRef}
       className={cn(
-        "absolute top-0 left-0 right-0 z-50 bg-transparent text-white",
+        "absolute top-0 left-0 right-0 z-50 bg-transparent",
+        isTheBrandtPage ? "text-black" : "text-white",
         isEditor && "pointer-events-none",
         className
       )}>
