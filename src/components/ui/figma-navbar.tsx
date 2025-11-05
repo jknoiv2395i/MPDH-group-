@@ -123,19 +123,22 @@ export function FigmaNavBar({ className }: NavBarProps) {
         <div className="md:hidden">
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="relative flex flex-col items-center justify-center w-8 h-8 text-white focus:outline-none"
+            className={cn("relative flex flex-col items-center justify-center w-8 h-8 focus:outline-none", isTheBrandtPage ? "text-black" : "text-white")}
             aria-label="Toggle mobile menu"
           >
             <span className={cn(
-              "block h-0.5 w-6 bg-white rounded-full transition-all duration-300 ease-in-out",
+              "block h-0.5 w-6 rounded-full transition-all duration-300 ease-in-out",
+              isTheBrandtPage ? "bg-black" : "bg-white",
               isMobileMenuOpen ? "rotate-45 translate-y-1.5" : "translate-y-0"
             )}></span>
             <span className={cn(
-              "block h-0.5 w-6 bg-white rounded-full transition-all duration-300 ease-in-out my-1",
+              "block h-0.5 w-6 rounded-full transition-all duration-300 ease-in-out my-1",
+              isTheBrandtPage ? "bg-black" : "bg-white",
               isMobileMenuOpen ? "opacity-0" : "opacity-100"
             )}></span>
             <span className={cn(
-              "block h-0.5 w-6 bg-white rounded-full transition-all duration-300 ease-in-out",
+              "block h-0.5 w-6 rounded-full transition-all duration-300 ease-in-out",
+              isTheBrandtPage ? "bg-black" : "bg-white",
               isMobileMenuOpen ? "-rotate-45 -translate-y-1.5" : "translate-y-0"
             )}></span>
           </button>
