@@ -86,7 +86,7 @@ const TheBrandt = () => {
                 playsInline
                 poster="https://api.builder.io/api/v1/image/assets/TEMP/c27c95397d0d80850848eeaeb7e7b21f2a2cfb46?width=3618"
               >
-                <source src="https://cdn.builder.io/o/assets%2F701ea542ab5b4bb3a64f146c221a3d1d%2F37b775637b804b41a9ba487a30d981c0?alt=media&token=4f9d4c00-f46c-4276-aaf0-06f669aef5fb&apiKey=701ea542ab5b4bb3a64f146c221a3d1d" type="video/mp4" />
+                <source src="https://cdn.builder.io/o/assets%2F701ea542ab5b4bb3a64f146c221a3d1d%2Fbe53d790634e428692744ea4c1eb6ef9?alt=media&token=1a57253e-155e-4c93-8f43-ac21ecae9e05&apiKey=701ea542ab5b4bb3a64f146c221a3d1d" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
 
