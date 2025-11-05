@@ -153,7 +153,12 @@ export function FigmaNavBar({ className }: NavBarProps) {
               <a
                 key={item.name}
                 href={item.url}
-                className="flex items-center justify-between text-white/80 hover:text-white transition-colors duration-200 py-2"
+                className={cn(
+                  "flex items-center justify-between transition-colors duration-200 py-2",
+                  isTheBrandtPage
+                    ? "text-black/80 hover:text-black"
+                    : "text-white/80 hover:text-white"
+                )}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.name}
