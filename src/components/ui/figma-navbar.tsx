@@ -113,7 +113,12 @@ export function FigmaNavBar({ className }: NavBarProps) {
         <div className="hidden md:flex items-center">
           <a
             href="https://mphdgroup.com/services"
-            className="px-6 py-2 bg-white text-[black] rounded-full text-sm lg:text-base font-medium hover:bg-gray-50 transition-colors duration-200 cursor-pointer pointer-events-auto"
+            className={cn(
+              "px-6 py-2 rounded-full text-sm lg:text-base font-medium transition-colors duration-200 cursor-pointer pointer-events-auto",
+              isTheBrandtPage
+                ? "bg-black text-white hover:bg-gray-900"
+                : "bg-black text-white hover:bg-gray-900"
+            )}
           >
             Contact us
           </a>
