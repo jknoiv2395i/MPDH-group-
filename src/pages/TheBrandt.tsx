@@ -75,7 +75,7 @@ const TheBrandt = () => {
       </section>
 
       {/* Video Section */}
-      <AnimatedSection>
+
         <section className="relative w-full px-4 sm:px-8 lg:px-12 mb-12 lg:mb-20">
           <div className="max-w-[1809px] mx-auto">
             <div className="relative w-full aspect-video rounded-2xl overflow-hidden bg-gray-200">
@@ -107,10 +107,10 @@ const TheBrandt = () => {
             </div>
           </div>
         </section>
-      </AnimatedSection>
+
 
       {/* Specifications Section */}
-      <AnimatedSection>
+
         <section className="relative w-full px-4 sm:px-8 lg:px-12 py-12 lg:py-20">
           <div className="max-w-[1809px] mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
@@ -213,10 +213,10 @@ const TheBrandt = () => {
             </div>
           </div>
         </section>
-      </AnimatedSection>
+
 
       {/* The Building Section */}
-      <AnimatedSection>
+
         <section className="relative w-full px-4 sm:px-8 lg:px-12 py-12 lg:py-20 bg-[#FBEEE6]">
           <div className="max-w-[1809px] mx-auto">
             {/* Main Heading */}
@@ -317,10 +317,10 @@ const TheBrandt = () => {
             </div>
           </div>
         </section>
-      </AnimatedSection>
+
 
       {/* Key Facts Section */}
-      <AnimatedSection>
+
         <section className="relative w-full px-4 sm:px-8 lg:px-12 py-12 lg:py-20 bg-[#DDE1DF]">
           <div className="max-w-[1809px] mx-auto">
             {/* Heading */}
@@ -434,10 +434,10 @@ const TheBrandt = () => {
             </div>
           </div>
         </section>
-      </AnimatedSection>
+
 
       {/* Image Gallery Carousel Section */}
-      <AnimatedSection>
+
         <section className="relative w-full px-4 sm:px-8 lg:px-12 py-12 lg:py-20 bg-white overflow-hidden">
           <div className="max-w-[1905px] mx-auto">
             <div className="relative">
@@ -524,10 +524,10 @@ const TheBrandt = () => {
             </div>
           </div>
         </section>
-      </AnimatedSection>
+
 
       {/* Location & Accessibility Section */}
-      <AnimatedSection>
+
         <section className="relative w-full px-4 sm:px-8 lg:px-12 py-12 lg:py-20 bg-white">
           <div className="max-w-[1809px] mx-auto">
             {/* Heading and Description */}
@@ -792,10 +792,10 @@ const TheBrandt = () => {
             </div>
           </div>
         </section>
-      </AnimatedSection>
+
 
       {/* Contact Us Section */}
-      <AnimatedSection>
+
         <section className="relative w-full px-4 sm:px-8 lg:px-12 py-12 lg:py-20" style={{ backgroundColor: '#B03B22' }}>
           <div className="max-w-[1905px] mx-auto">
             {/* Main Heading */}
@@ -905,7 +905,7 @@ const TheBrandt = () => {
             </div>
           </div>
         </section>
-      </AnimatedSection>
+
 
       <Footer />
     </div>
