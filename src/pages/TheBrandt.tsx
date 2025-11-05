@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import { motion, useScroll, useTransform, useInView } from 'framer-motion';
 import { FigmaNavBar } from '@/components/ui/figma-navbar';
 import Footer from '@/components/Footer';
 import { useSEO } from '@/hooks/use-seo';
