@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react"
-import { useNavigate } from "react-router-dom"
+import { useNavigate, useLocation } from "react-router-dom"
 import { cn } from "@/lib/utils"
 import PropertyChoicePopup from './PropertyChoicePopup'
 import { isBuilderEditor } from '@/lib/utils'
@@ -27,10 +27,12 @@ export function FigmaNavBar({ className }: NavBarProps) {
   const [showPropertyPopup, setShowPropertyPopup] = useState(false)
   const navRef = useRef<HTMLElement>(null)
   const navigate = useNavigate()
+  const location = useLocation()
 
   // If the Builder editor/preview is open we make header non-interactive so
   // the editor's visual controls are not blocked by page overlays.
   const isEditor = typeof window !== 'undefined' && isBuilderEditor()
+  const isTheBrandtPage = location.pathname === '/the-brandt'
 
   const handleLogoClick = () => {
     setShowPropertyPopup(false)
@@ -56,7 +58,8 @@ export function FigmaNavBar({ className }: NavBarProps) {
     <header
       ref={navRef}
       className={cn(
-        "absolute top-0 left-0 right-0 z-50 bg-transparent text-white",
+        "absolute top-0 left-0 right-0 z-50 bg-transparent",
+        isTheBrandtPage ? "text-black" : "text-white",
         isEditor && "pointer-events-none",
         className
       )}>
@@ -72,7 +75,7 @@ export function FigmaNavBar({ className }: NavBarProps) {
             <img
               src="https://cdn.builder.io/api/v1/image/assets%2Fe8d1f6446c8d4337adc2ecc52e9ca401%2F818d35f2f02e4bd0a6a439e55a89fd6a?format=webp&width=800"
               alt="MPHD Group - Real Estate Consultants Nagpur Logo"
-              className="h-[61px] w-auto mt-[5px] mr-auto"
+              className={cn("h-[61px] w-auto mt-[5px] mr-auto", isTheBrandtPage && "brightness-0")}
               loading="lazy"
               decoding="async"
               width={200}
@@ -91,7 +94,12 @@ export function FigmaNavBar({ className }: NavBarProps) {
               <div className="flex items-center h-8 min-w-fit">
                 <a
                   href={item.url}
-                  className="text-sm lg:text-base text-white/80 hover:text-white transition-colors duration-200 py-2"
+                  className={cn(
+                    "text-sm lg:text-base transition-colors duration-200 py-2",
+                    isTheBrandtPage
+                      ? "text-black/80 hover:text-black"
+                      : "text-white/80 hover:text-white"
+                  )}
                 >
                   {item.name}
                 </a>
@@ -105,7 +113,12 @@ export function FigmaNavBar({ className }: NavBarProps) {
         <div className="hidden md:flex items-center">
           <a
             href="https://mphdgroup.com/services"
-            className="px-6 py-2 bg-white text-[black] rounded-full text-sm lg:text-base font-medium hover:bg-gray-50 transition-colors duration-200 cursor-pointer pointer-events-auto"
+            className={cn(
+              "px-6 py-2 rounded-full text-sm lg:text-base font-medium transition-colors duration-200 cursor-pointer pointer-events-auto",
+              isTheBrandtPage
+                ? "bg-black text-white hover:bg-gray-900"
+                : "bg-black text-white hover:bg-gray-900"
+            )}
           >
             Contact us
           </a>
@@ -115,19 +128,22 @@ export function FigmaNavBar({ className }: NavBarProps) {
         <div className="md:hidden">
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="relative flex flex-col items-center justify-center w-8 h-8 text-white focus:outline-none"
+            className={cn("relative flex flex-col items-center justify-center w-8 h-8 focus:outline-none", isTheBrandtPage ? "text-black" : "text-white")}
             aria-label="Toggle mobile menu"
           >
             <span className={cn(
-              "block h-0.5 w-6 bg-white rounded-full transition-all duration-300 ease-in-out",
+              "block h-0.5 w-6 rounded-full transition-all duration-300 ease-in-out",
+              isTheBrandtPage ? "bg-black" : "bg-white",
               isMobileMenuOpen ? "rotate-45 translate-y-1.5" : "translate-y-0"
             )}></span>
             <span className={cn(
-              "block h-0.5 w-6 bg-white rounded-full transition-all duration-300 ease-in-out my-1",
+              "block h-0.5 w-6 rounded-full transition-all duration-300 ease-in-out my-1",
+              isTheBrandtPage ? "bg-black" : "bg-white",
               isMobileMenuOpen ? "opacity-0" : "opacity-100"
             )}></span>
             <span className={cn(
-              "block h-0.5 w-6 bg-white rounded-full transition-all duration-300 ease-in-out",
+              "block h-0.5 w-6 rounded-full transition-all duration-300 ease-in-out",
+              isTheBrandtPage ? "bg-black" : "bg-white",
               isMobileMenuOpen ? "-rotate-45 -translate-y-1.5" : "translate-y-0"
             )}></span>
           </button>
@@ -142,16 +158,26 @@ export function FigmaNavBar({ className }: NavBarProps) {
               <a
                 key={item.name}
                 href={item.url}
-                className="flex items-center justify-between text-white/80 hover:text-white transition-colors duration-200 py-2"
+                className={cn(
+                  "flex items-center justify-between transition-colors duration-200 py-2",
+                  isTheBrandtPage
+                    ? "text-black/80 hover:text-black"
+                    : "text-white/80 hover:text-white"
+                )}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.name}
               </a>
             ))}
-            <div className="border-t border-white/10 mt-3 pt-3">
+            <div className={cn("border-t mt-3 pt-3", isTheBrandtPage ? "border-black/10" : "border-white/10")}>
               <a
                 href="/services"
-                className="block text-white/80 hover:text-white transition-colors duration-200 py-2 text-center"
+                className={cn(
+                  "block transition-colors duration-200 py-2 text-center",
+                  isTheBrandtPage
+                    ? "text-black/80 hover:text-black"
+                    : "text-white/80 hover:text-white"
+                )}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Contact us

@@ -66,9 +66,7 @@ const TheBrandt = () => {
               </div>
 
               {/* Right Column - Scroll Indicator */}
-              <div className="flex-shrink-0 self-end lg:self-start lg:mt-48">
-                <p className="text-[clamp(20px,1.5vw,28px)] text-[#2E302D] font-normal">(Scroll)</p>
-              </div>
+              <div className="flex-shrink-0 self-end lg:self-start lg:mt-48" />
             </div>
           </div>
         </div>
@@ -88,7 +86,7 @@ const TheBrandt = () => {
                 playsInline
                 poster="https://api.builder.io/api/v1/image/assets/TEMP/c27c95397d0d80850848eeaeb7e7b21f2a2cfb46?width=3618"
               >
-                <source src="/path-to-video/01_THEBRANDT_MOVIE_audio.mp4" type="video/mp4" />
+                <source src="https://cdn.builder.io/o/assets%2F701ea542ab5b4bb3a64f146c221a3d1d%2Fbe53d790634e428692744ea4c1eb6ef9?alt=media&token=1a57253e-155e-4c93-8f43-ac21ecae9e05&apiKey=701ea542ab5b4bb3a64f146c221a3d1d" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
 
@@ -421,7 +419,7 @@ const TheBrandt = () => {
               </div>
 
               {/* AMENITIES */}
-              <div className="flex flex-col items-center justify-center text-center px-6 py-8 border-r border-b border-[#2E302D] min-h-[202px] sm:col-span-2 lg:col-span-3">
+              <div className="flex flex-col items-center justify-center text-center px-6 py-8 border-r border-b border-[#2E302D] min-h-[202px] sm:col-span-2 lg:col-span-3" style={{ marginLeft: '-5px' }}>
                 <h3 className="text-[clamp(22px,1.8vw,31px)] font-bold uppercase text-[#231F20] mb-2">
                   AMENITIES
                 </h3>
@@ -531,7 +529,7 @@ const TheBrandt = () => {
         <section className="relative w-full px-4 sm:px-8 lg:px-12 py-12 lg:py-20 bg-white">
           <div className="max-w-[1809px] mx-auto">
             {/* Heading and Description */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-12 lg:mb-16">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-12 lg:mb-16" style={{ marginTop: '200px' }}>
               {/* Left Column - Heading */}
               <div>
                 <h2 className="text-[clamp(60px,8.5vw,167px)] font-bold leading-[1.17] uppercase text-[#231F20] mb-0">
@@ -542,7 +540,7 @@ const TheBrandt = () => {
               </div>
 
               {/* Right Column - Description and Button */}
-              <div className="flex flex-col justify-center gap-6 lg:gap-8">
+              <div className="flex flex-col justify-center gap-6 lg:gap-8" style={{ marginTop: '200px' }}>
                 <p className="text-[clamp(18px,1.9vw,38px)] leading-[1.4] text-[#231F20]">
                   Amsterdam considers itself as a small metropolis
                   with a big international heart. Here, approximately
