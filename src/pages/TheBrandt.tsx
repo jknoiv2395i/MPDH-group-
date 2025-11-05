@@ -1,25 +1,8 @@
 import React, { useRef, useState } from 'react';
-import { motion, useScroll, useTransform, useInView } from 'framer-motion';
 import { FigmaNavBar } from '@/components/ui/figma-navbar';
 import Footer from '@/components/Footer';
 import { useSEO } from '@/hooks/use-seo';
 import { Volume2, VolumeX } from 'lucide-react';
-
-const AnimatedSection = ({ children }: { children: React.ReactNode }) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '0px 0px -100px 0px' });
-
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 40 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
-      transition={{ duration: 0.8 }}
-    >
-      {children}
-    </motion.div>
-  );
-};
 
 const TheBrandt = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
