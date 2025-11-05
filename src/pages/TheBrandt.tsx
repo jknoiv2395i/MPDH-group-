@@ -311,6 +311,121 @@ const TheBrandt = () => {
         </div>
       </section>
 
+      {/* Key Facts Section */}
+      <section className="relative w-full px-4 sm:px-8 lg:px-12 py-12 lg:py-20 bg-[#DDE1DF]">
+        <div className="max-w-[1809px] mx-auto">
+          {/* Heading */}
+          <h2 className="text-[clamp(60px,9vw,131px)] font-bold leading-[0.95] uppercase text-[#231F20] mb-12 lg:mb-16">
+            keyfacts
+          </h2>
+
+          {/* Grid of Key Facts */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border-t border-l border-[#2E302D]">
+            {/* FOR EVERYONE */}
+            <div className="flex flex-col items-center justify-center text-center px-6 py-8 border-r border-b border-[#2E302D] min-h-[168px]">
+              <h3 className="text-[clamp(22px,1.8vw,30px)] font-bold uppercase text-[#231F20] mb-2">
+                FOR EVERYONE
+              </h3>
+              <p className="text-[clamp(18px,1.5vw,24px)] text-[#231F20] leading-[1.44]">
+                A perfect home for a<br />wide range of occupiers.
+              </p>
+            </div>
+
+            {/* SPACIOUS OFFICE SPACE */}
+            <div className="flex flex-col items-center justify-center text-center px-6 py-8 border-r border-b border-[#2E302D] min-h-[168px]">
+              <h3 className="text-[clamp(22px,1.8vw,30px)] font-bold uppercase text-[#231F20] mb-2">
+                SPACIOUS OFFICE SPACE
+              </h3>
+              <p className="text-[clamp(18px,1.5vw,24px)] text-[#231F20] leading-[1.44]">
+                Natural light boosts<br />productivity by 20%
+              </p>
+            </div>
+
+            {/* PERFECT ACCESSIBILITY */}
+            <div className="flex flex-col items-center justify-center text-center px-6 py-8 border-r border-b border-[#2E302D] min-h-[168px]">
+              <h3 className="text-[clamp(22px,1.8vw,30px)] font-bold uppercase text-[#231F20] mb-2">
+                PERFECT ACCESSIBILITY
+              </h3>
+              <p className="text-[clamp(18px,1.5vw,24px)] text-[#231F20] leading-[1.44]">
+                By bike, public transport, and by car.
+              </p>
+            </div>
+
+            {/* ONE OF A KIND */}
+            <div className="flex flex-col items-center justify-center text-center px-6 py-8 border-r border-b border-[#2E302D] min-h-[168px]">
+              <h3 className="text-[clamp(22px,1.8vw,30px)] font-bold uppercase text-[#231F20] mb-2">
+                ONE OF A KIND
+              </h3>
+              <p className="text-[clamp(18px,1.5vw,24px)] text-[#231F20] leading-[1.44]">
+                Single and multi-tenant<br />office opportunity.
+              </p>
+            </div>
+
+            {/* EFFICIENT LAYOUT */}
+            <div className="flex flex-col items-center justify-center text-center px-6 py-8 border-r border-b border-[#2E302D] min-h-[168px]">
+              <h3 className="text-[clamp(22px,1.8vw,30px)] font-bold uppercase text-[#231F20] mb-2">
+                EFFICIENT LAYOUT
+              </h3>
+              <p className="text-[clamp(18px,1.5vw,23px)] text-[#231F20] leading-[1.47]">
+                Large, open, and flexible .
+              </p>
+            </div>
+
+            {/* SUSTAINABILITY */}
+            <div className="flex flex-col items-center justify-center text-center px-6 py-8 border-r border-b border-[#2E302D] min-h-[168px]">
+              <h3 className="text-[clamp(22px,1.8vw,31px)] font-bold uppercase text-[#231F20] mb-2">
+                SUSTAINABILITY
+              </h3>
+              <p className="text-[clamp(18px,1.5vw,25px)] text-[#231F20] leading-[1.4]">
+                EPC Label A+++. Paris<br />Proof. BREEAM Excellent.
+              </p>
+            </div>
+
+            {/* OUTDOOR SPACE */}
+            <div className="flex flex-col items-center justify-center text-center px-6 py-8 border-r border-b border-[#2E302D] min-h-[168px]">
+              <h3 className="text-[clamp(22px,1.8vw,30px)] font-bold uppercase text-[#231F20] mb-2">
+                OUTDOOR SPACE
+              </h3>
+              <p className="text-[clamp(18px,1.5vw,23px)] text-[#231F20] leading-[1.47]">
+                Terraces. Garden. Oasis of peace.
+              </p>
+            </div>
+
+            {/* CENTRE */}
+            <div className="flex flex-col items-center justify-center text-center px-6 py-8 border-r border-b border-[#2E302D] min-h-[168px]">
+              <h3 className="text-[clamp(22px,1.8vw,30px)] font-bold uppercase text-[#231F20] mb-2">
+                CENTRE
+              </h3>
+              <p className="text-[clamp(18px,1.5vw,25px)] text-[#231F20] leading-[1.4]">
+                Unique office building. In<br />the heart of Amsterdam.
+              </p>
+            </div>
+
+            {/* EASY FLOORPLAN */}
+            <div className="flex flex-col items-center justify-center text-center px-6 py-8 border-r border-b border-[#2E302D] min-h-[202px] sm:col-span-2 lg:col-span-1">
+              <h3 className="text-[clamp(22px,1.8vw,30px)] font-bold uppercase text-[#231F20] mb-2">
+                EASY FLOORPLAN
+              </h3>
+              <p className="text-[clamp(18px,1.5vw,24px)] text-[#231F20] leading-[1.44]">
+                Floors can be easily divided.
+              </p>
+            </div>
+
+            {/* AMENITIES */}
+            <div className="flex flex-col items-center justify-center text-center px-6 py-8 border-r border-b border-[#2E302D] min-h-[202px] sm:col-span-2 lg:col-span-3">
+              <h3 className="text-[clamp(22px,1.8vw,31px)] font-bold uppercase text-[#231F20] mb-2">
+                AMENITIES
+              </h3>
+              <p className="text-[clamp(18px,1.5vw,25px)] text-[#231F20] leading-[1.4]">
+                In direct surroundings: (Michelin<br />
+                star) restaurants, bars, clubs,<br />
+                hotels, shops, leisure activities.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );
