@@ -514,6 +514,272 @@ const TheBrandt = () => {
         </div>
       </section>
 
+      {/* Location & Accessibility Section */}
+      <section className="relative w-full px-4 sm:px-8 lg:px-12 py-12 lg:py-20 bg-white">
+        <div className="max-w-[1809px] mx-auto">
+          {/* Heading and Description */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-12 lg:mb-16">
+            {/* Left Column - Heading */}
+            <div>
+              <h2 className="text-[clamp(60px,8.5vw,167px)] font-bold leading-[1.17] uppercase text-[#231F20] mb-0">
+                LOCATION,<br />
+                ACCESSIBILITY<br />
+                TIPS
+              </h2>
+            </div>
+
+            {/* Right Column - Description and Button */}
+            <div className="flex flex-col justify-center gap-6 lg:gap-8">
+              <p className="text-[clamp(18px,1.9vw,38px)] leading-[1.4] text-[#231F20]">
+                Amsterdam considers itself as a small metropolis
+                with a big international heart. Here, approximately
+                170 different nationalities live and work together
+                side by side. Its more than 900,000 inhabitants
+                give the city the character for which it is famously
+                known worldwide: progressive, open-minded, and
+                diverse. Amsterdam reflects the world as an inter
+              </p>
+              <p className="text-[clamp(18px,1.9vw,37px)] leading-[1.45] text-[#231F20]">
+                you can find some of the best places around The
+                Brandt building.
+              </p>
+              <div>
+                <button className="bg-[#231F20] text-white px-6 py-4 text-[clamp(18px,1.2vw,23px)] font-bold uppercase hover:bg-[#2E302D] transition-colors">
+                  SEE ACCESIBILITY
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Tabs Navigation */}
+          <div className="border-t border-b border-l border-[#2E302D] grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 mb-0">
+            <div className="border-r border-[#2E302D] px-4 py-3 text-center">
+              <button className="text-[clamp(16px,1.2vw,22px)] uppercase text-[#231F20] hover:font-bold transition-all">
+                MUST VISIT
+              </button>
+            </div>
+            <div className="border-r border-[#2E302D] px-4 py-3 text-center">
+              <button className="text-[clamp(16px,1.2vw,22px)] uppercase text-[#231F20] hover:font-bold transition-all">
+                HOTELS
+              </button>
+            </div>
+            <div className="border-r border-[#2E302D] px-4 py-3 text-center">
+              <button className="text-[clamp(16px,1.2vw,22px)] uppercase text-[#231F20] hover:font-bold transition-all">
+                FOOD & DRINKS
+              </button>
+            </div>
+            <div className="border-r border-[#2E302D] px-4 py-3 text-center">
+              <button className="text-[clamp(16px,1.2vw,22px)] uppercase text-[#231F20] hover:font-bold transition-all">
+                BOUTIQUES
+              </button>
+            </div>
+            <div className="border-r border-[#2E302D] px-4 py-3 text-center">
+              <button className="text-[clamp(16px,1.2vw,22px)] uppercase text-[#231F20] hover:font-bold transition-all">
+                NIGHT CLUBS & BARS
+              </button>
+            </div>
+          </div>
+
+          {/* Content Area - List and Map */}
+          <div className="grid grid-cols-1 lg:grid-cols-[724px_1fr] border-b border-[#2E302D]">
+            {/* Left Column - Scrollable List */}
+            <div className="h-[624px] overflow-y-auto border-l border-r border-[#2E302D] hide-scrollbar">
+              {/* List Items */}
+              <div className="divide-y divide-[#2E302D]">
+                {/* Tivoli Doelen Amsterdam */}
+                <div className="flex gap-4 p-4 hover:bg-gray-50 transition-colors">
+                  <img
+                    src="https://api.builder.io/api/v1/image/assets/TEMP/498f8170a6adf236123ca503a6a92e9b83e28f2f?width=565"
+                    alt="Tivoli Doelen Amsterdam"
+                    className="w-[283px] h-[240px] object-cover flex-shrink-0"
+                  />
+                  <div className="flex-1 flex flex-col justify-start pt-2">
+                    <h3 className="text-[clamp(18px,1.1vw,20px)] font-bold uppercase text-[#231F20] mb-2">
+                      Tivoli Doelen Amsterdam
+                    </h3>
+                    <p className="text-[clamp(16px,1.05vw,20px)] leading-[1.44] text-[#231F20]">
+                      Tivoli Doelen is Amsterdam's oldest
+                      hotel and an integral part of the city's
+                      rich history. Located in the medieval
+                      centre, it has been the preferred
+                      retreat of royalty for centuries.
+                    </p>
+                  </div>
+                </div>
+
+                {/* The Dylan */}
+                <div className="flex gap-4 p-4 hover:bg-gray-50 transition-colors">
+                  <div className="w-[283px] h-[257px] bg-gray-200 flex-shrink-0"></div>
+                  <div className="flex-1 flex flex-col justify-start pt-2">
+                    <h3 className="text-[clamp(18px,1.1vw,20px)] font-bold uppercase text-[#231F20] mb-2">
+                      The Dylan
+                    </h3>
+                    <p className="text-[clamp(16px,1.05vw,20px)] leading-[1.44] text-[#231F20]">
+                      Located in the heart of the "9-streets"
+                      area on the prestigious "Keizersgracht"
+                      canal, The Dylan Amsterdam is the
+                      ideal home base as you discover the
+                      hidden treasures of Amsterdam's
+                      past and present on foot or by bike.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Amstel Hotel */}
+                <div className="flex gap-4 p-4 hover:bg-gray-50 transition-colors">
+                  <div className="w-[283px] h-[239px] bg-gray-200 flex-shrink-0"></div>
+                  <div className="flex-1 flex flex-col justify-start pt-2">
+                    <h3 className="text-[clamp(18px,1.1vw,20px)] font-bold uppercase text-[#231F20] mb-2">
+                      Amstel Hotel
+                    </h3>
+                    <p className="text-[clamp(16px,1.05vw,20px)] leading-[1.44] text-[#231F20]">
+                      Enter through the famous revolving
+                      doors where many greats preceded
+                      you. Enjoy the indoor pool, exquisite
+                      dining, and health and fitness
+                      club to rest, relax, and rejuvenate.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Ku Kitchen & Bar */}
+                <div className="flex gap-4 p-4 hover:bg-gray-50 transition-colors">
+                  <img
+                    src="https://api.builder.io/api/v1/image/assets/TEMP/f9598a267e2a1933163c024d15b9c33de1902cf3?width=565"
+                    alt="Ku Kitchen & Bar"
+                    className="w-[283px] h-[239px] object-cover flex-shrink-0"
+                  />
+                  <div className="flex-1 flex flex-col justify-start pt-2">
+                    <h3 className="text-[clamp(18px,1.1vw,20px)] font-bold uppercase text-[#231F20] mb-2">
+                      Ku Kitchen & Bar
+                    </h3>
+                    <p className="text-[clamp(16px,1.05vw,21px)] leading-[1.41] text-[#231F20]">
+                      Experience authentic Japanese
+                      fusion cuisine, savor premium sushi,
+                      signature cocktails, and Japanese
+                      whiskeys in this vibrant restaurant.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Tia Rosa */}
+                <div className="flex gap-4 p-4 hover:bg-gray-50 transition-colors">
+                  <img
+                    src="https://api.builder.io/api/v1/image/assets/TEMP/f45e664ce63df6e7c653ef2876b5389ed78263f3?width=565"
+                    alt="Tia Rosa"
+                    className="w-[283px] h-[239px] object-cover flex-shrink-0"
+                  />
+                  <div className="flex-1 flex flex-col justify-start pt-2">
+                    <h3 className="text-[clamp(18px,1.1vw,20px)] font-bold uppercase text-[#231F20] mb-2">
+                      Tia Rosa
+                    </h3>
+                    <p className="text-[clamp(16px,1.05vw,21px)] leading-[1.4] text-[#231F20]">
+                      This tapas restaurant is where
+                      Spanish passion and Amsterdam
+                      cosiness come together.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Quartier Latin */}
+                <div className="flex gap-4 p-4 hover:bg-gray-50 transition-colors">
+                  <img
+                    src="https://api.builder.io/api/v1/image/assets/TEMP/f3cfb9c7eccf7adac0c31b14538eb386cecf343c?width=565"
+                    alt="Quartier Latin"
+                    className="w-[283px] h-[239px] object-cover flex-shrink-0"
+                  />
+                  <div className="flex-1 flex flex-col justify-start pt-2">
+                    <h3 className="text-[clamp(18px,1.1vw,20px)] font-bold uppercase text-[#231F20] mb-2">
+                      Quartier Latin
+                    </h3>
+                    <p className="text-[clamp(16px,1.05vw,20px)] leading-[1.45] text-[#231F20]">
+                      A french restaurant with a complete
+                      menu and good bottled wine choices.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Incanto */}
+                <div className="flex gap-4 p-4 hover:bg-gray-50 transition-colors">
+                  <img
+                    src="https://api.builder.io/api/v1/image/assets/TEMP/e3d276ef8b22073f41f07540ed9eaba7c94c0bb5?width=565"
+                    alt="Incanto"
+                    className="w-[283px] h-[239px] object-cover flex-shrink-0"
+                  />
+                  <div className="flex-1 flex flex-col justify-start pt-2">
+                    <h3 className="text-[clamp(18px,1.1vw,20px)] font-bold uppercase text-[#231F20] mb-2">
+                      Incanto
+                    </h3>
+                    <p className="text-[clamp(16px,1.05vw,20px)] leading-[1.44] text-[#231F20]">
+                      Incanto tries to represent the warm,
+                      enchanting ambiance of Italy.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Burgermeester */}
+                <div className="flex gap-4 p-4 hover:bg-gray-50 transition-colors">
+                  <img
+                    src="https://api.builder.io/api/v1/image/assets/TEMP/c69c758cc812afb9eb6dc01203439ce379c7af1f?width=565"
+                    alt="Burgermeester"
+                    className="w-[283px] h-[239px] object-cover flex-shrink-0"
+                  />
+                  <div className="flex-1 flex flex-col justify-start pt-2">
+                    <h3 className="text-[clamp(18px,1.1vw,20px)] font-bold uppercase text-[#231F20] mb-2">
+                      Burgermeester
+                    </h3>
+                    <p className="text-[clamp(16px,1.05vw,20px)] leading-[1.44] text-[#231F20]">
+                      A burger place where everything's
+                      fresh, sustainable, and homemade.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column - Map */}
+            <div className="relative h-[624px] bg-gray-100 border-r border-[#2E302D]">
+              <img
+                src="https://api.builder.io/api/v1/image/assets/TEMP/44b2e6f8afa77067426b132f2f5e46d949ed6f40?width=2169"
+                alt="Amsterdam Map"
+                className="w-full h-full object-cover"
+              />
+
+              {/* Map Markers - Sample positioning */}
+              <div className="absolute top-[48%] left-[52%] w-5 h-5 bg-[#FBEEE6] border border-[#2E302D] rounded-full"></div>
+              <div className="absolute top-[43%] left-[28%] w-5 h-5 bg-[#FBEEE6] border border-[#2E302D] rounded-full"></div>
+              <div className="absolute top-[85%] left-[70%] w-5 h-5 bg-[#FBEEE6] border border-[#2E302D] rounded-full"></div>
+              <div className="absolute top-[2%] left-[39%] w-5 h-5 bg-[#FBEEE6] border border-[#2E302D] rounded-full"></div>
+              <div className="absolute top-[85%] left-[58%] w-5 h-5 bg-[#CFAF85] border border-[#2E302D] rounded-full"></div>
+              <div className="absolute top-[82%] left-[48%] w-5 h-5 bg-[#CFAF85] border border-[#2E302D] rounded-full"></div>
+              <div className="absolute top-[71%] left-[52%] w-5 h-5 bg-[#CFAF85] border border-[#2E302D] rounded-full"></div>
+              <div className="absolute top-[71%] left-[56%] w-5 h-5 bg-[#CFAF85] border border-[#2E302D] rounded-full"></div>
+              <div className="absolute top-[76%] left-[77%] w-5 h-5 bg-[#A4E2F7] border border-[#2E302D] rounded-full"></div>
+              <div className="absolute top-[72%] left-[52%] w-5 h-5 bg-[#A4E2F7] border border-[#2E302D] rounded-full"></div>
+              <div className="absolute top-[84%] left-[58%] w-5 h-5 bg-[#A4E2F7] border border-[#2E302D] rounded-full"></div>
+              <div className="absolute top-[58%] left-[52%] w-5 h-5 bg-[#B03B22] border border-[#2E302D] rounded-full"></div>
+              <div className="absolute top-[64%] left-[52%] w-5 h-5 bg-[#B03B22] border border-[#2E302D] rounded-full"></div>
+              <div className="absolute top-[75%] left-[47%] w-5 h-5 bg-[#31812B] border border-[#2E302D] rounded-full"></div>
+              <div className="absolute top-[72%] left-[47%] w-5 h-5 bg-[#31812B] border border-[#2E302D] rounded-full"></div>
+
+              {/* Map Controls */}
+              <div className="absolute bottom-12 right-8 flex flex-col gap-1">
+                <button className="w-8 h-8 bg-white border border-[#57595E] flex items-center justify-center hover:bg-gray-100 transition-colors">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.7897 2.5C10.1061 2.5 10.3677 2.73501 10.4091 3.04007L10.4148 3.12487L10.4158 9.16667H16.4601C16.8053 9.16667 17.0851 9.44649 17.0851 9.79167C17.0851 10.1081 16.8499 10.3696 16.5449 10.411L16.4601 10.4167H10.4158L10.4175 16.4576C10.4176 16.8028 10.1378 17.0827 9.79266 17.0827C9.47625 17.0827 9.21471 16.8477 9.17326 16.5427L9.16754 16.4578L9.16583 10.4167H3.125C2.77982 10.4167 2.5 10.1368 2.5 9.79167C2.5 9.47525 2.73513 9.21376 3.04019 9.17237L3.125 9.16667H9.16583L9.16483 3.12513C9.16476 2.77995 9.44452 2.5 9.7897 2.5Z" fill="#111111"/>
+                  </svg>
+                </button>
+                <button className="w-8 h-8 bg-white border border-[#57595E] flex items-center justify-center hover:bg-gray-100 transition-colors">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.12891 10.418H16.8722C17.2173 10.418 17.4972 10.1381 17.4972 9.79297C17.4972 9.44779 17.2173 9.16797 16.8722 9.16797H3.12891C2.78373 9.16797 2.50391 9.44779 2.50391 9.79297C2.50391 10.1381 2.78373 10.418 3.12891 10.418Z" fill="#111111"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );
