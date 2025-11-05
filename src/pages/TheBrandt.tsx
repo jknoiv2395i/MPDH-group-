@@ -8,12 +8,18 @@ import { Volume2, VolumeX } from 'lucide-react';
 const TheBrandt = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isMuted, setIsMuted] = useState(true);
+  const { scrollY } = useScroll();
+  const heroRef = useRef(null);
+  const heroImageRef = useRef(null);
+  const isHeroInView = useInView(heroRef, { once: true, margin: '0px 0px -100px 0px' });
 
   useSEO({
     title: 'Elevate Your Ambition - The Brandt | Premium Office Spaces',
     description: 'Since the 80\'s, most people spent their worktime in open-plan offices with suspended ceiling systems, bad coffee, and numerous, endless meetings in boring concrete office buildings. Well, The Brandt is none of that.',
     keywords: ['The Brandt', 'premium office', 'modern workspace', 'office spaces', 'elevate ambition']
   });
+
+  const imageY = useTransform(scrollY, [0, 500], [0, 100]);
 
   const toggleMute = () => {
     if (videoRef.current) {
