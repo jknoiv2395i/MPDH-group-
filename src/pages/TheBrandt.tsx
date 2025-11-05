@@ -105,6 +105,110 @@ const TheBrandt = () => {
         </div>
       </section>
 
+      {/* Specifications Section */}
+      <section className="relative w-full px-4 sm:px-8 lg:px-12 py-12 lg:py-20">
+        <div className="max-w-[1809px] mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+            {/* Left Column - Heading and Specifications List */}
+            <div className="space-y-8 lg:space-y-12">
+              {/* Heading */}
+              <h3 className="text-[clamp(32px,3.5vw,55px)] leading-[1.104] text-[#231F20] font-normal">
+                The Brandt offers large and
+                flexible open floor plates of 1,000
+                square meter, which is rare for the
+                historic city centre.
+              </h3>
+
+              {/* Specifications List */}
+              <div className="space-y-0">
+                {/* LOCATION */}
+                <div className="flex justify-between items-center py-5 border-b border-[#2E302D]">
+                  <span className="text-[clamp(20px,1.8vw,30px)] text-[#231F20]">LOCATION</span>
+                  <span className="text-[clamp(18px,1.6vw,28px)] text-[#231F20]">REMBRANDTPLEIN 29 – 45</span>
+                </div>
+
+                {/* PARIS ROOF */}
+                <div className="flex justify-between items-center py-5 border-b border-[#2E302D]">
+                  <span className="text-[clamp(20px,1.8vw,29px)] text-[#231F20]">PARIS ROOF</span>
+                </div>
+
+                {/* BREEAM */}
+                <div className="flex justify-between items-center py-5 border-b border-[#2E302D]">
+                  <span className="text-[clamp(20px,1.8vw,31px)] text-[#231F20]">BREEAM</span>
+                  <span className="text-[clamp(18px,1.6vw,29px)] text-[#231F20]">EXCELLENT</span>
+                </div>
+
+                {/* EPC LEVEL */}
+                <div className="flex justify-between items-center py-5 border-b border-[#2E302D]">
+                  <span className="text-[clamp(20px,1.8vw,29px)] text-[#231F20]">EPC LEVEL</span>
+                  <span className="text-[clamp(18px,1.5vw,25px)] text-[#231F20]">A+++</span>
+                </div>
+
+                {/* FLOORS */}
+                <div className="flex justify-between items-center py-5 border-b border-[#2E302D]">
+                  <span className="text-[clamp(20px,1.8vw,30px)] text-[#231F20]">FLOORS</span>
+                  <span className="text-[clamp(20px,1.8vw,31px)] text-[#231F20]">7</span>
+                </div>
+
+                {/* SQ. M. LFA */}
+                <div className="flex justify-between items-center py-5 border-b border-[#2E302D]">
+                  <span className="text-[clamp(18px,1.6vw,28px)] text-[#231F20]">SQ. M. LFA</span>
+                  <span className="text-[clamp(18px,1.5vw,27px)] text-[#231F20]">5,340 SQ.M.</span>
+                </div>
+
+                {/* FLOOR PLATES */}
+                <div className="flex justify-between items-center py-5 border-b border-[#2E302D]">
+                  <span className="text-[clamp(20px,1.8vw,29px)] text-[#231F20]">FLOOR PLATES</span>
+                  <span className="text-[clamp(18px,1.5vw,27px)] text-[#231F20]">242 – 1,056 SQ.M.(APPROX.)</span>
+                </div>
+
+                {/* LIFTS */}
+                <div className="flex justify-between items-center py-5 border-b border-[#2E302D]">
+                  <span className="text-[clamp(20px,1.8vw,29px)] text-[#231F20]">LIFTS</span>
+                  <span className="text-[clamp(20px,1.8vw,31px)] text-[#231F20]">2</span>
+                </div>
+
+                {/* TERRACES */}
+                <div className="flex justify-between items-center py-5 border-b border-[#2E302D]">
+                  <span className="text-[clamp(20px,1.8vw,30px)] text-[#231F20]">TERRACES</span>
+                  <span className="text-[clamp(20px,1.8vw,31px)] text-[#231F20]">9</span>
+                </div>
+
+                {/* GARDEN */}
+                <div className="flex justify-between items-center py-5 border-b border-[#2E302D]">
+                  <span className="text-[clamp(20px,1.8vw,30px)] text-[#231F20]">GARDEN</span>
+                  <span className="text-[clamp(20px,1.8vw,31px)] text-[#231F20]">1</span>
+                </div>
+
+                {/* SHOWER */}
+                <div className="flex justify-between items-center py-5 border-b border-[#2E302D]">
+                  <span className="text-[clamp(20px,1.8vw,30px)] text-[#231F20]">SHOWER</span>
+                  <span className="text-[clamp(20px,1.8vw,31px)] text-[#231F20]">1</span>
+                </div>
+              </div>
+
+              {/* Contact Us Button */}
+              <div className="pt-8">
+                <button className="bg-[#231F20] text-white px-8 py-4 rounded-[27px] text-[clamp(18px,1.5vw,23px)] font-bold uppercase hover:bg-[#2E302D] transition-colors">
+                  contact us
+                </button>
+              </div>
+            </div>
+
+            {/* Right Column - Interior Image */}
+            <div className="relative flex items-center justify-center lg:justify-end">
+              <div className="w-full max-w-[873px]">
+                <img
+                  src="https://api.builder.io/api/v1/image/assets/TEMP/c5490e0f2a3102db7e614a5e8fc18aa50dd571e1?width=1745"
+                  alt="The Brandt Interior Staircase"
+                  className="w-full h-auto object-cover rounded-lg"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );
