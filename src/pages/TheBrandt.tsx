@@ -780,6 +780,117 @@ const TheBrandt = () => {
         </div>
       </section>
 
+      {/* Contact Us Section */}
+      <section className="relative w-full px-4 sm:px-8 lg:px-12 py-12 lg:py-20" style={{ backgroundColor: '#B03B22' }}>
+        <div className="max-w-[1905px] mx-auto">
+          {/* Main Heading */}
+          <h2
+            className="text-[clamp(80px,11.7vw,223px)] font-bold leading-[0.8] uppercase mb-8 lg:mb-12"
+            style={{ color: '#A4E2F7' }}
+          >
+            CONTACT US<br />NOW
+          </h2>
+
+          {/* Two Column Layout */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+            {/* Left Column - Building Image */}
+            <div className="flex items-start justify-center lg:justify-start">
+              <div className="w-full max-w-[873px]">
+                <img
+                  src="https://api.builder.io/api/v1/image/assets/TEMP/914c8fd3a6804003251d005d35139f01471b9891?width=1745"
+                  alt="The Brandt Interior looking up the staircase"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            </div>
+
+            {/* Right Column - Contact Form */}
+            <div className="flex flex-col justify-start">
+              <form className="w-full max-w-[873px] space-y-8 lg:space-y-12">
+                {/* Name Field */}
+                <div className="relative">
+                  <label
+                    htmlFor="contact-name"
+                    className="block text-[clamp(24px,1.6vw,30px)] font-bold uppercase mb-3"
+                    style={{ color: '#FFFFFF' }}
+                  >
+                    NAME
+                  </label>
+                  <input
+                    type="text"
+                    id="contact-name"
+                    name="name"
+                    className="w-full bg-transparent border-b pb-3 outline-none text-white text-[clamp(18px,1.2vw,24px)] placeholder-white/50"
+                    style={{ borderColor: '#DFDDD6' }}
+                    placeholder=""
+                  />
+                </div>
+
+                {/* Email Field */}
+                <div className="relative">
+                  <label
+                    htmlFor="contact-email"
+                    className="block text-[clamp(24px,1.6vw,31px)] font-bold uppercase mb-3"
+                    style={{ color: '#FFFFFF' }}
+                  >
+                    EMAIL
+                  </label>
+                  <input
+                    type="email"
+                    id="contact-email"
+                    name="email"
+                    className="w-full bg-transparent border-b pb-3 outline-none text-white text-[clamp(18px,1.2vw,24px)] placeholder-white/50"
+                    style={{ borderColor: '#DFDDD6' }}
+                    placeholder=""
+                  />
+                </div>
+
+                {/* Message Field */}
+                <div className="relative">
+                  <label
+                    htmlFor="contact-message"
+                    className="block text-[clamp(24px,1.6vw,30px)] font-bold uppercase mb-3"
+                    style={{ color: '#FFFFFF' }}
+                  >
+                    MESSAGE
+                  </label>
+                  <input
+                    type="text"
+                    id="contact-message"
+                    name="message"
+                    className="w-full bg-transparent border-b pb-3 outline-none text-white text-[clamp(18px,1.2vw,24px)] placeholder-white/50"
+                    style={{ borderColor: '#DFDDD6' }}
+                    placeholder=""
+                  />
+                </div>
+
+                {/* Submit Button */}
+                <div className="pt-4">
+                  <button
+                    type="submit"
+                    className="border border-white text-white px-6 py-4 text-[clamp(18px,1.2vw,22px)] font-bold uppercase hover:bg-white hover:text-[#B03B22] transition-colors"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      const form = e.currentTarget.closest('form');
+                      const formData = new FormData(form!);
+                      console.log('Form submitted:', {
+                        name: formData.get('name'),
+                        email: formData.get('email'),
+                        message: formData.get('message')
+                      });
+                      alert('Thank you for your message! We will get back to you soon.');
+                      form?.reset();
+                    }}
+                  >
+                    SEND MESSAGE
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );
