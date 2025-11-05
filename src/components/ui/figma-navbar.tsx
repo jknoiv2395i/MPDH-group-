@@ -164,10 +164,15 @@ export function FigmaNavBar({ className }: NavBarProps) {
                 {item.name}
               </a>
             ))}
-            <div className="border-t border-white/10 mt-3 pt-3">
+            <div className={cn("border-t mt-3 pt-3", isTheBrandtPage ? "border-black/10" : "border-white/10")}>
               <a
                 href="/services"
-                className="block text-white/80 hover:text-white transition-colors duration-200 py-2 text-center"
+                className={cn(
+                  "block transition-colors duration-200 py-2 text-center",
+                  isTheBrandtPage
+                    ? "text-black/80 hover:text-black"
+                    : "text-white/80 hover:text-white"
+                )}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Contact us
