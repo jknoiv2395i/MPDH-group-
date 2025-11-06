@@ -436,7 +436,7 @@ const TheBrandt = () => {
 
       {/* Image Gallery Carousel Section */}
 
-        <section className="relative w-full px-4 sm:px-8 lg:px-12 py-12 lg:py-20 bg-white overflow-hidden">
+        <section className="relative w-full px-4 sm:px-8 lg:px-12 pt-12 lg:pt-20 pb-0 bg-white overflow-hidden">
           <div className="max-w-[1905px] mx-auto">
             <div className="relative">
               {/* Carousel Container */}
@@ -526,13 +526,13 @@ const TheBrandt = () => {
 
       {/* Location & Accessibility Section */}
 
-        <section className="relative w-full px-4 sm:px-8 lg:px-12 py-12 lg:py-20 bg-white">
+        <section className="relative w-full px-4 sm:px-8 lg:px-12 pt-0 pb-12 lg:pb-20 bg-white">
           <div className="max-w-[1809px] mx-auto">
             {/* Heading and Description */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-12 lg:mb-16" style={{ marginTop: '200px' }}>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-12 lg:mb-16" style={{ marginTop: '77px' }}>
               {/* Left Column - Heading */}
               <div>
-                <h2 className="text-[clamp(60px,8.5vw,167px)] font-bold leading-[1.17] uppercase text-[#231F20] mb-0">
+                <h2 className="text-[clamp(60px,8.5vw,167px)] font-bold leading-[1.17] uppercase text-[#231F20] mb-0" style={{ marginTop: '-2px' }}>
                   LOCATION,<br />
                   ACCESSIBILITY<br />
                   TIPS
@@ -541,7 +541,7 @@ const TheBrandt = () => {
 
               {/* Right Column - Description and Button */}
               <div className="flex flex-col justify-center gap-6 lg:gap-8" style={{ marginTop: '200px' }}>
-                <p className="text-[clamp(18px,1.9vw,38px)] leading-[1.4] text-[#231F20]">
+                <p className="text-[clamp(18px,1.9vw,38px)] leading-[1.4] text-[#231F20]" style={{ marginTop: '199px' }}>
                   Amsterdam considers itself as a small metropolis
                   with a big international heart. Here, approximately
                   170 different nationalities live and work together
