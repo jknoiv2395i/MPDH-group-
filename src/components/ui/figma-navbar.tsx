@@ -110,14 +110,14 @@ export function FigmaNavBar({ className }: NavBarProps) {
         </nav>
 
         {/* Contact Us Button */}
-        <div className="hidden md:flex items-center">
+        <div className={cn("hidden md:flex items-center", !isTheBrandtPage && "text-black")}>
           <a
             href="https://mphdgroup.com/services"
             className={cn(
               "px-6 py-3 rounded-[27px] text-sm lg:text-base font-medium transition-colors duration-200 cursor-pointer pointer-events-auto",
               isTheBrandtPage
                 ? "bg-[#231F20] text-white hover:bg-[#2E302D]"
-                : "bg-[#231F20] text-white hover:bg-[#2E302D]"
+                : "bg-white text-black hover:bg-gray-100"
             )}
           >
             Contact us
