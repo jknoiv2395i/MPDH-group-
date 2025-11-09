@@ -36,7 +36,7 @@ const TheBrandt = () => {
               {/* Left Column - Heading and Image */}
               <div className="flex-1">
                 <div className="mb-8 lg:mb-12">
-                  <h1 className="text-[clamp(48px,8vw,156px)] font-bold leading-[1.02] tracking-[-0.08em] uppercase text-[#231F20] mb-4 lg:mb-6">
+                  <h1 className="text-[clamp(48px,8vw,156px)] font-bold leading-[1.02] tracking-[-0.08em] uppercase text-[#231F20] mb-4 lg:mb-6 mt-[51px] sm:mt-0">
                     elevate your
                   </h1>
                   <div className="flex flex-col sm:flex-row sm:items-center gap-6">
