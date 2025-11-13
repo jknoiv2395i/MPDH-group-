@@ -342,6 +342,121 @@ const Brandt = () => {
         </div>
       </section>
 
+      {/* Key Facts Section */}
+      <section className="w-full px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 bg-[#DDE1DF]">
+        <div className="max-w-7xl mx-auto">
+          {/* Section Heading */}
+          <div className="mb-8 sm:mb-12">
+            <h2 className="font-inter font-bold text-[#231F20] uppercase text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl leading-tight">
+              keyfacts
+            </h2>
+          </div>
+
+          {/* Facts List */}
+          <div className="border-t border-r border-l border-[#2E302D]">
+            {/* For Everyone */}
+            <div className="px-4 py-8 sm:py-9 border-b border-[#2E302D]">
+              <h3 className="font-inter font-bold text-[#231F20] uppercase text-xl sm:text-2xl md:text-3xl mb-2">
+                FOR EVERYONE
+              </h3>
+              <p className="font-inter text-[#231F20] text-base sm:text-lg md:text-xl lg:text-2xl">
+                A perfect home for a wide range of occupiers.
+              </p>
+            </div>
+
+            {/* Spacious Office Space */}
+            <div className="px-4 py-8 sm:py-9 border-b border-[#2E302D]">
+              <h3 className="font-inter font-bold text-[#231F20] uppercase text-xl sm:text-2xl md:text-3xl mb-2">
+                SPACIOUS OFFICE SPACE
+              </h3>
+              <p className="font-inter text-[#231F20] text-base sm:text-lg md:text-xl lg:text-2xl">
+                Natural light boosts productivity by 20%
+              </p>
+            </div>
+
+            {/* Perfect Accessibility */}
+            <div className="px-4 py-8 sm:py-9 border-b border-[#2E302D]">
+              <h3 className="font-inter font-bold text-[#231F20] uppercase text-xl sm:text-2xl md:text-3xl mb-2">
+                PERFECT ACCESSIBILITY
+              </h3>
+              <p className="font-inter text-[#231F20] text-base sm:text-lg md:text-xl lg:text-2xl">
+                By bike, public transport, and by car.
+              </p>
+            </div>
+
+            {/* One of a Kind */}
+            <div className="px-4 py-8 sm:py-9 border-b border-[#2E302D]">
+              <h3 className="font-inter font-bold text-[#231F20] uppercase text-xl sm:text-2xl md:text-3xl mb-2">
+                ONE OF A KIND
+              </h3>
+              <p className="font-inter text-[#231F20] text-base sm:text-lg md:text-xl lg:text-2xl">
+                Single and multi-tenant office opportunity.
+              </p>
+            </div>
+
+            {/* Efficient Layout */}
+            <div className="px-4 py-8 sm:py-9 border-b border-[#2E302D]">
+              <h3 className="font-inter font-bold text-[#231F20] uppercase text-xl sm:text-2xl md:text-3xl mb-2">
+                EFFICIENT LAYOUT
+              </h3>
+              <p className="font-inter text-[#231F20] text-base sm:text-lg md:text-xl lg:text-2xl">
+                Large, open, and flexible.
+              </p>
+            </div>
+
+            {/* Sustainability */}
+            <div className="px-4 py-8 sm:py-9 border-b border-[#2E302D]">
+              <h3 className="font-inter font-bold text-[#231F20] uppercase text-xl sm:text-2xl md:text-3xl mb-2">
+                SUSTAINABILITY
+              </h3>
+              <p className="font-inter text-[#231F20] text-base sm:text-lg md:text-xl lg:text-2xl">
+                EPC Label A+++. Paris Proof. BREEAM Excellent.
+              </p>
+            </div>
+
+            {/* Outdoor Space */}
+            <div className="px-4 py-8 sm:py-9 border-b border-[#2E302D]">
+              <h3 className="font-inter font-bold text-[#231F20] uppercase text-xl sm:text-2xl md:text-3xl mb-2">
+                OUTDOOR SPACE
+              </h3>
+              <p className="font-inter text-[#231F20] text-base sm:text-lg md:text-xl lg:text-2xl">
+                Terraces. Garden. Oasis of peace.
+              </p>
+            </div>
+
+            {/* Centre */}
+            <div className="px-4 py-8 sm:py-9 border-b border-[#2E302D]">
+              <h3 className="font-inter font-bold text-[#231F20] uppercase text-xl sm:text-2xl md:text-3xl mb-2">
+                CENTRE
+              </h3>
+              <p className="font-inter text-[#231F20] text-base sm:text-lg md:text-xl lg:text-2xl">
+                Unique office building. In the heart of Amsterdam.
+              </p>
+            </div>
+
+            {/* Easy Floorplan */}
+            <div className="px-4 py-8 sm:py-9 border-b border-[#2E302D]">
+              <h3 className="font-inter font-bold text-[#231F20] uppercase text-xl sm:text-2xl md:text-3xl mb-2">
+                EASY FLOORPLAN
+              </h3>
+              <p className="font-inter text-[#231F20] text-base sm:text-lg md:text-xl lg:text-2xl">
+                Floors can be easily divided.
+              </p>
+            </div>
+
+            {/* Amenities */}
+            <div className="px-4 py-8 sm:py-9 border-b border-[#2E302D]">
+              <h3 className="font-inter font-bold text-[#231F20] uppercase text-xl sm:text-2xl md:text-3xl mb-2">
+                AMENITIES
+              </h3>
+              <p className="font-inter text-[#231F20] text-base sm:text-lg md:text-xl lg:text-2xl">
+                In direct surroundings: (Michelin star) restaurants, bars, clubs, hotels, shops, leisure activities.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );
