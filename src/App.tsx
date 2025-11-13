@@ -27,6 +27,7 @@ import Affordable from "./pages/AffordableFlats";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
 import LocationSpecificPage, { ResidentialNagpur440008, CommercialNagpur440008 } from "./pages/LocationPages";
+import Brandt from "./pages/Brandt";
 
 const queryClient = new QueryClient();
 
@@ -52,6 +53,7 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/service-areas" element={<ServiceAreasPage />} />
           <Route path="/ai-assistant" element={<AIAssistantPage />} />
+          <Route path="/brandt" element={<Brandt />} />
           
 
           {/* Targeted service pages */}
