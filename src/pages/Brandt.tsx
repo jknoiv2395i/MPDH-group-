@@ -547,6 +547,118 @@ const Brandt = () => {
         </div>
       </section>
 
+      {/* Location & Accessibility Section */}
+      <section className="w-full px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="max-w-3xl">
+            {/* Section Heading */}
+            <h2 className="font-karantina font-bold text-[#231F20] uppercase text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.89] mb-8 sm:mb-10 lg:mb-12">
+              LOCATION,
+              <br />
+              ACCESSIBILITY
+              <br />
+              TIPS
+            </h2>
+
+            {/* Description Paragraphs */}
+            <div className="space-y-4 mb-8 sm:mb-10 lg:mb-12">
+              <p className="font-inter text-[#231F20] text-xl sm:text-2xl md:text-3xl lg:text-[28px] leading-relaxed">
+                Amsterdam considers itself as a small metropolis with a big international heart. Here, approximately 170 different nationalities live and work together side by side. Its more than 900,000 inhabitants give the city the character for which it is famously known worldwide:
+              </p>
+
+              <p className="font-inter text-[#231F20] text-xl sm:text-2xl md:text-3xl lg:text-[28px] leading-relaxed">
+                of the best places around The Brandt building.
+              </p>
+            </div>
+
+            {/* CTA Button */}
+            <div>
+              <button className="bg-[#231F20] text-white px-7 py-5 hover:bg-[#231F20]/90 transition-colors duration-300">
+                <span className="font-inter font-bold text-xl sm:text-2xl md:text-[26px] uppercase">
+                  SEE ACCESIBILITY
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="w-full px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 bg-[#B03B22]">
+        <div className="max-w-3xl mx-auto">
+          {/* Contact Heading */}
+          <h2 className="font-inter font-bold text-[#A4E2F7] uppercase text-6xl sm:text-7xl md:text-8xl lg:text-[110px] leading-tight mb-8 sm:mb-12">
+            CONTACT
+          </h2>
+
+          {/* Building Interior Image */}
+          <div className="w-full mb-8 sm:mb-12 lg:mb-16">
+            <img
+              src="https://api.builder.io/api/v1/image/assets/TEMP/12e58f13183a34c79397f34aa0f075855e89694b?width=1094"
+              alt="The Brandt Interior looking up the staircase"
+              className="w-full h-auto object-cover rounded-lg"
+            />
+          </div>
+
+          {/* Contact Form */}
+          <form className="space-y-0">
+            {/* Name Field */}
+            <div className="border-b border-[#DFDDD6] py-4 sm:py-5">
+              <label htmlFor="name" className="font-inter font-bold text-white uppercase text-xl sm:text-2xl md:text-[27px] block mb-2">
+                NAME
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                className="w-full bg-transparent border-none outline-none text-white font-inter text-lg sm:text-xl placeholder:text-white/50"
+                placeholder=""
+              />
+            </div>
+
+            {/* Email Field */}
+            <div className="border-b border-[#DFDDD6] py-4 sm:py-5">
+              <label htmlFor="email" className="font-inter font-bold text-white uppercase text-xl sm:text-2xl md:text-[27px] block mb-2">
+                EMAIL
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                className="w-full bg-transparent border-none outline-none text-white font-inter text-lg sm:text-xl placeholder:text-white/50"
+                placeholder=""
+              />
+            </div>
+
+            {/* Message Field */}
+            <div className="border-b border-[#DFDDD6] py-4 sm:py-5 mb-8 sm:mb-10 lg:mb-12">
+              <label htmlFor="message" className="font-inter font-bold text-white uppercase text-xl sm:text-2xl md:text-[27px] block mb-2">
+                MESSAGE
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                rows={3}
+                className="w-full bg-transparent border-none outline-none text-white font-inter text-lg sm:text-xl placeholder:text-white/50 resize-none"
+                placeholder=""
+              />
+            </div>
+
+            {/* Submit Button */}
+            <div>
+              <button
+                type="submit"
+                className="border border-white px-7 py-5 hover:bg-white hover:text-[#B03B22] transition-colors duration-300"
+              >
+                <span className="font-inter font-bold text-xl sm:text-2xl md:text-[26px] text-white uppercase">
+                  SEND MESSAGE
+                </span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );
