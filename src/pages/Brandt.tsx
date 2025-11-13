@@ -188,6 +188,160 @@ const Brandt = () => {
         </div>
       </section>
 
+      {/* The Building Section */}
+      <section className="w-full px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 bg-[#FBEEE6]">
+        <div className="max-w-7xl mx-auto">
+          {/* Section Heading */}
+          <div className="mb-6 sm:mb-8">
+            <h2 className="font-karantina font-bold text-[#231F20] uppercase text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl leading-tight">
+              the building
+            </h2>
+          </div>
+
+          {/* Description */}
+          <div className="mb-8 sm:mb-12 lg:mb-16 max-w-3xl">
+            <p className="font-inter text-[#231F20] text-lg sm:text-xl md:text-2xl lg:text-3xl leading-relaxed">
+              A magnificent entrance, a spiral staircase, a stunning atrium, high ceilings, hanging gardens and terraces with a spectacular view – some of the many features of The Brandt that make you smile. All to be found in a fully renovated classic 80's 7-storey office building located at the most famous and iconic square of Amsterdam.
+            </p>
+          </div>
+
+          {/* Building Illustration */}
+          <div className="mb-8 sm:mb-12 lg:mb-16 flex justify-center">
+            <img
+              src="https://api.builder.io/api/v1/image/assets/TEMP/8133c3bd03455829749d59a4bd53835451a47fb7?width=1094"
+              alt="The Brandt Building Illustration"
+              className="w-full max-w-2xl h-auto"
+            />
+          </div>
+
+          {/* Floor Listings */}
+          <div className="mb-8 sm:mb-12">
+            <div className="space-y-0">
+              {/* Floor 6 */}
+              <div className="flex items-center justify-between py-3 sm:py-4 border-b border-black group cursor-pointer hover:bg-black/5 transition-colors">
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <span className="font-inter text-lg sm:text-xl md:text-2xl text-[#231F20] uppercase">Floor 6</span>
+                  <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#134A22]"></div>
+                </div>
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-6 h-6 sm:w-8 sm:h-8 flex-shrink-0"
+                >
+                  <path d="M9.33325 22.6673L22.6666 9.33398" stroke="#231F20" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M9.33325 9.33398H22.6666V22.6673" stroke="#231F20" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+
+              {/* Floor 5 */}
+              <div className="flex items-center justify-between py-3 sm:py-4 border-b border-black group cursor-pointer hover:bg-black/5 transition-colors">
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <span className="font-inter text-lg sm:text-xl md:text-2xl text-[#231F20] uppercase">Floor 5</span>
+                  <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#134A22]"></div>
+                </div>
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-6 h-6 sm:w-8 sm:h-8 flex-shrink-0"
+                >
+                  <path d="M9.33325 22.6673L22.6666 9.33398" stroke="#231F20" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M9.33325 9.33398H22.6666V22.6673" stroke="#231F20" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+
+              {/* Floor 4 */}
+              <div className="flex items-center justify-between py-3 sm:py-4 border-b border-black group cursor-pointer hover:bg-black/5 transition-colors">
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <span className="font-inter text-lg sm:text-xl md:text-2xl text-[#231F20] uppercase">Floor 4</span>
+                  <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#134A22]"></div>
+                </div>
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-6 h-6 sm:w-8 sm:h-8 flex-shrink-0"
+                >
+                  <path d="M9.33325 22.6673L22.6666 9.33398" stroke="#231F20" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M9.33325 9.33398H22.6666V22.6673" stroke="#231F20" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+
+              {/* Floor 3 */}
+              <div className="flex items-center justify-between py-3 sm:py-4 border-b border-black group cursor-pointer hover:bg-black/5 transition-colors">
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <span className="font-inter text-lg sm:text-xl md:text-2xl text-[#231F20] uppercase">Floor 3</span>
+                  <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#134A22]"></div>
+                </div>
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-6 h-6 sm:w-8 sm:h-8 flex-shrink-0"
+                >
+                  <path d="M9.33325 22.6673L22.6666 9.33398" stroke="#231F20" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M9.33325 9.33398H22.6666V22.6673" stroke="#231F20" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+
+              {/* Floor 2 */}
+              <div className="flex items-center justify-between py-3 sm:py-4 border-b border-black group cursor-pointer hover:bg-black/5 transition-colors">
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <span className="font-inter text-lg sm:text-xl md:text-2xl text-[#231F20] uppercase">Floor 2</span>
+                  <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#134A22]"></div>
+                </div>
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-6 h-6 sm:w-8 sm:h-8 flex-shrink-0"
+                >
+                  <path d="M9.33325 22.6673L22.6666 9.33398" stroke="#231F20" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M9.33325 9.33398H22.6666V22.6673" stroke="#231F20" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+
+              {/* Floor 1 */}
+              <div className="flex items-center justify-between py-3 sm:py-4 border-b border-black group cursor-pointer hover:bg-black/5 transition-colors">
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <span className="font-inter text-lg sm:text-xl md:text-2xl text-[#231F20] uppercase">Floor 1</span>
+                  <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#134A22]"></div>
+                </div>
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-6 h-6 sm:w-8 sm:h-8 flex-shrink-0"
+                >
+                  <path d="M9.33325 22.6673L22.6666 9.33398" stroke="#231F20" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M9.33325 9.33398H22.6666V22.6673" stroke="#231F20" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          {/* Inquire Button */}
+          <div>
+            <button className="border border-[#2E302D] px-8 py-5 hover:bg-black hover:text-white transition-colors duration-300">
+              <span className="font-inter font-bold text-xl sm:text-2xl text-[#231F20] uppercase">INQUIRE</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );
