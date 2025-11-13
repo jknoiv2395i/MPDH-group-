@@ -198,6 +198,16 @@ All colors MUST be HSL.
   .hide-scrollbar::-webkit-scrollbar {
     display: none;
   }
+
+  /* Scrollbar hide utility */
+  .scrollbar-hide {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .is-builder .fixed, .is-builder .absolute, .is-builder .sticky, .is-builder .z-50, .is-builder .z-40, .is-builder .z-30, .is-builder .z-20, .is-builder .z-10 {

@@ -21,6 +21,7 @@ export default {
 			fontFamily: {
 				'instrument': ['Instrument Sans', 'sans-serif'],
 				'inter': ['Inter', 'sans-serif'],
+				'karantina': ['Karantina', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
