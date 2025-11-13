@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { FigmaNavBar } from '@/components/ui/figma-navbar';
 import Footer from '@/components/Footer';
 import { useSEO } from '@/hooks/use-seo';
@@ -6,6 +6,23 @@ import { Volume2 } from 'lucide-react';
 
 const Brandt = () => {
   const [isMuted, setIsMuted] = useState(true);
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const galleryImages = [
+    'https://api.builder.io/api/v1/image/assets/TEMP/4eac2efbd529f217d2bc73277b5b409714bfa655?width=759',
+    'https://api.builder.io/api/v1/image/assets/TEMP/be686a5a5595edb2353dd7b026bd90c06ba19af4?width=759',
+    'https://api.builder.io/api/v1/image/assets/TEMP/ce51df99a3ad3553a9b968c02a773061b85374ee?width=759',
+    'https://api.builder.io/api/v1/image/assets/TEMP/21e6c087258ef8fe2ba26facf4e38e4dd255517d?width=759',
+    'https://api.builder.io/api/v1/image/assets/TEMP/178d70ae44c02875c163f889794af6d27dd06cd8?width=759',
+    'https://api.builder.io/api/v1/image/assets/TEMP/5cf61d2e8fde7d092974ac1a59a54eae278734c8?width=759'
+  ];
+
+  const scrollGallery = (direction: 'left' | 'right') => {
+    if (scrollRef.current) {
+      const scrollAmount = direction === 'left' ? -400 : 400;
+      scrollRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  };
 
   useSEO({
     title: 'The Brandt - Elevate Your Ambition | MPHD Group',
@@ -452,6 +469,79 @@ const Brandt = () => {
               <p className="font-inter text-[#231F20] text-base sm:text-lg md:text-xl lg:text-2xl">
                 In direct surroundings: (Michelin star) restaurants, bars, clubs, hotels, shops, leisure activities.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Image Gallery Section */}
+      <section className="w-full py-8 sm:py-12 lg:py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Gallery Container */}
+          <div className="relative">
+            {/* Scrollable Gallery */}
+            <div
+              ref={scrollRef}
+              className="flex gap-4 sm:gap-5 overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-4"
+              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            >
+              {galleryImages.map((image, index) => (
+                <div
+                  key={index}
+                  className="flex-shrink-0 snap-center w-[280px] sm:w-[320px] md:w-[380px] h-[420px] sm:h-[480px] md:h-[569px]"
+                >
+                  <img
+                    src={image}
+                    alt={`The Brandt Gallery ${index + 1}`}
+                    className="w-full h-full object-cover rounded-lg"
+                  />
+                </div>
+              ))}
+            </div>
+
+            {/* Navigation Buttons */}
+            <div className="flex justify-between items-center mt-4 sm:mt-6">
+              {/* Previous Button */}
+              <button
+                onClick={() => scrollGallery('left')}
+                className="p-2 hover:opacity-70 transition-opacity"
+                aria-label="Previous slide"
+              >
+                <svg
+                  width="48"
+                  height="39"
+                  viewBox="0 0 48 39"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-8 h-6 sm:w-10 sm:h-8 md:w-12 md:h-10"
+                >
+                  <path
+                    d="M0.00268555 19.0441C9.33608 15.531 16.0131 9.30615 19.8156 0C20.2449 0.199116 20.6252 0.375859 21.1524 0.620558C20.5934 1.8765 20.1002 3.13132 19.4905 4.32659C17.9441 7.35806 15.8556 9.99299 13.4549 12.388C13.1497 12.6925 12.8461 13.0007 12.567 13.3287C11.79 14.2421 11.6118 15.2721 12.0735 16.3798C12.5494 17.5219 13.4128 18.1707 14.6574 18.2705C14.9431 18.2935 15.2317 18.2879 15.5188 18.2879C25.782 18.2887 36.0455 18.2884 46.3086 18.2884C46.572 18.2884 46.8355 18.2884 47.138 18.2884V19.812C46.8736 19.812 46.6155 19.812 46.3574 19.812C35.9709 19.812 25.5846 19.8171 15.1982 19.8061C13.9021 19.8048 12.8625 20.224 12.2255 21.3982C11.4987 22.7381 11.7554 24.0281 12.9453 25.194C15.0522 27.2576 16.9574 29.4879 18.5016 32.0109C19.5549 33.7318 20.4615 35.5236 21.057 37.5087C20.6578 37.7019 20.2773 37.8858 19.8153 38.1094C16.1004 28.7423 9.30877 22.6139 0.00268555 19.0441Z"
+                    fill="#231F20"
+                  />
+                </svg>
+              </button>
+
+              {/* Next Button */}
+              <button
+                onClick={() => scrollGallery('right')}
+                className="p-2 hover:opacity-70 transition-opacity"
+                aria-label="Next slide"
+              >
+                <svg
+                  width="48"
+                  height="39"
+                  viewBox="0 0 48 39"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-8 h-6 sm:w-10 sm:h-8 md:w-12 md:h-10"
+                >
+                  <path
+                    d="M47.1314 19.136C37.8518 22.6247 31.213 28.8063 27.4323 38.0479C27.0055 37.8503 26.6274 37.6747 26.1032 37.4318C26.659 36.1843 27.1493 34.9381 27.7556 33.7513C29.2932 30.7409 31.3696 28.1243 33.7564 25.7459C34.06 25.4435 34.3618 25.1375 34.6393 24.8117C35.4119 23.9047 35.5889 22.8819 35.1299 21.7818C34.6568 20.6476 33.7983 20.0034 32.5609 19.9042C32.2768 19.8814 31.9899 19.887 31.7044 19.887C21.5002 19.8861 11.2958 19.8864 1.09155 19.8864C0.829605 19.8864 0.567657 19.8864 0.266907 19.8864V18.3735C0.529683 18.3735 0.78636 18.3735 1.04304 18.3735C11.3698 18.3735 21.6965 18.3684 32.0232 18.3793C33.3119 18.3807 34.3455 17.9644 34.9788 16.7982C35.7017 15.4677 35.4461 14.1866 34.2632 13.0288C32.1684 10.9796 30.2741 8.76479 28.7388 6.25925C27.6915 4.55021 26.7901 2.77088 26.198 0.799659C26.595 0.607756 26.9733 0.425299 27.4326 0.203125C31.1262 9.50517 37.8787 15.591 47.1314 19.136Z"
+                    fill="#231F20"
+                  />
+                </svg>
+              </button>
             </div>
           </div>
         </div>
