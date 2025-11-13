@@ -547,6 +547,42 @@ const Brandt = () => {
         </div>
       </section>
 
+      {/* Location & Accessibility Section */}
+      <section className="w-full px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="max-w-3xl">
+            {/* Section Heading */}
+            <h2 className="font-karantina font-bold text-[#231F20] uppercase text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.89] mb-8 sm:mb-10 lg:mb-12">
+              LOCATION,
+              <br />
+              ACCESSIBILITY
+              <br />
+              TIPS
+            </h2>
+
+            {/* Description Paragraphs */}
+            <div className="space-y-4 mb-8 sm:mb-10 lg:mb-12">
+              <p className="font-inter text-[#231F20] text-xl sm:text-2xl md:text-3xl lg:text-[28px] leading-relaxed">
+                Amsterdam considers itself as a small metropolis with a big international heart. Here, approximately 170 different nationalities live and work together side by side. Its more than 900,000 inhabitants give the city the character for which it is famously known worldwide:
+              </p>
+
+              <p className="font-inter text-[#231F20] text-xl sm:text-2xl md:text-3xl lg:text-[28px] leading-relaxed">
+                of the best places around The Brandt building.
+              </p>
+            </div>
+
+            {/* CTA Button */}
+            <div>
+              <button className="bg-[#231F20] text-white px-7 py-5 hover:bg-[#231F20]/90 transition-colors duration-300">
+                <span className="font-inter font-bold text-xl sm:text-2xl md:text-[26px] uppercase">
+                  SEE ACCESIBILITY
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );
