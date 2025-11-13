@@ -97,6 +97,97 @@ const Brandt = () => {
         </div>
       </section>
 
+      {/* Property Details Section */}
+      <section className="w-full px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 bg-white">
+        <div className="max-w-7xl mx-auto">
+          {/* Property Description */}
+          <div className="mb-8 sm:mb-12 lg:mb-16">
+            <h2 className="font-inter font-medium text-[#231F20] text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-snug max-w-3xl">
+              The Brandt offers large and flexible open floor plates of 1,000 square meter, which is rare for the historic city centre.
+            </h2>
+          </div>
+
+          {/* Specifications List */}
+          <div className="mb-8 sm:mb-12 lg:mb-16">
+            <div className="space-y-0">
+              {/* Location */}
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-4 sm:py-5 border-b border-[#2E302D] gap-2 sm:gap-4">
+                <span className="font-inter text-lg sm:text-xl md:text-2xl text-[#231F20]">LOCATION</span>
+                <span className="font-inter text-base sm:text-lg md:text-xl text-[#231F20]">REMBRANDTPLEIN 29 – 45</span>
+              </div>
+
+              {/* Paris Roof */}
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-4 sm:py-5 border-b border-[#2E302D] gap-2 sm:gap-4">
+                <span className="font-inter text-lg sm:text-xl md:text-2xl text-[#231F20]">PARIS ROOF</span>
+              </div>
+
+              {/* BREEAM */}
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-4 sm:py-5 border-b border-[#2E302D] gap-2 sm:gap-4">
+                <span className="font-inter text-lg sm:text-xl md:text-2xl text-[#231F20]">BREEAM</span>
+                <span className="font-inter text-base sm:text-lg md:text-xl text-[#231F20]">EXCELLENT</span>
+              </div>
+
+              {/* EPC Level */}
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-4 sm:py-5 border-b border-[#2E302D] gap-2 sm:gap-4">
+                <span className="font-inter text-lg sm:text-xl md:text-2xl text-[#231F20]">EPC LEVEL</span>
+                <span className="font-inter text-base sm:text-lg md:text-xl text-[#231F20]">A+++</span>
+              </div>
+
+              {/* Floors */}
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-4 sm:py-5 border-b border-[#2E302D] gap-2 sm:gap-4">
+                <span className="font-inter text-lg sm:text-xl md:text-2xl text-[#231F20]">FLOORS</span>
+                <span className="font-inter text-base sm:text-lg md:text-xl text-[#231F20]">7</span>
+              </div>
+
+              {/* SQ. M. LFA */}
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-4 sm:py-5 border-b border-[#2E302D] gap-2 sm:gap-4">
+                <span className="font-inter text-lg sm:text-xl md:text-2xl text-[#231F20]">SQ. M. LFA</span>
+                <span className="font-inter text-base sm:text-lg md:text-xl text-[#231F20]">5,340 SQ.M.</span>
+              </div>
+
+              {/* Floor Plates */}
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-4 sm:py-5 border-b border-[#2E302D] gap-2 sm:gap-4">
+                <span className="font-inter text-lg sm:text-xl md:text-2xl text-[#231F20]">FLOOR PLATES</span>
+                <span className="font-inter text-base sm:text-lg md:text-xl text-[#231F20]">242 – 1,056 SQ.M.(APPROX.)</span>
+              </div>
+
+              {/* Lifts */}
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-4 sm:py-5 border-b border-[#2E302D] gap-2 sm:gap-4">
+                <span className="font-inter text-lg sm:text-xl md:text-2xl text-[#231F20]">LIFTS</span>
+                <span className="font-inter text-base sm:text-lg md:text-xl text-[#231F20]">2</span>
+              </div>
+
+              {/* Terraces */}
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-4 sm:py-5 border-b border-[#2E302D] gap-2 sm:gap-4">
+                <span className="font-inter text-lg sm:text-xl md:text-2xl text-[#231F20]">TERRACES</span>
+                <span className="font-inter text-base sm:text-lg md:text-xl text-[#231F20]">9</span>
+              </div>
+
+              {/* Garden */}
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-4 sm:py-5 border-b border-[#2E302D] gap-2 sm:gap-4">
+                <span className="font-inter text-lg sm:text-xl md:text-2xl text-[#231F20]">GARDEN</span>
+                <span className="font-inter text-base sm:text-lg md:text-xl text-[#231F20]">1</span>
+              </div>
+
+              {/* Shower */}
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-4 sm:py-5 border-b border-[#2E302D] gap-2 sm:gap-4">
+                <span className="font-inter text-lg sm:text-xl md:text-2xl text-[#231F20]">SHOWER</span>
+                <span className="font-inter text-base sm:text-lg md:text-xl text-[#231F20]">1</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Interior Staircase Image */}
+          <div className="w-full">
+            <img
+              src="https://api.builder.io/api/v1/image/assets/TEMP/de38738f288e3bb63ba9de88b7aa67fadc45e59a?width=1094"
+              alt="The Brandt Interior Staircase"
+              className="w-full h-auto object-cover rounded-2xl"
+            />
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );
