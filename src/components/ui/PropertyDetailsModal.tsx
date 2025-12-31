@@ -117,12 +117,9 @@ const PropertyDetailsModal: React.FC<PropertyDetailsModalProps> = ({
               </p>
             </div>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col gap-3 mt-auto pt-4 border-t border-[#F1F1F1]">
+            {/* CTA Button */}
+            <div className="mt-auto pt-4 border-t border-[#F1F1F1]">
               <button className="w-full bg-[#131313] text-white rounded-full py-4 px-6 hover:bg-gray-800 transition-colors font-medium pointer-events-auto">
-                Schedule a Visit
-              </button>
-              <button className="w-full bg-white border-2 border-[#131313] text-[#131313] rounded-full py-4 px-6 hover:bg-gray-50 transition-colors font-medium pointer-events-auto">
                 Contact Agent
               </button>
             </div>
