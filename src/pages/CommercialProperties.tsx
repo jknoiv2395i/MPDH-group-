@@ -214,6 +214,13 @@ const CommercialProperties = () => {
         onRentClick={handleRentClick}
       />
 
+      {/* Property Details Modal */}
+      <PropertyDetailsModal
+        isOpen={showPropertyDetails}
+        onClose={handleClosePropertyDetails}
+        property={selectedProperty}
+      />
+
       {/* Hero Section */}
       <motion.section
         className="relative h-[280px] sm:h-[380px] md:h-[480px] lg:h-[569px] flex items-center justify-center overflow-hidden text-[#2d93b9] bg-[#3195bc]"
