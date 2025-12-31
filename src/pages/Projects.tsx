@@ -39,6 +39,27 @@ const Counter = ({ value, suffix = "", prefix = "", duration = 2 }) => {
 
 const Projects = () => {
   useSEO(SEO_PAGES.projects);
+  const [selectedProject, setSelectedProject] = useState<Property | null>(null);
+  const [showProjectDetails, setShowProjectDetails] = useState(false);
+
+  const handleViewProject = (project: any) => {
+    const projectAsProperty: Property = {
+      id: project.id,
+      title: project.title,
+      location: "Nagpur",
+      superArea: "Commercial & Residential Spaces",
+      transaction: "Completed",
+      description: project.description,
+      image: project.largeImage
+    };
+    setSelectedProject(projectAsProperty);
+    setShowProjectDetails(true);
+  };
+
+  const handleCloseProjectDetails = () => {
+    setShowProjectDetails(false);
+    setSelectedProject(null);
+  };
 
   // Animation variants
   const containerVariants = {
