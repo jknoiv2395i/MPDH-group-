@@ -45,6 +45,7 @@ const PropertyDetailsModal: React.FC<PropertyDetailsModalProps> = ({
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.95 }}
         transition={{ duration: 0.3 }}
+        onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button */}
         <button
