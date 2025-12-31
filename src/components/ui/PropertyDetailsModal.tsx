@@ -47,9 +47,10 @@ const PropertyDetailsModal: React.FC<PropertyDetailsModalProps> = ({
       >
         {/* Close Button */}
         <button
+          type="button"
           onClick={onClose}
           aria-label="Close dialog"
-          className="absolute top-4 right-4 z-20 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100 transition-colors border border-gray-200 pointer-events-auto"
+          className="absolute top-4 right-4 z-50 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100 transition-colors border border-gray-200 pointer-events-auto"
         >
           <X className="w-5 h-5 text-gray-700" />
         </button>
