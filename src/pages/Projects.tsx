@@ -156,6 +156,13 @@ const Projects = () => {
     <div className="min-h-screen bg-white">
       <FigmaNavBar />
 
+      {/* Project Details Modal */}
+      <PropertyDetailsModal
+        isOpen={showProjectDetails}
+        onClose={handleCloseProjectDetails}
+        property={selectedProject}
+      />
+
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <motion.div
