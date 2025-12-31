@@ -155,33 +155,37 @@ export function FigmaNavBar({ className }: NavBarProps) {
         <div className="md:hidden bg-[#131313] border-t border-white/10">
           <nav className="px-4 py-4 space-y-3">
             {navItems.map((item) => (
-              <a
+              <button
                 key={item.name}
-                href={item.url}
+                onClick={() => {
+                  navigate(item.url)
+                  setIsMobileMenuOpen(false)
+                }}
                 className={cn(
-                  "flex items-center justify-between transition-colors duration-200 py-2",
+                  "flex items-center justify-between transition-colors duration-200 py-2 w-full bg-transparent border-none cursor-pointer",
                   isTheBrandtPage
                     ? "text-black/80 hover:text-black"
                     : "text-white/80 hover:text-white"
                 )}
-                onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.name}
-              </a>
+              </button>
             ))}
             <div className={cn("border-t mt-3 pt-3", isTheBrandtPage ? "border-black/10" : "border-white/10")}>
-              <a
-                href="/services"
+              <button
+                onClick={() => {
+                  navigate('/services')
+                  setIsMobileMenuOpen(false)
+                }}
                 className={cn(
-                  "block transition-colors duration-200 py-2 text-center",
+                  "block transition-colors duration-200 py-2 text-center w-full bg-transparent border-none cursor-pointer",
                   isTheBrandtPage
                     ? "text-black/80 hover:text-black"
                     : "text-white/80 hover:text-white"
                 )}
-                onClick={() => setIsMobileMenuOpen(false)}
               >
                 Contact us
-              </a>
+              </button>
             </div>
           </nav>
         </div>
