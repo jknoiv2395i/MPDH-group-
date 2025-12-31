@@ -1,7 +1,8 @@
 import { FigmaNavBar } from "@/components/ui/figma-navbar";
 import Footer from "@/components/Footer";
+import PropertyDetailsModal, { Property } from "@/components/ui/PropertyDetailsModal";
 import { motion, useMotionValue, useSpring, useInView } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useSEO } from "@/hooks/use-seo";
 import { SEO_PAGES } from "@/lib/seo-constants";
 
