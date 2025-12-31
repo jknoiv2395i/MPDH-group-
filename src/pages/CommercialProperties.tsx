@@ -116,6 +116,16 @@ const CommercialProperties = () => {
     setShowPopup(false);
   };
 
+  const handleViewProject = (property: Property) => {
+    setSelectedProperty(property);
+    setShowPropertyDetails(true);
+  };
+
+  const handleClosePropertyDetails = () => {
+    setShowPropertyDetails(false);
+    setSelectedProperty(null);
+  };
+
   const properties = [
     {
       id: 1,
