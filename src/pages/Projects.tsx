@@ -354,6 +354,7 @@ const Projects = () => {
                           {project.title}
                         </motion.h3>
                         <motion.button
+                          onClick={() => handleViewProject(project)}
                           className="self-start bg-black text-white px-6 py-3 rounded-full font-inter text-base lg:text-lg font-medium hover:bg-gray-800 transition-colors whitespace-nowrap"
                           variants={cardVariants}
                           whileHover={{ scale: 1.05 }}
