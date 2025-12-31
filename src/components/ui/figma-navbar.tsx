@@ -92,18 +92,18 @@ export function FigmaNavBar({ className }: NavBarProps) {
               className="relative"
             >
               <div className="flex items-center h-8 min-w-fit">
-                <a
-                  href={item.url}
+                <button
+                  onClick={() => navigate(item.url)}
                   className={cn(
-                    "text-sm lg:text-base transition-colors duration-200 py-2",
+                    "text-sm lg:text-base transition-colors duration-200 py-2 bg-transparent border-none cursor-pointer",
                     isTheBrandtPage
                       ? "text-black/80 hover:text-black"
                       : "text-white/80 hover:text-white"
                   )}
                 >
                   {item.name}
-                </a>
-                              </div>
+                </button>
+              </div>
 
             </div>
           ))}
