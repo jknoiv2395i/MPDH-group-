@@ -69,7 +69,7 @@ export function FigmaNavBar({ className }: NavBarProps) {
           <button
             type="button"
             onClick={handleLogoClick}
-            className="hover:opacity-80 transition-opacity duration-200 cursor-pointer"
+            className="hover:opacity-80 transition-opacity duration-200 cursor-pointer pointer-events-auto"
             aria-label="Choose property type"
           >
             <img
@@ -92,18 +92,18 @@ export function FigmaNavBar({ className }: NavBarProps) {
               className="relative"
             >
               <div className="flex items-center h-8 min-w-fit">
-                <a
-                  href={item.url}
+                <button
+                  onClick={() => navigate(item.url)}
                   className={cn(
-                    "text-sm lg:text-base transition-colors duration-200 py-2",
+                    "text-sm lg:text-base transition-colors duration-200 py-2 bg-transparent border-none cursor-pointer pointer-events-auto",
                     isTheBrandtPage
                       ? "text-black/80 hover:text-black"
                       : "text-white/80 hover:text-white"
                   )}
                 >
                   {item.name}
-                </a>
-                              </div>
+                </button>
+              </div>
 
             </div>
           ))}
@@ -111,24 +111,24 @@ export function FigmaNavBar({ className }: NavBarProps) {
 
         {/* Contact Us Button */}
         <div className={cn("hidden md:flex items-center", !isTheBrandtPage && "text-black")}>
-          <a
-            href="https://mphdgroup.com/services"
+          <button
+            onClick={() => navigate('/services')}
             className={cn(
-              "px-6 py-3 rounded-[27px] text-sm lg:text-base font-medium transition-colors duration-200 cursor-pointer pointer-events-auto",
+              "px-6 py-3 rounded-[27px] text-sm lg:text-base font-medium transition-colors duration-200 cursor-pointer pointer-events-auto bg-transparent border-none",
               isTheBrandtPage
                 ? "bg-[#231F20] text-white hover:bg-[#2E302D]"
                 : "bg-white text-black hover:bg-gray-100"
             )}
           >
             Contact us
-          </a>
+          </button>
         </div>
 
         {/* Mobile Menu Button */}
         <div className="md:hidden">
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={cn("relative flex flex-col items-center justify-center w-8 h-8 focus:outline-none", isTheBrandtPage ? "text-black" : "text-white")}
+            className={cn("relative flex flex-col items-center justify-center w-8 h-8 focus:outline-none pointer-events-auto", isTheBrandtPage ? "text-black" : "text-white")}
             aria-label="Toggle mobile menu"
           >
             <span className={cn(
@@ -155,33 +155,37 @@ export function FigmaNavBar({ className }: NavBarProps) {
         <div className="md:hidden bg-[#131313] border-t border-white/10">
           <nav className="px-4 py-4 space-y-3">
             {navItems.map((item) => (
-              <a
+              <button
                 key={item.name}
-                href={item.url}
+                onClick={() => {
+                  navigate(item.url)
+                  setIsMobileMenuOpen(false)
+                }}
                 className={cn(
-                  "flex items-center justify-between transition-colors duration-200 py-2",
+                  "flex items-center justify-between transition-colors duration-200 py-2 w-full bg-transparent border-none cursor-pointer pointer-events-auto",
                   isTheBrandtPage
                     ? "text-black/80 hover:text-black"
                     : "text-white/80 hover:text-white"
                 )}
-                onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.name}
-              </a>
+              </button>
             ))}
             <div className={cn("border-t mt-3 pt-3", isTheBrandtPage ? "border-black/10" : "border-white/10")}>
-              <a
-                href="/services"
+              <button
+                onClick={() => {
+                  navigate('/services')
+                  setIsMobileMenuOpen(false)
+                }}
                 className={cn(
-                  "block transition-colors duration-200 py-2 text-center",
+                  "block transition-colors duration-200 py-2 text-center w-full bg-transparent border-none cursor-pointer pointer-events-auto",
                   isTheBrandtPage
                     ? "text-black/80 hover:text-black"
                     : "text-white/80 hover:text-white"
                 )}
-                onClick={() => setIsMobileMenuOpen(false)}
               >
                 Contact us
-              </a>
+              </button>
             </div>
           </nav>
         </div>

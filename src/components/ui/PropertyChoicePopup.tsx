@@ -21,21 +21,21 @@ const PropertyChoicePopup: React.FC<PropertyChoicePopupProps> = ({
     <div
       role="dialog"
       aria-modal="true"
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 pointer-events-auto"
     >
       {/* Backdrop */}
       <div
-        className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+        className="absolute inset-0 bg-black/50 backdrop-blur-sm pointer-events-auto"
         onClick={onClose}
       />
 
       {/* Popup Content */}
-      <div className="relative w-full max-w-md md:max-w-2xl bg-white/5 md:bg-transparent rounded-lg md:rounded-none p-4 md:p-0">
+      <div className="relative w-full max-w-md md:max-w-2xl bg-white/5 md:bg-transparent rounded-lg md:rounded-none p-4 md:p-0 pointer-events-auto">
         {/* Close Button */}
         <button
           onClick={onClose}
           aria-label="Close dialog"
-          className="absolute top-3 right-3 md:-top-4 md:-right-4 z-20 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100 transition-colors"
+          className="absolute top-3 right-3 md:-top-4 md:-right-4 z-20 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100 transition-colors pointer-events-auto"
         >
           <X className="w-4 h-4 text-gray-700" />
         </button>
@@ -69,7 +69,7 @@ const PropertyChoicePopup: React.FC<PropertyChoicePopupProps> = ({
             <div className="px-1 md:px-0">
               <button
                 onClick={onPurchaseClick}
-                className="relative w-full bg-white rounded-full h-12 md:h-14 flex items-center px-4 md:px-6 hover:bg-gray-50 transition-colors group"
+                className="relative w-full bg-white rounded-full h-12 md:h-14 flex items-center px-4 md:px-6 hover:bg-gray-50 transition-colors group pointer-events-auto"
               >
                 <span className="text-[#131313] text-base md:text-lg font-medium font-inter flex-1 text-center">
                   Purchase
@@ -110,7 +110,7 @@ const PropertyChoicePopup: React.FC<PropertyChoicePopupProps> = ({
             <div className="px-1 md:px-0">
               <button
                 onClick={onRentClick}
-                className="relative w-full bg-white rounded-full h-12 md:h-14 flex items-center px-4 md:px-6 hover:bg-gray-50 transition-colors group"
+                className="relative w-full bg-white rounded-full h-12 md:h-14 flex items-center px-4 md:px-6 hover:bg-gray-50 transition-colors group pointer-events-auto"
               >
                 <span className="text-[#131313] text-base md:text-lg font-medium font-inter flex-1 text-center">
                   Rent

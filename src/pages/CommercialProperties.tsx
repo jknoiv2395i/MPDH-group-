@@ -5,6 +5,7 @@ import { FigmaNavBar } from '@/components/ui/figma-navbar';
 import { ChevronDown, MapPin, Menu, Grid } from 'lucide-react';
 import Footer from '@/components/Footer';
 import PropertyChoicePopup from '@/components/ui/PropertyChoicePopup';
+import PropertyDetailsModal, { Property } from '@/components/ui/PropertyDetailsModal';
 import { useSEO } from '@/hooks/use-seo';
 import { SEO_PAGES } from '@/lib/seo-constants';
 
@@ -13,6 +14,8 @@ const CommercialProperties = () => {
   const navigate = useNavigate();
   const [viewMode, setViewMode] = useState<'list' | 'grid'>('list');
   const [showPopup, setShowPopup] = useState(false);
+  const [selectedProperty, setSelectedProperty] = useState<Property | null>(null);
+  const [showPropertyDetails, setShowPropertyDetails] = useState(false);
 
   // Animation variants
   const containerVariants = {
@@ -113,6 +116,16 @@ const CommercialProperties = () => {
     setShowPopup(false);
   };
 
+  const handleViewProject = (property: Property) => {
+    setSelectedProperty(property);
+    setShowPropertyDetails(true);
+  };
+
+  const handleClosePropertyDetails = () => {
+    setShowPropertyDetails(false);
+    setSelectedProperty(null);
+  };
+
   const properties = [
     {
       id: 1,
@@ -199,6 +212,13 @@ const CommercialProperties = () => {
         onClose={handleClosePopup}
         onPurchaseClick={handlePurchaseClick}
         onRentClick={handleRentClick}
+      />
+
+      {/* Property Details Modal */}
+      <PropertyDetailsModal
+        isOpen={showPropertyDetails}
+        onClose={handleClosePropertyDetails}
+        property={selectedProperty}
       />
 
       {/* Hero Section */}
@@ -368,7 +388,7 @@ const CommercialProperties = () => {
 
                   {/* View Project Button */}
                   <div className="pt-0">
-                    <button className="w-full max-w-[402px] mx-auto flex items-center justify-center bg-[#131313] text-white rounded-full py-4 px-8 hover:bg-gray-800 transition-colors">
+                    <button onClick={() => handleViewProject(property)} className="w-full max-w-[402px] mx-auto flex items-center justify-center bg-[#131313] text-white rounded-full py-4 px-8 hover:bg-gray-800 transition-colors">
                       <span className="text-base sm:text-lg font-medium">View project</span>
                     </button>
                   </div>

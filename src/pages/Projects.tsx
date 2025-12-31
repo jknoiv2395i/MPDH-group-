@@ -1,7 +1,8 @@
 import { FigmaNavBar } from "@/components/ui/figma-navbar";
 import Footer from "@/components/Footer";
+import PropertyDetailsModal, { Property } from "@/components/ui/PropertyDetailsModal";
 import { motion, useMotionValue, useSpring, useInView } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useSEO } from "@/hooks/use-seo";
 import { SEO_PAGES } from "@/lib/seo-constants";
 
@@ -38,6 +39,27 @@ const Counter = ({ value, suffix = "", prefix = "", duration = 2 }) => {
 
 const Projects = () => {
   useSEO(SEO_PAGES.projects);
+  const [selectedProject, setSelectedProject] = useState<Property | null>(null);
+  const [showProjectDetails, setShowProjectDetails] = useState(false);
+
+  const handleViewProject = (project: any) => {
+    const projectAsProperty: Property = {
+      id: project.id,
+      title: project.title,
+      location: "Nagpur",
+      superArea: "Commercial & Residential Spaces",
+      transaction: "Completed",
+      description: project.description,
+      image: project.largeImage
+    };
+    setSelectedProject(projectAsProperty);
+    setShowProjectDetails(true);
+  };
+
+  const handleCloseProjectDetails = () => {
+    setShowProjectDetails(false);
+    setSelectedProject(null);
+  };
 
   // Animation variants
   const containerVariants = {
@@ -133,6 +155,13 @@ const Projects = () => {
   return (
     <div className="min-h-screen bg-white">
       <FigmaNavBar />
+
+      {/* Project Details Modal */}
+      <PropertyDetailsModal
+        isOpen={showProjectDetails}
+        onClose={handleCloseProjectDetails}
+        property={selectedProject}
+      />
 
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
@@ -325,6 +354,7 @@ const Projects = () => {
                           {project.title}
                         </motion.h3>
                         <motion.button
+                          onClick={() => handleViewProject(project)}
                           className="self-start bg-black text-white px-6 py-3 rounded-full font-inter text-base lg:text-lg font-medium hover:bg-gray-800 transition-colors whitespace-nowrap"
                           variants={cardVariants}
                           whileHover={{ scale: 1.05 }}
@@ -365,6 +395,7 @@ const Projects = () => {
                           {project.title}
                         </motion.h3>
                         <motion.button
+                          onClick={() => handleViewProject(project)}
                           className="self-start bg-black text-white px-6 py-3 rounded-full font-inter text-base lg:text-lg font-medium hover:bg-gray-800 transition-colors whitespace-nowrap"
                           variants={cardVariants}
                           whileHover={{ scale: 1.05 }}
