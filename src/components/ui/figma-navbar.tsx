@@ -69,7 +69,7 @@ export function FigmaNavBar({ className }: NavBarProps) {
           <button
             type="button"
             onClick={handleLogoClick}
-            className="hover:opacity-80 transition-opacity duration-200 cursor-pointer"
+            className="hover:opacity-80 transition-opacity duration-200 cursor-pointer pointer-events-auto"
             aria-label="Choose property type"
           >
             <img
@@ -95,7 +95,7 @@ export function FigmaNavBar({ className }: NavBarProps) {
                 <button
                   onClick={() => navigate(item.url)}
                   className={cn(
-                    "text-sm lg:text-base transition-colors duration-200 py-2 bg-transparent border-none cursor-pointer",
+                    "text-sm lg:text-base transition-colors duration-200 py-2 bg-transparent border-none cursor-pointer pointer-events-auto",
                     isTheBrandtPage
                       ? "text-black/80 hover:text-black"
                       : "text-white/80 hover:text-white"
@@ -128,7 +128,7 @@ export function FigmaNavBar({ className }: NavBarProps) {
         <div className="md:hidden">
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={cn("relative flex flex-col items-center justify-center w-8 h-8 focus:outline-none", isTheBrandtPage ? "text-black" : "text-white")}
+            className={cn("relative flex flex-col items-center justify-center w-8 h-8 focus:outline-none pointer-events-auto", isTheBrandtPage ? "text-black" : "text-white")}
             aria-label="Toggle mobile menu"
           >
             <span className={cn(
@@ -162,7 +162,7 @@ export function FigmaNavBar({ className }: NavBarProps) {
                   setIsMobileMenuOpen(false)
                 }}
                 className={cn(
-                  "flex items-center justify-between transition-colors duration-200 py-2 w-full bg-transparent border-none cursor-pointer",
+                  "flex items-center justify-between transition-colors duration-200 py-2 w-full bg-transparent border-none cursor-pointer pointer-events-auto",
                   isTheBrandtPage
                     ? "text-black/80 hover:text-black"
                     : "text-white/80 hover:text-white"
@@ -178,7 +178,7 @@ export function FigmaNavBar({ className }: NavBarProps) {
                   setIsMobileMenuOpen(false)
                 }}
                 className={cn(
-                  "block transition-colors duration-200 py-2 text-center w-full bg-transparent border-none cursor-pointer",
+                  "block transition-colors duration-200 py-2 text-center w-full bg-transparent border-none cursor-pointer pointer-events-auto",
                   isTheBrandtPage
                     ? "text-black/80 hover:text-black"
                     : "text-white/80 hover:text-white"
