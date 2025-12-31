@@ -14,6 +14,8 @@ const CommercialProperties = () => {
   const navigate = useNavigate();
   const [viewMode, setViewMode] = useState<'list' | 'grid'>('list');
   const [showPopup, setShowPopup] = useState(false);
+  const [selectedProperty, setSelectedProperty] = useState<Property | null>(null);
+  const [showPropertyDetails, setShowPropertyDetails] = useState(false);
 
   // Animation variants
   const containerVariants = {
