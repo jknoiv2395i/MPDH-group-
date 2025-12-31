@@ -33,8 +33,7 @@ const PropertyDetailsModal: React.FC<PropertyDetailsModalProps> = ({
     >
       {/* Backdrop */}
       <div
-        className="absolute inset-0 bg-black/50 backdrop-blur-sm pointer-events-auto"
-        onClick={onClose}
+        className="absolute inset-0 bg-black/50 backdrop-blur-sm pointer-events-none"
       />
 
       {/* Modal Content */}
