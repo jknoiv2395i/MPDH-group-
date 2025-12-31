@@ -49,7 +49,7 @@ const PropertyDetailsModal: React.FC<PropertyDetailsModalProps> = ({
         <button
           onClick={onClose}
           aria-label="Close dialog"
-          className="absolute top-4 right-4 z-20 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100 transition-colors border border-gray-200"
+          className="absolute top-4 right-4 z-20 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100 transition-colors border border-gray-200 pointer-events-auto"
         >
           <X className="w-5 h-5 text-gray-700" />
         </button>
@@ -116,10 +116,10 @@ const PropertyDetailsModal: React.FC<PropertyDetailsModalProps> = ({
 
             {/* CTA Buttons */}
             <div className="flex flex-col gap-3 mt-auto pt-4 border-t border-[#F1F1F1]">
-              <button className="w-full bg-[#131313] text-white rounded-full py-4 px-6 hover:bg-gray-800 transition-colors font-medium">
+              <button className="w-full bg-[#131313] text-white rounded-full py-4 px-6 hover:bg-gray-800 transition-colors font-medium pointer-events-auto">
                 Schedule a Visit
               </button>
-              <button className="w-full bg-white border-2 border-[#131313] text-[#131313] rounded-full py-4 px-6 hover:bg-gray-50 transition-colors font-medium">
+              <button className="w-full bg-white border-2 border-[#131313] text-[#131313] rounded-full py-4 px-6 hover:bg-gray-50 transition-colors font-medium pointer-events-auto">
                 Contact Agent
               </button>
             </div>
