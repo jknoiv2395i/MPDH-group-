@@ -29,11 +29,13 @@ const PropertyDetailsModal: React.FC<PropertyDetailsModalProps> = ({
     <div
       role="dialog"
       aria-modal="true"
+      onClick={onClose}
       className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 pointer-events-auto"
     >
       {/* Backdrop */}
       <div
-        className="absolute inset-0 bg-black/50 backdrop-blur-sm pointer-events-none"
+        className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+        onClick={(e) => e.stopPropagation()}
       />
 
       {/* Modal Content */}
