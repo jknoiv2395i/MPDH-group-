@@ -16,7 +16,6 @@ interface NavBarProps {
 
 const navItems: NavItem[] = [
   { name: 'Home', url: '/' },
-  { name: 'About us', url: '/about' },
   { name: 'Residential', url: '/residential' },
   { name: 'Commercial', url: '/commercial' },
   { name: 'Industrial', url: '/industrial' },
