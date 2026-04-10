@@ -1,7 +1,9 @@
+import { useContent } from "../hooks/useContent";
 import { motion } from "framer-motion";
 import HeroHeader from "./HeroHeader";
 
 const HeroSection = () => {
+  const { content } = useContent();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -92,7 +94,7 @@ const HeroSection = () => {
             variants={itemVariants}
             className="text-sm sm:text-lg md:text-xl text-white/90 mb-8 sm:mb-12 mx-auto max-w-xs sm:max-w-md md:max-w-lg leading-relaxed px-2 sm:px-0"
           >
-            Bring your architectural projects to life with a template that puts your work front and center.
+            {content?.home?.heroSubtitle || 'Bring your architectural projects to life with a template that puts your work front and center.'}
           </motion.p>
 
           {/* CTA Button */}

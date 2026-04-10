@@ -5,9 +5,10 @@ import { FigmaNavBar } from '@/components/ui/figma-navbar';
 import { ChevronDown, MapPin, Menu, Grid } from 'lucide-react';
 import Footer from '@/components/Footer';
 import PropertyChoicePopup from '@/components/ui/PropertyChoicePopup';
-import PropertyDetailsModal, { Property } from '@/components/ui/PropertyDetailsModal';
+import PropertyDetailsModal from '@/components/ui/PropertyDetailsModal';
 import { useSEO } from '@/hooks/use-seo';
 import { SEO_PAGES } from '@/lib/seo-constants';
+import { useProperties } from '@/hooks/useProperties';
 
 const ResidentialProperties = () => {
   useSEO(SEO_PAGES.residential);
@@ -15,7 +16,7 @@ const ResidentialProperties = () => {
   const [viewMode, setViewMode] = useState<'list' | 'grid'>('list');
   const [sortOrder, setSortOrder] = useState('New To Old');
   const [showPopup, setShowPopup] = useState(false);
-  const [selectedProperty, setSelectedProperty] = useState<Property | null>(null);
+  const [selectedProperty, setSelectedProperty] = useState<any | null>(null);
   const [showPropertyDetails, setShowPropertyDetails] = useState(false);
 
   // Animation variants
@@ -117,7 +118,7 @@ const ResidentialProperties = () => {
     setShowPopup(false);
   };
 
-  const handleViewProject = (property: Property) => {
+  const handleViewProject = (property: any) => {
     setSelectedProperty(property);
     setShowPropertyDetails(true);
   };
@@ -127,88 +128,19 @@ const ResidentialProperties = () => {
     setSelectedProperty(null);
   };
 
-  const properties = [
-    {
-      id: 1,
-      title: "2BHK Sq.Ft. Residential Apartment for Sale",
-      location: "KT Nagar, Friends Colony, Nagpur",
-      superArea: "3 BHK 1550 Sqft  4 BHK 3000 Sqft",
-      status: "STATUS",
-      transaction: "New",
-      description: "Ready to move Residential Sanctioned, Fire NoC and OC are available",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/5d04d2129d0e188bc5ec457cb7466a090c13a14f?width=1485"
-    },
-    {
-      id: 2,
-      title: "3BHK Sq.Ft. Luxury Residential Complex",
-      location: "Dharampeth, Civil Lines, Nagpur",
-      superArea: "2 BHK 1200 Sqft  3 BHK 1800 Sqft",
-      status: "STATUS",
-      transaction: "New",
-      description: "Premium residential complex with modern amenities and facilities",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/e59ba35efbf2405f339389978d3d9dd401a2a22e?width=1485"
-    },
-    {
-      id: 3,
-      title: "4BHK Sq.Ft. Premium Residential Tower",
-      location: "Sadar, Central Nagpur",
-      superArea: "3 BHK 1800 Sqft  4 BHK 2500 Sqft",
-      status: "STATUS",
-      transaction: "New",
-      description: "Luxury residential tower with panoramic city views and premium finishes",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/2b5878af095bb2656d03030baa2637696d0395dd?width=1485"
-    },
-    {
-      id: 4,
-      title: "2BHK Sq.Ft. Modern Residential Complex",
-      location: "Hingna Road, MIDC Area, Nagpur",
-      superArea: "2 BHK 1100 Sqft  3 BHK 1500 Sqft",
-      status: "STATUS",
-      transaction: "New",
-      description: "Contemporary design with all modern amenities and green spaces",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/0f9c4d78a1ad72b82637afb6a3f83661e5d6ad44?width=1485"
-    },
-    {
-      id: 5,
-      title: "1BHK Sq.Ft. Affordable Housing Project",
-      location: "Kharbi, Outer Ring Road, Nagpur",
-      superArea: "1 BHK 650 Sqft  2 BHK 950 Sqft",
-      status: "STATUS",
-      transaction: "New",
-      description: "Budget-friendly residential options with essential amenities",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/1c0cc0c8a24e747af13ae6b60142a6f9fe9e8c78?width=1485"
-    },
-    {
-      id: 6,
-      title: "3BHK Sq.Ft. Gated Community Homes",
-      location: "Manish Nagar, Somalwada, Nagpur",
-      superArea: "2 BHK 1300 Sqft  3 BHK 1900 Sqft",
-      status: "STATUS",
-      transaction: "New",
-      description: "Secure gated community with clubhouse and recreational facilities",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/66b2636d037411b3f5f0d7f7dd3107e9e40ab5fe?width=1485"
-    },
-    {
-      id: 7,
-      title: "4BHK Sq.Ft. Ultra-Luxury Apartments",
-      location: "Ramdaspeth, Central Avenue, Nagpur",
-      superArea: "3 BHK 2200 Sqft  4 BHK 3200 Sqft",
-      status: "STATUS",
-      transaction: "New",
-      description: "Ultra-luxury apartments with premium specifications and concierge services",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/4ff82520b46a270028f206fd01853cc1f86f7a01?width=1485"
-    },
-    {
-      id: 8,
-      title: "2BHK Sq.Ft. Smart Home Residences",
-      location: "Wadi, Ring Road, Nagpur",
-      superArea: "2 BHK 1150 Sqft  3 BHK 1650 Sqft",
-      status: "STATUS",
-      transaction: "New",
-      description: "Smart home technology integrated residential complex with IoT features",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/9f5bfeb0662138b67ba5805e252cbb2f8f7c7377?width=1485"
-    }
-  ];
+  const { getByCategory, loading: propertiesLoading } = useProperties();
+  const properties = getByCategory('residential').map(p => ({
+    id: Number(p.id.replace(/\D/g, '')) || Math.random(),
+    title: p.title,
+    location: p.location,
+    superArea: p.superArea,
+    status: p.status,
+    transaction: p.transaction,
+    description: p.description,
+    image: p.images[0] || '',
+    images: p.images,
+    price: p.price,
+  }));
 
   return (
     <div className="min-h-screen bg-white">

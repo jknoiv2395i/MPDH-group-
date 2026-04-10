@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
+import { useContent } from '../hooks/useContent';
 
 const Footer = () => {
+  const { content } = useContent();
   return (
     <footer className="bg-[#131313] text-white py-20">
       <div className="container mx-auto px-4">
@@ -16,7 +18,7 @@ const Footer = () => {
                 />
               </div>
               <p className="text-[#B7B7B7] font-inter text-lg leading-relaxed">
-                Bring your architectural projects to life with a template that puts your work front and center.
+                {content?.footer?.description || 'Bring your architectural projects to life with a template that puts your work front and center.'}
               </p>
             </div>
 
@@ -83,28 +85,33 @@ const Footer = () => {
           </div>
 
           {/* Bottom Section */}
-          <div className="flex flex-col md:flex-row justify-between items-start border-t border-white/10">
+          <div className="flex flex-col md:flex-row justify-between items-start border-t border-white/10 mt-12 pt-8">
             <div className="font-inter text-[#989898]">
               <p><strong>Office Address</strong></p>
-              <p>
-                Bhandara Road, Behind Jk Tower, Small Factory Area Bagadgangj
-                <br />
-                Nagper Maharashtra-2440008
-                <br />
-                <br />
+              <p className="whitespace-pre-line">
+                {content?.contact?.address || 'Bhandara Road, Behind Jk Tower...'}
               </p>
+              <br />
               <p><strong>Phone Number</strong></p>
-              <p>office: 7387777085</p>
-              <p>
-                Mobile:-7387777686/8275046765
-                <br />
-                <br />
-                EMAIL :- info@mphdgroup.com
-              </p>
+              <p>{content?.contact?.phone || 'office: 7387777085'}</p>
+              <br />
+              <p><strong>Email</strong></p>
+              <p>{content?.contact?.email || 'EMAIL :- info@mphdgroup.com'}</p>
+
               <p>
                 <br />
               </p>
             </div>
+          </div>
+
+          {/* Admin Link — subtle bottom strip */}
+          <div className="border-t border-white/5 mt-6 pt-4 flex justify-end">
+            <Link
+              to="/admin/login"
+              className="text-white/20 hover:text-white/50 transition-colors text-xs font-inter"
+            >
+              Admin Panel
+            </Link>
           </div>
         </div>
       </div>

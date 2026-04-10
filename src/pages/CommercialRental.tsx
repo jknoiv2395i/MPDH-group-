@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import PropertyDetailsModal, { Property } from '@/components/ui/PropertyDetailsModal';
 import { useSEO } from '@/hooks/use-seo';
 import { SEO_PAGES } from '@/lib/seo-constants';
+import { useProperties } from '@/hooks/useProperties';
 
 const CommercialRental = () => {
   useSEO(SEO_PAGES.commercialRental);
@@ -22,80 +23,20 @@ const CommercialRental = () => {
     setSelectedProperty(null);
   };
 
-  const properties = [
-    {
-      id: 1,
-      title: "22163 Sq.Ft. Commercial Office/Space for Rent",
-      location: "KT Nagar, Friends Colony, Nagpur",
-      superArea: "3 BHK 1550 Sqft  4 BHK 3000 Sqft",
-      transaction: "New",
-      description: "Ready to move Commercial Sanctioned, Fire NoC and OC are available",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/0cde9d4c0a28abff220953a8f47e85f4a66851b2?width=1485"
-    },
-    {
-      id: 2,
-      title: "22163 Sq.Ft. Commercial Office/Space for Rent",
-      location: "KT Nagar, Friends Colony, Nagpur",
-      superArea: "3 BHK 1550 Sqft  4 BHK 3000 Sqft",
-      transaction: "New",
-      description: "Ready to move Commercial Sanctioned, Fire NoC and OC are available",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/58f913a126708769cfeacf636332370ecb81872b?width=1485"
-    },
-    {
-      id: 3,
-      title: "22163 Sq.Ft. Commercial Office/Space for Rent",
-      location: "KT Nagar, Friends Colony, Nagpur",
-      superArea: "3 BHK 1550 Sqft  4 BHK 3000 Sqft",
-      transaction: "New",
-      description: "Ready to move Commercial Sanctioned, Fire NoC and OC are available",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/39b522303573f6ccd129067f1a6b9f68a3641994?width=1485"
-    },
-    {
-      id: 4,
-      title: "22163 Sq.Ft. Commercial Office/Space for Rent",
-      location: "KT Nagar, Friends Colony, Nagpur",
-      superArea: "3 BHK 1550 Sqft  4 BHK 3000 Sqft",
-      transaction: "New",
-      description: "Ready to move Commercial Sanctioned, Fire NoC and OC are available",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/8752f51c0207253b582bf2ba338156fa9f00f25e?width=1485"
-    },
-    {
-      id: 5,
-      title: "22163 Sq.Ft. Commercial Office/Space for Rent",
-      location: "KT Nagar, Friends Colony, Nagpur",
-      superArea: "3 BHK 1550 Sqft  4 BHK 3000 Sqft",
-      transaction: "New",
-      description: "Ready to move Commercial Sanctioned, Fire NoC and OC are available",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/6e54b10b09d9d55567ab9329f1fb65ad275bb773?width=1485"
-    },
-    {
-      id: 6,
-      title: "22163 Sq.Ft. Commercial Office/Space for Rent",
-      location: "KT Nagar, Friends Colony, Nagpur",
-      superArea: "3 BHK 1550 Sqft  4 BHK 3000 Sqft",
-      transaction: "New",
-      description: "Ready to move Commercial Sanctioned, Fire NoC and OC are available",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/971c65cb802603f188e530ca9fbb0e8bd45881eb?width=1485"
-    },
-    {
-      id: 7,
-      title: "22163 Sq.Ft. Commercial Office/Space for Rent",
-      location: "KT Nagar, Friends Colony, Nagpur",
-      superArea: "3 BHK 1550 Sqft  4 BHK 3000 Sqft",
-      transaction: "New",
-      description: "Ready to move Commercial Sanctioned, Fire NoC and OC are available",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/4ff82520b46a270028f206fd01853cc1f86f7a01?width=1485"
-    },
-    {
-      id: 8,
-      title: "22163 Sq.Ft. Commercial Office/Space for Rent",
-      location: "KT Nagar, Friends Colony, Nagpur",
-      superArea: "3 BHK 1550 Sqft  4 BHK 3000 Sqft",
-      transaction: "New",
-      description: "Ready to move Commercial Sanctioned, Fire NoC and OC are available",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/9f5bfeb0662138b67ba5805e252cbb2f8f7c7377?width=1485"
-    }
-  ];
+  const { getByCategory } = useProperties();
+  const properties = getByCategory('commercial-rental').map(p => ({
+    id: p.id,
+    title: p.title,
+    location: p.location,
+    superArea: p.superArea,
+    transaction: p.transaction,
+    description: p.description,
+    image: p.images[0] || '',
+    images: p.images,
+    videos: p.videos,
+    price: p.price,
+    status: p.status,
+  }));
 
   return (
     <div className="min-h-screen bg-white">

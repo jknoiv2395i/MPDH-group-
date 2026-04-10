@@ -5,16 +5,17 @@ import { FigmaNavBar } from '@/components/ui/figma-navbar';
 import { ChevronDown, MapPin, Menu, Grid } from 'lucide-react';
 import Footer from '@/components/Footer';
 import PropertyChoicePopup from '@/components/ui/PropertyChoicePopup';
-import PropertyDetailsModal, { Property } from '@/components/ui/PropertyDetailsModal';
+import PropertyDetailsModal from '@/components/ui/PropertyDetailsModal';
 import { useSEO } from '@/hooks/use-seo';
 import { SEO_PAGES } from '@/lib/seo-constants';
+import { useProperties } from '@/hooks/useProperties';
 
 const CommercialProperties = () => {
   useSEO(SEO_PAGES.commercial);
   const navigate = useNavigate();
   const [viewMode, setViewMode] = useState<'list' | 'grid'>('list');
   const [showPopup, setShowPopup] = useState(false);
-  const [selectedProperty, setSelectedProperty] = useState<Property | null>(null);
+  const [selectedProperty, setSelectedProperty] = useState<any | null>(null);
   const [showPropertyDetails, setShowPropertyDetails] = useState(false);
 
   // Animation variants
@@ -116,7 +117,7 @@ const CommercialProperties = () => {
     setShowPopup(false);
   };
 
-  const handleViewProject = (property: Property) => {
+  const handleViewProject = (property: any) => {
     setSelectedProperty(property);
     setShowPropertyDetails(true);
   };
@@ -126,80 +127,19 @@ const CommercialProperties = () => {
     setSelectedProperty(null);
   };
 
-  const properties = [
-    {
-      id: 1,
-      title: "22163 Sq.Ft. Commercial Office/Space for Rent",
-      location: "KT Nagar, Friends Colony, Nagpur",
-      superArea: "3 BHK 1550 Sqft  4 BHK 3000 Sqft",
-      transaction: "New",
-      description: "Ready to move Commercial Sanctioned, Fire NoC and OC are available",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/ab39aee17e8dfc110c4406ef7bd747ab417b4863?width=1485"
-    },
-    {
-      id: 2,
-      title: "22163 Sq.Ft. Commercial Office/Space for Rent",
-      location: "KT Nagar, Friends Colony, Nagpur",
-      superArea: "3 BHK 1550 Sqft  4 BHK 3000 Sqft",
-      transaction: "New",
-      description: "Ready to move Commercial Sanctioned, Fire NoC and OC are available",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/3516253f2a4dd9d4bb90f1da4907439836a4a595?width=1485"
-    },
-    {
-      id: 3,
-      title: "22163 Sq.Ft. Commercial Office/Space for Rent",
-      location: "KT Nagar, Friends Colony, Nagpur",
-      superArea: "3 BHK 1550 Sqft  4 BHK 3000 Sqft",
-      transaction: "New",
-      description: "Ready to move Commercial Sanctioned, Fire NoC and OC are available",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/39b522303573f6ccd129067f1a6b9f68a3641994?width=1485"
-    },
-    {
-      id: 4,
-      title: "22163 Sq.Ft. Commercial Office/Space for Rent",
-      location: "KT Nagar, Friends Colony, Nagpur",
-      superArea: "3 BHK 1550 Sqft  4 BHK 3000 Sqft",
-      transaction: "New",
-      description: "Ready to move Commercial Sanctioned, Fire NoC and OC are available",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/8752f51c0207253b582bf2ba338156fa9f00f25e?width=1485"
-    },
-    {
-      id: 5,
-      title: "22163 Sq.Ft. Commercial Office/Space for Rent",
-      location: "KT Nagar, Friends Colony, Nagpur",
-      superArea: "3 BHK 1550 Sqft  4 BHK 3000 Sqft",
-      transaction: "New",
-      description: "Ready to move Commercial Sanctioned, Fire NoC and OC are available",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/6e54b10b09d9d55567ab9329f1fb65ad275bb773?width=1485"
-    },
-    {
-      id: 6,
-      title: "22163 Sq.Ft. Commercial Office/Space for Rent",
-      location: "KT Nagar, Friends Colony, Nagpur",
-      superArea: "3 BHK 1550 Sqft  4 BHK 3000 Sqft",
-      transaction: "New",
-      description: "Ready to move Commercial Sanctioned, Fire NoC and OC are available",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/971c65cb802603f188e530ca9fbb0e8bd45881eb?width=1485"
-    },
-    {
-      id: 7,
-      title: "22163 Sq.Ft. Commercial Office/Space for Rent",
-      location: "KT Nagar, Friends Colony, Nagpur",
-      superArea: "3 BHK 1550 Sqft  4 BHK 3000 Sqft",
-      transaction: "New",
-      description: "Ready to move Commercial Sanctioned, Fire NoC and OC are available",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/4ff82520b46a270028f206fd01853cc1f86f7a01?width=1485"
-    },
-    {
-      id: 8,
-      title: "22163 Sq.Ft. Commercial Office/Space for Rent",
-      location: "KT Nagar, Friends Colony, Nagpur",
-      superArea: "3 BHK 1550 Sqft  4 BHK 3000 Sqft",
-      transaction: "New",
-      description: "Ready to move Commercial Sanctioned, Fire NoC and OC are available",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/9f5bfeb0662138b67ba5805e252cbb2f8f7c7377?width=1485"
-    }
-  ];
+  const { getByCategory } = useProperties();
+  const properties = getByCategory('commercial').map(p => ({
+    id: Number(p.id.replace(/\D/g, '')) || Math.random(),
+    title: p.title,
+    location: p.location,
+    superArea: p.superArea,
+    status: p.status,
+    transaction: p.transaction,
+    description: p.description,
+    image: p.images[0] || '',
+    images: p.images,
+    price: p.price,
+  }));
 
   return (
     <div className="min-h-screen bg-white">

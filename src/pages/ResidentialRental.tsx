@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import PropertyDetailsModal, { Property } from '@/components/ui/PropertyDetailsModal';
 import { useSEO } from '@/hooks/use-seo';
 import { SEO_PAGES } from '@/lib/seo-constants';
+import { useProperties } from '@/hooks/useProperties';
 
 const ResidentialRental = () => {
   useSEO(SEO_PAGES.residentialRental);
@@ -99,88 +100,20 @@ const ResidentialRental = () => {
     setSelectedProperty(null);
   };
 
-  const properties = [
-    {
-      id: 1,
-      title: "2BHK Sq.Ft. Residential Apartment for Rent",
-      location: "KT Nagar, Friends Colony, Nagpur",
-      superArea: "3 BHK 1550 Sqft  4 BHK 3000 Sqft",
-      status: "STATUS",
-      transaction: "New",
-      description: "Ready to move Residential Sanctioned, Fire NoC and OC are available",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/67eda5106c40ad3e39ccac23e6ec50a740e8e80d?width=1485"
-    },
-    {
-      id: 2,
-      title: "3BHK Sq.Ft. Luxury Residential Complex for Rent",
-      location: "Dharampeth, Civil Lines, Nagpur",
-      superArea: "2 BHK 1200 Sqft  3 BHK 1800 Sqft",
-      status: "STATUS",
-      transaction: "New",
-      description: "Premium residential complex with modern amenities and facilities",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/21152f603136f92b81c4fb8c7e90f664bed12447?width=1485"
-    },
-    {
-      id: 3,
-      title: "4BHK Sq.Ft. Premium Residential Tower for Rent",
-      location: "Sadar, Central Nagpur",
-      superArea: "3 BHK 1800 Sqft  4 BHK 2500 Sqft",
-      status: "STATUS",
-      transaction: "New",
-      description: "Luxury residential tower with panoramic city views and premium finishes",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/b61db5873243761954da7b7964e0054c5802814a?width=1485"
-    },
-    {
-      id: 4,
-      title: "2BHK Sq.Ft. Modern Residential Complex for Rent",
-      location: "Hingna Road, MIDC Area, Nagpur",
-      superArea: "2 BHK 1100 Sqft  3 BHK 1500 Sqft",
-      status: "STATUS",
-      transaction: "New",
-      description: "Contemporary design with all modern amenities and green spaces",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/11ccd5edf5c891f97d9396cb6971f89a5afbb43d?width=1485"
-    },
-    {
-      id: 5,
-      title: "1BHK Sq.Ft. Affordable Housing Project for Rent",
-      location: "Kharbi, Outer Ring Road, Nagpur",
-      superArea: "1 BHK 650 Sqft  2 BHK 950 Sqft",
-      status: "STATUS",
-      transaction: "New",
-      description: "Budget-friendly residential options with essential amenities",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/c60afbe2850fb4eb3f2bd8b615eac0749367762a?width=1485"
-    },
-    {
-      id: 6,
-      title: "3BHK Sq.Ft. Gated Community Homes for Rent",
-      location: "Manish Nagar, Somalwada, Nagpur",
-      superArea: "2 BHK 1300 Sqft  3 BHK 1900 Sqft",
-      status: "STATUS",
-      transaction: "New",
-      description: "Secure gated community with clubhouse and recreational facilities",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/9f5bfeb0662138b67ba5805e252cbb2f8f7c7377?width=1485"
-    },
-    {
-      id: 7,
-      title: "4BHK Sq.Ft. Ultra-Luxury Apartments for Rent",
-      location: "Ramdaspeth, Central Avenue, Nagpur",
-      superArea: "3 BHK 2200 Sqft  4 BHK 3200 Sqft",
-      status: "STATUS",
-      transaction: "New",
-      description: "Ultra-luxury apartments with premium specifications and concierge services",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/84ab656698e35324a6747f12226ceaf23b95b4b3?width=1485"
-    },
-    {
-      id: 8,
-      title: "2BHK Sq.Ft. Smart Home Residences for Rent",
-      location: "Wadi, Ring Road, Nagpur",
-      superArea: "2 BHK 1150 Sqft  3 BHK 1650 Sqft",
-      status: "STATUS",
-      transaction: "New",
-      description: "Smart home technology integrated residential complex with IoT features",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/cbe45a6d508c66c1ac5e8041e0d4907537cd837d?width=1485"
-    }
-  ];
+  const { getByCategory } = useProperties();
+  const properties = getByCategory('residential-rental').map(p => ({
+    id: p.id,
+    title: p.title,
+    location: p.location,
+    superArea: p.superArea,
+    status: p.status,
+    transaction: p.transaction,
+    description: p.description,
+    image: p.images[0] || '',
+    images: p.images,
+    videos: p.videos,
+    price: p.price,
+  }));
 
   return (
     <div className="min-h-screen bg-white">

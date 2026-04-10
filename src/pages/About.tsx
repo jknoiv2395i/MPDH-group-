@@ -4,8 +4,10 @@ import { FigmaNavBar } from '@/components/ui/figma-navbar';
 import Footer from '@/components/Footer';
 import { useSEO } from '@/hooks/use-seo';
 import { SEO_PAGES, SCHEMAS } from '@/lib/seo-constants';
+import { useContent } from '@/hooks/useContent';
 
 const About = () => {
+  const { content } = useContent();
   useSEO({
     ...SEO_PAGES.about,
     structuredData: SCHEMAS.organization
@@ -78,7 +80,7 @@ const About = () => {
       </section>
 
       <div className="text-black ml-[182px] mb-6 font-instrument text-[48px] leading-[48px]">
-        About us
+        {content?.about?.title || 'About us'}
       </div>
 
       {/* Company Description Section */}
@@ -87,7 +89,7 @@ const About = () => {
           <p className="text-lg text-gray-600 mb-8">Our sustainability journey</p>
           <div className="mb-12 pb-[-4px]">
             <p className="font-instrument text-[23px] leading-9 font-normal text-black">
-              Founded in 2011, MPHD Group has become a trusted name in India's real estate and infrastructure consulting scene. With more than 14 years of experience under our belt, we've earned a reputation for delivering reliable, transparent, and comprehensive property solutions that cater to the unique needs of individuals, businesses, and developers alike. We take pride in being more than just a typical real estate firm. At MPHD Group we see ourselves as strategic partners, guiding our clients through the intricate world of property transactions, legal compliance, land acquisition, and infrastructure readiness.
+              {content?.about?.description || 'Founded in 2011, MPHD Group has become a trusted name...'}
             </p>
           </div>
           <button className="bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 transition-colors">

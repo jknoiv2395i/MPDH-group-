@@ -1,15 +1,26 @@
 import { useState } from "react";
+import { Mail, MapPin, Phone } from "lucide-react";
+import HeroHeader from "@/components/HeroHeader";
+import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import Footer from "@/components/Footer";
 import { useSEO } from "@/hooks/use-seo";
-import { SEO_PAGES } from "@/lib/seo-constants";
+import { SEO_PAGES, SCHEMAS } from "@/lib/seo-constants";
+import { useContent } from "@/hooks/useContent";
 import { toast } from "@/hooks/use-toast";
 
 const Contact = () => {
-  useSEO(SEO_PAGES.contact);
+  const { content } = useContent();
+  useSEO({
+    ...SEO_PAGES.contact,
+    structuredData: [
+      SCHEMAS.organization,
+      SCHEMAS.localBusiness
+    ]
+  });
+
   const [formData, setFormData] = useState({
     fullName: '',
     phone: '',
