@@ -91,7 +91,7 @@ const ContentEditor = () => {
         <section className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
           <h3 className="text-xl font-semibold mb-4 text-gray-800 border-b pb-2">Client Logos (Work With Section)</h3>
           <div className="space-y-4">
-            {formData.home.clientLogos.map((logo, index) => (
+            {(formData?.home?.clientLogos || []).map((logo, index) => (
               <div key={index} className="flex gap-4 items-end border-b pb-4">
                 <div className="flex-1">
                   <label className="block text-sm font-medium text-gray-700 mb-1">Client Name</label>
@@ -100,9 +100,9 @@ const ContentEditor = () => {
                     className="w-full px-3 py-2 border border-gray-300 rounded-md"
                     value={logo.name}
                     onChange={(e) => {
-                      const newLogos = [...formData.home.clientLogos];
+                      const newLogos = [...(formData?.home?.clientLogos || [])];
                       newLogos[index].name = e.target.value;
-                      setFormData({ ...formData, home: { ...formData.home, clientLogos: newLogos } });
+                      setFormData({ ...formData!, home: { ...formData!.home, clientLogos: newLogos } });
                     }}
                   />
                 </div>
@@ -113,9 +113,9 @@ const ContentEditor = () => {
                     className="w-full px-3 py-2 border border-gray-300 rounded-md"
                     value={logo.src}
                     onChange={(e) => {
-                      const newLogos = [...formData.home.clientLogos];
+                      const newLogos = [...(formData?.home?.clientLogos || [])];
                       newLogos[index].src = e.target.value;
-                      setFormData({ ...formData, home: { ...formData.home, clientLogos: newLogos } });
+                      setFormData({ ...formData!, home: { ...formData!.home, clientLogos: newLogos } });
                     }}
                   />
                 </div>
@@ -132,8 +132,8 @@ const ContentEditor = () => {
             ))}
             <button
               onClick={() => {
-                const newLogos = [...formData.home.clientLogos, { name: '', src: '' }];
-                setFormData({ ...formData, home: { ...formData.home, clientLogos: newLogos } });
+                const newLogos = [...(formData?.home?.clientLogos || []), { name: '', src: '' }];
+                setFormData({ ...formData!, home: { ...formData!.home, clientLogos: newLogos } });
               }}
               className="w-full py-2 border-2 border-dashed border-gray-300 rounded-md text-gray-500 hover:bg-gray-50"
             >

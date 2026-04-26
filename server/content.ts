@@ -18,7 +18,17 @@ export const readContent = (): SiteContent => {
     }
 
     const data = fs.readFileSync(CONTENT_FILE, 'utf-8');
-    return JSON.parse(data) as SiteContent;
+    const parsed = JSON.parse(data) as SiteContent;
+    
+    // Deep merge with defaults to handle schema migrations
+    return {
+      ...defaultContent,
+      ...parsed,
+      home: { ...defaultContent.home, ...parsed.home },
+      contact: { ...defaultContent.contact, ...parsed.contact },
+      about: { ...defaultContent.about, ...parsed.about },
+      footer: { ...defaultContent.footer, ...parsed.footer }
+    };
   } catch (error) {
     console.error('Error reading content:', error);
     return defaultContent;

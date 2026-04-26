@@ -25,8 +25,17 @@ export const ContentProvider = ({ children }: { children: ReactNode }) => {
         return res.json();
       })
       .then((data) => {
-        if (data && data.home) { // basic validation
-          setContent(data);
+        if (data && data.home) {
+          // Deep merge fetched data with defaults to handle new schema fields
+          const merged = {
+            ...defaultContent,
+            ...data,
+            home: { ...defaultContent.home, ...data.home },
+            contact: { ...defaultContent.contact, ...data.contact },
+            about: { ...defaultContent.about, ...data.about },
+            footer: { ...defaultContent.footer, ...data.footer }
+          };
+          setContent(merged);
         }
       })
       .catch((err) => {
