@@ -1,4 +1,7 @@
+import { useContent } from "../hooks/useContent";
+
 const ConsultationSection = () => {
+  const { content } = useContent();
   return (
     <section className="relative w-full h-[900px] overflow-hidden bg-gradient-to-b from-purple-500 to-pink-500 md:bg-gradient-to-r md:from-blue-400 md:to-blue-600">
       {/* Background Image */}
@@ -23,14 +26,18 @@ const ConsultationSection = () => {
         <div className="max-w-2xl">
           {/* Main Heading */}
           <h2 className="text-white text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-normal leading-tight tracking-tight mb-6 md:mb-8">
-            Schedule a free
-            <br />
-            consultation
+            {content?.home?.consultationTitle || (
+              <>
+                Schedule a free
+                <br />
+                consultation
+              </>
+            )}
           </h2>
 
           {/* Description */}
           <p className="text-white text-lg md:text-xl leading-relaxed mb-8 md:mb-10 max-w-[590px]">
-            Schedule a Free Consultation. Your property goals, our expertise — making real estate simple, secure, and profitable.
+            {content?.home?.consultationSubtitle || 'Schedule a Free Consultation. Your property goals, our expertise — making real estate simple, secure, and profitable.'}
           </p>
 
           {/* CTA Button */}

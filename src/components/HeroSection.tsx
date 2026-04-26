@@ -84,9 +84,13 @@ const HeroSection = () => {
             variants={headlineVariants}
             className="text-white mb-6 font-instrument text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight font-normal"
           >
-            Your gateway to
-            <br />
-            prestige properties
+            {content?.home?.heroTitle || (
+              <>
+                Your gateway to
+                <br />
+                prestige properties
+              </>
+            )}
           </motion.h1>
 
           {/* Subtitle */}
@@ -94,7 +98,7 @@ const HeroSection = () => {
             variants={itemVariants}
             className="text-sm sm:text-lg md:text-xl text-white/90 mb-8 sm:mb-12 mx-auto max-w-xs sm:max-w-md md:max-w-lg leading-relaxed px-2 sm:px-0"
           >
-            {content?.home?.heroSubtitle || 'Bring your architectural projects to life with a template that puts your work front and center.'}
+            {content?.home?.heroSubtitle || 'Strategic Property Investments across India • Zero Commission'}
           </motion.p>
 
           {/* CTA Button */}

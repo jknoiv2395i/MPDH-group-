@@ -2,7 +2,9 @@ import { ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import FeatureBlogsSection from "./FeatureBlogsSection";
+import { useContent } from "../hooks/useContent";
 const ServicesSection = () => {
+  const { content } = useContent();
   const services = [{
     icon: <svg width="24" height="24" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M4.80078 19.8105V10.8105C4.80078 10.4939 4.87178 10.1939 5.01378 9.91055C5.15578 9.62722 5.35145 9.39388 5.60078 9.21055L11.6008 4.71055C11.9508 4.44388 12.3508 4.31055 12.8008 4.31055C13.2508 4.31055 13.6508 4.44388 14.0008 4.71055L20.0008 9.21055C20.2508 9.39388 20.4468 9.62722 20.5888 9.91055C20.7308 10.1939 20.8015 10.4939 20.8008 10.8105V19.8105C20.8008 20.3605 20.6048 20.8315 20.2128 21.2235C19.8208 21.6155 19.3501 21.8112 18.8008 21.8105H15.8008C15.5175 21.8105 15.2801 21.7145 15.0888 21.5225C14.8975 21.3305 14.8015 21.0932 14.8008 20.8105V15.8105C14.8008 15.5272 14.7048 15.2898 14.5128 15.0985C14.3208 14.9072 14.0835 14.8112 13.8008 14.8105H11.8008C11.5175 14.8105 11.2801 14.9065 11.0888 15.0985C10.8975 15.2905 10.8015 15.5278 10.8008 15.8105V20.8105C10.8008 21.0938 10.7048 21.3315 10.5128 21.5235C10.3208 21.7155 10.0835 21.8112 9.80078 21.8105H6.80078C6.25078 21.8105 5.78011 21.6148 5.38878 21.2235C4.99745 20.8322 4.80145 20.3612 4.80078 19.8105Z" fill="currentColor" />
@@ -63,7 +65,7 @@ const ServicesSection = () => {
             duration: 0.6,
             ease: "easeOut"
           }} className="font-instrument font-normal text-black mb-8 lg:mb-12 tracking-tight xl:text-2xl text-xl text-left lg:text-3xl">
-              OUR SERVICES
+              {content?.home?.servicesTitle || 'OUR SERVICES'}
             </motion.h2>
           </motion.div>
 

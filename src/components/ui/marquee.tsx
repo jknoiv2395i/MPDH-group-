@@ -1,5 +1,6 @@
 import * as React from "react"
 import { cn } from "@/lib/utils"
+import { useContent } from "../../hooks/useContent";
 
 interface MarqueeProps extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode
@@ -95,6 +96,9 @@ const companyLogos = [
 ];
 
 export function MarqueeDemo() {
+  const { content } = useContent();
+  const logos = content?.home?.clientLogos || companyLogos;
+
   return (
     <div className="w-full overflow-hidden bg-white py-4 logo-section">
       <div
@@ -104,7 +108,7 @@ export function MarqueeDemo() {
         )}
         style={{ "--duration": "30s" } as React.CSSProperties}
       >
-        {companyLogos.map((logo, index) => (
+        {logos.map((logo, index) => (
           <div
             key={index}
             className="relative h-full w-fit mx-6 md:mx-10 flex items-center justify-center group logo-item"
@@ -120,7 +124,7 @@ export function MarqueeDemo() {
             />
           </div>
         ))}
-        {companyLogos.map((logo, index) => (
+        {logos.map((logo, index) => (
           <div
             key={`duplicate-${index}`}
             className="relative h-full w-fit mx-6 md:mx-10 flex items-center justify-center group logo-item"

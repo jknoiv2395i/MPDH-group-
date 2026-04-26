@@ -81,6 +81,64 @@ const ContentEditor = () => {
             {renderInput('home', 'servicesTitle', 'Services Section Title')}
             {renderInput('home', 'consultationTitle', 'Consultation Title')}
             {renderInput('home', 'consultationSubtitle', 'Consultation Subtitle', true)}
+            {renderInput('home', 'visionTitle', 'Vision Title', true)}
+            {renderInput('home', 'visionSubtitle', 'Vision Subtitle', true)}
+            {renderInput('home', 'commitmentTitle', 'Commitment Title', true)}
+            {renderInput('home', 'commitmentDescription', 'Commitment Description', true)}
+          </div>
+        </section>
+
+        <section className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+          <h3 className="text-xl font-semibold mb-4 text-gray-800 border-b pb-2">Client Logos (Work With Section)</h3>
+          <div className="space-y-4">
+            {formData.home.clientLogos.map((logo, index) => (
+              <div key={index} className="flex gap-4 items-end border-b pb-4">
+                <div className="flex-1">
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Client Name</label>
+                  <input
+                    type="text"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md"
+                    value={logo.name}
+                    onChange={(e) => {
+                      const newLogos = [...formData.home.clientLogos];
+                      newLogos[index].name = e.target.value;
+                      setFormData({ ...formData, home: { ...formData.home, clientLogos: newLogos } });
+                    }}
+                  />
+                </div>
+                <div className="flex-1">
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Logo URL</label>
+                  <input
+                    type="text"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md"
+                    value={logo.src}
+                    onChange={(e) => {
+                      const newLogos = [...formData.home.clientLogos];
+                      newLogos[index].src = e.target.value;
+                      setFormData({ ...formData, home: { ...formData.home, clientLogos: newLogos } });
+                    }}
+                  />
+                </div>
+                <button
+                  onClick={() => {
+                    const newLogos = formData.home.clientLogos.filter((_, i) => i !== index);
+                    setFormData({ ...formData, home: { ...formData.home, clientLogos: newLogos } });
+                  }}
+                  className="px-3 py-2 bg-red-50 text-red-600 rounded-md hover:bg-red-100"
+                >
+                  Remove
+                </button>
+              </div>
+            ))}
+            <button
+              onClick={() => {
+                const newLogos = [...formData.home.clientLogos, { name: '', src: '' }];
+                setFormData({ ...formData, home: { ...formData.home, clientLogos: newLogos } });
+              }}
+              className="w-full py-2 border-2 border-dashed border-gray-300 rounded-md text-gray-500 hover:bg-gray-50"
+            >
+              + Add New Client Logo
+            </button>
           </div>
         </section>
 

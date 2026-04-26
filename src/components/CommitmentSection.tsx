@@ -2,6 +2,7 @@ import { motion, useMotionValue, useSpring, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
 import { isBuilderEditor } from '@/lib/utils'
 import ProjectCarousel from "./ProjectCarousel";
+import { useContent } from "../hooks/useContent";
 
 const Counter = ({ value, suffix = "", prefix = "", duration = 2 }) => {
   const ref = useRef(null);
@@ -35,6 +36,7 @@ const Counter = ({ value, suffix = "", prefix = "", duration = 2 }) => {
 };
 
 const CommitmentSection = () => {
+  const { content } = useContent();
   const fadeInFromLeft = {
     initial: { opacity: 0, x: -50 },
     whileInView: { opacity: 1, x: 0 },
@@ -106,7 +108,7 @@ const CommitmentSection = () => {
                 className="font-instrument text-4xl md:text-5xl lg:text-6xl font-normal text-black leading-tight tracking-tight"
                 variants={textReveal}
               >
-                With a commitment to excellence and customer satisfaction.
+                {content?.home?.commitmentTitle || 'With a commitment to excellence and customer satisfaction.'}
               </motion.h2>
 
               {/* Description */}
@@ -114,7 +116,7 @@ const CommitmentSection = () => {
                 className="text-[#5D5D5D] text-base md:text-lg leading-relaxed max-w-xl"
                 variants={textReveal}
               >
-                With a commitment to excellence, transparency, and growth, we transform property goals into profitable realities. Our team of experienced professionals in sales, legal, and compliance works together to deliver seamless solutions that maximize value and ensure long-term success for every client
+                {content?.home?.commitmentDescription || 'With a commitment to excellence, transparency, and growth, we transform property goals into profitable realities. Our team of experienced professionals in sales, legal, and compliance works together to deliver seamless solutions that maximize value and ensure long-term success for every client'}
               </motion.p>
 
               {/* CTA Button */}
