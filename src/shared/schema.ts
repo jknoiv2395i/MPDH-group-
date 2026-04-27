@@ -28,6 +28,7 @@ export interface SiteContent {
     commitmentDescription: string;
     stats: { label: string, value: number, suffix: string }[];
     clientLogos: { name: string, src: string }[];
+    testimonials: { text: string; image: string; name: string; role: string }[];
   };
   contact: {
     phone: string;
@@ -76,6 +77,62 @@ export const defaultContent: SiteContent = {
       { name: "Kalpataru", src: "https://api.builder.io/api/v1/image/assets/TEMP/f17aa6bedd8521830ad3f4727401f7d37e572344?width=518" },
       { name: "Blinkit", src: "https://api.builder.io/api/v1/image/assets/TEMP/0e2dcf416d46d4dadd698d86c74231111f5e56bf?width=400" },
       { name: "Rail Vikas Nigam Limited", src: "https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2F4bfd1596c4fa42a6a2d9bc400f7bdead?format=webp&width=800" }
+    ],
+    testimonials: [
+      {
+        text: "Ankit invested significant time and effort into our deal, which is highly appreciable. I'm personally very thankful for his valuable contributions. Perhaps we could recognize his efforts appropriately.",
+        image: "https://images.pexels.com/photos/20319696/pexels-photo-20319696.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
+        name: "Sidharth Mendhe",
+        role: "Property Investor",
+      },
+      {
+        text: "My experience working with MPHD Group was excellent. Specifically Ankit. He helped me sell my house. Even after the transaction, he helped my mother to visit bank, collect DD, deposited and dropped her home. I am very much impressed with the service. Looking again to do business with them in future.",
+        image: "https://images.pexels.com/photos/14349071/pexels-photo-14349071.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
+        name: "atul Jogi",
+        role: "Home Seller",
+      },
+      {
+        text: "Choosing MPHD Group Real Estates was the best decision I made for my property needs in Nagpur. Their comprehensive services, including real estate consulting and legal support, simplified the complex process. I commend their professionalism and would recommend them without hesitation.",
+        image: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
+        name: "Ashish Francis",
+        role: "Business Owner",
+      },
+      {
+        text: "Real estate is one of the most preferred and safe source of investments as per Indian tradition and for it I found out MPHD group as the most trustworthy option available.",
+        image: "https://images.pexels.com/photos/14672475/pexels-photo-14672475.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
+        name: "amar Shahu",
+        role: "Investment Advisor",
+      },
+      {
+        text: "The fully furnished 3 BHK in Kamal Chowk is perfect for my family. Amol made the transition easy and stress-free. Thanks Amol sir",
+        image: "https://images.pexels.com/photos/27583927/pexels-photo-27583927.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
+        name: "Devendra Pandharkar",
+        role: "Software Engineer",
+      },
+      {
+        text: "Excellent work with proper co-ordination, helpful regards the communication must view. Best services & very good co operative nature.",
+        image: "https://images.pexels.com/photos/7208636/pexels-photo-7208636.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
+        name: "golu chute",
+        role: "Marketing Manager",
+      },
+      {
+        text: "Searching for office from last 6 months, finally found with the help of amol. Thanks for your service",
+        image: "https://images.pexels.com/photos/7580822/pexels-photo-7580822.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
+        name: "Ekta Betal",
+        role: "Entrepreneur",
+      },
+      {
+        text: "The company has a good culture and everyone is helpful. Staff is so cooperative...nice experience",
+        image: "https://images.pexels.com/photos/9663015/pexels-photo-9663015.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
+        name: "Aai Graphics",
+        role: "HR Director",
+      },
+      {
+        text: "Working with MPHD Group has been a wonderful experience. Their attention to detail and customer service is exceptional.",
+        image: "https://images.pexels.com/photos/15269279/pexels-photo-15269279.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
+        name: "Shailesh Shende",
+        role: "Real Estate Consultant",
+      }
     ]
   },
   contact: {

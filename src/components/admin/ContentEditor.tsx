@@ -143,6 +143,91 @@ const ContentEditor = () => {
         </section>
 
         <section className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+          <h3 className="text-xl font-semibold mb-4 text-gray-800 border-b pb-2">Client Testimonials</h3>
+          <div className="space-y-4">
+            {(formData?.home?.testimonials || []).map((testimonial, index) => (
+              <div key={index} className="flex flex-col gap-4 border-b pb-6 mb-2 bg-gray-50 p-4 rounded-md">
+                <div className="flex justify-between items-center mb-2">
+                  <h4 className="font-medium text-gray-700">Testimonial #{index + 1}</h4>
+                  <button
+                    onClick={() => {
+                      const newTestimonials = (formData?.home?.testimonials || []).filter((_, i) => i !== index);
+                      setFormData({ ...formData!, home: { ...formData!.home, testimonials: newTestimonials } });
+                    }}
+                    className="px-3 py-1 bg-red-50 text-red-600 rounded-md hover:bg-red-100 text-sm"
+                  >
+                    Remove
+                  </button>
+                </div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-1">Client Name</label>
+                    <input
+                      type="text"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md"
+                      value={testimonial.name}
+                      onChange={(e) => {
+                        const newTestimonials = [...(formData?.home?.testimonials || [])];
+                        newTestimonials[index].name = e.target.value;
+                        setFormData({ ...formData!, home: { ...formData!.home, testimonials: newTestimonials } });
+                      }}
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-1">Role / Designation</label>
+                    <input
+                      type="text"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md"
+                      value={testimonial.role}
+                      onChange={(e) => {
+                        const newTestimonials = [...(formData?.home?.testimonials || [])];
+                        newTestimonials[index].role = e.target.value;
+                        setFormData({ ...formData!, home: { ...formData!.home, testimonials: newTestimonials } });
+                      }}
+                    />
+                  </div>
+                  <div className="md:col-span-2">
+                    <label className="block text-sm font-medium text-gray-700 mb-1">Image URL</label>
+                    <input
+                      type="text"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md"
+                      value={testimonial.image}
+                      onChange={(e) => {
+                        const newTestimonials = [...(formData?.home?.testimonials || [])];
+                        newTestimonials[index].image = e.target.value;
+                        setFormData({ ...formData!, home: { ...formData!.home, testimonials: newTestimonials } });
+                      }}
+                    />
+                  </div>
+                  <div className="md:col-span-2">
+                    <label className="block text-sm font-medium text-gray-700 mb-1">Testimonial Transcript</label>
+                    <textarea
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md h-24"
+                      value={testimonial.text}
+                      onChange={(e) => {
+                        const newTestimonials = [...(formData?.home?.testimonials || [])];
+                        newTestimonials[index].text = e.target.value;
+                        setFormData({ ...formData!, home: { ...formData!.home, testimonials: newTestimonials } });
+                      }}
+                    />
+                  </div>
+                </div>
+              </div>
+            ))}
+            <button
+              onClick={() => {
+                const newTestimonials = [...(formData?.home?.testimonials || []), { text: '', image: '', name: '', role: '' }];
+                setFormData({ ...formData!, home: { ...formData!.home, testimonials: newTestimonials } });
+              }}
+              className="w-full py-3 border-2 border-dashed border-gray-300 rounded-md text-gray-500 hover:bg-gray-50 font-medium"
+            >
+              + Add New Testimonial
+            </button>
+          </div>
+        </section>
+
+        <section className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
           <h3 className="text-xl font-semibold mb-4 text-gray-800 border-b pb-2">Contact Information</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {renderInput('contact', 'phone', 'Phone Number')}

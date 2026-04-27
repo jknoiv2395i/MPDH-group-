@@ -2,8 +2,9 @@
 import React from "react";
 import { motion } from "motion/react";
 import { AnimatedText } from "./animated-underline-text-one";
+import { useContent } from "../../hooks/useContent";
 
-const testimonials = [
+const defaultTestimonials = [
   {
     text: "Ankit invested significant time and effort into our deal, which is highly appreciable. I'm personally very thankful for his valuable contributions. Perhaps we could recognize his efforts appropriately.",
     image: "https://images.pexels.com/photos/20319696/pexels-photo-20319696.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
@@ -62,7 +63,7 @@ const testimonials = [
 
 export const TestimonialsColumn = (props: {
   className?: string;
-  testimonials: typeof testimonials;
+  testimonials: { text: string; image: string; name: string; role: string }[];
   duration?: number;
 }) => {
   return (
@@ -108,11 +109,15 @@ export const TestimonialsColumn = (props: {
   );
 };
 
-const firstColumn = testimonials.slice(0, 3);
-const secondColumn = testimonials.slice(3, 6);
-const thirdColumn = testimonials.slice(6, 9);
-
 const Testimonials = () => {
+  const { content } = useContent();
+  const testimonials = content?.home?.testimonials || defaultTestimonials;
+  
+  const third = Math.ceil(testimonials.length / 3);
+  const firstColumn = testimonials.slice(0, third);
+  const secondColumn = testimonials.slice(third, third * 2);
+  const thirdColumn = testimonials.slice(third * 2);
+
   return (
     <section className="bg-background my-20 relative">
       <div className="container z-10 mx-auto">

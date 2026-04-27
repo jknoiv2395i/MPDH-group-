@@ -118,7 +118,7 @@ export function MarqueeDemo() {
               alt={`${logo.name} logo`}
               className={cn(
                 "object-contain transition-all duration-500 opacity-90 group-hover:opacity-100 group-hover:scale-110",
-                logo.className
+                logo.className || "h-6 md:h-8 w-auto"
               )}
               loading="lazy"
             />
@@ -134,7 +134,7 @@ export function MarqueeDemo() {
               alt={`${logo.name} logo`}
               className={cn(
                 "object-contain transition-all duration-500 opacity-90 group-hover:opacity-100 group-hover:scale-110",
-                logo.className
+                logo.className || "h-6 md:h-8 w-auto"
               )}
               loading="lazy"
             />
