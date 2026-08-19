@@ -537,7 +537,7 @@
     "transaction": "Service",
     "description": "We are among the few companies offering end-to-end casting yard solutions for construction and infrastructure projects. We manage everything from land identification and NA conversion to securing government approvals, water use exemptions, and compliance clearances, ensuring your casting yard is established quickly, legally, and strategically located for metro, highway, and large-scale real estate projects.",
     "images": [
-      "https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2F1fd1d1f8412a4dce8463b6c049b2e13b"
+      "https://api.builder.io/api/v1/image/assets/TEMP/01bd9f15b36dd98048084a7476883ad1d1fc4ae7?width=1485"
     ],
     "videos": [],
     "category": "industrial",
@@ -553,7 +553,7 @@
     "transaction": "Service",
     "description": "We have built a strong network of 1300+ trusted vendors across India, covering products and services for construction, infrastructure, real estate, and allied industries. This allows us to provide our clients with quick access, competitive pricing, and reliable supply chains, ensuring projects run smoothly without delays.",
     "images": [
-      "https://api.builder.io/api/v1/image/assets/TEMP/01bd9f15b36dd98048084a7476883ad1d1fc4ae7?width=1485"
+      "https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2F1fd1d1f8412a4dce8463b6c049b2e13b"
     ],
     "videos": [],
     "category": "industrial",

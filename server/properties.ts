@@ -476,7 +476,7 @@ const seedProperties: PropertyItem[] = [
     status: "Available",
     transaction: "Lease",
     description: "End-to-end casting yard solutions for construction and infrastructure projects.",
-    images: ["https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2F1fd1d1f8412a4dce8463b6c049b2e13b"],
+    images: ["https://api.builder.io/api/v1/image/assets/TEMP/01bd9f15b36dd98048084a7476883ad1d1fc4ae7?width=1485"],
     videos: [],
     category: "industrial",
     createdAt: new Date().toISOString()
@@ -490,7 +490,7 @@ const seedProperties: PropertyItem[] = [
     status: "Available",
     transaction: "Service",
     description: "Strong network of 1300+ trusted vendors across India for construction, infrastructure, and real estate.",
-    images: ["https://api.builder.io/api/v1/image/assets/TEMP/01bd9f15b36dd98048084a7476883ad1d1fc4ae7?width=1485"],
+    images: ["https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2F1fd1d1f8412a4dce8463b6c049b2e13b"],
     videos: [],
     category: "industrial",
     createdAt: new Date().toISOString()

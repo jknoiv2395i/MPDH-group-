@@ -223,8 +223,8 @@ const Industrial = () => {
             <div className="order-2 lg:order-1" variants={cardVariants}>
               <div className="w-full h-[220px] sm:h-[280px] md:h-[400px] lg:h-[638px] mb-6 rounded-[30px] overflow-hidden">
                 <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2F1fd1d1f8412a4dce8463b6c049b2e13b"
-                  alt="1300+ Vendor Network"
+                  src="https://api.builder.io/api/v1/image/assets/TEMP/01bd9f15b36dd98048084a7476883ad1d1fc4ae7?width=1485"
+                  alt="Casting Yard Setup and Installation Support"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -270,7 +270,7 @@ const Industrial = () => {
             <div className="order-1" variants={cardVariants}>
               <div className="w-full h-[220px] sm:h-[280px] md:h-[400px] lg:h-[638px] mb-6 rounded-[30px] overflow-hidden">
                 <img
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/01bd9f15b36dd98048084a7476883ad1d1fc4ae7?width=1485"
+                  src="https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2F1fd1d1f8412a4dce8463b6c049b2e13b"
                   alt="1300+ Vendor Network"
                   className="w-full h-full object-cover"
                 />
