@@ -1,5 +1,21 @@
 [
   {
+    "id": "b0101bd6-d312-4d91-b189-0d2f38634736",
+    "title": "awdawdawdadwadada",
+    "location": "wadwadadawd",
+    "superArea": "1500 Sqft",
+    "price": "Contact for Price",
+    "status": "Ready to Move",
+    "transaction": "New",
+    "description": "Commercial rental space in Nagpur",
+    "images": [
+      "https://api.builder.io/api/v1/image/assets/TEMP/0cde9d4c0a28abff220953a8f47e85f4a66851b2?width=1485"
+    ],
+    "videos": [],
+    "category": "commercial-rental",
+    "createdAt": "2026-08-19T07:21:30.373Z"
+  },
+  {
     "id": "res-1",
     "title": "2BHK Sq.Ft. Residential Apartment for Sale",
     "location": "KT Nagar, Friends Colony, Nagpur",
@@ -8,7 +24,9 @@
     "status": "Ready to Move",
     "transaction": "New",
     "description": "Ready to move Residential Sanctioned, Fire NoC and OC are available",
-    "images": ["https://api.builder.io/api/v1/image/assets/TEMP/5d04d2129d0e188bc5ec457cb7466a090c13a14f?width=1485"],
+    "images": [
+      "https://api.builder.io/api/v1/image/assets/TEMP/5d04d2129d0e188bc5ec457cb7466a090c13a14f?width=1485"
+    ],
     "videos": [],
     "category": "residential",
     "createdAt": "2026-04-10T00:00:00.000Z"
@@ -22,7 +40,9 @@
     "status": "Ready to Move",
     "transaction": "New",
     "description": "Premium residential complex with modern amenities and facilities",
-    "images": ["https://api.builder.io/api/v1/image/assets/TEMP/e59ba35efbf2405f339389978d3d9dd401a2a22e?width=1485"],
+    "images": [
+      "https://api.builder.io/api/v1/image/assets/TEMP/e59ba35efbf2405f339389978d3d9dd401a2a22e?width=1485"
+    ],
     "videos": [],
     "category": "residential",
     "createdAt": "2026-04-10T00:00:00.000Z"
@@ -36,7 +56,9 @@
     "status": "Ready to Move",
     "transaction": "New",
     "description": "Luxury residential tower with panoramic city views and premium finishes",
-    "images": ["https://api.builder.io/api/v1/image/assets/TEMP/2b5878af095bb2656d03030baa2637696d0395dd?width=1485"],
+    "images": [
+      "https://api.builder.io/api/v1/image/assets/TEMP/2b5878af095bb2656d03030baa2637696d0395dd?width=1485"
+    ],
     "videos": [],
     "category": "residential",
     "createdAt": "2026-04-10T00:00:00.000Z"
@@ -50,7 +72,9 @@
     "status": "Ready to Move",
     "transaction": "New",
     "description": "Contemporary design with all modern amenities and green spaces",
-    "images": ["https://api.builder.io/api/v1/image/assets/TEMP/0f9c4d78a1ad72b82637afb6a3f83661e5d6ad44?width=1485"],
+    "images": [
+      "https://api.builder.io/api/v1/image/assets/TEMP/0f9c4d78a1ad72b82637afb6a3f83661e5d6ad44?width=1485"
+    ],
     "videos": [],
     "category": "residential",
     "createdAt": "2026-04-10T00:00:00.000Z"
@@ -64,7 +88,9 @@
     "status": "Ready to Move",
     "transaction": "New",
     "description": "Budget-friendly residential options with essential amenities",
-    "images": ["https://api.builder.io/api/v1/image/assets/TEMP/1c0cc0c8a24e747af13ae6b60142a6f9fe9e8c78?width=1485"],
+    "images": [
+      "https://api.builder.io/api/v1/image/assets/TEMP/1c0cc0c8a24e747af13ae6b60142a6f9fe9e8c78?width=1485"
+    ],
     "videos": [],
     "category": "residential",
     "createdAt": "2026-04-10T00:00:00.000Z"
@@ -78,7 +104,9 @@
     "status": "Ready to Move",
     "transaction": "New",
     "description": "Secure gated community with clubhouse and recreational facilities",
-    "images": ["https://api.builder.io/api/v1/image/assets/TEMP/66b2636d037411b3f5f0d7f7dd3107e9e40ab5fe?width=1485"],
+    "images": [
+      "https://api.builder.io/api/v1/image/assets/TEMP/66b2636d037411b3f5f0d7f7dd3107e9e40ab5fe?width=1485"
+    ],
     "videos": [],
     "category": "residential",
     "createdAt": "2026-04-10T00:00:00.000Z"
@@ -92,7 +120,9 @@
     "status": "Ready to Move",
     "transaction": "New",
     "description": "Ultra-luxury apartments with premium specifications and concierge services",
-    "images": ["https://api.builder.io/api/v1/image/assets/TEMP/4ff82520b46a270028f206fd01853cc1f86f7a01?width=1485"],
+    "images": [
+      "https://api.builder.io/api/v1/image/assets/TEMP/4ff82520b46a270028f206fd01853cc1f86f7a01?width=1485"
+    ],
     "videos": [],
     "category": "residential",
     "createdAt": "2026-04-10T00:00:00.000Z"
@@ -106,7 +136,9 @@
     "status": "Ready to Move",
     "transaction": "New",
     "description": "Smart home technology integrated residential complex with IoT features",
-    "images": ["https://api.builder.io/api/v1/image/assets/TEMP/9f5bfeb0662138b67ba5805e252cbb2f8f7c7377?width=1485"],
+    "images": [
+      "https://api.builder.io/api/v1/image/assets/TEMP/9f5bfeb0662138b67ba5805e252cbb2f8f7c7377?width=1485"
+    ],
     "videos": [],
     "category": "residential",
     "createdAt": "2026-04-10T00:00:00.000Z"
@@ -120,7 +152,9 @@
     "status": "Available",
     "transaction": "Rent",
     "description": "Ready to move Residential Sanctioned, Fire NoC and OC are available",
-    "images": ["https://api.builder.io/api/v1/image/assets/TEMP/67eda5106c40ad3e39ccac23e6ec50a740e8e80d?width=1485"],
+    "images": [
+      "https://api.builder.io/api/v1/image/assets/TEMP/67eda5106c40ad3e39ccac23e6ec50a740e8e80d?width=1485"
+    ],
     "videos": [],
     "category": "residential-rental",
     "createdAt": "2026-04-10T00:00:00.000Z"
@@ -134,7 +168,9 @@
     "status": "Available",
     "transaction": "Rent",
     "description": "Premium residential complex with modern amenities and facilities",
-    "images": ["https://api.builder.io/api/v1/image/assets/TEMP/21152f603136f92b81c4fb8c7e90f664bed12447?width=1485"],
+    "images": [
+      "https://api.builder.io/api/v1/image/assets/TEMP/21152f603136f92b81c4fb8c7e90f664bed12447?width=1485"
+    ],
     "videos": [],
     "category": "residential-rental",
     "createdAt": "2026-04-10T00:00:00.000Z"
@@ -148,7 +184,9 @@
     "status": "Available",
     "transaction": "Rent",
     "description": "Luxury residential tower with panoramic city views and premium finishes",
-    "images": ["https://api.builder.io/api/v1/image/assets/TEMP/b61db5873243761954da7b7964e0054c5802814a?width=1485"],
+    "images": [
+      "https://api.builder.io/api/v1/image/assets/TEMP/b61db5873243761954da7b7964e0054c5802814a?width=1485"
+    ],
     "videos": [],
     "category": "residential-rental",
     "createdAt": "2026-04-10T00:00:00.000Z"
@@ -162,7 +200,9 @@
     "status": "Available",
     "transaction": "Rent",
     "description": "Contemporary design with all modern amenities and green spaces",
-    "images": ["https://api.builder.io/api/v1/image/assets/TEMP/11ccd5edf5c891f97d9396cb6971f89a5afbb43d?width=1485"],
+    "images": [
+      "https://api.builder.io/api/v1/image/assets/TEMP/11ccd5edf5c891f97d9396cb6971f89a5afbb43d?width=1485"
+    ],
     "videos": [],
     "category": "residential-rental",
     "createdAt": "2026-04-10T00:00:00.000Z"
@@ -176,7 +216,9 @@
     "status": "Available",
     "transaction": "Rent",
     "description": "Budget-friendly residential options with essential amenities",
-    "images": ["https://api.builder.io/api/v1/image/assets/TEMP/c60afbe2850fb4eb3f2bd8b615eac0749367762a?width=1485"],
+    "images": [
+      "https://api.builder.io/api/v1/image/assets/TEMP/c60afbe2850fb4eb3f2bd8b615eac0749367762a?width=1485"
+    ],
     "videos": [],
     "category": "residential-rental",
     "createdAt": "2026-04-10T00:00:00.000Z"
@@ -190,7 +232,9 @@
     "status": "Available",
     "transaction": "Rent",
     "description": "Secure gated community with clubhouse and recreational facilities",
-    "images": ["https://api.builder.io/api/v1/image/assets/TEMP/9f5bfeb0662138b67ba5805e252cbb2f8f7c7377?width=1485"],
+    "images": [
+      "https://api.builder.io/api/v1/image/assets/TEMP/9f5bfeb0662138b67ba5805e252cbb2f8f7c7377?width=1485"
+    ],
     "videos": [],
     "category": "residential-rental",
     "createdAt": "2026-04-10T00:00:00.000Z"
@@ -204,7 +248,9 @@
     "status": "Available",
     "transaction": "Rent",
     "description": "Ultra-luxury apartments with premium specifications and concierge services",
-    "images": ["https://api.builder.io/api/v1/image/assets/TEMP/84ab656698e35324a6747f12226ceaf23b95b4b3?width=1485"],
+    "images": [
+      "https://api.builder.io/api/v1/image/assets/TEMP/84ab656698e35324a6747f12226ceaf23b95b4b3?width=1485"
+    ],
     "videos": [],
     "category": "residential-rental",
     "createdAt": "2026-04-10T00:00:00.000Z"
@@ -218,7 +264,9 @@
     "status": "Available",
     "transaction": "Rent",
     "description": "Smart home technology integrated residential complex with IoT features",
-    "images": ["https://api.builder.io/api/v1/image/assets/TEMP/cbe45a6d508c66c1ac5e8041e0d4907537cd837d?width=1485"],
+    "images": [
+      "https://api.builder.io/api/v1/image/assets/TEMP/cbe45a6d508c66c1ac5e8041e0d4907537cd837d?width=1485"
+    ],
     "videos": [],
     "category": "residential-rental",
     "createdAt": "2026-04-10T00:00:00.000Z"
@@ -232,7 +280,9 @@
     "status": "Ready to Move",
     "transaction": "New",
     "description": "Ready to move Commercial Sanctioned, Fire NoC and OC are available",
-    "images": ["https://api.builder.io/api/v1/image/assets/TEMP/ab39aee17e8dfc110c4406ef7bd747ab417b4863?width=1485"],
+    "images": [
+      "https://api.builder.io/api/v1/image/assets/TEMP/ab39aee17e8dfc110c4406ef7bd747ab417b4863?width=1485"
+    ],
     "videos": [],
     "category": "commercial",
     "createdAt": "2026-04-10T00:00:00.000Z"
@@ -246,7 +296,9 @@
     "status": "Ready to Move",
     "transaction": "New",
     "description": "Prime location showroom with high footfall area and excellent visibility",
-    "images": ["https://api.builder.io/api/v1/image/assets/TEMP/3516253f2a4dd9d4bb90f1da4907439836a4a595?width=1485"],
+    "images": [
+      "https://api.builder.io/api/v1/image/assets/TEMP/3516253f2a4dd9d4bb90f1da4907439836a4a595?width=1485"
+    ],
     "videos": [],
     "category": "commercial",
     "createdAt": "2026-04-10T00:00:00.000Z"
@@ -260,7 +312,9 @@
     "status": "Ready to Move",
     "transaction": "New",
     "description": "Modern IT office space with high-speed connectivity and parking",
-    "images": ["https://api.builder.io/api/v1/image/assets/TEMP/39b522303573f6ccd129067f1a6b9f68a3641994?width=1485"],
+    "images": [
+      "https://api.builder.io/api/v1/image/assets/TEMP/39b522303573f6ccd129067f1a6b9f68a3641994?width=1485"
+    ],
     "videos": [],
     "category": "commercial",
     "createdAt": "2026-04-10T00:00:00.000Z"
@@ -274,7 +328,9 @@
     "status": "Ready to Move",
     "transaction": "New",
     "description": "Premium retail space in high-traffic mall with anchor tenants",
-    "images": ["https://api.builder.io/api/v1/image/assets/TEMP/8752f51c0207253b582bf2ba338156fa9f00f25e?width=1485"],
+    "images": [
+      "https://api.builder.io/api/v1/image/assets/TEMP/8752f51c0207253b582bf2ba338156fa9f00f25e?width=1485"
+    ],
     "videos": [],
     "category": "commercial",
     "createdAt": "2026-04-10T00:00:00.000Z"
@@ -288,7 +344,9 @@
     "status": "Ready to Move",
     "transaction": "New",
     "description": "Grade-A corporate office space with world-class facilities",
-    "images": ["https://api.builder.io/api/v1/image/assets/TEMP/6e54b10b09d9d55567ab9329f1fb65ad275bb773?width=1485"],
+    "images": [
+      "https://api.builder.io/api/v1/image/assets/TEMP/6e54b10b09d9d55567ab9329f1fb65ad275bb773?width=1485"
+    ],
     "videos": [],
     "category": "commercial",
     "createdAt": "2026-04-10T00:00:00.000Z"
@@ -302,7 +360,9 @@
     "status": "Ready to Move",
     "transaction": "New",
     "description": "Ready-to-use medical complex with OT setup and patient waiting area",
-    "images": ["https://api.builder.io/api/v1/image/assets/TEMP/971c65cb802603f188e530ca9fbb0e8bd45881eb?width=1485"],
+    "images": [
+      "https://api.builder.io/api/v1/image/assets/TEMP/971c65cb802603f188e530ca9fbb0e8bd45881eb?width=1485"
+    ],
     "videos": [],
     "category": "commercial",
     "createdAt": "2026-04-10T00:00:00.000Z"
@@ -316,7 +376,9 @@
     "status": "Ready to Move",
     "transaction": "New",
     "description": "Vibrant food court space with kitchen infrastructure and seating area",
-    "images": ["https://api.builder.io/api/v1/image/assets/TEMP/4ff82520b46a270028f206fd01853cc1f86f7a01?width=1485"],
+    "images": [
+      "https://api.builder.io/api/v1/image/assets/TEMP/4ff82520b46a270028f206fd01853cc1f86f7a01?width=1485"
+    ],
     "videos": [],
     "category": "commercial",
     "createdAt": "2026-04-10T00:00:00.000Z"
@@ -330,7 +392,9 @@
     "status": "Ready to Move",
     "transaction": "New",
     "description": "Fully furnished hotel-grade space with banquet hall and dining area",
-    "images": ["https://api.builder.io/api/v1/image/assets/TEMP/9f5bfeb0662138b67ba5805e252cbb2f8f7c7377?width=1485"],
+    "images": [
+      "https://api.builder.io/api/v1/image/assets/TEMP/9f5bfeb0662138b67ba5805e252cbb2f8f7c7377?width=1485"
+    ],
     "videos": [],
     "category": "commercial",
     "createdAt": "2026-04-10T00:00:00.000Z"
@@ -344,7 +408,9 @@
     "status": "Available",
     "transaction": "Rent",
     "description": "Ready to move Commercial Sanctioned, Fire NoC and OC are available",
-    "images": ["https://api.builder.io/api/v1/image/assets/TEMP/0cde9d4c0a28abff220953a8f47e85f4a66851b2?width=1485"],
+    "images": [
+      "https://api.builder.io/api/v1/image/assets/TEMP/0cde9d4c0a28abff220953a8f47e85f4a66851b2?width=1485"
+    ],
     "videos": [],
     "category": "commercial-rental",
     "createdAt": "2026-04-10T00:00:00.000Z"
@@ -358,7 +424,9 @@
     "status": "Available",
     "transaction": "Rent",
     "description": "Fully furnished premium office space available for immediate rent",
-    "images": ["https://api.builder.io/api/v1/image/assets/TEMP/58f913a126708769cfeacf636332370ecb81872b?width=1485"],
+    "images": [
+      "https://api.builder.io/api/v1/image/assets/TEMP/58f913a126708769cfeacf636332370ecb81872b?width=1485"
+    ],
     "videos": [],
     "category": "commercial-rental",
     "createdAt": "2026-04-10T00:00:00.000Z"
@@ -372,7 +440,9 @@
     "status": "Available",
     "transaction": "Rent",
     "description": "High street retail space in premium commercial area",
-    "images": ["https://api.builder.io/api/v1/image/assets/TEMP/39b522303573f6ccd129067f1a6b9f68a3641994?width=1485"],
+    "images": [
+      "https://api.builder.io/api/v1/image/assets/TEMP/39b522303573f6ccd129067f1a6b9f68a3641994?width=1485"
+    ],
     "videos": [],
     "category": "commercial-rental",
     "createdAt": "2026-04-10T00:00:00.000Z"
@@ -386,7 +456,9 @@
     "status": "Available",
     "transaction": "Rent",
     "description": "Modern coworking space with high-speed internet and meeting rooms",
-    "images": ["https://api.builder.io/api/v1/image/assets/TEMP/8752f51c0207253b582bf2ba338156fa9f00f25e?width=1485"],
+    "images": [
+      "https://api.builder.io/api/v1/image/assets/TEMP/8752f51c0207253b582bf2ba338156fa9f00f25e?width=1485"
+    ],
     "videos": [],
     "category": "commercial-rental",
     "createdAt": "2026-04-10T00:00:00.000Z"
@@ -400,7 +472,9 @@
     "status": "Available",
     "transaction": "Rent",
     "description": "Large warehouse with loading dock and 24/7 security",
-    "images": ["https://api.builder.io/api/v1/image/assets/TEMP/6e54b10b09d9d55567ab9329f1fb65ad275bb773?width=1485"],
+    "images": [
+      "https://api.builder.io/api/v1/image/assets/TEMP/6e54b10b09d9d55567ab9329f1fb65ad275bb773?width=1485"
+    ],
     "videos": [],
     "category": "commercial-rental",
     "createdAt": "2026-04-10T00:00:00.000Z"
@@ -414,7 +488,9 @@
     "status": "Available",
     "transaction": "Rent",
     "description": "Spacious showroom in premium location with ample parking",
-    "images": ["https://api.builder.io/api/v1/image/assets/TEMP/971c65cb802603f188e530ca9fbb0e8bd45881eb?width=1485"],
+    "images": [
+      "https://api.builder.io/api/v1/image/assets/TEMP/971c65cb802603f188e530ca9fbb0e8bd45881eb?width=1485"
+    ],
     "videos": [],
     "category": "commercial-rental",
     "createdAt": "2026-04-10T00:00:00.000Z"
@@ -428,7 +504,9 @@
     "status": "Available",
     "transaction": "Rent",
     "description": "Ready-to-use medical space with patient waiting area",
-    "images": ["https://api.builder.io/api/v1/image/assets/TEMP/4ff82520b46a270028f206fd01853cc1f86f7a01?width=1485"],
+    "images": [
+      "https://api.builder.io/api/v1/image/assets/TEMP/4ff82520b46a270028f206fd01853cc1f86f7a01?width=1485"
+    ],
     "videos": [],
     "category": "commercial-rental",
     "createdAt": "2026-04-10T00:00:00.000Z"
@@ -442,7 +520,9 @@
     "status": "Available",
     "transaction": "Rent",
     "description": "Fully fitted restaurant space with kitchen and seating for 150 covers",
-    "images": ["https://api.builder.io/api/v1/image/assets/TEMP/9f5bfeb0662138b67ba5805e252cbb2f8f7c7377?width=1485"],
+    "images": [
+      "https://api.builder.io/api/v1/image/assets/TEMP/9f5bfeb0662138b67ba5805e252cbb2f8f7c7377?width=1485"
+    ],
     "videos": [],
     "category": "commercial-rental",
     "createdAt": "2026-04-10T00:00:00.000Z"
@@ -456,7 +536,9 @@
     "status": "Available",
     "transaction": "Service",
     "description": "We are among the few companies offering end-to-end casting yard solutions for construction and infrastructure projects. We manage everything from land identification and NA conversion to securing government approvals, water use exemptions, and compliance clearances, ensuring your casting yard is established quickly, legally, and strategically located for metro, highway, and large-scale real estate projects.",
-    "images": ["https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2F1fd1d1f8412a4dce8463b6c049b2e13b"],
+    "images": [
+      "https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2F1fd1d1f8412a4dce8463b6c049b2e13b"
+    ],
     "videos": [],
     "category": "industrial",
     "createdAt": "2026-04-10T00:00:00.000Z"
@@ -470,7 +552,9 @@
     "status": "Available",
     "transaction": "Service",
     "description": "We have built a strong network of 1300+ trusted vendors across India, covering products and services for construction, infrastructure, real estate, and allied industries. This allows us to provide our clients with quick access, competitive pricing, and reliable supply chains, ensuring projects run smoothly without delays.",
-    "images": ["https://api.builder.io/api/v1/image/assets/TEMP/01bd9f15b36dd98048084a7476883ad1d1fc4ae7?width=1485"],
+    "images": [
+      "https://api.builder.io/api/v1/image/assets/TEMP/01bd9f15b36dd98048084a7476883ad1d1fc4ae7?width=1485"
+    ],
     "videos": [],
     "category": "industrial",
     "createdAt": "2026-04-10T00:00:00.000Z"
@@ -484,7 +568,9 @@
     "status": "Available",
     "transaction": "Service",
     "description": "Complete management of all necessary government and local authority approvals, including securing the Local Body Certificate (LBC), coordinating with municipal or panchayat offices, ensuring adherence to legal and regulatory requirements, and streamlining the entire process to avoid delays and ensure full compliance with applicable laws.",
-    "images": ["https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2F35d4ef9d6b9b49d6bc50a503ea243b9a?format=webp"],
+    "images": [
+      "https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2F35d4ef9d6b9b49d6bc50a503ea243b9a?format=webp"
+    ],
     "videos": [],
     "category": "industrial",
     "createdAt": "2026-04-10T00:00:00.000Z"
@@ -498,7 +584,9 @@
     "status": "Available",
     "transaction": "Service",
     "description": "End-to-end assistance in obtaining the Building and Other Construction Workers (BOC) License and Labour License, including preparation and submission of required documentation, coordination with labour departments, ensuring compliance with labour welfare regulations, and facilitating timely renewals to keep your operations legally protected.",
-    "images": ["https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2Ff0500f68212a4fc28fb5e9707e33e8e8"],
+    "images": [
+      "https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2Ff0500f68212a4fc28fb5e9707e33e8e8"
+    ],
     "videos": [],
     "category": "industrial",
     "createdAt": "2026-04-10T00:00:00.000Z"
@@ -512,7 +600,9 @@
     "status": "Available",
     "transaction": "Service",
     "description": "Complete facilitation of electricity connections for construction or operational needs, including installation of Distribution Panels (DP), coordination with electricity boards, arranging power extensions up to 1000 kW, ensuring adherence to safety and technical standards, and expediting approvals to guarantee uninterrupted power supply for your projects.",
-    "images": ["https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2F25aaa5389b6d4647a6cf13fba49b214d"],
+    "images": [
+      "https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2F25aaa5389b6d4647a6cf13fba49b214d"
+    ],
     "videos": [],
     "category": "industrial",
     "createdAt": "2026-04-10T00:00:00.000Z"
@@ -526,7 +616,9 @@
     "status": "Available",
     "transaction": "Service",
     "description": "Comprehensive end-to-end support for converting agricultural land into legally approved non-agricultural (NA) status, including guidance on documentation, liaison with government authorities, obtaining required approvals, ensuring compliance with local zoning regulations, and facilitating smooth processing so that the land can be legally used for residential, commercial, or industrial purposes.",
-    "images": ["https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2F356d6ffdafc7480684b68928389d9dcc"],
+    "images": [
+      "https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2F356d6ffdafc7480684b68928389d9dcc"
+    ],
     "videos": [],
     "category": "industrial",
     "createdAt": "2026-04-10T00:00:00.000Z"
@@ -540,7 +632,9 @@
     "status": "Available",
     "transaction": "Service",
     "description": "End-to-end assistance in obtaining mandatory pollution control clearances and certificates from the State Pollution Control Board, including preparation of environmental compliance documents, liaison with authorities, ensuring adherence to air, water, and noise pollution norms, and facilitating timely renewals to keep your project fully compliant with environmental regulations.",
-    "images": ["https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2Fee3ecd0a781b48648eef62ecc4da3f07"],
+    "images": [
+      "https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2Fee3ecd0a781b48648eef62ecc4da3f07"
+    ],
     "videos": [],
     "category": "industrial",
     "createdAt": "2026-04-10T00:00:00.000Z"
@@ -554,7 +648,9 @@
     "status": "Available",
     "transaction": "Service",
     "description": "Comprehensive support in obtaining legal exemptions and permissions for water usage in construction activities, including preparation of applications, coordination with relevant water resource departments, compliance with environmental and municipal regulations, and ensuring timely approvals to avoid project delays.",
-    "images": ["https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2Fc0db88533a434f9aa7733aa2b3ec0087"],
+    "images": [
+      "https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2Fc0db88533a434f9aa7733aa2b3ec0087"
+    ],
     "videos": [],
     "category": "industrial",
     "createdAt": "2026-04-10T00:00:00.000Z"
@@ -568,7 +664,9 @@
     "status": "Available",
     "transaction": "Service",
     "description": "We arrange exclusive guest houses tailored for directors, senior management, and visiting clients. Our team identifies premium properties near project sites or business hubs and ensures they are fully furnished, secure, and equipped with modern amenities. We handle property search, lease or purchase negotiations, legal agreements, and compliance, while also assisting with custom interior setup, utilities, and facility management.",
-    "images": ["https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2Fb6cff114e5a94737aa68ac8723320ff1"],
+    "images": [
+      "https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2Fb6cff114e5a94737aa68ac8723320ff1"
+    ],
     "videos": [],
     "category": "industrial",
     "createdAt": "2026-04-10T00:00:00.000Z"
@@ -582,7 +680,9 @@
     "status": "Available",
     "transaction": "Service",
     "description": "We assist businesses and individuals in finding the ideal hotel and lodging facilities across India, whether for short-term stays, long-term staff accommodation, or business travel needs. We help set up guest houses, hotels, and lodging solutions tailored to workforce or client requirements. From identifying suitable properties to handling legal compliances, agreements, and possession, we ensure a hassle-free experience.",
-    "images": ["https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2F15d993e567e843b6943b1fd87be7910c"],
+    "images": [
+      "https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2F15d993e567e843b6943b1fd87be7910c"
+    ],
     "videos": [],
     "category": "industrial",
     "createdAt": "2026-04-10T00:00:00.000Z"
@@ -596,7 +696,9 @@
     "status": "Available",
     "transaction": "Service",
     "description": "We help the construction and infrastructure companies provide safe, affordable, and convenient labour housing near project sites. From identifying suitable properties to negotiating rentals or purchase, we ensure workers stay close to the site, reducing travel time and improving productivity. We also handle all legal agreements, compliance requirements, and basic facility arrangements such as water, sanitation, and electricity.",
-    "images": ["https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2F2bd014e2c540431989b664fc720787ae?format=webp"],
+    "images": [
+      "https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2F2bd014e2c540431989b664fc720787ae?format=webp"
+    ],
     "videos": [],
     "category": "industrial",
     "createdAt": "2026-04-10T00:00:00.000Z"
@@ -610,7 +712,9 @@
     "status": "Available",
     "transaction": "Service",
     "description": "We help businesses establish their presence by arranging office spaces for purchase or rent, tailored to their size, budget, and operational needs. From premium corporate offices to flexible co-working spaces, we identify the most suitable options near prime business hubs or project sites. Our services include property shortlisting, negotiations, legal documentation, and compliance support, ensuring a smooth and transparent transaction.",
-    "images": ["https://api.builder.io/api/v1/image/assets/TEMP/01bd9f15b36dd98048084a7476883ad1d1fc4ae7?width=1485"],
+    "images": [
+      "https://api.builder.io/api/v1/image/assets/TEMP/01bd9f15b36dd98048084a7476883ad1d1fc4ae7?width=1485"
+    ],
     "videos": [],
     "category": "industrial",
     "createdAt": "2026-04-10T00:00:00.000Z"
@@ -624,7 +728,9 @@
     "status": "Available",
     "transaction": "Service",
     "description": "We assist companies in arranging comfortable and well-connected staff quarters close to their project locations. We identify suitable residential properties or land parcels near the site, ensuring easy daily commutes and better work-life balance for employees. Our services cover property search, lease or purchase negotiations, legal documentation, and compliance clearances, along with basic facility arrangements such as electricity, water, and sanitation.",
-    "images": ["https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2Fba23e42b2a6a4e9684d5e313980c3448"],
+    "images": [
+      "https://cdn.builder.io/api/v1/image/assets%2F9700a56ed829412d8c7753d13d33fae7%2Fba23e42b2a6a4e9684d5e313980c3448"
+    ],
     "videos": [],
     "category": "industrial",
     "createdAt": "2026-04-10T00:00:00.000Z"

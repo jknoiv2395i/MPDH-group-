@@ -143,6 +143,145 @@ const ContentEditor = () => {
         </section>
 
         <section className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+          <h3 className="text-xl font-semibold mb-4 text-gray-800 border-b pb-2">Company Statistics</h3>
+          <div className="space-y-4">
+            {(formData?.home?.stats || []).map((stat, index) => (
+              <div key={index} className="flex gap-4 items-end border-b pb-4">
+                <div className="flex-[2]">
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Label</label>
+                  <input
+                    type="text"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md"
+                    value={stat.label}
+                    onChange={(e) => {
+                      const newStats = [...(formData?.home?.stats || [])];
+                      newStats[index].label = e.target.value;
+                      setFormData({ ...formData!, home: { ...formData!.home, stats: newStats } });
+                    }}
+                  />
+                </div>
+                <div className="flex-1">
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Value</label>
+                  <input
+                    type="number"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md"
+                    value={stat.value}
+                    onChange={(e) => {
+                      const newStats = [...(formData?.home?.stats || [])];
+                      newStats[index].value = parseInt(e.target.value) || 0;
+                      setFormData({ ...formData!, home: { ...formData!.home, stats: newStats } });
+                    }}
+                  />
+                </div>
+                <div className="flex-1">
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Suffix (e.g. +)</label>
+                  <input
+                    type="text"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md"
+                    value={stat.suffix}
+                    onChange={(e) => {
+                      const newStats = [...(formData?.home?.stats || [])];
+                      newStats[index].suffix = e.target.value;
+                      setFormData({ ...formData!, home: { ...formData!.home, stats: newStats } });
+                    }}
+                  />
+                </div>
+                <button
+                  onClick={() => {
+                    const newStats = formData!.home.stats.filter((_, i) => i !== index);
+                    setFormData({ ...formData!, home: { ...formData!.home, stats: newStats } });
+                  }}
+                  className="px-3 py-2 bg-red-50 text-red-600 rounded-md hover:bg-red-100"
+                >
+                  Remove
+                </button>
+              </div>
+            ))}
+            <button
+              onClick={() => {
+                const newStats = [...(formData?.home?.stats || []), { label: '', value: 0, suffix: '+' }];
+                setFormData({ ...formData!, home: { ...formData!.home, stats: newStats } });
+              }}
+              className="w-full py-2 border-2 border-dashed border-gray-300 rounded-md text-gray-500 hover:bg-gray-50"
+            >
+              + Add New Statistic
+            </button>
+          </div>
+        </section>
+
+        <section className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+          <h3 className="text-xl font-semibold mb-4 text-gray-800 border-b pb-2">Our Services</h3>
+          <div className="space-y-4">
+            {(formData?.home?.services || []).map((service, index) => (
+              <div key={index} className="flex flex-col gap-4 border-b pb-6 mb-2 bg-gray-50 p-4 rounded-md">
+                <div className="flex justify-between items-center mb-2">
+                  <h4 className="font-medium text-gray-700">Service #{index + 1}</h4>
+                  <button
+                    onClick={() => {
+                      const newServices = (formData?.home?.services || []).filter((_, i) => i !== index);
+                      setFormData({ ...formData!, home: { ...formData!.home, services: newServices } });
+                    }}
+                    className="px-3 py-1 bg-red-50 text-red-600 rounded-md hover:bg-red-100 text-sm"
+                  >
+                    Remove
+                  </button>
+                </div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-1">Title</label>
+                    <input
+                      type="text"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md"
+                      value={service.title}
+                      onChange={(e) => {
+                        const newServices = [...(formData?.home?.services || [])];
+                        newServices[index].title = e.target.value;
+                        setFormData({ ...formData!, home: { ...formData!.home, services: newServices } });
+                      }}
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-1">Icon Type (home, building, factory)</label>
+                    <input
+                      type="text"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md"
+                      value={service.icon}
+                      onChange={(e) => {
+                        const newServices = [...(formData?.home?.services || [])];
+                        newServices[index].icon = e.target.value;
+                        setFormData({ ...formData!, home: { ...formData!.home, services: newServices } });
+                      }}
+                    />
+                  </div>
+                  <div className="md:col-span-2">
+                    <label className="block text-sm font-medium text-gray-700 mb-1">Description</label>
+                    <textarea
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md h-24"
+                      value={service.description}
+                      onChange={(e) => {
+                        const newServices = [...(formData?.home?.services || [])];
+                        newServices[index].description = e.target.value;
+                        setFormData({ ...formData!, home: { ...formData!.home, services: newServices } });
+                      }}
+                    />
+                  </div>
+                </div>
+              </div>
+            ))}
+            <button
+              onClick={() => {
+                const newServices = [...(formData?.home?.services || []), { title: '', description: '', icon: 'home' }];
+                setFormData({ ...formData!, home: { ...formData!.home, services: newServices } });
+              }}
+              className="w-full py-3 border-2 border-dashed border-gray-300 rounded-md text-gray-500 hover:bg-gray-50 font-medium"
+            >
+              + Add New Service
+            </button>
+          </div>
+        </section>
+
+        <section className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
           <h3 className="text-xl font-semibold mb-4 text-gray-800 border-b pb-2">Client Testimonials</h3>
           <div className="space-y-4">
             {(formData?.home?.testimonials || []).map((testimonial, index) => (
@@ -239,16 +378,6 @@ const ContentEditor = () => {
             {renderInput('contact', 'twitter', 'Twitter URL')}
             {renderInput('contact', 'instagram', 'Instagram URL')}
             {renderInput('contact', 'linkedin', 'LinkedIn URL')}
-          </div>
-        </section>
-
-        <section className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-          <h3 className="text-xl font-semibold mb-4 text-gray-800 border-b pb-2">About Page</h3>
-          <div className="grid grid-cols-1 gap-4">
-            {renderInput('about', 'title', 'Page Title')}
-            {renderInput('about', 'description', 'Description / Summary', true)}
-            {renderInput('about', 'mission', 'Mission Statement', true)}
-            {renderInput('about', 'vision', 'Vision Statement', true)}
           </div>
         </section>
 

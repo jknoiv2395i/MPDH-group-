@@ -122,10 +122,10 @@ const CommitmentSection = () => {
               {/* CTA Button */}
               <motion.div variants={textReveal}>
                 <a
-                  href="/about"
+                  href="/contact"
                   className="inline-block bg-[#131313] text-white px-8 py-3.5 rounded-full text-base md:text-lg font-medium hover:bg-gray-800 transition-all duration-300 hover:scale-105"
                 >
-                  Learn more
+                  Contact us
                 </a>
               </motion.div>
 
@@ -137,35 +137,25 @@ const CommitmentSection = () => {
                 whileInView="visible"
                 viewport={{ once: true, margin: "-50px" }}
               >
-                <motion.div className="space-y-2" variants={statReveal}>
-                  <motion.h3
-                    className="font-instrument text-4xl md:text-5xl font-normal text-black tracking-tight"
-                    variants={textReveal}
-                  >
-                    <Counter value={30} suffix="+" duration={2} />
-                  </motion.h3>
-                  <motion.p
-                    className="text-[#5D5D5D] text-base md:text-lg"
-                    variants={textReveal}
-                  >
-                    Project Handled
-                  </motion.p>
-                </motion.div>
-
-                <motion.div className="space-y-2 text-center" variants={statReveal}>
-                  <motion.h3
-                    className="font-instrument text-4xl md:text-5xl font-normal text-black tracking-tight"
-                    variants={textReveal}
-                  >
-                    <Counter value={100} suffix="+" duration={2.2} />
-                  </motion.h3>
-                  <motion.p
-                    className="text-[#5D5D5D] text-base md:text-lg"
-                    variants={textReveal}
-                  >
-                    Expert teams
-                  </motion.p>
-                </motion.div>
+                {(content?.home?.stats || [
+                  { label: "Project Handled", value: 30, suffix: "+" },
+                  { label: "Expert teams", value: 100, suffix: "+" }
+                ]).map((stat, index) => (
+                  <motion.div key={index} className={`space-y-2 ${index % 2 !== 0 ? 'text-center' : ''}`} variants={statReveal}>
+                    <motion.h3
+                      className="font-instrument text-4xl md:text-5xl font-normal text-black tracking-tight"
+                      variants={textReveal}
+                    >
+                      <Counter value={stat.value} suffix={stat.suffix} duration={2 + index * 0.2} />
+                    </motion.h3>
+                    <motion.p
+                      className="text-[#5D5D5D] text-base md:text-lg"
+                      variants={textReveal}
+                    >
+                      {stat.label}
+                    </motion.p>
+                  </motion.div>
+                ))}
               </motion.div>
             </motion.div>
 

@@ -48,7 +48,7 @@ export function PropertiesProvider({ children }: { children: ReactNode }) {
     });
     if (!res.ok) throw new Error('Failed to create property');
     const newProp = await res.json();
-    setProperties(prev => [...prev, newProp]);
+    setProperties(prev => [newProp, ...prev]);
     return newProp;
   }, []);
 

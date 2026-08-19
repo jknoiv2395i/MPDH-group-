@@ -27,6 +27,7 @@ export interface SiteContent {
     commitmentTitle: string;
     commitmentDescription: string;
     stats: { label: string, value: number, suffix: string }[];
+    services: { title: string, description: string, icon: string }[];
     clientLogos: { name: string, src: string }[];
     testimonials: { text: string; image: string; name: string; role: string }[];
   };
@@ -65,6 +66,23 @@ export const defaultContent: SiteContent = {
     stats: [
       { label: "Project Handled", value: 30, suffix: "+" },
       { label: "Expert teams", value: 100, suffix: "+" }
+    ],
+    services: [
+      {
+        title: "Residential Property",
+        description: "Discover your dream home with our curated selection of luxury apartments, independent houses, and residential plots in prime locations.",
+        icon: "home"
+      },
+      {
+        title: "Commercial Property",
+        description: "Scale your business with high-visibility retail shops, modern office spaces, and strategic commercial land tailored for growth.",
+        icon: "building"
+      },
+      {
+        title: "Industrial Property",
+        description: "Optimize your operations with specialized industrial land, spacious warehouses, and manufacturing facilities in key industrial hubs.",
+        icon: "factory"
+      }
     ],
     clientLogos: [
       { name: "Cars24", src: "https://api.builder.io/api/v1/image/assets/TEMP/8c138dccd10b4437fa2ab39dcc94f48c257b7d9a?width=282" },
@@ -145,10 +163,10 @@ export const defaultContent: SiteContent = {
     linkedin: "https://linkedin.com/company/mpdhgroup",
   },
   about: {
-    title: "About MPDH Group",
-    mission: "To provide transparent, commission-free real estate investment opportunities across India.",
-    vision: "To be India's most trusted real estate investment partner.",
-    description: "MPDH Group provides premium real estate advisory services with a zero-brokerage model."
+    title: "About us",
+    mission: "Our true strength lies in our people. We've assembled a dedicated in-house team that includes: Sales professionals who know the market inside and out and understand your specific goals Legal experts who ensure that every transaction is compliant and secure. Financial advisors who provide clarity to your investments and decisions. This integrated approach enables us to offer each client personalized guidance and comprehensive support—from the very first conversation to the final execution. Our Network, Our Reach Over the years, we've built an extensive nationwide network of over 1,300+ vendor contacts, allowing us to deliver quick and efficient support no matter where you are—whether in bustling urban centers or remote locations. Whether you're working on a private deal or a large-scale infrastructure project, MPHD Group brings the reach, expertise, and relationships that truly make a difference.",
+    vision: "We believe that real estate is more than just property—it's about purpose. Every deal, every client, and every site we engage with is approached with a commitment to integrity, excellence, and community growth.",
+    description: "Founded in 2011, MPHD Group has become a trusted name in the real estate sector, dedicated to providing transparent and efficient property solutions."
   },
   footer: {
     description: "Your trusted partner in Real Estate Investment & Management.",

@@ -13,7 +13,6 @@ import Contact from "./pages/Contact";
 import Landing from "./pages/Landing";
 import Services from "./pages/Services";
 import Projects from "./pages/Projects";
-import About from "./pages/About";
 import AIAssistantPage from "./pages/AIAssistant";
 import ResidentialProperties from "./pages/ResidentialProperties";
 import CommercialProperties from "./pages/CommercialProperties";
@@ -56,7 +55,6 @@ const App = () => (
             <Route path="/commercial" element={<CommercialProperties />} />
             <Route path="/commercial-rental" element={<CommercialRental />} />
             <Route path="/industrial" element={<Industrial />} />
-            <Route path="/about" element={<About />} />
             <Route path="/service-areas" element={<ServiceAreasPage />} />
             <Route path="/ai-assistant" element={<AIAssistantPage />} />
             <Route path="/brandt" element={<Brandt />} />

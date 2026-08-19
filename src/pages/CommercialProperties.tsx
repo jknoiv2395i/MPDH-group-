@@ -136,8 +136,8 @@ const CommercialProperties = () => {
     status: p.status,
     transaction: p.transaction,
     description: p.description,
-    image: p.images[0] || '',
-    images: p.images,
+    image: p.images[0] || 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80',
+    images: p.images.length > 0 ? p.images : ['https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80'],
     price: p.price,
   }));
 

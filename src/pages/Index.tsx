@@ -1,7 +1,7 @@
 import HeroSection from "@/components/HeroSection";
 import VisionSection from "@/components/VisionSection";
 import ServicesSection from "@/components/ServicesSection";
-import CommitmentSection from "@/components/CommitmentSection";
+import FeaturedPropertiesSection from "@/components/FeaturedPropertiesSection";
 import Testimonials from "@/components/ui/testimonials-columns-1";
 import ConsultationSection from "@/components/ConsultationSection";
 import FAQSection from "@/components/FAQSection";
@@ -38,7 +38,7 @@ const Index = () => {
       <MarqueeDemo />
       <VisionSection />
       <ServicesSection />
-      <CommitmentSection />
+      <FeaturedPropertiesSection />
       <Testimonials />
 
       <ConsultationSection />
