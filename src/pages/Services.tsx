@@ -545,8 +545,7 @@ const Services = () => {
                   Phone Number
                 </h2>
                 <p className="font-inter text-xl md:text-[32px] text-[#989898] leading-[46px]">
-                  office: 7387777085<br />
-                  Mobile:-7387777686/8275046765
+                  +91 73877 77686
                 </p>
               </div>
 

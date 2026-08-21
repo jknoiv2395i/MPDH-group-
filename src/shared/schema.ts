@@ -154,13 +154,13 @@ export const defaultContent: SiteContent = {
     ]
   },
   contact: {
-    phone: "+91 999 999 9999",
-    email: "contact@mpdhgroup.com",
+    phone: "+91 73877 77686",
+    email: "contact@mphdgroup.com",
     address: "Nagpur, Maharashtra, India",
-    facebook: "https://facebook.com/mpdhgroup",
-    twitter: "https://twitter.com/mpdhgroup",
-    instagram: "https://instagram.com/mpdhgroup",
-    linkedin: "https://linkedin.com/company/mpdhgroup",
+    facebook: "https://facebook.com/mphdgroup",
+    twitter: "https://twitter.com/mphdgroup",
+    instagram: "https://instagram.com/mphdgroup",
+    linkedin: "https://linkedin.com/company/mphdgroup",
   },
   about: {
     title: "About us",
@@ -170,6 +170,6 @@ export const defaultContent: SiteContent = {
   },
   footer: {
     description: "Your trusted partner in Real Estate Investment & Management.",
-    copyright: "© 2026 MPDH Group. All rights reserved."
+    copyright: "© 2026 MPHD Group. All rights reserved."
   }
 };

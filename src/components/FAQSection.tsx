@@ -12,7 +12,7 @@ const faqs = [
   },
   {
     q: "How can I rent a flat or commercial space through MPHD Group's rental services in Nagpur?",
-    a: "Contact our office or call +91-8275046765 with your requirements. We shortlist matched properties, arrange site visits, negotiate lease terms, and assist with drafting agreements and background checks to make the rental process fast and secure."
+    a: "Contact our office or call +91 73877 77686 with your requirements. We shortlist matched properties, arrange site visits, negotiate lease terms, and assist with drafting agreements and background checks to make the rental process fast and secure."
   },
   {
     q: "Does MPHD Group provide legal help for property in India?",

@@ -12,7 +12,7 @@ export const SEO_CONFIG = {
     city: 'Nagpur',
     state: 'Maharashtra',
     country: 'India',
-    phone: '+91-8275046765', // Updated with provided number
+    phone: '+91 73877 77686', // Updated with provided number
     email: 'info@mphdgroup.com', // To be updated with actual email
     coordinates: {
       latitude: 21.1458,
@@ -353,7 +353,7 @@ export const SEO_PAGES = {
 
   landing: {
     title: 'Landing - MPHD Group - Find Properties & Consultations in Nagpur 440008',
-    description: 'Landing page for MPHD Group. Explore featured properties, get free consultation, and discover services across Nagpur 440008. Contact us at +91-8275046765 for immediate assistance.',
+    description: 'Landing page for MPHD Group. Explore featured properties, get free consultation, and discover services across Nagpur 440008. Contact us at +91 73877 77686 for immediate assistance.',
     keywords: 'MPHD Group landing, property in nagpur, buy property nagpur, real estate nagpur landing',
     canonicalUrl: `${SEO_CONFIG.siteUrl}/landing`,
     ogImage: SEO_CONFIG.defaultImage,

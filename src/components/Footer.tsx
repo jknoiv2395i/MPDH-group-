@@ -93,7 +93,7 @@ const Footer = () => {
               </p>
               <br />
               <p><strong>Phone Number</strong></p>
-              <p>{content?.contact?.phone || 'office: 7387777085'}</p>
+              <p>{content?.contact?.phone || '+91 73877 77686'}</p>
               <br />
               <p><strong>Email</strong></p>
               <p>{content?.contact?.email || 'EMAIL :- info@mphdgroup.com'}</p>

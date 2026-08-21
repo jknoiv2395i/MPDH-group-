@@ -28,7 +28,7 @@ const AdminDashboard = () => {
           <div className="p-6 border-b border-gray-200">
             <h1 className="text-xl font-bold flex items-center gap-2 text-gray-800">
               <LayoutDashboard size={24} className="text-blue-600" />
-              MPDH Admin
+              MPHD Admin
             </h1>
           </div>
           <nav className="flex-1 p-4 space-y-2">
