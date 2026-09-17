@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A1A1A"/>
+      <stop offset="100%" stop-color="#0A0A0A"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#E5E5E5"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background rounded box -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle border -->
+  <rect width="504" height="504" x="4" y="4" rx="108" fill="none" stroke="#333333" stroke-width="8"/>
+
+  <g transform="translate(0, -10)">
+    <!-- Architectural Building Arch Mark -->
+    <g fill="none" stroke="url(#goldGrad)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round">
+      <!-- Upper Arch Structure -->
+      <path d="M 176 250 L 176 170 L 256 110 L 336 170 L 336 250 L 306 250 L 306 186 L 256 148 L 206 186 L 206 250 Z" />
+      
+      <!-- Base Pedestal / Roof Triangle -->
+      <path d="M 148 296 L 256 256 L 364 296 L 364 324 L 148 324 Z" fill="url(#goldGrad)" stroke="none" />
+      <path d="M 148 296 L 256 256 L 364 296 L 364 324 L 148 324 Z" />
+    </g>
+
+    <!-- Text: MPHD -->
+    <text x="256" y="410" font-family="'Instrument Sans', 'Inter', 'Arial', sans-serif" font-size="64" font-weight="800" fill="#FFFFFF" text-anchor="middle" letter-spacing="6">MPHD</text>
+  </g>
+</svg>

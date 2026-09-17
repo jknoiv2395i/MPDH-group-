@@ -7,7 +7,12 @@ Allow: /
 # Specific bot permissions
 User-agent: Googlebot
 Allow: /
-Crawl-delay: 1
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-Favicon
+Allow: /
 
 User-agent: Bingbot
 Allow: /
