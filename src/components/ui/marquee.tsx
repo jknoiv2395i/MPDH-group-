@@ -1,6 +1,6 @@
 import * as React from "react"
 import { cn } from "@/lib/utils"
-import { useContent } from "../../hooks/useContent";
+
 
 interface MarqueeProps extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode
@@ -96,8 +96,7 @@ const companyLogos = [
 ];
 
 export function MarqueeDemo() {
-  const { content } = useContent();
-  const logos = content?.home?.clientLogos || companyLogos;
+  const logos = companyLogos;
 
   return (
     <div className="w-full overflow-hidden bg-white py-4 logo-section">

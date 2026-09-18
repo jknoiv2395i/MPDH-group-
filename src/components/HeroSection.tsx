@@ -1,9 +1,7 @@
-import { useContent } from "../hooks/useContent";
 import { motion } from "framer-motion";
 import HeroHeader from "./HeroHeader";
 
 const HeroSection = () => {
-  const { content } = useContent();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -39,7 +37,8 @@ const HeroSection = () => {
     },
   };
 
-  return <section className="relative min-h-screen overflow-hidden bg-[#1E9CE8] w-full max-w-full">
+  return (
+    <section className="relative min-h-screen overflow-hidden bg-[#1E9CE8] w-full max-w-full">
       {/* Navigation */}
       <div className="relative z-20">
         <HeroHeader />
@@ -67,11 +66,11 @@ const HeroSection = () => {
         </div>
       </div>
 
-
       {/* Hero Content */}
-      <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-4 sm:px-8 mb-16 w-full" style={{
-      padding: '120px 16px 200px 16px'
-    }}>
+      <div
+        className="relative z-10 flex-1 flex flex-col items-center justify-center px-4 sm:px-8 mb-16 w-full"
+        style={{ padding: '120px 16px 200px 16px' }}
+      >
         {/* Main Heading */}
         <motion.div
           className="text-center max-w-4xl mx-auto"
@@ -84,13 +83,9 @@ const HeroSection = () => {
             variants={headlineVariants}
             className="text-white mb-6 font-instrument text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight font-normal"
           >
-            {content?.home?.heroTitle || (
-              <>
-                Your gateway to
-                <br />
-                prestige properties
-              </>
-            )}
+            Your gateway to
+            <br />
+            prestige properties
           </motion.h1>
 
           {/* Subtitle */}
@@ -98,7 +93,7 @@ const HeroSection = () => {
             variants={itemVariants}
             className="text-sm sm:text-lg md:text-xl text-white/90 mb-8 sm:mb-12 mx-auto max-w-xs sm:max-w-md md:max-w-lg leading-relaxed px-2 sm:px-0"
           >
-            {content?.home?.heroSubtitle || 'Strategic Property Investments across India • Zero Commission'}
+            Strategic Property Investments across India • Zero Commission
           </motion.p>
 
           {/* CTA Button */}
@@ -106,7 +101,10 @@ const HeroSection = () => {
             variants={itemVariants}
             className="flex justify-center"
           >
-            <a href="/services" className="group flex items-center gap-2 px-4 py-2 bg-white rounded-full hover:bg-gray-50 transition-all duration-200 shadow-lg hover:shadow-xl cursor-pointer">
+            <a
+              href="/services"
+              className="group flex items-center gap-2 px-4 py-2 bg-white rounded-full hover:bg-gray-50 transition-all duration-200 shadow-lg hover:shadow-xl cursor-pointer"
+            >
               <span className="text-gray-900 font-medium text-base">
                 Get started
               </span>
@@ -119,16 +117,17 @@ const HeroSection = () => {
           </motion.div>
         </motion.div>
       </div>
-      
 
-      
       {/* Bottom Gradient Overlay */}
-      <div className="absolute bottom-0 left-0 w-full z-5" style={{
-        height: '240px',
-        background: 'linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%)'
-      }} />
-      
-
-    </section>;
+      <div
+        className="absolute bottom-0 left-0 w-full z-5"
+        style={{
+          height: '240px',
+          background: 'linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%)'
+        }}
+      />
+    </section>
+  );
 };
+
 export default HeroSection;

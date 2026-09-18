@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import ContentEditor from '../components/admin/ContentEditor';
 import PropertyManager from '../components/admin/PropertyManager';
-import { LayoutDashboard, FileText, Building2, LogOut } from 'lucide-react';
+import { LayoutDashboard, Building2, LogOut } from 'lucide-react';
 
 const AdminDashboard = () => {
   const navigate = useNavigate();
-  const [activeTab, setActiveTab] = useState('content');
 
   useEffect(() => {
     const token = localStorage.getItem('admin_token');
@@ -32,28 +30,10 @@ const AdminDashboard = () => {
             </h1>
           </div>
           <nav className="flex-1 p-4 space-y-2">
-            <button
-              onClick={() => setActiveTab('content')}
-              className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg font-medium transition-colors ${
-                activeTab === 'content'
-                  ? 'bg-blue-50 text-blue-700'
-                  : 'text-gray-600 hover:bg-gray-100'
-              }`}
-            >
-              <FileText size={20} />
-              Site Content
-            </button>
-            <button
-              onClick={() => setActiveTab('properties')}
-              className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg font-medium transition-colors ${
-                activeTab === 'properties'
-                  ? 'bg-blue-50 text-blue-700'
-                  : 'text-gray-600 hover:bg-gray-100'
-              }`}
-            >
+            <div className="flex items-center gap-3 px-4 py-3 rounded-lg font-medium bg-blue-50 text-blue-700">
               <Building2 size={20} />
-              Properties
-            </button>
+              Property Manager
+            </div>
           </nav>
           <div className="p-4 border-t border-gray-200">
             <button
@@ -69,8 +49,7 @@ const AdminDashboard = () => {
 
       {/* Main Content Area */}
       <main className="flex-1 overflow-auto bg-gray-50 p-6 md:p-8">
-        {activeTab === 'content' && <ContentEditor />}
-        {activeTab === 'properties' && <PropertyManager />}
+        <PropertyManager />
       </main>
     </div>
   );

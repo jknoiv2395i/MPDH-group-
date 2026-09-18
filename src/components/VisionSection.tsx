@@ -1,9 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { useContent } from '../hooks/useContent';
 
 const VisionSection = () => {
-  const { content } = useContent();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -25,13 +23,14 @@ const VisionSection = () => {
       opacity: 1,
       y: 0,
       scale: 1,
-        transition: {
-          duration: 0.8
-        }
+      transition: {
+        duration: 0.8
+      }
     }
   };
 
-  return <section className="bg-white py-16 px-4 md:py-24 lg:py-32">
+  return (
+    <section className="bg-white py-16 px-4 md:py-24 lg:py-32">
       <div className="max-w-6xl mx-auto">
         <motion.div
           className="flex flex-col items-center text-center text-2xl"
@@ -44,17 +43,19 @@ const VisionSection = () => {
             className="font-instrument text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[54px] font-normal leading-tight text-black mb-4 sm:mb-6 max-w-4xl tracking-[-0.5px] sm:tracking-[-1.6px] text-center"
             variants={textVariants}
           >
-            {content?.home?.visionTitle || 'Experience innovative spaces where real estate meets your vision and turns it into reality.'}
+            Experience innovative spaces where real estate meets your vision and turns it into reality.
           </motion.h2>
 
           <motion.p
             className="text-[#5D5D5D] text-base md:text-lg font-normal leading-relaxed max-w-[634px] tracking-[0.2px] sm:tracking-[0.36px]"
             variants={textVariants}
           >
-            {content?.home?.visionSubtitle || 'We craft inspiring spaces that blend cutting-edge design with enduring functionality, turning your vision into reality.'}
+            We craft inspiring spaces that blend cutting-edge design with enduring functionality, turning your vision into reality.
           </motion.p>
         </motion.div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default VisionSection;

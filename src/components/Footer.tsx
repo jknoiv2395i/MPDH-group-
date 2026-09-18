@@ -1,8 +1,6 @@
 import { Link } from 'react-router-dom';
-import { useContent } from '../hooks/useContent';
 
 const Footer = () => {
-  const { content } = useContent();
   return (
     <footer className="bg-[#131313] text-white py-20">
       <div className="container mx-auto px-4">
@@ -18,7 +16,7 @@ const Footer = () => {
                 />
               </div>
               <p className="text-[#B7B7B7] font-inter text-lg leading-relaxed">
-                {content?.footer?.description || 'Bring your architectural projects to life with a template that puts your work front and center.'}
+                Your trusted partner in Real Estate Investment & Management across Nagpur and India.
               </p>
             </div>
 
@@ -90,29 +88,29 @@ const Footer = () => {
               <div>
                 <p className="text-white font-semibold mb-1">Office Address</p>
                 <p className="text-[#B7B7B7] text-sm leading-relaxed max-w-md">
-                  {content?.contact?.address && !content.contact.address.includes('Nagpur, Maharashtra, India')
-                    ? content.contact.address
-                    : 'Bhandara Road, Behind JK Tower, Small Factory Area Bagadganj, Nagpur, Maharashtra - 440008'}
+                  Bhandara Road, Behind JK Tower, Small Factory Area Bagadganj, Nagpur, Maharashtra - 440008
                 </p>
               </div>
 
               <div>
                 <p className="text-white font-semibold mb-1">Phone Number</p>
                 <p className="text-[#B7B7B7] text-sm">
-                  {content?.contact?.phone && !content.contact.phone.includes('999')
-                    ? content.contact.phone
-                    : '+91 73877 77686'}
+                  +91 73877 77686
                 </p>
               </div>
 
               <div>
                 <p className="text-white font-semibold mb-1">Email</p>
                 <p className="text-[#B7B7B7] text-sm">
-                  {content?.contact?.email && !content.contact.email.includes('mpdh')
-                    ? content.contact.email
-                    : 'info@mphdgroup.com'}
+                  info@mphdgroup.com
                 </p>
               </div>
+            </div>
+
+            <div className="mt-8 md:mt-0 text-right">
+              <p className="text-xs text-white/40 font-inter">
+                © 2026 MPHD Group. All rights reserved.
+              </p>
             </div>
           </div>
 

@@ -2,7 +2,7 @@
 import React from "react";
 import { motion } from "motion/react";
 import { AnimatedText } from "./animated-underline-text-one";
-import { useContent } from "../../hooks/useContent";
+
 
 const defaultTestimonials = [
   {
@@ -110,8 +110,7 @@ export const TestimonialsColumn = (props: {
 };
 
 const Testimonials = () => {
-  const { content } = useContent();
-  const testimonials = content?.home?.testimonials || defaultTestimonials;
+  const testimonials = defaultTestimonials;
   
   const third = Math.ceil(testimonials.length / 3);
   const firstColumn = testimonials.slice(0, third);
