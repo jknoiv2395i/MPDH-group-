@@ -86,21 +86,33 @@ const Footer = () => {
 
           {/* Bottom Section */}
           <div className="flex flex-col md:flex-row justify-between items-start border-t border-white/10 mt-12 pt-8">
-            <div className="font-inter text-[#989898]">
-              <p><strong>Office Address</strong></p>
-              <p className="whitespace-pre-line">
-                {content?.contact?.address || 'Bhandara Road, Behind Jk Tower...'}
-              </p>
-              <br />
-              <p><strong>Phone Number</strong></p>
-              <p>{content?.contact?.phone || '+91 73877 77686'}</p>
-              <br />
-              <p><strong>Email</strong></p>
-              <p>{content?.contact?.email || 'EMAIL :- info@mphdgroup.com'}</p>
+            <div className="font-inter text-[#989898] space-y-4">
+              <div>
+                <p className="text-white font-semibold mb-1">Office Address</p>
+                <p className="text-[#B7B7B7] text-sm leading-relaxed max-w-md">
+                  {content?.contact?.address && !content.contact.address.includes('Nagpur, Maharashtra, India')
+                    ? content.contact.address
+                    : 'Bhandara Road, Behind JK Tower, Small Factory Area Bagadganj, Nagpur, Maharashtra - 440008'}
+                </p>
+              </div>
 
-              <p>
-                <br />
-              </p>
+              <div>
+                <p className="text-white font-semibold mb-1">Phone Number</p>
+                <p className="text-[#B7B7B7] text-sm">
+                  {content?.contact?.phone && !content.contact.phone.includes('999')
+                    ? content.contact.phone
+                    : '+91 73877 77686'}
+                </p>
+              </div>
+
+              <div>
+                <p className="text-white font-semibold mb-1">Email</p>
+                <p className="text-[#B7B7B7] text-sm">
+                  {content?.contact?.email && !content.contact.email.includes('mpdh')
+                    ? content.contact.email
+                    : 'info@mphdgroup.com'}
+                </p>
+              </div>
             </div>
           </div>
 

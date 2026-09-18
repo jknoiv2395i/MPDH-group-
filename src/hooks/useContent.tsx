@@ -31,7 +31,19 @@ export const ContentProvider = ({ children }: { children: ReactNode }) => {
             ...defaultContent,
             ...data,
             home: { ...defaultContent.home, ...data.home },
-            contact: { ...defaultContent.contact, ...data.contact },
+            contact: {
+              ...defaultContent.contact,
+              ...data.contact,
+              phone: data.contact?.phone && !data.contact.phone.includes('999')
+                ? data.contact.phone
+                : defaultContent.contact.phone,
+              email: data.contact?.email && !data.contact.email.includes('mpdh')
+                ? data.contact.email
+                : defaultContent.contact.email,
+              address: data.contact?.address && !data.contact.address.includes('Nagpur, Maharashtra, India')
+                ? data.contact.address
+                : defaultContent.contact.address,
+            },
             about: { ...defaultContent.about, ...data.about },
             footer: { ...defaultContent.footer, ...data.footer }
           };

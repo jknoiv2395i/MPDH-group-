@@ -155,8 +155,8 @@ export const defaultContent: SiteContent = {
   },
   contact: {
     phone: "+91 73877 77686",
-    email: "contact@mphdgroup.com",
-    address: "Nagpur, Maharashtra, India",
+    email: "info@mphdgroup.com",
+    address: "Bhandara Road, Behind JK Tower, Small Factory Area Bagadganj, Nagpur, Maharashtra - 440008",
     facebook: "https://facebook.com/mphdgroup",
     twitter: "https://twitter.com/mphdgroup",
     instagram: "https://instagram.com/mphdgroup",

@@ -26,21 +26,37 @@ export const verifyAdmin = (req: express.Request, res: express.Response, next: e
 
 // GET /api/content — returns all configuration settings
 router.get('/', async (req, res) => {
+  let content = defaultContent;
+
   if (useMongoDB) {
     try {
       const settings = await SettingsModel.findOne({ key: 'site_content' }).lean();
       if (settings?.content) {
-        return res.json({
+        content = {
           ...defaultContent,
-          ...settings.content
-        });
+          ...(settings.content as any)
+        };
       }
     } catch (err: any) {
       console.error('MongoDB read settings error:', err);
     }
+  } else {
+    content = readContent();
   }
 
-  const content = readContent();
+  // Ensure contact details are always clean and valid
+  if (content.contact) {
+    if (!content.contact.phone || content.contact.phone.includes('999')) {
+      content.contact.phone = '+91 73877 77686';
+    }
+    if (!content.contact.email || content.contact.email.includes('mpdh')) {
+      content.contact.email = 'info@mphdgroup.com';
+    }
+    if (!content.contact.address || content.contact.address.includes('Nagpur, Maharashtra, India')) {
+      content.contact.address = 'Bhandara Road, Behind JK Tower, Small Factory Area Bagadganj, Nagpur, Maharashtra - 440008';
+    }
+  }
+
   res.json(content);
 });
 
