@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState, useEffect, useCallback, ReactNode } from 'react';
 import { PropertyItem, PropertyCategory } from '../shared/schema';
+import { defaultProperties } from '../shared/defaultProperties';
 
 interface PropertiesContextType {
   properties: PropertyItem[];
@@ -15,18 +16,20 @@ interface PropertiesContextType {
 const PropertiesContext = createContext<PropertiesContextType | null>(null);
 
 export function PropertiesProvider({ children }: { children: ReactNode }) {
-  const [properties, setProperties] = useState<PropertyItem[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [properties, setProperties] = useState<PropertyItem[]>(defaultProperties);
+  const [loading, setLoading] = useState(false);
 
   const fetchProperties = useCallback(async () => {
     try {
       const res = await fetch('/api/properties');
       if (res.ok) {
         const data = await res.json();
-        setProperties(data);
+        if (Array.isArray(data) && data.length > 0) {
+          setProperties(data);
+        }
       }
     } catch (err) {
-      console.error('Failed to fetch properties:', err);
+      console.error('Failed to fetch properties, using defaults:', err);
     } finally {
       setLoading(false);
     }
@@ -36,9 +39,11 @@ export function PropertiesProvider({ children }: { children: ReactNode }) {
     fetchProperties();
   }, [fetchProperties]);
 
+  const safeProperties = Array.isArray(properties) ? properties : defaultProperties;
+
   const getByCategory = useCallback((category: PropertyCategory) => {
-    return properties.filter(p => p.category === category);
-  }, [properties]);
+    return safeProperties.filter(p => p.category === category);
+  }, [safeProperties]);
 
   const addProperty = useCallback(async (property: Omit<PropertyItem, 'id' | 'createdAt'>, token: string): Promise<PropertyItem> => {
     const res = await fetch('/api/properties', {

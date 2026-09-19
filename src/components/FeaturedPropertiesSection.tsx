@@ -21,8 +21,10 @@ const FeaturedPropertiesSection: React.FC = () => {
   const [selectedProperty, setSelectedProperty] = useState<Property | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  const safeList = Array.isArray(properties) ? properties : [];
+
   // Filter properties based on tab
-  const filteredProperties = properties.filter((p) => {
+  const filteredProperties = safeList.filter((p) => {
     if (activeFilter === 'all') return true;
     if (activeFilter === 'residential') return p.category === 'residential';
     if (activeFilter === 'commercial') return p.category === 'commercial';

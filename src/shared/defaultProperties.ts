@@ -1,0 +1,147 @@
+import { PropertyItem } from './schema';
+
+export const defaultProperties: PropertyItem[] = [
+  // ─── Residential (Purchase) ────────────────────────────────────────────────
+  {
+    id: "res-1",
+    title: "2BHK Sq.Ft. Residential Apartment for Sale",
+    location: "KT Nagar, Friends Colony, Nagpur",
+    superArea: "3 BHK 1550 Sqft  4 BHK 3000 Sqft",
+    price: "Contact for Price",
+    status: "Ready to Move",
+    transaction: "New",
+    description: "Ready to move Residential Sanctioned, Fire NoC and OC are available",
+    images: ["https://api.builder.io/api/v1/image/assets/TEMP/5d04d2129d0e188bc5ec457cb7466a090c13a14f?width=1485"],
+    videos: [],
+    category: "residential",
+    createdAt: "2026-01-01T00:00:00.000Z"
+  },
+  {
+    id: "res-2",
+    title: "3BHK Sq.Ft. Luxury Residential Complex",
+    location: "Dharampeth, Civil Lines, Nagpur",
+    superArea: "2 BHK 1200 Sqft  3 BHK 1800 Sqft",
+    price: "Contact for Price",
+    status: "Ready to Move",
+    transaction: "New",
+    description: "Premium residential complex with modern amenities and facilities",
+    images: ["https://api.builder.io/api/v1/image/assets/TEMP/e59ba35efbf2405f339389978d3d9dd401a2a22e?width=1485"],
+    videos: [],
+    category: "residential",
+    createdAt: "2026-01-01T00:00:00.000Z"
+  },
+  {
+    id: "res-3",
+    title: "4BHK Sq.Ft. Premium Villa Community",
+    location: "Wardha Road, Besa, Nagpur",
+    superArea: "Plot Area 2400 Sqft  Built-up 3200 Sqft",
+    price: "Contact for Price",
+    status: "Ready to Move",
+    transaction: "New",
+    description: "Exclusive gated villa community with private gardens and club house",
+    images: ["https://api.builder.io/api/v1/image/assets/TEMP/3973faae15be3c09e3bbba14ca10fa8d7f7fa080?width=1485"],
+    videos: [],
+    category: "residential",
+    createdAt: "2026-01-01T00:00:00.000Z"
+  },
+  {
+    id: "res-4",
+    title: "3BHK Modern High-Rise Apartment",
+    location: "Pratap Nagar, Ring Road, Nagpur",
+    superArea: "Super Built-up 1650 Sqft",
+    price: "Contact for Price",
+    status: "Ready to Move",
+    transaction: "New",
+    description: "High-rise apartment with panoramic city views and 24/7 security",
+    images: ["https://api.builder.io/api/v1/image/assets/TEMP/5069a5316db5aa17537b03ea26dafe687e8349fa?width=1485"],
+    videos: [],
+    category: "residential",
+    createdAt: "2026-01-01T00:00:00.000Z"
+  },
+  {
+    id: "res-5",
+    title: "2BHK Budget-Friendly Apartment",
+    location: "Beltarodi, Manish Nagar, Nagpur",
+    superArea: "Built-up 980 Sqft",
+    price: "Contact for Price",
+    status: "Under Construction",
+    transaction: "New",
+    description: "Affordable housing project near metro station and schools",
+    images: ["https://api.builder.io/api/v1/image/assets/TEMP/804107e0e7a275f917540292bf1802cb606443c9?width=1485"],
+    videos: [],
+    category: "residential",
+    createdAt: "2026-01-01T00:00:00.000Z"
+  },
+  {
+    id: "res-6",
+    title: "Luxury Penthouse with Terrace Garden",
+    location: "Ramdaspeth, Shankar Nagar, Nagpur",
+    superArea: "Built-up 4200 Sqft",
+    price: "Contact for Price",
+    status: "Ready to Move",
+    transaction: "Resale",
+    description: "Ultra-luxury penthouse with private elevator and personal terrace pool",
+    images: ["https://api.builder.io/api/v1/image/assets/TEMP/4531fa4a20b0fa734b413c6833d745bc03923c02?width=1485"],
+    videos: [],
+    category: "residential",
+    createdAt: "2026-01-01T00:00:00.000Z"
+  },
+  // ─── Commercial (Purchase) ──────────────────────────────────────────────────
+  {
+    id: "com-1",
+    title: "Premium Office Space in IT Park",
+    location: "Parsodi, Gayatri Nagar, Nagpur",
+    superArea: "Super Built-up 2500 Sqft",
+    price: "Contact for Price",
+    status: "Ready to Move",
+    transaction: "New",
+    description: "Grade-A IT office with 100% power backup and ample parking",
+    images: ["https://api.builder.io/api/v1/image/assets/TEMP/06e6cefb6cb623fa54e2ee04dca02df595b1be7a?width=1485"],
+    videos: [],
+    category: "commercial",
+    createdAt: "2026-01-01T00:00:00.000Z"
+  },
+  {
+    id: "com-2",
+    title: "Retail Shop on Main Commercial Street",
+    location: "Sitabuldi, Main Road, Nagpur",
+    superArea: "Carpet Area 650 Sqft",
+    price: "Contact for Price",
+    status: "Ready to Move",
+    transaction: "Resale",
+    description: "Prime retail frontage with high footfall in Nagpur's central shopping district",
+    images: ["https://api.builder.io/api/v1/image/assets/TEMP/469f6674e2cfc27382d56a29be199e4f2010ea35?width=1485"],
+    videos: [],
+    category: "commercial",
+    createdAt: "2026-01-01T00:00:00.000Z"
+  },
+  // ─── Industrial ─────────────────────────────────────────────────────────────
+  {
+    id: "ind-1",
+    title: "1300+ Vendor Network",
+    location: "Nagpur & Maharashtra",
+    superArea: "Pan-India Reach",
+    price: "Contact for Details",
+    status: "Active",
+    transaction: "Service",
+    description: "Nationwide supply chain network of verified suppliers and contractors",
+    images: ["https://cdn.builder.io/api/v1/image/assets%2Fe8d1f6446c8d4337adc2ecc52e9ca401%2F1fd1d1f885df46b1897d26c4f03930ee?format=webp&width=800"],
+    videos: [],
+    category: "industrial",
+    createdAt: "2026-01-01T00:00:00.000Z"
+  },
+  {
+    id: "ind-2",
+    title: "Casting Yard Setup",
+    location: "MIDC Industrial Hub, Nagpur",
+    superArea: "5 to 20 Acres",
+    price: "Contact for Details",
+    status: "Available",
+    transaction: "Service",
+    description: "Infrastructure support for heavy precast and fabrication yards",
+    images: ["https://cdn.builder.io/api/v1/image/assets%2Fe8d1f6446c8d4337adc2ecc52e9ca401%2F01bd9f15dbbc4539a9ce62d2a4d04ce6?format=webp&width=800"],
+    videos: [],
+    category: "industrial",
+    createdAt: "2026-01-01T00:00:00.000Z"
+  }
+];
