@@ -8,11 +8,9 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { useSEO } from "@/hooks/use-seo";
 import { SEO_PAGES, SCHEMAS } from "@/lib/seo-constants";
-import { useContent } from "@/hooks/useContent";
 import { toast } from "@/hooks/use-toast";
 
 const Contact = () => {
-  const { content } = useContent();
   useSEO({
     ...SEO_PAGES.contact,
     structuredData: [
