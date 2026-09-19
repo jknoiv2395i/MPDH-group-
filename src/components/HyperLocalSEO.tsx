@@ -146,14 +146,16 @@ export const HyperLocalSEO = () => {
 
     // Cleanup function
     return () => {
-      const scriptToRemove = document.getElementById(scriptId);
-      if (scriptToRemove) {
-        scriptToRemove.remove();
-      }
+      try {
+        const scriptToRemove = document.getElementById(scriptId);
+        if (scriptToRemove) {
+          scriptToRemove.remove();
+        }
+      } catch (e) {}
     };
   }, []);
 
-  return null; // This component doesn't render anything visible
+  return null;
 };
 
 // Local business hours component for SEO
@@ -169,13 +171,20 @@ export const BusinessHours = () => {
   };
 
   useEffect(() => {
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(businessHours);
-    document.head.appendChild(script);
+    let script: HTMLScriptElement | null = null;
+    try {
+      script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.textContent = JSON.stringify(businessHours);
+      document.head.appendChild(script);
+    } catch (e) {}
 
     return () => {
-      document.head.removeChild(script);
+      try {
+        if (script) {
+          script.remove();
+        }
+      } catch (e) {}
     };
   }, []);
 

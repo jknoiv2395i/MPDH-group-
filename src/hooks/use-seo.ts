@@ -138,11 +138,12 @@ export const useSEO = (config: SEOConfig) => {
 
     // Cleanup function
     return () => {
-      // Remove page-specific structured data
-      const script = document.getElementById('page-structured-data');
-      if (script) {
-        script.remove();
-      }
+      try {
+        const script = document.getElementById('page-structured-data');
+        if (script) {
+          script.remove();
+        }
+      } catch (e) {}
     };
-  }, [config]);
+  }, [config.title, config.description, config.canonicalUrl, config.ogImage, config.keywords]);
 };
