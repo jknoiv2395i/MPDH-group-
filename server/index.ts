@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
+import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { connectDB } from './config/db';
@@ -44,12 +45,22 @@ app.get('/api/health', (_req, res) => {
   });
 });
 
-// Serve frontend in production
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../dist')));
-  app.get(/.*/, (_req, res) => {
-    res.sendFile(path.join(__dirname, '../dist/index.html'));
+// Serve frontend build (dist) whenever available (Render / production / preview)
+const distPath = path.join(process.cwd(), 'dist');
+const altDistPath = path.join(__dirname, '../dist');
+const staticPath = fs.existsSync(distPath) ? distPath : (fs.existsSync(altDistPath) ? altDistPath : null);
+
+if (staticPath) {
+  console.log(`📦 [Frontend] Serving static production build from ${staticPath}`);
+  app.use(express.static(staticPath));
+  app.get(/.*/, (req, res, next) => {
+    if (req.path.startsWith('/api') || req.path.startsWith('/uploads')) {
+      return next();
+    }
+    res.sendFile(path.join(staticPath, 'index.html'));
   });
+} else {
+  console.log('ℹ️ [Frontend] No build dist folder found, operating in API-only mode.');
 }
 
 // Start Server and connect to MongoDB Atlas
