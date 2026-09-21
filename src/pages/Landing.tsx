@@ -130,9 +130,9 @@ const Landing = () => {
 
             {/* Navigation */}
             <nav className="hidden md:flex items-center space-x-8">
-              <a href="/" className="text-gray-600 hover:text-gray-900 font-medium opacity-80">Home V.1</a>
-              <a href="/contact" className="text-gray-900 font-semibold">Contact V.1</a>
-              <a href="/projects" className="text-gray-600 hover:text-gray-900 font-medium opacity-80">Projects V.1</a>
+              <a href="/" className="text-gray-600 hover:text-gray-900 font-medium opacity-80">Home</a>
+              <a href="/contact" className="text-gray-900 font-semibold">Contact</a>
+              <a href="/residential" className="text-gray-600 hover:text-gray-900 font-medium opacity-80">Properties</a>
               <div className="flex items-center text-gray-600 hover:text-gray-900 font-medium opacity-80">
                 Pages
                 <ChevronRight className="ml-1 h-4 w-4 rotate-90" />

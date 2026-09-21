@@ -11,7 +11,6 @@ import BlogPost from "./pages/BlogPost";
 import Contact from "./pages/Contact";
 import Landing from "./pages/Landing";
 import Services from "./pages/Services";
-import Projects from "./pages/Projects";
 import AIAssistantPage from "./pages/AIAssistant";
 import ResidentialProperties from "./pages/ResidentialProperties";
 import CommercialProperties from "./pages/CommercialProperties";
@@ -22,7 +21,6 @@ import ServiceAreasPage from "./pages/ServiceAreas";
 import BuyResidential from "./pages/BuyResidential";
 import TwoBHK from "./pages/2BHKFlats";
 import ThreeBHK from "./pages/3BHKApartments";
-import Luxury from "./pages/LuxuryProperties";
 import Affordable from "./pages/AffordableFlats";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
@@ -46,7 +44,7 @@ const App = () => (
             <Route path="/contact" element={<Contact />} />
             <Route path="/landing" element={<Landing />} />
             <Route path="/services" element={<Services />} />
-            <Route path="/projects" element={<Projects />} />
+            <Route path="/projects" element={<Navigate to="/" replace />} />
             <Route path="/properties" element={<ResidentialProperties />} />
             <Route path="/residential" element={<ResidentialProperties />} />
             <Route path="/residential-rental" element={<ResidentialRental />} />
@@ -64,7 +62,7 @@ const App = () => (
             <Route path="/buy-residential-property-nagpur" element={<BuyResidential />} />
             <Route path="/2bhk-flats-nagpur" element={<TwoBHK />} />
             <Route path="/3bhk-apartments-nagpur" element={<ThreeBHK />} />
-            <Route path="/luxury-properties-nagpur" element={<Luxury />} />
+            <Route path="/luxury-properties-nagpur" element={<Navigate to="/residential" replace />} />
             <Route path="/affordable-flats-nagpur" element={<Affordable />} />
 
             {/* Location-specific pages for local SEO */}

@@ -38,14 +38,6 @@
   <priority>0.7</priority>
 </url>
 
-<!-- Projects Page -->
-<url>
-  <loc>https://mphdgroup.com/projects</loc>
-  <lastmod>2024-08-26</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
-
 <!-- Property Pages -->
 <url>
   <loc>https://mphdgroup.com/residential</loc>

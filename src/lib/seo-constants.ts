@@ -189,9 +189,9 @@ export const SEO_PAGES = {
   },
 
   contact: {
-    title: 'Contact MPHD Group Nagpur 440008 - Best Property Consultants in Maharashtra',
-    description: 'Contact MPHD Group in Nagpur 440008 for expert real estate consulting. Local property experts in Maharashtra. Call now for free consultation on buying, selling, renting properties in Nagpur.',
-    keywords: 'contact MPHD Group Nagpur 440008, real estate consultants Nagpur Maharashtra contact, property advice Nagpur 440008, real estate consultation Nagpur, property consultants contact number Maharashtra',
+    title: 'Contact Us | MPHD Group - Real Estate Consultants Nagpur',
+    description: 'Get in touch with MPHD Group for verified residential, commercial, and industrial property consulting in Nagpur. Call +91 73877 77686 or visit our office.',
+    keywords: 'contact MPHD Group Nagpur, real estate consultants Nagpur, property consultation Nagpur',
     canonicalUrl: `${SEO_CONFIG.siteUrl}/contact`,
     ogImage: SEO_CONFIG.defaultImage,
     structuredData: [
@@ -248,19 +248,6 @@ export const SEO_PAGES = {
       SCHEMAS.website,
       SCHEMAS.localBusiness,
       SCHEMAS.realEstateAgent
-    ]
-  },
-
-  projects: {
-    title: 'MPHD Group Projects - 50+ Completed Real Estate Projects in Nagpur 440008',
-    description: 'Explore 50+ successfully completed real estate projects by MPHD Group in Nagpur 440008, Maharashtra. Award-winning residential, commercial & industrial developments.',
-    keywords: 'MPHD Group projects Nagpur 440008, real estate projects Nagpur Maharashtra, completed projects Nagpur, residential projects Nagpur 440008, commercial projects Nagpur, project management real estate Nagpur',
-    canonicalUrl: `${SEO_CONFIG.siteUrl}/projects`,
-    ogImage: SEO_CONFIG.defaultImage,
-    structuredData: [
-      SCHEMAS.organization,
-      SCHEMAS.website,
-      SCHEMAS.localBusiness
     ]
   },
 
@@ -323,19 +310,6 @@ export const SEO_PAGES = {
     structuredData: [
       SCHEMAS.website,
       SCHEMAS.localBusiness
-    ]
-  },
-
-  luxuryProperties: {
-    title: 'Luxury Properties in Nagpur - Premium Flats & Villas | MPHD Group',
-    description: 'Discover luxury flats, penthouses and villas in Nagpur. MPHD Group features premium residential projects and high-end properties in areas like Dharampeth and Seminary Hills.',
-    keywords: 'luxury flats in nagpur, premium apartments nagpur, luxury villas nagpur, penthouse in nagpur',
-    canonicalUrl: `${SEO_CONFIG.siteUrl}/luxury-properties-nagpur`,
-    ogImage: SEO_CONFIG.defaultImage,
-    structuredData: [
-      SCHEMAS.website,
-      SCHEMAS.localBusiness,
-      SCHEMAS.realEstateAgent
     ]
   },
 
