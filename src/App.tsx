@@ -28,19 +28,21 @@ import LocationSpecificPage, { ResidentialNagpur440008, CommercialNagpur440008 }
 import Brandt from "./pages/Brandt";
 import AdminLogin from "./pages/AdminLogin";
 import AdminDashboard from "./pages/Admin";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 const queryClient = new QueryClient();
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <PropertiesProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <ScrollToTop />
-          <Routes>
-            <Route path="/" element={<Index />} />
+  <ErrorBoundary>
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <PropertiesProvider>
+          <Toaster />
+          <Sonner />
+          <BrowserRouter>
+            <ScrollToTop />
+            <Routes>
+              <Route path="/" element={<Index />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/landing" element={<Landing />} />
             <Route path="/services" element={<Services />} />
@@ -108,6 +110,7 @@ const App = () => (
       </PropertiesProvider>
     </TooltipProvider>
   </QueryClientProvider>
+  </ErrorBoundary>
 );
 
 export default App;

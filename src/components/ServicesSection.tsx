@@ -73,7 +73,7 @@ const ServicesSection = () => {
             duration: 0.6,
             ease: "easeOut"
           }} className="font-instrument font-normal text-black mb-8 lg:mb-12 tracking-tight xl:text-2xl text-xl text-left lg:text-3xl">
-              {content?.home?.servicesTitle || 'OUR SERVICES'}
+              OUR SERVICES
             </motion.h2>
           </motion.div>
 
