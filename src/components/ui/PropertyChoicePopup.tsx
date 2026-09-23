@@ -57,11 +57,23 @@ const PropertyChoicePopup: React.FC<PropertyChoicePopupProps> = ({
             </div>
 
             {/* Image */}
-            <div className="mb-4 md:mb-6 px-1 md:px-0">
+            <div
+              onClick={onPurchaseClick}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  onPurchaseClick();
+                }
+              }}
+              aria-label="Want to Purchase - Click to explore purchase properties"
+              className="mb-4 md:mb-6 px-1 md:px-0 cursor-pointer group/img transition-all duration-300 hover:scale-[1.02] active:scale-[0.99]"
+            >
               <img
                 src="https://api.builder.io/api/v1/image/assets/TEMP/c85e12fe2743f3c6c03ab9ebfcbf3568ae6d191a?width=562"
                 alt="Property purchase illustration - modern residential building with sold sign"
-                className="w-full h-[160px] sm:h-[220px] md:h-auto object-cover rounded-lg"
+                className="w-full h-[160px] sm:h-[220px] md:h-auto object-cover rounded-lg shadow-md group-hover/img:shadow-2xl transition-shadow duration-300"
               />
             </div>
 
@@ -98,11 +110,23 @@ const PropertyChoicePopup: React.FC<PropertyChoicePopupProps> = ({
             </div>
 
             {/* Image */}
-            <div className="mb-4 md:mb-6 px-1 md:px-0">
+            <div
+              onClick={onRentClick}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  onRentClick();
+                }
+              }}
+              aria-label="Want to Rent - Click to explore rental properties"
+              className="mb-4 md:mb-6 px-1 md:px-0 cursor-pointer group/img transition-all duration-300 hover:scale-[1.02] active:scale-[0.99]"
+            >
               <img
                 src="https://api.builder.io/api/v1/image/assets/TEMP/88cbf4e99eaaff254a045f55d352294425951e90?width=558"
                 alt="Property rental illustration - apartment building with for rent sign"
-                className="w-full h-[160px] sm:h-[220px] md:h-auto object-cover rounded-lg"
+                className="w-full h-[160px] sm:h-[220px] md:h-auto object-cover rounded-lg shadow-md group-hover/img:shadow-2xl transition-shadow duration-300"
               />
             </div>
 

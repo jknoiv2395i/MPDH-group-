@@ -69,9 +69,9 @@ export const defaultContent: SiteContent = {
     ],
     services: [
       {
-        title: "Residential Property",
-        description: "Discover your dream home with our curated selection of luxury apartments, independent houses, and residential plots in prime locations.",
-        icon: "home"
+        title: "Industrial Property",
+        description: "Optimize your operations with specialized industrial land, spacious warehouses, and manufacturing facilities in key industrial hubs.",
+        icon: "factory"
       },
       {
         title: "Commercial Property",
@@ -79,9 +79,9 @@ export const defaultContent: SiteContent = {
         icon: "building"
       },
       {
-        title: "Industrial Property",
-        description: "Optimize your operations with specialized industrial land, spacious warehouses, and manufacturing facilities in key industrial hubs.",
-        icon: "factory"
+        title: "Residential Property",
+        description: "Discover your dream home with our curated selection of luxury apartments, independent houses, and residential plots in prime locations.",
+        icon: "home"
       }
     ],
     clientLogos: [

@@ -9,9 +9,9 @@ type FilterType = 'all' | 'residential' | 'commercial' | 'industrial' | 'rental'
 
 const filterTabs: { key: FilterType; label: string; icon: React.ReactNode }[] = [
   { key: 'all', label: 'All Properties', icon: <Building className="w-4 h-4" /> },
-  { key: 'residential', label: 'Residential', icon: <Home className="w-4 h-4" /> },
-  { key: 'commercial', label: 'Commercial', icon: <Building className="w-4 h-4" /> },
   { key: 'industrial', label: 'Industrial', icon: <Factory className="w-4 h-4" /> },
+  { key: 'commercial', label: 'Commercial', icon: <Building className="w-4 h-4" /> },
+  { key: 'residential', label: 'Residential', icon: <Home className="w-4 h-4" /> },
   { key: 'rental', label: 'Rentals', icon: <KeyRound className="w-4 h-4" /> },
 ];
 
@@ -26,17 +26,37 @@ const FeaturedPropertiesSection: React.FC = () => {
   // Filter properties based on tab
   const filteredProperties = safeList.filter((p) => {
     if (activeFilter === 'all') return true;
-    if (activeFilter === 'residential') return p.category === 'residential';
-    if (activeFilter === 'commercial') return p.category === 'commercial';
     if (activeFilter === 'industrial') return p.category === 'industrial';
+    if (activeFilter === 'commercial') return p.category === 'commercial';
+    if (activeFilter === 'residential') return p.category === 'residential';
     if (activeFilter === 'rental') {
       return p.category === 'residential-rental' || p.category === 'commercial-rental' || p.transaction?.toLowerCase() === 'rent';
     }
     return true;
   });
 
+  // Guarantee row order for 'all' tab: 1st Industrial, 2nd Commercial, 3rd Residential
+  const sortedProperties = React.useMemo(() => {
+    if (activeFilter !== 'all') return filteredProperties;
+
+    const industrialItem = filteredProperties.find((p) => p.category === 'industrial');
+    const commercialItem = filteredProperties.find((p) => p.category === 'commercial');
+    const residentialItem = filteredProperties.find((p) => p.category === 'residential');
+
+    const topThree: typeof filteredProperties = [];
+    if (industrialItem) topThree.push(industrialItem);
+    if (commercialItem) topThree.push(commercialItem);
+    if (residentialItem) topThree.push(residentialItem);
+
+    const remaining = filteredProperties.filter(
+      (p) => p.id !== industrialItem?.id && p.id !== commercialItem?.id && p.id !== residentialItem?.id
+    );
+
+    return [...topThree, ...remaining];
+  }, [activeFilter, filteredProperties]);
+
   // Display top 6 featured properties
-  const displayedProperties = filteredProperties.slice(0, 6);
+  const displayedProperties = sortedProperties.slice(0, 6);
 
   const handleOpenDetails = (p: any) => {
     setSelectedProperty({
@@ -88,7 +108,7 @@ const FeaturedPropertiesSection: React.FC = () => {
               Featured Properties & Spaces
             </h2>
             <p className="text-base sm:text-lg text-[#5D5D5D] mt-3 max-w-2xl font-inter leading-relaxed">
-              Explore handpicked premium residential flats, commercial retail spaces, and industrial facilities across prime locations in Nagpur.
+              Explore handpicked premium industrial facilities, commercial retail spaces, and residential flats across prime locations in Nagpur.
             </p>
           </div>
 

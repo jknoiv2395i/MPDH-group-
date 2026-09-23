@@ -17,9 +17,9 @@ const ServicesSection = () => {
 
   const services = [
     {
-      title: "Residential Property",
-      description: "Discover your dream home with our curated selection of luxury apartments, independent houses, and residential plots in prime locations.",
-      icon: "home"
+      title: "Industrial Property",
+      description: "Optimize your operations with specialized industrial land, spacious warehouses, and manufacturing facilities in key industrial hubs.",
+      icon: "factory"
     },
     {
       title: "Commercial Property",
@@ -27,9 +27,9 @@ const ServicesSection = () => {
       icon: "building"
     },
     {
-      title: "Industrial Property",
-      description: "Optimize your operations with specialized industrial land, spacious warehouses, and manufacturing facilities in key industrial hubs.",
-      icon: "factory"
+      title: "Residential Property",
+      description: "Discover your dream home with our curated selection of luxury apartments, independent houses, and residential plots in prime locations.",
+      icon: "home"
     }
   ];
   const textAnimationVariants = {
@@ -85,11 +85,11 @@ const ServicesSection = () => {
               const getRoute = (index: number) => {
                 switch (index) {
                   case 0:
-                    return "/residential";
+                    return "/industrial";
                   case 1:
                     return "/commercial";
                   case 2:
-                    return "/industrial";
+                    return "/residential";
                   default:
                     return "#";
                 }

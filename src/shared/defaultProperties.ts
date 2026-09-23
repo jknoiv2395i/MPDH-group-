@@ -1,7 +1,37 @@
 import { PropertyItem } from './schema';
 
 export const defaultProperties: PropertyItem[] = [
-  // ─── Residential (Purchase) ────────────────────────────────────────────────
+  // ─── Industrial (Featured) ────────────────────────────────────────────────
+  {
+    id: "ind-warehouse-1",
+    title: "22163 Sq.Ft. Industrial Space & Warehouse for Lease",
+    location: "Hingna MIDC, Nagpur",
+    superArea: "22163 Sqft",
+    price: "Contact for Price",
+    status: "Ready to Move",
+    transaction: "Rent",
+    description: "Large industrial warehouse and manufacturing space with heavy equipment provision and loading dock access in Hingna MIDC.",
+    images: ["https://api.builder.io/api/v1/image/assets/TEMP/0cde9d4c0a28abff220953a8f47e85f4a66851b2?width=1485"],
+    videos: [],
+    category: "industrial",
+    createdAt: "2026-01-01T00:00:00.000Z"
+  },
+  // ─── Commercial (Featured) ────────────────────────────────────────────────
+  {
+    id: "com-1",
+    title: "22163 Sq.Ft. Commercial Office/Space for Sale",
+    location: "KT Nagar, Friends Colony, Nagpur",
+    superArea: "22163 Sqft",
+    price: "Contact for Price",
+    status: "Ready to Move",
+    transaction: "New",
+    description: "Ready to move Commercial Sanctioned, Fire NoC and OC are available",
+    images: ["https://api.builder.io/api/v1/image/assets/TEMP/ab39aee17e8dfc110c4406ef7bd747ab417b4863?width=1485"],
+    videos: [],
+    category: "commercial",
+    createdAt: "2026-01-01T00:00:00.000Z"
+  },
+  // ─── Residential (Featured) ────────────────────────────────────────────────
   {
     id: "res-1",
     title: "2BHK Sq.Ft. Residential Apartment for Sale",
