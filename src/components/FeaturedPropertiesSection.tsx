@@ -5,14 +5,12 @@ import { Link } from 'react-router-dom';
 import { useProperties } from '@/hooks/useProperties';
 import PropertyDetailsModal, { Property } from '@/components/ui/PropertyDetailsModal';
 
-type FilterType = 'all' | 'residential' | 'commercial' | 'industrial' | 'rental';
+type FilterType = 'all' | 'sale' | 'rental';
 
 const filterTabs: { key: FilterType; label: string; icon: React.ReactNode }[] = [
-  { key: 'all', label: 'All Properties', icon: <Building className="w-4 h-4" /> },
-  { key: 'industrial', label: 'Industrial', icon: <Factory className="w-4 h-4" /> },
-  { key: 'commercial', label: 'Commercial', icon: <Building className="w-4 h-4" /> },
-  { key: 'residential', label: 'Residential', icon: <Home className="w-4 h-4" /> },
-  { key: 'rental', label: 'Rentals', icon: <KeyRound className="w-4 h-4" /> },
+  { key: 'all', label: 'All Commercial', icon: <Building className="w-4 h-4" /> },
+  { key: 'sale', label: 'Commercial for Sale', icon: <Building className="w-4 h-4" /> },
+  { key: 'rental', label: 'Commercial for Rent', icon: <KeyRound className="w-4 h-4" /> },
 ];
 
 const FeaturedPropertiesSection: React.FC = () => {
@@ -23,40 +21,24 @@ const FeaturedPropertiesSection: React.FC = () => {
 
   const safeList = Array.isArray(properties) ? properties : [];
 
+  // Exclusively filter for commercial properties
+  const commercialList = safeList.filter(
+    (p) => p.category === 'commercial' || p.category === 'commercial-rental'
+  );
+
   // Filter properties based on tab
-  const filteredProperties = safeList.filter((p) => {
-    if (activeFilter === 'all') return true;
-    if (activeFilter === 'industrial') return p.category === 'industrial';
-    if (activeFilter === 'commercial') return p.category === 'commercial';
-    if (activeFilter === 'residential') return p.category === 'residential';
+  const filteredProperties = commercialList.filter((p) => {
+    if (activeFilter === 'sale') {
+      return p.category === 'commercial' && p.transaction?.toLowerCase() !== 'rent';
+    }
     if (activeFilter === 'rental') {
-      return p.category === 'residential-rental' || p.category === 'commercial-rental' || p.transaction?.toLowerCase() === 'rent';
+      return p.category === 'commercial-rental' || p.transaction?.toLowerCase() === 'rent';
     }
     return true;
   });
 
-  // Guarantee row order for 'all' tab: 1st Industrial, 2nd Commercial, 3rd Residential
-  const sortedProperties = React.useMemo(() => {
-    if (activeFilter !== 'all') return filteredProperties;
-
-    const industrialItem = filteredProperties.find((p) => p.category === 'industrial');
-    const commercialItem = filteredProperties.find((p) => p.category === 'commercial');
-    const residentialItem = filteredProperties.find((p) => p.category === 'residential');
-
-    const topThree: typeof filteredProperties = [];
-    if (industrialItem) topThree.push(industrialItem);
-    if (commercialItem) topThree.push(commercialItem);
-    if (residentialItem) topThree.push(residentialItem);
-
-    const remaining = filteredProperties.filter(
-      (p) => p.id !== industrialItem?.id && p.id !== commercialItem?.id && p.id !== residentialItem?.id
-    );
-
-    return [...topThree, ...remaining];
-  }, [activeFilter, filteredProperties]);
-
-  // Display top 6 featured properties
-  const displayedProperties = sortedProperties.slice(0, 6);
+  // Display top 6 featured commercial properties
+  const displayedProperties = filteredProperties.slice(0, 6);
 
   const handleOpenDetails = (p: any) => {
     setSelectedProperty({
@@ -75,13 +57,7 @@ const FeaturedPropertiesSection: React.FC = () => {
     if (category?.includes('rental') || transaction?.toLowerCase() === 'rent') {
       return { text: 'For Rent', bg: 'bg-blue-600' };
     }
-    if (category === 'industrial') {
-      return { text: 'Industrial', bg: 'bg-amber-600' };
-    }
-    if (category === 'commercial') {
-      return { text: 'Commercial', bg: 'bg-purple-600' };
-    }
-    return { text: 'For Sale', bg: 'bg-emerald-600' };
+    return { text: 'For Sale', bg: 'bg-purple-600' };
   };
 
   return (
@@ -102,21 +78,21 @@ const FeaturedPropertiesSection: React.FC = () => {
           <div>
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/5 text-[#131313] text-xs font-semibold uppercase tracking-wider mb-4">
               <span className="w-1.5 h-1.5 rounded-full bg-[#131313]" />
-              Exclusive Listings
+              Exclusive Commercial Listings
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-instrument text-[#131313] font-normal leading-tight tracking-tight">
-              Featured Properties & Spaces
+              Featured Commercial Properties
             </h2>
             <p className="text-base sm:text-lg text-[#5D5D5D] mt-3 max-w-2xl font-inter leading-relaxed">
-              Explore handpicked premium industrial facilities, commercial retail spaces, and residential flats across prime locations in Nagpur.
+              Explore handpicked premium corporate office spaces, retail showrooms, IT parks, and business establishments across prime commercial hubs in Nagpur.
             </p>
           </div>
 
           <Link
-            to="/residential"
+            to="/commercial"
             className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-[#131313] text-white hover:bg-black/80 transition-all duration-200 text-sm font-medium self-start md:self-auto group"
           >
-            <span>View All Listings</span>
+            <span>View All Commercial</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
@@ -282,10 +258,10 @@ const FeaturedPropertiesSection: React.FC = () => {
         <div className="mt-16 p-8 rounded-3xl bg-black text-white relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl">
           <div className="relative z-10">
             <h3 className="text-2xl sm:text-3xl font-instrument font-normal">
-              Looking for a specific property or custom requirement?
+              Looking for a specific commercial space or custom requirement?
             </h3>
             <p className="text-gray-400 text-sm sm:text-base mt-2 max-w-xl font-inter">
-              Our property advisors are ready to help you find the perfect residential home, commercial retail space, or industrial plot in Nagpur.
+              Our commercial property advisors are ready to help you find the perfect office space, retail shop, corporate tower, or showroom in Nagpur.
             </p>
           </div>
 
@@ -297,10 +273,10 @@ const FeaturedPropertiesSection: React.FC = () => {
               Get Free Consultation
             </Link>
             <Link
-              to="/properties"
+              to="/commercial"
               className="px-6 py-3.5 rounded-full bg-white/10 text-white border border-white/20 font-medium text-sm hover:bg-white/20 transition-colors text-center w-full sm:w-auto"
             >
-              Browse All
+              Browse All Commercial
             </Link>
           </div>
         </div>
